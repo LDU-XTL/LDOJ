@@ -15,14 +15,14 @@ import org.apache.http.message.BasicNameValuePair;
 
 public class Login {
 	/**
-	 * user_id1:ÓÃ»§Ãû;
-	 * password1:ÃÜÂë ;
-	 * B1:post×´Ì¬£¨login£©;
-	 * url:postÁ´½Ó£¨submit?problem_id=1166£©ÎªhostºóÃæµÄurl£»Ä¬ÈÏBASEURL+problem_id;
-	 * problem_id:ÌâºÅ;
-	 * SCHARSET:Ä¬ÈÏpost×Ö·û¼¯;
-	 * BASEURL:Ä¬ÈÏµØÖ·;
-	 * ¸³ÖµĞèÒª´«Èë£¬ÓÃ»§Ãû£¬ÃÜÂëºÍÌâºÅ¼´¿É
+	 * user_id1:ç”¨æˆ·å;
+	 * password1:å¯†ç  ;
+	 * B1:postçŠ¶æ€ï¼ˆloginï¼‰;
+	 * url:posté“¾æ¥ï¼ˆsubmit?problem_id=1166ï¼‰ä¸ºhoståé¢çš„urlï¼›é»˜è®¤BASEURL+problem_id;
+	 * problem_id:é¢˜å·;
+	 * SCHARSET:é»˜è®¤postå­—ç¬¦é›†;
+	 * BASEURL:é»˜è®¤åœ°å€;
+	 * èµ‹å€¼éœ€è¦ä¼ å…¥ï¼Œç”¨æˆ·åï¼Œå¯†ç å’Œé¢˜å·å³å¯
 	 */
 	private String user_id1;
 	private String password1;
@@ -70,7 +70,7 @@ public class Login {
 	 * @return
 	 * @throws ClientProtocolException
 	 * @throws IOException
-	 * ÓÃ»§µÄµÇÂ¼º¯Êı£¬·µ»ØµÇÂ½ºóÌø×ªµÄÍøÒ³
+	 * ç”¨æˆ·çš„ç™»å½•å‡½æ•°ï¼Œè¿”å›ç™»é™†åè·³è½¬çš„ç½‘é¡µ
 	 */
 	public Login() {
 		// TODO Auto-generated constructor stub
@@ -99,9 +99,10 @@ public class Login {
 		}
 		else
 		{
-			System.out.println("µÇÂ¼Ê§°Ü£¡");
+			System.out.println("ç™»å½•å¤±è´¥ï¼");
 		}
 		httpost.abort();
 		return location;
+		
 	}
 }
