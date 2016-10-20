@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">The Archaeologists of the Current Millenium (ACM) now and then discover ancient artifacts located at the vertices of regular polygons. In general it is necessary to move one sand dune to uncover each artifact. After discovering three artifacts, the archaeologists wish to compute the minimum number of dunes that must be moved to uncover all of them.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains a positive integer n, the number of test cases. Each test case consists of three pairs of real numbers giving the x and y coordinates of three vertices from a regular polygon.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each line of input, output a single integer stating the fewest vertices that such a polygon might have. You may assume that each input case gives three distinct vertices of a regular polygon with at most 200 vertices. </div><p class="pst">Sample Input</p><pre class="sio">4
+10.00000 0.00000 0.00000 -10.00000 -10.00000 0.00000
+22.23086 0.42320 -4.87328 11.92822 1.76914 27.57680
+156.71567 -13.63236 139.03195 -22.04236 137.96925 -11.70517
+129.400249 -44.695226 122.278798 -53.696996 44.828427 -83.507917
+</pre><p class="pst">Sample Output</p><pre class="sio">4
+6
+23
+100
+</pre><p class="pst">

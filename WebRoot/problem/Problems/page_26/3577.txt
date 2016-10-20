@@ -1,0 +1,44 @@
+</p><div class="ptx" lang="en-US"><div><p>Xed has a great interest in Global Positioning System. To simulate it, he constructs a Cartesian coordinate system in a infinite plane whose one unit equals 1 kilometer. Then Xed puts three sensors on three different points (<i>x</i><sub>1</sub>,<i>y</i><sub>1</sub>), (<i>x</i><sub>2</sub>,<i>y</i><sub>2</sub>), (<i>x</i><sub>3</sub>,<i>y</i><sub>3</sub>) and a signal generator in the plane.</p><p>All three sensors are linked to a timer. Once a sensor has received the signal it will immediately trigger the timer which records the time. The timer starts to count when it first receives a trigger and records the earliest time when the sensors receive a signal. </p><p>Now you are given:</p><ol><li>positions of the sensors: (<i>x</i><sub>1</sub>,<i>y</i><sub>1</sub>), (<i>x</i><sub>2</sub>,<i>y</i><sub>2</sub>), (<i>x</i><sub>3</sub>,<i>y</i><sub>3</sub>)</li><li>time records: <i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>, <i>t</i><sub>3 </sub>seconds. (<i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>, <i>t</i><sub>3</sub> ≥ 0, and at least one equals 0 which presents the first sensor triggers the timer)</li><li>Velocity of the signal: <i>C</i> meters per second (<i>C</i> &gt; 0)</li></ol><p>Please help Xed to determine the position of the signal generator. It is guaranteed that such point always exists and is unique.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input consists of several test cases. Each test case has the following format:<br><i>C</i><br><i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <i>x</i><sub>2</sub> <i>y</i><sub>2</sub> <i>x</i><sub>3</sub> <i>y</i><sub>3</sub><br><i>t</i><sub>1</sub> <i>t</i><sub>2</sub> <i>t</i><sub>3</sub><br>The input is terminated by <i>C</i> = 0</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, print the case number on the first line and the position of the generator (<i>x</i>, <i>y</i>) on the second line. <i>x</i> and <i>y</i> should be separated by a single space and should be rounded to six digits to the right of the decimal point. See the sample output below for more details. <br>　</p></div><p class="pst">Sample Input</p><pre class="sio">1000
+0 0 1 0 2 1
+0 0.414213562373 1
+
+1000
+0 1 1 1 2 1
+0 0.6 1.6
+
+1000
+0 0 0 1 1 0
+0.4142135 0 0
+1000
+0 0 0 -1 0 1
+0 0 1
+
+1000
+0 0 0 1 0 -1
+0 1 0
+1000
+0 0 1 0 -1 0
+0 1 0
+1000
+0 0 -1 0 1 0
+0 0 1
+100
+0 0 0 1 1 0
+0 10 10
+0</pre><p class="pst">Sample Output</p><pre class="sio">Case 1:
+0.000000 1.000000
+Case 2:
+0.200000 1.000000
+Case 3:
+1.000000 1.000000
+Case 4:
+0.000000 -0.500000
+Case 5:
+0.000000 -0.500000
+Case 6:
+-0.500000 0.000000
+Case 7:
+-0.500000 0.000000
+Case 8:
+0.000000 0.000000
+</pre><p class="pst">

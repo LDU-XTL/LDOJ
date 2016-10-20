@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US"><p>There is an apple tree outside of kaka's house. Every autumn, a lot of apples will grow in the tree. Kaka likes apple very much, so he has been carefully nurturing the big apple tree. </p><p>The tree has <i>N</i> forks which are connected by branches. Kaka numbers the forks by 1 to <i>N</i> and the root is always numbered by 1. Apples will grow on the forks and two apple won't grow on the same fork. kaka wants to know how many apples are there in a sub-tree, for his study of the produce ability of the apple tree. </p><p>The trouble is that a new apple may grow on an empty fork some time and kaka may pick an apple from the tree for his dessert. Can you help kaka?</p><p><center><img src="images/3321_1.gif"></img></center></p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line contains an integer <i>N</i> (<i>N</i> &le; 100,000) , which is the number of the forks in the tree.<br>The following <i>N</i> - 1 lines each contain two integers <i>u</i> and <i>v</i>, which means fork <i>u</i> and fork <i>v</i> are connected by a branch.<br>The next line contains an integer <i>M</i> (<i>M</i> &le; 100,000).<br>The following <i>M</i> lines each contain a message which is either<br>&quot;<b>C <i>x</i></b>&quot; which means the existence of the apple on fork <i>x</i> has been changed. i.e. if there is an apple on the fork, then Kaka pick it; otherwise a new apple has grown on the empty fork.<br>or<br>&quot;<b>Q <i>x</i></b>&quot; which means an inquiry for the number of apples in the sub-tree above the fork <i>x</i>, including the apple (if exists) on the fork x<br>Note the tree is full of apples at the beginning</p></div><p class="pst">Output</p><div class="ptx" lang="en-US">For every inquiry, output the correspond answer per line.</div><p class="pst">Sample Input</p><pre class="sio">3
+1 2
+1 3
+3
+Q 1
+C 2
+Q 1
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+2
+</pre><p class="pst">

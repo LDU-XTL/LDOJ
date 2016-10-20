@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US"><p>Ginny<span lang="en-us">&rsquo;s birthday is coming soon. Harry Potter is preparing a birthday present for his new girlfriend. The present is a magic bracelet which consists of <i>n</i> magic beads. The are <i>m</i> kinds of different magic beads. Each kind of beads has its unique characteristic. Stringing many beads together a beautiful circular magic bracelet will be made. As Harry Potter&rsquo;</span>s friend Hermione has pointed out, beads of certain pairs of kinds will interact with each other and explode, Harry Potter must be very careful to make sure that beads of these pairs are not stringed next to each other.</p><p>There infinite beads of each kind. How many different bracelets can Harry make if repetitions produced by rotation around the center of the bracelet are neglected? Find the answer taken modulo 9973.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of the input contains the number of test cases.</p><p>Each test cases starts with a line containing three integers <i>n</i> (1 <span lang="en-us">&le; <i>n</i> &le; 10<sup>9</sup>, <i>gcd</i>(<i>n</i>, 9973) = 1), <i>m</i> (1 &le; <i>m</i> &le; 10), <i>k</i> (1 &le; <i>k</i> &le; <i>m</i>(<i>m</i> &minus; 1) &frasl; 2). The next k lines each contain two integers <i>a</i> and <i>b</i> (1 &le; <i>a</i>, <i>b</i> &le;</span> <i>m</i>), indicating beads of kind <i>a</i> cannot be stringed to beads of kind <i>b</i>.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output the answer of each test case on a separate line.</p></div><p class="pst">Sample Input</p><pre class="sio">4
+3 2 0
+3 2 1
+1 2
+3 2 2
+1 1
+1 2
+3 2 3
+1 1
+1 2
+2 2</pre><p class="pst">Sample Output</p><pre class="sio">4
+2
+1
+0</pre><p class="pst">

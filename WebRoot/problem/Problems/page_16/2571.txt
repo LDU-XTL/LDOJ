@@ -1,0 +1,19 @@
+</p><div class="ptx" lang="en-US">A great deal in today's mobile communication depends on having a direct view to a satellite. For communication providers it is therefore crucial to know where their services are available. 
+<br>You are to identify locations which have a direct view to a particular satellite, i.e. this satellite must be above the horizon. To make things easier you may assume that the earth is a perfect sphere with a radius of 6378 km (mountains will be added next year...). The satellite is a pointlike object above the earth's surface. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input file consists of several test cases. For each test case the first line contains the number of locations n to be checked followed by the position of the satellite: its latitude, its longitude (both in degrees) and its height (in km) above the earth's surface. 
+<br>Each of the following n lines contains a location on the earth's surface: the location's label (a sequence of less than 60 printable ASCII characters containing no whitespace characters) followed by its latitude and longitude (both in degrees). 
+<br>Input is terminated by n=0. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case output the number of the test case as formatted in the sample output. Then, output the locations from where the satellite is visible by printing the corresponding labels on separate lines in the same order as they appear in the input file. 
+<br>Output a blank line after each test case. </div><p class="pst">Sample Input</p><pre class="sio">3 20.0 -60.0 150000000.0
+Ulm       48.406    10.002
+Jakarta   -6.13     106.75
+Honolulu  21.32    -157.83
+2 48.4 10 0.5
+Ulm       48.406    10.002
+Honolulu  21.32    -157.83
+0 0.0 0.0 0.0
+</pre><p class="pst">Sample Output</p><pre class="sio">Test case 1:
+Ulm
+Honolulu
+
+Test case 2:
+Ulm
+</pre><p class="pst">

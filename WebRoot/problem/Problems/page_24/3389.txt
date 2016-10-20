@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US"><p>Kenning is a form of poetic metaphor, popular in ancient scaldic poetry, when a word is replaced by two or more words. For example, &#8220;giver of the gold&#8221; is a kenning for &#8220;warrior&#8221;. This substitution is formal, there is no semantic difference between &#8220;poor giver of the gold&#8221; and &#8220;poor warrior&#8221;. Kennings may be nested, so since &#8220;serpent&#8217;s lair&#8221; refers to &#8220;gold&#8221;, &#8220;giver of the serpent&#8217;s lair&#8221; also refers to warrior.</p><p>Imagine that you need some long text by 9:00 AM yesterday. Don&#8217;t panic, instead create the text plan and a list of kennings, and then expand the plan using the following algorithm. If the plan is long enough then stop &#8212; the text is ready. Otherwise simultaneously replace all words in the plan that have kennings with the corresponding kenning bodies and repeat the algorithm again.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of the input file contains three integer numbers: the width of the resulting text <i>w</i> (1 &le; <i>w</i> &le; 255), the minimal number of non-whitespace symbols in the resulting text <i>l</i> (1 &le; <i>l</i> &le; <nobr>3 000</nobr>), and the kennings list length <i>n</i> (1 &le; <i>n</i> &le; 380). The kenning list follows, a kenning per line. Each line contains the kenning referent followed by the kenning body. The text plan ends the file.</p><p>Each kenning body contains at least two words. Kennings may be recursive, like in replacing &#8220;GNU&#8221; with &#8220;GNU is Not UNIX&#8221;. The kenning referents are case and grammatical form sensitive, so words &#8220;warrior&#8221;, &#8220;Warrior&#8221; and &#8220;warriors&#8221; are different and may be referred by different kennings. The input file is not longer than <nobr>3 000</nobr> bytes, and contains only English letters, underscores, spaces, line feeds and digits (in the first line only). There are no two kennings with equal referents. All words have <i>w</i> symbols at most. Adjacent words are separated by exactly one space or line feed. No line has leading or trailing spaces.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>If the algorithm doesn&#8217;t terminate, output just words &#8220;<tt>No result</tt>&#8221; in the only output line. Otherwise output the algorithm result, a text with at most <i>w</i> characters (including spaces) per line. All line feeds from the original plan must be preserved, line feed must be inserted before a word if the word does not fit into the previous line. Adjacent words in a line must be separated by exactly one space. The lines must not have leading or trailing spaces. Correct output file will not be longer than <nobr>10 000</nobr> bytes.</p></div><p class="pst">Sample Input</p><pre class="sio">21 103 7
+king hosts leader
+vessel windless bay of horns
+horns bulls spears
+spears war needles
+Sudden Fate catched
+death_of doomed to death
+Death It was the end
+Sudden
+death_of Fjolner
+in the house of Frodi
+Death
+of the king
+in the vessel</pre><p class="pst">Sample Output</p><pre class="sio">Fate catched
+doomed to death
+Fjolner
+in the house of Frodi
+It was the end
+of the hosts leader
+in the windless bay
+of bulls spears</pre><p class="pst">

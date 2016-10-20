@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US"><p>Most positive integers may be written as a sum of a sequence of at least two consecutive positive integers. For instance,</p><pre>6 = 1 + 2 + 3<br>9 = 5 + 4 = 2 + 3 + 4</pre>but <tt>8</tt> cannot be so written.<p>Write a program which will compute how many different ways an input number may be written as a sum of a sequence of at least two consecutive positive integers.</div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of input will contain the number of problem instances <i>N</i> on a line by itself, (1 <span lang="en-us">&le; <i>N</i> &le;</span> 1000) . This will be followed by <i>N</i> lines, one for each problem instance. Each problem line will have the problem number, a single space and the number to be written as a sequence of consecutive positive integers. The second number will be less than 2<sup>31</sup> (so will fit in a 32-bit integer).</div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>The output for each problem instance will be a single line containing the problem number, a single space and the number of ways the input number can be written as a sequence of consecutive positive integers.</div><p class="pst">Sample Input</p><pre class="sio">7
+1 6
+2 9
+3 8
+4 1800
+5 987654321
+6 987654323
+7 987654325</pre><p class="pst">Sample Output</p><pre class="sio">1 1
+2 2
+3 0
+4 8
+5 17
+6 1
+7 23</pre><p class="pst">

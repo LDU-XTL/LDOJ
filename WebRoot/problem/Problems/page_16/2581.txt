@@ -1,0 +1,39 @@
+</p><div class="ptx" lang="en-US">Boudreaux reached over and shook awake Thibodeaux, who had dozed off somewhere in New Mexico. "Where we at?" Thibodeaux groggily yawned. 
+<br>
+<br>"Not in Vegas, I gua-ran-tee, but could you get my knapsack?" Boudreaux asked, gesturing to the worn, leather backpack in the back seat of their cherry red Ford Miata. 
+<br>
+<br>"Why, is there a problem?" 
+<br>
+<br>"Just hand me my knapsack, problem or not." 
+<br>
+<br>Thibodeaux complied, glancing up as Boudreaux slowed the car to a stop in a line of vehicles approaching a toll booth. "$1.65 -- Exact change only," Thibodeaux read the yellow sign on the front of a small wooden building occupied by a lone toll booth operator. "I have to get $1.65 in exact change?" Thibodeaux asked, digging through the knapsack, "all I have are ten quarters, four dimes, and three pennies. I don't have any nickels . . ." 
+<br>
+<br>"Just give me five of the quarters and the four dimes," Boudreaux replied, holding out his hand. 
+<br>
+<br>"Oh yeah," Thibodeaux said, handing over the coins, "that does add up to $1.65. I wish there were an easy way to figure out if you have an exact monetary amount, given a set of coins." 
+<br>
+<br>"Hmmm," Boudreaux shrugged, "sounds like a good programming problem." 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input to this problem will consist of a (non-empty) series of up to 100 data sets. Each data set will be formatted according to the following description, and there will be no blank lines separating data sets. 
+<br>
+<br>A single data set has 1 component: 
+<br>
+<br>Start line - A single line: 
+<br>         A B C D E
+<br>      
+<br>where: 
+<br>A: (0.01 <= A <= 5.00) is a decimal number (to two decimal places) of a monetary amount. 
+<br>B: (0 <= B <= 100) is an integer number of quarters (one quarter = $0.25). 
+<br>C: (0 <= C <= 100) is an integer number of dimes (one dime = $0.10). 
+<br>D: (0 <= D <= 100) is an integer number of nickels (one nickel = $0.05). 
+<br>E: (0 <= E <= 100) is an integer number of pennies (one penny = $0.01). </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, there will be exactly one line of output. If there exists one or more subsets of the given coins whose values add up to the given monetary amount exactly, the output will be a single line in the form: 
+<br>
+<br>   A B C D
+<br>
+<br>where A is the number of quarters, B is the number of dimes, C is the number of nickels, and D is the number of pennies, for the subset with the fewest number of coins. Otherwise, the output will be a single line with the statement: 
+<br>   NO EXACT CHANGE
+<br>
+<br></div><p class="pst">Sample Input</p><pre class="sio">0.45 2 1 1 4
+0.75 3 7 1 75
+</pre><p class="pst">Sample Output</p><pre class="sio">NO EXACT CHANGE
+3 0 0 0
+</pre><p class="pst">

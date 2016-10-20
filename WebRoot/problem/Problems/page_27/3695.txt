@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US"><div><p>You are developing a software for painting rectangles on the screen. The software supports drawing several rectangles and filling some of them with a color different from the color of the background. You are to implement an important function. The function answer such queries as what is the colored area if a subset of rectangles on the screen are filled.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>The input consists of multiple test cases. Each test case starts with a line containing two integers <i>N</i>(1 ≤ <i>N</i> ≤ 20) and <i>M</i>(1 ≤ <i>M</i> ≤ 100000), indicating the number of rectangles on the screen and the number of queries, respectively.<br>The <i>i</i>-th line of the following <i>N</i> lines contains four integers <i>X</i><sub>1</sub>,<i>Y</i><sub>1</sub>,<i>X</i><sub>2</sub>,<i>Y</i><sub>2</sub> (0 ≤ <i>X</i><sub>1</sub> &lt; <i>X</i><sub>2</sub> ≤ 1000, 0 ≤ Y1 &lt; Y2 ≤ 1000), which indicate that the lower-left and upper-right coordinates of the <i>i</i>-th rectangle are (<i>X</i><sub>1</sub>,<i> Y</i><sub>1</sub>) and (<i>X</i><sub>2</sub>,<i> Y</i><sub>2</sub>). Rectangles are numbered from 1 to <i>N</i>.<br>The last <i>M</i> lines of each test case describe <i>M</i> queries. Each query starts with a integer <i>R</i>(1&lt;=<i>R</i> ≤ <i>N</i>), which is the number of rectangles the query is supposed to fill. The following list of <i>R</i> integers in the same line gives the rectangles the query is supposed to fill, each integer of which will be between 1 and <i>N</i>, inclusive.</p><p>The last test case is followed by a line containing two zeros. </p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div><p>For each test case, print a line containing the test case number( beginning with 1).<br>For each query in the input, print a line containing the query number (beginning with 1) followed by the corresponding answer for the query. Print a blank line after the output for each test case. </p></div></div><p class="pst">Sample Input</p><pre class="sio">2  2
+0 0 2 2
+1 1 3 3
+1 1
+2 1 2
+2 1
+0 1 1 2
+2 1 3 2
+2 1 2
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">Case 1:
+Query 1: 4
+Query 2: 7
+
+Case 2:
+Query 1: 2</pre><p class="pst">

@@ -1,0 +1,25 @@
+</p><div class="ptx" lang="en-US">Alice, a charming girl, have been dreaming of being a movie star for long. Her chances will come now, for several filmmaking companies invite her to play the chief role in their new films. Unfortunately, all these companies will start making the films at the same time, and the greedy Alice doesn't want to miss any of them!! You are asked to tell her whether she can act in all the films.
+<br>
+<br>As for a film,
+<br><ol><li>it will be made ONLY on some fixed days in a week, i.e., Alice can only work for the film on these days;
+<br><li>Alice should work for it at least for specified number of days;
+<br><li>the film MUST be finished before a prearranged deadline.</ol>
+<br>For example, assuming a film can be made only on Monday, Wednesday and Saturday; Alice should work for the film at least for 4 days; and it must be finished within 3 weeks. In this case she can work for the film on Monday of the first week, on Monday and Saturday of the second week, and on Monday of the third week.
+<br>
+<br>Notice that on a single day Alice can work on at most ONE film.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains a single integer T (1 <= T <= 20), the number of test cases. Then T cases follow. Each test case begins with a single line containing an integer N (1 <= N <= 20), the number of films. Each of the following n lines is in the form of "F1 F2 F3 F4 F5 F6 F7 D W". Fi (1 <= i <= 7) is 1 or 0, representing whether the film can be made on the i-th day in a week (a week starts on Sunday): 1 means that the film can be made on this day, while 0 means the opposite. Both D (1 <= D <= 50) and W (1 <= W <= 50) are integers, and Alice should go to the film for D days and the film must be finished in W weeks.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case print a single line, 'Yes' if Alice can attend all the films, otherwise 'No'.</div><p class="pst">Sample Input</p><pre class="sio">2
+2
+0 1 0 1 0 1 0 9 3
+0 1 1 1 0 0 0 6 4
+2
+0 1 0 1 0 1 0 9 4
+0 1 1 1 0 0 0 6 2
+</pre><p class="pst">Sample Output</p><pre class="sio">Yes
+No
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><pre>A proper schedule for the first test case:
+<br>
+<br>date     Sun    Mon    Tue    Wed    Thu    Fri    Sat
+<br>week1          film1  film2  film1         film1
+<br>week2          film1  film2  film1         film1
+<br>week3          film1  film2  film1         film1
+<br>week4          film2  film2  film2</pre></div><p class="pst">

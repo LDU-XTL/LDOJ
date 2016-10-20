@@ -1,0 +1,28 @@
+</p><div class="ptx" lang="en-US">Consider a set K of positive integers.
+<br>Let p and q be two non-zero decimal digits. Call them K-equivalent if the following condition applies:
+<br><p style="padding-left: 30px">
+<br>For every n <img src="formula?tex=%5Cin" alt="\in" align="absmiddle"> K, if you replace one digit p with q or one digit q with p in the decimal notation of n then the resulting number will be an element of K.
+<br></p>
+<br>For example, when K is the set of integers divisible by 3, the digits 1, 4, and 7 are K-equivalent. Indeed, replacing a 1 with a 4 in the decimal notation of a number never changes its divisibility by 3.
+<br>It can be seen that K-equivalence is an equivalence relation (it is reflexive, symmetric and transitive).
+<br>You are given a finite set K in form of a union of disjoint finite intervals of positive integers.
+<br>Your task is to find the equivalence classes of digits 1 to 9.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains n, the number of intervals composing the set K (1 &lt;= n &lt;= 10 000).
+<br>Each of the next n lines contains two positive integers ai and bi that describe the interval [ai, bi] (i. e. the set of positive integers between ai and bi, inclusive), where 1 &lt;= ai &lt;= bi &lt;= 10<sup>18</sup>. Also, for i <img src="formula?tex=%5Cin" alt="\in" align="absmiddle"> [2..n]: ai &gt;= b(i-1) + 2.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Represent each equivalence class as a concatenation of its elements, in ascending order.
+<br>Output all the equivalence classes of digits 1 to 9, one at a line, sorted lexicographically.</div><p class="pst">Sample Input</p><pre class="sio">Sample Input #1:
+1
+1 566
+
+Sample Input #2:
+1
+30 75</pre><p class="pst">Sample Output</p><pre class="sio">Sample Output #1:
+1234
+5
+6
+789
+
+Sample Output #2:
+12
+345
+6
+7
+89</pre><p class="pst">

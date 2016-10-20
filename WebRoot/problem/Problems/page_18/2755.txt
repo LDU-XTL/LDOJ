@@ -1,0 +1,19 @@
+</p><div class="ptx" lang="en-US"><img src=images/2755_1.jpg>
+<br>Some day, Tom's father buys him a box of dominoes blocks. In the box, there are 12 different blocks, which are shown above. Tom is a boy who likes to do practice in intelligence, so he spends a whole afternoon in finishing two different rectangles with 3 * 20, which are shown below.
+<br>
+<br>①⑤⑤⑤⑤⑨⑩⑩⑩⑥⑥⑧②②②②②③④④
+<br>①⑤⑿⑿⑨⑨⑨⑩⑥⑥⑦⑧⑧⑧⑾⑾③③③④
+<br>①①①⑿⑿⑿⑨⑩⑥⑦⑦⑦⑦⑧⑾⑾⑾③④④
+<br>
+<br>①⑧⑦⑦⑦⑦⑥⑩⑨⑿⑿⑿②②②②②③④④
+<br>①⑧⑧⑧⑦⑥⑥⑩⑨⑨⑨⑿⑿⑤⑾⑾③③③④
+<br>①①①⑧⑥⑥⑩⑩⑩⑨⑤⑤⑤⑤⑾⑾⑾③④④
+<br>
+<br>Tom is sure that these are the only solutions for 3 * 20, and he wants to know the number of solutions for 4 * 15, 5 * 12, ... Can you help him?
+<br>
+<br>You should notice that if a solution will be the same as the other by some flip or rotate, these two solutions should be consider as the same.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">There may be several test cases. Each contains a single line with two positive integers M and N, which means the shape of M * N. Here M * N = 60.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output a line contains the number of solutions.</div><p class="pst">Sample Input</p><pre class="sio">1 60
+3 20
+</pre><p class="pst">Sample Output</p><pre class="sio">0
+2
+</pre><p class="pst">

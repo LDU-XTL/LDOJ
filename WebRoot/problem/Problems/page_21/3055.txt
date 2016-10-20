@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Two positive integers are called friends if they consist of the same decimal digits. So 123 and 32331313323213 are friends, but 123 and 22121221 are not.
+<br>
+<br>Two positive integers (that are not friends) are called almost friends if a single neighbour exchange in one of them results in a pair of friends. A neighbour exchanges two neighbouring digits a and b into a-1 and b+1, or into a+1 and b-1, provided that these new digits are still in the range 0...9, and that no leading zero is generated. So 123 and 2223042 are almost friends(let 04->13), and 137 and 470 are neither friends nor almost friends(note that 13 -> 04 is not allowd).
+<br>The problem is to determine if two given integers are friends or almost friends.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The frist line of the input contains a single number: the number of test cases to follow. Each test case has the following format:
+<br>One line with two integer x and y, separated by a single space, with 0 < x, y < 10<sup>100</sup>.Both integers start with a non-zero digit.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For every test case in the input, the output should contain a single line with the string "friends" or "almost friends" or "nothing", reflecting the property of the two given integers
+<br></div><p class="pst">Sample Input</p><pre class="sio">4
+123 32331313323213
+123 22121221
+123 223042
+137 470
+</pre><p class="pst">Sample Output</p><pre class="sio">friends
+almost friends
+almost friends
+nothing</pre><p class="pst">

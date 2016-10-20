@@ -1,0 +1,55 @@
+</p><div class="ptx" lang="en-US">In a corridor in a student dormitory, there are five rooms numbered 1, 2, 3, 4 and 5; room number 1 is the left-most room. The rooms have doors in different colours: blue, green, red, white and yellow, but not necessarily in that order.
+<br>
+<br>In these rooms live five students Anna, Bernhard, Chris, David and Ellen of five different nationalities Danish, Finnish, Icelandic, Norwegian and Swedish. (Both the names and the nationalities are given in alphabetical order, so it does not follow automatically that Anna is Danish.)
+<br>
+<br>These students have one computer each, and these computers are of different kinds: Amiga, Atari, Linux, Mac and Windows (given here in alphabetical order). They each have their own favourite programming language: C, C++, Java, Pascal and Perl (also listed in alphabetical order).
+<br>
+<br>You want to nd out who owns the Amiga computer based on some facts about the students.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several scenarios. The first input line contains a number 11000 indicating how many scenarios there are.
+<br>Each scenario starts with a line with a number 1-2000 telling how many fact lines there are for that scenario. Then follow the fact lines which each contains three words separated by one or more spaces:
+<br>The first and third word is one of these names:<pre>1 2 3 4 5
+<br>blue green red white yellow
+<br>anna bernhard chris david ellen
+<br>danish finnish icelandic norwegian swedish
+<br>amiga atari linux mac windows
+<br>c c++ java pascal perl
+<br>(Note that no uppercase letters are used.)</pre>
+<br>The second word specifies a relationship; it is one of
+<br>&nbsp;&nbsp;&nbsp;&nbsp;same-as&nbsp;&nbsp; left-of&nbsp;&nbsp; right-of&nbsp;&nbsp; next-to
+<br>same-as tells that the first and third fact words apply to the same room; for instance
+<br>&nbsp;&nbsp;&nbsp;&nbsp;blue same-as bernhard
+<br>tells that Bernhard lives in the room with a blue door.
+<br>
+<br>left-of tells that the first fact word applies to the room immediately to the left of the one to which the third fact word applies. For example,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;chris left-of perl
+<br>means that Chris lives in the room immediately to the left of the Perl programmer.
+<br>
+<br>right-of tells that the first fact word applies to the room immediately to the right of the one to which the third fact word applies.
+<br>
+<br>next-to tells that the two fact words apply to rooms next to each other. For example,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;swedish next-to linux
+<br>means that the Swedish student lives in the next room (either to the left or the right) of the owner of the Linux computer.
+<br>
+<br>You may assume that there are no inconsistencies in the input data. In other words, there will in every scenario be at least one person who may own the Amiga without violating the constraints.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each scenario, you should print a line starting with
+<br>scenario #n :
+<br>where n is the scenario number. If you can determine who (i.e., Anna, Bernhard, Chris, David or Ellen) owns the Amiga, you continue the line with
+<br>xxxx owns the amiga.
+<br>or, if you cannot name the Amiga owner, you print cannot identify the amiga owner.</div><p class="pst">Sample Input</p><pre class="sio">2
+8
+red same-as 1
+danish same-as 1
+perl same-as 5
+atari same-as 2
+linux same-as 3
+mac same-as 4
+windows same-as 5
+anna same-as 1
+8
+chris left-of amiga
+chris left-of 4
+c same-as 1
+danish same-as 1
+red same-as 1
+linux same-as red
+windows next-to linux
+mac left-of swedish</pre><p class="pst">Sample Output</p><pre class="sio">scenario #1: anna owns the amiga.
+scenario #2: cannot identify the amiga owner.</pre><p class="pst">

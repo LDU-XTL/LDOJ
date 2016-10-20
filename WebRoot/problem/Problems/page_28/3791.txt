@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">On a standard mobile phone the letters are distributed across the keys 2 through 9 as:
+<br>
+<br><center><img src=images/3791_1.png></center>
+<br>
+<br>To enter the letter C, you press key 2 three times (seeing A-B-C).  The number of keystrokes to enter a letter depends on where it is in the list of letters on its key. 
+<br> 
+<br>The Flathead Telephone Company (FTC) is considering rearranging the letters on the keys to reduce the average number of keystrokes required to enter names etc. or send text messages.  The letters must still appear in alphabetical order on the keys but different numbers of letters may appear on each key and possibly more keys could be used.  FTC has several databases of letter frequencies used in different applications.  For instance, it might help to move S from the 7 key to the 8 key.  They need a program which is given the frequencies of the letters and a number of keys and returns the assignment of letters to keys with the smallest average number of keystrokes using the given frequencies.  Each key used must have at least one letter and at most eight letters.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains a single integer N, (1 <= N <= 1000) which is the number of data sets that follow.  Each data set consists of three lines of input.  The first line contains a single integer K, (4 <= K <= 26), the number of keys which are to be used.  The second and third lines contain 13 decimal values each giving the percent frequency of the letters A through Z in order.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, you should generate one line of output with the following values:  The data set number as a decimal integer (start counting at one), the best average number of keystrokes to three decimal places, a space and the letters A through Z, for the best arrangement, in order with a single space at the break between letters on different keys.  It is possible that the same input data set may produce different output.</div><p class="pst">Sample Input</p><pre class="sio">2 
+8 
+8.167 1.492 2.782 4.253 12.702 2.228 2.015 6.094 6.966 0.153 0.772 4.025 2.406 
+6.749 7.507 1.929 0.095 5.987 6.327 9.056 2.758 0.978 2.360 0.150 1.974 0.075 
+9 
+1.0 10.0 11.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0 
+10.0 10.0 10.0 10.0 10.0 11.0 1.0 1.0 1.0 1.0 1.0 1.0 1.0</pre><p class="pst">Sample Output</p><pre class="sio">1 1.647 AB CD EFG HIJK LM NOPQ RS TUVWXYZ
+2 1.570 A B CDEFG HIJKLM N OP QR STUV WXYZ</pre><p class="pst">

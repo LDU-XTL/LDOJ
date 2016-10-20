@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">HQM likes StarCraft very much, especially micro-controling. In a difficult micro-control map, he is requested to control 1 marine to defeat 2 zerglings. Although he is a very good player, he still has difficulty to pass the game. So he asks you to find a way to win the game.
+<br>
+<br>The map is a 5*5 matrix, and every square is movable or unmovable. A unit, including the marine and the zergling, can only stay in a movable square. The 2 zerglings can be in the same square but at any time the marine can't stay in the same square with an undead zergling.
+<br>
+<br>Both marine and zerglings have healthy point (we call it HP). When the game start, the marine's HP is m (1 <= m <= 16) and the zerlings' HP are both z (1 <= z <= 99).
+<br>
+<br>The game may be regard as a round style game, in each round, the marine takes action first, and he can choose to move left, right, up or down. But the square he moves to must be movable and contain no alive zergling. The marine may also choose to attack, but in this condition the marine cannot move. He may choose an alive zergling and shoot at it, and every shoot will reduce the HP of the target by 1 (The marine cannot attack 2 zerglings even the two zergling are in the same square). If a zergling's HP less than 1, it will die. After the marine's action, all the alive zerglings will take action. If a zergling is in the square next to the marine's square, it will attack the marine, otherwise it will move follow the shortest way from its position to the marine's position. If there are many shortest ways, it will accord to the following order: left, up, right and down. If there is no way to reach marine, the zergling will not change its position. If the two zerglings are in the same square, their attacks will only reduce the marine's HP by 1,otherwise every zergling's attack will reduce the marine's HP by 1.
+<br>
+<br>If after a round the zerglings are all killed, the player will win the game. But if the marine is killed or the marine can't kill the zerglings in 34 rounds (It is the Time Limit of the map), the player will lose. Now it's your job to determine whether the player can win or not. If he will win, how many rounds he will need at least?
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">In the first 5 lines each contains 5 chars, referring to the map. '1' means the square is unmovable, other chars mean the square is movable, 'M' means the position of the marine, 'Z' and 'z' means the positions of two zerglings. The squares where the marine and zerglings stay at first are also movable. The sixth line of the input contains two integers m and z, refering to the HP of the marine and the zerglings.</div><p class="pst">Output</p><div class="ptx" lang="en-US">If the player can win the game, print "WIN" in the first line, and print the rounds needed at least in the second line, otherwise print "LOSE" in a single line.</div><p class="pst">Sample Input</p><pre class="sio">zZ000
+11110
+00M10
+01110
+00000
+15 15
+</pre><p class="pst">Sample Output</p><pre class="sio">WIN 
+30
+</pre><p class="pst">

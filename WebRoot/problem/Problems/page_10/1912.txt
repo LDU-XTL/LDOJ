@@ -1,0 +1,26 @@
+</p><div class="ptx" lang="en-US">Once upon a time, there was a land where several families of dwarfs were living. This land was called Dwarfland. Each family lived in one house. Dwarfs were often visiting their friends from the other families. Because the Dwarfland was free of evil, it happened that each dwarf visited each other during some short period of time. 
+<br>
+<br>Once, the humans living in countries around Dwarfland decided to build several straight highways. As the humans weren't aware of the dwarfs, some of the planned highways passed through Dwarfland. The dwarfs discovered this and were quite unhappy about it. The dwarfs are very little, and also very slow, so they are unable to cross the highway safely. 
+<br>
+<br>The dwarfs managed to get the plans for the highways somehow, and now they need your help. They would like to keep on visiting each other, so they don't like those highways which divide their houses into two non-empty parts. After they find out which highways they don't like, they will magically prevent the humans from building them. 
+<br>
+<br>The dwarfs are very little, and cannot reach the keyboard. So they asked for your help. 
+<br>
+<br><b>Task </b>
+<br>
+<br>Given is a number N of points (houses) in the plane and several straight lines (highways). For each given line, your task is to determine whether all N points lie on the same side of the line or not. Your program has to output the answer for the currently processed line before reading the description of the next one. You may assume that no highway passes through any of the houses. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Your program is supposed to read the input from the standard input  and write its output to the standard output. The first line of the input contains one integer N ( 0 < = N < = 100 000). N lines follow, the i-th of them contains two real numbers xi, yi ( -10<sup>9</sup> < = xi, yi < = 10<sup>9</sup>) separated by a single space - the coordinates of the i-th house. 
+<br>
+<br>Each of the following lines contains four real numbers X1, Y1, X2, Y2 ( -10<sup>9</sup> < = X1, Y1, X2, Y2 < = 10<sup>9</sup>) separated by a single space. These numbers are the coordinates of two different points [X1, Y1] and [X2, Y2], lying on the highway.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each line of input, your program is supposed to output a line containing the string "GOOD" if all of the given points are on the same side of the given line, or "BAD" if the given line divides the points. </div><p class="pst">Sample Input</p><pre class="sio">4
+0.0 0
+6.00 -0.001
+3.125 4.747
+4.747 0.47
+5 3 7 0
+4 -4.7 7 4.7
+4 47 4 94
+</pre><p class="pst">Sample Output</p><pre class="sio">GOOD
+BAD
+BAD
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Huge input,scanf is recommended.
+<br><img src=images/1912_1.jpg></div><p class="pst">

@@ -1,0 +1,27 @@
+</p><div class="ptx" lang="en-US">A mixed fraction is defined recursively as follows: 
+<br><ul>
+<br><li>A real value is a  simple mixed fraction. For simplicity, we only consider one digit positive integer numbers greater than zero (digits 1 ... 9). 
+<br><li>If  a is a real value (which is again assumed as an integer between 1 and 9), and  b  and  c  are two mixed fractions, 
+<br><pre> b
+<br>a- is a mixed fraction which is equal to a + b/c
+<br> c</pre>
+<br><li>Sum of a number of mixed fractions is also a mixed fraction.   
+<br></ul>
+<br>One can draw a view of a mixed fraction using ASCII characters as described below:  
+<br><ul>
+<br><li>A simple mixed fraction can be drawn using one digit character. 
+<br><li><pre>                     b
+<br>The mixed fraction  a-  will be drawn using a digit showing  a , and a horizontal line that starts 
+<br>                     c</pre>
+<br>immediately after the letter representing  a  (in the same row) using '-' characters.  b and  c  are drawn recursively <ins>above</ins> and  <ins>below</ins> the horizontal line respectively, such that their figures do not exceed the line from left nor right. 
+<br><li>Sum of mixed fractions is represented by drawing the mixed fractions and inserting a '+' character between each consequence pair such that the '+' character and the first character of the next and the previous mixed fractions make a horizontal line. 
+<br></ul>
+<br>We want you to write a program to calculate the value of a mixed fraction from its figure.  </div><p class="pst">Input</p><div class="ptx" lang="en-US">Some 90 degree clockwise rotated figures of a number of mixed fractions are given in the input file. In the first line of each rotated mixed fraction n < 300  and  m < 15000 , the length and the width of the figure, are written. In the next  m lines the figure i s described ('-' is replaced with '|'). Note that each line will consists of exactly  n characters so any number of spaces may be used in the shape, but anyway, the shape of the figure satisfies description explained above. 
+<br>The input ends with a line containing two zeroes. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case write its value in a separate line. Your answer must be rounded to two digits after decimal point and the output must contain exactly two digits after the decimal point. </div><p class="pst">Sample Input</p><pre class="sio">8 6
+   1    
+ 2 |  2 
+4|2| 4|3
+   |    
+   +    
+   1    
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">3.10</pre><p class="pst">

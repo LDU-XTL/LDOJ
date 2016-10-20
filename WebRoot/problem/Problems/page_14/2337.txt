@@ -1,0 +1,25 @@
+</p><div class="ptx" lang="en-US">A catenym is a pair of words separated by a period such that the last letter of the first word is the same as the last letter of the second. For example, the following are catenyms: 
+<br><pre>dog.gopher
+<br>gopher.rat
+<br>rat.tiger
+<br>aloha.aloha
+<br>arachnid.dog</pre>
+<br>A compound catenym is a sequence of three or more words separated by periods such that each adjacent pair of words forms a catenym. For example, 
+<br>
+<br>aloha.aloha.arachnid.dog.gopher.rat.tiger
+<br>
+<br>Given a dictionary of lower case words, you are to find a compound catenym that contains each of the words exactly once.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of standard input contains t, the number of test cases. Each test case begins with 3 <= n <= 1000 - the number of words in the dictionary. n distinct dictionary words follow; each word is a string of between 1 and 20 lowercase letters on a line by itself.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output a line giving the lexicographically least compound catenym that contains each dictionary word exactly once. Output "***" if there is no solution. </div><p class="pst">Sample Input</p><pre class="sio">2
+6
+aloha
+arachnid
+dog
+gopher
+rat
+tiger
+3
+oak
+maple
+elm
+</pre><p class="pst">Sample Output</p><pre class="sio">aloha.arachnid.dog.gopher.rat.tiger
+***
+</pre><p class="pst">

@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">Our vicar raised money to have the church clock repaired for several weeks. The big clock, which used to strike the hours days and nights, was damaged several weeks ago and had been silent since then.
+<br>
+<br>After the clock was repaired, it works all right, but there is still something wrong with it: the clock will strike thirteen times at one o’clock, fourteen times at two o’clock... 24 times at 12:00, 1 time at 13:00...
+<br>
+<br>How many times will it strike now?
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line consists of only one integer T (T <= 30), representing the number of test cases. Then T cases follow.
+<br>
+<br>Each test case consists of only one line, representing the time now. Each line includes 2 integers H, M separated by a symbol ":". (0 <= H < 24, 0 <= M < 60)
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output the answer in one line.</div><p class="pst">Sample Input</p><pre class="sio">3
+1:00
+01:01
+00:00
+</pre><p class="pst">Sample Output</p><pre class="sio">13
+0
+12
+</pre><p class="pst">

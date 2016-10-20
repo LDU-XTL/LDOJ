@@ -1,0 +1,19 @@
+</p><div class="ptx" lang="en-US"><p>It is a well-known fact that if you mix up the letters of a word, while leaving the first and last letters in their places, words still remain readable. For example, the sentence &ldquo;tihs snetncee mkaes prfecet sesne&rdquo;, makes perfect sense to most people.</p><p>If you remove all spaces from a sentence, it still remains perfectly readable, see for example: &ldquo;thissentencemakesperfectsense&rdquo;, however if you combine these two things, first shuffling, then removing spaces, things get hard. The following sentence is harder to decipher: &ldquo;tihssnetnceemkaesprfecetsesne&rdquo;.</p><p>You&rsquo;re given a sentence in the last form, together with a dictionary of valid words and are asked to decipher the text.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>On the first line one positive number: the number of testcases, at most 100. After that per testcase:</p><ul><li><p>One line with a string <i>s</i>: the sentence to decipher. The sentence consists of lowercase letters and has a length of at least 1 and at most <nobr>1 000</nobr> characters.</p></li><li><p>One line with an integer <i>n</i> with 1 &le; <i>n</i> &le; <nobr>10 000</nobr>: the number of words in the dictionary.</p></li><li><p><i>n</i> lines with one word each. A word consists of lowercase letters and has a length of at least 1 and at most 100 characters. All the words are unique.</p></li></ul></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Per testcase:</p><ul><li>One line with the deciphered sentence, if it is possible to uniquely decipher it. Otherwise &ldquo;<tt>impossible</tt>&rdquo; or &ldquo;<tt>ambiguous</tt>&rdquo;, depending on which is the case.</li></ul></div><p class="pst">Sample Input</p><pre class="sio">3
+tihssnetnceemkaesprfecetsesne
+5
+makes
+perfect
+sense
+sentence
+this
+hitehre
+2
+there
+hello
+hitehre
+3
+hi
+there
+three</pre><p class="pst">Sample Output</p><pre class="sio">this sentence makes perfect sense
+impossible
+ambiguous</pre><p class="pst">

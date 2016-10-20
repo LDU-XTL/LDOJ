@@ -1,0 +1,4 @@
+</p><div class="ptx" lang="en-US">编写一个C程序实现将字符串中的所有"you"替换成"we"</div><p class="pst">Input</p><div class="ptx" lang="en-US">输入包含多行数据
+<br>
+<br>每行数据是一个字符串，长度不超过1000
+<br>数据以EOF结束</div><p class="pst">Output</p><div class="ptx" lang="en-US">对于输入的每一行，输出替换后的字符串</div><p class="pst">Sample Input</p><pre class="sio">you are what you do</pre><p class="pst">Sample Output</p><pre class="sio">we are what we do</pre><p class="pst">

@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">Write a program that takes as input a rooted tree and a list of pairs of vertices. For each pair (u,v) the program determines the closest common ancestor of u and v in the tree. The closest common ancestor of two nodes u and v is the node w that is an ancestor of both u and v and has the greatest depth in the tree. A node can be its own ancestor (for example in Figure 1 the ancestors of node 2 are 2 and 5)</div><p class="pst">Input</p><div class="ptx" lang="en-US">The data set, which is read from a the std input, starts with the tree description, in the form:
+<br>	
+<br>nr_of_vertices
+<br>	vertex:(nr_of_successors) successor1 successor2 ... successorn
+<br>	...	
+<br>where vertices are represented as integers from 1 to n ( n <= 900 ). The tree description is followed by a list of pairs of vertices, in the form:
+<br>	nr_of_pairs
+<br>(u v)	(x y)	...
+<br>
+<br>The input file contents several data sets (at least one).
+<br>Note that white-spaces (tabs, spaces and line breaks) can be used freely in the input.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each common ancestor the program prints the ancestor and the number of pair for which it is an ancestor. The results are printed on the standard output on separate lines, in to the ascending order of the vertices, in the format: ancestor:times
+<br>For example, for the following tree:
+<br><center><img src=images/1470_1.jpg></center></div><p class="pst">Sample Input</p><pre class="sio">5
+5:(3) 1 4 2
+1:(0)
+4:(0)
+2:(1) 3
+3:(0)
+6
+(1 5) (1 4) (4 2)
+      (2 3)
+(1 3) (4 3)</pre><p class="pst">Sample Output</p><pre class="sio">2:1
+5:5</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Huge input, scanf is recommended.</div><p class="pst">

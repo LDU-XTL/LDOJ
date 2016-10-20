@@ -1,0 +1,33 @@
+</p><div class="ptx" lang="en-US">Math teacher Mr. Matsudaira is teaching expansion and factoring of polynomials to his students. Last week he instructed the students to write two polynomials (with a single variable x), and to report GCM (greatest common measure) of them as a homework, but he found it boring to check their answers manually. So you are asked to write a program to check the answers.
+<br>Hereinafter, only those polynomials with integral coefficients, called integral polynomials, are considered.
+<br>When two integral polynomials A and B are given, an integral polynomial C is a common factor of A and B if there are some integral polynomials X and Y such that A = CX and B = CY.
+<br>GCM of two integral polynomials is a common factor which has the highest degree (for x, here); you have to write a program which calculates the GCM of two polynomials.
+<br>It is known that GCM of given two polynomials is unique when constant multiplication factor is ignored. That is, when C and D are both GCM of some two polynomials A and B, p×C = q×D for some nonzero integers p and q.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of multiple datasets. Each dataset constitutes a pair of input lines, each representing a polynomial as an expression defined below.
+<br><p style="padding-left: 30px">
+<br>A primary is a variable x, a sequence of digits 0 - 9, or an expression enclosed within ( ... ). Examples: x, 99, (x+1).
+<br>A factor is a primary by itself or a primary followed by an exponent. An exponent consists of a symbol ^ followed by a sequence of digits 0 - 9. Examples: x^05, 1^15, (x+1)^3.
+<br>A term consists of one or more adjoining factors. Examples: 4x, (x+1)(x-2), 3(x+1)^2.
+<br>An expression is one or more terms connected by either + or -. Additionally, the first term of an expression may optionally be preceded with a minus sign -. Examples: -x+1, 3(x+1)^2-x(x-1)^2.
+<br></p>
+<br>Integer constants, exponents, multiplications (adjoining), additions (+) and subtractions/negations (-) have their ordinary meanings. A sequence of digits is always interpreted as an integer constant. For example, 99 means 99, not 9 × 9.
+<br>Any subexpressions of the input, when fully expanded normalized, have coefficients less than 100 and degrees of x less than 10. Digit sequences in exponents represent non-zero values.
+<br>All the datasets are designed so that a standard algorithm with 32-bit two’s complement integers can solve the problem without overflows.
+<br>The end of the input is indicated by a line containing a period.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each of the dataset, output GCM polynomial expression in a line, in the format below.
+<br><p style="padding-left: 30px">
+<br>c<sub>0</sub>x^p<sub>0</sub> ± c<sub>1</sub>x^p<sub>1</sub> ... ± c<sub>n</sub>x^p<sub>n</sub>
+<br></p>
+<br>Where ci and pi (i = 0, ... , n) are positive integers with p0 > p1 > ... > pn, and the greatest common divisor of {ci | i = 0, ... , n} is 1.
+<br>Additionally:
+<br><p style="padding-left: 30px">
+<br>When ci is equal to 1, it should be omitted unless corresponding pi is 0,
+<br>x^0 should be omitted as a whole, and
+<br>x^1 should be written as x.
+<br></p></div><p class="pst">Sample Input</p><pre class="sio">-(x^3-3x^2+3x-1)
+(x-1)^2
+x^2+10x+25
+x^2+6x+5
+x^3+1
+x-1
+.</pre><p class="pst">Sample Output</p><pre class="sio">x^2-2x+1
+x+5
+1</pre><p class="pst">

@@ -1,0 +1,71 @@
+</p><div class="ptx" lang="en-US">The city of Kyoto is well-known for its Chinese plan: streets are either North-South or East-West. Some streets are numbered, but most of them have real names. 
+<br>Crossings are named after the two streets crossing there, e.g. Kawaramachi-Sanjo is the crossing of Kawaramachi street and Sanjo street. But there is a problem: which name should come first? At first the order seems quite arbitrary: one says Kawaramachi-Sanjo (North-South first) but Shijo-Kawaramachi (East-West first). With some experience, one realizes that actually there seems to be an "order" on the streets, for instance in the above Shijo is "stronger" than Kawaramachi, which in turn is "stronger" than Sanjo. One can use this order to deduce the names of other crossings. 
+<br>You are given as input a list of known crossing names X-Y. Streets are either North-South or East-West, and only orthogonal streets may cross. 
+<br>
+<br>As your list is very incomplete, you start by completing it using the following rule: 
+<br><ul><li>two streets A and B have equal strength if (1) to (3) are all true: 
+<br><ol><li>they both cross the same third street C in the input 
+<br><li>there is no street D such that D-A and B-D appear in the input 
+<br><li>there is no street E such that A-E and E-B appear in the input </ol></ul>
+<br>We use this definition to extend our strength relation: 
+<br><ul><li>A is stronger than B, when there is a sequence A = A1, A2, ..., An = B, with n at least 2, 
+<br>where, for any i in 1 .. n-1, either Ai-Ai+1 is an input crossing or Ai and Ai+1 have equal strength. </ul>
+<br>Then you are asked whether some other possible crossing names X-Y are valid. You should answer affirmatively if you can infer the validity of a name, negatively if you cannot. Concretely: 
+<br><ul><li>YES if you can infer that the two streets are orthogonal, and X is stronger than Y 
+<br><li>NO otherwise </ul></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input is a sequence of data sets, each of the form 
+<br>
+<br>N
+<br>Crossing1
+<br>...
+<br>CrossingN
+<br>M
+<br>Question1
+<br>...
+<br>QuestionM
+<br>Both Crossings and Questions are of the form 
+<br>
+<br>X-Y 
+<br>where X and Y are strings of alphanumerical characters, of lengths no more than 16. There is no white space, and case matters for alphabetical characters. 
+<br>N and M are between 1 and 1000 inclusive, and there are no more than 200 streets in a data set. 
+<br>
+<br>The last data set is followed by a line containing a zero. 
+<br>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output for each data set should be composed of M+1 lines, the first one containing the number of streets in the Crossing part of the input, followed by the answers to each question, either YES or NO without any spaces. </div><p class="pst">Sample Input</p><pre class="sio">7
+Shijo-Kawaramachi
+Karasuma-Imadegawa
+Kawaramachi-Imadegawa
+Nishioji-Shijo
+Karasuma-Gojo
+Torimaru-Rokujo
+Rokujo-Karasuma
+6
+Shijo-Karasuma
+Imadegawa-Nishioji
+Nishioji-Gojo
+Shijo-Torimaru
+Torimaru-Gojo
+Shijo-Kawabata
+4
+1jo-Midosuji
+Midosuji-2jo
+2jo-Omotesando
+Omotesando-1jo
+4
+Midosuji-1jo
+1jo-Midosuji
+Midosuji-Omotesando
+1jo-1jo
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">8
+YES
+NO
+YES
+NO
+YES
+NO
+4
+YES
+YES
+NO
+NO
+</pre><p class="pst">

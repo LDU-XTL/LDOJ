@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US"><p>Mr.Dog was fired by his company. In order to support his family, he must find a new job as soon as possible. Nowadays, It's hard to have a job, since there are swelling numbers of the unemployed. So some companies often use hard tests for their recruitment. </p><p>The test is like this: starting from a source-city, you may pass through some directed roads to reach another city. Each time you reach a city, you can earn some profit or pay some fee, Let this process continue until you reach a target-city. The boss will compute the expense you spent for your trip and the profit you have just obtained. Finally, he will decide whether you can be hired. </p><p>In order to get the job, Mr.Dog managed to obtain the knowledge of the net profit <i>V<sub>i</sub></i> of all cities he may reach (a negative <i>V<sub>i</sub></i> indicates that money is spent rather than gained) and the connection between cities. A city with no roads leading to it is a source-city and a city with no roads leading to other cities is a target-city. The mission of Mr.Dog is to start from a source-city and choose a route leading to a target-city through which he can get the maximum profit.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input file includes several test cases.
+<br>The first line of each test case contains 2 integers <i>n</i> and <i>m</i>(1 ≤ <i>n</i> ≤ 100000, 0 ≤ <i>m</i> ≤ 1000000) indicating the number of cities and roads.
+<br>The next <i>n</i> lines each contain a single integer. The <i>i</i>th line describes the net profit of the city <i>i</i>, <i>V<sub>i</sub></i> (0 ≤ |<i>V<sub>i</sub></i>| ≤ 20000)
+<br>The next m lines each contain two integers <i>x</i>, <i>y</i> indicating that there is a road leads from city <i>x</i> to city <i>y</i>. It is guaranteed that each road appears exactly once, and there is no way to return to a previous city.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output file contains one line for each test cases, in which contains an integer indicating the maximum profit Dog is able to obtain (or the minimum expenditure to spend)</div><p class="pst">Sample Input</p><pre class="sio">6 5
+1
+2
+2
+3
+3
+4
+1 2
+1 3
+2 4
+3 4
+5 6
+</pre><p class="pst">Sample Output</p><pre class="sio">7</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><img src = "images/3249_1.gif"></div><p class="pst">

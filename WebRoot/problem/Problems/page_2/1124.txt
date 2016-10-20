@@ -1,0 +1,34 @@
+</p><div class="ptx" lang="en-US">In recent days, a number of people have been injured after being pushed off the sidewalks due to overcrowding. City Hall is interested in figuring out how much pedestrian traffic its sidewalks receive every day. The results of this study will be used to determine whether the city needs to fund more sidewalks. The city has surveyed various buildings in several blocks to determine the traffic patterns they generate. Your job is to take this survey data and convert it into sidewalk utilization information. 
+<br>
+<br>Your program will read in the size of the map and a map of several city blocks. Buildings, streets, and building entrance/exits will be marked on the map. You will also be given a list of pedestrian load between several pairs of exits and entrances. Your program will determine the paths used by pedestrians between each source and destination, add up the total pedestrian load from all paths using each street, and output a table of the total pedestrian load on each square. 
+<br>
+<br>Notes: 
+<br><ul>
+<br><li>The map is divided into squares. Each square of the map can be a street square, a building square, or an entrance/exit square. An entrance/exit square serves as both entrance and exit for that building. There will be no more than 90 street squares in the map. 
+<br>
+<br><li>People will always follow the shortest path between their origin and destination. No shortest path will exceed 75 squares. 
+<br>
+<br><li>If there are multiple equal-length shortest paths, the load will be divided equally amongst the paths. For shortest paths, there will be fewer than 50000 equallength path combinations. 
+<br>
+<br><li>If a building entrance/exit has multiple sides facing a street (for example, a corner of a building), the pedestrians may enter or exit through any street-facing side. 
+<br>
+<br><li>All movement will be strictly N, E, S, or W. No diagonal movement is permitted. 
+<br>
+<br><li>Pedestrians cannot move through buildings or off the edge of the map. 
+<br>
+<br><li>For convenience, you may ignore the fact that each street section may have two sidewalks. 
+<br>
+<br><li>Traffic load is not applied to the actual exit/entrance squares themselves. 
+<br>
+<br><li>If an origin and destination are adjacent on the map, pedestrians may move directly between them. In this case, there is no resulting load placed on any portion of the map because no streets are used. 
+<br></ul></div><p class="pst">Input</p><div class="ptx" lang="en-US">Line 1: X Y 
+<br>X is the number of columns in the map, Y is the number of rows. Each is a positive integer less than 20. 
+<br>
+<br>Line 2-(Y+1): 
+<br>Each line contains exactly X symbols indicating the contents of that square on the map. The symbols are: 
+<br>X: building, non-entrance/exit 
+<br>.: (period) street 
+<br>{A-O}: letter indicating exit/entrance. Each letter may occur at most once. 
+<br>
+<br>Lines (Y+2)-?: 
+<br>Each line indicates a pedestrian route and specifies a source, destination, and pedestrian load. 

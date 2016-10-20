@@ -1,0 +1,42 @@
+</p><div class="ptx" lang="en-US">Text-processing tools like awk and sed allow you to automatically perform a sequence of editing operations based on a script. For this problem we consider the specific case in which we want to perform a series of string replacements, within a single line of text, based on a fixed set of rules. Each rule specifies the string to find, and the string to replace it with, as shown below. 
+<br><pre>
+<br>        Rule  Find  Replace-by 
+<br>         1.ban      bab 
+<br>         2.baba     be 
+<br>         3.ana      any 
+<br>         4.ba b     hind the g </pre>
+<br>To perform the edits for a given line of text, start with the first rule. Replace the first occurrence of the find string within the text by the replace-by string, then try to perform the same replacement again on the new text. Continue until the find string no longer occurs within the text, and then move on to the next rule. Continue until all the rules have been considered. Note that (1) when searching for a find string, you always start searching at the beginning of the text, (2) once you have finished using a rule (because the find string no longer occurs) you never use that rule again, and (3) case is significant.
+<br>
+<br>For example, suppose we start with the line
+<br>
+<br>banana boat
+<br>
+<br>and apply these rules. The sequence of transformations is shown below, where occurrences of a find string are underlined and replacements are boldfaced. Note that rule 1 was used twice, then rule 2 was used once, then rule 3 was used zero times, and then rule 4 was used once.
+<br><pre>
+<br>     Before      After 
+<br>     <ins>ban</ins>ana boat <b>bab</b>ana boat 
+<br>     ba<ins>ban</ins>a boat ba<b>bab</b>a boat 
+<br>     <ins>baba</ins>ba boat <b>be</b>ba boat 
+<br>     be<ins>ba b</ins>oat   be<b>hind the g</b>oat </pre>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains one or more test cases, followed by a line containing only 0 (zero) that signals the end of the file. Each test case begins with a line containing the number of rules, which will be between 1 and 10. Each rule is specified by a pair of lines, where the first line is the find string and the second line is the replace-by string. Following all the rules is a line containing the text to edit.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output a line containing the final edited text.
+<br>
+<br>Both find and replace-by strings will be at most 80 characters long. Find strings will contain at least one character, but replace-by strings may be empty (indicated in the input file by an empty line). During the edit process the text may grow as large as 255 characters, but the final output text will be less than 80 characters long.
+<br>
+<br>The first test case in the sample input below corresponds to the example shown above.
+<br></div><p class="pst">Sample Input</p><pre class="sio">4
+ban
+bab
+baba
+be
+ana
+any
+ba b
+hind the g
+banana boat
+1
+t
+sh
+toe or top
+0</pre><p class="pst">Sample Output</p><pre class="sio">behind the goat
+shoe or shop
+</pre><p class="pst">

@@ -1,0 +1,70 @@
+</p><div class="ptx" lang="en-US">Authors of the new, all-in-one encyclopedia have organized the titles in the order they consider most appropriate for their readers. It's not always alphabetical, because they want to observe some peculiar relationships between them. However, they still want to allow users to look up titles quickly. 
+<br>
+<br>They achieve this by adding a carefully calculated number of spaces before every title in the list of titles. They call this structure a dictionary. 
+<br>
+<br>A dictionary is represented by a list of words with some number of spaces before certain words. Dictionary format can be described as a set of constraints on sequences of consecutive words starting with the same letter. Any maximal sequence of consecutive words starting with the same letter should satisfy the following rules: 
+<br>
+<br><ul><li>The first word in the group has no spaces before it. Every subsequent word in the group has at least one leading space. 
+<br><li>If 
+<br><ul><li>the first word of the group is deleted and 
+<br><li>one space is deleted before every remaining word and 
+<br><li>the first letter is deleted from every remaining word </ul>
+<br>then resulting sequence is a dictionary.</ul>
+<br>The authors don't feel like giving you a more detailed explanation of what a dictionary is, so they have included an example (see sample input and output) that clarifies their definition. 
+<br>Your task is to write a program that will convert a given list of words into a dictionary by adding some number of spaces before certain words and preserving the original order of the words. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of at least one and most 100000 words. Each word consists of at least one and at most 10 lower-case letters. There will be no leading or trailing spaces. There will be no blank lines between the words, but there may be an arbitrary number of blank lines at the end of the file. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Write to the output the original words in the same order without any trailing spaces but with the appropriate number of leading spaces, so that this word list is a dictionary. There should be no blank lines between the words, but there may be an arbitrary number of blank lines at the end of the file. </div><p class="pst">Sample Input</p><pre class="sio">a
+ant
+antique
+amaze
+bargain
+bridge
+bride
+bribe
+born
+bucket
+tart
+tan
+tram
+trolley
+t
+try
+trial
+zed
+double
+dorm
+do
+dormant
+donate
+again
+agony
+boost
+back
+born</pre><p class="pst">Sample Output</p><pre class="sio">a
+ ant
+  antique
+ amaze
+bargain
+ bridge
+  bride
+   bribe
+ born
+ bucket
+tart
+ tan
+ tram
+  trolley
+ t
+ try
+  trial
+zed
+double
+ dorm
+  do
+  dormant
+  donate
+again
+ agony
+boost
+ back
+ born
+</pre><p class="pst">

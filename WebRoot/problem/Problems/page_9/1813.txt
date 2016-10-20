@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">A small computer software company encountered a problem when developing their CAD software. The boss of this company offered a reward of $1000 on the Internet for the person who can solve this problem for them. You are now unemployed at home and want to earn the money by your proficient computer programming skill.
+<br>
+<br>The problem is quite simple. Your task is just to calculate the area of the intersection of two shapes that may overlap. These two shapes both can be rectangles or circles.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input is the number of test cases. For each test case, there are two lines describing two shapes. A line of "R x1 y1 x2 y2" represents a rectangle with top-left corner at (x1, y1) and bottom-right corner at (x2, y2). A line of "C x y r" represents a circle with center at (x, y) and radius r.
+<br>
+<br>You can assume that all the numbers mentioned above are integers between 0 and 10.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print the nearest integer of the intersection area of the two shapes in a single line. </div><p class="pst">Sample Input</p><pre class="sio">4
+R 0 0 10 10
+C 0 0 10
+
+C 0 0 5
+R 5 5 10 10
+
+R 1 1 3 4
+R 0 0 2 4
+
+C 0 0 10
+C 0 0 10
+</pre><p class="pst">Sample Output</p><pre class="sio">79
+0
+3
+314
+</pre><p class="pst">

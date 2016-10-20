@@ -1,0 +1,6 @@
+</p><div class="ptx" lang="en-US">You are given a bunch of wooden sticks. Each endpoint of each stick is colored with some color. Is it possible to align the sticks in a straight line such that the colors of the endpoints that touch are of the same color? </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input is a sequence of lines, each line contains two words, separated by spaces, giving the colors of the endpoints of one stick. A word is a sequence of lowercase letters no longer than 10 characters. There is no more than 250000 sticks. </div><p class="pst">Output</p><div class="ptx" lang="en-US">If the sticks can be aligned in the desired way, output a single line saying Possible, otherwise output Impossible.</div><p class="pst">Sample Input</p><pre class="sio">blue red
+red violet
+cyan blue
+blue magenta
+magenta cyan
+</pre><p class="pst">Sample Output</p><pre class="sio">Possible</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Huge input,scanf is recommended.</div><p class="pst">

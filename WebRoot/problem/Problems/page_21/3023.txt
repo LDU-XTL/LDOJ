@@ -1,0 +1,32 @@
+</p><div class="ptx" lang="en-US">The Russian navy has, as you probably know, had some problems with their submarines in Swedish waters. These problems are very embarrassing for the Russian military, who has decided to do something about it.
+<br>
+<br>As a first step in their plan, they want to construct a program for their centre of command to be able to locate their submarines.
+<br>
+<br>From GPSes (Global Positioning Systems) they are able to get X and Y coordinates for the front and rear points of all submarines. The Russian intelligence has in addition provided data for all islands in the Swedish waters. With this information, and with a lot of help from simulations using GPS equipped minks, Russian programmers have been able to develop a program that, from the information given, tells the user if a submarine is <ol><li>Still in water<li>Partially on land<li>Entirely on land</ol><img src=images\3023_1.jpg>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">First you will get the number of submarines that are present in the area. [1..100]
+<br>After that, for each submarine, you will get the X and Y positions first for the submarines front and then for its rear. [-1000..1000] Then you will get the number of islands in the area. [1..50]
+<br>After that, for each island you will get the following: The number of points of the polygon that represents the island. [3..20], The X and Y positions of the points. [-1000..1000]
+<br>All input are integers. No submarine end point will be on an island edge. No submarine will lie on an island edge. All islands are simple polygons without crossing edges or touching borders. The first point of the island is connected to the last point. All submarines are approximated with a line between the front and rear points. Two islands never overlap or touch each other.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output contains information about every submarine, in order.
+<br>If the submarine is all in water, print “Submarine X is still in water.”
+<br>If the submarine is all on land, print “Submarine X is completely on land.”
+<br>If the submarine is partially in water and partially on land, print “Submarine X is partially on land.”
+<br>X is the submarine’s number (1,2,3,...) according to it’s order in the input file.</div><p class="pst">Sample Input</p><pre class="sio">5
+11 11 9 9
+0 0 4 0
+0 1 10 1
+0 6 6 0
+0 -10 0 -9
+2
+4
+-5 -5
+5 -5
+5 5
+-5 5
+3
+-2 -8
+-1 -9
+-2 -10</pre><p class="pst">Sample Output</p><pre class="sio">Submarine 1 is still in water.
+Submarine 2 is completely on land.
+Submarine 3 is partially on land.
+Submarine 4 is partially on land.
+Submarine 5 is still in water.</pre><p class="pst">

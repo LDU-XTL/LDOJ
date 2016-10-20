@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">It's raining outside. Farmer Johnson's bull Ben wants some rain to water his flowers. Ben nails two wooden boards on the wall of his barn. Shown in the pictures below, the two boards on the wall just look like two segments on the plane, as they have the same width.
+<br><center><img src=images/2826_1.gif></center>
+<br>Your mission is to calculate how much rain these two boards can collect.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains the number of test cases.
+<br>Each test case consists of 8 integers not exceeding 10,000 by absolute value, <i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>, <i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>, <i>x</i><sub>3</sub>, <i>y</i><sub>3</sub>, <i>x</i><sub>4</sub>, <i>y</i><sub>4</sub>. (<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>), (<i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>) are the endpoints of one board, and (<i>x</i><sub>3</sub>, <i>y</i><sub>3</sub>), (<i>x</i><sub>4</sub>, <i>y</i><sub>4</sub>) are the endpoints of the other one.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case output a single line containing a real number with precision up to two decimal places - the amount of rain collected.
+<br></div><p class="pst">Sample Input</p><pre class="sio">2
+0 1 1 0
+1 0 2 1
+
+0 1 2 1
+1 0 1 2
+</pre><p class="pst">Sample Output</p><pre class="sio">1.00
+0.00
+</pre><p class="pst">

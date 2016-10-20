@@ -1,0 +1,19 @@
+</p><div class="ptx" lang="en-US"><div><p>Windy is a stupid boy who can only write ABC. Now he has written a string <b><i>S</i></b> which contains only ABC and wonder how many string is a good copy of <b><i>S</i></b>. A copy is a permutation of <b><i>S</i></b> and a copy is good if and only if the distance between the positions of every letter in <b><i>S</i></b> and the copy is in a certain range. The range of distance of letter A B C is <i>RA</i>, <i>RB</i> and <i>RC</i>. </p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>The first line of input is the number of test case.<br>The first line of each test case contains three integers, <i>RA</i>, <i>RB</i> and <i>RC</i>.<br>The second line contains string <b><i>S</i></b>.<br>There is a blank line before each test case. </p><p>0 &le; <i>RA</i>, <i>RB</i> and <i>RC</i> &le; 10^9 <br>0 &lt; The length of <i><b>S</b></i> &le; 500 </p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div><p>For each test case output the answer on a single line. Since the answer may be very large, just output the answer modulo 20090305. </p></div></div><p class="pst">Sample Input</p><pre class="sio">4
+
+1 1 0
+AB
+
+1 1 0
+ABBA
+
+2 3 4
+ABBBABACCBCAABCBBCCC
+
+3 1 5
+ABCCCBCABACAAAB
+
+</pre><p class="pst">Sample Output</p><pre class="sio">2
+4
+645716
+6660
+</pre><p class="pst">

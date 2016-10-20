@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US"><p>The stable marriage problem consists of matching members of two different sets according to the member&rsquo;s preferences for the other set&rsquo;s members. The input for our problem consists of:</p><ul><li>a set M of n males;</li><li>a set F of n females;</li><li>for each male and female we have a list of all the members of the opposite gender in order of preference (from the most preferable to the least).</li></ul><p>A marriage is a one-to-one mapping between males and females. A marriage is called stable, if there is no pair (<i>m</i>, <i>f</i>) such that <i>f</i> &isin; F prefers <i>m</i> &isin; M to her current partner and <i>m</i> prefers <i>f</i> over his current partner. The stable marriage A is called male-optimal if there is no other stable marriage B, where any male matches a female he prefers more than the one assigned in A.</p><p>Given preferable lists of males and females, you must find the male-optimal stable marriage.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line gives you the number of tests. The first line of each test case contains integer n (0 &lt; n &lt; 27). Next line describes n male and n female names. Male name is a lowercase letter, female name is an upper-case letter. Then go n lines, that describe preferable lists for males. Next n lines describe preferable lists for females.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case find and print the pairs of the stable marriage, which is male-optimal. The pairs in each test case must be printed in lexicographical order of their male names as shown in sample output. Output an empty line between test cases.</p></div><p class="pst">Sample Input</p><pre class="sio">2
+3
+a b c A B C
+a:BAC
+b:BAC
+c:ACB
+A:acb
+B:bac
+C:cab
+3
+a b c A B C
+a:ABC
+b:ABC
+c:BCA
+A:bac
+B:acb
+C:abc</pre><p class="pst">Sample Output</p><pre class="sio">a A
+b B
+c C
+
+a B
+b A
+c C</pre><p class="pst">

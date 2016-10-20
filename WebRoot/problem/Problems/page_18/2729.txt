@@ -1,0 +1,45 @@
+</p><div class="ptx" lang="en-US"><img src=images/2729_1.jpg align=right>Robocode is an educational game designed to help learn Java. The players write programs that control tanks fighting with each other on a battlefield. The idea of this game may seem simple, but it takes a lot of effort to write a winning tank's program. Today we are not going to write an intelligent tank, but to design a simplified robocode game engine. 
+<br>
+<br>Assuming the whole battlefield is 120*120 (pixel). Each tank can ONLY move in vertical and horizontal direction on the fixed path (There are paths every 10 pixels in the battlefield in both vertical and horizontal direction. In all there are 13 vertical paths and 13 horizontal paths available for tanks, as shown in Figure 1). The shape and size of the tank are negligible and one tank has (x, y) (x, y &isin; [0, 120]) representing its coordinate position and &alpha; (&alpha; &isin; {0, 90, 180, 270}) representing its facing direction (&alpha; = 0, 90, 180 or 270 means facing right, up, left or down respectively). They have a constant speed of 10 pixels/second when they move and they can't move out of the boundary (they will stop moving, staying in the direction that they are currently facing, when touching any boundary of the battlefield). The tank can shoot in the direction it's facing whether it's moving or still. The shot moves at the constant speed 20 pixel/second and the size of the shot is also negligible. It will explode when it meets a tank on the path. It's possible for more than one shot to explode in the same place if they all reach a tank at the exact same time. The tank being hit by the explosion will be destroyed and will be removed from the battlefield at once. A shot exploding or flying out of the boundary will also be removed.
+<br><center><img src=images/2729_2.jpg>
+<br>Figure 1</center>
+<br>When the game begins, all the tanks are stopped at different crosses of the vertical and horizontal paths. Given the initial information of all the tanks and several commands, your job is to find the winner -- the last living tank when all the commands are executed (or omitted) and no shot exists in the battlefield (meaning that no tank may die in the future).</div><p class="pst">Input</p><div class="ptx" lang="en-US">There are several test cases. The battlefield and paths are all the same for all test cases as shown in Figure 1. Each test case starts with integers N (1 <= N <= 10) and M (1 <= M <= 1000), separated by a blank. N represents the number of the tanks playing in the battlefield, and M represents the number of commands to control the tanks' moving. The following N lines give the initial information (at time 0) of each tank, in the format:
+<br><ul>Name x y &alpha;</ul>
+<br>The Name of a tank is consisted of no more than 10 letters. x, y, &alpha; are integers and x, y &isin; {0, 10, 20, ..., 120}, &alpha; &isin; {0, 90, 180, 270}。Each field is separated by a blank.
+<br>
+<br>The following M lines give commands in such format:
+<br><ul>Time Name Content</ul>
+<br>Each field is separated by a blank. All the commands are giving in the ascending order of Time (0 <= Time <= 30), which is a positive integer meaning the timestamp when the commands are sent. Name points out which tank will receive the command. The Content has different types as follows:
+<br><table border=1><tr><td>MOVE</td><td>When receiving the command, the tank starts to move in its facing direction. If the tank is already moving, the command takes no effect.</td></tr><tr><td>STOP</td><td>When receiving the command, the tank stops moving. If the tank is already stopped, the command takes no effect.</td></tr><tr><td>TURN angle</td><td>When receiving the command, the tank changes the facing direction &alpha; to be ((&alpha; + angle + 360) mod 360), no matter whether it is moving or not. You are guaranteed that ((&alpha; + angle + 360) mod 360) &isin; {0, 90, 180, 270}. TURN command doesn't affect the moving state of the tank.</td></tr><tr><td>SHOOT</td><td>When receiving the command, the tank will shoot one shot in the direction it's facing.</td></tr></table>
+<br>Tanks take the corresponding action as soon as they receive the commands. E.g., if the tank at (0, 0), &alpha; = 90, receives the command MOVE at time 1, it will start to move at once and will reach (0, 1) at time 2. Notice that a tank could receive multiple commands in one second and take the action one by one. E.g., if the tank at (0, 0), &alpha; = 90, receives a command sequence of "TURN 90; SHOOT; TURN -90", it will turn to the direction &alpha; = 180, shoot a shot and then turn back. If the tank receives a command sequence of "MOVE; STOP", it will keep still in the original position. 
+<br>
+<br>Some more notes you need to pay attention:
+<br><ul><li>If a tank is hit by an explosion, it will take no action to all the commands received at that moment. Of course, all the commands sent to the already destroyed tank should also be omitted.
+<br><li>Although the commands are sent at discrete seconds, the movement and explosions of tanks and shots happen in the continuous time domain.
+<br><li>No two tanks will meet on the path guaranteed by the input data, so you don't need to consider about that situation.
+<br><li>All the input contents will be legal for you. </ul>
+<br>A test case with N = M = 0 ends the input, and should not be processed. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output the winner's name in one line. The winner is defined as the last living tank. If there is no tank or more than one tank living at the end, output "NO WINNER!" in one line.</div><p class="pst">Sample Input</p><pre class="sio">2 2
+A 0 0 90
+B 0 120 180
+1 A MOVE
+2 A SHOOT
+2 2
+A 0 0 90
+B 0 120 270
+1 A SHOOT
+2 B SHOOT
+2 6
+A 0 0 90
+B 0 120 0
+1 A MOVE
+2 A SHOOT
+6 B MOVE
+30 B STOP
+30 B TURN 180
+30 B SHOOT
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">A
+NO WINNER!
+B
+</pre><p class="pst">

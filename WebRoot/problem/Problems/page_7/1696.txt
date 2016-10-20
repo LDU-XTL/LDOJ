@@ -1,0 +1,38 @@
+</p><div class="ptx" lang="en-US">The most exciting space discovery occurred at the end of the 20th century. In 1999, scientists traced down an ant-like creature in the planet Y1999 and called it M11. It has only one eye on the left side of its head and just three feet all on the right side of its body and suffers from three walking limitations:
+<br><ol><li>It can not turn right due to its special body structure.
+<br><li>It leaves a red path while walking.
+<br><li>It hates to pass over a previously red colored path, and never does that.</ol>
+<br>The pictures transmitted by the Discovery space ship depicts that plants in the Y1999 grow in special points on the planet. Analysis of several thousands of the pictures have resulted in discovering a magic coordinate system governing the grow points of the plants. In this coordinate system with x and y axes, <b>no two plants  share the same x or y</b>. 
+<br>An M11 needs to eat exactly one plant in each day to stay alive. When it eats one plant, it remains there for the rest of the day with no move. Next day, it looks for another plant to go there and eat it. If it can not reach any other plant it dies by the end of the day. Notice that it can reach a plant in any distance.
+<br>The problem is to find a path for an M11 to let it live longest. 
+<br>Input is a set of (x, y) coordinates of plants. Suppose A with the coordinates (xA, yA) is the plant with the least y-coordinate. M11 starts from point (0,yA) heading towards plant A. Notice that the solution path should not cross itself and all of the turns should be counter-clockwise.  Also note that the solution may visit more than two plants located on a same straight line.
+<br><center><img src=images/1696_1.jpg></center></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input is M, the number of test cases to be solved (1 <= M <= 10). For each test case, the first line is N, the number of plants in that test case (1 <= N <= 50), followed by N lines for each plant data. Each plant data consists of three integers: the first number is the unique plant index (1..N), followed by two positive integers x and y representing the coordinates of the plant. Plants are sorted by the increasing order on their indices in the input file. Suppose that the values of coordinates are at most 100.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output should have one separate line for the solution of each test case. A solution is the number of plants on the solution path, followed by the indices of visiting plants in the path in the order of their visits.</div><p class="pst">Sample Input</p><pre class="sio">2
+10
+1 4 5
+2 9 8
+3 5 9
+4 1 7
+5 3 2
+6 6 3
+7 10 10
+8 8 1
+9 2 4
+10 7 6
+14
+1 6 11
+2 11 9
+3 8 7
+4 12 8
+5 9 20
+6 3 2
+7 1 6
+8 2 13
+9 15 1
+10 14 17
+11 13 19
+12 5 18
+13 7 3
+14 10 16
+</pre><p class="pst">Sample Output</p><pre class="sio">10 8 7 3 4 9 5 6 2 1 10
+14 9 10 11 5 12 8 7 6 13 4 14 1 3 2
+</pre><p class="pst">

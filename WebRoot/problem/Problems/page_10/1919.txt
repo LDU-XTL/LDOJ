@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US"><b>Background</b>
+<br>Captain Hansen wants to navigate with his little barge from Hamburg downstream to Cuxhaven on the river Elbe. During this journey he must take the tide into account. When the tide is falling the water flows to the North Sea and speeds up the ship. When the tide is rising the drift of the tide reduces the real speed. The drift is not constant, but varies over the time. Captain Hansen now wants to know, when to start in order to minimize the time for the journey.
+<br>Of course, there are deadlines to meet and Hansen runs a "just in time" service, so the arrival should be as late as possible, but not after a given deadline.
+<br><b>The Problem</b>
+<br>Create a program which calculates the optimal time t of departure. The optimal time depends on two criteria:
+<br>1. Departing at t guarantees that Hansen will reach Cuxhaven before a given deadline (i.e., arrival time < deadline).
+<br>2. For departure time t, the time for the journey is minimal.
+<br>3. If multiple such departure times exist, Hansen picks the latest one that will bring him to Cuxhaven The distance between Hamburg and Cuxhaven is 100 km. The ship moves with a constant speed of 10 km/h through water (without drift!). The real speed (speed over ground) is calculated by adding or subtracting the drift speed. The drift has the same speed and direction on the whole river at any time. Speed and direction change not more than once per minute and remain constant until the next change.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains the number of scenarios.
+<br>For each scenario, you find the time d of latest possible arrival. For your convenience, this time is given in minutes starting from midnight (300 <= d <= 1440). Then the number d of data sets containing drift data is given (1 <= d <= 100). A drift data set has the form "m s" where m and s are integers. Value m specifies the minute from which the given speed and direction hold and s gives the new tide speed and direction (0 <= m <= 10000, -10 <= s <= 10). Positive values of s stand for drift from Hamburg to Cuxhaven, negative values specify drift in the opposite direction.
+<br>Time values are given in minutes only, speed in km/h, distances in km. You may assume that a solution exists and that the data set begins with an entry for time 0 specifying the initial drift speed at starting time.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each scenario print a single line containing the optimal time time of departure.
+<br>You may assume that a solution exists on that particular day, i.e., the latest arrival time can be met when starting at midnight of that day.</div><p class="pst">Sample Input</p><pre class="sio">1
+900
+4
+0 -3
+60 0
+90 2
+150 4</pre><p class="pst">Sample Output</p><pre class="sio">471</pre><p class="pst">

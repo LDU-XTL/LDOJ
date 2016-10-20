@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p><i>Little Quilt</i> is a small language introduced by Ravi Sethi in his book &lsquo;Programming Languages&rsquo;. Here, a restricted version of Little Quilt is presented.</p><p>The language is defined by the following BNF grammar:</p><p align="center"><code>&lt;QUILT&gt; ::= A | B | turn(&lt;QUILT&gt;) | sew(&lt;QUILT&gt;,&lt;QUILT&gt;)</code></p><p>A and B represent the two primitive quilts. Each primitive quilt corresponds to a matricial arrangement of 2 &times; 2 characters. turn() and sew() are operations over quilts.</p><p>The instruction <code>turn(x)</code> turns the quilt <code>x</code> 90 degrees clockwise. The following table illustrates the primitive quilts as well as examples of the effect of the <code>turn()</code> operation:</p><div align="center"><table border="1" cellpadding="1" cellspacing="2" style="border-collapse:collapse" bordercolor="#000000" rules="rows"><tr><td align="center" valign="top"><code>A</code></td><td><code>//<br>/+</code></td></tr><tr><td align="center" valign="top"><code>turn(A)</code></td><td><code>\\<br>+\</code></td></tr><tr><td align="center" valign="top"><code>turn(turn(A))</code></td><td><code>+/<br>//</code></td></tr><tr><td align="center" valign="top"><code>turn(turn(turn(A)))</code></td><td><code>\+<br>\\</code></td></tr><tr><td align="center" valign="top"><code>B</code></td><td><code>--<br>--</code></td></tr><tr><td align="center" valign="top"><code>turn(B)</code></td><td><code>||<br>||</code></td></tr></table></div><p>Accordingly, the instruction <code>sew(x,y)</code> sews quilt <code>x</code> to the left of quilt <code>y</code>. Both <code>x</code> and <code>y</code> must have the same height, otherwise an error will be generated. The following figure represents the result of <code>sew(A,turn(B))</code>:</p><p align="center"><code>//||<br>/+||</code></p><p>while the <code> sew(turn(sew(B,turn(B))),A)</code> generates an error message.</p><p>Your job is to build an interpreter of the Little Quilt language.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input file will be a text file containing different Little Quilt expressions, each one ended by a semicolon character (;). Space and new line characters must be ignored; this means that an expression may span several lines.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>The output file contains the quilts produced as a result of interpreting the input expressions.</p><p>Each quilt must be preceded by a line, left aligned, with the format</p><p><code>Quilt i:</code></p><p>where <code>i</code> is the quilt number, starting at 1. If the expression interpretation generates and error, the word</p><p><code>error</code><p>must be printed.</p></div><p class="pst">Sample Input</p><pre class="sio">sew(turn(sew(B,turn(B))),
+       turn(sew(turn(B),B)))   ;
+
+
+   sew(turn(sew(B,turn(B))),A);
+sew(turn(sew(A,turn(A))),
+ turn(turn(
+
+   turn(sew(A,turn(A))))))
+
+   ;</pre><p class="pst">Sample Output</p><pre class="sio">Quilt 1:
+||--
+||--
+--||
+--||
+Quilt 2:
+error
+Quilt 3:
+\\//
++\/+
++/\+
+//\\</pre><p class="pst">

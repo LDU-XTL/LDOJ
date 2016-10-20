@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US"><img src="images/2858_1.jpg" align=right hspace=10 vspace=10><p>Jennifer is practicing for a Crabbles tournament. She pulls out a handful of Crabbles tiles out of a bag, and tries to form the word with the highest possible score. Each tile contains a letter (used to form the word) and a number (its score value). She can use each tile at most once in her word, and she is not required to use every tile. The word that she forms must appear in her dictionary. Her score is the sum of the values of the tiles used in the word.<p>Note that in Crabbles, different tiles with the same letter may have different score values.<p>To check her work, Jennifer would like a program to tell her the maximum score possible for the set of tiles. Your task is to write this program.</div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The first line contains an integer 1 &le; <i>N</i> &le; 100,000 indicating the number of words in the dictionary. <i>N</i> lines follow, with one dictionary word on each line. Each dictionary word consists of only lowercase letters. The following line contains an integer 1 &le; <i>M</i> &le; 1000 indicating the number of Crabbles hands Jennifer wants to play. <i>M</i> hands follow. Each hand begins with a line containing an integer 1 &le; <i>P</i> &le; 10 indicating the number of tiles in the hand. This is followed by <i>P</i> lines, one for each tile. Each of these lines consists of a lowercase letter (the letter on the tile), a space, and an integer 0 &le; <i>V</i> &le; 10 (the value of the tile).</span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each hand in the input, output a line containing the maximum score possible with that hand.</div><p class="pst">Sample Input</p><pre class="sio">2
+abcd
+hgfe
+1
+10
+a 1
+b 2
+c 3
+d 4
+e 5
+f 6
+g 7
+h 8
+i 9
+j 10</pre><p class="pst">Sample Output</p><pre class="sio">26</pre><p class="pst">

@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">Alice and Bob both love football very much, and both of them are vanguards. They are both good at football control. One day after a football match, they play an interesting game, in which they shoot footballs forward the goal directly. There are N footballs in front of the goal, and they play this game in turn. For example, if it is Alice's turn, Alice can choice some footballs (the number of footballs mush equal or less than M) and shoot them forward. Because the footballs' quality is not very good, footballs are not a complete sphere and can only roll integer times of its girth. And because of restriction of the friction and strength of them, they cannot shoot a football farther then L centimeters. Of course, they know the radius of a football is R centimeters. Alice and Bob love this game very much. If both of them have unlimited IQ and precision shooting skill, can you guess who can win the football game? By the way, though Alice is as strong as Bob, Alice is a girl, so she will shoot first.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several cases, each of which contains two lines.
+<br>
+<br>For each test case, the first line contains 4 integers N, M, L and R (1 <= M <= N <= 30, 0 < L < 100000000, 0 < R < 10000), separated by a single space. N is the number of the footballs, M is the maximum number of footballs one player can shot in one turn, L is the maximum distance that a player can shoot, and R is the radius of footballs.
+<br>
+<br>The next line contains N numbers, S(1), S(2), ..., S(N) (0 < S(i) < 100000000), which describe the distance between footballs and the goal.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case output contains one line describing the name of the winner.</div><p class="pst">Sample Input</p><pre class="sio">2 1 30 1
+8 14
+2 1 30 1
+8 12
+2 1 30 1
+8 10
+2 1 30 1
+40 200
+</pre><p class="pst">Sample Output</p><pre class="sio">Alice
+Bob
+Bob
+Bob
+</pre><p class="pst">

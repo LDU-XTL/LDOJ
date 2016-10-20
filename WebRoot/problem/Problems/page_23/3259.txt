@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US"><p>While exploring his many farms, Farmer John has discovered a number of amazing wormholes. A wormhole is very peculiar because it is a one-way path that delivers you to its destination at a time that is BEFORE you entered the wormhole! Each of FJ's farms comprises <i>N</i> (1 &le; <i>N</i> &le; 500) fields conveniently numbered 1..<i>N</i>, <i>M</i> (1 &le; <i>M</i> &le; 2500) paths, and <i>W</i> (1 &le; <i>W</i> &le; 200) wormholes.</p><p>As FJ is an avid time-traveling fan, he wants to do the following: start at some field, travel through some paths and wormholes, and return to the starting field a time before his initial departure. Perhaps he will be able to meet himself :) .</p><p>To help FJ find out whether this is possible or not, he will supply you with complete maps to <i>F</i> (1 &le; <i>F</i> &le; 5) of his farms. No paths will take longer than 10,000 seconds to travel and no wormhole can bring FJ back in time by more than 10,000 seconds.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US">Line 1: A single integer, <i>F</i>. <i>F</i> farm descriptions follow.
+<br>Line 1 of each farm: Three space-separated integers respectively: <i>N</i>, <i>M</i>, and <i>W</i>
+<br>Lines 2..<i>M</i>+1 of each farm: Three space-separated numbers (<i>S</i>, <i>E</i>, <i>T</i>) that describe, respectively: a bidirectional path between <i>S</i> and <i>E</i> that requires <i>T</i> seconds to traverse. Two fields might be connected by more than one path.
+<br>Lines <i>M</i>+2..<i>M</i>+<i>W</i>+1 of each farm: Three space-separated numbers (<i>S</i>, <i>E</i>, <i>T</i>) that describe, respectively: A one way path from <i>S</i> to <i>E</i> that also moves the traveler back <i>T</i> seconds.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Lines 1..<i>F</i>: For each farm, output "YES" if FJ can achieve his goal, otherwise output "NO" (do not include the quotes).</div><p class="pst">Sample Input</p><pre class="sio">2
+3 3 1
+1 2 2
+1 3 4
+2 3 1
+3 1 3
+3 2 1
+1 2 3
+2 3 4
+3 1 8</pre><p class="pst">Sample Output</p><pre class="sio">NO
+YES</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">For farm 1, FJ cannot travel back in time.
+<br>For farm 2, FJ could travel back in time by the cycle 1->2->3->1, arriving back at his starting location 1 second before he leaves. He could start from anywhere on the cycle to accomplish this.</div><p class="pst">

@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">The Evil Empire is devising a plan to destroy the world. This plan is called "Operation Knockdown". 
+<br>
+<br>The plan is to place a number of high-yield nuclear bombs in different places around the world, so that their simultaneous detonation will destroy everything on the planet. For the purpose of planning this operation, bombs have destruction distance - the distance from the point of bomb's detonation to all the places where everything is considered destroyed. 
+<br>
+<br>Places for the bombs have been already selected. Now the Evil Empire wants to minimize the cost of production for the bombs. It is expensive to design atomic bombs tailored for different destruction distances, so the idea is to design a bomb with a specific destruction distance and to produce bombs according to this design for all the selected places. The problem is to find the minimal required destruction distance for the bomb design, so that destruction of the whole world is ensured. 
+<br><img src=images/2801_1.jpg>
+<br>For this problem the world is modeled as a sphere of a unit radius. The coordinates of the selected points for the bombs are specified in geographic coordinate system with latitude &phi; (&minus;90&deg; &lt; &phi; &lt; 90&deg;) and longitude &lambda; (&minus;180&deg; &lt; &lambda; &le; 180&deg;). Latitude is the angle between a point and the equator, and longitude is the angle between a point and the prime meridian. The bombs are never placed on the poles, so their latitude is always less than 90 degrees by its absolute value. 
+<br>
+<br>Distances for destruction purposes are measured on the sphere. For example, the distance between the poles is exactly. The world is considered destroyed if the distance from any point on the sphere to the closest bomb is less or equal to the destruction radius. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains a single integer number n (1 &le; n &le; 20) - The number of the bombs. The following n lines describe the places of the bombs. Each line contains two integer numbers &phi;<sub>i</sub> and &lambda;<sub>i</sub> (&minus;90&deg; &lt; &phi;<sub>i</sub> &lt; 90&deg;, &minus;180&deg; &lt; &lambda;<sub>i</sub> &le; 180&deg;) - latitude and longitude of the bomb. No two bombs are situated in the same place.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Write to the output a single number - the minimal destruction radius of the bombs that ensures destruction of the whole world. The answer must be precise up to 10<sup>-6</sup> .</div><p class="pst">Sample Input</p><pre class="sio">4
+59 30
+53 83
+41 69
+41 41
+</pre><p class="pst">Sample Output</p><pre class="sio">2.864479</pre><p class="pst">

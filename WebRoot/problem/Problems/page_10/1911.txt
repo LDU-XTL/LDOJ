@@ -1,0 +1,71 @@
+</p><div class="ptx" lang="en-US">XML, eXtensible Markup Language, is poised to become the lingua franca of structured data communication for the foreseeable future, due in part to its strict formatting requirements. XML parsers must report anything that violates the rules of a well-formed XML document. An XML document is said to be well-formed if it meets all of the wellformedness constraints as defined by the World Wide Web Consortium (W3C) XML specification.
+<br>
+<br>XML documents are composed of units called elements, that contain either character data and/or other elements.
+<br>
+<br>Elements may also contain within their declaration values called attributes. Consider the following XML document: 
+<br><pre>&lt;?xml version="1.0"?>
+<br>&lt;customer>
+<br>       &lt;name>
+<br>               &lt;first>John&lt;/first>
+<br>               &lt;last>Doe&lt;/last>
+<br>       &lt;/name>
+<br>       &lt;address>
+<br>               &lt;street>
+<br>                       &lt;number>15&lt;/number>
+<br>                       &lt;direction>West&lt;/direction>
+<br>                       &lt;name>34th&lt;/name>
+<br>               &lt;/street>
+<br>               &lt;city>New York&lt;/city>
+<br>               &lt;state-code>NY&lt;/state-code>
+<br>               &lt;zip-code format="PLUS4">10001-0001&lt;/zip-code>
+<br>               &lt;country-code>USA&lt;/country-code>
+<br>       &lt;/address>
+<br>       &lt;orders/>
+<br>&lt;/customer></pre>
+<br>The bold identifiers contained within angle brackets are the elements of the document. The italicized identifier "format" within the "zip-code" element is an attribute of that element. All elements, with the exception of "orders", have a start and an end declaration, also called a tags. The "orders" element is an empty element, as indicated by the "/>" sequence that closes the element, and does not require a separate end-tag. The first line is a processing instruction for an XML parser and is not considered an element of the document.
+<br>
+<br>The rules for a well-formed document are:
+<br>
+<br>1. There is exactly one element that is not contained within any other element. This element is identified as the "root" or "document" element. In the example above, "customer" is the document element.
+<br>
+<br>2. The structure of an XML document must nest properly. An element's start-tag must be paired with a closing end-tag if it is a non-empty element.
+<br>
+<br>3. The name in an element’s end-tag must match the element type in the start-tag. For example, an element opened with &lt;address> must be closed by &lt;/address>.
+<br>
+<br>4. No attribute may appear more than once in the same start-tag or empty-element tag.
+<br>
+<br>5. A parsed element must not contain a recursive reference to itself. For example, it is improper to include another address element within an address element.
+<br>
+<br>6. A named attribute must have an associated value.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will contain a series of XML documents. The start of each document is identified by a line containing only the processing instruction "&lt;?xml version="1.0"?>". The end of the input is identified by a line containing only the text "&lt;?end?>" (this is not a true XML processing instruction, just a sentinel used to mark the end of the input for this problem). As with all XML documents, white space between elements and attributes should be ignored. You may make the following assuptions with regard to the input.
+<br>
+<br>The only processing instruction that will be present is the XML version rocessing instruction, and it will always appear only at the beginning of each document in the input.
+<br>
+<br>Element and attribute names are case-sensitive. For example, &lt;Address> and &lt;address> are considered to be different.
+<br>
+<br>Element and attribute names will use only alpha-numeric characters and the dash "-" character.
+<br>
+<br>XML comments will not appear in the input.
+<br>
+<br>Values for attributes will always be properly enclosed in double quotes.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each input XML document, output a line containing the text "well-formed" if the document is well-formed, "non well-formed" otherwise. </div><p class="pst">Sample Input</p><pre class="sio">&lt;?xml version="1.0"?>
+&lt;acm-contest-problem>
+        &lt;title>A Well-Formed Problem&lt;/title>
+        &lt;text>XML, eXtensible Markup Language, is poised to become the lingua franca of
+structured data communication for the foreseeable future. [...]&lt;/text>
+        &lt;input>probleme.in&lt;/input>
+        &lt;output>probleme.out&lt;/output>
+&lt;/acm-contest-problem>
+&lt;?xml version="1.0"?>
+&lt;shopping-list>
+        &lt;items>
+                &lt;item quantity="1" quantity="1">Gallon of milk&lt;/item>
+                &lt;item>Frozen pizza
+        &lt;/items>
+&lt;/Shopping-list>
+&lt;errand-list>
+        &lt;errand>Get some cash at the ATM
+                &lt;errand>Pick up dry cleaning&lt;/errand>
+        &lt;/errand>
+&lt;/errand-list>
+&lt;?end?></pre><p class="pst">Sample Output</p><pre class="sio">well-formed
+non well-formed 
+</pre><p class="pst">

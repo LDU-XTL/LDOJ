@@ -1,0 +1,31 @@
+</p><div class="ptx" lang="en-US">A travelling circus faces a tough challenge in designing the dome for its performances. The circus has a number of shows that happen above the stage in the air under the dome. Various rigs, supports, and anchors must be installed over the stage, but under the dome. The dome itself must rise above the center of the stage and has a conical shape. The space under the dome must be air-conditioned, so the goal is to design the dome that contains minimal volume.
+<br>You are given a set of n points in the space; (x<sub>i</sub>, y<sub>i</sub>, z<sub>i</sub>) for 1 &lt;= i &lt;= n are the coordinates of the points in the air above the stage that must be covered by the dome. The ground is denoted by the plane z = 0, with positive z coordinates going up. The center of the stage is on the ground at the point (0, 0, 0).
+<br>The tip of the dome must be located at some point with coordinates (0, 0, h) with h &gt; 0. The dome must have a conical shape that touches the ground at the circle with the center in the point (0, 0, 0) and with the radius of r. The dome must contain or touch all the n given points. The dome must have the minimal volume, given the above constraints.
+<br>
+<br><center><img src="images/3962_1.png"></center></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains a single integer number n (1 &lt;= n &lt;= 10 000) — the number of points under the dome. The following n lines describe points with three floating point numbers x<sub>i</sub>, y<sub>i</sub>, and z<sub>i</sub> per line — the coordinates of i-th point. All coordinates do not exceed 1000 by their absolute value and have at most 2 digits after decimal point. All zi are positive. There is at least one point with non-zero x<sub>i</sub> or y<sub>i</sub>.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Write to the output file a single line with two floating point numbers h and r — the height and the base radius of the dome. The numbers must be precise up to 3 digits after decimal point.</div><p class="pst">Sample Input</p><pre class="sio"><table border="1" style="border-collapse: collapse" bordercolor="#000000" id="table1"><tr>
+<td><b>#1</b></td><td>
+1<br>
+1.00 0.00 1.00</td>
+</tr>
+<tr>
+<td><b>#2</b></td><td>
+2<br>
+1.00 0.00 1.00<br>
+0.00 1.50 0.50</td></tr>
+<tr>
+<td><b>#3</b></td><td>
+3<br>
+1.00 0.00 1.00<br>
+0.00 1.50 0.50<br>
+-0.50 -0.50 1.00</td></tr>
+</table></pre><p class="pst">Sample Output</p><pre class="sio"><table border="1" style="border-collapse: collapse" bordercolor="#000000" id="table1"><tr>
+<td><b>#1</b></td><td>
+3.000 1.500</td>
+</tr>
+<tr>
+<td><b>#2</b></td><td>
+2.000 2.000</td></tr>
+<tr>
+<td><b>#3</b></td><td>
+2.000 2.000</td></tr>
+</table></pre><p class="pst">

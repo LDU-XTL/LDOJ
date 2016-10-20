@@ -1,0 +1,45 @@
+</p><div class="ptx" lang="en-US">Boudreaux and Thibodeaux are student volunteers for this year's ACM South Central Region's programming contest. One of their duties is to distribute the contest T-shirts to arriving teams. The T-shirts had to be ordered in advance using an educated guess as to how many shirts of each size should be needed. Now it falls to Boudreaux and Thibodeaux to determine if they can hand out T-shirts to all the contestants in a way that makes everyone happy. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input to this problem will consist of a (non-empty) series of up to 100 data sets. Each data set will be formatted according to the following description, and there will be no blank lines separating data sets. 
+<br>
+<br>A single data set has 4 components: 
+<br><ol><li>Start line - A single line: 
+<br>         START X
+<br>      
+<br>where (1 <= X <= 20) is the number of contestants demanding shirts. 
+<br><li>Tolerance line - A single line containing X space-separated pairs of letters indicating the size tolerances of each contestant. Valid size letters are S - small, M - medium, L - large, X - extra large, T - extra extra large. Each letter pair will indicate the range of sizes that will satisfy a particular contestant. The pair will begin with the smallest size the contestant will accept and end with the largest. For example: 
+<br>         MX
+<br>      
+<br>would indicate a contestant that would accept a medium, large, or extra large T-shirt. If a contestant is very picky, both letters in the pair may be the same. 
+<br><li>Inventory line - A single line: 
+<br>         S M L X T
+<br>      
+<br>indicating the number of each size shirt in Boudreaux and Thibodeaux's inventory. These values will be between 0 and 20 inclusive. 
+<br><li>End line - A single line: 
+<br>         END
+<br>    </ol>  
+<br>After the last data set, there will be a single line: 
+<br>   ENDOFINPUT
+<br>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, there will be exactly one line of output. This line will reflect the attitude of the contestants after the T-shirts are distributed. If all the contestants were satisfied, output: 
+<br>
+<br>   T-shirts rock!
+<br>
+<br>Otherwise, output: 
+<br>   I'd rather not wear a shirt anyway...
+<br>
+<br></div><p class="pst">Sample Input</p><pre class="sio">START 1
+ST
+0 0 1 0 0
+END
+START 2
+SS TT
+0 0 1 0 0
+END
+START 4
+SM ML LX XT
+0 1 1 1 0
+END
+ENDOFINPUT
+</pre><p class="pst">Sample Output</p><pre class="sio">T-shirts rock!
+I'd rather not wear a shirt anyway...
+I'd rather not wear a shirt anyway...
+</pre><p class="pst">

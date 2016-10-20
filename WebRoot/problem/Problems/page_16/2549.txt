@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US"><img src=images/2549_1.jpg align=right>Given S, a set of integers, find the largest d such that a + b + c = d where a, b, c, and d are distinct elements of S. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Several S, each consisting of a line containing an integer 1 <= n <= 1000 indicating the number of elements in S, followed by the elements of S, one per line. Each element of S is a distinct integer between -536870912 and +536870911 inclusive. The last line of input contains 0. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each S, a single line containing d, or a single line containing "no solution". </div><p class="pst">Sample Input</p><pre class="sio">5
+2 
+3 
+5 
+7 
+12
+5
+2 
+16 
+64 
+256 
+1024
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">12
+no solution
+</pre><p class="pst">

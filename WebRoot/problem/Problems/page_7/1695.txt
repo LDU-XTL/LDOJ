@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">The TTT Taxi Service in Tehran is required to deliver some magazines to N locations in Tehran.   The locations are labeled L1 to LN.  TTT assigns 3 cars for this service.  At time 0, all the 3 cars and magazines are located at L1. There are plenty of magazines available in L1 and the cars can take as many as they want.   Copies of the magazine should be delivered to all locations, observing the following rules:
+<br><ol><li>For all i = 2 .. N,  magazines should be delivered at Li only after magazines are delivered at L<sub>i-1</sub> .
+<br><li>At any time, only one of the three cars is driving, and the other two are resting in other locations.</ol>
+<br>The time to go from Li to Lj (or reverse) by any car is a positive integer denoted by D[i , j].
+<br>The goal is to organize the delivery schedule for the cars such that the time by which magazines are delivered to all N locations is minimum.
+<br>Write a program to compute the minimum delivery time.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input file contains M instances of this problem (1 <= M <= 10). The first line of the input file is M. The descriptions of the input data follows one after the other. Each instance starts with N in a single line (N <= 30). Each line i of the following N-1 lines contains D[i , j], for all i=1..N-1, and  j=i+1..N.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output contains M lines, each corresponding the solution to one of the input data. In each line, the minimum time it takes to deliver the magazines to all N locations is written.</div><p class="pst">Sample Input</p><pre class="sio">1
+5
+10 20 3 4
+5 10 20
+8 18
+19
+</pre><p class="pst">Sample Output</p><pre class="sio">22</pre><p class="pst">

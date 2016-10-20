@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US"><img src=images/3229_1.jpg align=right hspace=10 vspace=10>Dou Nai is an excellent ACM programmer, and he felt so tired recently that he wants to release himself from the hard work. He plans a travel to Xin Jiang .With the influence of literature, he wishes to visit Tian Chi, Da Ban Town, Lou Lan mysterious town , Yi Li , and other sights that also have great attraction to him. But the summer vocation time is not long. He must come back before the end of the summer vocation. For visiting more sights and all the necessary sights, he should make a thorough plan. Unfortunately, he is too tired to move, so you must help him to make this plan. Here are some prerequisites: there are two ways of transportation, bus and train, and velocity of the bus is 120km/h and the train is 80km/h. Suppose the travel is started from Urumuqi (point 1), and the end of the travel route is Urumuqi too. You need to spend some time to visit the sights, but the time of each visit is not always equal. Suppose we spend 12 hours on traveling every day.</div><p class="pst">Input</p><div class="ptx" lang="en-US">There are several test cases. For each case, the first line is three integers N, M and K. N (1&lt;=n&lt;=15) is the number of sights, M(0&lt;=M&lt;=N) is total sights he must arrived (sight 1 is always must be arrived) and K is total traveling time (per day). The second line is M integers which sights he must visited. The third line is N integers, the i<sub>th</sub> integer means the time he will stay in the sight i (per hour). Then several lines follow. Each line is four integers x, y, len and kind, 1&lt;=x, y&lt;=n, 0&lt;len&lt;=1000, means there is a bidirectional path between sights x and y, the distance is len, kind=0 means x and y are connected by train, kind=1 is by bus.<br>x=y=len=kind=0 means end of the path explanation.<br>N=M=K=0 means end of the input.<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case, output maximum sights he will travel with all necessary sights visited or "No Solution" if he can't travel all the sights he like best in time.</div><p class="pst">Sample Input</p><pre class="sio">3 3 3
+1 2 3
+10 8 6
+1 2 120 0
+1 3 60 1
+2 3 50 1
+0 0 0 0
+3 3 2
+1 2 3
+10 8 6
+1 2 120 0
+1 3 60 1
+2 3 50 1
+0 0 0 0
+0 0 0</pre><p class="pst">Sample Output</p><pre class="sio">3
+No Solution</pre><p class="pst">

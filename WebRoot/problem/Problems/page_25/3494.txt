@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US"><p>Given a <i>m</i>-by-<i>n</i> (0,1)-matrix, of all its submatrices of all 1&rsquo;s which is the largest? By <i>largest</i> we mean that the submatrix has the most elements.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input contains multiple test cases. Each test case begins with <i>m</i> and <i>n</i> (1 &le; <i>m</i>, <i>n</i> &le; 2000) on line. Then come the elements of a (0,1)-matrix in row-major order on <i>m</i> lines each with <i>n</i> numbers. The input ends once EOF is met.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output one line containing the number of elements of the largest submatrix of all 1&rsquo;s. If the given matrix is of all 0&rsquo;s, output 0.</p></div><p class="pst">Sample Input</p><pre class="sio">2 2
+0 0
+0 0
+4 4
+0 0 0 0
+0 1 1 0
+0 1 1 0
+0 0 0 0</pre><p class="pst">Sample Output</p><pre class="sio">0
+4</pre><p class="pst">

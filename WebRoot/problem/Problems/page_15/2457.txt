@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US">The cows have been sent on a mission through space to acquire a new milking machine for their barn.  They are flying through a cluster of stars containing N (1 <= N <= 50,000) planets, each with a trading post.
+<br>
+<br>The cows have determined which of K (1 <= K <= 1,000) types of objects (numbered 1..K) each planet in the cluster desires, and which products they have to trade. No planet has developed currency, so they work under the barter system: all trades consist of each party trading exactly one object (presumably of different types).
+<br>
+<br>The cows start from Earth with a canister of high quality hay (item 1), and they desire a new milking machine (item K). Help them find the best way to make a series of trades at the planets in the cluster to get item K.  If this task is impossible, output -1.</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: Two space-separated integers, N and K.
+<br>
+<br>* Lines 2..N+1: Line i+1 contains two space-separated integers, a_i and b_i respectively, that are planet i's trading trading products. The planet will give item b_i in order to receive item a_i.</div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: One more than the minimum number of trades to get the milking machine which is item K (or -1 if the cows cannot obtain item K).
+<br>
+<br>* Lines 2..T+1: The ordered list of the objects that the cows possess in the sequence of trades.</div><p class="pst">Sample Input</p><pre class="sio">6 5
+1 3
+3 2
+2 3
+3 1
+2 5
+5 4</pre><p class="pst">Sample Output</p><pre class="sio">4
+1
+3
+2
+5</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">OUTPUT DETAILS:
+<br>
+<br>The cows possess 4 objects in total: first they trade object 1 for object 3, then object 3 for object 2, then object 2 for object 5.</div><p class="pst">

@@ -1,0 +1,75 @@
+</p><div class="ptx" lang="en-US">Spinning tops are one of the most popular and the most traditional toys. Not only spinning them, but also making one’s own is a popular enjoyment.
+<br>One of the easiest way to make a top is to cut out a certain shape from a cardboard and pierce an axis stick through its center of mass. Professionally made tops usually have three dimensional shapes, but in this problem we consider only two dimensional ones.
+<br>Usually, tops have rotationally symmetric shapes, such as a circle, a rectangle (with 2-fold rotational symmetry) or a regular triangle (with 3-fold symmetry). Although such symmetries are useful in determining their centers of mass, they are not definitely required; an asymmetric top also spins quite well if its axis is properly pierced at the center of mass.
+<br>When a shape of a top is given as a path to cut it out from a cardboard of uniform thickness, your task is to find its center of mass to make it spin well. Also, you have to determine whether the center of mass is on the part of the cardboard cut out. If not, you cannot pierce the axis stick, of course.
+<br>
+<br><center><img src="images/3947_3.png"></center></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of multiple datasets, each of which describes a counterclockwise path on a cardboard to cut out a top. A path is indicated by a sequence of command lines, each of which specifies a line segment or an arc.
+<br>In the description of commands below, the current position is the position to start the next cut, if any. After executing the cut specified by a command, the current position is moved to the end position of the cut made.
+<br>The commands given are one of those listed below. The command name starts from the first column of a line and the command and its arguments are separated by a space. All the command arguments are integers.
+<br><b>start x y</b>
+<br><p style="padding-left: 30px">
+<br>Specifies the start position of a path. This command itself does not specify any cutting; it only sets the current position to be (x, y).
+<br></p>
+<br><b>line x y</b>
+<br><p style="padding-left: 30px">
+<br>Specifies a linear cut along a straight line from the current position to the position (x, y), which is not identical to the current position.
+<br></p>
+<br><b>arc x y r</b>
+<br><p style="padding-left: 30px">
+<br>Specifies a round cut along a circular arc. The arc starts from the current position and ends at (x, y), which is not identical to the current position. The arc has a radius of |r|. When r is negative, the center of the circle is to the left side of the direction of this round cut; when it is positive, it is to the right side (Figure 7). The absolute value of r is greater than the half distance of the two ends of the arc. Among two arcs connecting the start and the end positions with the specified radius, the arc specified is one with its central angle less than 180 degrees.
+<br></p>
+<br><b>close</b>
+<br><p style="padding-left: 30px">
+<br>Closes a path by making a linear cut to the initial start position and terminates a dataset. If the current position is already at the start position, this command simply indicates the end of a dataset.
+<br></p>
+<br>The figure below gives an example of a command sequence and its corresponding path. Note that, in this case, the given radius -r is negative and thus the center of the arc is to the left of the arc. The arc command should be interpreted as shown in this figure and, not the other way around on the same circle.
+<br>
+<br><center><img src="images/3947_1.png"></center>
+<br>
+<br>A dataset starts with a <b>start</b> command and ends with a <b>close</b> command.
+<br>The end of the input is specified by a line with a command <b>end</b>.
+<br>There are at most 100 commands in a dataset and at most 100 datasets are in the input. Absolute values of all the coordinates and radii are less than or equal to 100.
+<br>You may assume that the path does not cross nor touch itself. You may also assume that paths will never expand beyond edges of the cardboard, or, in other words, the cardboard is virtually infinitely large.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each of the dataset, output a line containing x- and y-coordinates of the center of mass of the top cut out by the path specified, and then a character ‘+’ or ‘-’ indicating whether this center is on the top or not, respectively. Two coordinates should be in decimal fractions. There should be a space between two coordinates and between the y-coordinate and the character ‘+’ or ‘-’. No other characters should be output. The coordinates may have errors less than 10<sup>-3</sup>.
+<br>You may assume that the center of mass is at least 10<sup>-3</sup> distant from the path.</div><p class="pst">Sample Input</p><pre class="sio">start 0 0
+arc 2 2 -2
+line 2 5
+arc 0 3 -2
+close
+start -1 1
+line 2 1
+line 2 2
+line -2 2
+arc -3 1 -1
+line -3 -2
+arc -2 -3 -1
+line 2 -3
+line 2 -2
+line -1 -2
+line -1 -1
+arc -1 0 2
+close
+start 0 0
+line 3 0
+line 5 -1
+arc 4 -2 -1
+line 6 -2
+line 6 1
+line 7 3
+arc 8 2 -1
+line 8 4
+line 5 4
+line 3 5
+arc 4 6 -1
+line 2 6
+line 2 3
+line 1 1
+arc 0 2 -1
+close
+end</pre><p class="pst">Sample Output</p><pre class="sio">1.00000 2.50000 +
+-1.01522 -0.50000 -
+4.00000 2.00000 +</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">An important nature of mass centers is that, when an object O can be decomposed into parts O1, ..., On with masses M1, ..., Mn, the center of mass of O can be computed by:
+<br><center><img src="formula?tex=G%3D%5Cfrac%7B%7B%5Csum%5Climits_%7Bi+%3D+1%7D%5En%7B%7BM_i%7D%5Ctimes%7BG_i%7D%7D%7D%7D%7B%7B%5Csum%5Climits_%7Bi+%3D+1%7D%5En%7B%7BM_i%7D%7D%7D%7D" alt="G=\frac{{\sum\limits_{i = 1}^n{{M_i}\times{G_i}}}}{{\sum\limits_{i = 1}^n{{M_i}}}}" align="absmiddle"></center>
+<br>where Gk is the vector pointing the center of mass of Ok.
+<br>A circular segment with its radius r and angle <img src="formula?tex=%5Ctheta" alt="\theta" align="absmiddle"> (in radian) has its arc length s = r<img src="formula?tex=%5Ctheta" alt="\theta" align="absmiddle"> and its chord length <img src="formula?tex=c%3Dr%5Csqrt%7B2-2cos%5Ctheta%7D" alt="c=r\sqrt{2-2cos\theta}" align="absmiddle">. Its area size is <img src="formula?tex=A%3Dr%5E2%28%5Ctheta-sin%5Ctheta%29%2F2" alt="A=r^2(\theta-sin\theta)/2" align="absmiddle"> and its center of mass G is <img src="formula?tex=y%3D2r%5E3sin%5E3%28%5Ctheta%2F2%29%2F%283A%29" alt="y=2r^3sin^3(\theta/2)/(3A)" align="absmiddle"> distant from the circle center.
+<br>
+<br><center><img src="images/3947_2.png"></center></div><p class="pst">

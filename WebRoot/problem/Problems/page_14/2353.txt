@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US">Mr. F. wants to get a document be signed by a minister. A minister signs a document only if it is approved by his ministry. The ministry is an M-floor building with floors numbered from 1 to M, 1<=M<=100. Each floor has N rooms (1<=N<=500) also numbered from 1 to N. In each room there is one (and only one) official. 
+<br>
+<br>A document is approved by the ministry only if it is signed by at least one official from the M-th floor. An official signs a document only if at least one of the following conditions is satisfied: 
+<br><blockquote>a. the official works on the 1st floor; 
+<br>b. the document is signed by the official working in the room with the same number but situated one floor below; 
+<br>c. the document is signed by an official working in a neighbouring room (rooms are neighbouring if they are situated on the same floor and their numbers differ by one). </blockquote>
+<br>Each official collects a fee for signing a document. The fee is a positive integer not exceeding 10^9. 
+<br>
+<br>You should find the cheapest way to approve the document. 
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of an input file contains two integers, separated by space. The first integer M represents the number of floors in the building, and the second integer N represents the number of rooms per floor. Each of the next M lines contains N integers separated with spaces that describe fees (the k-th integer at l-th line is the fee required by the official working in the k-th room at the l-th floor). </div><p class="pst">Output</p><div class="ptx" lang="en-US">You should print the numbers of rooms (one per line) in the order they should be visited to approve the document in the cheapest way. If there are more than one way leading to the cheapest cost you may print an any of them. </div><p class="pst">Sample Input</p><pre class="sio">3 4
+10 10 1 10
+2 2 2 10
+1 10 10 10
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+3
+2
+1
+1
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">You can assume that for each official there always exists a way to get the approval of a document (from the 1st floor to this official inclusively) paying no more than 10^9. 
+<br>This problem has huge input data,use scanf() instead of cin to read data to avoid time limit exceed.</div><p class="pst">

@@ -1,0 +1,29 @@
+</p><div class="ptx" lang="en-US">A friend of yours has taken the job of security officer at the Star-Buy Company, a famous depart- ment store. One of his tasks is to install a video surveillance system to guarantee the security of the customers (and the security of the merchandise of course) on all of the store's countless floors. As the company has only a limited budget, there will be only one camera on every floor. But these cameras may turn around to look in every direction. 
+<br>
+<br>The first problem is to choose where to install the camera for every floor. The only requirement is that every part of the room must be visible from there. In the following figure the left floor can be completely surveyed from the position indicated by a dot, while for the right floor, there is no such position, the given position failing to see the lower left part of the floor. 
+<br><center><img src=images/1474_1.jpg></center>
+<br>Before trying to install the cameras, your friend first wants to know whether there is indeed a suitable position for them. He therefore asks you to write a program that, given a ground plan, de- termines whether there is a position from which the whole floor is visible. All floor ground plans form rectangular polygons, whose edges do not intersect each other and touch each other only at the corners. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several floor descriptions. Every description starts with the number n of vertices that bound the floor (4 <= n <= 100). The next n lines contain two integers each, the x and y coordinates for the n vertices, given in clockwise order. All vertices will be distinct and at corners of the polygon. Thus the edges alternate between horizontal and vertical. 
+<br>
+<br>A zero value for n indicates the end of the input. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For every test case first output a line with the number of the floor, as shown in the sample output. Then print a line stating "Surveillance is possible." if there exists a position from which the entire floor can be observed, or print "Surveillance is impossible." if there is no such position. 
+<br>
+<br>Print a blank line after each test case. </div><p class="pst">Sample Input</p><pre class="sio">4
+0 0
+0 1
+1 1
+1 0
+8
+0 0
+0 2
+1 2
+1 1
+2 1
+2 2
+3 2
+3 0
+0</pre><p class="pst">Sample Output</p><pre class="sio">Floor #1
+Surveillance is possible.
+
+Floor #2
+Surveillance is impossible.
+</pre><p class="pst">

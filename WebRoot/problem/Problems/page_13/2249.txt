@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">In how many ways can you choose k elements out of n elements, not taking order into account? 
+<br>Write a program to compute this number. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will contain one or more test cases. 
+<br>Each test case consists of one line containing two integers n (n>=1) and k (0<=k<=n). 
+<br>Input is terminated by two zeroes for n and k. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print one line containing the required number. This number will always fit into an integer, i.e. it will be less than 2<sup>31</sup>. 
+<br>Warning: Don't underestimate the problem. The result will fit into an integer - but if all intermediate results arising during the computation will also fit into an integer depends on your algorithm. The test cases will go to the limit.
+<br></div><p class="pst">Sample Input</p><pre class="sio">4 2
+10 5
+49 6
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">6
+252
+13983816
+</pre><p class="pst">

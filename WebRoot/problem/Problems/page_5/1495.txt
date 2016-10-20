@@ -1,0 +1,76 @@
+</p><div class="ptx" lang="en-US">Many electronic devices have digital read-outs that are made using light-emitting diode (LED) arrays. A common digital display element uses seven, bar-shaped LED's, with the seven LED bars (segments) arranged and identified as: 
+<br><center><img src=images/1495_1.jpg></center>
+<br>Digits are displayed by illuminating various combinations of the seven segments in accordance with the following table: 
+<br><pre>Digit 			Segments Illuminated (Y-Yes, N-No) 
+<br>Displayed		a	b	c	d	e	f	g
+<br>   0		Y	Y	Y	Y	Y	Y	N
+<br>   1		N	Y	Y	N	N	N	N
+<br>   2		Y	Y	N	Y	Y	N	Y
+<br>   3		Y	Y	Y	Y	N	N	Y
+<br>   4		N	Y	Y	N	N	Y	Y
+<br>   5		Y	N	Y	Y	N	Y	Y 
+<br>   6		Y	N	Y	Y	Y	Y	Y
+<br>   7		Y	Y	Y	N	N	N	N
+<br>   8		Y	Y	Y	Y	Y	Y	Y
+<br>   9		Y	Y	Y	Y	N	Y	Y</pre>
+<br>For example, the digit three (3) would be displayed as the illumination of the segments {a,b,c,d,g} as: 
+<br><center><img src=images/1495_2.jpg></center>
+<br>The problem below is abstracted from one occurring in the incoming-parts inspection department, in a microwave-oven manufacturing facility. The incoming seven-segment LED's are checked for their proper functioning by automated equipment running under programmable control. 
+<br>
+<br>Note: The solution to the problem below will not be a complete nor necessarily useful test for the actual inspections that would be conducted. 
+<br>
+<br>You are to create a program that will observe successive sets of illumination conditions of the seven segments of a single-digit display, and decide whether the sequence of illuminations could have been a valid ``count down" sequence. 
+<br>
+<br>Unfortunately, for the LED your program is to observe, some of the segments may be burned out at the start of your test, and additional segments may burn out during the test. No segments will everfail into the ON mode; no burned out segments will recover. Nevertheless, you are expected to be able to ``read" through the ambiguities this malfunctioning display presents, by watching the display count down through one or more values. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of a series of data sets having the following format: 
+<br>
+<br>First line - 
+<br>A single unsigned integer, N, with value greater than zero (0) and less than eleven (11). The integer is left-justified on the input line. 
+<br>
+<br>Next N lines - 
+<br>Each line has a string of seven (7) contiguous Y/N characters showing the light condition of the segments of the LED display. These successive lines supposedly represent a ``count down" sequence. The first of these seven characters, the illumination reading for the ``a" segment, will be the first character on a line. 
+<br>
+<br>The end of data is signaled by a null data set having a zero on the first line and no further data. 
+<br>
+<br>There is no information about where the ``count down" sequence begins for a given data set. There is no information that carries over from one data set to the next; each data set represents a different LED being tested. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Foreach supposed ``count down" sequence you receive as a data set, you are to reply either: 
+<br>
+<br>MATCH
+<br>-or- 
+<br>MISMATCH
+<br>depending on whether this sequence could possibly be a valid ``count down" sequence somewhere within the sequence { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 } if an unknown number of burned-out segments were present at the beginning of the test, and, with possible burn-outs occurring during the test. Your output must be at the beginning of the line. </div><p class="pst">Sample Input</p><pre class="sio">1
+YYYYNYY
+2
+NNNNNNN
+NNNNNNN
+2
+YYYYYYY
+YYYYYYY
+3
+YNYYYYY
+YNYYNYY
+NYYNNYY
+3
+YNYYYYN
+YNYYNYN
+NYYNNYN
+3
+YNYYYYN
+YNYYNYN
+NYYNYYN
+4
+YYYYYYY
+NYYNNNN
+NNYYYYN
+NNNYNNN
+3
+NNNNNNN
+YNNNNNN
+NNNNYNN
+0</pre><p class="pst">Sample Output</p><pre class="sio">MATCH
+MATCH
+MISMATCH
+MATCH
+MATCH
+MISMATCH
+MATCH
+MATCH</pre><p class="pst">

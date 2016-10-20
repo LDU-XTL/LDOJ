@@ -1,0 +1,28 @@
+</p><div class="ptx" lang="en-US">You are running a DVD library. Suppose that you have k DVD drives, through which the users can access the contents of the requested DVDs.A DVD drive can only access the content of one DVD at the same time. When a DVD request arrives, if the DVD is already in a DVD drive, then nothing needs to be done. Otherwise, you are supposed to insert the requested DVD into an empty drive. If all k drives are occupied, you have to remove a DVD out of the drive before having the requested DVD inserted into the drive. The objective is to minimize the number of DVD insertions required for serving the whole sequence of requests. 
+<br>
+<br>To make things interesting, we assume that you are given the whole sequence x1, x2, . . . , xn in advance. Also, you have to service request xi before servicing xi+1, for each i = 1, 2, . . . , n - 1. You want to carefully plan how to service each request such that the overall number of DVD insertions is minimized. Clearly, the difficulty lies in determining which DVD should be removed from its drive when you receive a request to a DVD not in any drive and all drives are occupied.
+<br>
+<br>For example, let k = 2, and let the sequence of requests be 1, 2, 3, 1, 3, 1, 3. For the first two requests, one can simply put DVDs 1 and 2 into the drives. When the third request (i.e., DVD 3) arrives, you have to either remove DVD 1 or DVD 2 out of its drive so that DVD 3 can be inserted to a drive.
+<br>
+<br><ul><li>If you choose the first option (i.e., removing DVD 1), then the remaining requests (i.e., requests 4-7) need at least one more DVD insertions.
+<br><li>If you choose the second option (i.e., removing DVD 2), then the remaining requests (i.e., requests 4-7) need no more DVD insertions.</ul>
+<br>It is not difficult to verify that the second option results in an optimal way to service the above sequence of requests which needs only three DVD insertions.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains the number m of test cases. Each test case starts with a line containing two numbers k and n, where 1 <= k <= 10 is the number of DVD drives and 1 <= n <= 100 is the number of requests. In the following n lines, the i-th line contains the i-th request xi.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, your program has to output the minimum number of DVD insertions required to service the whole sequence of requests in one line.</div><p class="pst">Sample Input</p><pre class="sio">2
+2 7
+1
+2
+3
+1
+3
+1
+3
+3 9
+1
+2
+3
+4
+1
+2
+1
+2
+4</pre><p class="pst">Sample Output</p><pre class="sio">3
+4</pre><p class="pst">

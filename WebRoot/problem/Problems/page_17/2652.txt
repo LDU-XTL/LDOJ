@@ -1,0 +1,34 @@
+</p><div class="ptx" lang="en-US">Before bridges were common, ferries were used to transport cars across rivers. River ferries, unlike their larger cousins, run on a guide line and are powered by the river's current. Cars drive onto the ferry from one end, the ferry crosses the river, and the cars exit from the other end of the ferry. 
+<br>There is a ferry across the river that can take n cars across the river in t minutes and return in t minutes. A car may arrive at either river bank to be transported by the ferry to the opposite bank. The ferry travels continuously back and forth between the banks so long it is carrying a car or there is at least one car waiting at either bank. Whenever the ferry arrives at one of the banks, it unloads its cargo and loads up to n cars that are waiting to cross. If there are more than n, those that have been waiting the longest are loaded. If there are no cars waiting on either bank, the ferry waits until one arrives, loads it (if it arrives on the same bank of the ferry), and crosses the river. At what time does each car reach the other side of the river?
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains c, the number of test cases. Each test case begins with n, t, m. m lines follow, each giving the arrival time for a car (in minutes since the beginning of the day), and the bank at which the car arrives ("left" or "right"). </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output one line per car, in the same order as the input, giving the time at which that car is unloaded at the opposite bank. Output an empty line between cases. 
+<br>You may assume that 0 < n, t, m <= 10000. The arrival times for each test case are strictly increasing. The ferry is initially on the left bank. Loading and unloading time may be considered to be 0. </div><p class="pst">Sample Input</p><pre class="sio">2
+2 10 10
+0 left
+10 left
+20 left
+30 left
+40 left
+50 left
+60 left
+70 left
+80 left
+90 left
+2 10 3
+10 right
+25 left
+40 left
+</pre><p class="pst">Sample Output</p><pre class="sio">10
+30
+30
+50
+50
+70
+70
+90
+90
+110
+
+30
+40
+60
+</pre><p class="pst">

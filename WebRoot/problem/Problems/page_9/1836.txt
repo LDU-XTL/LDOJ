@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US">In the army, a platoon is composed by n soldiers. During the morning inspection, the soldiers are aligned in a straight line in front of the captain. The captain is not satisfied with the way his soldiers are aligned; it is true that the soldiers are aligned in order by their code number: 1 , 2 , 3 , . . . , n , but they are not aligned by their height. The captain asks some soldiers to get out of the line, as the soldiers that remain in the line, without changing their places, but getting closer, to form a new line, where each soldier can see by looking lengthwise the line at least one of the line's extremity (left or right). A soldier see an extremity if there isn't any soldiers with a higher or equal height than his height between him and that extremity.
+<br>
+<br>Write a program that, knowing the height of each soldier, determines the minimum number of soldiers which have to get out of line.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">On the first line of the input is written the number of the soldiers n. On the second line is written a series of n floating numbers with at most 5 digits precision and separated by a space character. The k-th number from this line represents the height of the soldier who has the code k (1 <= k <= n).
+<br>
+<br>There are some restrictions:
+<br>•	2 <= n <= 1000
+<br>•	the height are floating numbers from the interval [0.5, 2.5]
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The only line of output will contain the number of the soldiers who have to get out of the line.</div><p class="pst">Sample Input</p><pre class="sio">8
+1.86 1.86 1.30621 2 1.4 1 1.97 2.2
+</pre><p class="pst">Sample Output</p><pre class="sio">4</pre><p class="pst">

@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US"><p>Two strings <i>a</i> and <i>b</i> are defined to be <i>first cousins</i> if they can be made equal by removing no more than half the characters from each. For example &quot;abcdef&quot; and &quot;axcyd&quot; are first cousins because we can remove 3 of the 6 characters (b,e,f) from the first string and 2 of the 5 characters in the second string (x,y) resulting in &quot;acd&quot;. Two strings <i>c</i> and <i>d</i> are said to be <i>n</i>+1st<i> cousins</i> if there exists a string <i>e</i> that is a first cousin of <i>c</i> and is an <i>n</i>th cousin of <i>d</i>. </p><p>Given two strings <i>x</i> and <i>y</i>, determine the smallest <i>n &ge; 1</i> such that <i>x</i> is an <i>n</i>th cousin of <i>y</i>. </p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input consists of several test cases. Each test case consists of two lines representing <i>x</i> and <i>y</i>. <i>x</i> and <i>y</i> each consist of at least 1 and at most 100 lower case letters. Two lines containing 0 follow the last test case. </p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output a line containing <i>n</i> or <b>not related</b> if <i>x</i> and <i>y</i> are not <i>n</i>th cousins for any <i>n</i>. </p></div><p class="pst">Sample Input</p><pre class="sio">a
+b
+abb
+baa
+abcdef
+axcyd
+0
+0</pre><p class="pst">Sample Output</p><pre class="sio">2
+2
+1</pre><p class="pst">

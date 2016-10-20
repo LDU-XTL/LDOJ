@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">Rummikub is a simple game, often played by elderly people versus their grandchildren. It is a tile-based game and each of the tiles has a colored number written on it. There are four available colors: yellow, red, green and black. A tile is described by its number followed by a lower case letter, which is the first letter of its color. All tiles are unique.
+<br>
+<br>The goal of game is simple: get rid of all your tiles. This sounds easier than it is, since you can only use them in two specific ways. You can get rid of tiles by constructing runs or groups. A run is composed of three or more consecutive numbers of the same color, for example 9r, 10r, 11r, or 6g, 61g, 62g, 63g, 64g, 65g. A group is composed of three or four tiles with the same numbers, and therefore different colors. Examples are 1r, 1g, 1b and 17r, 17g, 17b, 17y. In constructing the runs and groups, you may only use each tile once.
+<br>
+<br>The value of a run or group is the sum of the numbers on the tiles. Your score is the sum of the values of all the runs and groups you construct. What is your maximum possible score?</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains a single number: the number of test cases to follow. Each test case has the following format:
+<br>One line with one integer N, satisfying 1 <= N <= 400: the number of tiles you have.
+<br>One line with N strings separated by single spaces, each consisting of a number between 1 and 100 and a character which is either 'y', 'r', 'g', 'b': the available tiles. All tiles are unique.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For every test case in the input, the output should contain a single number, on a single line: the maximum possible score.
+<br></div><p class="pst">Sample Input</p><pre class="sio">3
+5
+7g 7b 7r 8r 9r
+7
+23b 1y 24b 1r 93b 1b 100r
+8
+2y 2r 2g 2b 4g 5g 6g 7g</pre><p class="pst">Sample Output</p><pre class="sio">24
+3
+30</pre><p class="pst">

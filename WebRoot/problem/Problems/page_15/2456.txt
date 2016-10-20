@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">Farmer John has built a new long barn, with N (2 <= N <= 100,000) stalls. The stalls are located along a straight line at positions x1,...,xN (0 <= xi <= 1,000,000,000).
+<br>
+<br>His C (2 <= C <= N) cows don't like this barn layout and become aggressive towards each other once put into a stall. To prevent the cows from hurting each other, FJ want to assign the cows to the stalls, such that the minimum distance between any two of them is as large as possible.  What is the largest minimum distance?</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: Two space-separated integers: N and C
+<br>
+<br>* Lines 2..N+1: Line i+1 contains an integer stall location, xi</div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: One integer: the largest minimum distance</div><p class="pst">Sample Input</p><pre class="sio">5 3
+1
+2
+8
+4
+9</pre><p class="pst">Sample Output</p><pre class="sio">3</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">OUTPUT DETAILS:
+<br>
+<br>FJ can put his 3 cows in the stalls at positions 1, 4 and 8, resulting in a minimum distance of 3.
+<br>
+<br>Huge input data,scanf is recommended.</div><p class="pst">

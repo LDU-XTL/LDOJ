@@ -1,0 +1,31 @@
+</p><div class="ptx" lang="en-US"><img src=images/2812_1.jpg align=right> The Acme Extrusion Company specializes in the production of steel bars with custom-designed cross-sections. The manufacturing process involves cutting a hole in a thick metal plate, the shape of the hole being determined by the customer's specifications.
+<br>
+<br>Molten metal is then forced through the hole to form a long bar. The shape of the hole determines the shape of the cross-section of the resulting bar.
+<br>
+<br>Given a description of a polygonal hole and the volume of molten metal available, determine how long a bar can be formed by this process. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of one or more data sets consisting of the following information:
+<br><ul>
+<br><li>An integer, N , indicating the number of vertices making up the polygon. End of input is signaled by any N less than 3.
+<br><li>Next are N lines, each containing a pair of floating-point numbers, (xi, yi) , each denoting one vertex of the polygon. Vertices will be presented in clockwise order (relative to the closest interior point) proceeding around the perimeter of the polygon. The xi and yi values are in units of meters.
+<br><li>The data set is terminated by a floating point value indicating the amount of molten metal available (in cubic meters).</ul>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, the program should produce a single line of output of the form:
+<br>
+<br>BAR LENGTH: x
+<br>
+<br>where ``x " is the maximum bar length, a floating point number expressed with two digits precision. </div><p class="pst">Sample Input</p><pre class="sio">4
+0.0 0.0
+0.0 0.1
+0.1 0.1
+0.1 0.0  
+1.0
+7
+0.5 1.25
+0.9 1.6
+0.9  1.1
+0.85 1.0
+0.9 0.85
+0.9 0.5
+0.5 0.75
+100.0
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">BAR LENGTH: 100.00 
+BAR LENGTH: 318.73</pre><p class="pst">

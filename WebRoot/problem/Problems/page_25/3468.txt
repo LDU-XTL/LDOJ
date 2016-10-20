@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US"><p>You have <i>N</i> integers, <i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, ... , <i>A<sub>N</sub></i>. You need to deal with two kinds of operations. One type of operation is to add some given number to each number in a given interval. The other is to ask for the sum of numbers in a given interval.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line contains two numbers <i>N</i> and <i>Q</i>. 1 &le; <i>N</i>,<i>Q</i> &le; 100000.<br>The second line contains <i>N</i> numbers, the initial values of <i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, ... , <i>A<sub>N</sub></i>. -1000000000 &le; <i>A<sub>i</sub></i> &le; 1000000000.<br>Each of the next <i>Q</i> lines represents an operation.<br>&quot;C <i>a</i> <i>b</i> <i>c</i>&quot; means adding <i>c</i> to each of <i>A<sub>a</sub></i>, <i>A<sub>a</sub></i><sub>+1</sub>, ... , <i>A<sub>b</sub></i>. -10000 &le; <i>c</i> &le; 10000.<br>&quot;Q <i>a</i> <i>b</i>&quot; means querying the sum of <i>A<sub>a</sub></i>, <i>A<sub>a</sub></i><sub>+1</sub>, ... , <i>A<sub>b</sub></i>.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>You need to answer all <i>Q</i> commands in order. One answer in a line.</p></div><p class="pst">Sample Input</p><pre class="sio">10 5
+1 2 3 4 5 6 7 8 9 10
+Q 4 4
+Q 1 10
+Q 2 4
+C 3 6 3
+Q 2 4
+</pre><p class="pst">Sample Output</p><pre class="sio">4
+55
+9
+15</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">The sums may exceed the range of 32-bit integers.</div><p class="pst">

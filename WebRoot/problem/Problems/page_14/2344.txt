@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">Nikifor has decided to present the dean of the Department of Mathematics and Mechanics with a linearly independent vector system (you know, that we've just celebrated jubilees of the University and of the Department). A store sells m items of n-dimensional vectors, m <= 2000, 3 <= n <= m. For each vector its price c<sub>i</sub> is known, 0 < i <= m. Nikifor wants to buy n linearly independent vectors paying for them minimal sum of money. Write a program that would determine which vectors Nikifor should buy or would inform that it is impossible to satisfy his requirements. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of an input contains numbers m and n separated with a space. The next m lines contain the vectors on sale. All of the coordinates are integers with an absolute value not exceeding 2 000. The numbers are separated from each other with a space. The next m lines contain prices c<sub>i</sub>, one number in each line. The prices are positive integers not exceeding 15 000.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The first line of an output should contain the minimal amount of money that Nikifor is to pay or the number 0, if Nikifor's requirements cannot be satisfied in this store. If it is possible to make a purchase, then the next n lines should contain the numbers of the vectors that Nikifor should buy. If several sets of such numbers are possible, then you should write one of them which is minimal according to the lexicographic order.</div><p class="pst">Sample Input</p><pre class="sio">5 3
+1 0 0
+0 1 0
+0 0 1
+0 0 2
+0 0 3
+10
+20
+30
+10
+10
+</pre><p class="pst">Sample Output</p><pre class="sio">40
+1 
+2 
+4
+</pre><p class="pst">

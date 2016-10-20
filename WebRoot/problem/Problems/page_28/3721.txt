@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US"><div><p>In the game Dota-Allstars, Darkterror (faceless void) is famous for his <i>Time Walk plus ChronoSpere</i> skill combos. The combos take the following actions:</p><p>First, Darkterror can move himself from his initial position within a range of <i>R<sub>w</sub></i> unit(s) by the skill <i>Time Walk</i>. Then he can cast a <i>ChronoSpere</i> which freezes all the heroes it covers. The distance between the center of the sphere and Darkterror must be no further than <i>R<sub>c</sub></i> unit(s). And the radius of the sphere is <i>R</i> unit(s). </p><p>In a Dota-Allstars battle, Facer was blamed for his poor combos. He always froze his fellows and left his enemies at large. To rehabilitate his fame, Facer has practiced the hero thousands of times. Now he needs to analysis the replays and find out whether he made the best decision in performing the combos. Given the heroes' positions and their threat levels, Facer wants to know the maximum sum of threat levels can be covered by a <i>ChronoSpere.</i>&nbsp; </p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>The first line of input consists of three integers, <i>R<sub>w</sub></i>, <i>R<sub>c</sub></i> and <i>R</i>. (0 &le; <i>R<sub>w</sub></i>, <i>R<sub>c</sub></i>, <i>R</i> &le; 1000000)</p><p>The following ten lines describe the heroes in the battle. Each line contains three integers, <i>x</i>, <i>y</i>, and <i>l</i> indicating the hero's position and the threat level. (-1000000 ≤ <i>x</i>, <i>y</i>, <i>l</i> &le; 1000000). The first line of the ten always describes Darkterror and his threat level is always zero.</p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div><p>Output the maximum sum</p></div></div><p class="pst">Sample Input</p><pre class="sio">100000 100000 1
+100 100 0
+-1 0 100
+1 0 100
+0 -1 100
+0 1 100
+999 1000 -100
+1001 1000 -100
+1000 999 -100
+1000 1001 -100
+1000 1000 100</pre><p class="pst">Sample Output</p><pre class="sio">400</pre><p class="pst">

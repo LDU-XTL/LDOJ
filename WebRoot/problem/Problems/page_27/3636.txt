@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US"><div><p>Dilworth is the world's most prominent collector of Russian nested dolls: he literally has thousands of them! You know, the wooden hollow dolls of different sizes of which the smallest doll is contained in the second smallest, and this doll is in turn contained in the next one and so forth. One day he wonders if there is another way of nesting them so he will end up with fewer nested dolls? After all, that would make his collection even more magnificent! He unpacks each nested doll and measures the width and height of each contained doll. A doll with width <i>w</i><sub>1</sub> and height <i>h</i><sub>1</sub> will fit in another doll of width <i>w</i><sub>2</sub> and height <i>h</i>= if and only if <i>w</i><sub>1</sub> &lt; <i>w</i><sub>2</sub> and <i>h</i><sub>1</sub> &lt; <i>h</i><sub>2</sub>. Can you help him calculate the smallest number of nested dolls possible to assemble from his massive list of measurements?</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>On the first line of input is a single positive integer 1 &le; <i>t</i> &le; 20 specifying the number of test cases to follow. Each test case begins with a positive integer 1 &le; <i>m</i> &le; 20000 on a line of itself telling the number of dolls in the test case. Next follow 2<i>m</i> positive integers <i>w</i><sub>1</sub>, <i>h</i><sub>1</sub>,<i>w</i><sub>2</sub>, <i>h</i><sub>2</sub>, ... ,<i>w<sub>m</sub></i>, <i>h<sub>m</sub></i>, where <i>w<sub>i</sub></i> is the width and <i>h<sub>i</sub></i> is the height of doll number <i>i</i>. 1 &le; <i>w<sub>i</sub></i>, <i>h<sub>i</sub></i> &le; 10000 for all <i>i</i>.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case there should be one line of output containing the minimum number of nested dolls possible.</p></div><p class="pst">Sample Input</p><pre class="sio">4
+3
+20 30 40 50 30 40
+4
+20 30 10 10 30 20 40 50
+3
+10 30 20 20 30 10
+4
+10 10 20 30 40 50 39 51</pre><p class="pst">Sample Output</p><pre class="sio">1
+2
+3
+2</pre><p class="pst">

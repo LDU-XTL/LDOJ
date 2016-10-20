@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">Stan and Ollie play the game of Odd Brownie Points. Some brownie points are located in the plane, at integer coordinates. Stan plays first and places a vertical line in the plane. The line must go through a brownie point and may cross many (with the same x-coordinate). Then Ollie places a horizontal line that must cross a brownie point already crossed by the vertical line. 
+<br>Those lines divide the plane into four quadrants. The quadrant containing points with arbitrarily large positive coordinates is the top-right quadrant. 
+<br>
+<br>The players score according to the number of brownie points in the quadrants. If a brownie point is crossed by a line, it doesn't count. Stan gets a point for each (uncrossed) brownie point in the top-right and bottom-left quadrants. Ollie gets a point for each (uncrossed) brownie point in the top-left and bottom-right quadrants. 
+<br>
+<br>Stan and Ollie each try to maximize his own score. When Stan plays, he considers the responses, and chooses a line which maximizes his smallest-possible score.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains a number of test cases. The data of each test case appear on a sequence of input lines. The first line of each test case contains a positive odd integer 1 < n < 200000 which is the number of brownie points. Each of the following n lines contains two integers, the horizontal (x) and vertical (y) coordinates of a brownie point. No two brownie points occupy the same place. The input ends with a line containing 0 (instead of the n of a test).</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each input test, print a line of output in the format shown below. The first number is the largest score which Stan can assure for himself. The remaining numbers are the possible (high) scores of Ollie, in increasing order. </div><p class="pst">Sample Input</p><pre class="sio">11
+3 2
+3 3
+3 4
+3 6
+2 -2
+1 -3
+0 0
+-3 -3
+-3 -2
+-3 -4
+3 -7
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">Stan: 7; Ollie: 2 3;
+</pre><p class="pst">

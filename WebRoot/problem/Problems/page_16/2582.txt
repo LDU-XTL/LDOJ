@@ -1,0 +1,50 @@
+</p><div class="ptx" lang="en-US">Boudreaux and Thibodeaux are just returning from watching Finding Nemo and are finding themselves pretty hungry after watching all those fish swim around for a couple of hours. Like the true Cajuns that they are, they jump into their pickup and head on over to the local bayou. Upon arriving Boudreaux realizes that in their mad hunger rush, they have completely forgotten their fishing poles and tackle. Boudreaux yells out to Thibodeaux, "Hey couyon, you forgot about dem poles!" and Thibodeaux replies "Don't worry, I got me some fish sticks out in the truck." Boudreaux later finds out that "fish sticks" are really dynamite, to which he replies "Mais fool, now how you suppose we gonna know where to place dem sticks to catch some fish?" at which point Thibodeaux then breaks out his fish finder and laptop and whips up a program that will tell them just that. 
+<br>
+<br>Given the position of all the fish in the bayou and the spot Boudreaux and Thibodeaux want to drop their dynamite (after lighting the fuses of course), you are to write a program that will tell how many fish they will kill, ahem, I mean catch. Each dynamite stick has a certain fuse length that determines at which depth it will blow up. Any fish within a one unit radius of the dynamite when it blows up is as good as fish fried. Keep in mind that the fish never move from their location, and the dynamite sticks fall straight to the bottom of the bayou.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input to this problem will consist of a (non-empty) series of up to 100 data sets. Each data set will be formatted according to the following description, and there will be no blank lines separating data sets. 
+<br>
+<br>A single data set has 4 components: 
+<br><ol><li>Start Line - A single line: 
+<br>         START L W D
+<br>      
+<br>where (1 <= (L,W,D) <= 20). L is the length of the bayou along the x-axis, W is the width of the bayou along the y-axis, and D is the depth of the bayou on the z-axis. 
+<br><li>Dynamite List - A single line containing a space-separated list of 1 to 10 data elements. Each element contains the location and fuse length of a single stick of dynamite as it is dropped into the bayou formatted as: 
+<br>         x,y,f
+<br>      
+<br>x and y give the surface coordinates of the drop where (0 <= x <= L) and (0 <= y <= W). f is the length of the fuse and is in the range (0 <= f <= 30). 
+<br><li>Fish List - A single line containing a space-separated list of 1 to 15 data elements. Each element represents the location of a fish in the bayou formatted as: 
+<br>         x,y,z
+<br>      
+<br>where (0 <= x <= L), (0 <= y <= W), and (0 <= z <= D), where z = 0 indicates the fish is at the surface of the water. 
+<br><li>End line A single line: 
+<br>         END</ol>  
+<br>After the last data set, there will be a single line: 
+<br>   ENDOFINPUT
+<br>
+<br>Note: 
+<br>All numeric values will be given as integers. 
+<br>The dynamite drops at a constant speed from the top of the bayou (z = 0). 
+<br>The fuse burns up one unit of its length in precisely the amount of time it takes the dynamite to sink one unit deeper into the bayou. 
+<br>If the dynamite reaches the bottom of the bayou before the fuse runs out, it will stay there until it detonates. 
+<br>Multiple fish will not occupy the same position. 
+<br>Fish are killed if their distance from any dynamite explosion is <= 1. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, there will be exactly one line of output. The output will be a phrase stating how much fish Boudreaux and Thibodeaux will be frying up tonight. 
+<br>
+<br>If they blow up at least one fish, the following phrase will be printed: 
+<br>
+<br>   AIEE, I got N fish, me!
+<br>
+<br>where N is the number of fish blown up. If they don't blow up any fish, the following phrase will be printed: 
+<br>   None of dem fish blowed up!
+<br>
+<br></div><p class="pst">Sample Input</p><pre class="sio">START 5 5 5
+1,1,1 2,2,2 3,3,3
+4,3,0 4,4,4 3,0,2 2,1,3 3,3,3
+END
+START 2 3 4
+1,1,10 1,1,1 0,2,2
+0,0,1
+END
+ENDOFINPUT
+</pre><p class="pst">Sample Output</p><pre class="sio">AIEE, I got 1 fish, me!
+None of dem fish blowed up!
+</pre><p class="pst">

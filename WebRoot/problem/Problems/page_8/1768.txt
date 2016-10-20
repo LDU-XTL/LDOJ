@@ -1,0 +1,46 @@
+</p><div class="ptx" lang="en-US">Little Tom is learning how to program. He has just written some programs but is afraid to run them, because he does not know if they will ever stop. Please write a program to help him. This task is not as easy as it may seem, because Tom's programs are possibly not deterministic. Given a program written by Tom, your program should tell him whether his program can stop and if so, what is the shortest possible time before it stops. 
+<br>
+<br>Tom's computer consists of 32 1-bit registers and the program consists of n instructions. The registers are numbered from 0 to 31 and the instructions are numbered from 0 to n-1. 
+<br>
+<br>Below, MEM[a] stands for the contents of the a-th register, 0 <= a, b < 32, 0 <= x < n, 0 <= c <= 1. 
+<br>
+<br>The instruction set is as follows: 
+<br>
+<br><table border=2 cellpadding=8 cellspacing=3><tr><td width=110>Instruction</td><td>Semantics</td></tr><tr><td>
+<br>AND a b
+<br>OR a b
+<br>XOR a b
+<br>NOT a
+<br>MOV a b
+<br>SET a c
+<br>RANDOM a
+<br>JMP x
+<br>JZ x a
+<br>STOP
+<br></td><td>
+<br>MEM[a] := MEM[a] and MEM[b] 
+<br>MEM[a] := MEM[a] or MEM[b] 
+<br>MEM[a] := MEM[a] xor MEM[b]
+<br>MEM[a] := not MEM[a]
+<br>MEM[a] := MEM[b]
+<br>MEM[a] := c
+<br>MEM[a] := random value (0 or 1)
+<br>jump to the instruction with the number x
+<br>jump to the instruction with the number x if MEM[a] = 0
+<br>stop the program
+<br></td></tr></table>
+<br>The last instruction of a program is always STOP (although there can be more than one STOP instruction). Every program starts with the instruction number 0. Before the start, the contents of the registers can be arbitrary values. Each instruction (including STOP) takes 1 processor cycle to execute. 
+<br>Task
+<br>Write a program that:
+<br>
+<br>reads the program, 
+<br>computes the shortest possible running time of the program, 
+<br>writes the result. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains an integer n (1 <= n <= 16) being the number of instructions of the program. Each of the next n lines contains one instruction of the program in the format given above. You may assume that the only white characters in the program are single spaces between successive tokens of each instruction. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The first and only line of the output should contain the shortest possible running time of the program, measured in processor cycles. If the program cannot stop, output should contain the word HANGS. </div><p class="pst">Sample Input</p><pre class="sio">5
+SET 0 1
+JZ 4 0
+RANDOM 0
+JMP 1
+STOP
+</pre><p class="pst">Sample Output</p><pre class="sio">6
+</pre><p class="pst">

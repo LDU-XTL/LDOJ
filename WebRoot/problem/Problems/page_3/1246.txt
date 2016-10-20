@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US"><center><img src=images/1246_1.jpg></center>
+<br>David Hilbert proved the existence of a very counter-intuitive curve that fills space. The construction of the Hilbert curve is based on a sequence of curves, H1, H2, H3, H4, ... composed of horizontal and vertical segments. Each curve lies in the unit square [0, 1] * [0, 1]. H1 contains just three segments, connecting the points (1/4, 3/4) to (1/4, 1/4) to (3/4, 1/4) to (3/4, 3/4). H<sub>n</sub> is defined recursively in terms of H<sub>n-1</sub>, for n = 2, 3, ... by four transformations: 
+<br>
+<br>1.Halve all coordinates in H<sub>n-1</sub>. 
+<br>2.Add a copy rotated 90 degrees counterclockwise about the point (0, 1/2). 
+<br>3.Add the reflection across the line x = 1/2. 
+<br>4.Let m = 1/2<sup>n+1</sup>. Add segments connecting endpoints (1/2 - m, 1/2 - m) to (1/2 + m, 1/2 - m), (m, 1/2 - m) to (m, 1/2 + m), and (1 - m, 1/2 - m) to (1 - m, 1/2 + m). 
+<br>Your job is to count the number of intersections of horizontal line segments with these curves. For example, consider Figures 1 and 2, which illustrate the first two example input data sets below. 
+<br><center><img src=images/1246_2.jpg></center>
+<br>The coordinates of vertices of Hn are odd multiples of 1/2<sup>n+1</sup>. The coordinates of horizontal segment endpoints will always be multiples of 1/2<sup>n</sup>. Hence the specified horizontal segment can only cross vertical segments in H<sub>n</sub>. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of one to 100 data sets, one per line, followed by a final line containing only 0. Each data set consists of four integers separated by blanks in the form 
+<br>n x1 x2 y
+<br>which represents H<sub>n</sub> and the segment from (x1/2<sup>n</sup>, y/2<sup>n</sup>) to (x2/2<sup>n</sup>, y/2<sup>n</sup>), where 0 < n < 31, x1 < x2, and each of x1, x2, and y lie in the range 0 to 2<sup>n</sup>, inclusive. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output is one integer per line for each data set: the number of intersections of H<sub>n</sub> with the segment. Caution: A brute force solution that computes each intersection individually will not finish within the one minute time limit. As you can see below, there may be more than one billion intersections for any data set. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">3 2 7 7
+4 0 16 1
+30 1 1073741823 1
+0</pre><p class="pst">Sample Output</p><pre class="sio">3
+16
+1073741822</pre><p class="pst">

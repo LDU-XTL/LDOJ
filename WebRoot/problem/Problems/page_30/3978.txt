@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US">A pretty straight forward task, calculate the number of primes between 2 integers.
+<br>
+<br>Given 2 integers A ≤ B &lt; 10<sup>5</sup> what’s the number of primes in range from A to B inclusive.
+<br>
+<br>Note: A prime number is a positive integer greater than 1 and is divisible by 1 and itself only. For N to be prime it is enough to test the divisibility of numbers less than or equal to square root of N.</div><p class="pst">Input</p><div class="ptx" lang="en-US">As many as 1000 lines, each line contains 2 integers A and B separated by a space. Input is terminated when A = B = -1 (Do not process this line).</div><p class="pst">Output</p><div class="ptx" lang="en-US">For every line in input – except for the last line where A = B = -1 - print the number of prime numbers between A and B inclusive.</div><p class="pst">Sample Input</p><pre class="sio">0 9999
+1 5
+-1 -1</pre><p class="pst">Sample Output</p><pre class="sio">1229
+3</pre><p class="pst">

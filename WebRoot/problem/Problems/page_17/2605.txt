@@ -1,0 +1,5 @@
+</p><div class="ptx" lang="en-US">There is an infinite grid and an m*n rectangle of stones on it (1 <= m,n <= 1000). The stones are located in the knots of the grid.
+<br>
+<br>A following game for a single player is being played. One stone can jump over another along a vertical or a horizontal line. A stone which had been overjumped is taken away. The purpose of the game is to minimize number of stones on a grid.
+<br>
+<br>Given a pair of numbers m and n separated with one space in an input file you are to write a program which should determine a minimal number of the stones left on the grid.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Numbers m and n separated by space.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The minimal number of the stones left on the grid.</div><p class="pst">Sample Input</p><pre class="sio">3 4</pre><p class="pst">Sample Output</p><pre class="sio">2</pre><p class="pst">

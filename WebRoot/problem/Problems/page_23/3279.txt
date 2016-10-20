@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US"><p>Farmer John knows that an intellectually satisfied cow is a happy cow who will give more milk. He has arranged a brainy activity for cows in which they manipulate an <i>M</i> &times; <i>N</i> grid (1 &le; <i>M</i> &le; 15; 1 &le; <i>N</i> &le; 15) of square tiles, each of which is colored black on one side and white on the other side.</p><p>As one would guess, when a single white tile is flipped, it changes to black; when a single black tile is flipped, it changes to white. The cows are rewarded when they flip the tiles so that each tile has the white side face up. However, the cows have rather large hooves and when they try to flip a certain tile, they also flip all the adjacent tiles (tiles that share a full edge with the flipped tile). Since the flips are tiring, the cows want to minimize the number of flips they have to make.</p><p>Help the cows determine the minimum number of flips required, and the locations to flip to achieve that minimum. If there are multiple ways to achieve the task with the minimum amount of flips, return the one with the least lexicographical ordering in the output when considered as a string. If the task is impossible, print one line with the word &quot;IMPOSSIBLE&quot;.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US">Line 1: Two space-separated integers: <i>M</i> and <i>N</i>
+<br>Lines 2..<i>M</i>+1: Line <i>i</i>+1 describes the colors (left to right) of row i of the grid with <i>N</i> space-separated integers which are 1 for black and 0 for white</div><p class="pst">Output</p><div class="ptx" lang="en-US">Lines 1..<i>M</i>: Each line contains <i>N</i> space-separated integers, each specifying how many times to flip that particular location.</div><p class="pst">Sample Input</p><pre class="sio">4 4
+1 0 0 1
+0 1 1 0
+0 1 1 0
+1 0 0 1</pre><p class="pst">Sample Output</p><pre class="sio">0 0 0 0
+1 0 0 1
+1 0 0 1
+0 0 0 0</pre><p class="pst">

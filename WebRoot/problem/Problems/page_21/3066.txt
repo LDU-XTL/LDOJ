@@ -1,0 +1,7 @@
+</p><div class="ptx" lang="en-US">Let x1, x2, ..., xm be real numbers satisfying the following conditions:
+<br><img src=images/3066_1.jpg>
+<br>for some integers a and b (a > 0).
+<br>
+<br>Determine the maximum value of x<sub>1</sub><sup>p</sup> + x<sub>2</sub><sup>p</sup> + … + x<sub>m</sub><sup>p</sup> for some even positive integer p.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Each input line contains four integers: m, p, a, b (m <= 2000, p <= 12, p is even). Input is correct, i.e. for each input numbers there exists x1, x2, …, xm satisfying the given conditions.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each input line print one number – the maximum value of expression, given above. The answer must be rounded to the nearest integer.</div><p class="pst">Sample Input</p><pre class="sio">1997 12 3 -318
+10 2 4 -1</pre><p class="pst">Sample Output</p><pre class="sio">189548
+6</pre><p class="pst">

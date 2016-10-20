@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">The little cat is majoring in physics in the capital of Byterland. A piece of sad news comes to him these days: his mother is getting ill. Being worried about spending so much on railway tickets (Byterland is such a big country, and he has to spend 16 shours on train to his hometown), he decided only to send SMS with his mother.
+<br>
+<br>The little cat lives in an unrich family, so he frequently comes to the mobile service center, to check how much money he has spent on SMS. Yesterday, the computer of service center was broken, and printed two very long messages. The brilliant little cat soon found out:
+<br>
+<br>1. All characters in messages are lowercase Latin letters, without punctuations and spaces.
+<br>2. All SMS has been appended to each other – (i+1)-th SMS comes directly after the i-th one – that is why those two messages are quite long.
+<br>3. His own SMS has been appended together, but possibly a great many redundancy characters appear leftwards and rightwards due to the broken computer.
+<br>E.g: if his SMS is “motheriloveyou”, either long message printed by that machine, would possibly be one of “hahamotheriloveyou”, “motheriloveyoureally”, “motheriloveyouornot”, “bbbmotheriloveyouaaa”, etc.
+<br>4. For these broken issues, the little cat has printed his original text twice (so there appears two very long messages). Even though the original text remains the same in two printed messages, the redundancy characters on both sides would be possibly different.
+<br>
+<br>You are given those two very long messages, and you have to output the length of the longest possible original text written by the little cat. 
+<br>
+<br>Background:
+<br>The SMS in Byterland mobile service are charging in dollars-per-byte. That is why the little cat is worrying about how long could the longest original text be.
+<br>
+<br>Why ask you to write a program? There are four resions:
+<br>1. The little cat is so busy these days with physics lessons;
+<br>2. The little cat wants to keep what he said to his mother seceret;
+<br>3. POJ is such a great Online Judge;
+<br>4. The little cat wants to earn some money from POJ, and try to persuade his mother to see the doctor :(
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Two strings with lowercase letters on two of the input lines individually. Number of characters in each one will never exceed 100000.</div><p class="pst">Output</p><div class="ptx" lang="en-US">A single line with a single integer number – what is the maximum length of the original text written by the little cat.</div><p class="pst">Sample Input</p><pre class="sio">yeshowmuchiloveyoumydearmotherreallyicannotbelieveit
+yeaphowmuchiloveyoumydearmother
+</pre><p class="pst">Sample Output</p><pre class="sio">27</pre><p class="pst">

@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US"><p>Safety is an important issue when planning flights. First and foremost, one should of course take every possible measure to make sure that the trip is uneventful and that no incidents occur. But even then, one should always be prepared for the worst and try to make sure that if an incident does happen, people&rsquo;s chances of surviving are as high as possible.</p><p>When making an emergency landing over water, the distance to the nearest land is a critical factor. In general, the further out on open waters, the worse are the odds of survival. Thus, one important safety parameter of a flight is how far away from the nearest land any part of the flight will take you. Your job is to write a program which, given a flight route, will determine this distance.</p><p>To simplify matters, we model the world as a 2-dimensional plane rather than a sphere. We model continents as polygons, and a flight route as a sequence of key points connected by straight line segments. Flight routes always start and end strictly inside a continent, but intermediate key points may be located over water. Continents do not intersect themselves or touch each other.</p><div align="center"><img src="images/3502_1.png"></div><p align="center">Second sample case (furthest point marked with a square).</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>On the first line one positive number: the number of testcases, at most 100. After that per testcase:</p><ul><li><p>One line containing two integers <i>C</i> (1 &le; <i>C</i> &le; 20) and <i>N</i> (2 &le; <i>N</i> &le; 20), where <i>C</i> is the number of continents and <i>N</i> is the number of key points in the flight route.</p></li><li><p><i>N</i> lines each containing two integers <i>X</i>, <i>Y</i> giving the coordinates of the key points, from first to last.</p></li><li><p>The descriptions of the <i>C</i> continents. Each continent description starts with a line containing an integer <i>M</i> (3 &le; <i>M</i> &le; 30) giving the number of vertices of this continent. It is followed by <i>M</i> lines, each containing a pair of integers <i>X</i>, Y giving the coordinates of the <i>M</i> vertices, in either clockwise or counter-clockwise order.</p></li></ul><p>Every coordinate in the input is between <nobr>&minus;10 000</nobr> and <nobr>10 000</nobr>.</li></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case:</p><ul><li>One line with the furthest distance from land that the flight route will go. The answer should be given with an absolute or relative error of at most 10<sup>&minus;3</sup>.</li></ul></div><p class="pst">Sample Input</p><pre class="sio">2
+1 2
+-9 -6
+5 1
+3
+0 16
+-16 -12
+17 -6
+2 3
+12 4
+16 17
+3 9
+4
+1 0
+4 19
+19 14
+6 12
+3
+10 10
+5 3
+18 2</pre><p class="pst">Sample Output</p><pre class="sio">0.000000
+2.942685</pre><p class="pst">

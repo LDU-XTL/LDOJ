@@ -1,0 +1,19 @@
+</p><div class="ptx" lang="en-US">FJ's cows would like to be able to compute integer powers P (1 <= P <= 20,000) of numbers very quickly, but need your help.  Because they're going to be computing powers of very large numbers, they can only keep around two work variables for intermediate results.
+<br>
+<br>The first of those work variables is initialized to the number (denoted x) for which they are calculating the power; the other is initialized to 1. The cows can both multiply and divide any pair of the work variables and store the result in any work variable, but all results are stored as integers.
+<br>
+<br>For example, if they want to compute x^31, one way to perform the calculation is:
+<br><pre>                                              WV1  WV2
+<br>                                      Start:   x    1
+<br>   Multiply first by first, store in second:   x   x^2
+<br>                  Multiply second by second:   x   x^4
+<br>                  Multiply second by second:   x   x^8
+<br>                  Multiply second by second:   x   x^16
+<br>                  Multiply second by second:   x   x^32
+<br>                     Divide second by first:   x   x^31</pre>
+<br>Thus, x^31 can computed in six operations.  Given the power to be computed and the the number of work variables, find the minimum number of operations to calculate the power.
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">A single line with one integer: P.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">A single line with a single integer that is the minimum number of operations it requires to compute the power.
+<br></div><p class="pst">Sample Input</p><pre class="sio">31</pre><p class="pst">Sample Output</p><pre class="sio">6
+</pre><p class="pst">

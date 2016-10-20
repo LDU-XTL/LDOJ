@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US"><div><p>Given a sequence, {<i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, ..., <i>A<sub>n</sub></i>} which is guaranteed <i>A</i><sub>1 </sub>> <i>A</i><sub>2</sub>, ..., <i>A<sub>n</sub></i>,&nbsp; you are to cut it into three sub-sequences and reverse them separately to form a new one which is the smallest possible sequence in alphabet order. </p><p>The alphabet order is defined as follows: for two sequence {<i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, ..., <i>A<sub>n</sub></i>} and {<i>B</i><sub>1</sub>, <i>B</i><sub>2</sub>, ..., <i>B<sub>n</sub></i>}, we say {<i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, ..., <i>A<sub>n</sub></i>} is smaller than {<i>B</i><sub>1</sub>, <i>B</i><sub>2</sub>, ..., <i>B<sub>n</sub></i>} if and only if there exists such <i>i</i> ( 1 &le; <i>i</i> &le; <i>n</i>) so that we have <i>A<sub>i</sub></i> &lt; <i>B<sub>i and </sub>A<sub>j</sub></i> = <i>B<sub>j</sub></i> for each <i>j</i> &lt; <i>i</i>.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>The first line contains <i>n. </i>(<i>n</i> ≤ 200000)</p><p>The following <i>n</i> lines contain the sequence.</p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>output <i>n</i> lines which is the smallest possible sequence obtained.</p></div><p class="pst">Sample Input</p><pre class="sio">5
+10
+1
+2
+3
+4
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+10
+2
+4
+3
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">{10, 1, 2, 3, 4} -> {10, 1 | 2 | 3, 4} -> {1, 10, 2, 4, 3}</div><p class="pst">

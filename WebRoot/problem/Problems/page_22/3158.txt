@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>A research laboratory of a world-leading automobile company has received an order to create a special transmission mechanism, which allows for incredibly efficient kickdown &mdash; an operation of switching to lower gear. After several months of research engineers found that the most efficient solution requires special gears with teeth and cavities placed non-uniformly. They calculated the optimal flanks of the gears. Now they want to perform some experiments to prove their findings.</p><p>The first phase of the experiment is done with planar toothed sections, not round-shaped gears. A section of length <i>n</i> consists of <i>n</i> units. The unit is either a cavity of height <i>h</i> or a tooth of height 2<i>h</i>. Two sections are required for the experiment: one to emulate master gear (with teeth at the bottom) and one for the driven gear (with teeth at the top).</p><div align="center"><img src=images/3158_1.png></div><p>There is a long stripe of width 3<i>h</i> in the laboratory and its length is enough for cutting two engaged sections together. The sections are irregular but they may still be put together if shifted along each other.</p><div align="center"><img src=images/3158_2.png></div><p>The stripe is made of an expensive alloy, so the engineers want to use as little of it as possible. You need to find the minimal length of the stripe which is enough for cutting both sections simultaneously.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>There are two lines in the input file, each contains a string to describe a section. The first line describes master section (teeth at the bottom) and the second line describes driven section (teeth at the top). Each character in a string represents one section unit &mdash; 1 for a cavity and 2 for a tooth. The sections can not be flipped or rotated.</p><p>Each string is non-empty and its length does not exceed 100.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Write a single integer number to the output file &mdash; the minimal length of the stripe required to cut off given sections.</p></span></div><p class="pst">Sample Input</p><pre class="sio"><b>sample input #1</b>
+2112112112
+2212112
+
+<b>sample input #2</b>
+12121212
+21212121
+
+<b>sample input #3</b>
+2211221122
+21212</pre><p class="pst">Sample Output</p><pre class="sio"><b>sample output #1</b>
+10
+
+<b>sample output #2</b>
+8
+
+<b>sample output #3</b>
+15</pre><p class="pst">

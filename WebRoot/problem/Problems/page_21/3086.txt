@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The <b><i>n</i><sup>th</sup></b><i> Triangular</i> number, <b><i>T</i>(<i>n</i>) = 1 + &hellip; + <i>n</i></b>, is the sum of the first <b><i>n</i> </b>integers. It is the number of points in a triangular array with <b><i>n</i> </b>points on side. For example <b><i>T</i>(4)</b>: </p><b><div align="center"><pre>X<br>X X<br>X X X<br>X X X X</pre></div></b><p>Write a program to compute the weighted sum of triangular numbers: </p><b><p align="center"><i>W</i>(<i>n</i>) = <code>SUM[<i>k</i> = 1&hellip;<i>n</i>; <i>k</i> * <i>T</i>(<i>k</i> + 1)]</code></b></p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The first line of input contains a single integer <i><b>N</b></i>, (1 &le; <i><b>N</b></i> &le; 1000) which is the number of datasets that follow.</p><p>Each dataset consists of a single line of input containing a single integer <i><b>n</b></i>, (1 &le; <i><b>n</b></i> &le;300), which is the number of points on a side of the triangle.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each dataset, output on a single line the dataset number (1 through <i><b>N</b></i>), a blank, the value of <i><b>n</b></i> for the dataset, a blank, and the weighted sum ,<b><i>W</i>(<i>n</i>)</b>, of triangular numbers for <i><b>n</b></i>.</p></div><p class="pst">Sample Input</p><pre class="sio">4
+3
+4
+5
+10</pre><p class="pst">Sample Output</p><pre class="sio">1 3 45
+2 4 105
+3 5 210
+4 10 2145</pre><p class="pst">

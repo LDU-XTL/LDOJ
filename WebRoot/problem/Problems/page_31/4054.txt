@@ -1,0 +1,51 @@
+</p><div class="ptx" lang="en-US">When introducing new terms consisting of several words, it is useful to use abbreviations. An abbreviation is a word that consists of the first letters of several consecutive words.
+<br>
+<br>An abbreviation is called <i>unambiguous</i> if the following two conditions are satisfied:
+<br><ul>
+<br><li> It corresponds to exactly one sequence of words in a given text (although this sequence can appear in the text more than once);</li>
+<br><li> It does not appear in the text by itself.</li>
+<br></ul>
+<br>
+<br>For example, in the text "<span style="font-family:courier">A recursive acronym KINA means "KINA is not abbreviation"</span>", strings "<span style="font-family:courier">ARA</span>" and "<span style="font-family:courier">K</span>" are unambiguous abbreviations, strings "<span style="font-family:courier">A</span>" and "<span style="font-family:courier">KINA</span>" are ambiguous abbreviations, and strings "<span style="font-family:courier">RAA</span>" and "<span style="font-family:courier">KNA</span>" are not abbreviations.
+<br>
+<br>To introduce an abbreviation in a text, it is placed in parentheses right after the sequence of words it corresponds to. Future occurrences of this sequence of words can be replaced by the abbreviation. In the example text above, introduction of the abbreviation "<span style="font-family:courier">K</span>" produces the following text: "<span style="font-family:courier">A recursive acronym KINA (K) means "K is not abbreviation"</span>".
+<br>
+<br>If two occurrences of a sequence of words overlap, only one of them can be replaced by the abbreviation. Words in a sequence are separated by one or more non-alphabetic characters. Comparison of words is case-insensitive. For example, "<span style="font-family:courier">i18n</span>" is an occurrence of the word sequence "<span style="font-family:courier">I n</span>".
+<br>
+<br>The effectiveness of an abbreviation is the decrease in the number of letters after introduction of this abbreviation. Only letters are taken into account; spaces, parentheses and all other non-alphabetical characters do not count.
+<br>
+<br>Given a text, find an unambiguous abbreviation with the maximum effectiveness.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input file contains a text with at most 4 000 characters. The text contains only characters with ASCII codes 32 (space) to 126 ("~"), 13 (carriage return), and 10 (line feed).</div><p class="pst">Output</p><div class="ptx" lang="en-US">If there is no unambiguous abbreviation with positive effectiveness, then the output file should contain the single number 0.
+<br>
+<br>Otherwise, the first line of the output file should contain the effectiveness of the optimal abbreviation. The second line should contain the unambiguous abbreviation itself. If there are multiple unambiguous abbreviations with the maximum effectiveness, output any one of them.</div><p class="pst">Sample Input</p><pre class="sio">Sample Input #1
+
+This problem name is "KINA is not abbreviation".
+Once again: KINA is not abbreviation.
+
+
+Sample Input #2
+
+To be or not to be: that is the question.
+
+
+Sample Input #3
+
+Here is the chorus of the song "Jingle Bells":
+Jingle bells, jingle bells,
+Jingle all the way;
+Oh what fun it is to ride
+In a one-horse open sleigh.</pre><p class="pst">Sample Output</p><pre class="sio">Sample Output #1
+
+11
+NA
+
+
+Sample Output #2
+
+0
+
+
+Sample Output #3
+
+16
+JB</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">In the first example, the optimal abbreviations are "NA" and "INA".
+<br>In the third example, the optimal abbreviations are "JB" and "BJ".</div><p class="pst">

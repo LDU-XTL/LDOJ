@@ -1,0 +1,78 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Nalim, Ocis and Remmarguts are playing on grass, and they feel very hungry now. As baby wolves, they decide to capture a little sheep to eat. Fortunately, they immediately discover a sheep roaming around the grass. However, what they found is the queen of the sheep &mdash; Mmxl, who has extraordinary speed that can compare with the wolves, and is very clever! Can you judge whether the baby wolves will capture Mmxl? If so, how much time do they need? </p><p>There are some rules to follow:</p><p>The grass field is a rectangular area that consists of <i>N</i> &times; <i>M</i> grids. And some obstacles like stones or trees exist. The actions of the baby wolves and Mmxl are taken in rounds. In each round, baby wolves take actions first, and then Mmxl follows. In the baby wolves' turn, the three wolves will make a decision, and choose one of them to move (a move means moving from a grid to a neighboring grid). There must be a wolf to move, unless none of them can move. In the Mmxl&rsquo;s turn, she will always move. If she cannot move, she is captured. Baby wolves and Mmxl cannot move to the grids on which there are obstacles, and they are always on different grids. Baby wolves and Mmxl will never get out of the rectangular area. Notice that the sheep is captured only when she cannot move in her turn. </p><p>These little animals are very clever. If the wolves have a way to capture the sheep, they never miss the way. If the sheep is able to prevent being captured, she never make a mistake. Additionally, the wolves eager to capture the sheep as early as possible, and the sheep will try to delay the time being captured even if she cannot escape.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Input contains multiple test cases. Each test case starts with two numbers <i>N</i> and <i>M</i> (1 &le; <i>N</i>, <i>M</i> &le; 10) in one line. Then <i>N</i> lines follow, each line has <i>M</i> characters, which describes the grass field. A &lsquo;<tt>.</tt>&rsquo; denotes an empty grid, an &lsquo;<tt>#</tt>&rsquo; denotes an obstacle, a &lsquo;<tt>O</tt>&rsquo; denotes a baby wolf, and a &lsquo;<tt>X</tt>&rsquo; denotes the Mmxl. There are exactly three &lsquo;<tt>O</tt>&rsquo;&rsquo;s and one &lsquo;<tt>X</tt>&rsquo;.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>There is only one line for each test case. If lovely Mmxl will not be captured in finity rounds, print &ldquo;<tt>Lucky Mmxl will never be captured:)</tt>&rdquo;. If the wicked baby wolves are able to capture Mmxl, print &ldquo;<tt>Poor Mmxl may be captured after </tt><i>xx</i><tt> steps:(</tt>&rdquo; where <i>xx</i> is the number of turns after which the wolves can capture the sheep, which is certainly an odd number.</p></span></div><p class="pst">Sample Input</p><pre class="sio">2 2
+OO
+OX
+3 3
+OOO
+##X
+...
+3 3
+OO#
+###
+.OX
+3 4
+OO##
+####
+..OX
+4 4
+OOO.
+....
+....
+...X
+5 5
+O...O
+.....
+..#..
+.....
+O...X
+5 5
+O...O
+.....
+...#.
+.....
+O...X
+6 6
+......
+.O..O.
+..##..
+..##..
+.O..X.
+......
+6 6
+#.....
+.O..O.
+..##..
+..##..
+.O..X.
+......
+10 10
+..........
+..........
+..O....O..
+..........
+..........
+..........
+..........
+..O....X..
+..........
+..........
+10 10
+..........
+.#.#.#.#.#
+..O.....O.
+.#.#.#.#.#
+..........
+.#.#.#.#.#
+..........
+.#.#.#.#.#
+..O.....X.
+.#.#.#.#.#</pre><p class="pst">Sample Output</p><pre class="sio">Poor Mmxl may be captured after 1 steps:(
+Poor Mmxl may be captured after 7 steps:(
+Poor Mmxl may be captured after 5 steps:(
+Lucky Mmxl will never be captured:)
+Poor Mmxl may be captured after 21 steps:(
+Lucky Mmxl will never be captured:)
+Poor Mmxl may be captured after 41 steps:(
+Lucky Mmxl will never be captured:)
+Poor Mmxl may be captured after 39 steps:(
+Lucky Mmxl will never be captured:)
+Poor Mmxl may be captured after 51 steps:(</pre><p class="pst">

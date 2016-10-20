@@ -1,0 +1,52 @@
+</p><div class="ptx" lang="en-US">You've got a queue. And you just got to mess with it. 
+<br>Given a queue of items and a series of queue operations, return the resulting queue. 
+<br>Queue operations are defined as follows: 
+<br>
+<br><b><i>starting-position to requested-position</i></b>
+<br>
+<br>meaning one wants the item at the starting position to be moved to the requested position. So if the queue of items were: 
+<br>
+<br><b><i>Item1 Item2 Item3 Item4 Item5</i></b>
+<br>
+<br>(Item1 being in position 1, Item2 in position 2, etc.) 
+<br>after applying the queue operation: 
+<br>
+<br><b><i>5 to 2 </i></b>
+<br>
+<br>the resulting queue would be: 
+<br>
+<br><b><i>Item1 Item5 Item2 Item3 Item4</i></b>
+<br>
+<br>as Item5 (the item in position 5) was moved to position 2. Multiple queue operations are applied at the same time, however; e.g., given the queue of items: 
+<br>
+<br><b><i>Item1 Item2 Item3 Item4 Item5 Item6 Item7 Item8</i></b>
+<br>
+<br>If the following queue operations were applied: 
+<br>
+<br><b><i>2 to 6; 6 to 3; 4 to 5; 5 to 2; 7 to 4; 8 to 1</i></b>
+<br>
+<br>then the resulting queue would be: 
+<br>
+<br><b><i>Item8 Item5 Item6 Item7 Item4 Item2 Item1 Item3</i></b>
+<br>
+<br>As you can see, the queue operations are strictly enforced, with other items (not involved in queue operations) maintaining their order and moving to vacant positions in the queue. Note that no two queue operations will have the same starting-position or same requested-position defined. 
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input to this problem will begin with a line containing a single integer x indicating the number of datasets. Each data set consists of three components:<ol><li>Start line – A single line, "m n" (1 <= m, n <= 20) where m indicates the number of items in the queue and n indicates the number of queue operations. <li>Queue items – A line of short (between 1 and 8 characters) alphanumeric names for the items in the queue. Names are unique for a given data set and contain no whitespace. <li>Queue operations – n lines of queue operations in the format "starting-position requested-position". </ol>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each dataset, output the queue after the queue operations have been applied. Print the elements of the queue on a single line, starting from the first and ending with the last, with a single space separating each item. </div><p class="pst">Sample Input</p><pre class="sio">3
+5 1
+alpha beta gamma delta epsilon
+5 2
+8 6
+a b c d e f g h
+2 6
+6 3
+4 5
+5 2
+7 4
+8 1
+3 2
+foo bar baz
+3 1
+1 3</pre><p class="pst">Sample Output</p><pre class="sio">alpha epsilon beta gamma delta
+h e f g d b a c
+baz bar foo</pre><p class="pst">

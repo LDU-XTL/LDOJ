@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US"><div><p>Given a board of <i>N</i> &times; <i>N</i> cells, each cell may contain at most one piece. For the purpose of this problem, two pieces A and B are directly connected if their cells share a common edge. Two pieces A and B are connected indirectly if there exists another piece C such that A and C are connected (indirectly or directly) and B and C are connected (indirectly or directly). Write a program to use no more than 50000 instructions to make all pieces connected (indirectly or directly) with each other.</p><p>Each instruction can move one piece to an empty cell, which shares a common edge.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of input contains two integers <i>N</i>, <i>M</i>, denoting the size of board and the number of pieces on the board. 1 &le; <i>N</i> &le; 100, 1 &le; <i>M</i> &le; <i>N</i> &times; <i>N</i><br>Following <i>m</i> lines, each contains two numbers <i>X</i>,<i>Y</i>, denoting the position of one piece. All (<i>X</i>,<i>Y</i>) will be distinct. 0 &lt;<i> X</i>,<i>Y </i>&le; <i>N</i></p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>The first line of output contains one integer <i>C</i> denoting the number of instructions. <br>Following <i>C</i> lines, each contains four numbers <i>X</i><sub>1</sub>, <i>Y</i><sub>1</sub>, <i>X</i><sub>2</sub>, <i>Y</i><sub>2</sub> for one instruction, which will move the piece in (<i>X</i><sub>1</sub>,<i>Y</i><sub>1</sub>) to (<i>X</i><sub>2</sub>,<i>Y</i><sub>2</sub>). If there are many such instructions, you can output any one of them.</p></div><p class="pst">Sample Input</p><pre class="sio">4 4
+1 1
+2 2
+3 3
+4 4
+</pre><p class="pst">Sample Output</p><pre class="sio">4
+1 1 2 1
+4 4 3 4
+3 4 2 4
+2 4 2 3
+</pre><p class="pst">

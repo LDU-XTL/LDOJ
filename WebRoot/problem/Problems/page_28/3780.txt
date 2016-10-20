@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">The city is so crowded that the mayor can't bear any longer. He issued an order to change all the roads into one-way street. The news is terrible for Jack, who is the director of a tourism company, because he has to change the travel route. All tourists want to set out from one scenic spot, then go to every scenic spots once and only once and finally return to the starting spot. They don’t care about which spot to start from, but they won’t go back to the starting spot before they have visited all other spots. Fortunately, the roads in the city have been perfectly built and any two scenic spots have been connected by ONE road directly. Jack gives the map of the city to you, and your task is to arrange a new travel route around the city which can satisfy the tourists.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of multiple test cases and ends with a line of “0”.
+<br>For each test case:
+<br>The first line contains a single integer n (0&lt;n&lt;=1000), representing the number of city scenic spots. Scenic spots are numbered form 1 to n.
+<br>Then n lines follows, and each line consists of n integers. These n lines make a matrix. If the element in the ith row and the jth column is 1(i≠j), it means that the direction of the road between spot i and spot j is from spot i to spot j. If that element is 0, it means that the road’s direction is from spot j to spot i. The numbers in the main diagonal of the matrix are all 0. (i and j start from 1)</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print all the spots No. according to the traveling order of the route in one line. If multiple routes exist, just print one of them. If no such route exists, print a “-1” instead. Because the starting spot is the same as the ending spot, so you don’t need to print the ending spot.
+<br>
+<br>This problem needs special judge.
+<br></div><p class="pst">Sample Input</p><pre class="sio">5
+0 0 1 1 1 
+1 0 1 1 0 
+0 0 0 1 0 
+0 0 0 0 1 
+0 1 1 0 0
+2
+0 1
+0 0
+0</pre><p class="pst">Sample Output</p><pre class="sio">1 3 4 5 2
+-1</pre><p class="pst">

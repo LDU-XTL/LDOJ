@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US"><div><p>Biologists finally invent techniques of repairing DNA that contains segments causing kinds of inherited diseases. For the sake of simplicity, a DNA is represented as a string containing characters 'A', 'G' , 'C' and 'T'. The repairing techniques are simply to change some characters to eliminate all segments causing diseases. For example, we can repair a DNA &quot;AAGCAG&quot; to &quot;AGGCAC&quot; to eliminate the initial causing disease segments &quot;AAG&quot;, &quot;AGC&quot; and &quot;CAG&quot; by changing two characters. Note that the repaired DNA can still contain only characters 'A', 'G', 'C' and 'T'.</p><p>You are to help the biologists to repair a DNA by changing least number of characters.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div>The input consists of multiple test cases. Each test case starts with a line containing one integers <i>N</i> (1 &le; <i>N</i> &le; 50), which is the number of DNA segments causing inherited diseases.<br>The following <i>N</i> lines gives <i>N</i> non-empty strings of length not greater than 20 containing only characters in &quot;AGCT&quot;, which are the DNA segments causing inherited disease.<br>The last line of the test case is a non-empty string of length not greater than 1000 containing only characters in &quot;AGCT&quot;, which is the DNA to be repaired.<p>The last test case is followed by a line containing one zeros.<br><br></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div>For each test case, print a line containing the test case number( beginning with 1) followed by the<br>number of characters which need to be changed. If it's impossible to repair the given DNA, print -1.</p></div></div><p class="pst">Sample Input</p><pre class="sio">2
+AAA
+AAG
+AAAG    
+2
+A
+TG
+TGAATG
+4
+A
+G
+C
+T
+AGT
+0</pre><p class="pst">Sample Output</p><pre class="sio">Case 1: 1
+Case 2: 4
+Case 3: -1</pre><p class="pst">

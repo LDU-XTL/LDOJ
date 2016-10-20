@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US"><div><p>After going through the receipts from your car trip through Europe this summer, you realised that the gas prices varied between the cities you visited. Maybe you could have saved some money if you were a bit more clever about where you filled your fuel?</p><p>To help other tourists (and save money yourself next time), you want to write a program for finding the cheapest way to travel between cities, filling your tank on the way. We assume that all cars use one unit of fuel per unit of distance, and start with an empty gas tank.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of input gives 1 &le; <i>n</i> &le; 1000 and 0 &le; <i>m</i> &le; 10000, the number of cities and roads. Then follows a line with <i>n</i> integers 1 &le; <i>p<sub>i</sub></i> &le; 100, where <i>p<sub>i</sub></i> is the fuel price in the <i>i</i>th city. Then follow <i>m</i> lines with three integers 0 &le; <i>u</i>, <i>v</i> &lt; <i>n</i> and 1 &le; <i>d</i> &le; 100, telling that there is a road between <i>u</i> and <i>v</i> with length <i>d</i>. Then comes a line with the number 1 &le; <i>q</i> &le; 100, giving the number of queries, and <i>q</i> lines with three integers 1 &le; <i>c</i> &le; 100, <i>s</i> and <i>e</i>, where <i>c</i> is the fuel capacity of the vehicle, <i>s</i> is the starting city, and <i>e</i> is the goal.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each query, output the price of the cheapest trip from <i>s</i> to <i>e</i> using a car with the given capacity, or &quot;impossible&quot; if there is no way of getting from <i>s</i> to <i>e</i> with the given car.</p></div><p class="pst">Sample Input</p><pre class="sio">5 5
+10 10 20 12 13
+0 1 9
+0 2 8
+1 2 1
+1 3 11
+2 3 7
+2
+10 0 3
+20 1 4</pre><p class="pst">Sample Output</p><pre class="sio">170
+impossible</pre><p class="pst">

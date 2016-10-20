@@ -1,0 +1,6 @@
+</p><div class="ptx" lang="en-US">The creators of a new programming language D++ have found out that whatever limit for SuperLongInt type they make, sometimes programmers need to operate even larger numbers. A limit of 1000 digits is so small... You have to find the sum of two numbers with maximal size of 1.000.000 digits.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of an input file contains a single number N (1<=N<=1000000) - the length of the integers (in order to make their lengths equal, some leading zeroes can be added). It is followed by these integers written in columns. That is, the next N lines contain two digits each, divided by a space. Each of the two given integers is not less than 1, and the length of their sum does not exceed N. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Output file should contain exactly N digits in a single line representing the sum of these two integers.</div><p class="pst">Sample Input</p><pre class="sio">4
+0 4
+4 2
+6 8
+3 7
+</pre><p class="pst">Sample Output</p><pre class="sio">4750</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Huge input,scanf is recommended.</div><p class="pst">

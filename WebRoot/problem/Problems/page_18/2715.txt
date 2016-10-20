@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">You are given two large pails. One of them (known as the black pail) contains B gallons of black paint. The other one (known as the white pail) contains W gallons of white paint. You will go through a number of iterations of pouring paint first from the black pail into the white pail, then from the white pail into the black pail. More specifically, in each iteration you first pour C cups of paint from the black pail into the white pail (and thoroughly mix the paint in the white pail), then pour C cups of paint from the white pail back into the black pail (and thoroughly mix the paint in the black pail). B, W, and C are positive integers; each of B and W is less than or equal to 50, and C < 16 * B (recall that 1 gallon equals 16 cups). The white pail's capacity is at least B+W.
+<br>
+<br>As you perform many successive iterations, the ratio of black paint to white paint in each pail will approach B/W. Although these ratios will never actually be equal to B/W one can ask: how many iterations are needed to make sure that the black-to-white paint ratio in each of the two pails differs from B/W by less than a certain tolerance. We define the tolerance to be 0.00001.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of a number of lines. Each line contains input for one instance of the problem: three positive integers representing the values for B, W, and C, as described above. The input is terminated with a line where B = W = C = 0.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Print one line of output for each instance. Each line of output will contain one positive integer: the smallest number of iterations required such that the black-to-white paint ratio in each of the two pails differs from B/W by less than the tolerance value.</div><p class="pst">Sample Input</p><pre class="sio">2 1 1
+2 1 4
+3 20 7
+0 0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">145
+38
+66
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Huge input and output data,scanf and printf are recommended.</div><p class="pst">

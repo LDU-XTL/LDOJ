@@ -1,0 +1,26 @@
+</p><div class="ptx" lang="en-US"><div><p>After recapturing Sylla, the Company plans to establish a new secure system, a transferring net! The new system is designed as follows:</p><p>The Company staff choose <i>N</i> cities around the nation which are connected by &quot;security tunnels&quot; directly or indirectly. Once a week, Sylla is to be transferred to another city through the tunnels. As General ordered, the transferring net must reach a certain security level that there are at least 3 independent paths between any pair of cities <i>a</i>, <i>b</i>. When General says the paths are independent, he means that the paths share only <i>a</i> and <i>b</i> in common.</p><p>Given a design of a transferring net, your work is to inspect whether it reaches such security level.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input consists of several test cases.<br>For each test case, the first line contains two integers, <i>N</i> &le; 500 and <i>M</i>  &le; 20000. indicating the number of cities and tunnels.<br>The following <i>M</i> lines each contains two integers <i>a</i> and <i>b</i> (0 &le; <i>a, b</i> &lt; <i>N</i>), indicating the city <i>a</i> and city <i>b</i> are connected directly by a tunnel.</p><p>The input ends by two zeroes.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case output &quot;YES&quot; if it reaches such security level, &quot;NO&quot; otherwise.</p></div><p class="pst">Sample Input</p><pre class="sio">4 6
+0 1
+0 2
+0 3
+1 2
+1 3
+2 3
+
+4 5
+0 1
+0 2
+0 3
+1 2
+1 3
+
+7 6
+0 1
+0 2
+0 3
+1 2
+1 3
+2 3
+
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">YES
+NO
+NO</pre><p class="pst">

@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US"><img src=images/2633_1.jpg align=right>Nils and Mikael are intergalaxial fighters. Now they are competing for the planet Tellus. The size of this small and unimportant planet is 1 < X < 10000 gobs. The problem is that their pockets only have room for one gob, so they have to reduce the size of the planet. They have available 1 <= K <= 6 FACTOR-weapons characterized by numbers F1, F2, . . . , Fk, all less than 0.9. As is commonly known, a FACTOR-weapon will blow off part of the planet, thus reducing the planet to a fraction of its size, given by the characteristic. Thus, with e.g. F1 = 0.5 an application of the first weapon will half the size of the planet. The fighter who reduces the size to less than, or equal to, 1 gob can take the planet home with him. They take turns attacking the planet with any weapon. If Nils starts, who will win the planet? Assume that both Nils and Mikael are omniscient and always make a winning move if there is one.
+<br>Technical note: To ease the problem of rounding errors, there will be no edge cases where an infinitesimal perturbation of the input values would cause a different answer.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input is N <= 100, the number of test cases. Each of the next N lines consists of X, K and then the K numbers F1, F2, . . . , Fk, having no more than 6 decimals</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, produce one line of output with the name of the winner (either Nils or Mikael).</div><p class="pst">Sample Input</p><pre class="sio">4
+6 2 0.25 0.5
+10 2 0.25 0.5
+29.29 4 0.3 0.7 0.43 0.54
+29.30 4 0.3 0.7 0.43 0.54</pre><p class="pst">Sample Output</p><pre class="sio">Mikael
+Nils
+Nils
+Mikael</pre><p class="pst">

@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">The player starts with a prize of $1, and is asked a sequence of n questions. For each question, he may 
+<br><ul><li>quit and keep his prize. 
+<br><li>answer the question. If wrong, he quits with nothing. If correct, the prize is doubled, and he continues with the next question. </ul>
+<br>After the last question, he quits with his prize. The player wants to maximize his expected prize. 
+<br>Once each question is asked, the player is able to assess the probability p that he will be able to answer it. For each question, we assume that p is a random variable uniformly distributed over the range t .. 1. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input is a number of lines, each with two numbers: an integer 1 <= n <= 30, and a real 0 <= t <= 1. Input is terminated by a line containing 0 0. This line should not be processed. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each input n and t, print the player's expected prize, if he plays the best strategy. Output should be rounded to three fractional digits. </div><p class="pst">Sample Input</p><pre class="sio">1 0.5
+1 0.3
+2 0.6
+24 0.25
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">1.500
+1.357
+2.560
+230.138
+</pre><p class="pst">

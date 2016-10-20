@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US">Given is an alphabet {0, 1, ... , k}, 0 <= k <= 9 . We say that a word of length n over this alphabet is tight if any two neighbour digits in the word do not differ by more than 1. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input is a sequence of lines, each line contains two integer numbers k and n, 1 <= n <= 100.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each line of input, output the percentage of tight words of length n over the alphabet {0, 1, ... , k} with 5 fractional digits. </div><p class="pst">Sample Input</p><pre class="sio">4 1
+2 5
+3 5
+8 7</pre><p class="pst">Sample Output</p><pre class="sio">100.00000
+40.74074
+17.38281
+0.10130
+</pre><p class="pst">

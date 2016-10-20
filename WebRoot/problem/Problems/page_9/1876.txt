@@ -1,0 +1,76 @@
+</p><div class="ptx" lang="en-US">For an electronic mail application you are to describe the SMTP-based communication that takes place between pairs of MTAs. The sender's User Agent gives a formatted message to the sending Message Transfer Agent (MTA). The sending MTA communicates with the receiving MTA using the Simple Mail Transfer Protocol (SMTP). The receiving MTA delivers mail to the receiver's User Agent. After a communication link is initialized, the sending MTA transmits command lines, one at a time, to the receiving MTA, which returns a three-digit coded response after each command is processed. The sender commands are shown below in the order sent for each message. There is more than one RCPT TO line when the same message is sent to several users at the same MTA. A message to users at different MTAs requires separate SMTP sessions. 
+<br><blockquote><table cellpadding=0><tr> <td><code>HELO</code> <em>myname</em> <td>Identifies the sender to the receiver (yes, there is only one L).<tr> <td><code>MAIL FROM:</code>&lt;<em>sender</em>&gt; <td>Identifies the message sender<tr> <td><code>RCPT TO:</code>&lt;<em>user</em>&gt; <td>Identifies one recipient of the message<tr> <td><code>DATA</code> <td>Followed by an arbitrary number of lines of text comprising the message      body, ending with a line containing a period in column one.<tr> <td><code>QUIT</code> <td>Terminates the communication.</table></blockquote>
+<br>The following response codes are sent by the receiving MTA: 
+<br><blockquote><table><tr><td>221	<td>Closing connection (after QUIT)<tr><td>250	<td>Action was okay (after MAIL FROM and RCPT TO specifying an acceptable user, or completion of a message)<tr><td>354	<td>Start sending mail (after DATA)<tr><td>550	<td>Action not taken; no such user here (after RCPT TO with unknown user)</table></blockquote></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains descriptions of MTAs followed by an arbitrary number of messages. Each MTA description begins with the MTA designation and its name (1 to 15 alphanumeric characters). Following the MTA name is the number of users that receive mail at that MTA and a list of the users (1 to 15 alphanumeric characters each). The MTA description is terminated by an asterisk in column 1. Each message begins with the sending user's name and is followed by a list of recipient identifiers. Each identifier has the form user@mtaname. The message (each line containing no more than 72 characters) begins and terminates with an asterisk in column 1. A line with an asterisk in column 1 instead of a sender and recipient list indicates the end of the entire input. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each message, show the communication between the sending and receiving MTAs. Every MTA mentioned in a message is a valid MTA; however, message recipients may not exist at the destination MTA. The receiving MTA rejects mail for those users by responding to the RCPT TO command with the 550 code. A rejection will not affect delivery to authorized users at the same MTA. If there is not at least one authorized recipient at a particular MTA, the DATA is not sent. Only one SMTP session is used to send a message to users at a particular MTA. For example, a message to 5 users at the same MTA will have only one SMTP session. Also a message is addressed to the same user only once. The order in which receiving MTAs are contacted by the sender is unspecified. As shown in the sample output , prefix the communication with the communicating MTA names, and indent each communication line. </div><p class="pst">Sample Input</p><pre class="sio">MTA London 4 Fiona Paul Heather Nevil
+MTA SanFrancisco 3 Mario Luigi Shariff 
+MTA Paris 3 Jacque Suzanne Maurice
+MTA HongKong 3 Chen Jeng Hee
+MTA MexicoCity 4 Conrado Estella Eva Raul
+MTA Cairo 3 Hamdy Tarik Misa
+*
+Hamdy@Cairo Conrado@MexicoCity Shariff@SanFrancisco Lisa@MexicoCity
+*
+Congratulations on your efforts !!
+--Hamdy
+*
+Fiona@London Chen@HongKong Natasha@Paris
+*
+Thanks for the report!  --Fiona
+*
+*
+</pre><p class="pst">Sample Output</p><pre class="sio">Connection between Cairo and MexicoCity
+     HELO Cairo
+     250
+     MAIL FROM:&lt;Hamdy@Cairo>
+     250
+     RCPT TO:&lt;Conrado@MexicoCity>
+     250
+     RCPT TO:&lt;Lisa@MexicoCity>
+     550
+     DATA
+     354
+     Congratulations on your efforts !!
+     --Hamdy
+     .
+     250
+     QUIT
+     221
+Connection between Cairo and SanFrancisco
+     HELO Cairo
+     250
+     MAIL FROM:&lt;Hamdy@Cairo>
+     250
+     RCPT TO:&lt;Shariff@SanFrancisco>
+     250
+     DATA
+     354
+     Congratulations on your efforts !!
+     --Hamdy
+     .
+     250
+     QUIT
+     221
+Connection between London and HongKong
+     HELO London
+     250
+     MAIL FROM:&lt;Fiona@London>
+     250
+     RCPT TO:&lt;Chen@HongKong>
+     250
+     DATA
+     354
+     Thanks for the report!  --Fiona
+     .
+     250
+     QUIT
+     221
+Connection between London and Paris
+     HELO London
+     250
+     MAIL FROM:&lt;Fiona@London>
+     250
+     RCPT TO:&lt;Natasha@Paris>
+     550
+     QUIT
+     221
+</pre><p class="pst">

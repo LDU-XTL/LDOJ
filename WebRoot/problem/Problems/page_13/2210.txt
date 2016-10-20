@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">The Metric Time is one of the most important points of PSOS Election Programme. The Time can be much easier calculated in operating systems. These systems are then more stable, which meets the main goal of the Party. 
+<br>
+<br>The length of one day is the same as with the "classic" time. The day is divided into 10 metric hours, each of them into 100 metric minutes, and each minute into 100 metric seconds. 10 metric days form one metric week, 10 metric weeks give one metric month, 10 metric months are called metric year. It is obvious this Metric Time is much better than the classic one. 
+<br>
+<br>Some opponent parties often complain that the Metric Time has also some drawbacks. First of all, it would be very difficult to change to the new time. PSOS Chairman decided to solve these problems all at once. He plans to publish a freeware utility which will be able to convert between the time formats. Your goal is to write one half of this utility, the program which converts classic time to Metric Time. Metric hours, metric minutes, and metric seconds are counted starting with zero, as usual. Metric days and metric months start with one. There exist metric year zero. The metric seconds should be rounded to the nearest smaller integer value. Assume that 0:0:0 1.1.2000 classic time is equal to 0:0:0 1.1.0 Metric Time. 
+<br>
+<br>Note that the classic year is leap, if it is an integer multiple of 4. The only exception are years divisible by 100 - they are leap only if they are an integer multiple of 400. For example, leap years are 1996, 2400, and 2000; leap years are not 1900, 2300, 2002.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">At the first line there is a positive integer N stating the number of assignments to follow. Each assignment consists of exactly one line in the form "hour:minute:second day.month.year" which is the date in the classic form (usual in most of European countries). The date is always valid, 2000 <= year <= 50000. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The program must print exactly one line for each assignment. The line should have the form "mhour:mmin:msec mday.mmonth.myear" which is the Metric Time equal to the specified classic time. </div><p class="pst">Sample Input</p><pre class="sio">7
+0:0:0 1.1.2000
+10:10:10 1.3.2001
+0:12:13 1.3.2400
+23:59:59 31.12.2001
+0:0:1 20.7.7478
+0:20:20 21.7.7478
+15:54:44 2.10.20749
+</pre><p class="pst">Sample Output</p><pre class="sio">0:0:0 1.1.0
+4:23:72 26.5.0
+0:8:48 58.2.146
+9:99:98 31.8.0
+0:0:1 100.10.2000
+0:14:12 1.1.2001
+6:63:0 7.3.6848
+</pre><p class="pst">

@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">Georgia and Bob are now in a pirate's cave. After exploring, they find that there are a lot of rooms in the cave, and these rooms are connected together by some roads. There are two kinds of rooms: one is full of jewellery and connected by only one road (we call this kind of room jewellery-room), and the other is empty but connected by at least two roads. In this cave, all the rooms are connected as a tree. 
+<br><center><img src=images/2669_1.jpg></center>
+<br>Now they are in a jewellery-room, and they want to go to all the jewellery-rooms one by one to fetch all the jewellery and then go back to the room where they stay now. Of course they want to walk for the minimum distance to achieve this goal. After exploring, they have drawn the entire map of the cave, and now the map is at Bob' hand. But Bob doesn't want to give the map to Georgia because Georgia always wants to show how clever she is. Bob just tells Georgia the minimum distance between any two jewellery-rooms and asks Georgia to tell him the order of visiting all the jewellery-rooms to achieve the minimum distance. If the order is not unique, Georgia should tell Bob the total number of possible different orders.
+<br>
+<br>Though Georgia is a very clear girl, she thinks that it is difficult for her to solve this problem all by herself. Can you help her?
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">There are multiply test cases. In the first line of each test case, there is an integer N (2 <= N <= 30), which indicates the number of jewellery-rooms (these rooms are numbered from 1 to N). Then comes N lines, each contains N non-negative integers, which are not larger than 100. The i-th integer in the j-th line represents the distance between room i and room j. It is clear that the distance between room i and room i is 0, and that the distance between room i and room j is a positive integer which is equal to the distance between room j and room i.
+<br>
+<br>You may assume that Georgia and Bob are initially in room 1.
+<br>
+<br>A case with N = 0 indicates the end of input, and this line should not be processed.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output two integers in a single line. These two integers are separated by a single space. The first number is the minimum distance that they should walk to fetch all the jewellery and then go back. The second number is the number of different orders to visit all the jewellery-rooms to accomplish the above purpose.
+<br>
+<br>The number of different orders may be very large, so if this value is not smaller than 2005, you should divide this value by 2005 and just output the remainder value instead.</div><p class="pst">Sample Input</p><pre class="sio">3
+0 3 4
+3 0 5
+4 5 0
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">12 2</pre><p class="pst">

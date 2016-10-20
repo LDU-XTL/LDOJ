@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US">给定两个整数M，N，生成一个M*N的矩阵，矩阵中元素取值为A至Z的26个字母中的一个，A在左上角，其余各数按顺时针方向旋转前进，依次递增放置，当超过26时又从A开始填充。例如，当M=5，N=8时，矩阵中的内容如下：<pre>   A   B   C   D   E   F   G   H
+<br>   V   W   X   Y   Z   A   B   I
+<br>   U   J   K   L   M   N   C   J
+<br>   T   I   H   G   F   E   D   K
+<br>   S   R   Q   P   O   N   M   L</pre></div><p class="pst">Input</p><div class="ptx" lang="en-US">M为行数，N为列数，其中M，N都为大于0的整数。</div><p class="pst">Output</p><div class="ptx" lang="en-US">分行输出相应的结果</div><p class="pst">Sample Input</p><pre class="sio">4 9</pre><p class="pst">Sample Output</p><pre class="sio">   A   B   C   D   E   F   G   H   I
+   V   W   X   Y   Z   A   B   C   J
+   U   J   I   H   G   F   E   D   K
+   T   S   R   Q   P   O   N   M   L</pre><p class="pst">

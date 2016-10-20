@@ -1,0 +1,7 @@
+</p><div class="ptx" lang="en-US">Consider equations having the following form:
+<br>a1x1<sup>3</sup>+ a2x2<sup>3</sup>+ a3x3<sup>3</sup>+ a4x4<sup>3</sup>+ a5x5<sup>3</sup>=0
+<br>The coefficients are given integers from the interval [-50,50].
+<br>It is consider a solution a system (x1, x2, x3, x4, x5) that verifies the equation, xi&isin;[-50,50], xi != 0, any i&isin;{1,2,3,4,5}.
+<br>
+<br>Determine how many solutions satisfy the given equation.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The only line of input contains the 5 coefficients a1, a2, a3, a4, a5, separated by blanks.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output will contain on the first line the number of the solutions for the given equation. </div><p class="pst">Sample Input</p><pre class="sio">37 29 41 43 47</pre><p class="pst">Sample Output</p><pre class="sio">654</pre><p class="pst">

@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">Background
+<br>In 1801, Carl Friedrich Gauss (1777-1855) published his "Disquisitiones Arithmeticae", which basically created modern number theory and is still being sold today. One of the many topics treated in his book was the problem of quadratic residues.
+<br>Consider a prime number p and an integer a !≡ 0 (mod p). Then a is called a quadratic residue mod p if there is an integer x such that
+<br>x<sup>2</sup> ≡ a (mod p),
+<br>and a quadratic non residue otherwise. Lagrange (1752-1833) introduced the following notation, called the "Legendre symbol":
+<br><center><img src=images/1808_1.jpg></center>
+<br>For the calculation of these symbol there are the following rules, valid only for distinct odd prime numbers p, q and integers a, b not divisible by p:
+<br><img src=images/1808_2.jpg>
+<br>The statements 1. to 3. are obvious from the definition, 4. is called the Completion Theorem, and 5. is the famous Law of Quadratic Reciprocity for which Gauss himself gave no less than six different proofs in the "Disquisitiones Arithmeticae". Knowing these facts, one can calculate all possible Legendre symbols as in the following example:
+<br><center><img src=images/1808_3.jpg></center></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains the number of scenarios.
+<br>For each scenario, there is one line containing the integers a and p separated by a single blank, where 2 < p < 10<sup>9</sup> is an odd prime, and a satisfies both a !≡ 0 (mod p) and |a| <= 10<sup>9</sup>.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Start the output for every scenario with a line containing "Scenario #i:", where i is the number of the scenario starting at 1. Then print a single line containing (a/p), followed by a blank line.</div><p class="pst">Sample Input</p><pre class="sio">3
+29 79
+2 29
+1 3</pre><p class="pst">Sample Output</p><pre class="sio">Scenario #1:
+-1
+
+Scenario #2:
+-1
+
+Scenario #3:
+1
+</pre><p class="pst">

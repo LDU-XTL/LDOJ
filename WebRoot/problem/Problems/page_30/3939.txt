@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">The streets in Manhattan form a grid. If the grid is aligned such that the grid lines are parallel to the x- and y-coordinate axes, the distance one needs to walk or drive from one point to the other, assuming you can only move along streets and cannot take short cuts through buildings, equals Δx + Δy. This is called the Manhattan distance.
+<br>
+<br><center><img src="images/3939_1.png"></center>
+<br>
+<br>Now assume that the land outside the city grid is completely flat with no obstacles that prevent moving anywhere. Suppose we want to move from point A to point B where these points can be on the grid or outside the grid. When traveling outside the city, the shortest distance between the two points in this case will not necessarily be the Manhattan distance. It will be the Manhattan distance if the two points are both on the grid. If both points are, for example, north of the grid, the shortest distance between the two points will be the straight-line (Euclidean) distance between them. In other cases, calculating the distance may be more complicated.
+<br>In this problem, two opposite corners of the city grid will be specified. It will be assumed that the grid lines are parallel to the coordinate axes, and that the distance between any two consecutive grid lines, horizontal and vertical, is 1 unit. Two points A and B on the plane with integer coordinates will also be specified. Write a program to calculate the shortest distance between the two points, given that we can only move along the grid lines (i.e. in the city streets) within the city grid.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input will consist of multiple datasets. Each dataset will consist of a single line with eight integers, as follows:
+<br><center>xL yL xU yU xA yA xB yB</center>
+<br>describing the points L, U, A, and B. L and U are the lower-left corner and the upper-right corner of the city grid, respectively. A and B are the two points between which we wish to travel.
+<br>All input integers will be in the range from -1000 to 1000 (inclusive), with xL &lt; xu and yL &lt; yU. End of data will be signified by a line with eight zeros.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, print one line containing the distance of the shortest path between the A and B, printed to to three decimal places of precision.
+<br></div><p class="pst">Sample Input</p><pre class="sio">0 0 4 4 -1 0 5 3
+00442253
+00000000</pre><p class="pst">Sample Output</p><pre class="sio">7.650
+3.414</pre><p class="pst">

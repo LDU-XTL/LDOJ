@@ -1,0 +1,30 @@
+</p><div class="ptx" lang="en-US">One cumbersome problem in chemistry is the task of making the number of atoms balanced in a chemical equation. Our problem is concerned with this.
+<br>
+<br>Chemists obey these rules when they present chemical equations:
+<br><ol><li>Each element name is abbreviated by at most two letters. The first letter is always in upper-case and the second letter if exists, is a lower-case letter (e.g. Calcium is represented by Ca, Oxygen by O, and Chlorine by Cl).
+<br><li>Each molecule is composed of a number of atoms. To represent a molecule, we concatenate the abbreviated names of its composite atoms. For example, NaCl represents Sodium Chloride. Each atom name may be followed by a frequency number. For example, Calcium Chloride CaCl2 consists of one atom of Calcium and two atoms of Chlorine. If the frequency is not given, it is assumed to be 1 (so HCl is equivalent to H1Cl1). For the sake of simplicity, you may assume that the frequency of an occurrence of an atom is at most 9 (so we do not have C11H22O11 in the problem input). Note that there may be several occurrences of the same atom in the molecule formula, like H atom in CH3COOH. 
+<br><li>In ordinary chemical reactions, a number of molecules combine and result in a number of other molecules. For example a well known sample of neutralization is:
+<br><center>2HCl + CaO2H2 → CaCl2 + 2H2O</center>
+<br>This means two molecules of chlorohydric acid (HCl) with one molecule of Calcium Hydroxide results in one molecule of Calcium Chloride (CaCl2) and two molecules of water.
+<br><li>In every chemical reaction, the total number of each atom in the right side of the equation equals the total number of that atom in the left side (that is why it is called an equation!).</ol>
+<br>Your task is to write a program to find appropriate coefficients x1 , x2 , …, xM and y1 , y2 , …, yN  to balance an (imbalanced) equation like
+<br><center>A1+A2+A3+ ... +AM → B1+B2+B3+ ... +BN</center>
+<br>in the following way:
+<br><center>x1  A1+ x2  A2+ x3  A3+ ... + xM  AM → y1  B1+ y2 B2+ y3 B3+ ... + yN BN</center>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains an integer t (1 <= t <= 10), the number of test cases. Each test case consists of a single line containing an expression like:
+<br><center>A1+A2+A3+ ... +AM = B1+B2+B3+ ... +BN</center>
+<br>Each Ai or Bi is a formula of a molecule according to the rules given in items 1 and 2.
+<br>The input equations are given in a way that if they can be balanced, xi and yi coefficients can be in the range of 1 to 9. There are less than 10 molecules and there are less than 10 different types of atoms, in a given equation. Additionally, you may assume molecules contain no more than 3 different kinds of atoms. You may also assume that there is no blank character in the input file, and the maximum length of the input lines is 200 characters.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output will be one line per test case containing the list of required coefficients, separated by blank characters, in the following order:
+<br><center>x1   x2   ...  xM  y1   y2   ...  yN</center>
+<br>The coefficients should be integers in the range of 1..9. Obviously, there may be more than one answer for a test case. In such situations, print the answer which minimizes the number: 
+<br><center>x1x2...xMy1y2...yN</center>
+<br>(This is an (M+N)-digit decimal number whose digits are xi and yi coefficients.) If the equation is impossible to balance, the output line should be IMPOSSIBLE.
+<br></div><p class="pst">Sample Input</p><pre class="sio">3
+HCl+CaO2H2=CaCl2+H2O
+HCl+H2SO4=NaCl
+HCl+NaOH=NaCl+H2O
+</pre><p class="pst">Sample Output</p><pre class="sio">2 1 1 2
+IMPOSSIBLE
+1 1 1 1
+</pre><p class="pst">

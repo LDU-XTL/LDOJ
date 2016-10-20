@@ -1,0 +1,41 @@
+</p><div class="ptx" lang="en-US">A double linear crossword of length L is a string of L lowercase alphabetic characters arranged in a line in such a way that there are at least two methods (so called decompositions) to split this string into the words from the given list. Look at the example for L=17: 
+<br><pre>
+<br>   |       |       |       |
+<br>a n d a t a r e a l l a s t a s k
+<br>     |   |     |     |   |</pre>
+<br>
+<br>The words were taken from the following list: all, an, and, are, area, as, ask, at, data, last, or, read, real, task. 
+<br>
+<br>The words from the first decomposition may not appear in the second one and vice versa. In addition, no word can be repeated in any decomposition. 
+<br>
+<br>No word in one decomposition can end in the same place of the string where a word in the other composition ends, except, naturally, for the end of the string (otherwise the crossword can be separated into two independent crosswords). One of the compositions may consist of a single word. 
+<br>
+<br>You should write a program to construct the first, in lexicographic order, double linear crossword of length L for a given list of words. 
+<br>
+<br>Strings are arranged in the lexicographic order with respect of the following rules: 
+<br>
+<br><ul><li>If the first letter of a string appears in latin alphabet before the first letter of another string, then the former string precedes in lexicographic order. 
+<br><li>If the first letters of some strings match, then the corresponding letters of these strings are compared until they stop matching. 
+<br><li>If a mismatching is not found, the shorter string goes first. </ul></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file consists of the single integer number L (4<=L<=50) denoting the desired crossword length. The second line consists of the single positive integer N (at most 1000) indicating the number of words in the list. Each of the followings N lines consists of a string of 20 or less (but at least 2) latin lowercase alphabetic characters. The words in the list are arranged in lexicographic order and no word is repeated. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For the given input data set your program should write to the output file the first, in lexicographic order, double linear crossword with the given length. If it is impossible for the given input file to construct a double linear crossword with the given length, the program should write only the message "NO SOLUTION" (without the quotation marks). </div><p class="pst">Sample Input</p><pre class="sio">17
+19
+all
+an
+and
+area
+as
+ask
+at
+data
+do
+for
+last
+of
+or
+ort
+read
+real
+task
+to
+tor
+</pre><p class="pst">Sample Output</p><pre class="sio">andatareadofortor
+</pre><p class="pst">

@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US"><p>You're given a polynomial, the coefficients of which are all integers. Now, it's your time to find out all the integral roots of it! Just try your best!</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input consists of several test cases.<br>The first line of each test case contains an integer <i>N</i> ( <i>N</i> &le; 100).<br>The second line of each test case contains <i>N</i> integers, <i>a<sub>n</sub></i><sub>-1</sub>, ..., <i>a</i><sub>0</sub>, these numbers represents the polynomial: <i>x<sup>n</sup> + a<sub>n-1</sub> &times; x<sup>n-1</sup> ... + a<sub>0</sub></i>. ( All <i>a<sub>i</sub></i> fits in 32-bit signed integer)</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output the answers for each test case. The first line contains an integer <i>R</i>, the number of integral roots of the given polynomial. Each of the next <i>R</i> lines contains a root of the given polynomial. They should be outputed in non-descending order. Note if the polynomial has multiple roots you must output all of them.</p></div><p class="pst">Sample Input</p><pre class="sio">4
+1 0 -1 -1
+2
+2 1
+</pre><p class="pst">Sample Output</p><pre class="sio">2
+-1
+1 
+2
+-1
+-1</pre><p class="pst">

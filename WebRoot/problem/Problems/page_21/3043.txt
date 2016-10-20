@@ -1,0 +1,29 @@
+</p><div class="ptx" lang="en-US">Farmer John has set up a puzzle for his cows to solve.  At the entrance to the barn, he has laid out an H x W (1 <= H <= 30, 1 <= W <= 30) grid of letters.  Before a cow can enter the barn, she must spell out a valid English word by jumping from square to square, creating a sequence of letters.  She can start at any square but may only jump to a subsequent square that is located to the right and/or above the current square (i.e., neither to the left nor lower).  The next square can be any distance from the current one since the cows are world-class jumpers!
+<br>
+<br>No two cows may traverse the exact same path, although two cows are allowed to spell the same word via different paths.
+<br>
+<br>As an example, consider this grid (presuming 'TO' and 'OX' are words):
+<br>
+<br><tt>  T X X O
+<br>  T X Q T
+<br>  X T X Q</tt>
+<br>
+<br>Four paths are valid, all spelling 'TO' (one spelling requires a 'T' from the bottom row and an 'O' from the top row).  'OX' is a valid word, but would require jumping to an 'X' square left of the 'O', which is not allowed.
+<br>
+<br>Given the grid and a list of valid words, compute the number of cows that can enter the barn without any cow repeating a path. See a copy of the list <a href=images/dict-twalk.txt>here</a>.</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: Two integers: H and W
+<br>
+<br>* Lines 2..H+1: Each line contains W characters, without spaces, representing a row in the grid.  The first row is the top row.The first character in each row is the left-most character.
+<br>
+<br>* Line H+2: A blank line
+<br>
+<br>* Line H+3..:  The list of valid words</div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: The number of cows that can enter the barn without repeating a path.</div><p class="pst">Sample Input</p><pre class="sio">3 4
+TXXO
+TXQT
+XTXQ
+
+A
+AA
+AAA
+...</pre><p class="pst">Sample Output</p><pre class="sio">4</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">OUTPUT DETAILS:
+<br>4 cows can enter the barn, each one spelling out one of the 'TO's.
+<br></div><p class="pst">

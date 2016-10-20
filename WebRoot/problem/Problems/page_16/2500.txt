@@ -1,0 +1,24 @@
+</p><div class="ptx" lang="en-US"><b>Background</b>
+<br>Pia wants to set up the audio system for her birthday party. The party will take place on a circular area because Pia believes that a circle is the most beautiful 2-dimensional shape. Pia has four loudspeakers that she can place on certain points of the circle's circumference. From her extensive party experience she knows that people will only dance in the area inside the four loudspeakers. As she wants a big a dance floor as possible she wants to maximize the quadrilateral defined by the four loudspeakers. Can you help Pia?
+<br><b>Problem</b>
+<br>You are given a circle of diameter d, with n points equally spaced around the circumference. The points are numbered in order around the circle 0, 1, 2, . . . , n - 1. Of those n points, c of them are suitable for placing the loudspeakers on. These points are given by the generator function (g * k) mod n, for k in {0, 1, 2, . . . , c-1}. Given integers d, n, c, and g you are to compute the largest area that can be formed by placing four loudspeakers on suitable points.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains the number of scenarios.
+<br>Every scenario consists of a single line containing four integers separated by a space. The meaning of these numbers are in order:
+<br><ul><li>The diameter d of the circle (1 <= d <= 1000).
+<br><li>The number n of points on the circle (4 <= n <= 10<sup>9</sup>).
+<br><li>The number c of suitable points for the loudspeakers (4 <= c <= 1000 and c <= n).
+<br><li>The number g for the generator function (1 <= g <= n) which will be relatively prime to n (e.g. they do not have a common divisor greater than 1).</ul></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output for every scenario begins with a line containing "Scenario #i:", where i is the number of the scenario starting at 1.
+<br>Then print a single line with the maximum area Pia can achieve for her dance floor. Print this area rounded to six decimal places. Every scenario is finished by a blank line.</div><p class="pst">Sample Input</p><pre class="sio">4
+10 13 4 3
+20 31 6 5
+1000 80000 50 3
+100 1200 20 139</pre><p class="pst">Sample Output</p><pre class="sio">Scenario #1:
+48.914286
+
+Scenario #2:
+179.100273
+
+Scenario #3:
+0.028490
+
+Scenario #4:
+4965.195940</pre><p class="pst">

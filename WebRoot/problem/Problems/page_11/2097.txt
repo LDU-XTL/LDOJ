@@ -1,0 +1,27 @@
+</p><div class="ptx" lang="en-US">Andrew writes portable mailer KittenMail for FTN technology networks. This mailer uses text-mode windowed interface like well-known Norton-style shells do. 
+<br>Now Andrew wants to write a version of his mailer for the new famous operating system Mycrowslowed Widows Not-tested 0.4. It's easy because there is no so much system-dependent code in the mailer. But the windowing subsystem is based on the module providing system-independent interface to the screen buffer functions. 
+<br>Andrew wrote the trivial code for Mycrowslowed Widows displaying the contents of the window buffer on the screen. It was easy because the functions are the same as in other operating systems. But he was so surprised when he ran the mailer! Clearing the screen took about a second! Oops. . . What's wrong? 
+<br>Andrew started to investigate this problem. Few minutes later, he discovered that any Mycrowslowed Widows system call accessing the screen buffer works a huge amount of time --- 1/6000 second or more. It's so awful! What can he do? 
+<br>After hours of thinking, Andrew decided to make some improvements to his code. Now he wants to use Widows-specific function that draws a rectangle of characters instead of subsequent calls that display only one character. They perfectly work under other operating systems but are very slow under Mycrowslowed Widows. The evident task has arisen. The procedure which redraws window must display its visible parts using the minimal possible number of non-overlapping operations. 
+<br>It is your task to write the corresponding code for one visible part of the window. Given the part of the rectangular window, write a program which determines the minimal number of non-overlapping rectangles covering this part and finds the optimal way of covering. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The visible part of the window is given by its edge containing only horizontal and vertical segments with integer vertex coordinates. The part does not contain holes and its edge does not intersect or touch itself. 
+<br>Each segment has length of at least one character. 
+<br>The first line of the input contains the number n of vertices on the edge of the visible part. The next n lines contain coordinates of vertices in counter-clockwise order (y coordinates grow downwards on the screen). 
+<br>Horizontal and vertical segments alternate in the input. The last segment is drawn between the last and the first vertices. n does not exceed 400 and absolute values of coordinates are limited to 200. </div><p class="pst">Output</p><div class="ptx" lang="en-US">In the first line output m --- the minimal number of rectangular regions covering the visible part of the window. 
+<br>The next m lines must contain one rectangle description each. The rectangle is specified by four numbers: 
+<br>minimal x, minimal y, maximal x and maximal y. 
+<br>If there are several optimal solutions, output any of them. </div><p class="pst">Sample Input</p><pre class="sio">12
+0 0
+0 1
+1 1
+1 2
+2 2
+2 1
+3 1
+3 0
+2 0
+2 -1
+1 -1
+1 0</pre><p class="pst">Sample Output</p><pre class="sio">3
+0 0 1 1
+1 -1 2 2
+2 0 3 1</pre><p class="pst">

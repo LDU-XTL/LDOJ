@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US">In the second year of the university somebody started a study on the romantic relations between the students. The relation "romantically involved" is defined between one girl and one boy. For the study reasons it is necessary to find out the maximum set satisfying the condition: there are no two students in the set who have been "romantically involved". The result of the program is the number of students in such a set.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several data sets in text format. Each data set represents one set of subjects of the study, with the following description:
+<br>
+<br>the number of students
+<br>the description of each student, in the following format
+<br>student_identifier:(number_of_romantic_relations) student_identifier1 student_identifier2 student_identifier3 ...
+<br>or
+<br>student_identifier:(0)
+<br>
+<br>The student_identifier is an integer number between 0 and n-1 (n <=500 ), for n subjects.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each given data set, the program should write to standard output a line containing the result.</div><p class="pst">Sample Input</p><pre class="sio">7
+0: (3) 4 5 6
+1: (2) 4 6
+2: (0)
+3: (0)
+4: (2) 0 1
+5: (1) 0
+6: (2) 0 1
+3
+0: (2) 1 2
+1: (1) 0
+2: (1) 0</pre><p class="pst">Sample Output</p><pre class="sio">5
+2</pre><p class="pst">

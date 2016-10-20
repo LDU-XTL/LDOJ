@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">We are given a figure consisting of only horizontal and vertical line segments. Our goal is to count the number of all different rectangles formed by these segments. As an example, the number of rectangles in the Figures 1 and 2 are 5 and 0 respectively.  
+<br><center><img src=images/1693_1.jpg></center>
+<br>There are many intersection points in the figure. An intersection point is a point shared by at least two segments. The input line segments are such that each intersection point comes from the intersection of exactly one horizontal segment and one vertical segment.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains a single number M, which is the number of test cases in the file  (1 <= M <= 10), and the rest of the file consists of the data of the test cases. Each test case begins with a line containing s (1 <= s <= 100), the number of line segments in the figure. It follows by s lines, each containing x and y coordinates of two end points of a segment respectively. The coordinates are integers in the range of 0 to 1000. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output for each test case is the number of all different rectangles in the figure described by the test case. The output for each test case must be written on a separate line.</div><p class="pst">Sample Input</p><pre class="sio">2
+6
+0 0 0 20
+0 10 25 10
+20 10 20 20
+0 0 10 0
+10 0 10 20
+0 20 20 20
+3
+5 0 5 20
+15 5 15 25
+0 10 25 10
+</pre><p class="pst">Sample Output</p><pre class="sio">5
+0
+</pre><p class="pst">

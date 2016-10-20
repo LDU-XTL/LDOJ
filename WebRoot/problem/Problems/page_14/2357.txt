@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Administration of the labyrinth has decided to start a new season with new wallpapers. For this purpose they need a program to calculate the square of the walls inside the labyrinth. This job is just for you!
+<br>
+<br>The labyrinth is represented by a matrix N*N (3 <= N <= 33, you see, '3' is a magic digit!). Some matrix cells contain a dot character ('.') that denotes an empty square. Other cells contain a diesis character ('#') that denotes a square filled by monolith block of stone wall. All squares are of the same size 3*3 meters.
+<br>
+<br>The walls are constructed around the labyrinth (except for the upper left and lower right corners, which are used as entrances) and on the cells with a diesis character. No other walls are constructed. There always will be a dot character at the upper left and lower right corner cells of the input matrix.
+<br><center><img src=images/2357_1.jpg>
+<br>Figure 1. The labyrinth from the input sample.</center>
+<br>Your task is to calculate the square of visible part of the walls inside the labyrinth. In other words, the square of the walls' surface visible to a visitor of the labyrinth. Note that there's no holes to look or to move through between any two adjacent blocks of the wall. The blocks are considered to be adjacent if they touch each other in any corner. See picture for an example: visible walls inside the labyrinth are drawn with bold lines. The height of all the walls is 3 meters.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains the single number N. The next N lines contain N characters each. Each line describes one row of the labyrinth matrix. In each line only dot and diesis characters will be used and each line will be finished with a new line character. There will be no spaces in the input.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Your program should print to the output file a single integer — the exact value of the square of the wallpaper needed.</div><p class="pst">Sample Input</p><pre class="sio">5
+.....
+...##
+..#..
+..###
+.....
+</pre><p class="pst">Sample Output</p><pre class="sio">198
+</pre><p class="pst">

@@ -1,0 +1,24 @@
+</p><div class="ptx" lang="en-US">There are N, 1 <= N <= 1,000 rectangles in the 2-D xy-plane. The four sides of a rectangle are horizontal or vertical line segments. Rectangles are defined by their lower-left and upper-right corner points. Each corner point is a pair of two nonnegative integers in the range of 0 through 50,000 indicating its x and y coordinates.
+<br>
+<br>Assume that the contour of their union is defi ned by a set S of segments. We can use a subset of S to construct simple polygon(s). Please report the total area of the polygon(s) constructed by the subset of S. The area should be as large as possible. In a 2-D xy-plane, a polygon is defined by a finite set of segments such that every segment extreme (or endpoint) is shared by exactly two edges and no subsets of edges has the same property. The segments are edges and their extremes are the vertices of  the polygon. A polygon is simple if there is no pair of nonconsecutive edges sharing a point.
+<br>
+<br>Example: Consider the following three rectangles:
+<br>
+<br>rectangle 1: < (0, 0) (4, 4) >,
+<br>
+<br>rectangle 2: < (1, 1) (5, 2) >,
+<br>
+<br>rectangle 3: < (1, 1) (2, 5) >.
+<br>
+<br>The total area of all simple polygons constructed by these rectangles is 18. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of multiple test cases. A line of 4 -1's separates each test case. An extra line of 4 -1's marks the end of the input. In each test case, the rectangles are given one by one in a line. In each line for a rectangle, 4 non-negative integers are given. The first two are the x and y coordinates of the lower-left corner. The next two are the x and y coordinates of the upper-right corner.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output the total area of all simple polygons in a line. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">0 0 4 4
+1 1 5 2
+1 1 2 5
+-1 -1 -1 -1
+0 0 2 2
+1 1 3 3
+2 2 4 4
+-1 -1 -1 -1
+-1 -1 -1 -1　 </pre><p class="pst">Sample Output</p><pre class="sio">18
+10 </pre><p class="pst">

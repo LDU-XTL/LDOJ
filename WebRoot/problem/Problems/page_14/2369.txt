@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US">We remind that the permutation of some final set is a one-to-one mapping of the set onto itself. Less formally, that is a way to reorder elements of the set. For example, one can define a permutation of the set {1,2,3,4,5} as follows:
+<br><img src=images/2369_1.jpg>
+<br>This record defines a permutation P as follows: P(1) = 4, P(2) = 1, P(3) = 5, etc.
+<br>What is the value of the expression P(P(1))? It’s clear, that P(P(1)) = P(4) = 2. And P(P(3)) = P(5) = 3. One can easily see that if P(n) is a permutation then P(P(n)) is a permutation as well. In our example (believe us)
+<br><img src=images/2369_2.jpg>   
+<br>It is natural to denote this permutation by P2(n) = P(P(n)). In a general form the defenition is as follows: P(n) = P1(n), Pk(n) = P(Pk-1(n)). Among the permutations there is a very important one — that moves nothing:
+<br><img src=images/2369_3.jpg>
+<br>It is clear that for every k the following relation is satisfied: (EN)k = EN. The following less trivial statement is correct (we won't prove it here, you may prove it yourself incidentally): Let P(n) be some permutation of an N elements set. Then there exists a natural number k, that Pk = EN. The least natural k such that Pk = EN is called an order of the permutation P. 
+<br>The problem that your program should solve is formulated now in a very simple manner: "Given a permutation find its order."</div><p class="pst">Input</p><div class="ptx" lang="en-US">In the first line of the standard input an only natural number N (1 <= N <= 1000) is contained, that is a number of elements in the set that is rearranged by this permutation. In the second line there are N natural numbers of the range from 1 up to N, separated by a space, that define a permutation — the numbers P(1), P(2),…, P(N).</div><p class="pst">Output</p><div class="ptx" lang="en-US">You should write an only natural number to the standard output, that is an order of the permutation. You may consider that an answer shouldn't exceed 10<sup>9</sup>.</div><p class="pst">Sample Input</p><pre class="sio">5
+4 1 5 2 3
+</pre><p class="pst">Sample Output</p><pre class="sio">6</pre><p class="pst">

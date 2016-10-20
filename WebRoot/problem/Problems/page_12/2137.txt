@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">N cows (3 <= N <= 100) are eating grass in the middle of a field.  So that they don't get lost, Farmer John wants to tie them together in a loop so that cow i is attached to cows i-1 and i+1.  Note that cow N will be tied to cow 1 to complete the loop.
+<br>
+<br>Each cow has a number of grazing spots she likes and will only be happy if she ends up situated at one of these spots.  Given that Farmer John must ensure the happiness of his cows when placing them, compute the shortest length of rope he needs to tie them all in a loop.  It is possible for different parts of the loop to cross each other.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: The integer N.
+<br>
+<br>* Lines 2..N+1: Each line describes one cow using several space-separated integers. The first integer is the number of  locations S (1 <= S <= 40) which are preferred by that cow. This is followed by 2*S integers giving the (x,y) coordinates of these locations respectively. The coordinates lie in the range -100..100.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">A single line containing a single integer, 100 times the minimum length of rope needed (do not perform special rounding for this result).
+<br></div><p class="pst">Sample Input</p><pre class="sio">4
+1 0 0
+2 1 0 2 0
+3 -1 -1 1 1 2 2
+2 0 1 0 2
+</pre><p class="pst">Sample Output</p><pre class="sio">400
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">[Cow 1 is located at (0,0); cow 2 at (1,0); cow 3 at (1,1); and cow 4 at (0,1).]
+<br></div><p class="pst">

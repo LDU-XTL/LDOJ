@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">Input is the matrix A of N by N non-negative integers.
+<br>
+<br>A distance between two elements A<sub>ij</sub> and A<sub>pq</sub> is defined as |i − p| + |j − q|.
+<br>
+<br>Your program must replace each zero element in the matrix with the nearest non-zero one. If there are two or more nearest non-zeroes, the zero must be left in place.
+<br><b>Constraints</b>
+<br>1 ≤ N ≤ 200, 0 ≤ Ai ≤ 1000000 </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains the number N followed by N<sup>2</sup> integers, representing the matrix row-by-row. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Output must contain N<sup>2</sup> integers, representing the modified matrix row-by-row. </div><p class="pst">Sample Input</p><pre class="sio">3
+0 0 0
+1 0 2
+0 3 0
+</pre><p class="pst">Sample Output</p><pre class="sio">1 0 2
+1 0 2
+0 3 0
+</pre><p class="pst">

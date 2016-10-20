@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p><i>triDesign</i> company produces different logical games and puzzles for children. One of the games called <i>triSuper</i> is basically a set of sticks. The length of a stick is measured in millimeters and some of sticks in a set may be of the same length.</p><p>Authors of the game think for some reason that a child being given a <i>triSuper</i> game set uses the sticks to construct triangles. Doing so, the child will eventually realize that it is not always possible to construct a triangle from any three sticks. This is the educational value of the game &ndash; to study &ldquo;the inequality of a triangle&rdquo;.</p><p>A particular feature of the game is that each game set is unique. Furthermore, each game set is tested after production. The game set is rejected if it breaks any of the following rules.</p><ol><li>None three sticks from the set can be used to construct a triangle.</li><li>Any three sticks from the set can be used to construct a triangle.</li></ol><p>As far as a game set may contain a lot of sticks, it is necessary to develop special program to help testing game sets. This is what you need to do.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input describes one game set. The first line of the input contains an integer number <b>N</b> (1 &le; <b>N</b> &le; 1 000 000). The second line contains <b>N</b> integer numbers <b>A<sub>1</sub></b>, <b>A<sub>2</sub></b>, &hellip;, <b>A<sub>N</sub></b>, separated by spaces (1 &le; <b>A<sub>i</sub></b> &le; 2 000 000 000). Ai is the length of the stick number <b>i</b> in the set. Sticks in the set a so thin, that you can disregard their thickness.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The output has to contain a single line. If a game set is rejected than the line is &ldquo;The set is rejected.&rdquo;. Otherwise, the line is &ldquo;The set is accepted.&rdquo;</p></span></div><p class="pst">Sample Input</p><pre class="sio"><b>sample input #1</b>
+3
+1 2 3
+
+<b>sample input #2</b>
+4
+4 4 4 4
+
+<b>sample input #3</b>
+4
+1 2 3 4</pre><p class="pst">Sample Output</p><pre class="sio"><b>sample output #1</b>
+The set is rejected.
+
+<b>sample output #2</b>
+The set is rejected.
+
+<b>sample output #3</b>
+The set is accepted.</pre><p class="pst">

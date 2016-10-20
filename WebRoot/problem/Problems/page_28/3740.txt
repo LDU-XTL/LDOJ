@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US"><div>Given a <i>M</i>&times;<i>N</i> matrix <i><b>A</b></i>. <i><b>A</b></i><sub>ij</sub> &isin; {0, 1} (0 &le; i &lt; M, 0 &le; j &lt; N), could you find some rows that let every cloumn contains and only contains one 1. </div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div>There are multiple cases ended by <b>EOF</b>. Test case up to 500.The first line of input is <i>M</i>, <i>N</i> (<i>M</i> &le; 16, <i>N</i> &le; 300). The next <i>M</i> lines every line contains <i>N</i> integers separated by space. </div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div>For each test case, if you could find it output "Yes, I found it", otherwise output "It is impossible" per line. </div></div><p class="pst">Sample Input</p><pre class="sio">3 3
+0 1 0
+0 0 1
+1 0 0
+4 4
+0 0 0 1
+1 0 0 0
+1 1 0 1
+0 1 0 0</pre><p class="pst">Sample Output</p><pre class="sio">Yes, I found it
+It is impossible
+</pre><p class="pst">

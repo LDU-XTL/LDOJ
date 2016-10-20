@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US"><img src=images/2789_1.jpg>
+<br>Shuffling the pixels in a bitmap image sometimes yields random looking images. However, by repeating the shuffling enough times, one finally recovers the original images. This should be no surprise, since ``shuffling" means applying a one-to-one mapping (or permutation) over the cells of the image, which come in finite number. 
+<br><b>Problem </b>
+<br>Your program should read a number n , and a series of elementary transformations that define a ``shuffling" &phi; of n x n images. Then, your program should compute the minimal number m (m > 0) , such that m applications of &phi; always yield the original n x n image. 
+<br>
+<br>For instance if &phi; is counter-clockwise 90<sup>o</sup> rotation then m = 4 . 
+<br><img src=images/2789_2.jpg></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input is made of two lines, the first line is number n ( 2<=n<=2<sup>10</sup> , n even). The number n is the size of images, one image is represented internally by a n x n pixel matrix (a<sup>j</sup><sub>i</sub>) , where i is the row number and j is the column number. The pixel at the upper left corner is at row 0 and column 0. 
+<br>
+<br>The second line is a non-empty list of at most 32 words, separated by spaces. Valid words are the keywords id, rot, sym, bhsym, bvsym, div and mix, or a keyword followed by ``-". Each keyword key designates an elementary transform (as defined by Figure 1), and key- designates the inverse of transform key. For instance, rot- is the inverse of counter-clockwise 90<sup>o</sup> rotation, that is clockwise 90<sup>o</sup> rotation. Finally, the list k1, k2,..., kp designates the compound transform &phi; = k<sub>1</sub>ok<sub>2</sub>o ... ok<sub>p</sub> . For instance, ``bvsym rot-" is the transform that first performs clockwise 90<sup>o</sup> rotation and then vertical symmetry on the lower half of the image. 
+<br><img src=images/2789_3.jpg>
+<br><img src=images/2789_4.jpg></div><p class="pst">Output</p><div class="ptx" lang="en-US">Your program should output a single line whose contents is the minimal number m (m > 0) such that &phi;<sup>m</sup> is the identity. You may assume that, for all test input, you have m < 2<sup>31</sup> . </div><p class="pst">Sample Input</p><pre class="sio">256
+rot- div rot div
+</pre><p class="pst">Sample Output</p><pre class="sio">8
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">If the input is:
+<br>256
+<br>bvsym div mix
+<br>Then, correct output is:
+<br>63457</div><p class="pst">

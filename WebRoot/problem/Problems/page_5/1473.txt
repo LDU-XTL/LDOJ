@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">Finding buried treasures is simple: all you need is a map! The pirates in the Caribbean were famous for their enormous buried treasures and their elaborate maps. The maps usually read like ``Start at the lone palm tree. Take three steps towards the forest, then seventeen step towards the small spring, . . . blahblah . . . , finally six steps toward the giant rock. Dig right here, and you will find my treasure!'' Most of these directions just boil down to taking the mentioned number of steps in one of the eight principal compass directions (depicted in the left of the figure). 
+<br>Obviously, following the paths given by these maps may lead to an interesting tour of the local scenery, but if one is in a hurry, there is usually a much faster way: just march directly from your starting point to the place where the treasure is buried. Instead of taking three steps north, one step east, one step north, three steps east, two steps south and one step west (see figure), following the direct route (dashed line in figure) will result in a path of about 3.6 steps. 
+<br>
+<br>You are to write a program that computes the location of and distance to a buried treasure, given a 'traditional' map. 
+<br><center><img src=images/1473_1.jpg></center>
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several strings, each one on a line by itself, and each one consisting of at most 200 characters. The last string will be END, signaling the end of the input. All other strings describe one treasure map each, according to the following format: 
+<br>
+<br>The description is a comma-separated list of pairs of lengths (positive integers less than 1000) and directions (N (north), NE (northeast), E (east), SE (southeast), S (south), SW (southwest), W (west) or NW (northwest)). For example, 3W means 3 steps to the west, and 17NE means 17 steps to the northeast. A full stop (.) terminates the description, which contains no blanks. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For every map description in the input, first print the number of the map, as shown in the sample output. Then print the absolute coordinates of the treasure, in the format "The treasure is located at (x,y).". The coordinate system is oriented such that the x-axis points east, and the y-axis points north. The path always starts at the origin (0,0). 
+<br>
+<br>On the next line print the distance to that position from the point (0,0), in the format "The distance to the treasure is d.". The fractional values x, y, d must be printed exact to three digits to the right of the decimal point. 
+<br>
+<br>Print a blank line after each test case. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">3N,1E,1N,3E,2S,1W.
+10NW.
+END</pre><p class="pst">Sample Output</p><pre class="sio">Map #1
+The treasure is located at (3.000,2.000).
+The distance to the treasure is 3.606.
+
+Map #2
+The treasure is located at (-7.071,7.071).
+The distance to the treasure is 10.000.
+</pre><p class="pst">

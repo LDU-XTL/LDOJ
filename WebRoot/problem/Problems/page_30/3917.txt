@@ -1,0 +1,24 @@
+</p><div class="ptx" lang="en-US">Rock, Paper, Scissors is a classic hand game for two people. Each participant holds out either a fist (rock), open hand (paper), or two-finger V (scissors). If both players show the same gesture, they try again. They continue until there are two different gestures. The winner is then determined according to the table below:
+<br>
+<br><center><table><tr><td>Rock</td><td>beats</td><td>Scissors</td></tr><tr><td>Paper</td><td>beats</td><td>Rock</td></tr><tr><td>Scissors</td><td>beats</td><td>Paper</td></tr></table></center>
+<br>
+<br>Your task is to take a list of symbols representing the gestures of two players and determine how many games each player wins.
+<br>In the following example:
+<br><pre style="padding-left: 30px">
+<br>Turn     : 1 2 3 4 5
+<br>Player 1 : R R S R S
+<br>Player 2 : S R S P S
+<br></pre>
+<br>Player 1 wins at Turn 1 (Rock beats Scissors), Player 2 wins at Turn 4 (Paper beats Rock), and all the other turns are ties.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains between 1 and 20 pairs of lines, the first for Player 1 and the second for Player 2. Both player lines contain the same number of symbols from the set {'R', 'P', 'S'}. The number of symbols per line is between 1 and 75, inclusive. A pair of lines each containing the single character 'E' signifies the end of the input.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each pair of input lines, output a pair of output lines as shown in the sample output, indicating the number of games won by each player.</div><p class="pst">Sample Input</p><pre class="sio">RRSRS
+SRSPS
+PPP
+SSS
+SPPSRR
+PSPSRS
+E
+E</pre><p class="pst">Sample Output</p><pre class="sio">P1: 1
+P2: 1
+P1: 0
+P2: 3
+P1: 2
+P2: 1</pre><p class="pst">

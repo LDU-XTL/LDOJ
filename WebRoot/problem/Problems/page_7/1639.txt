@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">The Contortion Brothers are a famous set of circus clowns, known worldwide for their incredible ability to cram an unlimited number of themselves into even the smallest vehicle. During the off-season, the brothers like to get together for an Annual Contortionists Meeting at a local park. However, the brothers are not only tight with regard to cramped quarters, but with money as well, so they try to find the way to get everyone to the party which minimizes the number of miles put on everyone's cars (thus saving gas, wear and tear, etc.). To this end they are willing to cram themselves into as few cars as necessary to minimize the total number of miles put on all their cars together. This often results in many brothers driving to one brother's house, leaving all but one car there and piling into the remaining one. There is a constraint at the park, however: the parking lot at the picnic site can only hold a limited number of cars, so that must be factored into the overall miserly calculation. Also, due to an entrance fee to the park, once any brother's car arrives at the park it is there to stay; he will not drop off his passengers and then leave to pick up other brothers. Now for your average circus clan, solving this problem is a challenge, so it is left to you to write a program to solve their milage minimization problem.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input will consist of one problem instance. The first line will contain a single integer n indicating the number of highway connections between brothers or between brothers and the park. The next n lines will contain one connection per line, of the form name1 name2 dist, where name1 and name2 are either the names of two brothers or the word Park and a brother's name (in either order), and dist is the integer distance between them. These roads will all be 2-way roads, and dist will always be positive.The maximum number of brothers will be 20 and the maximumlength of any name will be 10 characters.Following these n lines will be one final line containing an integer s which specifies the number of cars which can fit in the parking lot of the picnic site. You may assume that there is a path from every brother's house to the park and that a solution exists for each problem instance.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output should consist of one line of the form
+<br>Total miles driven: xxx
+<br>where xxx is the total number of miles driven by all the brothers' cars.</div><p class="pst">Sample Input</p><pre class="sio">10
+Alphonzo Bernardo 32
+Alphonzo Park 57
+Alphonzo Eduardo 43
+Bernardo Park 19
+Bernardo Clemenzi 82
+Clemenzi Park 65
+Clemenzi Herb 90
+Clemenzi Eduardo 109
+Park Herb 24
+Herb Eduardo 79
+3</pre><p class="pst">Sample Output</p><pre class="sio">Total miles driven: 183</pre><p class="pst">

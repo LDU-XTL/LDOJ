@@ -1,0 +1,34 @@
+</p><div class="ptx" lang="en-US">In this problem, you are asked to determine if a given document satisfies the syntax of an XML-like language.
+<br>
+<br>A simple XML-like document can be parsed as a sequence of the following:
+<br>
+<br>1. Plain text---ASCII codes between 32 and 127 (inclusive), with none of the following symbols: <b>&lt</b>, <b>&gt</b>, <b>&amp</b>
+<br>2. The sequences:
+<br><b>&amplt;</b>
+<br><b>&ampgt;</b>
+<br><b>&ampamp;</b>
+<br>These encode a <b>&lt</b>, <b>&gt</b>, or <b>&amp</b> respectively.
+<br>3. <b>&ampxHEX;</b> HEX must be any even (positive) number of upper or lower case hexadecimal digits, and this represents the bytes given.
+<br>4. <b>&lttag&gt</b> Tag can be any lowercase alphanumeric string. This tag is pushed onto the context stack.
+<br>5. <b>&lttag/&gt</b> This tag is not pushed onto the context stack (there is no closing context).
+<br>6. <b>&lt/tag&gt</b> This tag removes the <b>&lttag&gt</b> context from the stack, which must be topmost on the stack.
+<br>
+<br>By the time the entire document is parsed, the context stack is empty for a valid document. We should also note that the empty string is considered valid.</div><p class="pst">Input</p><div class="ptx" lang="en-US">You will be given a number of documents to process. Each document is given as one line of text which may be empty. The input is terminated by the end of file.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each document given, print <b>valid</b> on a single line if it is a valid XML-like document, or <b>invalid</b> otherwise.</div><p class="pst">Sample Input</p><pre class="sio">the quick brown fox.
+the &lti&gt&ltb&gtquick&lt/b&gt brown&lt/i&gt fox.
+&ltdoc&gtfox &ampamp; socks.&lt/doc&gt
+3x+5&ampgt;7
+Null: &ampx00;
+&ltdoc&gtthe quick brown fox.
+the &lti&gtquick &ltb&gtbrown&lt/i&gt&lt/b&gt fox
+fox &amp socks.
+3x+5&gt7
+Null: &ampx0;</pre><p class="pst">Sample Output</p><pre class="sio">valid
+valid
+valid
+valid
+valid
+invalid
+invalid
+invalid
+invalid
+invalid</pre><p class="pst">

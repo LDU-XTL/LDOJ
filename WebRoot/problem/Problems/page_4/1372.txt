@@ -1,0 +1,84 @@
+</p><div class="ptx" lang="en-US">FORCAL is the programming language well known to programmers who are interested in compiler construction and especially to students attending Dr. C. Ompiler class. The FORCAL syntax is defined as follows: 
+<br>The only data type is integer.
+<br>
+<br>All identifiers are implicitly declared and are not longer than 32 characters. Identifiers are composed of letters, digits and underscores. At least one character of the identifier is not a digit.
+<br>
+<br>Literals are strings of at most 8 digits.
+<br>
+<br>Comments begin with -- and end at the end of the line in which they start.
+<br>
+<br>Statement types are 
+<br>
+<br>Assignment:
+<br>
+<br>identifier := expression 
+<br>
+<br>where expressions are constructed from identifiers, literals, operators +, -,
+<br>
+<br>and parentheses as follows:
+<br>
+<br>1) all identifiers and literals are expressions,
+<br>
+<br>2) if a, b are expressions then a + b, a - b, +a, -a, (a) are expressions.
+<br>
+<br>Input/Output:
+<br>
+<br>read(List of identifiers);
+<br>
+<br>write(List of expressions)
+<br>
+<br>(Items in the list are separated by comma)
+<br>
+<br>begin, end, read, and write are reserved words.
+<br>
+<br>Each statement is terminated by a semicolon.
+<br>
+<br>FORCAL is not case-sensitive, for example BegIN is the same keyword as beGin. 
+<br>
+<br>FORCAL tokens are defined to be: the identifiers or the literals or the symbols + - ( ) := ; , or the reserved words. 
+<br>
+<br>
+<br>NOTES: 
+<br>
+<br>the assign operator is to be considered one FORCAL token,
+<br>
+<br>spaces, tabs, end-of-lines are allowed between the tokens,
+<br>
+<br>no part of any comment is a token,
+<br>
+<br>successive tokens that are either identifiers, literals or reserved words must be separated by a space or tab or end-of-line,
+<br>
+<br>no token is allowed to contain a space or a tab or end-of-line. 
+<br>
+<br>Help the students of Dr. C. Ompiler to write a program which reads lines of text an recognizes the FORCAL tokens in them. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several blocks of lines. Each block contains lines of text and is terminated by one empty line. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output consists of blocks corresponding to the blocks in the input. In the lines of each block there are successively stored the FORCAL tokens recognized by the program (just one token on each line). Each token must be written on the output line in exactly the same form as it appears in the input text. If the program encounters a string that is neither a FORCAL token, nor comment, nor space, tab, end-of-line, it is to write the string TOKEN ERROR on a new line and continues by processing the next block in the input. The program writes one empty line after each block of the output. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">A1:= A + (-B);
+
+A123_A123 )
+01.2 A B
+C
+
+:= A beGIn
+
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+</pre><p class="pst">Sample Output</p><pre class="sio">A1
+:=
+A
++
+(
+-
+B
+)
+;
+
+A123_A123
+)
+01
+TOKEN ERROR
+
+:=
+A
+beGIn
+
+TOKEN ERROR</pre><p class="pst">

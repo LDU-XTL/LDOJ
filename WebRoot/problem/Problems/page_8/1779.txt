@@ -1,0 +1,34 @@
+</p><div class="ptx" lang="en-US">Propositions are logical formulas consisting of proposition symbols and connecting operators. They are recursively defined by the following rules: 
+<br><ol><li>All proposition symbols (in this problem, lower-case alphabetic characters, e.g., a and z) are propositions. 
+<br><li>If P is a proposition, (!P) is a proposition, and P is a direct subformula of it. 
+<br><li>If P and Q are propositions, (P&Q), (P|Q), (P-->Q), and (P<->Q) are propositions, and P and Q are direct subformulas of them. 
+<br><li>Nothing else is a proposition. </ol>
+<br>The operations !, &, |, -->, and <-> denote logical negation, conjunction, disjunction, implication, and equivalence, respectively. A proposition P is a subformula of a proposition R if P=R or P is a direct subformula of a proposition Q and Q is a subformula of R. 
+<br>Let P be a proposition and assign boolean values (i.e., 0 or 1) to all proposition symbols that occur in P. This induces a boolean value to all subformulas of P according to the standard semantics of the logical operators: 
+<br><center><table border><tr><td>negation<td>conjunction<td>disjunction<td>implication<td>equivalence<tr><td><code>!</code><i>0</i>=<i>1</i><td><i>0</i><code>&</code><i>0</i>=<i>0</i><td><i>0</i><code>|</code><i>0</i>=<i>0</i><td><i>0</i><code>--&gt;</code><i>0</i>=<i>1</i><td><i>0</i><code>&lt;-&gt;</code><i>0</i>=<i>1</i><tr><td><code>!</code><i>1</i>=<i>0</i>
+<br><td><i>0</i><code>&</code><i>1</i>=<i>0</i><td><i>0</i><code>|</code><i>1</i>=<i>1</i><td><i>0</i><code>--&gt;</code><i>1</i>=<i>1</i><td><i>0</i><code>&lt;-&gt;</code><i>1</i>=<i>0</i><tr><td><td><i>1</i><code>&</code><i>0</i>=<i>0</i><td><i>1</i><code>|</code><i>0</i>=<i>1</i><td><i>1</i><code>--&gt;</code><i>0</i>=<i>0</i><td><i>1</i><code>&lt;-&gt;</code><i>0</i>=<i>0</i><tr><td><td><i>1</i><code>&</code><i>1</i>=<i>1</i><td><i>1</i><code>|</code><i>1</i>=<i>1</i><td><i>1</i><code>--&gt;</code><i>1</i>=<i>1</i><td><i>1</i><code>&lt;-&gt;</code><i>1</i>=<i>1</i></table>
+<br></center>
+<br>This way, a value for P can be calculated. This value depends on the choice of the assignment of boolean values to the proposition symbols. If P contains n different proposition symbols, there are 2<sup>n</sup> different assignments. To evaluate all possible assignments we may use truth tables. 
+<br>
+<br>A truth table contains one line per assignment (i.e., 2<sup>n</sup> lines in total). Every line contains the values of all subformulas under the chosen assignment. The value of a subformula is aligned with the proposition symbol, if the subformula is a proposition symbol, and with the center of the operator otherwise. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several test cases, each on a separate line. Every test case denotes a proposition and may contain arbitrary amounts of spaces in between. The input file terminates immediately after the newline symbol following the last test case. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case generate a truth table for the denoted proposition. Start the truth table by repeating the input line. Evaluate the proposition (and its subformulas) for all assignments to its variables, and output one line for each assignment. The line must have the same length as the corresponding input line and must consist only of spaces and the characters 0 and 1. Output an empty line after each test case. 
+<br>
+<br>Let s1,...,sn be the proposition symbols in the denoted proposition sorted in alphabetic order. Then, all assignments of 0 to s1 must precede the assignments of 1 to s1. Within each of these blocks of assignments, all assignments of 0 to s2 must precede the assignments of 1 to s2, and so on. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">((b --> a) <-> ((! a) --> (! b)))
+  ((y &  a)   -  ->(c |c))
+</pre><p class="pst">Sample Output</p><pre class="sio">((b --> a) <-> ((! a) --> (! b)))
+  0  1  0   1    1 0   1   1 0   
+  1  0  0   1    1 0   0   0 1   
+  0  1  1   1    0 1   1   1 0   
+  1  1  1   1    0 1   1   0 1   
+
+  ((y &  a)   -  ->(c |c))
+    0 0  0       1  0 00  
+    1 0  0       1  0 00  
+    0 0  0       1  1 11  
+    1 0  0       1  1 11  
+    0 0  1       1  0 00  
+    1 1  1       0  0 00  
+    0 0  1       1  1 11  
+    1 1  1       1  1 11  
+</pre><p class="pst">

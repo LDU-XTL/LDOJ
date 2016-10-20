@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">Making revolutions in the software industry is not an easy task. That’s why this problem is about something else. Stanescu has just invented a new super-cool way to develop software. It is similar to writing program code, but instead of writing it, you ask some else to do it. In such way, one could create great software, without even knowing what a Turing Machine is. As you can see, this is not just software industry revolution. Really, Stanescu does not care about the software industry at all. He just wants to make money. 
+<br>In order to protect the money he is going to make, he needs to pick a special password for his bank account, satisfying the following requirements: 
+<br><p style="padding-left: 30px">
+<br>The password should not be too complex, so that Stanescu can remember it. The complexity of a password is the sum of the complexity of its characters and the complexity of a character is its position in the alphabet (for ’a’ it is 1, for ’b’ – 2, and so on). For example, the complexity of the string ”ala” is 1 + 12 + 1 = 14; 
+<br>It should match a given pattern string (composed of lowercase Latin letters, ’?’ and ’*’, no longer than 1000 characters). ’?’ is matched by one arbitrary lowercase Latin letter, and ’*’ – by zero or more arbitrary lowercase Latin letters; 
+<br>It should be a sub-string of given super-password string (composed of lowercase Latin letters, no longer than 10000).
+<br></p>
+<br>You have to write a program that computes the complexity of simplest possible password.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Several test cases are given at the input. Each of them consists of a single line containing the pattern and the super-password strings separated by a white space.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, your program should print a single line with one integer – the complexity of the simplest possible password. If no password satisfies the given requirements, the program should print -1.</div><p class="pst">Sample Input</p><pre class="sio">a?a alabala
+a*c?a axcbaabcbax</pre><p class="pst">Sample Output</p><pre class="sio">4
+9</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Explanation:
+<br>Test case #1: aba is the simplest password
+<br>Test case #2: abcba is simpler than axcba</div><p class="pst">

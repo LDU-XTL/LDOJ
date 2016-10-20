@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">Consider N floating point numbers N representing the radii of N disks. We fix a disk in the xOy system, if we position it at a positive coordinate x (big enough), tangential to the 0x axis and above it and after that we push it to 0y until it becomes tangent to 0y or to the first disk that it meets on the way. In the configuration that results by fixing in order all the given disks, some of them can be considered as being dispensible, because, if we eliminate them, the total width of the configuration is the same, which means that there is no disk that can be moved to the left.
+<br><center><img src=images/1819_1.jpg></center>
+<br>Identify all the indispensible disks for a given configuration (in the configuration from above; the gray disks are dispensible).</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input has the following structure:
+<br><ul><li>the first line contains N ( N <= 1000), the number of disks;
+<br><li>the next N lines contain N real numbers representing the radii of the disks, in the order they are fixed in the configuration.</ul>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output will have the following structure: 
+<br><ul><li>the first line will contain an integer K, representing the number of dispensable disks; 
+<br><li>each of the next K lines will contain the order number of the dispensable disks. </ul></div><p class="pst">Sample Input</p><pre class="sio">7
+4
+0.1
+0.5
+3
+0.5
+4
+1 </pre><p class="pst">Sample Output</p><pre class="sio">3
+2
+3
+5</pre><p class="pst">

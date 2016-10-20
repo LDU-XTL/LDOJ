@@ -1,0 +1,25 @@
+</p><div class="ptx" lang="en-US">Bob and Alice live in Roswell (New Mexico, USA) and they have found some strange item on the floor left by an Unidentified Flying Object (UFO). Let us recall that on July 8, 1947, as stated by Col. William Blanchard, Commander of the 509th Bomb Group at Roswell, ``the wreckage of a crashed disk has been recovered". We believe that this strange item comes from this crash. It looks like a big cube of size s , 1<=s<=2<sup>15</sup> with tiny holes. It shines differently on every face. Bob and Alice are rather smart and they have quickly understood that some complex system inside the cube reflects the light of the sun so that sunlight emerges from some but not all holes of every face. 
+<br>
+<br>Experiments led by Bob and Alice have shown that the cube is full of n , 1<=n<=10<sup>6</sup> double-sided mirrors. Mirrors are located at integer coordinates. They are small (less than one unit in diameter). They are oriented in one of the following directions: 
+<br><img src=images/2787_1.jpg>
+<br>Bob and Alice analyze the cube by putting a light sensor in front of each face of the cube. This simple experiment allows them to compute the amount of light reflected through the corresponding face (i.e., the number of holes through which a light ray emerges). More precisely, the cube is oriented in the following way (the sun is on the y < 0 axis) and there is one unit of light which enters the cube on every integer coordinate of the upper face ( y = 0, 0<=x<=s, 0<=z<=s ). 
+<br><img src=images/2787_2.jpg>
+<br>You are requested to simulate the behavior of the cube. Given the position and the orientation of each mirror, you are kindly asked to compute, for each face, the number of rays that go out of the face of and the total number of times the corresponding rays have been deviated. Note that when the direction of a ray belongs to the plane of a mirror, it passes through without any interaction. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first integer (on the first line) is the size s of the box. The second line contains an integer n that corresponds to the total number of mirrors in the box. We then have n lines, each of which containing 4 integers : the coordinates (x, y, z) of the corresponding mirror and its orientation (with respect to the above figure). Notice that the coordinates (x, y, z) of mirrors are pairwise distinct. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output is made of 12 integers (one per line). The 12 integers are made of 6 groups of 2 integers, each group is related to a different face i of the cube ordered as shown in the above figure. In each group, the first integer is the number of rays (the amount of light) that go out of the face i and the second one is the number of times the corresponding rays have been deviated. </div><p class="pst">Sample Input</p><pre class="sio">5
+4
+4 4 0 0
+1 3 0 1
+1 1 0 0
+4 1 0 1
+</pre><p class="pst">Sample Output</p><pre class="sio">0
+0
+0
+0
+1
+1
+1
+1
+34
+0
+0
+0
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Very huge input, scanf is recommended.</div><p class="pst">

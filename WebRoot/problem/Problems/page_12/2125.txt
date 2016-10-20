@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">Alice and Bob play the following game. First, Alice draws some directed graph with N vertices and M arcs. After that Bob tries to destroy it. In a move he may take any vertex of the graph and remove either all arcs incoming into this vertex, or all arcs outgoing from this vertex. 
+<br>Alice assigns two costs to each vertex: Wi<sup>+</sup> and Wi<sup>-</sup>. If Bob removes all arcs incoming into the i-th vertex he pays Wi<sup>+</sup> dollars to Alice, and if he removes outgoing arcs he pays Wi<sup>-</sup> dollars. 
+<br>Find out what minimal sum Bob needs to remove all arcs from the graph. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input file describes the graph Alice has drawn. The first line of the input file contains N and M (1 <= N <= 100, 1 <= M <= 5000). The second line contains N integer numbers specifying Wi<sup>+</sup>. The third line defines Wi<sup>-</sup> in a similar way. All costs are positive and do not exceed 10<sup>6</sup> . Each of the following M lines contains two integers describing the corresponding arc of the graph. Graph may contain loops and parallel arcs. </div><p class="pst">Output</p><div class="ptx" lang="en-US">On the first line of the output file print W --- the minimal sum Bob must have to remove all arcs from the graph. On the second line print K --- the number of moves Bob needs to do it. After that print K lines that describe Bob's moves. Each line must first contain the number of the vertex and then '+' or '-' character, separated by one space. Character '+' means that Bob removes all arcs incoming into the specified vertex and '-' that Bob removes all arcs outgoing from the specified vertex. </div><p class="pst">Sample Input</p><pre class="sio">3 6
+1 2 3
+4 2 1
+1 2
+1 1
+3 2
+1 2
+3 1
+2 3
+</pre><p class="pst">Sample Output</p><pre class="sio">5
+3
+1 +
+2 -
+2 +</pre><p class="pst">

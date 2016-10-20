@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">定义一个二维数组：
+<br><pre>
+<br>int maze[5][5] = {
+<br>	0, 1, 0, 0, 0,
+<br>	0, 1, 0, 1, 0,
+<br>	0, 0, 0, 0, 0,
+<br>	0, 1, 1, 1, 0,
+<br>	0, 0, 0, 1, 0,
+<br>};</pre>
+<br>它表示一个迷宫，其中的1表示墙壁，0表示可以走的路，只能横着走或竖着走，不能斜着走，要求编程序找出从左上角到右下角的最短路线。</div><p class="pst">Input</p><div class="ptx" lang="en-US">一个5 &times; 5的二维数组，表示一个迷宫。数据保证有唯一解。</div><p class="pst">Output</p><div class="ptx" lang="en-US">左上角到右下角的最短路径，格式如样例所示。</div><p class="pst">Sample Input</p><pre class="sio">0 1 0 0 0
+0 1 0 1 0
+0 0 0 0 0
+0 1 1 1 0
+0 0 0 1 0</pre><p class="pst">Sample Output</p><pre class="sio">(0, 0)
+(1, 0)
+(2, 0)
+(2, 1)
+(2, 2)
+(2, 3)
+(2, 4)
+(3, 4)
+(4, 4)</pre><p class="pst">

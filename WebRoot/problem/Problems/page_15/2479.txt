@@ -1,0 +1,7 @@
+</p><div class="ptx" lang="en-US">Given a set of n integers: A={a1, a2,..., an}, we define a function d(A) as below:<blockquote><img src="formula?tex=d%28A%29%3D%5Cmax_%7B1%5Cleq+s_1%5Cleq+t_1%3Cs_2%5Cleq+t_2%5Cleq+n%7D%5Cleft%5C%7B%5Csum_%7Bi%3Ds_1%7D%5E%7Bt_1%7Da_i%2B%5Csum_%7Bj%3Ds_2%7D%5E%7Bt_2%7Da_j%5Cright%5C%7D&driver=1"></blockquote>Your task is to calculate d(A).</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of T(<=30) test cases. The number of test cases (T) is given in the first line of the input. 
+<br>Each test case contains two lines. The first line is an integer n(2<=n<=50000). The second line contains n integers: a1, a2, ..., an. (|ai| <= 10000).There is an empty line after each case.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Print exactly one line for each test case. The line should contain the integer d(A).</div><p class="pst">Sample Input</p><pre class="sio">1
+
+10
+1 -1 2 2 3 -3 4 -4 5 -5</pre><p class="pst">Sample Output</p><pre class="sio">13</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">In the sample, we choose {2,2,3,-3,4} and {5}, then we can get the answer.
+<br>
+<br>Huge input,scanf is recommended.</div><p class="pst">

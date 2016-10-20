@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">It's election time. The farm is partitioned into a 5x5 grid of cow locations, each of which holds either a Holstein ('H') or Jersey ('J') cow.  The Jerseys want to create a voting district of 7 contiguous (vertically or horizontally) cow locations such that the Jerseys outnumber the Holsteins. How many ways can this be done for the supplied grid?</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Lines 1..5: Each of the five lines contains five characters per line, each 'H' or 'J'.  No spaces are present.</div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: The number of distinct districts of 7 connected cows such that the Jerseys outnumber the Holsteins in the district.</div><p class="pst">Sample Input</p><pre class="sio">HHHHH
+JHJHJ
+HHHHH
+HJHHJ
+HHHHH</pre><p class="pst">Sample Output</p><pre class="sio">2</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">OUTPUT DETAILS:
+<br>The two possible districts are:
+<br><pre>.....                .....
+<br>JHJHJ                JHJHJ
+<br>....H       and      .H...
+<br>....J                .J...
+<br>.....                .....</pre>
+<br>Any other possible district with seven cows has fewer than 4 Jerseys.</div><p class="pst">

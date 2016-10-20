@@ -1,0 +1,37 @@
+</p><div class="ptx" lang="en-US">This problem is based on the game of Black Vienna. In this version there are three players and 18 cards labeled A-R. Three of the cards are set aside (hidden) and form the "Black Vienna" gang. The remaining cards are shuffled and dealt to the players so that each player has 5 cards. Players never reveal their cards to each other. There is a separate deck of "interrogation cards" which contain three distinct letters in ascending order, like ACG or BHR. Turns rotate through players 1, 2, and 3. On each player's turn, that player selects an interrogation card, puts it face up in front of another player, and that other player must indicate the total number of these cards being held, without saying which ones. All players see the result of the "interrogation". The play continues until a player deduces the three cards in the "gang". 
+<br>For example, suppose the cards are distributed as follows, and the game then proceeds:
+<br><p style="padding-left: 30px">
+<br>Player 1: DGJLP; Player 2: EFOQR; Player 3: ACHMN; Gang: BIK
+<br>
+<br>Turn 1: Player 1 interrogates player 2 with BJK; answer 0
+<br>Turn 2: Player 2 interrogates player 3 with ABK; answer 1
+<br>Turn 3: Player 3 interrogates player 2 with DEF; answer 2
+<br>Turn 4: Player 1 interrogates player 2 with EIL; answer 1
+<br>Turn 5: Player 2 interrogates player 3 with FIP; answer 0
+<br>Turn 6: Player 3 interrogates player 1 with GMO; answer 1
+<br>Turn 7: Player 1 interrogates player 2 with OQR; answer 3
+<br>Turn 8: Player 2 interrogates player 3 with ADQ; answer 1
+<br>Turn 9: Player 3 interrogates player 1 with EGJ; answer 2
+<br></p>
+<br>In fact, the game does not need to get to turn 9. With enough thought, player 1 can deduce after turn 8 that the gang is BIK. It is your job to analyse records of games and deduce the earliest time that the gang could be determined for sure.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will consist of one to twelve data sets, followed by a line containing only 0. 
+<br>The first line of a dataset contains the number, t, of turns reported, 2 ≤ t ≤ 15. 
+<br>The next line contains four blank separated strings for the hands of players 1, 2, and 3, followed by the cards for the gang.
+<br>The remaining t lines of the data set contain the data for each turn in order. Each line contains three blank separated tokens: the number of the player interrogated, the string of interrogation letters, and the answer provided.
+<br>All letter strings will contain only capital letters from A to R, in strictly increasing alphabetical order. The same interrogation string may appear in more than one turn of a game.</div><p class="pst">Output</p><div class="ptx" lang="en-US">There is one line of output for each data set. The line contains the single character "?" if no player can be sure of the gang after all the turns listed. If a player can determine the gang, the line contains the earliest turn after which one or more players can be sure of the answer.</div><p class="pst">Sample Input</p><pre class="sio">9
+DGJLP EFOQR ACHMN BIK
+2 BJK 0
+3 ABK 1
+2 DEF 2
+2 EIL 1
+3 FIP 0
+1 GMO 1
+2 OQR 3
+3 ADQ 1
+1 EGJ 2
+3
+ABCDE FGHIJ KLMNO PQR
+3 BKQ 1
+1 ADE 3
+2 CHJ 2
+0</pre><p class="pst">Sample Output</p><pre class="sio">8
+?</pre><p class="pst">

@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">The cow bicycling team consists of N (1 <= N <= 20) cyclists.  They wish to determine a race strategy which will get one of them across the finish line as fast as possible.
+<br>
+<br>Like everyone else, cows race bicycles in packs because that's the most efficient way to beat the wind.  While travelling at x laps/minute (x is always an integer), the head of the pack expends x*x energy/minute while the rest of pack drafts behind him using only x energy/minute.  Switching leaders requires no time though can only happen after an integer number of minutes.  Of course, cows can drop out of the race at any time.
+<br>
+<br>The cows have entered a race D (1 <= D <= 100) laps long.  Each cow has the same initial energy, E (1 <= E <= 100).
+<br>
+<br>What is the fastest possible finishing time?  Only one cow has to cross the line. The finish time is an integer.  Overshooting the line during some minute is no different than barely reaching it at the beginning of the next minute (though the cow must have the energy left to cycle the entire minute).  N, D, and E are integers.</div><p class="pst">Input</p><div class="ptx" lang="en-US">A single line with three integers: N, E, and D
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">A single line with the integer that is the fastest possible finishing time for the fastest possible cow.  Output 0 if the cows are not strong enough to finish the race.
+<br></div><p class="pst">Sample Input</p><pre class="sio">3 30 20
+</pre><p class="pst">Sample Output</p><pre class="sio">7
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><pre>[as shown in this chart:
+<br>	                            leader E
+<br>	               pack  total used this
+<br>	time  leader  speed   dist   minute
+<br>	  1      1      5       5      25
+<br>	  2      1      2       7       4
+<br>	  3      2*     4      11      16
+<br>	  4      2      2      13       4
+<br>	  5      3*     3      16       9
+<br>	  6      3      2      18       4
+<br>	  7      3      2      20       4
+<br>	* = leader switch</pre></div><p class="pst">

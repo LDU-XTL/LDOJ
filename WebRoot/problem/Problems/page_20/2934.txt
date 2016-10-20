@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US"><p>Some text editors offer a feature to correct words which seem to be written incorrectly. In this problem you are asked to implement a simple <i>Automatic Correction of Misspellings (ACM)</i>. </p><p>ACM takes care of the following misspellings of words: </p><ol><li>One letter is missing (e.g., <b>letter</b> is written <b>leter</b>) or too much (e.g., <b>letter</b> is written <b>lettter</b>). </li><li>One letter is wrong (e.g., <b>letter</b> is written <b>ketter</b>) </li><li>The order of two adjacent letters is wrong (e.g., <b>letter</b> is written <b>lettre</b>) </li></ol><p>ACM is based on a dictionary of known words. When a text contains a word which is not in the dictionary, ACM will try to replace it by a similar word of the dictionary. Two words are similar if we can transform one word into the other by doing exactly one of the misspellings listed above. An unknown word is left unchanged if there is no similar word in the dictionary.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The first line of the input file will give the number <i>n</i> of words in the dictionary (<i>n</i> &le; 10000). The next <i>n</i> lines contain the dictionary words. The following line contains an integer <i>q</i> &le; 1000, the number of query words. The next <i>q</i> lines contain the query words. You may assume that each word in the input consists of 1 to 25 lower case letters (&lsquo;a&rsquo; to &lsquo;z&rsquo;).</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each query word, print one line with the query word followed by one of the following possibilities:</p><ol><li><b>is correct</b>, if the word occurs in the dictionary. </li><li><b>is a misspelling of &lt;x&gt;</b>, where &lt;x&gt; is a word of the dictionary similar to the query word, and the query word is not in the dictionary. In the case that there are several possibilities, select the word from the dictionary which appeared earlier in the input. </li><li><b>is unknown</b>, if cases 1 and 2 do not apply. </li></ol></div><p class="pst">Sample Input</p><pre class="sio">10
+this
+is
+a
+dictionary
+that
+we
+will
+use
+for
+us
+6
+su
+as
+the
+dictonary
+us
+willl</pre><p class="pst">Sample Output</p><pre class="sio">su is a misspelling of us
+as is a misspelling of is
+the is unknown
+dictonary is a misspelling of dictionary
+us is correct
+willl is a misspelling of will</pre><p class="pst">

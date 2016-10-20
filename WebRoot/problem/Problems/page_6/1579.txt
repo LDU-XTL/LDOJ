@@ -1,0 +1,28 @@
+</p><div class="ptx" lang="en-US">We all love recursion! Don't we?
+<br>
+<br>Consider a three-parameter recursive function w(a, b, c):
+<br>
+<br>if a <= 0 or b <= 0 or c <= 0, then w(a, b, c) returns:
+<br>1
+<br>
+<br>if a > 20 or b > 20 or c > 20, then w(a, b, c) returns:
+<br>w(20, 20, 20)
+<br>
+<br>if a < b and b < c, then w(a, b, c) returns:
+<br>w(a, b, c-1) + w(a, b-1, c-1) - w(a, b-1, c)
+<br>
+<br>otherwise it returns:
+<br>w(a-1, b, c) + w(a-1, b-1, c) + w(a-1, b, c-1) - w(a-1, b-1, c-1)
+<br>
+<br>This is an easy function to implement. The problem is, if implemented directly, for moderate values of a, b and c (for example, a = 15, b = 15, c = 15), the program takes hours to run because of the massive recursion.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input for your program will be a series of integer triples, one per line, until the end-of-file flag of -1 -1 -1. Using the above technique, you are to calculate w(a, b, c) efficiently and print the result.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Print the value for w(a,b,c) for each triple.</div><p class="pst">Sample Input</p><pre class="sio">1 1 1
+2 2 2
+10 4 6
+50 50 50
+-1 7 18
+-1 -1 -1</pre><p class="pst">Sample Output</p><pre class="sio">w(1, 1, 1) = 2
+w(2, 2, 2) = 4
+w(10, 4, 6) = 523
+w(50, 50, 50) = 1048576
+w(-1, 7, 18) = 1
+</pre><p class="pst">

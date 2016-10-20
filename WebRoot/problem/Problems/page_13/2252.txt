@@ -1,0 +1,28 @@
+</p><div class="ptx" lang="en-US">Write a program that can solve linear equations with one variable.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will contain a number of equations, each one on a separate line. All equations are strings of less than 100 characters which strictly adhere to the following grammar (given in EBNF): 
+<br><pre>Equation   := Expression '=' Expression
+<br>Expression := Term { ('+' | '-') Term }
+<br>Term       := Factor { '*' Factor }
+<br>Factor     := Number | 'x' | '(' Expression ')'
+<br>Number     := Digit | Digit Number
+<br>Digit      := '0' | '1' | ... | '9'</pre>
+<br>Although the grammar would allow to construct non-linear equations like "x*x=25", we guarantee that all equations occuring in the input file will be linear in x. We further guarantee that all sub-expressions of an equation will be linear in x too. That means, there won't be test cases like x*x-x*x+x=0 which is a linear equation but contains non-linear sub-expressions (x*x). 
+<br>Note that all numbers occuring in the input are non-negative integers, while the solution for x is a real number.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print a line saying "Equation #i (where i is the number of the test case) and a line with one of the following answers:
+<br><ul><li>If the equation has no solution, print "No solution.".
+<br><li>If the equation has infinitely many solutions, print "Infinitely many solutions.".
+<br><li>If the equation has exactly one solution, print "x = solution" where solution is replaced by the appropriate real number (printed to six decimals). </ul>
+<br>Print a blank line after each test case. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">x+x+x=10
+4*x+2=19
+3*x=3*x+1+2+3
+(42-6*7)*x=2*5-10</pre><p class="pst">Sample Output</p><pre class="sio">Equation #1
+x = 3.333333
+
+Equation #2
+x = 4.250000
+
+Equation #3
+No solution.
+
+Equation #4
+Infinitely many solutions.
+</pre><p class="pst">

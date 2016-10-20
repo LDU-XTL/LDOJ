@@ -1,0 +1,35 @@
+</p><div class="ptx" lang="en-US"><div><p>The oppressively hot summer days have raised the cows' clamoring to its highest level. Farmer John has finally decided to build an artificial lake. For his engineering studies, he is modeling the lake as a two-dimensional landscape consisting of a contiguous sequence of <i>N</i> soon-to-be-submerged levels (1 &le; <i>N</i> &le; 100,000) conveniently numbered 1..<i>N</i> from left to right.</p><p>Each level <i>i</i> is described by two integers, its width <i>W<sub>i</sub></i> (1 &le; <i>W<sub>i</sub></i> &le; 1,000) and height (like a relative elevation) <i>H<sub>i</sub></i> (1 &le; <i>H<sub>i</sub></i> &le; 1,000,000). The heights of FJ's levels are unique. An infinitely tall barrier encloses the lake's model on the left and right. One example lake profile is shown below.</p><pre>            
+<br>         *             *  :
+<br>         *             *  :
+<br>         *             *  8
+<br>         *    ***      *  7
+<br>         *    ***      *  6
+<br>         *    ***      *  5
+<br>         *    **********  4 <- height
+<br>         *    **********  3
+<br>         ***************  2
+<br>         ***************  1
+<br>Level    |  1 |2|  3   |</pre><p>In FJ's model, he starts filling his lake at sunrise by flowing water into the bottom of the lowest elevation at a rate of 1 square unit of water per minute. The water falls directly downward until it hits something, and then it flows and spreads as room-temperature water always does. As in all good models, assume that falling and flowing happen instantly. Determine the time at which each elevation's becomes submerged by a single unit of water.</p><pre>
+<br>WATER              WATER OVERFLOWS                     
+<br>       |                       |                           
+<br>     * |          *      *     |      *      *            *
+<br>     * V          *      *     V      *      *            *
+<br>     *            *      *    ....    *      *~~~~~~~~~~~~*
+<br>     *    **      *      *~~~~** :    *      *~~~~**~~~~~~*
+<br>     *    **      *      *~~~~** :    *      *~~~~**~~~~~~*
+<br>     *    **      *      *~~~~**~~~~~~*      *~~~~**~~~~~~*
+<br>     *    *********      *~~~~*********      *~~~~*********
+<br>     *~~~~*********      *~~~~*********      *~~~~*********
+<br>     **************      **************      **************
+<br>     **************      **************      **************
+<br>
+<br>     After 4 mins        After 26 mins       After 50 mins
+<br>     Lvl 1 submerged     Lvl 3 submerged     Lvl 2 submerged</pre><p>Warning: The answer will not always fit in 32 bits.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>* Line 1: A single integer: <i>N</i><br>* Lines 2..<i>N</i>+1: Line <i>i</i>+1 describes level<i> i</i> with two space-separated integers: <i>W<sub>i</sub></i> and <i>H<sub>i</sub></i> </p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>* Lines 1..<i>N</i>: Line <i>i</i> contains a single integer that is the number of minutes that since sunrise when level #<i>i</i> is covered by water of height 1.</p></div><p class="pst">Sample Input</p><pre class="sio">3
+4 2
+2 7
+6 4
+</pre><p class="pst">Sample Output</p><pre class="sio">4
+50
+26
+
+</pre><p class="pst">

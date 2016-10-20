@@ -1,0 +1,35 @@
+</p><div class="ptx" lang="en-US">See if a spreadsheet has a consistent formulation.
+<br>Any given cell of a spreadsheet can have a formula that depends on the value from some other cell. Before trying to calculate the value of a cell it is important to determine if the definition of the formula for that cell is circular.
+<br>
+<br>Our spreadsheet only has a limited formulation for expressions: 
+<br><blockquote><pre>definition := cell "=" expression
+<br>expression := term  | expression "+" term | expression "-" term
+<br>term := factor | term "*" factor | term "/" factor
+<br>factor := number | cell | "(" expression ")"
+<br>number := digit | number digit
+<br>digit := "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<br>cell := "R" digit digit "C" digit digit</pre></blockquote>
+<br>Valid cell rows and columns are 1 through 20, so that a total of 400 cells are available in our spreadsheet.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will contain one or more lines, each representing cells that are defined in the spreadsheet.
+<br>Note that, if an expression in some cell refers to some other cell, the contents of that other cell will always be defined.There are no white space characters in the expressions. </div><p class="pst">Output</p><div class="ptx" lang="en-US">A single line is printed for each cell defined in the input(and in the same order). This should be the cell name followed by "circular" if evaluating the cell results in a circular definition (either directly or indirectly). If the cell can be evaluated without a circular definition, then the word "ok" should follow the cell.
+<br></div><p class="pst">Sample Input</p><pre class="sio">R01C01=1
+R01C02=2
+R01C03=R01C01+R01C02
+R02C01=(R03C02+1)*R01C03
+R03C02=R02C01
+</pre><p class="pst">Sample Output</p><pre class="sio">R01C01 ok
+R01C02 ok
+R01C03 ok
+R02C01 circular
+R03C02 circular
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><b>Clarification</b>
+<br>The following spreadsheet would have two circular results
+<br>
+<br>R01C01=0*R01C01
+<br>R02C01=R02C01-R02C01
+<br>
+<br>Point is, don\'t do algebraic simplifications before determining circularity.
+<br>
+<br>Q. If a cell references a cell that is circular, is the cell defined as circular even though it does not reference itself?
+<br>
+<br>A. Yes. 
+<br></div><p class="pst">

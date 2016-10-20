@@ -1,0 +1,38 @@
+</p><div class="ptx" lang="en-US">In the mountains of Geodesia, geodes are found. These 'hollow' stones contain cavities with crystal formations around them. The beautifully colored crystals can be sold for a high price to people both inside and outside of Geodesia. The problem with geodes is that one cannot see from the outside of a given rock whether it is a geode or not. Out of every thousand rocks found in Geodesia only some are geodes.
+<br>
+<br>In order to find out whether a given rock is in fact a geode, one can try to consider its density
+<br><img src=images\3052_1.jpg>
+<br>where m represents its mass and V its volume. Since a geode contains empty space, a rock contaning one is expected to have a lower density than other rocks. If the density of a rock is too high, it would be a waste of time and effort to further investigate it.
+<br>
+<br>But how could one determine the density of each of the enormous number of rocks found in the mountains of Geodesia? Minig crafts collect rocks, which they put on mobile conveyer belts. Weighing the rocks automatically at a fast rate is no problem, but how to quickly determine their volume? Measuring e.g. the volume displacement of a liquid(like H<sub>2</sub>O), where each rock has to be put in and taken out individually is a time consuming process.
+<br>
+<br>So why not try to estimate the volume just by looking at the rock? Along the conveyer belt, two cameras are placed, perpendicular to each other. Of every rock that passes, they each take a picture. These pictures are sent to a computer for processing. The computer calculates from these pictures an upper bound for the volume of the rock, V<sub>max</sub>. A lower bound for the density of the rock is then given by
+<br><img src=images\3052_2.jpg>
+<br>This lower bound can then be used to reject rocks that are certainly too heavy to be geodes.
+<br>
+<br>The computer uses a relatively simple trick for estimating the maximal volume. It considers the picures taken as silhouettes, as parallel projections of a rock onto a planes. Since the two cameras are placed perpendicular to each other, the projection planes are also perpendicular to each other. 
+<br>
+<br>In other words, choose a coordinate system in three dimensional space as follows: z runs along the vertical direction and x and y run along the perpendicular horizontal directions in which the two cameras are placed. Let S &isin; R<sup>3</sup> represent a rock. Then the cameras yield the two parallel projections
+<br><img src=images\3052_3.jpg>
+<br>on the xz and yz plane respectively. See Figure 1 for an example.
+<br>
+<br>Now a curious property of the rocks found in Geodesia makes the measurement of the volume easier: they are all convex<sup>1</sup>. Furthermore, the projections can be considered as polygons. So first each of the two pictures taken of a rock is converted into a convex polygon by an image recognition program. You are to write a program that will do the second step: compute from these two polygons V<sub>max</sub>: the maximum volume of any rock having exactly these two polygon-shaped projections.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains a single number:the number of test cases to follow. Each test case has the following format:
+<br><img src=images\3052_4.jpg>
+<br><ul><li>One line with the integer n<sub>xz</sub> the number of vertices describing the projection on the xz plane.<li>n<sub>xz</sub> lines, each with two integers x and z, separated by a single space: the coordinates of one vertex of the xz projection.<li>One line with the integer n<sub>yz</sub>, the number of vertices describing the projection on the yz plane.<li>n<sub>yz</sub> lines, each with two integers y and z, seperated by a single space: the coordinates of one vertex of the yz projection.</ul>Both projections are convex polygons, and the minimum and maximum z coordinates are the same values. The vertices of the polygons are given in clockwise order. Consecutive vertices of the polygons are different, but there may be three or more consecutive vertices on one line. The numbers in the input satisfy 3 <= n<sub>xz</sub>, n<sub>yz</sub> <= 1000, and |x|, |y|, |z| <= 500.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For every test case in the input, the output should contain a single number on a single line: V<sub>max</sub>, the maximum volume of any object having the projections given in the input, rounded in the usual way to two decimals behind the decimal point, A round-off error of 0.01 is permitted in your answer.
+<br></div><p class="pst">Sample Input</p><pre class="sio">1
+5
+1 0
+1 -1
+-1 0
+-1 1
+0 1
+5
+-1 1
+0 1
+1 1
+1 -1
+-1 -1
+</pre><p class="pst">Sample Output</p><pre class="sio">5.00
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">1.A set S(in R<sup>2</sup>, R<sup>3</sup>, or in fact in any vector space you like) is convex if any straight line segment connecting any two points a, b ∈ S is again completely within S. Formally this means that for all a,b &isin; S and all x &isin; [0, 1], also xa + (1-x)b &isin; S.
+<br></div><p class="pst">

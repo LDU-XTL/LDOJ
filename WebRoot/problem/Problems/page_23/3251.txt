@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US"><p>Farmer John's cows have entered into a competition with Farmer Bob's cows. They have drawn lines on the field so it is a square grid with <i>N</i> &times; <i>N</i> points (2 &le; N &le; 100), and each cow of the two herds has positioned herself exactly on a gridpoint. Of course, no two cows can stand in the same gridpoint. The goal of each herd is to form the largest square (not necessarily parallel to the gridlines) whose corners are formed by cows from that herd.</p><p>All the cows have been placed except for Farmer John's cow Bessie. Determine the area of the largest square that Farmer John's cows can form once Bessie is placed on the field (the largest square might not necessarily contain Bessie).</p></div><p class="pst">Input</p><div class="ptx" lang="en-US">Line 1: A single integer, <i>N</i>
+<br>Lines 2..<i>N</i>+1: Line <i>i</i>+1 describes line <i>i</i> of the field with <i>N</i> characters. The characters are: 'J' for a Farmer John cow, 'B' for a Farmer Bob cow, and '*' for an unoccupied square. There will always be at least one unoccupied gridpoint.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Line 1: The area of the largest square that Farmer John's cows can form, or 0 if they cannot form any square.</div><p class="pst">Sample Input</p><pre class="sio">6
+J*J***
+******
+J***J*
+******
+**B***
+******</pre><p class="pst">Sample Output</p><pre class="sio">4</pre><p class="pst">

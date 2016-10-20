@@ -1,0 +1,19 @@
+</p><div class="ptx" lang="en-US">Dr. Octopus kidnapped Spiderman's girlfriend M.J. and kept her in the West Tower. Now the hero, Spiderman, has to reach the tower as soon as he can to rescue her, using his own weapon, the web.
+<br>
+<br>From Spiderman's apartment, where he starts, to the tower there is a straight road. Alongside of the road stand many tall buildings, which are definitely taller or equal to his apartment. Spiderman can shoot his web to the top of any building between the tower and himself (including the tower), and then swing to the other side of the building. At the moment he finishes the swing, he can shoot his web to another building and make another swing until he gets to the west tower. Figure-1 shows how Spiderman gets to the tower from the top of his apartment – he swings from A to B, from B to C, and from C to the tower. All the buildings (including the tower) are treated as straight lines, and during his swings he can't hit the ground, which means the length of the web is shorter or equal to the height of the building. Notice that during Spiderman's swings, he can never go backwards.
+<br><center><img src=images/1925_1.jpg></center>
+<br>You may assume that each swing takes a unit of time. As in Figure-1, Spiderman used 3 swings to reach the tower, and you can easily find out that there is no better way.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains the number of test cases K (1 <= K <= 20). Each case starts with a line containing a single integer N (2 <= N <= 5000), the number of buildings (including the apartment and the tower).  N lines follow and each line contains two integers Xi, Yi, (0 <= Xi, Yi <= 1000000) the position and height of the building. The first building is always the apartment and the last one is always the tower.  The input is sorted by Xi value in ascending order and no two buildings have the same X value.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output one line containing the minimum number of swings (if it's possible to reach the tower) or -1 if Spiderman can't reach the tower.</div><p class="pst">Sample Input</p><pre class="sio">2
+6
+0 3
+3 5
+4 3
+5 5
+7 4
+10 4
+3
+0 3
+3 4
+10 4
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+-1
+</pre><p class="pst">

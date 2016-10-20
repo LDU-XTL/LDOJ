@@ -1,0 +1,90 @@
+</p><div class="ptx" lang="en-US">"Forget it," Garret complained, throwing down the controller to his PlayStation VIII, "this level is impossible." He had just "died" for the 17th time on level 54 of the game "Lemmings 9: Lost in Space". 
+<br>
+<br>"No it isn't," his brother Ferret replied, "and I can prove it." Ferret pulled his PlaySkool PDA from the back pocket of his Levi's Huggies. 
+<br>
+<br>"First, picture the level as a rectangular grid." Ferret punched a few of the buttons on his PDA and a rectangle appeared as he described. "Your character, a Lemming holding an umbrella, starts at the top of this rectangle. His goal is to reach the bottom without dying." 
+<br>
+<br>"I know that, you weasel, but what about the laser guns?" Garret whined. 
+<br>
+<br>"The name is Ferret, and I was just getting to that. If we represent the level as a rectangular grid, then the Lemming can occupy one square and each laser gun can occupy a square. Remember the laser guns are cyclic: they all shoot up the first turn, right the second turn, down the third turn, left the fourth turn, and then repeat the sequence." 
+<br>
+<br>"But you're forgetting the pits of lava!" Garret exclaimed. 
+<br>
+<br>"You didn't let me finish. Each pit of lava also occupies a square. And each plot of grass, the Lemming's destination, can also occupy a square. Then, it's just a matter of manipulating the Lemming and laser beams in a series of turns to determine if it is possible for the Lemming to reach the bottom without 'dying'." 
+<br>
+<br>"You think you're so smart, Ferret, let's see if you can explain that again in a clear, concise way." 
+<br>
+<br>"Certainly": 
+<br>
+<br>The level will consist of a grid of squares. The way each laser beam and the Lemming moves can be described in "turns". To determine if the Lemming can reach the bottom of the level without dying, Ferret devised some rules: 
+<br><ol>
+<br><li>Each turn will consist of two steps: 
+<br><ol>
+<br><li>First, the laser guns will "fire" and maintain until the end of the turn, a beam in a direction dependent on the number of the turn. On the first turn, each laser gun will shoot up (all squares directly above a laser gun are "unsafe" and cannot be occupied by the Lemming); on the second turn, each laser gun will shoot right; on the third turn, each laser gun will shoot down; on the fourth turn, each laser gun will shoot left; on the fifth turn, the sequence will repeat. 
+<br>
+<br><pre>Example:
+<br>    Column
+<br>    01234
+<br>R 0|  L  |<- The Lemming will always start in a column on row 0
+<br>o 1|     | In this example, on the first turn, the laser beam
+<br>w 2|   S | will occupy squares (3,0),(3,1); second turn, (4,2);
+<br>  3|     | third turn, (3,3),(3,4),(3,5),(3,6); fourth turn, 
+<br>  4|     | (0,2),(1,2),(2,2); fifth turn (repeating), (3,0),(3,1), etc.  
+<br>  5|     | (squares are represented using (column,row) notation)
+<br>  6|GPPGG|<- The pits of lava and grass squares will always be
+<br>             in the last row
+<br></pre>
+<br><li>Second, the Lemming will always move one row down, but to any one of three columns: one column to the left, one column to the right, or remain in the same column. In the above example, on the first turn the Lemming (L) could move to square (1,1), (2,1), or (3,1) (if he moved to (3,1), though, he would die because of the laser beam). However, on any turn the Lemming cannot move outside of the grid (i.e., he cannot move to column -1, or to a column number equal to the number of columns). 
+<br></ol>
+<br><li>The level is considered "possible" if the Lemming can reach any "grass" square without dying after a series of turns. 
+<br><li>The Lemming will die if at any point he occupies the same square as a laser gun, its beam, or a pit of lava. This includes: 
+<br><ol>
+<br><li>The Lemming moving into a square a pit of lava occupies, 
+<br><li>The Lemming moving into a square a laser gun occupies, 
+<br><li>The Lemming moving into a square a laser beam occupies (even if it is a grass square!), 
+<br><li>A laser gun firing a beam into a square the Lemming occupies 
+<br></ol>
+<br></ol></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input to this problem will consist of a (non-empty) series of up to 100 data sets. Each data set will be formatted according to the following description, and there will be no blank lines separating data sets. Each data set will describe the starting conditions of the level. A single data set has the following components: 
+<br><ol>
+<br><li>Start line - A single line, "START x y", where 0 < x < 10 and x is the number of columns in the grid representing the level and 1 < y < 10 and y is the number of rows in the grid representing the level. 
+<br><li>The next y lines will represent the rows of the level, starting with row 0 (the top). Each line will consist of x letters. The letters will represent components of the level as follows: 
+<br><ul>
+<br><li>L - Lemming (there will only be one 'L' per data set, and it will always be in row 0) 
+<br><li>S - laser gun (these squares will never be in the final row) 
+<br><li>P - pit of lava (these squares will always be in the final row) 
+<br><li>G - grass (these squares will also always be in the final row) 
+<br><li>O - "empty" square of air 
+<br></ul>
+<br><li>End line -- A single line, "END". 
+<br></ol>
+<br>Following the final data set will be a single line, "ENDOFINPUT". </div><p class="pst">Output</p><div class="ptx" lang="en-US">Output for each data set will be exactly one line. The line will either be "FERRET" or "GARRET" (both all caps with no whitespace leading or following). 
+<br>
+<br>"FERRET" will appear if the Lemming can make it safely (without dying) to any grass square at the bottom of the level after a series of turns. 
+<br>
+<br>"GARRET" will be output for a data set if it fails to meet the criteria for a "FERRET" line. </div><p class="pst">Sample Input</p><pre class="sio">START 5 7
+OOLOO
+OOOOO
+OOOSO
+OOOOO
+OOOOO
+OOOOO
+GPPGG
+END
+START 3 3
+OLO
+OSO
+GGG
+END
+START 5 8
+LOOOS
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+OOOOO
+PPPPG
+END
+ENDOFINPUT</pre><p class="pst">Sample Output</p><pre class="sio">FERRET
+GARRET
+GARRET</pre><p class="pst">

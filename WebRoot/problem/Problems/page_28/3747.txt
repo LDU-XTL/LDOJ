@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US"><div>After the dangerous "mine road", YYF has finally enter the enemy's base, which is a round glass building. However, this is totally a trap! There are no enemy in the base but bombs instead. Some time after YYF enter the base, the enemy's detectors find him and ignite the bomb system to kill him. As a professional scout, YYF feels the bomb and choose a best direction to run. When a bomb explodes, it will destroy a circle area including the boundary which becomes larger and larger. YYF runs very fast in the same speed as the radius of bomb area grows. If he can run out of the base before the explosions destroy him, he will be safe after that. Now you are given the YYF's and bombs' initial places, please calculate that if our couragous scout can possibly save himself. </div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div>The input contains many test cases ended with <b>EOF</b>.<br>The first line of each test case is <i>N</i> (1 &le; <i>N</i> &le; 10) and <i>R</i> (1 &le; <i>R</i> &le; 1000), standing for the number of bombs and the radius of the base. The center of the base is always at (0,0). The second line of each test case is two real numbers standing for the initial place of YYF.<br>In the next <i>N</i> lines, each contains two real numbers standing for the initial place of a bomb.<br>It is guaranteed that all the initial places is in the base. </div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div>For each test case, if YYF can escape safely, output "Yes" in a single line, otherwise "No" instead. </div></div><p class="pst">Sample Input</p><pre class="sio">2 10
+0 0
+1 0
+-1 0
+4 10
+0 0
+1 0
+-1 0
+0 1
+0 -1</pre><p class="pst">Sample Output</p><pre class="sio">Yes
+No</pre><p class="pst">

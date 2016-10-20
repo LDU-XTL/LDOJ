@@ -1,0 +1,38 @@
+</p><div class="ptx" lang="en-US"><b>Background</b>
+<br>Consider a system of linear equations, here three equations of three variables x1, x2, x3. The general form looks something like this, with given numbers a<sub>ij</sub> and bi:
+<br><center>a<sub>11</sub>x1 + a<sub>12</sub>x2 + a<sub>13</sub>x3 = b1
+<br>a<sub>21</sub>x1 + a<sub>22</sub>x2 + a<sub>23</sub>x3 = b2
+<br>a<sub>31</sub>x1 + a<sub>32</sub>x2 + a<sub>33</sub>x3 = b3</center>
+<br>Or, using matrices and vectors:
+<br><center><img src=images/1914_1.jpg></center>
+<br>According to Cramer's rule, the solution can be given in terms of determinants, i.e.
+<br><center>xi =det(Ai)/det(A)</center>
+<br>where Ai is the matrix obtained from A by replacing the i-th column with the vector b. For 3 * 3 determinants,you can use the following simple formula to calculate the determinant:
+<br><center><img src=images/1914_2.jpg></center>
+<br>Obviously, Cramer's rule only works for det(A) != 0. One can show that the system has a unique solution if and only if det(A) != 0. Otherwise, the system has either no solution or infinitely many solutions.
+<br>Please note that one would not use Cramer's rule to solve a large system of linear equations, simply because calculating a single determinant is as time-consuming as solving the complete system by a more efficient algorithm.
+<br><b>Problem</b>
+<br>Given a system of three linear equations in three variables, use Cramer's rule to find the unique solution if it exists. More precisely, calculate the determinants of the Ai and of A and decide by looking at det(A) whether the system has a unique solution. If it does, calculate the solution according to Cramer's rule.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains the number of scenarios.
+<br>For each scenario, you are given three lines corresponding to the three equations, with the coefficients of the matrix A and the coordinates of the vector b arranged as follows:
+<br><center>a11 a12 a13 b1
+<br>a21 a22 a23 b2
+<br>a31 a32 a33 b3</center>
+<br>All numbers are integers in the range {−1000, . . . , 1000}. They are separated by single blanks.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each scenario print three lines. In the first line, print the determinants of A1, A2, A3, and A, as integers and separated by single blanks. In the second line, print (depending on det(A)) either "No unique solution" or "Unique solution: ", followed by the values of x1, x2, x3 with three digits after the decimal point,again separated from each other by a single blank. For solutions xi with -0.0005 < xi < 0.0005 always print "0.000" instead of the "-0.000" that your print command might come up with. The third line is empty.</div><p class="pst">Sample Input</p><pre class="sio">3
+4 0 0 1
+0 2 0 2
+0 0 1 4
+1 2 3 1
+1 1 1 2
+2 2 2 3
+1 0 0 1
+0 1 0 0
+0 0 -1 0
+</pre><p class="pst">Sample Output</p><pre class="sio">2 8 32 8
+Unique solution: 0.250 1.000 4.000
+
+1 -2 1 0
+No unique solution
+
+-1 0 0 -1
+Unique solution: 1.000 0.000 0.000
+</pre><p class="pst">

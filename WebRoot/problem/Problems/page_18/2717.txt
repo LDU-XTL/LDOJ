@@ -1,0 +1,31 @@
+</p><div class="ptx" lang="en-US">You are given two hour glasses. They measure M and N minutes respectively. You wish to use these two hour glasses to measure a target period of T minutes. Each hour glass consists of two glass bowls connected by a narrow section (the "narrows") where sand can flow from one bowl into the other. If all of the sand is in the lower bowl and the hour glass is turned upside down ("flipped"), the sand will flow into the other bowl (which is now the lower bowl) in M or N minutes, respectively. 
+<br>
+<br>Initially (at time = 0), all of the sand is in the lower bowl in each of the hour glasses, and both hour glasses are flipped. Subsequently, one can flip one or both of the hour glasses according to the following rules.
+<br><ol><li>When only one of the hour glasses expires at a particular instant, one has four choices of action: 
+<br><ol><li>flip the hour glass that expired; 
+<br><li>flip the hour glass that did not expire; 
+<br><li>flip both hour glasses; 
+<br><li>do not flip either one, just let one hour glass sit idle until the other one expires. </ol>
+<br><li>When both of the hour glasses happen to expire simultaneously, or if one hour glass has been sitting idle and the other one has just expired, one must flip at least one of the hour glasses. 
+<br><li>Any hour glass may be flipped only at an instant when either the same hour glass, or the other one, or both have just expired. </ol>
+<br>A particular time T can be measured if there is a sequence of hour glass flips such that one (or both) of the hour glasses expires at time T during the sequence. You may assume that flipping an hour glass is instantaneous and does not take any time. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of a number of lines, each representing one instance of the problem. Each line contains three positive integers which represent the values of M, N, and T. You may assume that 2 <= M < N <= 200 and M <= T <= 2000. The input is terminated by a line containing three zeroes.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each instance of the problem, print the shortest sequence of flips which measures the target time T. For each flip, print on a single line the time, followed by a colon and a space, followed by the capacities of the hour glasses to be flipped (separated by a comma if both are flipped). The sequence of flips should be printed in chronological order. If there are multiple shortest sequences, any one is acceptable. If it is impossible to measure the target time T, print "Impossible" on a single line. The output for each instance of the problem should be followed by a line consisting of ten hyphens.</div><p class="pst">Sample Input</p><pre class="sio">4 17 21
+4 17 22
+8 13 23
+0 0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">0: 4,17
+17: 4,17
+----------
+0: 4,17
+4: 4
+8: 4
+12: 4
+16: 4
+17: 4
+18: 4,17
+----------
+0: 8,13
+8: 8
+13: 8,13
+18: 8,13
+----------
+</pre><p class="pst">

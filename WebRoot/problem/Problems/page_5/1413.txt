@@ -1,0 +1,85 @@
+</p><div class="ptx" lang="en-US">Following FIFA World Cup, a larger competition called "GIGA Universe Cup" is taking place somewhere in our universe. Both FIFA World Cup and GIGA Universe Cup are two rounds competitions that consist of the first round, also known as "group league", and the second called "final tournament." In the first round, participating teams are divided into groups of four teams each. Each team in a group plays a match against each of the other teams in the same group. For example, let's say we have a group of the following four teams, "Engband, Swedon, Argontina, and Nigerua." They play the following six matches: Engband - Swedon, Engband - Argontina, Engband - Nigerua, Swedon - Argontina, Swedon - Nigerua, and Argontina - Nigerua.
+<br>
+<br>The result of a single match is shown by the number of goals scored by each team, like "Engband 1 - 0 Argontina," which says Engband scored one goal whereas Argontina zero. Based on the result of a match, points are given to the two teams as follows and used to rank teams. If a team wins a match (i.e., scores more goals than the other), three points are given to it and zero to the other. If a match draws (i.e., the two teams score the same number of goals), one point is given to each.
+<br>
+<br>The goal difference of a team in given matches is the total number of goals it scored minus the total number of goals its opponents scored in these matches. For example, if we have three matches "Swedon 1 - 2 Engband," "Swedon 3 - 4 Nigerua," and "Swedon 5 - 6 Argontina," then the goal difference of Swedon in these three matches is (1 + 3 + 5) - (2 + 4 + 6) = -3.
+<br>
+<br>Given the results of all the six matches in a group, teams are ranked by the following criteria, listed in the order of priority (that is, we first apply (a) to determine the ranking, with ties broken by (b), with ties broken by (c), and so on).
+<br>
+<br>(a) greater number of points in all the group matches,
+<br>
+<br>(b) greater goal difference in all the group matches,
+<br>
+<br>(c) greater number of goals scored in all the group matches.
+<br>
+<br>If two or more teams are equal on the basis of the above three criteria, their place shall be determined by the following criteria, applied in this order:
+<br>
+<br>(d) greater number of points obtained in the group matches between the teams concerned,
+<br>
+<br>(e) greater goal difference resulting from the group matches between the teams concerned,
+<br>
+<br>(f) greater number of goals scored in the group matches between the teams concerned,
+<br>
+<br>If two or more teams are still equal, apply (d), (e), and (f) as necessary to each such group. Repeat this until those three rules to equal teams do not make any further resolution. Finally, teams that still remain equal are ordered by :
+<br>
+<br>(g) drawing lots by the Organizing Committee for the GIGA Universe Cup.
+<br>
+<br>The two teams coming first and second in each group qualify for the second round.
+<br>
+<br>Your job is to write a program which, given the results of matches played so far in a group and one team specified in the group, calculates the probability that the specified team will qualify for the second round.
+<br>
+<br>You may assume each team has played exactly two matches and has one match to play. In total, four matches have been played and two matches are to be played.
+<br>
+<br>Assume the probability that any team scores (exactly) p goals in any match is:
+<br>
+<br>8!/(P!(8 - P)!)*(1/4)^p*(3/4)^(8-p) ,
+<br>
+<br>for p <= 8, and zero for p > 8. Assume the lot in the step (g) is fair.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input is an integer, less than 1000, that indicates the number of subsequent records.
+<br>
+<br>The rest of the input is the indicated number of records. A single record has the following format:
+<br>
+<br>(empty) (-) (team)1 (-) (team)2 (-) (team)3 (-) (team)4
+<br>
+<br>(team)1 (-) (empty) (-) (m)12  (-) (m)13  (-) (m)14
+<br>
+<br>(team)2 (-) (empty) (-) (empty) (-) (m)23  (-) (m)24
+<br>
+<br>(team)3 (-) (empty) (-) (empty) (-) (empty) (-) (m)34
+<br>
+<br>(team)4 (-) (empty) (-) (empty) (-) (empty) (-) (empty)
+<br>
+<br>In the above, (-) is a single underscore (-) and (empty) a sequence of exactly four underscores (____). Each of (team)1,?,(team)4 is either an asterisk character (*) followed by exactly three uppercase letters (e.g., *ENG) , or an underscore followed by exactly three uppercase letters (e.g., _SWE). The former indicates that it is the team you are asked to calculate the probability of the second round qualification for. You may assume exactly one of (team)1,?, (team)4 is marked with an asterisk. Each (m)ij (1 <= i < j <= 4) is a match result between the (team)i and (team)j. Each match result is either __-_ (i.e., two underscores, hyphen, and another underscore) or of the form _x-y where each of x and y is a single digit (<= 8). The former indicates that the corresponding match has not been played, whereas the latter that the result of the match was x goals by (team)i and y goals by (team)j. Since each team has played exactly two matches, exactly two match results are in the former format.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output should consist of n lines where n is the number of records in the input. The ith line should show the probability that the designated team (marked with an asterisk) will qualify for the second round in the ith record.
+<br>
+<br>Numbers should be printed with exactly seven digits after the decimal point. Each number should not contain an error greater than 10^(-7).
+<br></div><p class="pst">Sample Input</p><pre class="sio">5
+_____*AAA__BBB__CCC__DDD
+*AAA_______0-0__0-0___-_
+_BBB_____________-___0-0
+_CCC_________________0-0
+_DDD____________________
+______CHN__CRC__TUR_*BRA
+_CHN_______0-2___-___0-4
+_CRC____________1-1___-_
+_TUR_________________1-2
+*BRA____________________
+______CMR_*KSA__GER__IRL
+_CMR_______1-0___-___1-1
+*KSA____________0-8___-_
+_GER_________________1-1
+_IRL____________________
+______TUN__JPN_*BEL__RUS
+_TUN________-___1-1__0-2
+_JPN____________2-2__1-0
+*BEL__________________-_
+_RUS____________________
+______MEX__CRO_*ECU__ITA
+_MEX_______1-0__2-1___-_
+_CRO_____________-___2-1
+*ECU_________________0-2
+_ITA____________________</pre><p class="pst">Sample Output</p><pre class="sio">0.5000000
+1.0000000
+0.0000000
+0.3852746
+0.0353304</pre><p class="pst">

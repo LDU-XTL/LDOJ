@@ -1,0 +1,59 @@
+</p><div class="ptx" lang="en-US">There are several colored cubes. All of them are of the same size but they may be colored differently. Each face of these cubes has a single color. Colors of distinct faces of a cube may or may not be the same.
+<br>Two cubes are said to be identically colored if some suitable rotations of one of the cubes give identical looks to both of the cubes. For example, two cubes shown in Figure 2 are identically colored. A set of cubes is said to be identically colored if every pair of them are identically colored.
+<br>A cube and its mirror image are not necessarily identically colored. For example, two cubes shown in Figure 3 are not identically colored.
+<br>You can make a given set of cubes identically colored by repainting some of the faces, whatever colors the faces may have. In Figure 4, repainting four faces makes the three cubes identically colored and repainting fewer faces will never do.
+<br>Your task is to write a program to calculate the minimum number of faces that needs to be repainted for a given set of cubes to become identically colored.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input is a sequence of datasets. A dataset consists of a header and a body appearing in this order. A header is a line containing one positive integer n and the body following it consists of n lines. You can assume that 1 <= n <= 4. Each line in a body contains six color names separated by a space. A color name consists of a word or words connected with a hyphen (-). A word consists of one or more lowercase letters. You can assume that a color name is at most 24-characters long including hyphens.
+<br>A dataset corresponds to a set of colored cubes. The integer n corresponds to the number of cubes. Each line of the body corresponds to a cube and describes the colors of its faces. Color names in a line is ordered in accordance with the numbering of faces shown in Figure 5. A line
+<br><ul>color1 color2 color3 color4 color5 color6</ul>
+<br>corresponds to a cube colored as shown in Figure 6.
+<br>The end of the input is indicated by a line containing a single zero. It is not a dataset nor a part of a dataset.
+<br><img src=images/2741_1.jpg>
+<br><img src=images/2741_2.jpg>
+<br><img src=images/2741_3.jpg>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each dataset, output a line containing the minimum number of faces that need to be repainted to make the set of cubes identically colored.</div><p class="pst">Sample Input</p><pre class="sio">3
+scarlet green blue yellow magenta cyan
+blue pink green magenta cyan lemon
+purple red blue yellow cyan green
+2
+red green blue yellow magenta cyan
+cyan green blue yellow magenta red
+2
+red green gray gray magenta cyan
+cyan green gray gray magenta red
+2
+red green blue yellow magenta cyan
+magenta red blue yellow cyan green
+3
+red green blue yellow magenta cyan
+cyan green blue yellow magenta red
+magenta red blue yellow cyan green
+3
+blue green green green green blue
+green blue blue green green green
+green green green green green sea-green
+3
+red yellow red yellow red yellow
+red red yellow yellow red yellow
+red red red red red red
+4
+violet violet salmon salmon salmon salmon
+violet salmon salmon salmon salmon violet
+violet violet salmon salmon violet violet
+violet violet violet violet salmon salmon
+1
+red green blue yellow magenta cyan
+4
+magenta pink red scarlet vermilion wine-red
+aquamarine blue cyan indigo sky-blue turquoise-blue
+blond cream chrome-yellow lemon olive yellow
+chrome-green emerald-green green olive vilidian sky-blue
+0</pre><p class="pst">Sample Output</p><pre class="sio">4
+2
+0
+0
+2
+3
+4
+4
+0
+16</pre><p class="pst">

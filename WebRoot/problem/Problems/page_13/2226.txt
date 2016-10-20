@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">Rain has pummeled the cows' field, a rectangular grid of R rows and C columns (1 <= R <= 50, 1 <= C <= 50). While good for the grass, the rain makes some patches of bare earth quite muddy. The cows, being meticulous grazers, don't want to get their hooves dirty while they eat.
+<br>
+<br>To prevent those muddy hooves, Farmer John will place a number of wooden boards over the muddy parts of the cows' field.  Each of the boards is 1 unit wide, and can be any length long.  Each board must be aligned parallel to one of the sides of the field.
+<br>
+<br>Farmer John wishes to minimize the number of boards needed to cover the muddy spots, some of which might require more than one board to cover.  The boards may not cover any grass and deprive the cows of grazing area but they can overlap each other.
+<br>
+<br>Compute the minimum number of boards FJ requires to cover all the mud in the field.</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: Two space-separated integers: R and C
+<br>
+<br>* Lines 2..R+1: Each line contains a string of C characters, with '*' representing a muddy patch, and '.' representing a grassy patch. No spaces are present.</div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: A single integer representing the number of boards FJ needs.</div><p class="pst">Sample Input</p><pre class="sio">4 4
+*.*.
+.***
+***.
+..*.
+</pre><p class="pst">Sample Output</p><pre class="sio">4
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">OUTPUT DETAILS:
+<br>
+<br>Boards 1, 2, 3 and 4 are placed as follows:
+<br>1.2.
+<br>.333
+<br>444.
+<br>..2.
+<br>Board 2 overlaps boards 3 and 4.</div><p class="pst">

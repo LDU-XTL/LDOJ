@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US"><div><p>Hexagon Coin Toss is a simple game played on a Hexagon chessboard. Players toss a coin on the chessboard and see how many hexagons intersect with the coin. Now you are given a task to calculate the result of the coin toss----for each different number of intersecting hexagons, just output the probability.</p><p>To simplify the problem, we assume that the side length of each hexagon is 1 and the radius of the coin will not exceed 0.5 (so that the coin can cover at most 3 hexagons).</p><p><img src="images/3766_2.gif"></p><p>The chessboard contains several rows of hexagons and numbers of hexagons in all odd-number-row are the same (That is true for all even-number-rows). The chessboard is described as (<i>N</i>, <i>M</i>, <i>K</i>). Here <i>N</i> representing the number of hexagons in the longest row. M representing the number of rows and <i>K</i> shows the number of hexagons in the first row. So the chessboard above can be represented as (4, 3, 3).</p><p>The center of the coin will be in the chessboard and we do not take anything outside the chessboard into consideration. In the situation below, the coin covers 2 hexagons.</p><p><img border="0" src="images/3766_3.gif"></p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>The input contains multiple test cases.<br />The first line of each case contains three integers <i>N</i>, <i>M</i>, <i>K</i>, representing the size of the chessboard. <i>N</i> and <i>M</i> will be in the range of [1，1000] and <i>K</i> equals either <i>N</i> or <i>N</i>-1. It is guaranteed that all input information is valid (So that (2, 1, 1) will not appear).<br />The following line is a real number <i>R</i>, the radius of the coin.<br />Input is ended with a case of <i>N</i>=<i>M</i>=<i>K</i>=0.</p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div><p>For each test case, output the case number first.<br />The following 3 lines are the result information, as shown in the sample output. The result should be rounded to 0.001.<br />Print an empty line after each test case.</p></div></div><p class="pst">Sample Input</p><pre class="sio">4 5 4
+0.38
+4 5 3
+0.26
+4 2 3
+0.24
+0 0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">Case 1:
+Probability of covering 1 hexagon   = 48.303 percent.
+Probability of covering 2 hexagons  = 31.300 percent.
+Probability of covering 3 hexagons  = 20.397 percent.
+
+Case 2:
+Probability of covering 1 hexagon   = 61.956 percent.
+Probability of covering 2 hexagons  = 27.934 percent.
+Probability of covering 3 hexagons  = 10.110 percent.
+
+Case 3:
+Probability of covering 1 hexagon   = 72.550 percent.
+Probability of covering 2 hexagons  = 22.220 percent.
+Probability of covering 3 hexagons  = 5.230 percent.
+</pre><p class="pst">

@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Baking bread is my favourite spare-time pursuit. I have a number of stainless steel mixing bowls with straight sides, a circular bottom and a wider circular top opening. Geometrically, my bowls are truncated circular cones and for this problem, the thickness of the metal may be disregarded. 
+<br>
+<br>I store these bowls stacked in the natural way, that is with a common vertical axis, and I stack them in an order that minimises the total height of the stack. Finding this minimum is the purpose of your program. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">On the first line of the input is a positive integer, telling the number of test cases to follow. Each case starts with one line containing an integer n, the number of bowls (2 &le; n &le; 9). The following n lines each contain three positive integers h, r, R, specifying the height, the bottom radius and the top radius of the bowl, and r < R holds true. You may also assume that h, r, R < 1000. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output one line containing the minimal stack height, truncated to an integer (note: truncated, not rounded). 
+<br><img src=images/2767_1.jpg></div><p class="pst">Sample Input</p><pre class="sio">2
+2
+60 20 30
+40 10 50
+3
+50 30 80
+35 25 70
+40 10 90
+</pre><p class="pst">Sample Output</p><pre class="sio">70
+55
+</pre><p class="pst">

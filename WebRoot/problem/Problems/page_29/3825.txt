@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">Most people are familiar with how to multiply two matrices together. However, an alternate form of multiplication known as tensor multiplication exists as well, and works more like you would expect matrix multiplication should. Let A be a p×q matrix and B be an n×m matrix, where neither A nor B is a 1 × 1 matrix. Then the tensor product A ⊗ B is a pn × qm matrix formed by replacing each element aij in A with the matrix (aij) * B. Two examples are shown below, which also demonstrate that, like normal matrix multiplication, tensor multiplication is non-commutative:
+<br>
+<br><center><img src=images/3825_1.png></center>
+<br>
+<br>Note that there is no restriction that the number of columns in the first matrix must equal the number of rows in the second, as there is with normal matrix multiplication. The object of this problem is to determine the number of ways (if any) a given matrix can be formed as a result of a tensor multiplication.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input for a test case will contain two positive integers r and c indicating the number of rows and columns in the matrix. After this will follow r lines each containing c positive integers. The values of r and c will be ≤ 500, each entry in the matrix will be no greater than 65,536, and the last test case is followed by a line containing 0 0.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output the number of different ways the matrix could be the tensor product of two positive integer matrices, neither of which is a 1 × 1 matrix.</div><p class="pst">Sample Input</p><pre class="sio">6 6
+1 1 1 2 2 2
+1 1 1 2 2 2
+1 1 2 2 2 4
+3 3 3 4 4 4
+3 3 3 4 4 4
+3 3 6 4 4 8
+2 2
+3 6
+4 9
+2 4
+15 18 30 36
+20 24 40 48
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">1
+0
+4</pre><p class="pst">

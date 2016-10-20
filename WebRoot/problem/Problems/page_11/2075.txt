@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">You are the owner of SmallCableCo and have purchased the franchise rights for a small town. Unfortunately, you lack enough funds to start your business properly and are relying on parts you have found in an old warehouse you bought. Among your finds is a single spool of cable and a lot of connectors. You want to figure out whether you have enough cable to connect every house in town. You have a map of town with the distances for all the paths you may use to run your cable between the houses. You want to calculate the shortest length of cable you must have to connect all of the houses together.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Only one town will be given in an input.
+<br><ul><li>The first line gives the length of cable on the spool as a real number.
+<br><li>The second line contains the number of houses, N
+<br><li>The next N lines give the name of each house's owner. Each name consists of up to 20 characters {a–z,A–Z,0–9} and contains no whitespace or punctuation.
+<br><li>Next line: M, number of paths between houses
+<br><li>next M lines in the form</ul>
+<br>< house name A > < house name B > < distance >
+<br>Where the two house names match two different names in the list above and the distance is a positive real number. There will not be two paths between the same pair of houses.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output will consist of a single line. If there is not enough cable to connect all of the houses in the town, output
+<br>Not enough cable
+<br>If there is enough cable, then output
+<br>Need < X > miles of cable
+<br>Print X to the nearest tenth of a mile (0.1).</div><p class="pst">Sample Input</p><pre class="sio">100.0
+4
+Jones
+Smiths
+Howards
+Wangs
+5
+Jones Smiths 2.0
+Jones Howards 4.2
+Jones Wangs 6.7
+Howards Wangs 4.0
+Smiths Wangs 10.0</pre><p class="pst">Sample Output</p><pre class="sio">Need 10.2 miles of cable</pre><p class="pst">

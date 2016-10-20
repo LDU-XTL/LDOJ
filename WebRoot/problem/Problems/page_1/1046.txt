@@ -1,0 +1,30 @@
+</p><div class="ptx" lang="en-US">A color reduction is a mapping from a set of discrete colors to a smaller one. The solution to this problem requires that you perform just such a mapping in a standard twenty-four bit RGB color space. The input consists of a target set of sixteen RGB color values, and a collection of arbitrary RGB colors to be mapped to their closest color in the target set. For our purposes, an RGB color is defined as an ordered triple (R,G,B) where each value of the triple is an integer from 0 to 255. The distance between two colors is defined as the Euclidean distance between two three-dimensional points. That is, given two colors (R1,G1,B1) and (R2,G2,B2), their distance D is given by the equation
+<br><center><img src="images/1046/color.gif"></center></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input is a list of RGB colors, one color per line, specified as three integers from 0 to 255 delimited by a single space. The first sixteen colors form the target set of colors to which the remaining colors will be mapped. The input is terminated by a line containing three -1 values.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each color to be mapped, output the color and its nearest color from the target set.
+<br>
+<br>If there are more than one color with the same smallest distance, please output the color given first in the color set.</div><p class="pst">Sample Input</p><pre class="sio">0 0 0
+255 255 255
+0 0 1
+1 1 1
+128 0 0
+0 128 0
+128 128 0
+0 0 128
+126 168 9
+35 86 34
+133 41 193
+128 0 128
+0 128 128
+128 128 128
+255 0 0
+0 1 0
+0 0 0
+255 255 255
+253 254 255
+77 79 134
+81 218 0
+-1 -1 -1
+</pre><p class="pst">Sample Output</p><pre class="sio">(0,0,0) maps to (0,0,0)
+(255,255,255) maps to (255,255,255)
+(253,254,255) maps to (255,255,255)
+(77,79,134) maps to (128,128,128)
+(81,218,0) maps to (126,168,9)</pre><p class="pst">

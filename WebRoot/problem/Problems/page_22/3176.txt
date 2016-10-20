@@ -1,0 +1,30 @@
+</p><div class="ptx" lang="en-US">The cows don't use actual bowling balls when they go bowling.  They each take a number (in the range 0..99), though, and line up in a standard bowling-pin-like triangle like this:
+<br>
+<br><pre>          7
+<br>
+<br>        3   8
+<br>
+<br>      8   1   0
+<br>
+<br>    2   7   4   4
+<br>
+<br>  4   5   2   6   5</pre>Then the other cows traverse the triangle starting from its tip and moving "down" to one of the two diagonally adjacent cows until the "bottom" row is reached.  The cow's score is the sum of the numbers of the cows visited along the way. The cow with the highest score wins that frame.
+<br>
+<br>Given a triangle with N (1 <= N <= 350) rows, determine the highest possible sum achievable.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Line 1: A single integer, N
+<br>
+<br>Lines 2..N+1: Line i+1 contains i space-separated integers that represent row i of the triangle.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Line 1: The largest sum achievable using the traversal rules</div><p class="pst">Sample Input</p><pre class="sio">5
+7
+3 8
+8 1 0
+2 7 4 4
+4 5 2 6 5</pre><p class="pst">Sample Output</p><pre class="sio">30</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Explanation of the sample:
+<br>
+<br><pre>          7
+<br>         *
+<br>        3   8
+<br>       *
+<br>      8   1   0
+<br>       *
+<br>    2   7   4   4
+<br>       *
+<br>  4   5   2   6   5</pre>The highest score is achievable by traversing the cows as shown above.</div><p class="pst">

@@ -1,0 +1,36 @@
+</p><div class="ptx" lang="en-US">Though the story of Shaolong Xiang, the great time-traveler, is not recorded in the history, some recent discoveries show the possibility that the ancient mystery visitor might really exist. Several months ago, a strange machine was found together with some newly unearthed terra-cotta warriors. That machine looks like a modern machine and even has some electronic parts - that's why people take Mr. Xiang into consideration when guessing the origin of the strange machine.
+<br>
+<br>After careful examinations, scientists finally figured out what the machine is - it actually is a vending machine in Qin dynasty! There is a hole on a panel of the machine, and scientists are pretty sure that Qin people put their coins into the machine through that hole to buy things. As you know, there were too many different types of coins before Qin dynasty and Emperor Qin Shihuang didn't like that. But scientists found an announcement made by Qin Shihuang carved on the machine, saying that any coins which can go through the hole is still legal to use. Now your task is to determine whether a certain type of coin can be put into the hole-from these results we might find some clues about the mystery time-traveler.
+<br>
+<br>The hole on the panel is a polygon and all coins also have a shape of polygon. THEY ALL MAYBE CONCAVE. Scientist found out that ancient people use the vending machine this way: The panel with the hole was positioned horizontally, and the customer chose a best position above the hole to hold a coin. Then the customer dropped the coin. During the process of felling down, the coin WOULD NOT ROTATE in any direction. If the coin could go through the hole, the coin is considered "legal". Otherwise, the coin is judged "illegal". If the coin just merely touched the edges of the hole but was not blocked, it was considered as legal. For example, as shown in the sample input, a square coin with side length 5 can go through a triangle hole with sides of length 3, 4 and 5, so it's legal.
+<br>
+<br><center><img src="images/3830_1.png"></center>
+<br>
+<br>Please note that coins and the panel are all considered as no thickness.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains an integer T representing the number of test cases (0 &lt; T &lt;= 20). For each test case, the first line contains an integer N (3 &lt;= N &lt;= 20), representing the number of vertexes of the hole-polygon.
+<br>
+<br>Next N lines describe the shape of the hole-polygon by listing positions of all vertexes in counterclockwise order. Each line contains two real numbers r<sub>1</sub> and r<sub>2</sub> (-100 &lt;= r<sub>1</sub>, r<sub>2</sub> &lt;= 100), describing the position of a vertex.
+<br>
+<br>The next line contains an integer M (3 &lt;= M &lt;= 20), representing the number of vertexes of the coin-polygon.
+<br>
+<br>Next M lines describe the shape of the coin-polygon by listing positions of all vertexes in counterclockwise order. Each line contains two real numbers r<sub>1</sub> and r<sub>2</sub> (-100 &lt;= r<sub>1</sub>, r<sub>2</sub> &lt;= 100), describing the position of a vertex.
+<br>
+<br>The positions mentioned above are relative coordinates but not absolute values.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output one line containing either the word 'legal' or the word 'illegal', which represents that the coin can or can't go through the hole.</div><p class="pst">Sample Input</p><pre class="sio">2
+4
+0 0
+4 0
+4 1
+0 1
+3
+0 4
+1 4
+1 0
+3
+0 0
+4 0
+0 3
+4
+0 0
+5 0
+5 5
+0 5</pre><p class="pst">Sample Output</p><pre class="sio">legal
+legal</pre><p class="pst">

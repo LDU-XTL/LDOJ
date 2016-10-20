@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">The cows play the child's game of hopscotch in a non-traditional way.  Instead of a linear set of numbered boxes into which to hop, the cows create a 5x5 rectilinear grid of digits parallel to the x and y axes.
+<br>
+<br>They then adroitly hop onto any digit in the grid and hop forward, backward, right, or left (never diagonally) to another digit in the grid. They hop again (same rules) to a digit (potentially a digit already visited).
+<br>
+<br>With a total of five intra-grid hops, their hops create a six-digit integer (which might have leading zeroes like 000201).
+<br>
+<br>Determine the count of the number of distinct integers that can be created in this manner.</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Lines 1..5: The grid, five integers per line</div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: The number of distinct integers that can be constructed</div><p class="pst">Sample Input</p><pre class="sio">1 1 1 1 1
+1 1 1 1 1
+1 1 1 1 1
+1 1 1 2 1
+1 1 1 1 1</pre><p class="pst">Sample Output</p><pre class="sio">15</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">OUTPUT DETAILS:
+<br>111111, 111112, 111121, 111211, 111212, 112111, 112121, 121111, 121112, 121211, 121212, 211111, 211121, 212111, and 212121 can be constructed.  No other values are possible.</div><p class="pst">

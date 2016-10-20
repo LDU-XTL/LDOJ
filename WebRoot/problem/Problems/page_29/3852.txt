@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">Stringld (left delete) is a function that gets a string and deletes its leftmost character (for instance Stringld(“acm”) returns “cm”).
+<br>
+<br>You are given a list of distinct words, and at each step, we apply stringld on every word in the list. Write a program that determines the number of steps that can be applied until at least one of the conditions become true:
+<br>
+<br>1) A word becomes empty string, or
+<br>2) a duplicate word is generated.
+<br>
+<br>For example, having the list of words aab, abac, and caac, applying the function on the input for the first time results in ab, bac, and aac. For the second time, we get b, ac, and ac. Since in the second step, we have two ac strings, the condition 2 is true, and the output of your program should be 1. Note that we do not count the last step that has resulted in duplicate string. More examples are found in the sample input and output section.</div><p class="pst">Input</p><div class="ptx" lang="en-US">There are multiple test cases in the input. The first line of each test case is n (1 <= n <= 100), the number of words.
+<br>Each of the next n lines contains a string of at most 100 lower case characters.
+<br>The input terminates with a line containing 0.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, write a single line containing the maximum number of stringld we can call.</div><p class="pst">Sample Input</p><pre class="sio">4
+aaba
+aaca
+baabcd
+dcba
+3
+aaa
+bbbb
+ccccc
+0</pre><p class="pst">Sample Output</p><pre class="sio">1
+2</pre><p class="pst">

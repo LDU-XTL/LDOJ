@@ -1,0 +1,77 @@
+</p><div class="ptx" lang="en-US">The Japan company you are working for produce plotter devices that can draw nice pictures. To support customers who do not posses the special hardware, you were asked to write an emulation driver that simulates the work of the plotter and prints the picture on a computer screen. 
+<br>
+<br>The plotter is driven with a simple language consisting of several drawing commands: 
+<br><ul><li>POINT x y -- makes a little circle at the given coordinates. 
+<br><li>TEXT x y txt -- displays a line of text at the given coordinates. 
+<br><li>LINE x1 y1 x2 y2 -- draws a line between the specified points. 
+<br><li>CLEAR x1 y1 x2 y2 -- erases the given rectangle. 
+<br><li>PRINT -- prints an output page and terminates the current job. </ul>
+<br>The emulation driver uses few ASCII characters to represent the picture, one character being a basic unit of the coordinate system. The top-left character has coordinates (1,1). The X-axis aims to the right, the Y-axis goes down. 
+<br>
+<br>The particular commands are emulated as follows: 
+<br><ul><li>POINT: The driver puts a lowercase letter "o" at the given coordinates. 
+<br><li>TEXT: Shows a single line of text, the first character is positioned at the given coordinates and the text always goes right. 
+<br><li>LINE: Simulates a straight line between two points. The line is formed by one of the following characters: dash ("-"), pipe ("|"), slash ("/"), or backslash ("\"), according to its direction. 
+<br><li>CLEAR: The driver fills the appropriate rectangular area with spaces, including the bounding rows and columns. 
+<br><li>PRINT: This command causes the driver to print the picture surrounded with a nice frame made of plus ("+"), minus ("-"), and pipe ("|") characters. </ul>
+<br>If more objects should be drawn across a single character, the following rules apply: 
+<br><ul><li>If the same character is drawn several times, it is used without a change. 
+<br><li>If only pipe and minus characters are involved, they result in the plus sign ("+"). 
+<br><li>If only slashes and backslashes are involved, the result is the lowercase letter "x". 
+<br><li>Otherwise, the asterisk ("*") is displayed. </ul>
+<br>Before a script is given to the driver, it is checked by a special preprocessor, which rejects all invalid commands. Therefore, you may assume that all coordinates are within the range of the page. Also, with the LINE command, the two points are always different and the line is strictly either vertical, horizontal, or at the angle of 45<sup>o</sup> to the axes. There is no assumption on the relative position of the points used with the LINE and CLEAR commands. The text in the TEXT command is always composed only of uppercase letter and digits. 
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several scripts. Each script begins with a line containing two integers X and Y, separated with space, 1 <= X, Y <= 75. These numbers specify the dimensions of the page. Every other line contains exactly one of the above commands. The commands are always uppercase, command arguments are separated with one space. 
+<br>
+<br>The PRINT command is always the last command of the script. After the PRINT command, a new script begins. The input is terminated with two zeros, which are not considered to be a script. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each script, output the emulated picture, created as specified above. After the picture, print one blank line.</div><p class="pst">Sample Input</p><pre class="sio">20 10
+LINE 3 2 11 10
+LINE 3 10 11 2
+LINE 20 3 8 3
+TEXT 6 8 TEST
+LINE 19 1 19 10
+LINE 17 10 17 1
+LINE 16 1 16 10
+LINE 13 6 20 6
+CLEAR 20 5 15 7
+LINE 18 1 18 10
+TEXT 12 10 NICEPICTURE
+POINT 1 1
+POINT 3 2
+PRINT
+1 1
+POINT 1 1
+CLEAR 1 1 1 1
+PRINT
+3 3
+LINE 2 1 2 3
+LINE 1 2 3 2
+LINE 2 3 2 1
+LINE 3 2 1 2
+LINE 2 1 2 3
+LINE 1 2 3 2
+PRINT
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">+--------------------+
+|o              |||| |
+|  *       /    |||| |
+|   \   --*-----++++-|
+|    \   /      |||| |
+|     \ /         |  |
+|      x     --   |  |
+|     / \         |  |
+|    /TES*      |||| |
+|   /     \     |||| |
+|  /       \NICE****U|
++--------------------+
+
++-+
+| |
++-+
+
++---+
+| | |
+|-+-|
+| | |
++---+
+
+</pre><p class="pst">

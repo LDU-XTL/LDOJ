@@ -1,0 +1,59 @@
+</p><div class="ptx" lang="en-US">A mail order company is in great trouble. It maintains a file containing records of address of its customers. Due to mishandling the file is corrupted and there is no back up of the file. The company needs a program to recover the addresses. You are required to develop a program for the company. The company provides you with the following information: 
+<br>
+<br>1. Generally a record in the file contains five fields: Id-no, Name, Location, Post-office, and Area. However the field named Area may or may not be present in an address. Hence the total number of fields in a record is either 4 or 5. Initially the fields are arranged in the order, called the normal order, in which they are mentioned above. But due to mishandling, the order of the fields (but not the contents) might have changed. 
+<br>
+<br>2. Each record begins with the begin-record-line containing the character @ followed by an integer representing the record number. The file ends with the end-file-line containing the character $ followed by an integer representing the total number of records in the file. 
+<br>
+<br>3. A field has one or more lines. Id-no, Name and Post-office contain only one line each while Location has at least one line and Area, if present, may have one or more lines. 
+<br>
+<br>4. A line is a sequence of words terminated by a semi-colon. The blank character is used freely to separate words in a line. Sometimes a comma may also be used to separate words in Name, Location and Area. Likewise a hyphen may be present between two words in Id-no and Post-office. 
+<br>
+<br>5. A word may be alphabetic (string of letters a-z, A-Z), numeric (string of digits 0-9) or alphanumeric (string of letters a-z, A-Z and/or digits 0-9). 
+<br>
+<br>6. Id-no may contain any type of word. In addition to the blank character, at least one hyphen is used to separate words in Id-no. 
+<br>
+<br>7. Words in Name are alphabetic. A Name has two parts: a name-part and a surname-part. Normally the surname-part appears at the end. However if it appears at the beginning then a comma separates it from the name-part. 
+<br>
+<br>8. Like Id-no, Location may contain any type of words. However hyphen is never used in Location. 
+<br>
+<br>9. Post-office contains a pin-code represented by a six-digit numeric word. The pin-code is preceded by one or more alphabetic words identifying the name of the post-office. In addition to the blank character a hyphen may also be used to separate the pin-code from the name of the post office. 
+<br>
+<br>10. Area, when present, contains only alphabetic words. However each word in Area begins with a capital letter and may end up with a comma. 
+<br>
+<br>Due to imprecise information stated above, a line of the corrupted file may appear to belong to more than one field. As a result it may not be always possible to recover a record uniquely or recover it at all. In case more than one option is available, all possible options for recovering the record should be identified and reported. In each recovered record the contents of the fields should be reserved exactly as they appeared in the input, only the order of fields need to be changed.
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input to the program is a corrupted address file described above and illustrated in the sample input. A record will never exceed 1000 characters and there are no more than 10 test cases.
+<br>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output of the program is the recovered address file with all possible options for recovering the corrupted input file. The structure of the output file is based on the input file structure. The beginning of a record is identified by the begin-record-line that contains in addition to the @ character and the record number, a number n denoting the number of options for recovering the record. A blank character precedes the number n. In case a record cannot be recovered due to any contradiction between the information contained in the record and the information provided by the company, the option number n is set equal to zero. The begin-record-line is followed by n options for recovering the record. Each option begins with a begin-option-line that contains a number of slash character (/) pertinent to the option number, e.g., the second option will begin with a line containing two slashes (//). Each option for recovering a record contains fields in the normal order. All blank characters and newline characters following a semi-colon that ends a field are considered belonged to the preceding field, not the following field. The file ends with the end-file-line that contains in addition to the character $ and the total number of records in the file, a number m denoting the total number of records recovered. A blank character precedes the number m. The output file structure is illustrated in sample output. In case there are more than one possible recovered address, they should be sorted to lexicographic order, and you may assumer the newline character('\n') is less than all other characters in comparison, and there are no more than 100 possible recovered addresses.</div><p class="pst">Sample Input</p><pre class="sio">@1
+gamma 436502;
+Beta Alpha;
+Nu5 321902;
+Epsilon, Theta;
+eta 123206;
+Sigma Kappa, Lambda;
+Zeta Delta;
+@2
+Alpha, Beta;
+eta 123206;
+Sigma Kappa, Lambda;
+Nu5 321902;
+gamma 436-502;
+Epsilon, Theta;
+$2
+</pre><p class="pst">Sample Output</p><pre class="sio">@1 0
+@2 2
+/
+gamma 436-502;
+Alpha, Beta;
+Sigma Kappa, Lambda;
+Nu5 321902;
+eta 123206;
+Epsilon, Theta;
+//
+gamma 436-502;
+Epsilon, Theta;
+Sigma Kappa, Lambda;
+Nu5 321902;
+eta 123206;
+Alpha, Beta;
+$2 1</pre><p class="pst">

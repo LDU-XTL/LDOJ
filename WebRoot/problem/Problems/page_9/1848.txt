@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Consider a tree with N vertices, numbered from 1 to N. Add, if it is possible, a minimum number of edges thus every vertex belongs to exactly one cycle.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input has the following structure:
+<br>N
+<br>x(1) y(1)
+<br>x(2) y(2)
+<br>...
+<br>x(N-1) y(n-1)
+<br>N (3 <= N <=100) is the number of vertices. x(i) and y(i) (x(i), y(i) are integers, 1 <= x(i), y(i) <= N) represent the two vertices connected by the i-th edge.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output will contain the value -1 if the problem doesn't have a solution, otherwise an integer, representing the number of added edges.</div><p class="pst">Sample Input</p><pre class="sio">7
+1 2
+1 3
+3 5
+3 4
+5 6
+5 7
+</pre><p class="pst">Sample Output</p><pre class="sio">2</pre><p class="pst">

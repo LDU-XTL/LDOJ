@@ -1,0 +1,7 @@
+</p><div class="ptx" lang="en-US">Luke Skywalker races through the forest on a speeder bike, trying to outrun a patrol of Imperial scouts on Endor. A small moon near a new Death Star, Endor is covered by dense foliage and a thick forest of ancient towering trees. The speeder bike , which Luke stole from an Imperial scout, is an antigravity vehicle capable of speeds of 200 miles an hour. How quickly can Luke reach Princess Leia in the Ewok village? 
+<br>The forest is a plane with T trees. Luke's position is specified by a pair of coordinates ( x<sub>luke</sub> , y<sub>luke</sub> ) within the plane. The Ewok village has coordinates ( x<sub>ewok</sub> , y<sub>ewok</sub> ). You are to find the shortest travel time from Luke's position to the Ewok village. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains T, x<SUB>luke</SUB> , y<SUB>luke</SUB> x<SUB>ewok</SUB> , y<SUB>ewok</SUB> . T lines follow; each gives the coordinates and diameter of a tree: x<SUB>tree<SUB>i</SUB></SUB> , y<SUB>tree<SUB>i</SUB></SUB> , d<SUB>tree<SUB>i</SUB></SUB> . T is an integer not exceeding 10; coordinates and diameters are real numbers in miles. Trees do not intersect or touch one another. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Output is a single real number, to two decimal places, giving the minimum travel time in seconds.</div><p class="pst">Sample Input</p><pre class="sio">2 0.0 0.0 10.0 0.0
+4.0 0.0 1.0
+6.0 0.0 1.0
+</pre><p class="pst">Sample Output</p><pre class="sio">181.13
+</pre><p class="pst">

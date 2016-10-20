@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">Organizing a programming contest is not an easy job. To avoid making the problems too difficult, the organizer usually expect the contest result satisfy the following two terms:
+<br>1.	All of the teams solve at least one problem.
+<br>2.	The champion (One of those teams that solve the most problems) solves at least a certain number of problems.
+<br>
+<br>Now the organizer has studied out the contest problems, and through the result of preliminary contest, the organizer can estimate the probability that a certain team can successfully solve a certain problem.
+<br>
+<br>Given the number of contest problems M, the number of teams T, and the number of problems N that the organizer expect the champion solve at least. We also assume that team i solves problem j with the probability Pij (1 <= i <= T, 1<= j <= M). Well, can you calculate the probability that all of the teams solve at least one problem, and at the same time the champion team solves at least N problems?
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several test cases. The first line of each test case contains three integers M (0 < M <= 30), T (1 < T <= 1000) and N (0 < N <= M). Each of the following T lines contains M floating-point numbers in the range of [0,1]. In these T lines, the j-th number in the i-th line is just Pij. A test case of M = T = N = 0 indicates the end of input, and should not be processed.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, please output the answer in a separate line. The result should be rounded to three digits after the decimal point. </div><p class="pst">Sample Input</p><pre class="sio">2 2 2
+0.9 0.9
+1 0.9
+0 0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">0.972</pre><p class="pst">

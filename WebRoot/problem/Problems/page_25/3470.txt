@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US"><p>There are <i>N</i> walls. A wall has an infinity height, so it looks like a segment in a plane from high sky. Obviously, they don't intersect. Let's take a series of interesting experiments. Everytime, we put a lovely bird called Xiaoniao in the place. Then, she will choose any one of four possible directions paralleled to axes and disregarded anything else but fly forward. It may occur that she touch a wall and fainted. So poor Xiaoniao is, she always choose the direction which made her fainted as early as possible. You're asked to count, how many times did Xiaoniao touched each wall.</p><p>It is guaranteed that each time there will be exactly one direction that makes Xiaoniao faints as early as possible. I.E. She won't have no choice to get faint, neither have more than one direction producing the same fainting time. Xiaoniao won't be placed on a wall, either. Touching an end point of a wall is also considered a touch.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line contains <i>N</i> and <i>M</i> (both not exceeding 50,000). <i>M</i> is the number we put Xiaoniao in the place.<br>The following <i>N</i> lines describe the walls. Each line consists 4 integers <i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>, <i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>, meaning a wall from (<i>x</i><sub>1</sub>,<i>y</i><sub>1</sub>) to (<i>x</i><sub>2</sub>,<i>y</i><sub>2</sub>). The wall is always parallel to the coordinate axes.<br>The next <i>M</i> lines describe where we put Xiaoniao. Each line consists 2 integers <i>x</i> and <i>y</i>. This means we put Xiaoniao at the point (<i>x</i>,<i>y</i>).</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p><i>N</i> lines, <i>i</i>-th line contains one integer that is the number of Xiaoniao touches the <i>i</i>-th wall.</p></div><p class="pst">Sample Input</p><pre class="sio">4 4
+10 0 10 40
+0 40 40 40
+10 10 50 10
+40 50 40 10
+15 12
+12 35
+35 38
+38 15</pre><p class="pst">Sample Output</p><pre class="sio">1
+1
+1
+1</pre><p class="pst">

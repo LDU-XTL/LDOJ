@@ -1,0 +1,42 @@
+</p><div class="ptx" lang="en-US"><center><img src=images/2026_1.jpg></center>
+<br>As president of a startup airline company, you have started a frequent flier program that rewards customers for every mile they travel. As a for-profit company, you have a vested interest in minimizing the number of frequent flier miles that a person can earn on any one trip. To get an idea of how many miles a customer could earn flying the existing network, you've decided to write a program. 
+<br>
+<br>Assumptions: 
+<br><ul><li>A passenger's itinerary is one-way (no return flight). 
+<br><li>Every itinerary takes the shortest route from the departing city to the destination city. 
+<br><li>Frequent flier miles are counted "as the crow flies" (i.e., the shortest route across the earth's surface that connects the cities along the route). 
+<br><li>The earth's surface is a perfect sphere with radius 4000 miles. </ul></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains a single integer n indicating the number of data sets. Each data set will be formatted according to the following description: 
+<br>
+<br>A single data set has 3 components: 
+<br><ol><li>Header Line - A single line, "X Y", where X is the number of cities and Y is the number of flight legs in the airline's network. Both will be positive integers less than 100. 
+<br><li>City List - A list of cities and their locations, one city per line. The line will be of the format 
+<br>"C LA NS LO EW" where: 
+<br><ul><li>C is the name of the city (no spaces, alphabetical, first letter only upper case) 
+<br><li>LA is the degrees of latitude where the city is located (from 0 to 90) 
+<br><li>NS is the direction of latitude ('N'orth or 'S'outh of the equator) 
+<br><li>LO is the degrees of longitude where the city is located (from 0 to 180) 
+<br><li>EW is the direction of longitude ('E'ast or 'W'est of the prime meridian) </ul>
+<br><li>Flight List - A list of city pairs of the format "B C" representing different cities that are directly connected by flight legs, one pair per line. Note that "B C" is equivalent to "C B". </ol>
+<br>Note: 
+<br><ul><li>Some longitude measurements can be represented in multiple ways (i.e., 180E = 180W) 
+<br><li>All degrees of latitude and longitude given in the input will be integers. 
+<br><li>The airline's network is connected (i.e., there is at least one route between any two cities). </ul>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, output the two cities that are farthest from each other (farthest in the sense that the shortest route between them is the longest of any city pair). You are guaranteed that there will be no ties. Display the city names on the same line, separated by a single space, sorted in dictionary order. </div><p class="pst">Sample Input</p><pre class="sio">2
+6 5
+Northpole 90 N 87 E
+Southpole 90 S 180 W
+Equatorone 0 N 45 W
+Equatortwo 0 S 90 E
+Equatorthree 0 S 180 E
+Equatorfour 0 N 46 W
+Equatorone Equatortwo
+Equatortwo Equatorthree
+Equatorthree Equatorfour
+Northpole Equatortwo
+Southpole Equatorthree
+2 1
+Northpole 90 N 0 E
+Southpole 90 S 0 W
+Southpole Northpole
+</pre><p class="pst">Sample Output</p><pre class="sio">Equatorfour Equatorone
+Northpole Southpole</pre><p class="pst">

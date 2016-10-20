@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US">Let n be any positive integer. A factor of n is any number that divides evenly into n, without leaving a remainder. For example, 13 is a factor of 52, since 52/13 = 4. A subsequence of n is a number without a leading zero that can be obtained from n by discarding one or more of its digits. For example, 2, 13, 801, 882, and 1324 are subsequences of 8013824, but 214 is not (you can't rearrange digits), 8334 is not (you can't have more occurrences of a digit than appear in the original number), 8013824 is not (you must discard at least one digit), and 01 is not (you can't have a leading zero). A subfactor of n is an integer greater than 1 that is both a factor and a subsequence of n. 8013824 has subfactors 8, 13, and 14. Some numbers do not have a subfactor; for example, 6341 is not divisible by 6, 3, 4, 63, 64, 61, 34, 31, 41, 634, 631, 641, or 341. 
+<br>
+<br>An x-subfactor series of n is a decreasing series of integers n1, ..., nk, in which (1) n = n1, (2) k >= 1, (3) for all 1 <= i < k, n<sub>i+1</sub> is obtained from ni by first discarding the digits of a subfactor of ni, and then discarding leading zeros, if any, and (4) nk has no subfactor. The term "x-subfactor" is meant to suggest that a subfactor gets x'ed, or discarded, as you go from one number to the next. For example, 2004 has two distinct x-subfactor series, the second of which can be obtained in two distinct ways. The highlighted digits show the subfactor that was removed to produce the next number in the series. 
+<br><pre>2004   4
+<br>2004   200   0
+<br>2004   200   0 </pre>
+<br>The primary x-subfactor series has maximal length (the largest k possible, using the notation above). If there are two or more maximal-length series, then the one with the smallest second number is primary; if all maximal-length series have the same first and second numbers, then the one with the smallest third number is primary; and so on. Every positive integer has a unique primary x-subfactor series, although it may be possible to obtain it in more than one way, as is the case with 2004. 
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of one or more positive integers, each less than one billion, without leading zeroes, and on a line by itself. Following is a line containing only "0" that signals the end of the input. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each positive integer, output its primary x-subfactor series using the exact format shown in the examples below.</div><p class="pst">Sample Input</p><pre class="sio">123456789
+7
+2004
+6341
+8013824
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">123456789 12345678 1245678 124568 12456 1245 124 12 1
+7
+2004 200 0
+6341
+8013824 13824 1324 132 12 1
+</pre><p class="pst">

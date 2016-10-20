@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US"><div><p>LL bought a big cake on his birthday, which was circle looked from above. HH found it and cut the cake into pieces secretly using a big knife. Each cut was a straight line through the cake. Since HH cut it irregularly, the cake was cut into a mess. Of course at last LL found it and got angry, so he decided to discuss with HH.</p><p>LL :"I planed to share it with you at the beginning, but now you can only eat one piece."</p><p>HH :"OK... I will choose the largest piece..."</p><p>Please help HH to choose the largest one. </p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>The first line of input contains one integer specifying the number of test cases to follow. Each test case begins with a line containing one integer <i>N</i> (1 &le; <i>N</i> &le; 100), the number of cut HH performed. </p><p>Following N lines each contains two numbers describe the ith cut as following:</p><p>Suppose the origin is at the center of the cake. Each cut intersects the cake at two points. The polar angles of the two intersections are the given two numbers. They are in range [-&pi;, &pi;).</p><p>Note: No three cut intersects at one point. Any two cut are distinct. The cake has radius 10.0.</p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div>For each test case, output a line containing one number - the area of the largest piece rounded to hundreds. </div></div><p class="pst">Sample Input</p><pre class="sio">3
+2
+-3.140000 0.000000
+-1.000000 1.000000
+2
+-3.141592 0.000000
+-1.570796 1.570796
+3
+-3.000000 3.000000
+-2.000000 2.000000
+-1.000000 1.000000
+</pre><p class="pst">Sample Output</p><pre class="sio">129.96
+78.54
+183.30
+</pre><p class="pst">

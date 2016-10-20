@@ -1,0 +1,49 @@
+</p><div class="ptx" lang="en-US">Jake decided to take the gearbox of his car apart and put it back together for 'learning purposes'. A gearbox is a box containing many gears, cogs and sprockets (as well as several springs and pinions). All these parts are connected together in intricate ways. Consequently, he is not completely sure if every part is in the correct position again.
+<br>All gears are placed on metal rods; when one gear on a rod turns, they all turn by an equal angle. The rods are connected by springs and plastic bars, but Jake is pretty sure he has that part right. The cogs and sprockets are not connected to anything, they are free to rattle around in the box. This may be a bit strange, but a quick Google search reveals that this is customary for gearboxes of this type.
+<br>The only problem is that some gears are interlocked, which could cause the main drive shaft to jam. The gearbox uses modern InfiniTeeth<sup>TM</sup> gears, which means that it is impossible to count the number of teeth on a gear. All gears have a type number, and gears of the same type have the same number of teeth. According to the manual (which Jake should have read before he started this mess) all rods should be able to turn, regardless of the number of teeth on each type of gear. So Jake concludes that if this is true for his gearbox it is definitely assembled correctly.
+<br>
+<br><center><img src="images/3884_1.png"></center></div><p class="pst">Input</p><div class="ptx" lang="en-US">On the first line of the input is a positive integer, the number of test cases. Then for each test case:
+<br>A line with three integers ng, nr and ni (all < 10<sup>5</sup>), the number of gears, rods and interlockings.
+<br>ng lines, each containing two integers 0 < ti < 100 and 0 &lt;= ri < nr, the type number of gear i and the index of the rod it is on respectively.
+<br>ni lines, each containing two integers 0 &lt;= aj < bj < ng, indicating that gears aj and bj are interlocked.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case:
+<br>One line containing the text "ok" if the gearbox is denitely assembled correctly, and "jammed" otherwise.</div><p class="pst">Sample Input</p><pre class="sio">4
+2 2 1
+1 0
+2 1
+0 1
+8 4 4
+20 0
+10 1
+20 2
+10 3
+30 0
+30 1
+40 2
+40 3
+0 1
+2 3
+4 6
+5 7
+8 4 4
+20 0
+10 1
+20 2
+10 3
+30 0
+40 1
+40 2
+30 3
+0 1
+2 3
+4 6
+5 7
+3 3 3
+1 0
+1 1
+1 2
+0 1
+0 2
+1 2</pre><p class="pst">Sample Output</p><pre class="sio">ok
+ok
+jammed
+jammed</pre><p class="pst">

@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US">The company Chris Ltd. is preparing a new sorting hardware called Maximizer. Maximizer has n inputs numbered from 1 to n. Each input represents one integer. Maximizer has one output which represents the maximum value present on Maximizer's inputs. 
+<br>
+<br>Maximizer is implemented as a pipeline of sorters Sorter(i1, j1), ... , Sorter(ik, jk). Each sorter has n inputs and n outputs. Sorter(i, j) sorts values on inputs i, i+1,... , j in non-decreasing order and lets the other inputs pass through unchanged. The n-th output of the last sorter is the output of the Maximizer. 
+<br>
+<br>An intern (a former ACM contestant) observed that some sorters could be excluded from the pipeline and Maximizer would still produce the correct result. What is the length of the shortest subsequence of the given sequence of sorters in the pipeline still producing correct results for all possible combinations of input values? 
+<br>
+<br>Task
+<br>Write a program that:
+<br>
+<br>reads a description of a Maximizer, i.e. the initial sequence of sorters in the pipeline, 
+<br>computes the length of the shortest subsequence of the initial sequence of sorters still producing correct results for all possible input data, 
+<br>writes the result. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains two integers n and m (2 <= n <= 50000, 1 <= m <= 500000) separated by a single space. Integer n is the number of inputs and integer m is the number of sorters in the pipeline. The initial sequence of sorters is described in the next m lines. The k-th of these lines contains the parameters of the k-th sorter: two integers ik and jk (1 <= ik < jk <= n) separated by a single space. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output consists of only one line containing an integer equal to the length of the shortest subsequence of the initial sequence of sorters still producing correct results for all possible data. </div><p class="pst">Sample Input</p><pre class="sio">40 6
+20 30
+1 10
+10 20
+20 30
+15 25
+30 40
+</pre><p class="pst">Sample Output</p><pre class="sio">4
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Huge input data, scanf is recommended.</div><p class="pst">

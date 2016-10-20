@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">You have a drawer that is full of two kinds of socks: red and black. You know that there are at least 2 socks, and not more than 50000. However, you do not know how many there actually are, nor do you know how many are red, or how many are black. (Your mother does the laundry!) 
+<br>You have noticed, though, that when you reach into the drawer each morning and choose two socks to wear (in pitch darkness, so you cannot distinguish red from black), the probability that you pick two red socks is exactly p/q, where 0 < q and 0 <= p <= q. 
+<br>
+<br>From this, can you determine how many socks of each colour are in your drawer? There may be multiple solutions - if so, pick the solution with the fewest total number of socks. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of multiple problems, each on a separate line. Each problem consists of the integers p and q separated by a single space. Note that p and q will both fit into an unsigned long integer. 
+<br>Input is terminated by a line consisting of two zeroes. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each problem, output a single line consisting of the number of red socks and the number of black socks in your drawer, separated by one space. If there is no solution to the problem, print "impossible". </div><p class="pst">Sample Input</p><pre class="sio">1 2
+6 8
+12 2499550020
+56 789
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">3 1
+7 1
+4 49992
+impossible
+</pre><p class="pst">

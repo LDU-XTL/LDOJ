@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US"><p>We have <i>N </i>(<i>N</i> &le; 10000) objects, and wish to classify them into several groups by judgement of their resemblance. To simply the model, each object has 2 indexes <i>a</i> and <i>b</i> (<i>a</i>, <i>b</i> &le; 500). The resemblance of object <i>i</i> and object <i>j</i> is defined by <i>d<sub>ij</sub></i> = |<i>a<sub>i </sub></i>-<i> a<sub>j</sub></i>| + |<i>b<sub>i </sub></i>-<i> b<sub>j</sub></i>|, and then we say <i>i</i> is <i>d<sub>ij</sub></i> resemble to <i>j</i>. Now we want to find the minimum value of <i>X</i>, so that we can classify the <i>N</i> objects into <i>K</i> (<i>K </i>&lt; N) groups, and in each group, one object is at most <i>X</i> resemble to another object in the same group, i.e, for every object <i>i</i>, if <i>i</i> is not the only member of the group, then there exists one object <i>j</i> (i &ne; j) in the same group that satisfies <i>d<sub>ij</sub></i> &le; <i>X</i></p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line contains two integers <i>N</i> and <i>K</i>. The following <i>N</i> lines each contain two integers <i>a</i> and <i>b</i>, which describe a object. </p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>A single line contains the minimum X. </p></div><p class="pst">Sample Input</p><pre class="sio">6 2
+1 2
+2 3
+2 2
+3 4
+4 3
+3 1
+</pre><p class="pst">Sample Output</p><pre class="sio">2</pre><p class="pst">

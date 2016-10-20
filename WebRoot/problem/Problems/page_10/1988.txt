@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">Farmer John and Betsy are playing a game with N (1 <= N <= 30,000)identical cubes labeled 1 through N. They start with N stacks, each containing a single cube. Farmer John asks Betsy to perform P (1<= P <= 100,000) operation.  There are two types of operations:
+<br>moves and counts.
+<br>  * In a move operation, Farmer John asks Bessie to move the stack containing cube X on top of the stack containing cube Y.
+<br>  * In a count operation, Farmer John asks Bessie to count the  number of cubes on the stack with cube X that are under the cube X and report that value.
+<br>
+<br>Write a program that can verify the results of the game.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: A single integer, P
+<br>
+<br>* Lines 2..P+1: Each of these lines describes a legal operation. Line 2 describes the first operation, etc.  Each line begins with a 'M' for a move operation or a 'C' for a count operation.  For move operations, the line also contains two integers: X and Y.For count operations, the line also contains a single integer: X.
+<br>
+<br>Note that the value for N does not appear in the input file. No move operation will request a move a stack onto itself.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Print the output from each of the count operations in the same order as the input file.
+<br></div><p class="pst">Sample Input</p><pre class="sio">6
+M 1 6
+C 1
+M 2 4
+M 2 6
+C 3
+C 4
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+0
+2
+</pre><p class="pst">

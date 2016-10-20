@@ -1,0 +1,33 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Eugenics is the basis for our healthy development. Almost all nations are issuing laws to enforce or advocate eugenics. According to research in genetics, many diseases will have a high probability to be passed down to the descendants who were born from intermarriage. Thus, preventing intermarriage has become an important part of eugenics.</p><p>In China, it is now against the law to have intermarriage. The marriage law states, &ldquo;No marriage may be contracted&hellip; if the man and the woman are lineal relatives by blood, or collateral relatives by blood up to the third degree of kinship&hellip;&rdquo; One cannot marry his/her parents or grandparents, nor can he/she marry his/her children or grandchildren. Marriage with his/her sisters/brothers, cousins, aunts/uncles, nieces/nephews is also forbidden.</p><p>As a staff of the Civil Affairs Bureau, you often have to check whether two people can have a marriage based on the family trees given, for example:</p><div><p align="center"><img src="images/3217_1.png"></div><p>Nodes in the family tree represent persons and the numbers on the nodes represent names. So now if 10 and 24 come for a marriage license, by checking family tree, it is OK and we output &ldquo;marriage&rdquo;, if 24 and 26 come for marriage, surely it is forbidden and we output &ldquo;close&rdquo;. If two people of the same gender come for license, we output &ldquo;same&rdquo;.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input contains several lines, the first line has two integers, which represent the names of the two persons. The following lines represent the family tree of two persons. Each line has several integers separated by blanks. The first number of each line represents the number of node, and the followed integers represent the direct descendants of he/she. The last integer of each line will be an integer: 0 or &minus;1, representing that the person described in this line is male/female, respectively.</p><p>The input assures that:</p><ul><li>All numbers are in the range [1, 100].</li><li>No two persons who have already married will come for a license.</li><li>To simplify the problem, we will assume that the input will not contain any means of fornication.</li></ul></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The output contains only one line and one word, representing whether the two persons can have a marriage license. If they can, output &ldquo;marriage&rdquo;; if they are of the same gender, output &ldquo;same&rdquo;; if they are close relatives, output &ldquo;close&rdquo;; if they are both same gender and close relatives, output &ldquo;same&rdquo;.</p></span></div><p class="pst">Sample Input</p><pre class="sio">10 24
+1 3 4 5 0
+2 3 4 5 -1
+3 7 8 -1
+4 0
+5 0
+6 7 8 0
+7 10 0
+8 -1
+9 10 -1
+10 -1
+11 13 14 15 16 0
+12 13 14 15 16 -1
+13 21 22 -1
+14 0
+15 0
+16 18 19 -1
+17 18 19 0
+18 31 32 0
+19 28 29 -1
+20 21 22 0
+21 24 0
+22 26 0
+23 24 -1
+24 0
+25 26 -1
+26 -1
+27 28 29 0
+28 -1
+29 0
+30 31 32 -1
+31 -1
+32 0</pre><p class="pst">Sample Output</p><pre class="sio">marriage</pre><p class="pst">

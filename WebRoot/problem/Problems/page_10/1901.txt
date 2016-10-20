@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">The president of the Galactic Federation has recently decided that all planets of the galaxy must establish hyper-radio centers to broadcast their programs. To ensure the process, the government has signed the contract with well known hyper-radio equipment manufacturer Trojan Horse Ltd. By the terms of this contract the company has to provide N hypertransmitters, one for each planet of the Federation. 
+<br>
+<br>It is known that there are two main political movements in the galaxy: industrialism and ecologism. On each planet of the galaxy one of these movements has the majority. It is clear that after establishing the hyper-radio station on the planet, the political programs of the station will support the movement that has the majority on this planet. 
+<br>
+<br>All transmitters supplied by Trojan Horse Ltd will have the same range, so hyper-radio programs from each planet will be heard at the distance not exceeding R parsecs from it. Since the company director is actually the agent of the Dark Empire, he wants to choose R in such a way, that it would destabilize the political situation in the Galactic Federation. 
+<br>
+<br>More precisely, for each planet A let N<sup>+</sup>(A) be the number of planets where the same political movement as in A has the majority and hyper-radio programs from A are received, including A itself. Similarly, let N<sup>-</sup>(A) be the number of planets where the other political movement has the majority and hyper-radio programs from A are received. The planet A is called destabilizing if N<sup>+</sup>(A) < N<sup>-</sup>(A).
+<br>
+<br>Your task is to choose such R that the number D of destabilizing planets is maximal possible. Since increasing transmitter's range requires more resources for its manufacturing, you must find the smallest possible R maximizing D.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains N -- the number of planets in the Galactic Federation (1 <= N <= 1000). Next N lines contain four integer numbers xi, yi, zi, and pi each and describe the planets: xi, yi, and zi specify the coordinates of the planet in space, pi = 0 if the industrialists have the majority on the planet and pi = 1 if the ecologists have the majority. All coordinates do not exceed 10 000 by their absolute value. No two planets occupy the same point. </div><p class="pst">Output</p><div class="ptx" lang="en-US">First output D -- the maximal possible number of destabilizing planets, and then followed on the second line by a non-negative real number R -- the minimal range that hyper-radio transmitters must have so that the number of destabilizing planets is D. R must be accurate within 10<sup>-4</sup> of the correct answer. </div><p class="pst">Sample Input</p><pre class="sio">4
+0 0 0 1
+0 1 0 0
+1 0 0 0
+1 1 0 1
+</pre><p class="pst">Sample Output</p><pre class="sio">4
+1.0000
+</pre><p class="pst">

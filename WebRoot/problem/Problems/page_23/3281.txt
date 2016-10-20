@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US"><p>Cows are such finicky eaters. Each cow has a preference for certain foods and drinks, and she will consume no others.</p><p>Farmer John has cooked fabulous meals for his cows, but he forgot to check his menu against their preferences. Although he might not be able to stuff everybody, he wants to give a complete meal of both food and drink to as many cows as possible.</p><p>Farmer John has cooked <i>F</i> (1 &le; <i>F</i> &le; 100) types of foods and prepared <i>D</i> (1 &le; <i>D</i> &le; 100) types of drinks. Each of his <i>N</i> (1 &le; <i>N</i> &le; 100) cows has decided whether she is willing to eat a particular food or drink a particular drink. Farmer John must assign a food type and a drink type to each cow to maximize the number of cows who get both.</p><p>Each dish or drink can only be consumed by one cow (i.e., once food type 2 is assigned to a cow, no other cow can be assigned food type 2).</p></div><p class="pst">Input</p><div class="ptx" lang="en-US">Line 1: Three space-separated integers: <i>N</i>, <i>F</i>, and <i>D</i>
+<br>Lines 2..<i>N</i>+1: Each line <i>i</i> starts with a two integers <i>F<sub>i</sub></i> and <i>D<sub>i</sub></i>, the number of dishes that cow <i>i</i> likes and the number of drinks that cow <i>i</i> likes. The next <i>F<sub>i</sub></i> integers  denote the dishes that cow <i>i</i> will eat, and the <i>D<sub>i</sub></i> integers following that denote the drinks that cow <i>i</i> will drink.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Line 1: A single integer that is the maximum number of cows that can be fed both food and drink that conform to their wishes</div><p class="pst">Sample Input</p><pre class="sio">4 3 3
+2 2 1 2 3 1
+2 2 2 3 1 2
+2 2 1 3 1 2
+2 1 1 3 3</pre><p class="pst">Sample Output</p><pre class="sio">3</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">One way to satisfy three cows is:
+<br>Cow 1: no meal
+<br>Cow 2: Food #2, Drink #2
+<br>Cow 3: Food #1, Drink #1
+<br>Cow 4: Food #3, Drink #3
+<br>The pigeon-hole principle tells us we can do no better since there are only three kinds of food or drink. Other test data sets are more challenging, of course.</div><p class="pst">

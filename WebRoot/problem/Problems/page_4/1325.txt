@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">As we all know, machine scheduling is a very classical problem in computer science and has been studied for a very long history. Scheduling problems differ widely in the nature of the constraints that must be satisfied and the type of schedule desired. Here we consider a 2-machine scheduling problem.
+<br>
+<br>There are two machines A and B. Machine A has n kinds of working modes, which is called mode_0, mode_1, ..., mode_n-1, likewise machine B has m kinds of working modes, mode_0, mode_1, ... , mode_m-1. At the beginning they are both work at mode_0.
+<br>
+<br>For k jobs given, each of them can be processed in either one of the two machines in particular mode. For example, job 0 can either be processed in machine A at mode_3 or in machine B at mode_4, job 1 can either be processed in machine A at mode_2 or in machine B at mode_4, and so on. Thus, for job i, the constraint can be represent as a triple (i, x, y), which means it can be processed either in machine A at mode_x, or in machine B at mode_y.
+<br>
+<br>Obviously, to accomplish all the jobs, we need to change the machine's working mode from time to time, but unfortunately, the machine's working mode can only be changed by restarting it manually. By changing the sequence of the jobs and assigning each job to a suitable machine, please write a program to minimize the times of restarting machines. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input file for this program consists of several configurations. The first line of one configuration contains three positive integers: n, m (n, m < 100) and k (k < 1000). The following k lines give the constrains of the k jobs, each line is a triple: i, x, y.
+<br>
+<br>The input will be terminated by a line containing a single zero.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output should be one integer per line, which means the minimal times of restarting machine.</div><p class="pst">Sample Input</p><pre class="sio">5 5 10
+0 1 1
+1 1 2
+2 1 3
+3 1 4
+4 2 1
+5 2 2
+6 2 3
+7 2 4
+8 3 3
+9 4 3
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">3</pre><p class="pst">

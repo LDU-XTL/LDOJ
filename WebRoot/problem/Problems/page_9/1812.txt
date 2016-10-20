@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">These days Lin falls in love with a PC game called Zuma. In this game, a row of several balls is placed on the table. The color of each ball may be red, yellow, blue, green or white, and we use R, Y, B, G and W to represent these five different colors. There is no group of 3 or more balls of the same color touching at the beginning. The player also has several balls with the color mentioned above in his hand. Every time, the player can choose a ball in his hand, and insert it into the balls on the table at arbitrary position include the left and the right of the row. When there is a group of 3 or more balls in the same color touching, these balls will be moved away. If there are still 3 or more balls in the same color touching, they also should be removed. This operation will be continued until there is no 3 or more balls in the same color touching. If there is no ball on the table after several times of insertion, the player will win. Lin wants to know whether he can win. Can you help him? </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains an integer n ( n <= 30 ), which represents the number of test case. Then n cases follow. Each case contains three lines: there are two integer m (1 <= m <=20 ) and k ( 1 <= k <= 5 ) in the first line, and m is the number of balls on the table while k is the number of balls in player's hand; the second line contains m capital letters (there is no space between letters), which represent the color and order of the balls on the table; the third line contains k capital letters, which represent the color of the balls in player's hand.</div><p class="pst">Output</p><div class="ptx" lang="en-US">There is a single line for each test case. If the player has no chance to win, output "lose"; otherwise output an integer p, which represents the minimal number of insertion to win the game.</div><p class="pst">Sample Input</p><pre class="sio">3
+6 2
+WRRBBW
+RB
+8 4
+WWRRBBWW
+WWBR
+1 2
+R
+RR
+</pre><p class="pst">Sample Output</p><pre class="sio">lose
+2
+2
+</pre><p class="pst">

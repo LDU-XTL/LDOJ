@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US"><div><p>Evolution is a seemingly random process which works in a way which resembles certain approaches we use to get approximate solutions to hard combinatorial problems. You are now to do something completely different.</p><p>Given a DNA string <i>S</i> from the alphabet {A,C,G,T}, find the minimal number of copy operations needed to create another string <i>T</i>. You may reverse the strings you copy, and copy both from <i>S</i> and the pieces of your partial <i>T</i>. You may put these pieces together at any time. You may only copy contiguous parts of your partial <i>T</i>, and all copied strings must be used in your final <i>T</i>. Example: From <i>S</i> = “ACTG” create <i>T</i> = “GTACTATTATA”</p><ol><li>Get GT......... by copying and reversing &quot;TG&quot; from <i>S</i>.</li><li>Get GTAC....... by copying &quot;AC&quot; from <i>S</i>.</li><li>Get GTAC...TA.. by copying &quot;TA&quot; from the partial <i>T</i>.</li><li>Get GTAC...TAAT by copying and reversing &quot;TA&quot; from the partial <i>T</i>.</li><li>Get GTACAATTAAT by copying &quot;AAT&quot; from the partial <i>T</i>.</li></ol></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of input gives a single integer, 1 ≤ <i>t</i> ≤ 100, the number of test cases. Then follow, for each test case, a line with the string <i>S</i> of length 1 ≤ <i>m</i> ≤ 18, and a line with the string <i>T</i> of length 1 ≤ <i>n</i> ≤ 18.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output for each test case the number of copy operations needed to create <i>T</i> from <i>S</i>, or &quot;impossible&quot; if it cannot be done.</p></div><p class="pst">Sample Input</p><pre class="sio">5
+ACGT
+GTAC
+A
+C
+ACGT
+TGCA
+ACGT
+TCGATCGA
+A
+AAAAAAAAAAAAAAAAAA</pre><p class="pst">Sample Output</p><pre class="sio">2
+impossible
+1
+4
+6</pre><p class="pst">

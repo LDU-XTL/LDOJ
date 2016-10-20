@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">There was a public bus transport in one town. All buses had circular lines. Each line had at least two stops. Some lines had some stops in common. When two or more bus drivers met on some stop they announced each other all news they knew, so that after leaving the stop they all knew the same news. All drivers started driving their buses at the same time and at this time each driver knew some news that was not known to any other driver. Each bus ran all the time along a fixed bus line. Different buses running along the same bus line started possibly on different stops of the bus line at the beginning. 
+<br>The operation of buses was highly synchronized. The time necessary to get from one stop to next stop was equal for all stops and all lines. 
+<br>
+<br>There were n lines ( 0 < n < 20), d drivers (and also d buses) ( 0 < d < 30) numbered by integers from 1 to d, and s bus stops ( 0 < s < 50) numbered by integers from 1 to s. 
+<br>
+<br>The drivers' gossiping club would like to know whether each driver, in some time, would learn all news from his colleagues. Write a program that will answer this question. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of blocks of lines. Each block except the last describes one town. In the first line of the block there are integers n, d and s described above separated by one space. The next 2n lines contain descriptions of n bus lines (2 lines for each bus line) as follows: In the first line there are stop numbers on the corresponding bus line separated by one space. The stops are listed in the order the bus passes them. After passing the last stop listed on the line the bus goes again to the first stop listed on the line. The second line describes on which stops the individual buses operating on the bus line started at the beginning. The description consists of pairs si, di, where si is a stop number on the bus line and di is the number of driver driving the bus. All numbers si, di on the line are separated by one space. The last block consists of just one line containing 0 0 0, i.e. three zeros separated by one space. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output contains the lines corresponding to the blocks in the input. A line contains Yes if the corresponding block in the input file describes a situation where each driver will learn, in some time, all news from his colleagues. Otherwise it contains No. There is no line in the output corresponding to the last ``null'' block of the input. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">2 3 5
+1 2 3
+1 1 2 2
+2 3 4 5
+2 3
+0 0 0</pre><p class="pst">Sample Output</p><pre class="sio">Yes</pre><p class="pst">

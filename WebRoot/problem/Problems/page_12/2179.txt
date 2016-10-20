@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US"><img src=images/2179_1.jpg align=right>The factory cuts rectangular M × N granite plates into pieces using a special machine that is able to perform cuts in 4 different directions: vertically, horizontally, and diagonally at the angle of 45 degrees to the sides of the plate. Every cut is a straight line that starts and ends on the side of the plate.
+<br>
+<br>The factory has been ordered to produce tiles for the inlay, each tile of which is a 45 degrees right triangle. To reduce the time to deliver the tiles it was decided to take all triangles from the already cut plates. Information about all performed cuts is available and your task is to compute the number of triangles of any size that were produced.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input describes the cuts that were performed on a single rectangular plate. The first line of the input file contains three integer numbers M, N, and K, separated by spaces. M and N (1 ≤ M, N ≤ 50) are the dimensions of the plate, and K (0 ≤ K ≤ 296) is the number of cuts. Next K lines describe the cuts. ith cut is described by four integer numbers X<sub>i,1</sub>, Y<sub>i,1</sub>, X<sub>i,2</sub>, and Y<sub>i,2</sub>, separated by spaces, that represent the starting and ending point of the cut. Both starting (X<sub>i,1</sub>, Y<sub>i,1</sub>) and ending (X<sub>i,2</sub>, Y<sub>i,2</sub>) points of the cut are situated on the plate's border. Both points of the cut are different and the cut goes through the plate. Here, the coordinates by the X axis run from 0 to M, and the coordinates by the Y axis run from 0 to N. All cuts are different.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Write to the output a single integer number - the number of triangles that were produced by the cuts.</div><p class="pst">Sample Input</p><pre class="sio">7 4 6
+6 0 7 1
+1 4 1 0
+0 4 4 0
+0 0 4 4
+0 2 7 2
+7 0 3 4
+</pre><p class="pst">Sample Output</p><pre class="sio">8
+</pre><p class="pst">

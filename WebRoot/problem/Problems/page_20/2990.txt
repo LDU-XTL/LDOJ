@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Alice and Bob started to play the following game: they have an m×n chessboard, with some of the fields removed. There are two chess pieces on distinct (non-removed) fields of the board. Alice always makes the first move and then she alternates with Bob in turns. Each turn consists of moving one of the pieces by one field horizontally or vertically. Both players can move any of the pieces, regardless of the piece moved in the previous turn. The piece cannot be moved to a removed field. The player that is able to move one of the pieces to the field occupied by the other one, thus capturing it, wins. 
+<br>
+<br>After some time, they found the game very boring -- nobody could win, and the pieces just chased each other around the board. Therefore, they introduced a new rule -- no player may move a piece in such a way that a position that already appeared during the game is repeated. The position is considered to be the same if the fields occupied by the pieces are the same (the pieces cannot be distinguished), regardless of who is on turn in the particular position. Additionally, they introduced a rule that the player who cannot make a legal move loses. Now the game is always finite and one of the players will surely win. Your goal is to find a winning strategy, if one exists. 
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several instances, separated by single empty lines. 
+<br>
+<br>The first line of each instance consists of two integers m and n, 1  m, n  8. Each of m following lines consists of n characters and determines the initial state of the chessboard. The characters are one of the following: <ul><li>"." for an empty field of the chessboard <li>"#" for a removed field of the chessboard <li>"P" for the field of the chessboard where one of the pieces starts </ul>There are always precisely two characters "P" in each instance. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output for each instance consists of a single line containing either the string "Alice wins." if Alice has a winning strategy in the described position, or the string "Bob wins.", if she has no such strategy. </div><p class="pst">Sample Input</p><pre class="sio">4 4
+P.##
+..##
+##..
+##.P
+
+1 5
+P...P</pre><p class="pst">Sample Output</p><pre class="sio">Alice wins.
+Bob wins.</pre><p class="pst">

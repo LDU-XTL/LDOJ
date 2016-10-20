@@ -1,0 +1,33 @@
+</p><div class="ptx" lang="en-US">Advanced Cave Megapolis (ACM) is a city that survives in the underground caves after the global nuclear war. The caves are connected by passages and the whole city map can be represented by a graph with caves being vertices and passages between them being nodes.
+<br>There is a revolution in the cave city. The whole population of the city is evenly split into k parties that cannot agree on the common laws that they should adopt. They had decided to split their city into k districts and have each district’s citizens impose the laws of their liking upon themselves.
+<br>You are given a city map in the form of the graph and your task is to write a program that partitions this graph into k equally sized districts. Each district must form a connected subgraph that is represented by the subset of the graph’s vertices.
+<br>Fortunately, the number of vertices in the graph is divisible by k and the graph representing the city happens to be a cactus — a connected undirected graph in which every edge belongs to at most one simple cycle. Intuitively, cactus is a generalization of a tree where some cycles are allowed.
+<br>The example of a city map with 15 caves and its partitioning into 3 districts is shown on the picture below.
+<br>
+<br><center><img src="images/3961_1.png"></center></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains three integer numbers n, m, and k (1 &lt;= n &lt;= 50 000, 0 &lt;= m &lt;= 10 000, 1 &lt;= k &lt;= n). Here n is the number of vertices in the graph. Vertices are numbered from 1 to n. Edges of the graph are represented by a set of edge-distinct paths, where m is the number of such paths, k is the number of districts that the city must be partitioned into, n is divisible by k.
+<br>Each of the following m lines contains a path in the graph. A path starts with an integer number s<sub>i</sub> (2 &lt;= s<sub>i</sub> &lt;= 1000) followed by s<sub>i</sub> integers from 1 to n. These s<sub>i</sub> integers represent vertices of a path.
+<br>Adjacent vertices in a path are distinct. Path can go through the same vertex multiple times, but every edge is traversed exactly once in the whole input file. There are no multiedges in the graph (there is at most one edge between any two vertices).
+<br>The graph in the input file is a cactus.</div><p class="pst">Output</p><div class="ptx" lang="en-US">If it is possible to partition the vertices into k districts, write to the output file k lines with n/k integer numbers on each line. Each line represents a district as a list of vertices’ numbers that constitute it.
+<br>Vertex numbers must be listed in the ascending order in the description of each district.
+<br>If the answer does not exist, write the single number -1.</div><p class="pst">Sample Input</p><pre class="sio"><table border="1" style="border-collapse: collapse" bordercolor="#000000" id="table1"><tr>
+<td><b>#1</b></td><td>
+15 3 3<br>
+9 1 2 3 4 5 6 7 8 3<br>
+7 2 9 10 11 12 13 10<br>
+5 2 14 9 15 10</td>
+</tr>
+<tr>
+<td><b>#2</b></td><td>
+4 2 2<br>
+3 1 2 3<br>
+2 2 4</td></tr>
+</table></pre><p class="pst">Sample Output</p><pre class="sio"><table border="1" style="border-collapse: collapse" bordercolor="#000000" id="table1"><tr>
+<td><b>#1</b></td><td>
+4 5 6 7 8<br>
+10 11 12 13 15<br>
+1 2 3 9 14</td>
+</tr>
+<tr>
+<td><b>#2</b></td><td>
+-1</td></tr>
+</table></pre><p class="pst">

@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US"><p>Given a rectangular region of the plane which has been divided into polygons, decide what the maximum number of edges that any of the polygons has. For example, if the region is divided into triangles, then the maximal number is 3. If the region is divided into, say, 7 triangles and 2 squares, then the maximal number is 4.</p><p>There will be a list of pairs of (<i>x</i>, <i>y</i>) coordinates: Each (<i>x</i>, <i>y</i>) coordinates represents a vertex, and consequently each pair of coordinates represents an edge. The edges collectively divide the rectangular region naturally into disjoint ``<i>n</i>-gons". (Explanation: A triangle is a 3-gon, a square is an example of a 4-gon, etc.) That is, the boundary of each <i>n</i>-gon is a union of edges.</p><p>Figure 1 is a sketch of an example 3 x 3 rectangular region divided into five 3-gons, a 5-gon and a 10-gon.</p><p><center><img src="images/3354_1.GIF"></img></center></p><p>The pairs of coordinates representing the edges of the 5-gon would be:</p><center>{((3, 4),(4, 4)),((4, 4),(4, 3)),((3, 4),(3, 3)),((3, 3),(4, 2)),((4, 3),(4, 2))}</center><p>The maximal number of edges in this example is 10. That is, this example has a 10-gon.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input consists of multiple test cases. The first line of each test case will consist of an integer <i>n</i> representing the number of edges. Each test case will then contain n pairs of (<i>x</i>, <i>y</i>) (|<i>x</i>|, |<i>y</i>| &le; 100) coordinates where <i>x</i>, <i>y</i> &isin; <i>Z</i> which represent edges dividing a rectangular region into n-gons. Each integer will be separated by a white space. Overlapping edges will not be specified in the input. The input will terminate for <i>n</i> = 0.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>The output should be an integer describing the maximal number of edges that any of those <i>n</i>-gon has. Separate each test case with a new line.</p></div><p class="pst">Sample Input</p><pre class="sio">21 
+1 1 1 2 
+1 2 1 3 
+1 3 1 4 
+1 1 2 1 
+2 1 3 1 
+3 1 4 1 
+1 4 2 4 
+2 4 3 4 
+3 4 4 4 
+4 1 4 2 
+4 2 4 3 
+4 3 4 4 
+2 3 2 4 
+2 3 3 4 
+2 3 3 3 
+3 3 3 4 
+3 3 4 2
+2 1 3 2 
+3 2 3 1 
+4 1 3 2 
+3 2 4 2 
+0</pre><p class="pst">Sample Output</p><pre class="sio">10</pre><p class="pst">

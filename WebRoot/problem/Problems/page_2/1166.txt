@@ -1,0 +1,36 @@
+</p><div class="ptx" lang="en-US"><center><pre>|-------|    |-------|    |-------|
+<br>|       |    |       |    |   |   |
+<br>|---O   |    |---O   |    |   O   |
+<br>|       |    |       |    |       |
+<br>|-------|    |-------|    |-------|
+<br>    A            B            C    
+<br>
+<br>|-------|    |-------|    |-------|
+<br>|       |    |       |    |       |
+<br>|   O   |    |   O   |    |   O   |
+<br>|   |   |    |   |   |    |   |   |
+<br>|-------|    |-------|    |-------|
+<br>    D            E            F    
+<br>
+<br>|-------|    |-------|    |-------|
+<br>|       |    |       |    |       |
+<br>|   O   |    |   O---|    |   O   |
+<br>|   |   |    |       |    |   |   |
+<br>|-------|    |-------|    |-------|
+<br>    G            H            I    
+<br>(Figure 1)</pre></center>
+<br>There are nine clocks in a 3*3 array (figure 1). The goal is to return all the dials to 12 o'clock with as few moves as possible. There are nine different allowed ways to turn the dials on the clocks. Each such way is called a move. Select for each move a number 1 to 9. That number will turn the dials 90' (degrees) clockwise on those clocks which are affected according to figure 2 below. 
+<br><pre>Move   Affected clocks
+<br> 
+<br> 1         ABDE
+<br> 2         ABC
+<br> 3         BCEF
+<br> 4         ADG
+<br> 5         BDEFH
+<br> 6         CFI
+<br> 7         DEGH
+<br> 8         GHI
+<br> 9         EFHI    
+<br>   (Figure 2)</pre></div><p class="pst">Input</p><div class="ptx" lang="en-US">Your program is to read from standard input. Nine numbers give the start positions of the dials. 0=12 o'clock, 1=3 o'clock, 2=6 o'clock, 3=9 o'clock.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Your program is to write to standard output. Output a shortest sorted sequence of moves (numbers), which returns all the dials to 12 o'clock. You are convinced that the answer is unique.</div><p class="pst">Sample Input</p><pre class="sio">3 3 0
+2 2 2
+2 1 2</pre><p class="pst">Sample Output</p><pre class="sio">4 5 8 9</pre><p class="pst">

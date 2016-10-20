@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">FJ no longer uses the barbaric custom of branding to mark the cows that he owns.  Instead, he creates a binary code of B (1 <= B <= 16) bits for each cow and embosses it onto a metal strip that is fastened to each cow's ear.
+<br>
+<br>The cows have taken in a stray and wish to create an ID strip for it. Unknown to FJ, they have created a machine that can make a new ID strip by combining two existing ID strips using the XOR operation (ID strips are not consumed by this machine, and the same ID strip can be used for both inputs).
+<br>
+<br>The cows wish to create a specific ID strip for the stray or at least get as close to a desired ID as possible -- with the smallest possible number of bits differing between the goal ID strip and the best possible new ID strip.
+<br>
+<br>Given a set of E (1 <= E <= 100) existing ID strips, the goal ID strip, and a large number of blank ID strips to hold intermediate results, calculate the closest possible ID strip that can be created from the existing ID strips.
+<br>
+<br>If more than one ID is closest, choose the one that can be created in the fewest steps.  If there is still a tie, choose the `smallest' ID (i.e., if you sorted all the IDs, the one that is first).</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: Two space-separated integers: B and E.
+<br>
+<br>* Line 2: The goal ID string, represented as a string of B 0's and 1's (with no spaces).
+<br>
+<br>* Lines 3..E+2: Each line contains an existing ID string, represented as a string of B 0's and 1's (with no spaces).
+<br>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: A single integer that is the minimum number of steps required to create the best possible ID strip.
+<br>
+<br>* Line 2: A single line with the best possible ID strip that can be created from the E existing ID strips
+<br></div><p class="pst">Sample Input</p><pre class="sio">5 3
+11100
+10000
+01000
+00100</pre><p class="pst">Sample Output</p><pre class="sio">2
+11100</pre><p class="pst">

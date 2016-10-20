@@ -1,0 +1,38 @@
+</p><div class="ptx" lang="en-US">Tuntun is a big fan of Apple Inc. who owns almost all kinds of products the company published. Fascinated by the amazing user experience and fabulous user interface, he spent every nickel of his pocket money on his iMac and iPhone. A few days ago, Apple released their latest iPhone OS 4.0. Tuntun noticed that the most significant new feature of iPhone OS 4.0 is multi-tasking support. He was curious about why the same device with a single core CPU can support multi-tasking under the new operating system. With his clever head, he found out a simple solution. The OS doesn’t have to let the CPU run several tasks exactly at the same time. What the OS should do is just to let the user feel that several tasks are running at the same time. In order to do that, the OS assigns the CPU to the tasks in turn. When the acts of reassigning a CPU from one task to another occur frequently enough, the illusion of parallelism is achieved. Let’s suppose that the OS makes each task run on the CPU for one millisecond every time in turn, and when a task is finished, the OS assigns the CPU to another task immediately. Now if there are 3 tasks which respectively need 1.5, 4.2 and 2.8 millisecond to complete, then the whole process is as follows:
+<br>
+<br>At 0th millisecond, task 1 gets the CPU. After running for 1 millisecond, it still needs 0.5 milliseconds to complete.
+<br>
+<br>At 1st millisecond, task 2 gets the CPU. After running for 1 millisecond, it still needs 3.2 milliseconds to complete.
+<br>
+<br>At 2st millisecond, task 3 gets the CPU. After running for 1 millisecond, it still needs 1.8 milliseconds to complete.
+<br>
+<br>At 3rd millisecond, task 1 comes back to CPU again. After 0.5 millisecond of running, it is finished and will never need the CPU.
+<br>
+<br>At 3.5 millisecond, task 2 gets the CPU again. After running for 1 millisecond, it still needs 2.2 milliseconds to complete.
+<br>
+<br>At 4.5 millisecond, it’s time for task 3 to run. After 1 millisecond, it still needs 0.8 milliseconds to complete.
+<br>
+<br>At 5.5 millisecond, it’s time for task 2 to run. After 1 millisecond, it still needs 1.2 milliseconds to complete.
+<br>
+<br>At 6.5 millisecond, time for task 3. It needs 0.8 millisecond to complete, so task 3 is finished at 7.3 milliseconds.
+<br>
+<br>At 7.3 millisecond, task 2 takes the CPU and keeps running until it is finished.
+<br>
+<br>At 8.5 millisecond, all tasks are finished.
+<br>
+<br>Tuntun decided to make a simple iPhone multi-tasking OS himself, but at first, he needs to know the finishing time of every task. Can you help him?
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains only one integer T indicates the number of test cases.
+<br>The following 2×T lines represent T test cases. The first line of each test case is a integer N (0 &lt; N *lt;= 100) which represents the number of tasks, and the second line contains N real numbers indicating the time needed for each task. The time is in milliseconds, greater than 0 and less than 10000000.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, first output “Case N:”, N is the case No. starting form 1. Then print N lines each representing a task’s finishing time, in the order correspondent to the order of tasks in the input. The results should be rounded to 2 digits after decimal point, and you must keep 2 digits after the decimal point.</div><p class="pst">Sample Input</p><pre class="sio">2
+3
+1.5 4.2 2.8
+5
+3.5 4.2 1.6 3.8 4.4</pre><p class="pst">Sample Output</p><pre class="sio">Case 1:
+3.50
+8.50
+7.30
+Case 2:
+14.10
+17.10
+7.60
+15.90
+17.50</pre><p class="pst">

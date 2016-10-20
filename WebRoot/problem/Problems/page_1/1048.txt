@@ -1,0 +1,45 @@
+</p><div class="ptx" lang="en-US">For this problem you will determine the output of a logic circuit composed of one or more inputs, zero or more dual-input AND/OR gates, and one output. The input circuits are drawn with standard ASCII characters. Circuit paths are represented using horizontal and vertical lines, and junctions. Horizontal lines are represented with dash characters (ASCII code 45 decimal), vertical lines with vertical bar characters (ASCII code 124 decimal), and junctions with plus characters (ASCII code 43 decimal). Inputs are represented using the capital letters A through Z, and the output is represented by a question mark. AND and OR gates are represented as shown in the leftmost entries in the figure below, and their orientation will always be exactly as shown. The location of the gate inputs and output is shown by the middle figure below. Finally, gate inputs or its output can be inverted, represented by a lowercase "oh"character (ASCII code 111 decimal) at the input or output location. The figure on the right below shows a simple but complete logic circuit.
+<br><pre>
+<br>        :\               :\                 -:\                 -o:\                       A-o:\
+<br>        : )              : >                 : )-                 : )o-                       : )o-?
+<br>        :/               :/                 -:/                 --:/                       B--:/
+<br>       
+<br>     AND gate          OR gate       Gate with inputs    An inverted top input          Two logic inputs
+<br>	                                                 and an inverted output         and the output</pre>
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Circuits in the input will obey the following guidelines:
+<br>1.        The maximum size of the circuit picture is 100 by 100 characters.
+<br>2.        A path always travels in a straight line unless altered by a junction. At a junction, the path can and will make a ninety degree turn. Two junctions will not be horizontally or vertically adjacent.
+<br>3.        No paths will be "broken" That is, every path character is guaranteed to be adjacent on both sides to either another path character of the same type, a junction, a gate input, a gate output, a logic input, or the logic output.
+<br>4.        Circuit paths do not cross or intersect other paths.
+<br>5.        Gate inputs always approach horizontally from the left as shown above. Gate outputs always leave horizontally to the right as shown above.
+<br>6.        Inversions may only appear immediately adjacent to a gate input or output, and will always be preceded (in the case of an input) or followed (in the case of an output) by at least one dash as shown above.
+<br>The end of a logic diagram in the input is indicated by line containing only a single asterisk in the first column.  Following this are several lines which indicate the state of the inputs in the logic diagram.  Each of these lines is a string of twenty-six "0"(zero) or "1"characters, with the first position representing the state of input A, the second position representing the state of input B, etc.  Note that input values which are not actually used in the circuit may simply be ignored.  The list of input states is terminated by a line containing only a single asterisk character in the first column.
+<br>Following the asterisk which terminates the list of input states is another circuit diagram followed by a list of input states, which is then followed by another circuit diagram and list of input states, and so on until the end of the file.  The file will always contain at least one circuit and one set of inputs for that circuit.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The program is to report the value of the output (0 or 1) of each logic circuit, one value per line, for each set of input values in the list which follows the circuit.  The list of outputs for each circuit should be separated by a single blank line.</div><p class="pst">Sample Input</p><pre class="sio">A---:\
+    : )---?
+B---:/
+*
+00000000000000000000000000
+10000000000000000000000000
+01000000000000000000000000
+11000000000000000000000000
+*
+A---+
+    |    
+    +---:\
+        : >o---:\
+    +---:/     : )---?
+    |      C--o:/
+B---+
+*
+00000000000000000000000000
+11100000000000000000000000
+*
+</pre><p class="pst">Sample Output</p><pre class="sio">0
+0
+0
+1
+
+1
+0
+</pre><p class="pst">

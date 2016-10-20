@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US">Mirko has decided to rob mini-safe owned by his son so that he could take away some football stickers which are missing in his big sticker collection.
+<br>Lock on the safe consists of N equal discs, each of them being divided in 10,000,000 equal segments numbered from 1 to 10,000,000 clockwise. In the begining, segments on discs having the same number are placed one above (beneath) the other. Discs are layed one on the other such that the segments are overlaping and each disc is missing exactly one segment that is called hole.
+<br>In order to unlock the lock, all holes must be one above (beneath) the other.In one second, Mirko can turn one disc in one direction (clockwise or counterclockwise) for one segment.
+<br>Write a program which will find the minimal time that Mirko needs to open the safe.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains an integer N, 2 <= N <= 100,000, the number of discs.
+<br>The next N lines contain data describing the initial positions of the holes on each disc.
+<br>The (i + 1)-th line contains an integer Pi, 1 <= Pi <= 10000000, the initial position of the hole on the i-th disc.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The first and only line of the output should contain the minimal time (in seconds).
+<br>Note: take care of the size of that number.</div><p class="pst">Sample Input</p><pre class="sio">4
+9999999
+7
+16
+9999995</pre><p class="pst">Sample Output</p><pre class="sio">29</pre><p class="pst">

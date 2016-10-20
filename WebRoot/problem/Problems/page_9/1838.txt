@@ -1,0 +1,28 @@
+</p><div class="ptx" lang="en-US">Consider a tropical forrest, represented as a matrix. The cell from the right top corner of the matrix has the coordinates (1,1), and the coordinates of the other cells are determinated by the row and the column on which  the cell is. In some cells of the matrix are placed banana trees; a cell can contain no more than a banana tree. More banana trees which are neighbours on horizontal or vertical form a region of banana trees. In  this kind of region, monkey CEKILI is moving easily, with her well-known agility, from a banana tree to another.
+<br>CEKILI is eager and the bananas from a single region are not enough for her. Tarzan wants to help his friend. For that, he may connect exactly k banana tree regions knoting more lianas and so CEKILI could move from a region to another using lianas. Obviously, Tarzan must choose the regions so that the total number of banana trees from those k regions must be maximum.
+<br>
+<br>Detemine maximum number of banana trees which Tarzan can obtain connecting exactly k regions.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input has the following structure:
+<br>Nr K
+<br>x(1) y(1)
+<br>y(2) y(2)
+<br>...
+<br>x(Nr) y(Nr)
+<br>Nr is the number of  banana trees. K is the number of zones which can be connected. x(i) is the row of the i-th banana tree, while y(i) is the column of the i-th banana tree.
+<br>There are Constraints:
+<br>•	1 <= Nr <= 16000;
+<br>•	1 <= x(i), y(i) <= 10000;
+<br>•	In the tests used for grading k will never be bigger than the number of regions;
+<br>•	Two positions are horizontally neighbours if they are on the same row and consecutive columns, respectively vertically neighbours if they are on the same column and on consecutive rows.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output will contain on the first line the maximum number of banana trees that can be obtained by connecting the k regions.</div><p class="pst">Sample Input</p><pre class="sio">10 3
+7 10
+1 1
+101 1
+2 2
+102 1
+7 11
+200 202
+2 1
+3 2
+103 1
+</pre><p class="pst">Sample Output</p><pre class="sio">9</pre><p class="pst">

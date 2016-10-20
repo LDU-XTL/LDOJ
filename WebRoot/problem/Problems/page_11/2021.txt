@@ -1,0 +1,29 @@
+</p><div class="ptx" lang="en-US">Today is Ted's 100th birthday. A few weeks ago, you were selected by the family to contact all of Ted's descendants and organize a surprise party. To make this task easier, you created an age-prioritized list of everyone descended from Ted. Descendants of the same age are listed in dictionary order. 
+<br>
+<br>The only materials you had to aid you were birth certificates. Oddly enough, these birth certificates were not dated. They simply listed the father's name, the child's name, and the father's exact age when the baby was born. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input to this problem will begin with line containing a single integer n indicating the number of data sets. Each data set will be formatted according to the following description. 
+<br>
+<br>A single data set has 2 components: 
+<br><ol><li>Descendant Count - A line containing a single integer X (where 0 < X < 100) indicating the number of Ted's descendants. 
+<br><li>Birth Certificate List - Data for X birth certificates, with one certificate's data per line. Each certificate's data will be of the format "FNAME CNAME FAGE" where: 
+<br><ul><li>FNAME is the father's name. 
+<br><li>CNAME is the child's name. 
+<br><li>FAGE is the integer age of the father on the date of CNAMEs birth. </ul></ol>
+<br>Note: 
+<br><ul><li>Names are unique identifiers of individuals and contain no embedded white space. 
+<br><li>All of Ted's descendants share Ted's birthday. Therefore, the age difference between any two is an integer number of years. (For those of you that are really picky, assume they were all born at the exact same hour, minute, second, etc... of their birth year.) 
+<br><li>You have a birth certificate for all of Ted's descendants (a complete collection). </ul></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, there will be X+1 lines of output. The first will read, "DATASET Y", where Y is 1 for the first data set, 2 for the second, etc. The subsequent X lines constitute your age-prioritized list of Ted's descendants along with their ages using the format "NAME AGE". Descendants of the same age will be listed in dictionary order. </div><p class="pst">Sample Input</p><pre class="sio">2
+1
+Ted Bill 25
+4
+Ray James 40
+James Beelzebub 17
+Ray Mark 75
+Ted Ray 20
+</pre><p class="pst">Sample Output</p><pre class="sio">DATASET 1
+Bill 75
+DATASET 2
+Ray 80
+James 40
+Beelzebub 23
+Mark 5
+</pre><p class="pst">

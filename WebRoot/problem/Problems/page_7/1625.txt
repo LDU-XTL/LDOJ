@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">The alphabet of Freeland consists of exactly N letters. Each sentence of Freeland language (also known as Freish) consists of exactly M letters without word breaks. So, there exist exactly N^M different Freish sentences.
+<br>
+<br>But after recent election of Mr. Grass Jr. as Freeland president some words offending him were declared unprintable and all sentences containing at least one of them were forbidden. The sentence S contains a word W if W is a substring of S i.e. exists such k >= 1 that S[k] = W[1], S[k+1] = W[2], ...,S[k+len(W)-1] = W[len(W)], where k+len(W)-1 <= M and len(W) denotes length of W. Everyone who uses a forbidden sentence is to be put to jail for 10 years.
+<br>
+<br>Find out how many different sentences can be used now by freelanders without risk to be put to jail for using it.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains three integer numbers: N -- the number of letters in Freish alphabet, M -- the length of all Freish sentences and P -- the number of forbidden words (1 <=  N <=  50, 1 <=  M <=  50, 0 <=  P <=  10).
+<br>
+<br>The second line contains exactly N different characters -- the letters of the Freish alphabet (all with ASCII code greater than 32).
+<br>
+<br>The following P lines contain forbidden words, each not longer than min(M, 10) characters, all containing only letters of Freish alphabet.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Output the only integer number -- the number of different sentences freelanders can safely use.</div><p class="pst">Sample Input</p><pre class="sio">2 3 1
+ab
+bb
+</pre><p class="pst">Sample Output</p><pre class="sio">5
+</pre><p class="pst">

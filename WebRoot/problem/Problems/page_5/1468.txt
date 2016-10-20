@@ -1,0 +1,19 @@
+</p><div class="ptx" lang="en-US">A specialist in VLSI design testing must decide if there are some components that cover each other for a given design. A component is represented as a rectangle. Assume that each rectangle is rectilinearly oriented (sides parallel to the x and y axis), so that the representation of a rectangle consists of its minimum and maximum x and y coordinates. 
+<br>Write a program that counts the rectangles that are entirely covered by another rectangle. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains the text description of several sets of rectangles. The specification of a set consists of the number of rectangles in the set and the list of rectangles given by the minimum and maximum x and y coordinates separated by white spaces, in the format:
+<br>
+<br>nr_rectangles
+<br>xmin1 xmax1 ymin1 ymax1
+<br>xmin2 xmax2 ymin2 ymax2
+<br>...
+<br>xmin<sub>n</sub> xmax<sub>n</sub> ymin<sub>n</sub> ymax<sub>n</sub>
+<br>
+<br>For each set,there will be less than 5000 rectangles.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output should be printed on the standard output. For each given input data set, print one integer number in a single line that gives the result (the number of rectangles that are covered). </div><p class="pst">Sample Input</p><pre class="sio">3
+100 101 100 101
+0 3 0 101
+20 40 10 400
+4
+10 20 10 20
+10 20 10 20
+10 20 10 20
+10 20 10 20</pre><p class="pst">Sample Output</p><pre class="sio">0
+4</pre><p class="pst">

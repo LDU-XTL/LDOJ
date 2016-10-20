@@ -1,0 +1,47 @@
+</p><div class="ptx" lang="en-US">The cows have erected clothes lines with N (1 <= N <= 1000) wires upon which they can dry their clothes after washing them.  Having no opposable thumbs, they have thoroughly botched the job.  Consider this clothes line arrangement with four wires:
+<br><pre>
+<br>   Wire slot: 1   2    3    4
+<br>              ---------------   <-- the holder of the wires
+<br>              \    \  /    /
+<br>               \    \/    /
+<br>                \   /\   /       
+<br>                 \ /  \ /       <-- actual clothes lines
+<br>                  /    \
+<br>                 / \  / \
+<br>                /   \/   \
+<br>               /    /\    \
+<br>              /    /  \    \
+<br>              ---------------   <-- the holder of the wires
+<br>   Wire slot: 1   2    3    4</pre>
+<br>The wires cross!  This is, of course, unacceptable.
+<br>
+<br>The cows want to unscramble the clothes lines with a minimum of hassle.  Even their bovine minds can handle the notion of "swap these two lines".  Since the cows have short arms they are limited to swapping adjacent pairs of wire endpoints on either the top or bottom holder.
+<br>In the diagram above, it requires four such swaps in order to get a proper arrangement for the clothes line:
+<br><pre>
+<br>              1   2   3   4
+<br>              -------------   <-- the holder of the wires
+<br>              |   |   |   |
+<br>              |   |   |   |
+<br>              |   |   |   |
+<br>              |   |   |   |
+<br>              |   |   |   |
+<br>              |   |   |   |
+<br>              |   |   |   |
+<br>              |   |   |   |
+<br>              |   |   |   |
+<br>              -------------   <-- the holder of the wires
+<br>              1   2   3   4</pre>
+<br>Help the cows unscramble their clothes lines.  Find the smallest number of swaps that will get the clothes line into a proper arrangement.
+<br>
+<br>You are supplied with clothes line descriptions that use integers to describe the current ordering of the clothesline. The lines are uniquely numbered 1..N according to no apparent scheme.  You are given the order of the wires as they appear in the N connecting slots of the top wire holder and also the order of the wires as they appear on the bottom wire holder.</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: A single integer: N
+<br>
+<br>* Lines 2..N+1: Each line contains two integers in the range 1..N. The first integer is the wire ID of the wire in the top wire holder; the second integer is the wire ID of the wire in the bottom holder. Line 2 describes the wires connected to top slot 1 and bottom slot 1, respectively; line 3 describes the wires connected to top and bottom slot 2, respectively; and so on.
+<br>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: A single integer specifying the minimum number of adjacent swaps required  to straighten out the clothes lines.
+<br></div><p class="pst">Sample Input</p><pre class="sio">4
+4 1
+2 3
+1 4
+3 2
+</pre><p class="pst">Sample Output</p><pre class="sio">4
+</pre><p class="pst">

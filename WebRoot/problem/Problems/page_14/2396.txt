@@ -1,0 +1,26 @@
+</p><div class="ptx" lang="en-US">We are supposed to make a budget proposal for this multi-site competition. The budget proposal is a matrix where the rows represent different kinds of expenses and the columns represent different sites. We had a meeting about this, some time ago where we discussed the sums over different kinds of expenses and sums over different sites. There was also some talk about special constraints: someone mentioned that Computer Center would need at least 2000K Rials for food and someone from Sharif Authorities argued they wouldn't use more than 30000K Rials for T-shirts. Anyway, we are sure there was more; we will go and try to find some notes from that meeting.
+<br>
+<br>And, by the way, no one really reads budget proposals anyway, so we'll just have to make sure that it sums up properly and meets all constraints. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains an integer N, giving the number of test cases. The next line is empty, then, test cases follow: The first line of each test case contains two integers, m and n, giving the number of rows and columns (m <= 200, n <= 20). The second line contains m integers, giving the row sums of the matrix. The third line contains n integers, giving the column sums of the matrix. The fourth line contains an integer c (c < 1000) giving the number of constraints. The next c lines contain the constraints. There is an empty line after each test case.
+<br>
+<br>Each constraint consists of two integers r and q, specifying some entry (or entries) in the matrix (the upper left corner is 1 1 and 0 is interpreted as "ALL", i.e. 4 0 means all entries on the fourth row and 0 0 means the entire matrix), one element from the set {<, =, >} and one integer v, with the obvious interpretation. For instance, the constraint 1 2 > 5 means that the cell in the 1st row and 2nd column must have an entry strictly greater than 5, and the constraint 4 0 = 3 means that all elements in the fourth row should be equal to 3.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case output a matrix of non-negative integers meeting the above constraints or the string "IMPOSSIBLE" if no legal solution exists. Put <b>one empty line</b> between matrices.</div><p class="pst">Sample Input</p><pre class="sio">2
+
+2 3 
+8 10 
+5 6 7 
+4 
+0 2 > 2 
+2 1 = 3 
+2 3 > 2 
+2 3 < 5 
+
+2 2 
+4 5 
+6 7 
+1 
+1 1 > 10
+</pre><p class="pst">Sample Output</p><pre class="sio">2 3 3 
+3 3 4 
+
+IMPOSSIBLE 
+
+</pre><p class="pst">

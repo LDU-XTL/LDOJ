@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">Bart's sister Lisa has created a new civilization on a two-dimensional grid. At the outset each grid location may be occupied by one of three life forms: Rocks, Scissors, or Papers. Each day, differing life forms occupying horizontally or vertically adjacent grid locations wage war. In each war, Rocks always defeat Scissors, Scissors always defeat Papers, and Papers always defeat Rocks. At the end of the day, the victor expands its territory to include the loser's grid position. The loser vacates the position. 
+<br>Your job is to determine the territory occupied by each life form after n days.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains t, the number of test cases. Each test case begins with three integers not greater than 100: r and c, the number of rows and columns in the grid, and n. The grid is represented by the r lines that follow, each with c characters. Each character in the grid is R, S, or P, indicating that it is occupied by Rocks, Scissors, or Papers respectively. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print the grid as it appears at the end of the nth day. Leave an empty line between the output for successive test cases.</div><p class="pst">Sample Input</p><pre class="sio">2
+3 3 1
+RRR
+RSR
+RRR
+3 4 2
+RSPR
+SPRS
+PRSP
+</pre><p class="pst">Sample Output</p><pre class="sio">RRR
+RRR
+RRR
+
+RRRS
+RRSP
+RSPR
+</pre><p class="pst">

@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">John has recently arrived in Bucharest for the South Eastern European Regional Contest. John is famous for his theory of lucky numbers. That’s why all the contestants and spectators are very happy.
+<br>According to that theory 4 and 7 are lucky digits, and all the other digits are not lucky. A lucky number is a number that contains only lucky digits in decimal notation. A very lucky number is a number that can be expressed as a product of several lucky numbers. A lucky number by itself is considered to be very lucky. For example, numbers 47, 49, 112 are very lucky.
+<br>Your task is to calculate the number of very lucky numbers that are not less than A and not greater than B. Of course, numbers A and B are given by John.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains a single integer T – a number of test cases. Each of the next T lines contains two integers separated by a single space – A and B.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output must contain T lines – answers for the test cases.</div><p class="pst">Sample Input</p><pre class="sio">4
+1 2
+88 99
+112 112
+1 100</pre><p class="pst">Sample Output</p><pre class="sio">0
+0
+1
+10</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><b>Constrains:</b>
+<br>1 ≤ T ≤ 7777,
+<br>1 ≤ A ≤ B ≤ 1000000000000 (10<sup>12</sup>).
+<br><b>Hint:</b>
+<br>Very lucky numbers for the last case of the sample input are: 4, 7, 16, 28, 44, 47, 49, 64, 74 and 77.</div><p class="pst">

@@ -1,0 +1,28 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>One of the questions children often ask is &ldquo;How many stars are there in the sky?&rdquo; Under ideal conditions, even with the naked eye, nearly eight thousands are observable in the northern hemisphere. With a decent telescope, you may find many more, but as the sight field will be limited, you may find much less at a time.</p><p>Children may ask the same questions to their parents on a planet of some solar system billions of light-years away from the Earth. Their telescope are similar to ours with circular sight fields, but alien kids have many eyes and ca look into different directions at a time through may telescopes.</p><p>Given a set of positions of stars, a set of telescopes and the directions the are looking to, your task is to count up how many stars can be seen through these telescopes.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input consists of one or more datasets. The number of datasets is less than 50. Each dataset describes stars and the parameters of the telescopes used.</p><p>The first line of a dataset contains a positive integer <i>n</i> not exceeding 500, meaning the number of stars. Each of the <i>n</i> lines following it contains three decimal fractions, <i>s</i><sub>x</sub>, <i>s</i><sub>y</sub>, and <i>s</i><sub>z</sub>. They give the position (<i>s</i><sub>x</sub>, <i>s</i><sub>y</sub>, <i>s</i><sub>z</sub>) of the star described in Euclidean coordinates. You may assume &minus;1000 &le; <i>s</i><sub>x</sub> &le; 1000, &minus;1000 &le; <i>s</i><sub>y</sub> &le; 1000, &minus;1000 &le; <i>s</i><sub>z</sub> &le; 1000, and (<i>s</i><sub>x</sub>, <i>s</i><sub>y</sub>, <i>s</i><sub>z</sub>) &ne; (0, 0, 0).</p><p>Then comes a line containing a positive integer <i>m</i> not exceeding 50, meaning the number of telescopes. Each of the following m lines contains four decimal fractions, <i>t</i><sub>x</sub>, <i>t</i><sub>y</sub>, <i>t</i><sub>z</sub> and <i>&psi;</i>, describing a telescope.</p><p>The first three numbers represent the direction of the telescope. All the telescopes are at the origin of the coordinate system (0, 0, 0) (we ignore the size of the planet). The three numbers give the point (<i>t</i><sub>x</sub>, <i>t</i><sub>y</sub>, <i>t</i><sub>z</sub>) which can be see in the center of the sight through the telescope. You may assume &minus;1000 &le; <i>t</i><sub>x</sub> &le; 1000, &minus;1000 &le; <i>t</i><sub>y</sub> &le; 1000, &minus;1000 &le; <i>t</i><sub>z</sub> &le; 1000, and (<i>t</i><sub>x</sub>, <i>t</i><sub>y</sub>, <i>t</i><sub>z</sub>) &ne; (0, 0, 0).</p><p>The fourth number <i>&psi;</i> (0 &le; <i>&psi;</i> &le; <i>&pi;</i> &frasl; 2) gives the angular radius, radians, of the sight field of the telescope. Let us define that <i>&theta;<sub>i</sub></i><sub>,<i>j</i></sub> is the angle between the direction of the <i>i</i>-th star and the center direction of the <i>j</i>-th telescope and <i>&psi;<sub>j</sub></i> is the angular radius of the sight field of the <i>j</i>-th telescope. the <i>i</i>-th star is observable through the <i>j</i>-th telescope if and only if <i>&theta;<sub>i</sub></i><sub>,<i>j</i></sub> is less than <i>&psi;<sub>j</sub></i>. You may assume that |<i>&theta;<sub>i</sub></i><sub>,<i>j</i></sub> &minus; <i>&psi;<sub>j</sub></i>| &gt; 0.00000001 for all pairs of <i>i</i> and <i>j</i>.</p><div align="center"><image src=images/3462_1.gif></div><p align="center">Figure 1: Direction and angular radius of a telescope</p><p>The end of the input is indicated with a line containing a single zero.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each dataset, one line containing an integer meaning the number of stars observable through the telescope should be output. No other characters should be contained in the output. Note that stars that can be seen through more than one telescope should not be counted twice or more.</p></div><p class="pst">Sample Input</p><pre class="sio">3 
+100 0 500 
+-500.243 -200.1 -300.5 
+0 300 200 
+2 
+1 1 1 0.65 
+-1 0 0 1.57 
+3 
+1 0 0 
+0 1 0 
+0 0 1 
+4 
+1 -1 -1 0.9553 
+-1 1 -1 0.9554
+-1 -1 1 0.9553
+-1 1 -1 0.9554
+3 
+1 0 0 
+0 1 0 
+0 0 1 
+4 
+1 -1 -1 0.9553
+-1 1 -1 0.9553
+-1 -1 1 0.9553
+-1 1 -1 0.9553
+0</pre><p class="pst">Sample Output</p><pre class="sio">2
+1
+0</pre><p class="pst">

@@ -1,0 +1,19 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p><i>N</i> children are playing Rochambeau (scissors-rock-cloth) game with you. One of them is the judge. The rest children are divided into three groups (it is possible that some group is empty). You don&rsquo;t know who is the judge, or how the children are grouped. Then the children start playing Rochambeau game for <i>M</i> rounds. Each round two children are arbitrarily selected to play Rochambeau for one once, and you will be told the outcome while not knowing which gesture the children presented. It is known that the children in the same group would present the same gesture (hence, two children in the same group always get draw when playing) and different groups for different gestures. The judge would present gesture randomly each time, hence no one knows what gesture the judge would present. Can you guess who is the judge after after the game ends? If you can, after how many rounds can you find out the judge at the earliest?</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Input contains multiple test cases. Each test case starts with two integers <i>N</i> and <i>M</i> (1 &le; <i>N</i> &le; 500, 0 &le; <i>M</i> &le; 2,000) in one line, which are the number of children and the number of rounds. Following are <i>M</i> lines, each line contains two integers in [0, <i>N</i>) separated by one symbol. The two integers are the IDs of the two children selected to play Rochambeau for this round. The symbol may be &ldquo;=&rdquo;, &ldquo;&gt;&rdquo; or &ldquo;&lt;&rdquo;, referring to a draw, that first child wins and that second child wins respectively.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>There is only one line for each test case. If the judge can be found, print the ID of the judge, and the least number of rounds after which the judge can be uniquely determined. If the judge can not be found, or the outcomes of the <i>M</i> rounds of game are inconsistent, print the corresponding message.</p></div><p class="pst">Sample Input</p><pre class="sio">3 3
+0<1
+1<2
+2<0
+3 5
+0<1
+0>1
+1<2
+1>2
+0<2
+4 4
+0<1
+0>1
+2<3
+2>3
+1 0</pre><p class="pst">Sample Output</p><pre class="sio">Can not determine
+Player 1 can be determined to be the judge after 4 lines
+Impossible
+Player 0 can be determined to be the judge after 0 lines</pre><p class="pst">

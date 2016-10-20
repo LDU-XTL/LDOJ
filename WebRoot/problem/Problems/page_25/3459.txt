@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US"><p>In a certain week, a company wants to finish <i>m</i> projects. To this end, the company can employ at most <i>n</i> people from the unemployment agency for a period of one week. Each external employee will cost the company <tt>salary</tt> euro, unless the project in which he/she is involved is not completed in time. In that case no payment is due.</p><p>For each project the company knows from experience the probability that the project will be completed within a week, as a function of the number of employees working on it. These probabilities are given as percentages <i>p<sub>ij</sub></i>, where <i>i</i> (with 1 &#8804; <i>i</i> &#8804; <i>m</i>) is the number of the project and <i>j</i> is the number of people working on it. Of course, when nobody is working on a project <i>i</i>, the probability <i>p<sub>i</sub></i><sub>0</sub> is zero percent.</p><p>If project <i>i</i> is indeed finished within a week, the company earns <tt>reward</tt>(<i>i</i>) euro; if it is not ready in time, the company has to pay a fine of <tt>punishment</tt>(<i>i</i>) euro.</p><p>Of course the company wants to maximise its total expected profit<sup>1</sup> at the end of the week by finding the optimal number of external employees to hire, and how to divide them over the projects. The optimal number of employees is the total number of people needed to achieve the maximal expected profit. Your task in this matter is to calculate this optimal number of external employees. Remember that at most <i>n</i> people are available. Furthermore: if a person is employed, he/she works on one and only one project.</p><hr noshade width="30%" align="left" size="1" color="#000000"><p><small><sup>1</sup>Let <i>p</i> (0 &lt; <i>p</i> &lt; 1) be the probability that a job is finished in time, and let <i>E</i><sub>1</sub> be the profit in that case. Furthermore, let <i>E</i><sub>2</sub> be the (negative) profit in case the job is not finished in time. Then the expected profit for this particular job is <i>p</i>&#8901;<i>E</i><sub>1</sub> + (1 &#8722; <i>p</i>)&#8901;<i>E</i><sub>2</sub>.</small></p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of the input file contains a single number: the number of test cases to follow. Each test case has the following format:</p><ul><li>One line with one integer <i>m</i> with 1 &#8804; <i>m</i> &#8804; 100: the number of projects.</li><li>One line with one integer <i>n</i> with 0 &#8804; <i>n</i> &#8804; 100: the maximal number of available employees.</li><li>One line with one integer salary with 0 &#8804; <tt>salary</tt> &#8804; 1,000: the salary of one employee. Remember that the salary is given in euros.</li><li><i>m</i> lines, each line corresponding to a project <i>i</i>, containing <i>n</i> integers <i>p<sub>i</sub></i><sub>1</sub>, <i>p<sub>i</sub></i><sub>2</sub>, &#8230;, <i>p<sub>in</sub></i> (the percentages, with 0 &#8804; <i>p<sub>i</sub></i><sub>1</sub>, <i>p<sub>i</sub></i><sub>2</sub>, &#8230;, <i>p<sub>in</sub></i> &#8804; 100), followed by two integers corresponding to the <tt>reward</tt> and the <tt>punishment</tt> for project <i>i</i>. All values are separated by single spaces. Both <tt>reward</tt> and <tt>punishment</tt> are given in euros and are between 0 and 100,000 (boundaries included).</li></ul></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For every test case in the input file, the output should contain two lines.</p><ul><li>The first line contains the maximal expected profit in eurocents.</li><li>The second line contains the total number of external employees that must be hired in order to achieve this maximal expected profit. If the maximal expected profit can be achieved by different (total) numbers of employees, then these different numbers must be given in increasing order. Numbers have to be separated by single spaces.</li></ul></div><p class="pst">Sample Input</p><pre class="sio">3
+1
+4
+200
+90 100 100 100 2000 0
+2
+2
+100
+80 80 2100 500
+0 100 1700 500
+3
+4
+100
+100 80 80 70 1000 100
+100 90 80 90 500 50
+100 70 60 50 700 100</pre><p class="pst">Sample Output</p><pre class="sio">162000
+1
+100000
+1 2
+190000
+3</pre><p class="pst">

@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">The new anti-smoking laws have been in eect for some time now, but some restaurant owners still have problems coping with the new rules. Some say that it is detrimental to their business, others are relieved that their clothes no longer smell of cigarette smoke after each service. However, whether they like it or not, nearly every restaurant has had to make at least some changes to its interior, especially if both smoking and non-smoking customers are to be seated in different parts of the restaurant.
+<br>Some entrepreneurs have made various ingenious devices to cope with the new rules, like the infamous "aquarium". This device creates overpressure behind the bar to ensure that the personnel is working in a smoke-free environment. However, for many restaurants this is obviously not feasible.
+<br>This is why Johann, proprietor of a classy restaurant in downtown Groningen, has decided to simply divide his restaurant into two zones, with air locks to connect the zones (and a hatch to pass food, as the personnel cannot come into the smoking zone). His idea is that the smoking zone should simply be directly connected to the outside, this will save on heating and supply fresh air. On the other hand, the non-smoking zone should obviously be connected to the kitchen to allow the personnel to serve food.
+<br>As the restaurant consists of many small rooms, the division into two connected zones is relatively easy. Johann can simply put air locks in a number of the passages that connect two rooms. However, Johann has a bit of a shock when he sees the price of an air lock and the associated hatch! An air lock costs a thousand euros per square meter of the passage and the hatches to pass food also cost a thousand euros each, as they have to satisfy numerous rules and regulations. Walls without a passage do not need to be replaced by air locks nor fitted with hatches.
+<br>Obviously Johann would like to minimize the cost of this operation, and he would like you to help him. His restaurant is completely rectangular, and consists of equally-sized square rooms that can each be connected to their (at most four) neighbors.</div><p class="pst">Input</p><div class="ptx" lang="en-US">On the first line of the input is a positive integer, the number of test cases. Then for each test case:
+<br>A line with two positive integers nr, nc < 1000, the number of rows and columns of rooms in the restaurant.
+<br>A line with two integers 0 &lt;= er < nr and 0 &lt;= ec < nc, the row and column of the room which is connected to the entrance.
+<br>A line with two integers 0 &lt;= kr < nr and 0 &lt;= kc < nc, the row and column of the room which is connected to the kitchen (via an elevator).
+<br>nr lines of nc - 1 non-negative integers < 100. The integer at position j of line i is the area in square meters of the passage between room (i, j) and room (i, j + 1).
+<br>nr - 1 lines of nc non-negative integers < 100. The integer at position j of line i is the area in square meters of the passage between room (i, j) and room (i + 1, j).</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case:
+<br>The minimum cost for dividing the restaurant into two zones such that the kitchen-connected room is in the non-smoking zone and the entrance-connected room is in the smoking zone.</div><p class="pst">Sample Input</p><pre class="sio">2
+1 2
+0 0
+0 1
+1
+2 2
+0 0
+1 1
+1
+1
+3 2</pre><p class="pst">Sample Output</p><pre class="sio">2000
+4000</pre><p class="pst">

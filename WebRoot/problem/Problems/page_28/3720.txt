@@ -1,0 +1,6 @@
+</p><div class="ptx" lang="en-US"><p>Every fraction can be converted to a repeatin decimal. For example 1/2 = .5, 1/3 = .(3) and 1/6 = .1(6). Given an integer <i>n</i>, Tom wants to know how many digit <i>k</i> occurs totally in the repeating decimal presentation of 1/2, 1/3 ... 1/<i>n</i>.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input consists of several test cases. Each test case is a line containing two integers <i>n </i>(2 &le; <i>n</i> &le; 100) and <i>k</i> (0 &le; k &le; 9).</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output the total occurrence of the digit. </p></div><p class="pst">Sample Input</p><pre class="sio">3 5
+7 3
+7 0
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+1
+0</pre><p class="pst">

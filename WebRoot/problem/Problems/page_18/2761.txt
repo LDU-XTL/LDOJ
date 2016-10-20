@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">Wind loves pretty dogs very much, and she has n pet dogs. So Jiajia has to feed the dogs every day for Wind. Jiajia loves Wind, but not the dogs, so Jiajia use a special way to feed the dogs. At lunchtime, the dogs will stand on one line, numbered from 1 to n, the leftmost one is 1, the second one is 2, and so on. In each feeding, Jiajia choose an inteval[i,j], select the k-th pretty dog to feed. Of course Jiajia has his own way of deciding the pretty value of each dog. It should be noted that Jiajia do not want to feed any position too much, because it may cause some death of dogs. If so, Wind will be angry and the aftereffect will be serious. Hence any feeding inteval will not contain another completely, though the intervals may intersect with each other.
+<br>
+<br>Your task is to help Jiajia calculate which dog ate the food after each feeding.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains n and m, indicates the number of dogs and the number of feedings.
+<br>
+<br>The second line contains n integers, describe the pretty value of each dog from left to right. You should notice that the dog with lower pretty value is prettier.
+<br>
+<br>Each of following m lines contain three integer i,j,k, it means that Jiajia feed the k-th pretty dog in this feeding.
+<br>
+<br>You can assume that n<100001 and m<50001.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Output file has m lines. The i-th line should contain the pretty value of the dog who got the food in the i-th feeding.</div><p class="pst">Sample Input</p><pre class="sio">7 2
+1 5 2 6 3 7 4
+1 5 3
+2 7 1
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+2
+</pre><p class="pst">

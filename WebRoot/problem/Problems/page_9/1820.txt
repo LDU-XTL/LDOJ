@@ -1,0 +1,92 @@
+</p><div class="ptx" lang="en-US">By definition, a symbolic expression is:
+<br>
+<br>a) a natural number;
+<br>
+<br>b) a name made by a succession of letters that identifies another symbolic expression;
+<br>
+<br>c) a list formed of 0 or more symbolic expressions, separated by a space, delimited by round brackets. An example of symbolic expression created from a list with 3 elements is: (A 2 (3 (B))).
+<br>
+<br>A definition assigns a name to a symbolic expression and it has the following form:
+<br>
+<br>Name = SymbolicExpression
+<br>
+<br>Two symbolic expressions E1 and E2 are equivalent if:
+<br><ol type=a><li>E1 is a number, E2 is a number and they have the same value; 
+<br><li>E1 and E2 are the names of two equivalent symbolic expressions; 
+<br><li>E1 and E2 are equivalent lists; two lists are equivalent if they contain the same number of symbolic expressions, and the expressions from the corresponding positions are equivalent. 
+<br><li>The equivalence relation between expressions is transitive (if expression E1 is equivalent to expression E2, and expression E2 is equivalent to expression E3, than we infer that E1 is equivalent to E3).
+<br><li>If after applying the rules a)-d) you can not decide on the equivalence (or unequivalence) of the expressions, than they will be considered equivalent.</ol>
+<br>For example:
+<br><ol><li>The symbolic expression (1 2) is not equivalent with (2 1). 
+<br><li>The symbolic expressions (1 (2 3) 4) and (1 (2) (3 4)) are not equivalent. 
+<br><li>For the following definitions: 
+<br>A = B
+<br>
+<br>B = (1 (2 abc))
+<br>
+<br>abc = (1 34)
+<br>
+<br>X = ((1 (2 abc)) (1 34))
+<br>
+<br>Y = (A abc)
+<br>
+<br>Z = (1 2 abc (1 34))
+<br>
+<br>The symbolic expressions X and Y are equivalent. The symbolic expressions X and Z are not equivalent.
+<br><li>For the following definitions: 
+<br>A = B
+<br>
+<br>C = (D E)
+<br>
+<br>B = (D E)
+<br>
+<br>The expressions A and C are equivalent.
+<br><li>For the following definitions:
+<br>The symbolic expressions A and B are equivalent (according to rule e).</ol>
+<br>An interrogation is used for testing the equivalence of two symbolic expressions and it has the following form:
+<br>
+<br><b>Expression1 ? Expression2</b>
+<br>
+<br>The result of an interrogation is either 0 or 1 ( 0 if the expressions are not equivalent and 1 otherwise). 
+<br>
+<br>Write a program that reads from a file a succession of definitions, followed by a series of interrogations and displays the result of the interrogations. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains a succession of expression definitions (each definition on a new line), terminated (on a separate line) with the tag EOD, after which follows a succession of interrogations (one interrogation per line), ended (on a separate line) with the tag EOE. 
+<br>
+<br>Constrains and specifications:
+<br>
+<br>The number of definitions is smaller than 30 
+<br>The number of interrogations is smaller than 30 
+<br>The number of symbols from a list, different from spaces and brackets, is smaller than 50. 
+<br>The sign = from a definition, respective the sign ? from an interrogation are bordered by one space. 
+<br>The name of an expression is at most 8 characters long. 
+<br>The natural numbers are smaller or equal than 30000 
+<br>The name of a symbolic expression may appear in the definition of that expression. 
+<br>In the input file there is a single definition for each symbolic expression. 
+<br>The order of the definitions in the input file does not matter. 
+<br>The names of the symbolic expressions are not case sensitive. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output contains one line for each interrogation from the input file, on which line will be displayed the result of the interrogation (0 or 1).</div><p class="pst">Sample Input</p><pre class="sio">A = 12
+B = 13
+BB = 12
+Bbb = (12)
+G = (1 (1 E))
+c = (1 2 3)
+D = (1 2 3)
+dD = (1 2 6)
+E = (1 E)
+F = (1 E)
+EOD
+A ? B
+A ? BB
+C ? D
+c ? DD
+E ? E
+F ? E
+G ? E
+BB ? bbb
+EOE</pre><p class="pst">Sample Output</p><pre class="sio">0
+1
+1
+0
+1
+1
+1
+0</pre><p class="pst">

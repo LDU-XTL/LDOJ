@@ -1,0 +1,39 @@
+</p><div class="ptx" lang="en-US">Model a stochastic gym exercise.
+<br>An entertaining game for elementary school children in gym class is set up as follows: 
+<br><ul><li>N baskets are placed at various locations on the gym floor, each with a distinguishing picture on them. </li>
+<br><li>Each basket contains some index cards. Each index card has a destination written on them. </li></ul>
+<br>The game proceed as follows: the children gather at a specified start basket. They each take a turn picking a random card from the basket, memorizing the destination, and returning the card before the next child picks one. When the teacher blows the whistle, all the children move to the basket indicated on the notecard.
+<br>
+<br>Given the configuration of index cards at each basket, you are to determine the probabiliites a kindergardener will appear at each basket for the first ten steps of the game.
+<br>
+<br>For example, suppose there are four baskets, "tree," "house," "car" and "park." Each basket has the following index cards: 
+<br><ul><li>The "tree" basket has 2 cards with "tree" on it, 1 card with "house", and 2 cards with "car." 
+<br><li>The "house" basket has 1 card with "tree" on it, 1 card with "car" on it, and 2 cards with "park" on it. 
+<br><li>The "car" basket has 1 card with "tree" on it. 
+<br><li>The "park" basket has one of each card in it. </ul>
+<br>
+<br>This arrangement is summarized by the following table: 
+<br><table border=1><tr><td></td><td colspan=4 align=center><b>destination</b></td></tr><tr><td><b>basket</b></td><td><b>tree</b></td><td><b>house</b></td><td><b>car</b></td><td><b>park</b></td></tr><tr><td><b>tree</b></td><td>2</td><td>1</td><td>2</td><td>0</td></tr><tr><td><b>house</b></td><td>1</td><td>0</td><td>1</td><td>2</td></tr><tr><td><b>car</b></td><td>1</td><td>0</td><td>0</td><td>0</td></tr><tr><td><b>park</b></td><td>1</td><td>1</td><td>1</td><td>1</td></tr></table>
+<br>Everyone starts at the tree, so initially, 
+<br><ul>P<sub>0</sub>(tree)=1, and P<sub>0</sub>(else where)=0 </ul>
+<br>In the middle of the game, the probablity of being at some new location is equal to the sum of the probabilities of being at any location on the previous step, times the probablity of moving to the destination location from that past location. For the example, 
+<br><ul>P<sub>s+1</sub>(tree)=0.40*Ps(tree)+0.25*Ps(house)+1.00*Ps(car)+0.25*Ps(park) </ul>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">For N baskets, 2<=N<=10, the input will contain N lines of information. The N lines will give the index card count as in the table for the example above. There will be at most 10 cards of the same name in any given basket, and each basket will contain at least one card.</div><p class="pst">Output</p><div class="ptx" lang="en-US">There should be 10 lines of output for any given input. You should print out the probabilites for seeing a kindergardener at any given basked for the first 10 steps in the game.
+<br>
+<br>Your results should give the correct probablities to five digits of precision. We recommend you do the internal computations using double precision arithmetic.
+<br></div><p class="pst">Sample Input</p><pre class="sio">2 1 2 0
+1 0 1 2
+1 0 0 0
+1 1 1 1
+</pre><p class="pst">Sample Output</p><pre class="sio">1.00000 0.00000 0.00000 0.00000
+0.40000 0.20000 0.40000 0.00000
+0.61000 0.08000 0.21000 0.10000
+0.49900 0.14700 0.28900 0.06500
+0.54160 0.11605 0.25260 0.08975
+0.52069 0.13076 0.26809 0.08046
+0.52917 0.12425 0.26108 0.08549
+0.52519 0.12721 0.26411 0.08350
+0.52686 0.12591 0.26275 0.08448
+0.52609 0.12649 0.26334 0.08408
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Assume they always start at the first basket.
+<br></div><p class="pst">

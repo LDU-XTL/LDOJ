@@ -1,0 +1,74 @@
+</p><div class="ptx" lang="en-US">You have probably learnt chemical equations (chemical reaction formulae) in your high-school days. The following are some well-known equations.
+<br><center>
+<br>2H<sub>2</sub> + O<sub>2</sub> -> 2H<sub>2</sub>O (1)
+<br>Ca(OH)<sub>2</sub> + CO<sub>2</sub> -> CaCO<sub>3</sub> + H<sub>2</sub>O (2)
+<br>N<sub>2</sub> + 3H<sub>2</sub> -> 2NH<sub>3</sub> (3)
+<br></center>
+<br>While Equations (1)–(3) all have balanced left-hand sides and right-hand sides, the following ones do not.
+<br><center>
+<br>Al + O<sub>2</sub> -> Al<sub>2</sub>O<sub>3</sub> (wrong) (4)
+<br>C<sub>3</sub>H<sub>8</sub> + O<sub>2</sub> -> CO<sub>2</sub> + H<sub>2</sub>O (wrong) (5)
+<br></center>
+<br>The equations must follow the law of conservation of mass; the quantity of each chemical element (such as H, O, Ca, Al) should not change with chemical reactions. So we should “adjust” the numbers of molecules on the left-hand side and right-hand side:
+<br><center>
+<br>4Al + 3O<sub>2</sub> -> 2Al<sub>2</sub>O<sub>3</sub> (correct) (6)
+<br>C<sub>3</sub>H<sub>8</sub> + 5O<sub>2</sub> -> 3CO<sub>2</sub> + 4H<sub>2</sub>O (correct) (7)
+<br></center>
+<br>The coeﬃcients of Equation (6) are (4, 3, 2) from left to right, and those of Equation (7) are (1, 5, 3, 4) from left to right. Note that the coeﬃcient 1 may be omitted from chemical equations.
+<br>
+<br>The coeﬃcients of a correct equation must satisfy the following conditions.
+<br>
+<br>1. The coeﬃcients are all positive integers.
+<br>2. The coeﬃcients are relatively prime, that is, their greatest common divisor (g.c.d.) is 1.
+<br>3. The quantities of each chemical element on the left-hand side and the right-hand side are equal.
+<br>
+<br>Conversely, if a chemical equation satisﬁes the above three conditions, we regard it as a correct equation, no matter whether the reaction or its constituent molecules can be chemically realized in the real world, and no matter whether it can be called a reaction (e.g., H<sub>2</sub> -> H<sub>2</sub> is considered correct). A chemical equation satisfying Conditions 1 and 3 (but not necessarily Condition 2) is called a balanced equation.
+<br>
+<br>Your goal is to read in chemical equations with missing coeﬃcients like Equation (4) and (5), line by line, and output the sequences of coeﬃcients that make the equations correct. Note that the above three conditions do not guarantee that a correct equation is uniquely determined. For example, if we “mix” the reactions generating H<sub>2</sub>O and NH<sub>3</sub>, we would get
+<br><center>
+<br>xH<sub>2</sub> + yO<sub>2</sub> + zN<sub>2</sub> + uH<sub>2</sub> -> vH<sub>2</sub>O + wNH<sub>3</sub> (8)
+<br></center>
+<br>but (x, y, z, u, v, w) = (2, 1, 1, 3, 2, 2) does not represent a unique correct equation; for instance, (4, 2, 1, 3, 4, 2) and (4, 2, 3, 9, 4, 6) are also “correct” according to the above deﬁnition! However, we guarantee that every chemical equation we give you will lead to a unique correct equation by adjusting their coeﬃcients. In other words, we guarantee that (i) every chemical equation can be balanced with positive coeﬃcients, and that (ii) all balanced equations of the original equation can be obtained by multiplying the coeﬃcients of a unique correct equation by a positive integer.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input is a sequence of chemical equations (without coeﬃcients) of the following syntax in the Backus-Naur Form:
+<br>
+<br>&ltchemical_equation&gt ::= &ltmolecule_sequence&gt "->" &ltmolecule_sequence&gt
+<br>&ltmolecule_sequence&gt ::= &ltmolecule&gt | &ltmolecule&gt "+" &ltmolecule_sequence&gt
+<br>&ltmolecule&gt ::= &ltgroup&gt | &ltgroup&gt &ltmolecule&gt
+<br>&ltgroup&gt ::= &ltunit_group&gt | &ltunit_group&gt &ltnumber&gt
+<br>&ltunit_group&gt ::= &ltchemical_element&gt | "(" &ltmolecule&gt ")"
+<br>&ltchemical_element&gt ::= &ltuppercase_letter&gt | &ltuppercase_letter&gt &ltlowercase_letter&gt
+<br>&ltuppercase_letter&gt ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z"
+<br>&ltlowercase_letter&gt ::= "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z"
+<br>&ltnumber&gt ::= &ltnon_zero_digit&gt | &ltnon_zero_digit&gt &ltdigit&gt
+<br>&ltnon_zero_digit&gt ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<br>&ltdigit> ::= "0" | &ltnon_zero_digit&gt
+<br>
+<br>Each chemical equation is followed by a period and a newline. No other characters such as spaces do not appear in the input. For instance, the equation
+<br>
+<br>Ca(OH)<sub>2</sub> + CO<sub>2</sub> -> CaCO<sub>3</sub> + H<sub>2</sub>O
+<br>
+<br>is represented as
+<br>
+<br>Ca(OH)2+CO2->CaCO3+H2O.
+<br>
+<br>Each chemical equation is no more than 80 characters long, and as the above syntax implies, the <number>’s are less than 100. Parentheses may be used but will not be nested (maybe a good news to some of you!). Each side of a chemical equation consists of no more than 10 top-level molecules. The coeﬃcients that make the equations correct will not exceed 40000. The chemical equations in the input have been chosen so that 32-bit integer arithmetic would suﬃce with appropriate precautions against possible arithmetic overﬂow. You are free to use 64-bit arithmetic, however.
+<br>
+<br>The end of the input is indicated by a line consisting of a single period.
+<br>
+<br>Note that our deﬁnition of &ltchemical_element&gt above allows chemical elements that do not exist or unknown as of now, and excludes known chemical elements with three-letter names (e.g., ununbium (Uub), with the atomic number 112).</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each chemical equation, output a line containing the sequence of positive integer coeﬃcients that make the chemical equation correct. Numbers in a line must be separated by a single space. No extra characters should appear in the output.</div><p class="pst">Sample Input</p><pre class="sio">N2+H2->NH3.
+Na+Cl2->NaCl.
+Ca(OH)2+CO2->CaCO3+H2O.
+CaCl2+AgNO3->Ca(NO3)2+AgCl.
+C2H5OH+O2->CO2+H2O.
+C4H10+O2->CO2+H2O.
+A12B23+C34D45+ABCD->A6D7+B8C9.
+A98B+B98C+C98->A98B99C99.
+A2+B3+C5+D7+E11+F13->ABCDEF.
+.</pre><p class="pst">Sample Output</p><pre class="sio">1 3 2
+2 1 2
+1 1 1 1
+1 2 1 2
+1 3 2 3
+2 13 8 10
+2 123 33042 5511 4136
+1 1 1 1
+15015 10010 6006 4290 2730 2310 30030</pre><p class="pst">

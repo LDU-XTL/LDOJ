@@ -1,0 +1,26 @@
+</p><div class="ptx" lang="en-US"><p>未名湖附近共有<i>N</i>个大小湖泊<i>L</i><sub>1</sub>, <i>L</i><sub>2</sub>, ..., <i>L<sub>n</sub></i>(其中包括未名湖)，每个湖泊<i>L<sub>i</sub></i>里住着一只青蛙<i>F<sub>i</sub></i>(1 &le; <i>i</i> &le; <i>N</i>)。如果湖泊<i>L<sub>i</sub></i>和<i>L<sub>j</sub></i>之间有水路相连，则青蛙<i>F<sub>i</sub></i>和<i>F<sub>j</sub></i>互称为邻居。现在已知每只青蛙的邻居数目<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x<sub>n</sub></i>，请你给出每两个湖泊之间的相连关系。</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>第一行是测试数据的组数<i>T</i>(0 &le; <i>T</i> &le; 20)。每组数据包括两行，第一行是整数N(2 &lt; <i>N</i> &lt; 10)，第二行是<i>N</i>个整数，<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>,..., <i>x</i><sub>n</sub>(0 &le; <i>x<sub>i</sub></i> &le; <i>N</i>)。</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>对输入的每组测试数据，如果不存在可能的相连关系，输出&quot;NO&quot;。否则输出&quot;YES&quot;，并用<i>N</i>×<i>N</i>的矩阵表示湖泊间的相邻关系，即如果湖泊<i>i</i>与湖泊<i>j</i>之间有水路相连，则第<i>i</i>行的第<i>j</i>个数字为1，否则为0。每两个数字之间输出一个空格。如果存在多种可能，只需给出一种符合条件的情形。相邻两组测试数据之间输出一个空行。</p></div><p class="pst">Sample Input</p><pre class="sio">3
+7
+4 3 1 5 4 2 1 
+6
+4 3 1 4 2 0 
+6
+2 3 1 1 2 1 
+</pre><p class="pst">Sample Output</p><pre class="sio">YES
+0 1 0 1 1 0 1 
+1 0 0 1 1 0 0 
+0 0 0 1 0 0 0 
+1 1 1 0 1 1 0 
+1 1 0 1 0 1 0 
+0 0 0 1 1 0 0 
+1 0 0 0 0 0 0 
+
+NO
+
+YES
+0 1 0 0 1 0 
+1 0 0 1 1 0 
+0 0 0 0 0 1 
+0 1 0 0 0 0 
+1 1 0 0 0 0 
+0 0 1 0 0 0 
+</pre><p class="pst">

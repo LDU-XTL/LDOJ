@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Let us define a regular brackets sequence in the following way:
+<br>
+<br>1. Empty sequence is a regular sequence.
+<br>2. If S is a regular sequence, then (S) and [S] are both regular sequences.
+<br>3. If A and B are regular sequences, then AB is a regular sequence.
+<br>
+<br>For example, all of the following sequences of characters are regular brackets sequences:
+<br>
+<br>(), [], (()), ([]), ()[], ()[()]
+<br>
+<br>And all of the following character sequences are not:
+<br>
+<br>(, [, ), )(, ([)], ([(]
+<br>
+<br>Some sequence of characters '(', ')', '[', and ']' is given. You are to find the shortest possible regular brackets sequence, that contains the given character sequence as a subsequence. Here, a string a1 a2 ... an is called a subsequence of the string b1 b2 ... bm, if there exist such indices 1 = i1 < i2 < ... < in = m, that aj = bij for all 1 = j = n.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input file contains at most 100 brackets (characters '(', ')', '[' and ']') that are situated on a single line without any other characters among them.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Write to the output file a single line that contains some regular brackets sequence that has the minimal possible length and contains the given sequence as a subsequence.</div><p class="pst">Sample Input</p><pre class="sio">([(]</pre><p class="pst">Sample Output</p><pre class="sio">()[()]</pre><p class="pst">

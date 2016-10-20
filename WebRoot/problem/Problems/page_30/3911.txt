@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US">A group of N Internet Service Provider companies (ISPs) use a private communication channel that has a maximum capacity of C traffic units per second. Each company transfers T traffic units per second through the channel and gets a profit that is directly proportional to the factor T(C - TN). The problem is to compute T_optim, the smallest value of T that maximizes the total profit the N ISPs can get from using the channel. Notice that N, C, T, and T_optim are integer numbers.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Each data set corresponds to an instance of the problem above and contains two integral numbers – N and C – with values in the range from 0 to 10<sup>9</sup>. The input data are separated by white spaces, are correct, and terminate with an end of file.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set the program computes the value of T_optim according to the problem instance that corresponds to the data set. The result is printed on the standard output from the beginning of a line. There must be no empty lines on the output.</div><p class="pst">Sample Input</p><pre class="sio">1 0 
+0 1 
+4 3 
+2 8 
+3 27 
+25 1000000000</pre><p class="pst">Sample Output</p><pre class="sio">0 
+0 
+0 
+2 
+4 
+20000000</pre><p class="pst">

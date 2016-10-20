@@ -1,0 +1,25 @@
+</p><div class="ptx" lang="en-US">An n x n game board is populated with integers, one nonnegative integer per square. The goal is to travel along any legitimate path from the upper left corner to the lower right corner of the board. The integer in any one square dictates how large a step away from that location must be. If the step size would advance travel off the game board, then a step in that particular direction is forbidden. All steps must be either to the right or toward the bottom. Note that a 0 is a dead end which prevents any further progress.
+<br>
+<br>
+<br>Consider the 4 x 4 board shown in Figure 1, where the solid circle identifies the start position and the dashed circle identifies the target. Figure 2 shows the three paths from the start to the target, with the irrelevant numbers in each removed.
+<br><table border="0" cellpadding="2" cellspacing="2"><tbody><tr><td><img src="images/2704_1.jpg"></td><td><img src="images/2704_2.jpg"></td></tr><tr><td>Figure 1<br></td><td>Figure 2<br></td></tr></tbody></table></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains data for one to thirty boards, followed by a final line containing only the integer -1. The data for a board starts with a line containing a single positive integer n, 4 <= n <= 34, which is the number of rows in this board. This is followed by n rows of data. Each row contains n single digits, 0-9, with no spaces between them. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output consists of one line for each board, containing a single integer, which is the number of paths from the upper left corner to the lower right corner. There will be fewer than 2<sup>63</sup> paths for any board.
+<br></div><p class="pst">Sample Input</p><pre class="sio">4
+2331
+1213
+1231
+3110
+4
+3332
+1213
+1232
+2120
+5
+11101
+01111
+11111
+11101
+11101
+-1
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+0
+7</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Brute force methods examining every path will likely exceed the allotted time limit. 64-bit integer values are available as long values in Java or long long values using the contest's C/C++ compilers. </div><p class="pst">

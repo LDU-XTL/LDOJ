@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">Define the following function
+<br><center><img src=images/2595_1.jpg></center>
+<br>Given the value C of F(p1, p2 ... pn), can you find the minimum and maximum value of F(q1, q2 ... qn)?
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several test cases. For each test case, it contains three lines.
+<br>
+<br>Line 1: two integers n (1<= n <= 50000) and C.
+<br>Line 2: n integers p1, p2 ... pn (|pi| < 1000 for 1 <= i <= n).
+<br>Line 3: n integers q1, q2 ... qn (|qi| < 1000 for 1 <= i <= n).
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output the minimum and maximum value in a single line with the fraction rounded to 3 decimal places.</div><p class="pst">Sample Input</p><pre class="sio">2 1
+3 1
+0 2
+</pre><p class="pst">Sample Output</p><pre class="sio">2.000 2.000</pre><p class="pst">

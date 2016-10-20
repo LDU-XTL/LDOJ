@@ -1,0 +1,26 @@
+</p><div class="ptx" lang="en-US">Dao was a simple two-player board game designed by Jeff Pickering and Ben van Buskirk at 1999. A variation of it, called S-Dao, is a one-player game. In S-Dao, the game board is a 4 * 4 square with 16 cells. There are 4 black stones and 4 white stones placed on the game board randomly in the beginning. The player is given a final position and asked to play the game using the following rules such that the final position is reached using the minimum number of moves:
+<br><ul>1. You first move a white stone, and then a black stone. You then alternatively move a white stone and a black stone. 
+<br>2. A stone can be moved horizontally, vertically or diagonally. A stone must be moved in a direction until the boarder or another stone is encountered. There is no capture or jump.
+<br>3. During each move, you need to move a stone of the right color. You cannot pass.</ul>
+<br>An example of a sequence of legal moves is shown in the following figure. This move sequence takes 4 moves. This is not a sequence of legal moves
+<br><img src=images/2697_1.jpg>
+<br>using the least number of moves assume the leftmost board is the initial position and the rightmost board is the final position. A sequence of moves using only 3 moves is shown below.
+<br><img src=images/2697_2.jpg>
+<br>Given an initial position and a final position, your task is to report the minimum number of moves from the initial position to the final position.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains the number of test cases w, w <= 6. Then the w test cases are listed one by one. Each test case consists of 8 lines, 4 characters per line. The first 4 lines are the initial board position. The remaining 4 lines are the final board position. The i-th line of a board is the board at the i-th row. A character 'b' means a black stone, a character 'w' means a white stone, and a '*' means an empty cell.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output the minimum number of moves in one line. If it is impossible to move from the initial position to the final position, then output -1.</div><p class="pst">Sample Input</p><pre class="sio">2
+w**b
+*wb*
+*bw*
+b**w
+w**b
+*wb*
+*bw*
+bw**
+w**b
+*b**
+**b*
+bwww
+w**b
+*bb*
+****
+bwww</pre><p class="pst">Sample Output</p><pre class="sio">1
+3</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Doing simple exhaustive search without planning ahead will most likely get you into troubles.</div><p class="pst">

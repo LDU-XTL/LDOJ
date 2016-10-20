@@ -1,0 +1,28 @@
+</p><div class="ptx" lang="en-US"><body><p><span lang="EN-US">Little Y falls in love with robots recently. It's really a complex job to run a robot. So we will start with a relatively simple work.</span></p><p><span lang="en-us">A </span><span lang="EN-US">basic problem is to handle the robot hand. The robot hand consists of N + 1 joints which are labeled from 0 to N. There's a hard rod between the k<sup>th</sup> joint and the k+1<sup>th</sup> joint. To make the problem simple, we will consider the joints and rods as N + 1 points and N segments (their thickness would be ignored in our problem) in xyz 3D (three-dimensional) coordinates. The 0<sup>th</sup> joint is always at (0, 0, 0).</span></p><p><span lang="EN-US">As the first step to handle a robot hand, Little Y needs to process some ROs (rotation operation). </span></p><p><span lang="EN-US">There are 3 parameters in RO: an integer idx in [0, N-1], a real number Alpha in [0, 2&pi;] and a 3D non-zero vector P. With such RO, the hand from joint idx to joint N will be rotated. This part will be rotated around an axis for alpha radian. The axis is paralleled to P and passes joint idx. In our rotation, you may assume that movement will not be blocked.</span></p>
+<br><p><img src = images/3247_1.gif></p><p><span lang="EN-US">Now we’ll explain the direction of rotations. You may easy find out your front (F), back (B), left (L), right (R), up (U) and down (D) direction. Then you may assume x-axis goes from F to B, y-axis goes from L to R and z-axis goes from D to U.</span></p><p><span lang="EN-US">For example, define 3D vectors A(1, 0, 0), B(0, 1, 0) and C(0, 0, 1) and a angle Alpha = <sup>π</sup>&frasl;<sub>2</sub>. Rotate A with Alpha and axis(C) will results in B. Rotate C with Alpha and axis(B) will results in A. Rotate B with Alpha and axis(A) will results in C. </span></p><p><span lang="EN-US">Consider joint idx = (1, 1, 1), rotate (2, 1, 1) with angle = <sup>π</sup>&frasl;<sub>2</sub> and axis (0, 0, 1) will results in (1, 2, 1).</span></p><p><span lang="EN-US">However, there are so many joints and ROs for Little Y that he cannot handle them! So he asks you for help. Try to help him!</span></p></body></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input file consists of several test cases, for each test case:
+<br>The first line contains 2 positive integer N and M (N, M ≤ 50000), which means there are N + 1 joints and M ROs in the test case. In the next N + 1 lines, each line will contains a real number (X<sub>i</sub>, Y<sub>i</sub>, Z<sub>i</sub>). The next M lines each line starts with an integer CMD which is 1 or 2.
+<br>If CMD = 2, then it follows an integer t in [0, N]. It means a query to the position of joint t.
+<br>If CMD = 1, then it follows 5 number idx, alpha, (X<sub>p</sub>, Y<sub>p</sub>, Z<sub>p</sub>), standing for a rotation operation <idx, alpha, P>.
+<br>The input file ends with one line consisting of two 0 separated by a space.
+<br>You may assume all real numbers in input data are smaller than 10<sup>4</sup> in absolute value.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case:
+<br>For each operation with CMD = 2, output one line containing 3 real number (X<sub>t</sub>, Y<sub>t</sub>, Z<sub>t</sub>), describing the position of joint t. Keep 4 digits after the decimal point.
+<br>Output an empty line after each test case.
+<br></div><p class="pst">Sample Input</p><pre class="sio">1 2
+0 0 0
+1 0 0
+1 0 1.5707963267948966192313216916398 0 0 1
+2 1
+2 3
+0 0 0
+1 0 0
+2 0 0
+1 0 1.5707963267948966192313216916398 0 0 1
+1 1 1.5707963267948966192313216916398 1 0 0
+2 2
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">0.0000 1.0000 0.0000
+
+0.0000 1.0000 1.0000
+
+</pre><p class="pst">

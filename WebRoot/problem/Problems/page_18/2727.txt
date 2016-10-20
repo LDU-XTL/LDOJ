@@ -1,0 +1,64 @@
+</p><div class="ptx" lang="en-US">John's college will hold a programming contest, and now it's calling for problems. John wants to contribute a problem to this contest. After finishing the problem, he found some trouble in verifying the programmer's output. For most programming problems, you can just compare the programmer's output against the correct answer, and if they are literally the same, the programmer's output is correct, otherwise it's wrong. But for this problem, there may be many correct answers and they can be different from each other literally. So John must write a program to verify programmers' output (We can call this program "Special Judge"). Soon, he found the Special Judge is too difficult for him, so he turns to you for help. 
+<br>
+<br>Here is the description of John’s original problem:
+<br><ul><table border=1 width=80%><tr><td><font size=5>Original Problem</font>
+<br>/* Adapted from "Help the problem setter", Ulm Local 2005 */
+<br>
+<br>Let us define a binary search tree inductively as follows:
+<br><ul><li>The empty tree which has no node is a binary search tree;
+<br><li>Each non-empty binary search tree has a root, which is a node labeled with an integer, and two binary search trees as left and right subtrees of the root;
+<br><li>The labels of the nodes in the left subtree are all less than the label of the root;
+<br><li>The labels of the nodes in the right subtree are all greater than the label of the root.</ul>
+<br>Given such a binary search tree, the following search procedure can be used to locate a node in the tree: Start with the root node. Compare the label of the current node with the desired label. If it is the same, you have found the right node. Otherwise, if the desired label is smaller, search in the left subtree, otherwise search in the right subtree. 
+<br>
+<br>The access frequency of a node is the frequency you search for the node. The access cost to locate a node is the number of nodes you have to visit until you find the right node. Given some nodes labeled with integers and the access frequency of every node, an optimal binary search tree is a binary search tree consisting of these nodes with the minimum expected access cost.
+<br>
+<br>Here is your task: Given a binary search tree, try to specify the access frequency of every node, for which this binary search tree is the unique optimal binary search tree (The unique optimal binary search tree has the minimum expected access cost, which is less than any other binary search tree consisting of the same nodes with the same access frequencies).
+<br><font size=5>Original Problem's Input</font>
+<br>The input contains one test case. The test case starts with an integer N (1 <= N <= 50), the number of nodes in the optimal binary search tree. For simplicity, the labels of the nodes will be integers from 1 to N. The following N lines describe the structure of the tree. The i-th line contains the labels of the roots of the left and right subtrees of the node with label i (or -1 for an empty subtree). You can assume that the input always defines a valid binary search tree. 
+<br><font size=5>Original Problem's Output</font>
+<br>For the test case, write one line containing the access frequency for each node in increasing order of the labels of the nodes. To avoid problems with floating point precision, the frequencies should be written as non-negative integers without leading zeros (meaning the access probability for a node will be the frequency divided by the sum of all frequencies). Make sure that you do not write any integer bigger than 10<sup>15</sup>.
+<br><font size=5>Original Problem's Sample Input</font>
+<br>3
+<br>-1 -1
+<br>1 3
+<br>-1 -1
+<br><font size=5>Original Problem's Sample Output </font>
+<br>1 1 1
+<br><font size=5>Original Problem's Hint</font>
+<br>Note that the test case in the sample input describes a tree looking like:
+<br><pre>  2  
+<br> / \ 
+<br>1   3</pre>
+<br></td></tr></table></ul>
+<br>You will be given the input of the original problem and the output of a programmer, your task is to determine whether the programmer's output is correct or not.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several test cases, and there are two sections in each test case. The first section is the original problem's input started by "#Start Input#" and ended by "#End Input#". The second section is the programmer's output started by "#Start Programmer's Output#" and ended by "#End Programmer's Output#". A line with "#End#" indicates the end of the input.
+<br>
+<br>You can assume that all the data in the first section is valid, but the second section may contain anything except the string "#End Programmer's Output#". The valid programmer's output always contains 1 line, which means if you find that the programmer's output is less or more than 1 line, it's obviously wrong. Each line in the programmer's output will not exceed 2000 characters.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case output "Accepted" if the programmer's output is correct corresponding to the original problem, or "Wrong" if it's wrong. You should ignore the extra spaces or tabs ('\t') in the programmer's output and you can only ignore these 2 characters.</div><p class="pst">Sample Input</p><pre class="sio">#Start Input#
+3
+-1 -1
+1 3
+-1 -1
+#End Input#
+#Start Programmer's Output#
+1 1 1
+#End Programmer's Output#
+#Start Input#
+10
+-1 2
+-1 3
+-1 4
+-1 5
+-1 6
+-1 7
+-1 8
+-1 9
+-1 10
+-1 -1
+#End Input#
+#Start Programmer's Output#
+512 256 128 64 32 16 8 4 2 89798
+#End Programmer's Output#
+#End#
+</pre><p class="pst">Sample Output</p><pre class="sio">Accepted
+Wrong
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">If you use the functions "scanf" and "printf" to input and output 64bit integers, you should not use "%lld", but "%I64d". This is a bug of the windows version of GCC.</div><p class="pst">

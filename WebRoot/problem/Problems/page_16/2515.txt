@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">Prince Remmarguts helped Uyuw successfully hold a concert in our previous story (POJ 2451), and ...that was the day of Uyuw's birthday. 
+<br>
+<br>Ting-a-ling, the chef was called on by Remmarguts. "You must prepare an immense birthday cake for lovely Princess Uyuw in a single day," said Remmarguts. Though Remmarguts' order is outrageous, the chef eventually rushed to buy flour, sugar, fat, and some other ingredients.
+<br>
+<br>There had been chaos caused by war for quite a long time. The price of everything has been highly raised. Being the head accountant of country UDF – United Delta of Freedom, you must weight the cake carefully to make sure the chef did not perform a cheat on the ingredients.
+<br>
+<br>The cake is made up of N levels. There is a 'cube' in each level, while the length of cube on k-th level (count from the topmost) is exactly k! For Remmarguts lives in an M-Dimension world unlike our, you should notice that the 'cube' here means M-Dimension cube, and the volume of a cube with length k is k ^ M.
+<br>
+<br>You are to calculate the total volume of such an immense cake.</div><p class="pst">Input</p><div class="ptx" lang="en-US">You should read the number of test cases Z (Z <= 30) in the first line. Each of the following lines denotes a single test case, consisting of two integers N and M. We guarantee that 1 <= N <= 10 ^ 41 and 3 <= M <= 100.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output one line per test case, showing the total volume of that cake. We also guarantee that the volume is less than 10 ^ 250.</div><p class="pst">Sample Input</p><pre class="sio">2
+3 3
+6 5
+</pre><p class="pst">Sample Output</p><pre class="sio">36
+12201
+</pre><p class="pst">

@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US"><p>There are <b>K</b> line segments on a plane. These are all segments of a broken line, in arbitrary order. Write a program to check whether the broken line is closed.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input data is in (4*<b>K</b>+1) lines, each of them consists of no more then 250 characters. The first line of the file contains the number of segments <b>K</b> (1&#8804;<b>K</b>&#8804;3000). Each segment is described by the coordinates <b>X&#8217;</b>, <b>Y&#8217;</b>, <b>X&#8217;&#8217;</b>, and <b>Y&#8217;&#8217;</b> of its end-points. All coordinates are non-negatives integers and written in separate lines (so, the coordinates of one segment are in four sequential lines).</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>The first and only line of the file must contain the number 1 if the broken line is closed, and 0 otherwise.</p></div><p class="pst">Sample Input</p><pre class="sio">3
+0
+0
+0
+1
+1
+0
+0
+0
+1
+0
+0
+1</pre><p class="pst">Sample Output</p><pre class="sio">1</pre><p class="pst">

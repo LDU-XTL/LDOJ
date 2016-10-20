@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">If a matrix satisfies the following conditions, we call it a silver matrix.
+<br>
+<br>1.	The dimensions of the matrix are n * n.
+<br>2.	All its elements belong to the set S = {1, 2, 3, …, 2n - 1}. 
+<br>3.	For every integer i (1 <= i <= n), all elements in the i-th row and i-th column make the set {1, 2, 3, …, 2n - 1}.
+<br>
+<br>For example, the following 4 * 4 matrix is a silver matrix:
+<br><center><img src=images/2837_1.png></center>
+<br>It is proved that silver matrix with size 2<sup>K</sup> * 2<sup>K</sup> always exists. And it is your job to find a silver matrix with size 2<sup>K</sup> * 2<sup>K</sup>.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains only an integer K (1 <= K <= 9).</div><p class="pst">Output</p><div class="ptx" lang="en-US">You may output any matrix with size 2<sup>K</sup> * 2<sup>K</sup>. To output a 2<sup>K</sup> * 2<sup>K</sup> matrix, you should output 2<sup>K</sup> lines, and in each line output 2<sup>K</sup> integers.</div><p class="pst">Sample Input</p><pre class="sio">2</pre><p class="pst">Sample Output</p><pre class="sio">1 2 5 6
+3 1 7 5
+4 6 1 2
+7 4 3 1
+</pre><p class="pst">

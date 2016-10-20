@@ -1,0 +1,30 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The ACM-ICPC brings together the top student programmers from all over the world, and provides them with opportunities to develop critical skills which will give them a competitive edge when they launch careers in information technology areas. More than 5,600 teams from 84 countries had competed in regional contests last year. An ever larger number of teams &ndash; more than 7,000 teams from different countries worldwide &ndash; have registered in this year&rsquo;s regional contests. However, due to the limited capacity of each site, only a small amount of the registered teams can be allowed to participate in the on-site contest. It is really hard for the contest organizers to determine which teams should be allowed to participate. One of the possible solutions is to hold a preliminary internet contest before the on-site competition. The following part describes a simplified version of rules for team selection:</p><p>Up to three teams from each school can participate in the on-site contest, depending on how many following conditions the school in question meets:</p><ol type="a"><li>A team from this school has solved at least M problems in the preliminary contest;</li><li>Some of the teams from this school ranked top 20 in previous World Finals;</li><li>This school has hosted a provincial contest this year.</li></ol><p>Your task is to write a program to help the contest holders to calculate how many teams are allowed to participate in the on-site final contest.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>There are multiple test cases in the input file. Each test case starts with three integers <i>S</i>, <i>T</i> and <i>M</i> (1 &le; <i>S</i> &le; 100, 1 &le; <i>T</i> &le; 2000, 0 &le; <i>M</i> &le; 10), representing the number of schools, the number of teams participating in the preliminary contest, and the minimum number of problems which is required to be solved in order to enter the on-site competition, respectively.</p><p>Each of the following <i>S</i> lines consists of three integers <i>Id</i>, <i>P</i> and <i>Q</i>, (1 &le; <i>Id</i> &le; <i>S</i>, 0 &le; <i>P</i>, <i>Q</i> &le; 1), representing the <i>Id</i> of the school, whether this school satisfies condition b, and whether this school satisfies condition c.</p><p>The last part of each test case consists of <i>T</i> lines. There are two integers on each of the <i>T</i> lines, <i>Sid</i> and <i>Tot</i> (1 &le; <i>Sid</i> &le; <i>S</i>, 0 &le; <i>Tot</i> &le; 10), meaning that a team from school <i>Sid</i> had solved <i>Tot</i> problems in the preliminary contest.</p><p>Two consecutive test cases are separated by a blank line. <i>S</i> = 0, <i>T</i> = 0, <i>M</i> = 0 indicates the end of input and should not be processed by your program.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, print the total number of teams which are allowed to participate in the on-site competition on a separate line in the format as indicated in the sample output.</p></div><p class="pst">Sample Input</p><pre class="sio">5 8 6
+5 0 1
+4 0 0
+1 0 0
+3 1 1
+2 1 1
+2 6
+3 3
+2 9
+5 7
+4 8
+3 6
+2 8
+1 6
+5 8 6
+3 0 1
+5 1 1
+2 0 1
+1 1 1
+4 1 0
+5 7
+2 5
+4 5
+5 5
+3 3
+5 6
+2 0
+4 7
+0 0 0</pre><p class="pst">Sample Output</p><pre class="sio">Case 1: 10
+Case 2: 9</pre><p class="pst">

@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">Flood-it is a fascinating puzzle game on Google+ platform. The game interface is like follows:
+<br><center><img src = "/images/4007_1.png" /></center>
+<br>At the beginning of the game, system will randomly generate an N×N square board and each grid of the board is painted by one of the six colors. The player starts from the top left corner. At each step, he/she selects a color and changes all the grids connected with the top left corner to that specific color. The statement “two grids are connected” means that there is a path between the certain two grids under condition that each pair of adjacent grids on this path is in the same color and shares an edge. In this way the player can flood areas of the board from the starting grid (top left corner) until all of the grids are in same color. The following figure shows the earliest steps of a 4×4 game (colors are labeled in 0 to 5):
+<br><center><img src = "/images/4007_2.png" /></center>
+<br>Given a colored board at very beginning, please find the minimal number of steps to win the game (to change all the grids into a same color). </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains no more than 20 test cases. For each test case, the first line contains a single integer N (2&lt;=N&lt;=8) indicating the size of game board.
+<br>
+<br>The following N lines show an N×N matrix (a<sub>i,j</sub>)n×n representing the game board. a<sub>i,j</sub> is in the range of 0 to 5 representing the color of the corresponding grid. 
+<br>
+<br>The input ends with N = 0.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output a single integer representing the minimal number of steps to win the game.</div><p class="pst">Sample Input</p><pre class="sio">2
+0 0 
+0 0
+3
+0 1 2
+1 1 2
+2 2 1
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">0
+3
+</pre><p class="pst">

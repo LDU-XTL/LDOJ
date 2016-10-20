@@ -1,0 +1,19 @@
+</p><div class="ptx" lang="en-US">To save money you are considering renting a small cube van to transport your belongings to the Big City. The interior of the van is a rectangular box with width w, height h, and length l. The box has a sliding door that lifts but only to height H. That is, there is an immovable overhang of height H-h at the top of the door. 
+<br>You have a large rectangular box that you wish to load on the truck. Can you get it on the truck subject to the following constraints: 
+<br><ul><li>The box must fit through the door, tilting it forward or sideways (but not both) as necessary (see figure below). 
+<br><li>The box must be placed with one side flat against the floor. 
+<br><li>The box must be placed with one side flat against the front wall. 
+<br><li>The door must close once the box is in place. </ul>
+<br>You may assume there are no obstructions (such as a ceiling or the ground) outside the truck that might interfere with loading. </div><p class="pst">Input</p><div class="ptx" lang="en-US"><img src=images/2468_1.jpg align=right>There are several test cases, each represented by two lines of input. The first line of each contains 4 integers: w, h, l, H. The next line contains 3 integers - the dimensions of the box.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print "The box goes on the truck." if it is possible to load the box on the truck; otherwise print "The box will not go on the truck." You may assume that you start with an empty truck for each test case. </div><p class="pst">Sample Input</p><pre class="sio">8 8 12 7
+8 12 8
+8 8 12 7
+7 12 8
+8 8 12 7
+1 7 13
+100 200 99 190
+100 195 30
+</pre><p class="pst">Sample Output</p><pre class="sio">The box will not go on the truck.
+The box goes on the truck.
+The box will not go on the truck.
+The box goes on the truck.
+</pre><p class="pst">

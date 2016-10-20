@@ -1,0 +1,34 @@
+</p><div class="ptx" lang="en-US">In the present problem, we always assume that all the polynomials mentioned have the following properties (take f(x) for example ):
+<br>(1)	0 < deg(f) <= 20, so we can assume that f(x) has the following form:
+<br><center><b>f(x)=a<sub>n</sub>x<sup>n</sup>+a<sub>n-1</sub>x<sup>n-1</sup>+...+a<sub>1</sub>x+a0 (an!=0 and 1<=n<=20)</b></center>
+<br>(2)	ai ( i=0,1,...,n ) is integer, and ?2^31<=ai<=2^31-1;
+<br>(3)	an = 1.
+<br>
+<br>We call a polynomial G(x) "good" polynomial, when there is no polynomial F(x) such that
+<br><center><b>F<sup>2</sup>|G</b></center>
+<br>Given a polynomial f(x), it is known that f(x) can be factorized as follow: 
+<br><b>f(x)=Gt<sup>mt</sup>G<sub>t-1</sub><sup>m<sub>t-1</sub></sup>...G1<sup>m1</sup> (Gi is good and mt>m<sub>t-1</sub>>...>m1>=1)</b>
+<br>It抯 easy to prove that this way of factorizing is unique. You job is to factorize the given polynomials in this way.
+<br>
+<br>To make input and output easy, a polynomial f(x)
+<br><center><b>f(x)=a<sub>n</sub>x<sup>n</sup>+a<sub>n-1</sub>x<sup>n-1</sup>+...+a<sub>1</sub>x+a0 (an!=0 and 1<=n<=20)</b></center>
+<br>is represented as
+<br><center>n an a<sub>n-1</sub> ... a1 a0</center>
+<br>In this representation, we use (n+2) integers, which are separated by single blanks.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains a single integer T (1 <= T <= 20), the number of test cases. Then T cases follow. Every case gives a polynomial in a single line. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output the corresponding result in the following form (where the meaning of those characters is taken as just mentioned):
+<br>t
+<br>m<sub>t</sub> G<sub>t</sub>
+<br>m<sub>t-1</sub> G<sub>t-1</sub>
+<br>...
+<br>m<sub>1</sub> G<sub>1</sub></div><p class="pst">Sample Input</p><pre class="sio">2
+5 1 -3 4 -4 3 -1
+2 1 -1 -2
+</pre><p class="pst">Sample Output</p><pre class="sio">2
+3 1 1 -1
+1 2 1 0 1
+1
+1 2 1 -1 -2
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">补充：
+<br>如果f=a1^n1*...at^nt(n1>...>nt)
+<br>
+<br>那么要求a1,a2...at两两互质</div><p class="pst">

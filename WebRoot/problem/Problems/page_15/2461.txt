@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">A bitstring, whose length is one less than a prime, might be magic. 1001 is one such string. In order to see the magic in the string let us append a non-bit x to it, regard the new thingy as a cyclic string, and make this square matrix of bits 
+<br><center><table border cellspacing=0 cellpadding=3><tr height=30><td width=100 align=center> each bit</td> <td>&nbsp;&nbsp;<tt>1001</tt>&nbsp;&nbsp;</td></tr><tr height=30><td width=100 align=center>every 2<sup>nd</sup> bit</td> <td>&nbsp;&nbsp;<tt>0110</tt>&nbsp;&nbsp;</td></tr><tr height=30><td width=100 align=center>every 3<sup>rd</sup> bit</td> <td>&nbsp;&nbsp;<tt>0110</tt>&nbsp;&nbsp;</td></tr><tr height=30><td width=100 align=center>every 4<sup>th</sup> bit</td> <td>&nbsp;&nbsp;<tt>1001</tt>&nbsp;&nbsp;</td></tr></table></center>
+<br>This matrix has the same number of rows as the length of the original bitstring. The m-th row of the matrix has every m-th bit of the original string starting with the m-th bit. Because the enlarged thingy has prime length, the appended x never gets used. 
+<br>
+<br>If each row of the matrix is either the original bitstring or its complement, the original bitstring is magic.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Each line of input (except last) contains a prime number p <= 100000. The last line contains 0 and this line should not be processed.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each prime number from the input produce one line of output containing the lexicographically smallest, non-constant magic bitstring of length p-1, if such a string exists, otherwise output Impossible.</div><p class="pst">Sample Input</p><pre class="sio">5
+3
+17
+47
+2
+79
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">0110
+01
+0010111001110100
+0000100001101010001101100100111010100111101111
+Impossible
+001001100001011010000001001111001110101010100011000011011111101001011110011011</pre><p class="pst">

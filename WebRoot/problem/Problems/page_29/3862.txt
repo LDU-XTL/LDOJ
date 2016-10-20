@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">Association of Collision Management (ACM) is planning to perform the controlled collision of two asteroids. The asteroids will be slowly brought together and collided at negligible speed. ACM expects asteroids to get attached to each other and form a stable object.
+<br>Each asteroid has the form of a convex polyhedron. To increase the chances of success of the experiment ACM wants to bring asteroids together in such manner that their centers of mass are as close as possible. To achieve this, ACM operators can rotate the asteroids and move them independently before bringing them together.
+<br>Help ACM to find out what minimal distance between centers of mass can be achieved.
+<br>For the purpose of calculating center of mass both asteroids are considered to have constant density.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input file contains two descriptions of convex polyhedra.
+<br>The first line of each description contains integer number n - the number of vertices of the polyhedron (4 <= n <= 60). The following n lines contain three integer numbers xi, yi, zi each - the coordinates of the polyhedron vertices (-10<sup>4</sup> <= xi, yi, zi <= 10<sup>4</sup>). It is guaranteed that the given points are vertices of a convex polyhedron, in particular no point belongs to the convex hull of other points. Each polyhedron is non-degenerate.
+<br>The two given polyhedra have no common points.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output one floating point number - the minimal distance between centers of mass of the asteroids that can be achieved. Your answer must be accurate up to 10<sup>-5</sup>.</div><p class="pst">Sample Input</p><pre class="sio">8
+0 0 0
+0 0 1
+0 1 0
+0 1 1
+1 0 0
+1 0 1
+1 1 0
+1 1 1
+5
+0 0 5
+1 0 6
+-1 0 6
+0 1 6
+0 -1 6</pre><p class="pst">Sample Output</p><pre class="sio">0.75</pre><p class="pst">

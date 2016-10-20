@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">There are n points and m triangles in the plane. For each triangle, please compute the common area of the triangle and the polygon, which is the convex hull of the given n points:
+<br><center><img src=images/2839_1.gif></center>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains an integer number n, which is the number of the points. The follow n lines contain two integer numbers x<sub>i</sub> and y<sub>i</sub>, which describes the coordinate of each point. Then the next line contains an integer number m, which is the number of triangles, and there are 6 integer numbers ax<sub>i</sub>, ay<sub>i</sub>, bx<sub>i</sub>, by<sub>i</sub>, cx<sub>i</sub> and cy<sub>i</sub> in each of the follow m lines, which describe the coordinate of vertices in a triangle.
+<br>
+<br>We guarantee that n and m do not exceed 100000. The absolute value of integers appear above is not larger than 20000000.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each triangle in input, output the common area of the triangle and the convex hull in a single line. The result should be rounded to nearest integer number.</div><p class="pst">Sample Input</p><pre class="sio">5
+0 0
+0 2
+2 0
+2 2
+1 1
+2
+3 3 3 4 4 3
+2 0 2 4 0 2
+</pre><p class="pst">Sample Output</p><pre class="sio">0
+2
+</pre><p class="pst">

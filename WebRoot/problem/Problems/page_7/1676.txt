@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">An accutron shows time with four digits, from 0000 to 2359. Every digit is represented by 3*3 characters, including '|'s, '_'s and blanks. When the LCD screen works well, the digits look like the following:
+<br><pre> _     _  _     _  _  _  _  _ 
+<br>| |  | _| _||_||_ |_   ||_||_|
+<br>|_|  ||_  _|  | _||_|  ||_| _|</pre>
+<br>
+<br>There are two accutrons at hand. One shows the accurate time, and the other is 15 minutes late. For example, at 8:25am, the first accutron shows '0825', while the second shows '0810'. 
+<br>
+<br>Unfortunately, there is something wrong with the two LCD screens, namely some parts of the digits missed. Your task is to decide the accurate time, according to the fragmental digits showed on the two accutrons.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input is a single integer t (1 <= t <= 20), the number of test cases. Each case contains three lines, indicating the time on the accurate accutron and the time on the slow accutron, separated by a blank column. (Please refer to the Sample Input.)</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each input, print the accurate time with four digits if it can be ensured, or otherwise the string 'Not Sure'.</div><p class="pst">Sample Input</p><pre class="sio">2
+    _  _  _      _     _ 
+  | _  _||       _   ||  
+  | _ |_   |   | _    |_|
+    _  _  _   _  _     _ 
+  ||_  _||       _|  ||  
+  | _ |_   |   ||     |_|
+</pre><p class="pst">Sample Output</p><pre class="sio">Not Sure
+0825
+</pre><p class="pst">

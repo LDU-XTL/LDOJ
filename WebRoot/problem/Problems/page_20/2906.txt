@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>A piano-tuner indeed has a hard time earning his living. (Un)fortunately, most people want their pianos tuned only when they move to a new place, and thus also someone to help them move the piano. Therefore, quite a few piano-tuners combine their profession with lifting and transporting pianos. However, as you might guess, they are not all that keen on doing a lot of heavy-weight carrying in a day, and they certainly don&rsquo;t want to work weekends! In the city of Hampstead, the small group of piano-tuners have joined forces, and they help each other by taking turns in moving the pianos. No piano-tuner transports more than one piano a day under any circumstance, and they always work in pairs. As with most craftsmen, you seldom get to know precisely when the job you request will be carried out. Instead, when ordering a piano move, you are given an arbitrary long time interval containing your desired moving day, during which your piano is guaranteed to be moved by the piano-tuners. This strategy often makes the scheduling task easy, but this time they just might have put themselves in some trouble. During the last days, the piano-tuners have received a lot of piano move orders for the next 100 days, and they are afraid that even if they work weekends they cannot keep their promises. To help them see if this is the case, and to avoid it in the future, they would like a computer program testing different scenarios.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>On the first line is a single positive integer n, specifying the number of test scenarios to follow. Each scenario begin with two positive integers m and p on a line of their own, m &le; 1000, telling the number of pianos to be moved, and p &le; 2000 the number of piano-tuners. Then follow m lines, each containing a piano move order on the format of two integers <i>bi</i> and <i>ei</i> with 1 &le; <i>b<sub>i</sub></i> &le; <i>e<sub>i</sub></i> &le; 100 meaning that between the beginning of day <i>b<sub>i</sub></i> and the end of day <i>e<sub>i</sub></i>, the piano <i>i</i> must be moved. Day 1 is always a Monday, 2 a Tuesday and so on.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>For each test scenario, output the text &ldquo;<tt>serious trouble</tt>&rdquo; if the list of piano move orders cannot be executed as promised even if all the p pianotuners worked everyday, the text &ldquo;<tt>weekend work</tt>&rdquo; if at least two pianotuners have to work some Saturday or Sunday, or the text &ldquo;<tt>fine</tt>&rdquo; if it is possible to carry out all the moves during the five working days of the weeks.</p></span></div><p class="pst">Sample Input</p><pre class="sio">3
+3 2
+4 5
+5 6
+5 7
+2 5
+49 50
+50 50
+4 2
+8 10
+8 10
+8 10
+8 10</pre><p class="pst">Sample Output</p><pre class="sio">weekend work
+fine
+serious trouble</pre><p class="pst">

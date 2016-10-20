@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">"There are a thousand Hamlets in a thousand people's eyes."
+<br>
+<br>--W.William Shakespeare
+<br>
+<br>
+<br>Lotus is a big fan of Shakespeare. Her favorite tragedy written by Shakespeare is Hamlet, one of the most popular works in English language. However, since Lotus is really a merciful and kindhearted girl, she doesn't like the scene of the final match, in which Hamlet fenced against Laertes. Once she had a dream of Hamlet. In that dream, Hamlet fought with Laertes in another way: flipping coins.
+<br>
+<br>It sounds like gambling. In order to flip the coin in an absolutely fair way, Hamlet got a monkey to do this job instead of people. Before the monkey started to flip, Hamlet and Laertes respectively wrote down an arbitrary sequence of results (we call it a "pattern"). For example, Hamlet wrote down "Head, Tail, Head" while Laertes wrote down "Head, Head, Tail, Tail".It was guaranteed that the pattern of Hamlet's did not occur within the pattern of Laertes', nor did the pattern of Laertes' occur within the pattern of Hamlet's. Then the monkey began to flip the coin over and over and generated a sequence of results, like "Head, Head, Tail, Head, Tail ..." At any time, if the monkey obtained Hamlet's pattern, it stopped flipping and Hamlet won. Otherwise, if the monkey obtained Laertes's pattern, it also stopped flipping and Laertes won.
+<br>
+<br>One example of the gambling is like following: Hamlet's pattern was ""HHT" (H=Head, T=Tail) and his rival's pattern was "HTTT". The monkey flipped the coin and obtained "H, T, H, T, T, H, T, T, T". At that time, Laertes' pattern appeared at the end of the sequence, so the monkey stopped and the judge declared that Laertes won the game.
+<br>
+<br>Now your task is to decide that in Lotus' gambling, who has the higher probability to win the game. Pay attention that since the monkey has no bias, the probabilities to get head or tail in one flip are always equal.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several test cases. The first line of each case contains two positive integers N and M (0 &lt; N, M &lt;= 100000). N is the length of Hamlet's pattern and M is the length of Laertes'.
+<br>
+<br>The second line contains a string of length N, representing the pattern of Hamlet's. The third line contains a string of length M, representing the pattern of Laertes'. All the strings only contain uppercase letters `H' and `T'. The input ends by a line of two zeros.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output a single line to show your answer. If Hamlet has a better chance to win, output the word 'Hamlet'. If Laertes has a better chance, output the word 'Laertes'. If they have the same probability to win the game, output the word 'Equal'.</div><p class="pst">Sample Input</p><pre class="sio">1 1
+H
+T
+1 2
+T
+HH
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">Equal
+Hamlet</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">For the first sample case, to end the game, one flip is enough. If it is head, Hamlet wins. Otherwise Laertes wins. As a result, both of them has 1/2 probability to win.
+<br>
+<br>For the second sample case, if the first flip is tail, Hamlet wins. Otherwise if the second flip is tail, also Hamlet wins. Otherwise Laertes wins. So the probability that Hamlet wins the game is 3/4, while the probability that Laertes wins is 1/4. Hamlet has a better chance.</div><p class="pst">

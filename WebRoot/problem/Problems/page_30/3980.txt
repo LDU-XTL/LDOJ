@@ -1,0 +1,6 @@
+</p><div class="ptx" lang="en-US">编写一个C函数mod(int n, int m),实现取模运算%</div><p class="pst">Input</p><div class="ptx" lang="en-US">输入包含多行数据
+<br>
+<br>每行数据是两个整数a, b (1 <= a, b <= 32767)
+<br>数据以EOF结束</div><p class="pst">Output</p><div class="ptx" lang="en-US">于输入的每一行输出a%b</div><p class="pst">Sample Input</p><pre class="sio">5 3
+100 2</pre><p class="pst">Sample Output</p><pre class="sio">2
+0</pre><p class="pst">

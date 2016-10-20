@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">A friend of yours, an inventor, has built a spaceship recently and wants to explore space with it.
+<br>During his first voyages, he discovered that the universe is full of wormholes created by some alien race. These wormholes allow one to travel to places far, far away, but moreover, they can also send you to times long ago or in the distant future.
+<br>Having mapped these wormholes and their respective end points, you and your friend boldly decide to board his spaceship and go to some distant place you'd like to visit. Of course, you want to arrive at your destination as early as possible. The question is: what is this earliest arrival time?</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains an integer c (1 <= c <= 200), the number of test cases. Each test case starts with a line containing two coordinate triples x0, y0, z0 and x1, y1, z1, the space coordinates of your departure point and destination. The next line contains an integer n (0 <= n <= 50), the number of wormholes. Then follow n lines, one for each wormhole, with two coordinate triples xs, ys, zs and xe, ye, ze, the space coordinates of the wormhole entry and exit points, respectively, followed by two integers t, d ( -1 000 000 <= t, d <= 1 000 000), the creation time t of the wormhole and the time shift d when traveling through the wormhole.
+<br>All coordinates are integers with absolute values smaller than or equal to 10 000 and no two points are the same.
+<br>Note that, initially, the time is zero, and that tunneling through a wormhole happens instantly. For simplicity, the distance between two points is deffned as their Euclidean distance (the square root of the sum of the squares of coordinate differences) rounded up to the nearest integer. Your friend's spaceship travels at speed 1.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print a single line containing an integer: the earliest time you can arrive at your destination.</div><p class="pst">Sample Input</p><pre class="sio">2
+0 0 0 100 0 0
+2
+1 1 0 1 2 0 -100 -2
+0 1 0 100 1 0 -150 10
+0 0 0 10 0 0
+1
+5 0 0 -5 0 0 0 0</pre><p class="pst">Sample Output</p><pre class="sio">-89
+10</pre><p class="pst">

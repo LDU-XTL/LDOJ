@@ -1,0 +1,70 @@
+</p><div class="ptx" lang="en-US">Consider the following C program under Redhat 9.0:
+<br><pre>
+<br>1  #include < stdio.h >
+<br>2  #include < unistd.h >
+<br>3  #include < sys/wait.h >
+<br>4  #define N ???
+<br>5  int main(void)
+<br>6  {
+<br>7     int i;
+<br>8     int ProcessID;
+<br>9     int A;
+<br>10    A=0;
+<br>11    for (i=0;i < N;i++)
+<br>12    {
+<br>13       printf("Loop %d: Process ID=%d\n", i, getpid());
+<br>14       A=A+7;
+<br>15        while ((ProcessID=fork())== -1);
+<br>16        if (ProcessID==0)
+<br>17        {
+<br>18            printf("Process ID=%d, A=%d\n", getpid(), A);
+<br>19        }
+<br>20        else
+<br>21        {
+<br>22            wait(NULL);
+<br>23        }
+<br>24    }
+<br>25  }</pre>
+<br>The fork() function in line 15 makes a copy of the current process, returns pid of the son to the father process, and returns zero to the son process. After invoking fork(), the son process prints out a message in line 18 and continues with the next loop, while the father process waits for the end of the son in line 22. Remember that once been forked, the father process and the son process are independent, i.e having different local variables, and executed IN PARALLEL (but in the programs, since the father process always waits for its son's termination just after invoking fork(), actually there is often only one running process).
+<br>
+<br>You are going to print the i-th line of the program's output. Assume the pid of the original process is 1000, and pids for new generated processes are increased by 1.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input is a single integer t (1 <= t <= 20), the number of test cases. Each of the following line contains two integers n and i (1 <= n <= 15), the value of N in line 4 and which line of the program's output to print.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each input, print the i-th line of the program's output. It is confirmed that the i-th line always exists.</div><p class="pst">Sample Input</p><pre class="sio">3
+4 1
+4 6
+4 19
+</pre><p class="pst">Sample Output</p><pre class="sio">Loop 0: Process ID=1000
+Process ID=1003, A=21
+Loop 2: Process ID=1009
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Here is the whole output of n = 4:
+<br>
+<br>Loop 0: Process ID=1000
+<br>Process ID=1001, A=7
+<br>Loop 1: Process ID=1001
+<br>Process ID=1002, A=14
+<br>Loop 2: Process ID=1002
+<br>Process ID=1003, A=21
+<br>Loop 3: Process ID=1003
+<br>Process ID=1004, A=28
+<br>Loop 3: Process ID=1002
+<br>Process ID=1005, A=28
+<br>Loop 2: Process ID=1001
+<br>Process ID=1006, A=21
+<br>Loop 3: Process ID=1006
+<br>Process ID=1007, A=28
+<br>Loop 3: Process ID=1001
+<br>Process ID=1008, A=28
+<br>Loop 1: Process ID=1000
+<br>Process ID=1009, A=14
+<br>Loop 2: Process ID=1009
+<br>Process ID=1010, A=21
+<br>Loop 3: Process ID=1010
+<br>Process ID=1011, A=28
+<br>Loop 3: Process ID=1009
+<br>Process ID=1012, A=28
+<br>Loop 2: Process ID=1000
+<br>Process ID=1013, A=21
+<br>Loop 3: Process ID=1013
+<br>Process ID=1014, A=28
+<br>Loop 3: Process ID=1000
+<br>Process ID=1015, A=28
+<br></div><p class="pst">

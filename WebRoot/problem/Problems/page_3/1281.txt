@@ -1,0 +1,34 @@
+</p><div class="ptx" lang="en-US">One of the programming paradigm in parallel processing is the producer/consumer paradigm that can be implemented using a system with a "manager" process and several "client" processes. The clients can be producers, consumers, etc. The manager keeps a trace of client processes. Each process is identified by its cost that is a strictly positive integer in the range 1 .. 10000. The number of processes with the same cost cannot exceed 10000. The queue is managed according to three types of requests, as follows:
+<br><ul><li>	a x - add to the queue the process with the cost x;
+<br><li>	r - remove a process, if possible, from the queue according to the current manager policy; 
+<br><li>	p i - enforce the policy i of the manager, where i is 1 or 2. The default manager policy is 1
+<br><li>	e - ends the list of requests.
+<br></ul>
+<br>There are two manager policies:
+<br><ul><li>	1 - remove the minimum cost process
+<br><li>	2 - remove the maximum cost process
+<br></ul>
+<br>The manager will print the cost of a removed process only if the ordinal number of the removed process is in the removal list.
+<br>
+<br>Your job is to write a program that simulates the manager process. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input is from the standard input. Each data set in the input has the following format:
+<br><ul><li>	the maximum cost of the processes
+<br><li>	the length of the removal list
+<br><li>	the removal list - the list of ordinal numbers of the removed processes that will be displayed; for example 1 4 means that the cost of the first and fourth removed processes will be displayed
+<br><li>	the list of requests each on a separate line.
+<br></ul>
+<br>Each data set ends with an e request. The data sets are separated by empty lines.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The program prints on standard output the cost of each process that is removed, provided that the ordinal number of the remove request is in the list and the queue is not empty at that moment. If the queue is empty the program prints -1. The results are printed on separate lines. An empty line separates the results of different data sets.
+<br>
+<br>An example is given in the following:</div><p class="pst">Sample Input</p><pre class="sio">5
+2
+1 3
+a 2
+a 3
+r
+a 4
+p 2
+r
+a 5
+r
+e</pre><p class="pst">Sample Output</p><pre class="sio">2
+5</pre><p class="pst">

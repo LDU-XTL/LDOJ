@@ -1,0 +1,6 @@
+</p><div class="ptx" lang="en-US"><div><p>Chinese people think of '8' as the lucky digit. Bob also likes digit '8'. Moreover, Bob has his own lucky number <i>L</i>. Now he wants to construct his luckiest number which is the minimum among all positive integers that are a multiple of <i>L</i> and consist of only digit '8'.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>The input consists of multiple test cases. Each test case contains exactly one line containing <i>L</i>(1 &le; <i>L</i> &le; 2,000,000,000).</p><p>The last test case is followed by a line containing a zero. </p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div><p>For each test case, print a line containing the test case number( beginning with 1) followed by a integer which is the length of Bob's luckiest number. If Bob can't construct his luckiest number, print a zero.</p></div></div><p class="pst">Sample Input</p><pre class="sio">8
+11
+16
+0</pre><p class="pst">Sample Output</p><pre class="sio">Case 1: 1
+Case 2: 2
+Case 3: 0</pre><p class="pst">

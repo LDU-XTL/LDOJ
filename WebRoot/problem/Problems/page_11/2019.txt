@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">FJ has decided to grow his own corn hybrid in order to help the cows make the best possible milk.  To that end, he's looking to build the cornfield on the flattest piece of land he can find.
+<br>
+<br>FJ has, at great expense, surveyed his square farm of N x N hectares (1 <= N <= 250). Each hectare has an integer elevation (0 <= elevation <= 250) associated with it.
+<br>
+<br>FJ will present your program with the elevations and a set of K (1 <= K <= 100,000) queries of the form "in this B x B submatrix, what is the maximum and minimum elevation?".  The integer B (1 <= B <= N) is the size of one edge of the square cornfield and is a constant for every inquiry. Help FJ find the best place to put his cornfield.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: Three space-separated integers: N, B, and K.
+<br>
+<br>* Lines 2..N+1: Each line contains N space-separated integers.  Line 2 represents row 1; line 3 represents row 2, etc.  The first integer on each line represents column 1; the second integer represents column 2; etc.
+<br>
+<br>* Lines N+2..N+K+1: Each line contains two space-separated integers representing a query. The first integer is the top row of the query; the second integer is the left column of the query. The integers are in the range 1..N-B+1.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">* Lines 1..K: A single integer per line representing the difference between the max and the min in each query.
+<br></div><p class="pst">Sample Input</p><pre class="sio">5 3 1
+5 1 2 6 3
+1 3 5 2 7
+7 2 4 6 1
+9 9 8 6 5
+0 6 9 3 9
+1 2
+</pre><p class="pst">Sample Output</p><pre class="sio">5
+</pre><p class="pst">

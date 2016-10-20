@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US"><img src=images/1759_1.jpg align=right>The New Year garland consists of N lamps attached to a common wire that hangs down on the ends to which outermost lamps are affixed. The wire sags under the weight of lamp in a particular way: each lamp is hanging at the height that is 1 millimeter lower than the average height of the two adjacent lamps.
+<br>
+<br>The leftmost lamp in hanging at the height of A millimeters above the ground. You have to determine the lowest height B of the rightmost lamp so that no lamp in the garland lies on the ground though some of them may touch the ground.
+<br>
+<br>You shall neglect the lamp's size in this problem. By numbering the lamps with integers from 1 to N and denoting the ith lamp height in millimeters as Hi we derive the following equations:
+<br>
+<br>H1 = A 
+<br>Hi = (H<sub>i-1</sub> + H<sub>i+1</sub>)/2 - 1, for all 1 < i < N 
+<br>HN = B 
+<br>Hi >= 0, for all 1 <= i <= N 
+<br>
+<br>The sample garland with 8 lamps that is shown on the picture has A = 15 and B = 9.75.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input file consists of a single line with two numbers N and A separated by a space. N (3 <= N <= 1000) is an integer representing the number of lamps in the garland, A (10 <= A <= 1000) is a real number representing the height of the leftmost lamp above the ground in millimeters.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Write to the output file the single real number B accurate to two digits to the right of the decimal point representing the lowest possible height of the rightmost lamp.</div><p class="pst">Sample Input</p><pre class="sio">692 532.81</pre><p class="pst">Sample Output</p><pre class="sio">446113.34
+</pre><p class="pst">

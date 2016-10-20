@@ -1,0 +1,42 @@
+</p><div class="ptx" lang="en-US">Russian nesting dolls are brightly painted hollow wooden figures. The dolls in a set have roughly the same shape, typically humanoid, but different sizes. When the set is assembled, the biggest doll contains the second-biggest doll, the second-biggest contains the third-biggest, and so on. 
+<br>We can approximate the shape of a doll as a cylinder of height h, diameter d, and wall thickness w. Such a doll would have a hollow of height h-2w and diameter d-2w. 
+<br>
+<br>Boris and Natasha each has a set of dolls. The sets are nearly identical; each has the same number of dolls, which look the same but differ in their dimensions. Last night Boris and Natasha were playing with their dolls and left them in the living room. Their mother tidied them away, dumping them all in one box. Can you help Boris and Natasha separate their sets of dolls? </div><p class="pst">Input</p><div class="ptx" lang="en-US">Standard Input will consist of several test cases. The first line of each test case will contain n, the number of dolls in each set (1 < n <= 100). 2n lines follow; each gives the dimensions, h, d, w of a different doll (h,d >= 2w > 0). A line containing 0 follows the last test case. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, separate the dolls into two sets of nesting dolls such that, within each set, the dolls fit within each other, standing straight up, as described above. The first n lines of output should give the dimensions of the dolls in one set, in decreasing order by height. The next line should contain a single hyphen, "-". The next n lines should give the dimensions of the dolls in the second set, also in decreasing order by height. There will always be a solution. If there are many solutions, any will do. Output an empty line between test cases. </div><p class="pst">Sample Input</p><pre class="sio">3
+100 100 3
+97 97 3
+94 94 3
+91 91 3
+88 88 3
+85 85 3
+5
+100 100 1
+97 97 3
+98 98 1
+96 96 1
+94 94 1
+92 92 1
+90 90 1
+88 88 1
+86 86 1
+84 84 1
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">100 100 3
+94 94 3
+88 88 3
+-
+97 97 3
+91 91 3
+85 85 3
+
+100 100 1
+98 98 1
+96 96 1
+94 94 1
+92 92 1
+-
+97 97 3
+90 90 1
+88 88 1
+86 86 1
+84 84 1
+</pre><p class="pst">

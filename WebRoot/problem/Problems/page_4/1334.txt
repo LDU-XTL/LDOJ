@@ -1,0 +1,30 @@
+</p><div class="ptx" lang="en-US">Two mountain climbers are located at opposite ends of a mountain range, at the same elevation. The two climbers want to walk along the mountain range and reach each other's starting place, while always staying at the same elevation. The climbers may move forward or backward to assure that they stay at the same elevation. It is Well known that it is always possible for the two climbers to reach each other's starting place if the mountain range never drops below the starting elevation. Given a mountain range, compute the minimum sum of the two walk lengths of the two climbers to reach each other's starting place from their own starting place. 
+<br>
+<br>Mountain range is represented as a polygonal line P=(p1,p2...,pn) in the plane with point set {pi=(xi,yi):i=1..n} and edge set {(pi,pi+1):i=1...n-1}.The polygonal line P modeling a mountain range is monotone with respect to the x-coordinate axis, i.e., xi<xi+1 for i=1..n-1(see the following figure) 
+<br>
+<br>A walk of a climber along a mountain range P is a sequence W={w1,w2,..wm} of points w in P.such that every line-segment of a walk must be on P. We compute the length of a walk along a line-segment , (wj,wj+1) as the difference of the y-coordinates of wj and wj+1. i.e |Yj-Yj+1|.The length of a walk W is the sum of the lengths of the line-segments of W. 
+<br><img src=images/1334_1.jpg>
+<br>For example, in the above figure, the walk of the left climber is (a, d, c, e, g, f, h, j, i, l, o, p, r, p, o, m, o, p, s), and the sum of walk lengths for the two climbers is 120. We can see that the length is the shortest length of walks by the climbers. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of T test cases. The number of test cases ( T ) is given in the first line of the input file. The first line of each test case contains an integer(3<=n<=1000) , which is the number of points in the polygonal line P. In the following n lines, there are xi, yi(i=1..n) each line.(0<=xi,yi<=10000) One mountain climber starts at p1 , and the other starts at pn . Therefore, the y1=yn. You may assume that for each input test case, the mountain range never drops below the starting elevation and yi is UNIQUE. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, your program reports, on each line, the minimum length of walks by the two climbers. The following sample input and corresponding correct output represents three test cases. </div><p class="pst">Sample Input</p><pre class="sio">3
+3
+0 0
+5 5
+10 0
+5
+0 0
+2 10
+3 5
+4 15
+5 0
+7
+5 10
+6 15
+7 11
+8 20
+9 12
+11 14
+13 10
+</pre><p class="pst">Sample Output</p><pre class="sio">20
+100
+120
+
+</pre><p class="pst">

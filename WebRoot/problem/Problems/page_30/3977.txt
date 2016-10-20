@@ -1,0 +1,6 @@
+</p><div class="ptx" lang="en-US">Given a list of N integers with absolute values no larger than 10<sup>15</sup>, find a non empty subset of these numbers which minimizes the absolute value of the sum of its elements. In case there are multiple subsets, choose the one with fewer elements.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains multiple data sets, the first line of each data set contains N &lt;= 35, the number of elements, the next line contains N numbers no larger than 10<sup>15</sup> in absolute value and separated by a single space. The input is terminated with N = 0</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set in the input print two integers, the minimum absolute sum and the number of elements in the optimal subset.</div><p class="pst">Sample Input</p><pre class="sio">1
+10
+3
+20 100 -100
+0</pre><p class="pst">Sample Output</p><pre class="sio">10 1
+0 2</pre><p class="pst">

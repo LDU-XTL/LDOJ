@@ -1,0 +1,7 @@
+</p><div class="ptx" lang="en-US"><center><pre>7<br>3   8<br>8   1   0<br>2   7   4   4<br>4   5   2   6   5<br><br>(Figure 1)</pre></center>Figure 1 shows a number triangle. Write a program that calculates the highest sum of numbers passed on a route that starts at the top and ends somewhere on the base. Each step can go either diagonally down to the left or diagonally down to the right. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Your program is to read from standard input. The first line contains one integer N: the number of rows in the triangle. The following N lines describe the data of the triangle. The number of rows in the triangle is > 1 but <= 100. The numbers in the triangle, all integers, are between 0 and 99. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Your program is to write to standard output. The highest sum is written as an integer.</div><p class="pst">Sample Input</p><pre class="sio">5
+7
+3 8
+8 1 0 
+2 7 4 4
+4 5 2 6 5</pre><p class="pst">Sample Output</p><pre class="sio">30</pre><p class="pst">

@@ -1,0 +1,29 @@
+</p><div class="ptx" lang="en-US">The problem wants you to understand a new programming language, POJ language, and ask you to calculate the result of a program, which is written in this language.
+<br>
+<br>The language may be described as follow (the integers mentioned here are in [-2<sup>31</sup>, 2<sup>31</sup>)):
+<br><ol><li>The syntax of this language is similar with C language, but much more simple. And the different will be mentioned as below.
+<br><li>The length of a program written in the language will not exceed 1000 letters.
+<br><li>The variables need not declaration. If a variable is first mentioned, the value of the variable is set to be 0. And once a variable is mentioned, it will have a global scope. The length of the name of a variable will not exceed 5.
+<br><li>A Boolean expression has the structures: "A&lt;B", "A==B" and "A<=B", here A is a variable or an integer, and so is B.
+<br><li>There are three kind of normal expression I, II and III.
+<br><li>The Normal expression I has one of the follow structures: "A=B;", "A=B+C;", "A=B-C;" and "A=B*C;", here A is an variable, B is an variable or a positive integer and C is also an variable or a positive integer. It's confirmed that the new value of A is also in [-2<sup>31</sup>, 2<sup>31</sup>). And it's assumed that a program will execute these expressions at most 100000 times before terminated.
+<br><li>In the language there is a new expression that is not defined in C language, and we consider this expression as normal expression II. The expression is as: "#A;", here A is a variable. This expression terminates the program and gives the result of the program, and it is the only way to terminate a program. And it's confirmed that during the processing of the program it must meet this expression.
+<br><li>There are only two key words in the language, "if" and "while". There kinds of structures are considered as normal expression III.
+<br><blockquote>a)	The "if" sentence is as: "if(a Boolean expression){some normal expressions}".
+<br>b)	The "while" sentence is as: "while(a Boolean expression){some normal expressions}".</blockquote>
+<br><li>There may be white spaces, which includes " ", "\t" and "\n", at any position except in key words, Boolean expressions, normal expressions I and normal expressions II.
+<br><li>The program consists of some normal expressions.</ol>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains a program written in the POJ language.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output contains an integer, which is the result of the program.</div><p class="pst">Sample Input</p><pre class="sio">aaaaa=2;
+
+bbb=5;
+
+while ( aaaaa<=bbb ) {
+	if(ccc<10){
+		ccc=ccc+aaaaa;
+		}
+	bbb=bbb-1;
+
+	if(100&lt;ccc){#aaaaa; }
+}
+#ccc;
+</pre><p class="pst">Sample Output</p><pre class="sio">8</pre><p class="pst">

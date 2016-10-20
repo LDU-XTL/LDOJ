@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">"Let it Bead" company is located upstairs at 700 Cannery Row in Monterey, CA. As you can deduce from the company name, their business is beads. Their PR department found out that customers are interested in buying colored bracelets. However, over 90 percent of the target audience insists that the bracelets be unique. (Just imagine what happened if two women showed up at the same party wearing identical bracelets!) It's a good thing that bracelets can have different lengths and need not be made of beads of one color. Help the boss estimating maximum profit by calculating how many different bracelets can be produced. 
+<br>
+<br>A bracelet is a ring-like sequence of s beads each of which can have one of c distinct colors. The ring is closed, i.e. has no beginning or end, and has no direction. Assume an unlimited supply of beads of each color. For different values of s and c, calculate the number of different bracelets that can be made. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Every line of the input file defines a test case and contains two integers: the number of available colors c followed by the length of the bracelets s. Input is terminated by c=s=0. Otherwise, both are positive, and, due to technical difficulties in the bracelet-fabrication-machine, cs<=32, i.e. their product does not exceed 32. </div><p class="pst">Output</p><div class="ptx" lang="en-US"><img src=images/2409_1.jpg align=right>For each test case output on a single line the number of unique bracelets. The figure below shows the 8 different bracelets that can be made with 2 colors and 5 beads.</div><p class="pst">Sample Input</p><pre class="sio">1 1
+2 1
+2 2
+5 1
+2 5
+2 6
+6 2
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+2
+3
+5
+8
+13
+21
+</pre><p class="pst">

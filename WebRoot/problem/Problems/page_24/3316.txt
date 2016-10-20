@@ -1,0 +1,27 @@
+</p><div class="ptx" lang="en-US"><p>Assume we have an n &times; m grid of squares, each filled with either 0 or 1. A <i>snake</i> is a connected sequence of grid squares which has the following properties: <ul><li>Each snake square has a 1 in it</li><li>Each snake square touches exactly two other snake squares (north/south/east/west), except the first and last square in the sequence (the head and tail of the snake)</li></ul>A <i>maximal snake</i> is one in which we cannot add a 1 to either end without either lengthening the snake, combining two snakes together, or violating rule 2 above. The examples below show grids with and without maximal snakes (all empty squares have 0's in them). Notice that the second grid does not have a maximal snake since you can add a 1 at the end of either snake to get a larger snake.</p><p><center><img src = "images/3316_1.gif"></img></center></p><p>For this problem, you will be given grids and must count the number of maximal snakes in each.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input will consist of multiple test cases. The first line of each test case will contain two positive integers <i>n</i> <i>m</i> indicating the number of rows and columns in the grid (the maximum value of each will be 200). The next <i>n</i> lines will consist of m characters (either '0' or '1') specifying the grid. The last case is followed by a line containing 0 0 which indicates end-of-input and should not be processed.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output a single line containing the number of maximal snakes in the grid.</p></div><p class="pst">Sample Input</p><pre class="sio">7 10
+1111111110
+0000000010
+1100000011
+1011110001
+1010010001
+1010010111
+1110011100
+7 10
+1111111110
+0000000010
+0001010011
+1011010001
+1010010001
+1010010111
+1110011100
+7 10
+1011111110
+0100000010
+1101011011
+1011010001
+1010010001
+1010010111
+1110011100
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">1
+0
+3</pre><p class="pst">

@@ -1,0 +1,78 @@
+</p><div class="ptx" lang="en-US"><div><p>Harmony is indispensible in our daily life and no one can live without it----may be Facer is the only exception. One day it is rumored that repeat painting will create harmony and then hundreds of people started their endless drawing. Their paintings were based on a small template and a simple method of duplicating. Though Facer can easily imagine the style of the whole picture, but he cannot find the essential harmony. Now you need to help Facer by showing the picture on computer.</p><p>You will be given a template containing only one kind of character and spaces, and the template shows how the endless picture is created----use the characters as basic elements and put them in the right position to form a bigger template, and then repeat and repeat doing that. Here is an example.</p><pre>
+<br># #
+<br> #      <-template
+<br># #</pre><p>So the Level 1 picture will be</p><pre>
+<br># #
+<br> #
+<br># #</pre><p>Level 2 picture will be</p>
+<br><pre><code>
+<br># #   # #
+<br> #     #
+<br># #   # #
+<br>   # #   
+<br>    #    
+<br>   # #   
+<br># #   # #
+<br> #     # 
+<br># #   # #</pre></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>The input contains multiple test cases.<br />The first line of each case is an integer <i>N</i>, representing the size of the template is <i>N</i>*<i>N</i> (<i>N</i> could only be 3, 4 or 5).<br />Next N lines describe the template.<br />The following line contains an integer <i>Q</i>, which is the Scale Level of the picture.<br />Input is ended with a case of <i>N</i>=0.<br />It is guaranteed that the size of one picture will not exceed 3000*3000.</p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div><p>For each test case, just print the Level <i>Q</i> picture by using the given template. </p></div></div><p class="pst">Sample Input</p><pre class="sio">3
+# #
+ # 
+# #
+1
+3
+# #
+ # 
+# #
+3
+4
+ OO 
+O  O
+O  O
+ OO 
+2
+0</pre><p class="pst">Sample Output</p><pre class="sio"># #
+ # 
+# #
+# #   # #         # #   # #
+ #     #           #     # 
+# #   # #         # #   # #
+   # #               # #   
+    #                 #    
+   # #               # #   
+# #   # #         # #   # #
+ #     #           #     # 
+# #   # #         # #   # #
+         # #   # #         
+          #     #          
+         # #   # #         
+            # #            
+             #             
+            # #            
+         # #   # #         
+          #     #          
+         # #   # #         
+# #   # #         # #   # #
+ #     #           #     # 
+# #   # #         # #   # #
+   # #               # #   
+    #                 #    
+   # #               # #   
+# #   # #         # #   # #
+ #     #           #     # 
+# #   # #         # #   # #
+     OO  OO     
+    O  OO  O    
+    O  OO  O    
+     OO  OO     
+ OO          OO 
+O  O        O  O
+O  O        O  O
+ OO          OO 
+ OO          OO 
+O  O        O  O
+O  O        O  O
+ OO          OO 
+     OO  OO     
+    O  OO  O    
+    O  OO  O    
+     OO  OO     </pre><p class="pst">

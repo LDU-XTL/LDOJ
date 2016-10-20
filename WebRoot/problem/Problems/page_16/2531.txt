@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">A university network is composed of N computers. System administrators gathered information on the traffic between nodes, and carefully divided the network into two subnetworks in order to minimize traffic between parts.
+<br>A disgruntled computer science student Vasya, after being expelled from the university, decided to have his revenge. He hacked into the university network and decided to reassign computers to maximize the traffic between two subnetworks.
+<br>Unfortunately, he found that calculating such worst subdivision is one of those problems he, being a student, failed to solve. So he asks you, a more successful CS student, to help him.
+<br>The traffic data are given in the form of matrix C, where Cij is the amount of data sent between ith and jth nodes (Cij = Cji, Cii = 0). The goal is to divide the network nodes into the two disjointed subsets A and B so as to maximize the sum  &sum;Cij  (i&isin;A,j&isin;B).</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains a number of nodes N (2 <= N <= 20). The following N lines, containing N space-separated integers each, represent the traffic matrix C (0 <= Cij <= 10000).
+<br>Output file must contain a single integer -- the maximum traffic between the subnetworks.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Output must contain a single integer -- the maximum traffic between the subnetworks.</div><p class="pst">Sample Input</p><pre class="sio">3
+0 50 30
+50 0 40
+30 40 0
+</pre><p class="pst">Sample Output</p><pre class="sio">90</pre><p class="pst">

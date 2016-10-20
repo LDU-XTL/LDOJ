@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US"><p>There are four active children, whose names are Her-ri, Sumyou, Dashom, and Hooyeon, respectively. They play with <i>N</i> distinct points on the <i>x</i>-<i>y</i> coordinates. Each of them chooses a point, and they want to make a rectangle, with 4 points they choose, whose sides are parallel to either <i>x</i>-axis or <i>y</i>-axis. Also, a rectangle should have <i>A</i> width and <i>B</i> height. 4 children are really eager to know how many ways they can build up a rectangle. For example, if there are 6 points whose pairs are (0, 0), (5, 0), (5, 10), (7, 10), (7, 0) and (0, 10) and children want to make a rectangle whose width is 5 and height is 10, there is just one way to make it.</div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The first line of input will be a positive integer, <i>N</i> (5 &le; <i>N</i> &le; 500,000), which indicates the number of points on the coordinates. The second line contains two positive integers <i>A</i> and <i>B</i> (<i>A</i>, <i>B</i> &le; 1,000,000,000), which should be the width and height of the rectangle, respectively. The <i>i</i>-th line of next <i>N</i> lines will contain <i>x<sub>i</sub></i> and <i>y<sub>i</sub></i> (&minus;1,000,000,000 &le; <i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>, &le; 1,000,000,000), which represent the <i>i</i>-th point.</span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output should contain the number of ways children can make a rectangle. If there's no way, just output 0.</div><p class="pst">Sample Input</p><pre class="sio">6
+2 3
+0 0
+2 0
+2 3
+0 3
+4 0
+4 3</pre><p class="pst">Sample Output</p><pre class="sio">2</pre><p class="pst">

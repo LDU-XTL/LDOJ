@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">Many of us had played the game "Battle city" in our childhood, and some people (like me) even often play it on computer now.
+<br><center><img src=images/2312_1.jpg></center>
+<br>What we are discussing is a simple edition of this game. Given a map that consists of empty spaces, rivers, steel walls and brick walls only. Your task is to get a bonus as soon as possible suppose that no enemies will disturb you (See the following picture).
+<br><center><img src=images/2312_2.jpg></center>
+<br>Your tank can't move through rivers or walls, but it can destroy brick walls by shooting. A brick wall will be turned into empty spaces when you hit it, however, if your shot hit a steel wall, there will be no damage to the wall. In each of your turns, you can choose to move to a neighboring (4 directions, not 8) empty space, or shoot in one of the four directions without a move. The shot will go ahead in that direction, until it go out of the map or hit a wall. If the shot hits a brick wall, the wall will disappear (i.e., in this turn). Well, given the description of a map, the positions of your tank and the target, how many turns will you take at least to arrive there?</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several test cases. The first line of each test case contains two integers M and N (2 <= M, N <= 300). Each of the following M lines contains N uppercase letters, each of which is one of  'Y' (you), 'T' (target), 'S' (steel wall), 'B' (brick wall), 'R' (river) and 'E' (empty space). Both 'Y' and 'T' appear only once. A test case of M = N = 0 indicates the end of input, and should not be processed.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, please output the turns you take at least in a separate line. If you can't arrive at the target, output "-1" instead.</div><p class="pst">Sample Input</p><pre class="sio">3 4
+YBEB
+EERE
+SSTE
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">8</pre><p class="pst">

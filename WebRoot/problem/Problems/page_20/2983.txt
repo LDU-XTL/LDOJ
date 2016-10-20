@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The galaxy war between the Empire Draco and the Commonwealth of Zibu broke out 3 years ago. Draco established a line of defense called Grot. Grot is a straight line with <i> N</i> defense stations. Because of the cooperation of the stations, Zibu&rsquo;s Marine Glory cannot march any further but stay outside the line.</p><p>A mystery Information Group X benefits form selling information to both sides of the war. Today you the administrator of Zibu&rsquo;s Intelligence Department got a piece of information about Grot&rsquo;s defense stations&rsquo; arrangement from Information Group X. Your task is to determine whether the information is reliable.</p><p>The information consists of <i> M</i> tips. Each tip is either precise or vague.</p><p>Precise tip is in the form of <code>P A B X</code>, means defense station <i> A</i> is <i>X</i> light-years north of defense station <i>B</i>.</p><p>Vague tip is in the form of <code> V A B</code>, means defense station <i>A</i> is in the north of defense station <i>B</i>, at least 1 light-year, but the precise distance is unknown.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>There are several test cases in the input. Each test case starts with two integers <i>N</i> (0 &lt; <i>N</i> &le; 1000) and <i>M</i> (1 &le; <i>M</i> &le; 100000).The next <i>M</i> line each describe a tip, either in precise form or vague form.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Output one line for each test case in the input. Output &ldquo;Reliable&rdquo; if It is possible to arrange <i>N</i> defense stations satisfying all the <i>M</i> tips, otherwise output &ldquo;Unreliable&rdquo;.</p></span></div><p class="pst">Sample Input</p><pre class="sio">3 4
+P 1 2 1
+P 2 3 1
+V 1 3
+P 1 3 1
+5 5
+V 1 2
+V 2 3
+V 3 4
+V 4 5
+V 3 5</pre><p class="pst">Sample Output</p><pre class="sio">Unreliable
+Reliable</pre><p class="pst">

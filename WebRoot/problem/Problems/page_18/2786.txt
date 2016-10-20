@@ -1,0 +1,53 @@
+</p><div class="ptx" lang="en-US">Simon and Garfunkel Corporation (SG Corp.) is a large steel-making company with thousand of customers. Keeping the customer satisfied is one of the major objective of Paul and Art, the managers. 
+<br>
+<br>Customers issue orders that are characterized by two integer values q , the amount of steel required (in tons) and d , the due date (a calender date converted in seconds). The due date has to be met if SG Corp. accepts the order. Stated another way, when an order is accepted, the corresponding amount of steel has to be produced before its due date. Of course, the factory can process no more than one order at a time. 
+<br>
+<br>Although the manufacturing process is rather complex, it can be seen as a single production line with a constant throughput. In the following, we assume that producing q tons of steel takes exactly q seconds (i.e., throughput is 1). The factory runs on a monthly production plan. Before the beginning of the month, all customers' orders are collected and Paul and Art determine which of them are going to be accepted and which ones are to be rejected in the next production period. A production schedule is then designed. To keep customers satisfied, Paul and Art want to minimize the total number of orders that are rejected. In the following, we assume that the beginning of the next production plan (i.e., the first day of the next month) corresponds to date 0. 
+<br>
+<br>Hogdson and Moore have been appointed as Chief Scientific Officers and you are requested to help them to compute an optimal solution and to build a schedule of all accepted orders (starting time and completion time). 
+<br><b>Small Example </b>
+<br>Consider the following data set made of 6 orders J1,..., J6 . For a given order, Jj , qj denotes the amount of steel required and dj is the associated due date. 
+<br><center><img src=images/2786_1.jpg></center>
+<br>You can check by hand that all orders cannot be accepted and it's very unlikely you could find a solution with less than two rejected orders. Here is an optimal solution: Reject J1 and J4 , accept all other orders and process them as follows. 
+<br><center><img src=images/2786_2.jpg></center>
+<br>Note that the production line is never idle. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains the number n of orders (n can be as large as 800000 for some test cases). It is followed by n lines. Each of which describes an order made of two integer values: the amount of steel (in tons) required for the order (lower than 1000) and its due date (in seconds; lower than 2 x 10<sup>6</sup> ). </div><p class="pst">Output</p><div class="ptx" lang="en-US">You are required to compute an optimal solution and your program has to write the number of orders that are accepted. </div><p class="pst">Sample Input</p><pre class="sio">6
+7 15
+8 20
+6 8
+4 9
+3 21
+5 22
+</pre><p class="pst">Sample Output</p><pre class="sio">4
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Some Hints from Hogdson and Moore 
+<br>Hogdson and Moore claim that it is optimal to sequence accepted orders in non-decreasing order of due dates. 
+<br>They also claim that there is an optimal solution such that for any two orders Ju and Jv with qu > qv and du < dv , if Ju is accepted then Jv is also accepted. 
+<br>Finally, Hogdson and Moore advise you to ``Keep the Customer Satisfied" 
+<br><b>Keep the Customer Satisfied </b>
+<br><PRE>
+<br>Gee but it's great to be back home 
+<br>Home is where I want to be. 
+<br>I've been on the road so long my friend, 
+<br>And if you came along
+<br>I know you couldn't disagree.
+<br>
+<br>It's the same old story 
+<br>Everywhere I go, 
+<br>I get slandered, 
+<br>Libeled, 
+<br>I hear words I never heard 
+<br>In the bible 
+<br>And I'm on step ahead of the shoe shine 
+<br>Two steps away from the county line 
+<br>Just trying to keep my customers satisfied, 
+<br>Satisfied.
+<br>
+<br>Deputy sheriff said to me 
+<br>Tell me what you come here for, boy. 
+<br>You better get your bags and flee. 
+<br>You're in trouble boy, 
+<br>And you're heading into more.
+<br></PRE> 
+<br>
+<br><P>
+<br>
+<br>©Simon &amp; Garfunkel</div><p class="pst">

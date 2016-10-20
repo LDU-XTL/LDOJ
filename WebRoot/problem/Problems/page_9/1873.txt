@@ -1,0 +1,30 @@
+</p><div class="ptx" lang="en-US">Once upon a time, in a faraway land, there lived a king. This king owned a small collection of rare and valuable trees, which had been gathered by his ancestors on their travels. To protect his trees from thieves, the king ordered that a high fence be built around them. His wizard was put in charge of the operation. 
+<br>Alas, the wizard quickly noticed that the only suitable material available to build the fence was the wood from the trees themselves. In other words, it was necessary to cut down some trees in order to build a fence around the remaining trees. Of course, to prevent his head from being chopped off, the wizard wanted to minimize the value of the trees that had to be cut. The wizard went to his tower and stayed there until he had found the best possible solution to the problem. The fence was then built and everyone lived happily ever after. 
+<br>
+<br>You are to write a program that solves the problem the wizard faced. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several test cases, each of which describes a hypothetical forest. Each test case begins with a line containing a single integer n, 2 <= n <= 15, the number of trees in the forest. The trees are identified by consecutive integers 1 to n. Each of the subsequent n lines contains 4 integers xi, yi, vi, li that describe a single tree. (xi, yi) is the position of the tree in the plane, vi is its value, and li is the length of fence that can be built using the wood of the tree. vi and li are between 0 and 10,000. 
+<br>The input ends with an empty test case (n = 0). 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, compute a subset of the trees such that, using the wood from that subset, the remaining trees can be enclosed in a single fence. Find the subset with minimum value. If more than one such minimum-value subset exists, choose one with the smallest number of trees. For simplicity, regard the trees as having zero diameter. 
+<br>Display, as shown below, the test case numbers (1, 2, ...), the identity of each tree to be cut, and the length of the excess fencing (accurate to two fractional digits). 
+<br>
+<br>Display a blank line between test cases. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">6
+ 0  0  8  3
+ 1  4  3  2
+ 2  1  7  1
+ 4  1  2  3
+ 3  5  4  6
+ 2  3  9  8
+3
+ 3  0 10  2
+ 5  5 20 25
+ 7 -3 30 32
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">Forest 1
+Cut these trees: 2 4 5 
+Extra wood: 3.16
+
+Forest 2
+Cut these trees: 2 
+Extra wood: 15.00
+</pre><p class="pst">

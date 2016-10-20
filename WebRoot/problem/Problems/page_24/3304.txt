@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US"><p>Given <i>n</i> segments in the two dimensional space, write a program, which determines if there exists a line such that after projecting these segments on it, all projected segments have at least one point in common.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input begins with a number <i>T</i> showing the number of test cases and then, <i>T</i> test cases follow. Each test case begins with a line containing a positive integer <i>n</i> &le; 100 showing the number of segments. After that, <i>n</i> lines containing four real numbers <i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <i>x</i><sub>2</sub> <i>y</i><sub>2</sub> follow, in which (<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>) and (<i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>) are the coordinates of the two endpoints for one of the segments.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, your program must output &quot;Yes!&quot;, if a line with desired property exists and must output &quot;No!&quot; otherwise. You must assume that two floating point numbers <i>a</i> and <i>b</i> are equal if |<i>a</i> - <i>b</i>| &lt; 10<sup>-8</sup>.</p></div><p class="pst">Sample Input</p><pre class="sio">3
+2
+1.0 2.0 3.0 4.0
+4.0 5.0 6.0 7.0
+3
+0.0 0.0 0.0 1.0
+0.0 1.0 0.0 2.0
+1.0 1.0 2.0 1.0
+3
+0.0 0.0 0.0 1.0
+0.0 2.0 0.0 3.0
+1.0 1.0 2.0 1.0</pre><p class="pst">Sample Output</p><pre class="sio">Yes!
+Yes!
+No!</pre><p class="pst">

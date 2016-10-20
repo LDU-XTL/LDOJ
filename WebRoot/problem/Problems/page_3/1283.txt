@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">Assurance Company of Moving (ACM) is a company of moving things for  people. Recently, some schools want to move their computers to another place. So they ask ACM to help them. One school reserves K trucks for moving, and it has N computers to move. In order not to waste the trucks, the school ask ACM to use all the trucks. That is to say, there must be some computers in each truck, and there are no empty trucks. ACM wants to know how many partition shemes exists with moving N computers by K trucks, the ACM ask you to compute the number of different shemes with given N and K.
+<br>You needn't care with the order. For example N=7,K=3, the the following 3 partition instances are regarded as the same one and should be counted as one sheme.
+<br>1 1 5
+<br>1 5 1
+<br>5 1 1
+<br>Each truck can carry 200 computers at most.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Each line of the input contains two postisive integer N (1<=N<=200) and K(1<=K<=N).Input is terminated by a line with N=K=0.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each line, output the number of different partition sheme . The result may be larger than 2^32, so you should care with the precision.</div><p class="pst">Sample Input</p><pre class="sio">1 1
+7 3
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+4</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">The four partition shemes of the second sample are:
+<br>1  1  5
+<br>1  2  4
+<br>1  3  3
+<br>2  2  3
+<br></div><p class="pst">

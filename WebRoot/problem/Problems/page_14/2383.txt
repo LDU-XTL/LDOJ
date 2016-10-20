@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Graphics libraries usually implement drawing of graphics primitives, like lines, polygons and circles. Your task is to write a program that draws circles.
+<br>
+<br>Graphic canvas is represented as an array of X<sub>size</sub> by Y<sub>size</sub> pixels. Each pixel have a color ranged from 0 to 9. Initially all pixels have color 0. Pixels are thought of as small sqares with the side of length 1. A circle with center (xc, yc) and radius R is a set of pixels (x, y) satisfying the inequality (x − xc)<sup>2</sup> + (y − yc)<sup>2</sup> ≤ R<sup>2</sup>
+<br>
+<br>To draw a circle, your program should set the color of all pixels in a set defined above to the color of the circle. After drawing N given circles, the program should output the color of all pixels of the canvas. 
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains numbers X<sub>size</sub> Y<sub>size</sub> N followed by N sets of numbers xi yi Ri ci, describing the coordinates of center, radius and color of i-th circle.
+<br>1 <= X<sub>size</sub>, Y<sub>size</sub> <= 1000, 1 <= N <= 10000, 0 <= xi < X<sub>size</sub>, 0 <= yi < Y<sub>size</sub>, 1 <= Ri <= 212, 0 <= ci <= 9. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Output should contain Y<sub>size</sub> lines of X<sub>size</sub> characters each, where i-th character of j-th line is a digit corresponding to color of the pixel (i, j). </div><p class="pst">Sample Input</p><pre class="sio">5 5 1
+2 2 1 3
+</pre><p class="pst">Sample Output</p><pre class="sio">00000
+00300
+03330
+00300
+00000
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">This problem has huge input and output data,use scanf() and printf() instead of cin and cout  to read data to avoid time limit exceed. </div><p class="pst">

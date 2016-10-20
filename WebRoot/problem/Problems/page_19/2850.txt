@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US"><p>Cylinders (e.g. oil drums) (of radius 1 foot) are stacked in a rectangular bin. Each cylinder on an upper row rests on two cylinders in the row below. The cylinders in the bottom row rest on the floor and do not roll from their original positions. Each row has one less cylinder than the row below.
+<br>
+<br><center><img src=images/2850_1.gif></center>
+<br><p>This problem is to write a program to compute the location of the center of the top cylinder from the centers of the cylinders on the bottom row. Computations of intermediate values should use double precision.</div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input begins with a line containing the count of problem instances, <i>nProb</i>, as a decimal integer, (1 &le; <i>nProb</i> &le; 1000) . This is followed by nProb  input lines. An input line consists of the number, <i>n</i>, of cylinders on the bottom row followed by <i>n</i> floating point values giving the <i>x</i> coordinates of the centers of the cylinders (the <i>y</i> coordinates are all 1.0 since the cylinders are resting on the floor (<i>y</i> = 0.0)). The value of <i>n</i> will be between 1 and 10 (inclusive). The distance between adjacent centers will be at least 2.0 (so the cylinders do not overlap) and at most 3.4 (so cylinders at level <i>k</i> cannot touch cylinders at level <i>k</i> &minus; 2).</span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>The output for each data set is a line containing the problem number (1...<i>nProb</i>), a colon, a space, the <i>x</i> coordinate of the topmost cylinder to 4 decimal places, a space and the <i>y</i> coordinate of the topmost cylinder to 4 decimal places (both <i>x</i> and <i>y</i> ROUNDED to the nearest digit).</div><p class="pst">Sample Input</p><pre class="sio">5
+4 1.0 4.4 7.8 11.2
+1 1.0
+6 1.0 3.0 5.0 7.0 9.0 11.0
+10 1.0 3.0 5.0 7.0 9.0 11.0 13.0 15.0 17.0 20.4
+5 1.0 4.4 7.8 11.2 14.6</pre><p class="pst">Sample Output</p><pre class="sio">1: 6.1000 4.1607
+2: 1.0000 1.0000
+3: 6.0000 9.6603
+4: 10.7000 15.9100
+5: 7.8000 5.2143</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><p><B>Note:</B> To help you check your work, the <I>x</I>-coordinate of the center of the top cylinder should be the average of the <I>x</I>-coordinates of the leftmost and rightmost bottom cylinders.</div><p class="pst">

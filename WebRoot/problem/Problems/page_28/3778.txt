@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">The education of primary school in China is a big problem now. A teacher must be very careful not only when he/she is criticizing the students, but also when he/she is giving awards to good students. Teacher Liu always gave the top ten students on his examination some little awards before, but some parents are a little bit angry about this now. They say that their little kids may get hurt because they will never get the awards. Teacher Liu has to change his award rule. He wants all students have a chance to win the awards, no matter their scores are good or poor. But he still wants good students to get more chance. So the new rule seems a little bit odd: anyone whose score equals to the sum of the scores of OTHER 3 or 2 students, will win the award. Now figuring out who is qualified for the awards seems a little bit hard for Teacher Liu. As the monitor of his class and a little programmer, you should help him to do this.</div><p class="pst">Input</p><div class="ptx" lang="en-US">For each test case, first print an integer in a line, indicating how many students win the awards. Then print the names of those who win the awards in alphabetic order, each name in a line.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print one line containing an integer which equals to the formula’s value mod P.
+<br></div><p class="pst">Sample Input</p><pre class="sio">1
+5
+SIKE 12
+WORRY 20
+LUCENT 8
+KILI 3
+TOM 1</pre><p class="pst">Sample Output</p><pre class="sio">2
+SIKE
+WORRY</pre><p class="pst">

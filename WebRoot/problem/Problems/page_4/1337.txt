@@ -1,0 +1,25 @@
+</p><div class="ptx" lang="en-US">There is a worker who may lack the motivation to perform at his peak level of efficiency because he is lazy. He wants to minimize the amount of work he does (he is Lazy, but he is subject to a constraint that he must be busy when there is work that he can do.) 
+<br>
+<br>We consider a set of jobs 1, 2,..., n having processing times t1, t2,...,tn respectively. Job i arrives at time ai and has its deadline at time di. We assume that ti, ai, and di have nonnegative integral values. The jobs have hard deadlines, meaning that each job i can only be executed during its allowed interval Ii=[ai, di]. The jobs are executed by the worker, and the worker executes only one job at a time. Once a job is begun, it must be completed without interruptions. When a job is completed, another job must begin immediately, if one exists to be executed. Otherwise, the worker is idle and begins executing a job as soon as one arrives. You should note that for each job i, the length of Ii, di - ai, is greater than or equal to ti, but less than 2*ti. 
+<br>
+<br>Write a program that finds the minimized total amount of time executed by the worker. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of T test cases. The number of test cases (T ) is given in the first line of the input file. The number of jobs (0<=n<=100) is given in the first line of each test case, and the following n lines have each job's processing time(1<=ti<=20),arrival time(0<=ai<=250), and deadline time (1<=di<=250) as three integers. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Print exactly one line for each test case. The output should contain the total amount of time spent working by the worker. </div><p class="pst">Sample Input</p><pre class="sio">3
+3
+15 0 25
+50 0 90
+45 15 70
+3
+15 5 20
+15 25 40
+15 45 60
+5
+3 3 6
+3 6 10
+3 14 19
+6 7 16
+4 4 11
+</pre><p class="pst">Sample Output</p><pre class="sio">50
+45
+15
+
+</pre><p class="pst">

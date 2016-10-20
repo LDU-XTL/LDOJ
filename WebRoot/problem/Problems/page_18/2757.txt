@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US">Now that you believe Jiajia & Wind's cute daughter, Autumn, is a genius. It's not surprising that such a clever little girl would have no interest on simple additions very soon. This time, she turned to divisions, since they're more fun. For example, she found herself that if the sum of digits of a decimal number is a multiple of 3, then the decimal number itself is also a multiple of 3. The argument is still true if she replaces the number 3 with 9.
+<br>
+<br>Inspired by these, Autumn invented a special kind of number, called 'Beautiful Numbers'. A number k is said to be Beautiful in base b, if the sum of digits of k in base b is a multiple of b.
+<br>
+<br>Autumn knows how to calculate the sum of first n beautiful numbers in base b, can you?
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains a single test case with two lines. The first line is a single integer n(n < 10<sup>1001</sup>), the second line is a single integer b(1 < b < 1001).</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output contains a single integer, the sum of first n beautiful numbers in base b. You should output the sum in decimal, not in base b. </div><p class="pst">Sample Input</p><pre class="sio">2
+3
+</pre><p class="pst">Sample Output</p><pre class="sio">12</pre><p class="pst">

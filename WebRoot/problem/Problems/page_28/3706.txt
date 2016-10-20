@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US"><div><p>A semi-final competition was just over. There are n players. Each player had an SEED number from 1 to <i>n</i>. The competition had <i>m</i> problems in coding phase and challenge phase. The final rank was decided by the total score of the <i>m</i> problems and challenge scores. The higher the total score was, the higher a player ranked. If two players got the same total score, the one with the smaller SEED number got a higher rank. We know that for each problem, how much score each player might get if his solution is correct (if not, the player got 0 in the problem). And we also know how much score each player get during the challenge phase. </p><p>After the system-tests, the <i>c</i><sub>1</sub> highest ranked players will advance to the final round, the next <i>c</i><sub>2</sub> highest scoring players will advanced to wildcard round.</p><p>Before the system-tests, you need to count how many different combinations of advancers (including finalist and wildcard participants) are possible. Two ranks with same set of finalist and wildcard participants are consider same here. Note that, the players with negative scores can also advance to the final round or wildcard round, because the challenge scores may be smaller than 0.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of input four integers <i>n</i>, <i>m</i>, <i>c</i><sub>1</sub>, <i>c</i><sub>2</sub>, denote the number of players, the number of problems, the number of finalist and the number of player will advanced to wildcard round. 3 ≤ <i>n</i> ≤ 40, 1 ≤ <i>m</i> ≤ 40, <i>c</i><sub>1</sub> ≥ 1, <i>c</i><sub>2</sub> ≥ 1, <i>n</i>-<i>c</i><sub>1</sub>-<i>c</i><sub>2</sub> ≥ 1<br>Following <i>n</i> lines, the <i>i</i>-th line contains <i>m</i>+2 integers <i>S<sub>i</sub></i>, <i>A<sub>i</sub></i><sub>1</sub>, <i>A<sub>i</sub></i><sub>2</sub>, ……<i>A<sub>im</sub></i>, <i>C<sub>i</sub></i> denote the SEED number, the scores of the <i>m</i> problems and the score during the challenge phase for player <i>i</i>. All <i>S<sub>i</sub></i> will be distinct. 1 ≤ <i>S<sub>i</sub></i> ≤ <i>n</i>, 0 ≤ <i>A<sub>ij</sub></i> ≤ 1000, -2000 ≤ <i>C<sub>i</sub></i> ≤ 2000</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>The first line of output contains one integer denoting the number of different advancers. 　</p></div><p class="pst">Sample Input</p><pre class="sio"><b>Sample Input 1</b>
+3 1 1 1
+1 10 0
+2 10 0
+3 10 0
+<b>Sample Input 2</b>
+6 1 2 2
+1 10 0
+2 10 0
+3 10 0
+4 10 0
+5 10 0
+6 10 0
+</pre><p class="pst">Sample Output</p><pre class="sio"><b>Sample Output 1</b>
+5
+<b>Sample Output 2</b>
+43</pre><p class="pst">

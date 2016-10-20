@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">Little Tom loves playing games. One day he downloads a computer game called 'Striking Ball', which makes him very excited. The game field is a rectangular window, and there are many rectangular bricks of the same size in it. A ‘striking ball’ is bouncing in that window. Every brick is placed parallel to the window’s bottom line. At the beginning of the game, little Tom may put the ball at any position on the bottom line of the window and launch it in any direction upwards. Then the striking ball will change its direction only when it hits the bricks or the border of the window. The ball changes its direction according to the light reflection rule. A brick will disappear immediately when hit by the ball. Every striking at the brick brings little Tom the amount of points which the brick owns. Once the striking ball touches the bottom line, the game ends. 
+<br>Given the launching position and direction of the striking ball, little Tom wants to know how many points in total he will get during the game.
+<br>You may ignore the volume of the ball and just regard it as a point.
+<br>This is a picture showing that a ball is launched from coordinate X on the bottom line of the window, and the launch angle is α.
+<br>
+<br><center><img src="images/3935_1.png"></center></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains multiple test cases. Each test case means one game. It starts with five numbers: W, H, w, h, n(0&lt;W, H&lt;=1000, 0&lt;w&lt;W, 0&lt;h&lt;H, n&lt;=500) which stands for the width and height of the window, the width and height of the bricks and the number of bricks in the window.(The input ends by a line with five zeros) The next n lines shows the information of n bricks in the following format: xi, yi, pi(0&lt;=xi&lt;=W-w, 0&lt;=yi&lt;=H-h, 0&lt;pi&lt;=100). The first two float numbers stand for the coordinate of the lower left corner of the brick and the last integer stands for the points the brick owns. The last line contains two float number X, α(0&lt;=X&lt;=W, 0&lt;α&lt;180), which stands for the launch X-coordinate and launch angle (in degrees) of the striking ball.
+<br>
+<br>It guarantees that 
+<br>At any time, the distances between the ball and any corners of the bricks are always larger than 0.000001. Also, the distances between the ball and the window corners are always larger than 0.000001.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test cases output one line with the total points that little Tom will get.
+<br></div><p class="pst">Sample Input</p><pre class="sio">3 3 2 1 1
+0.5 1 100
+0 42
+5 5 0.7 1 6
+0.4 2.5 1
+1.1 2.5 2
+1.8 2.5 4
+2.5 2.5 8
+3.2 2.5 16
+3.9 2.5 32
+2.55 45
+0 0 0 0 0</pre><p class="pst">Sample Output</p><pre class="sio">100
+38</pre><p class="pst">

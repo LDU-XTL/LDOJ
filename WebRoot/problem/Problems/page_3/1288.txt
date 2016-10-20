@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">Let's consider so called "sly number" which is given as an array A of N integers from set {0,1,2}. For example A[0]=1, A[1]=1, A[2]=0 and A[3]=2. A sly number is called ONE, if A[0]=1 and A[I]=0 for I=1,2,?,N-1. 
+<br>Consider following operation with two sly numbers A and B called 'Star Multiplication':
+<br><pre>
+<br>                                  k                             N-1
+<br>                    C[k]     =   ∑  A[i] * B[k-i]      +       ∑  A[i] * B[N+k-i].
+<br>                                 i=0                           i=k+1
+<br></pre>
+<br>here C ? the result of the operation, even also presented in an array - not necessarily sly number. This operation we will denote by <*> symbol.
+<br>
+<br>Moreover, there is also module operation over the results of 'Star Multiplication':
+<br><pre>
+<br>                                         (C mod Q) [i]     =     C[i] mod Q,
+<br></pre>
+<br>where Q is a positive integer.
+<br>	
+<br>We are given a sly number A and a module Q. We need to find such 'inverse sly number' B:
+<br>                                              
+<br>(A * B) mod Q   =   ONE.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input  contains K data sets in text format. The first line of this file contains the number K of test cases. Each test consists of two lines. First line contains two integers separated by spaces: Q (2 <= Q <= 100) and N (5 <= N <= 50). Second line contains N integers from set {0,1,2} separated by spaces, which present sly number A.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output should be printed on the standard output. It should contain K lines - one line for each test case. If a solution exists, the line should contain the string "A solution can be found". In case there is no solution, the line should consist of string 'No solution'.</div><p class="pst">Sample Input</p><pre class="sio">2
+2 5
+1 0 1 0 1
+65 8
+1 2 2 2 1 1 2 2</pre><p class="pst">Sample Output</p><pre class="sio">A solution can be found
+No solution</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">In the first sample one possible inverse sly number could be <0 0 1 1 1>.</div><p class="pst">

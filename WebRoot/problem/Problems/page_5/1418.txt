@@ -1,0 +1,46 @@
+</p><div class="ptx" lang="en-US">Do you know confetti? They are small discs of colored paper, and people throw them around during parties or festivals. Since people throw lots of confetti, they may end up stacked one on another, so there may be hidden ones underneath.
+<br>
+<br>A handful of various sized confetti have been dropped on a table. Given their positions and sizes, can you tell us how many of them you can see?
+<br>
+<br>The following figure represents the disc configuration for the first sample input, where the bottom disc is still visible.
+<br>
+<br><img src=images/1418_1.jpg></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input is composed of a number of configurations of the following form.
+<br>
+<br>n
+<br>x1 y1 r1
+<br>x2 y2 r2
+<br>...
+<br>xn yn rn
+<br>
+<br>The first line in a configuration is the number of discs in the configuration (a positive integer not more than 100), followed by one line descriptions of each disc : coordinates of its center and radius, expressed as real numbers in decimal notation, with up to 12 digits after the decimal point. The imprecision margin is +/- 5 x 10^(-13). That is, it is guaranteed that variations of less than +/- 5 x 10^(-13) on input values do not change which discs are visible. Coordinates of all points contained in discs are between -10 and 10.
+<br>
+<br>Confetti are listed in their stacking order, x1 y1 r1 being the bottom one and xn yn rn the top one. You are observing from the top.
+<br>
+<br>The end of the input is marked by a zero on a single line.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each configuration you should output the number of visible confetti on a single line.</div><p class="pst">Sample Input</p><pre class="sio">3
+0 0 0.5
+-0.9 0 1.00000000001
+0.9 0 1.00000000001
+5
+0 1 0.5
+1 1 1.00000000001
+0 2 1.00000000001
+-1 1 1.00000000001
+0 -0.00001 1.00000000001
+5
+0 1 0.5
+1 1 1.00000000001
+0 2 1.00000000001
+-1 1 1.00000000001
+0 0 1.00000000001
+2
+0 0 1.0000001
+0 0 1
+2
+0 0 1
+0.00000001 0 1
+0</pre><p class="pst">Sample Output</p><pre class="sio">3
+5
+4
+2
+2</pre><p class="pst">

@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">Let p1, p2, . . . , pn be n points on the plane. We have m rules of form pi rel pj , each inform us that the relation rel holds among the locations of points pi and pj on the plane. For example, “pi NE pj” indicates that point pj is located NorthEast of point pi. There are eight different relations {N, E, S, W, NE, NW, SE, SW}, corresponding to the eight directions on the plane. Let (xi, yi) and (xj , yj) be the coordinates of pi, and pj respectively. Then pi rel pj exactly means one of the following, depending on the value of rel:<ol><li>N stands for North. This means that xj = xi and yj > yi,</li>
+<br><li>E stands for East. This means that xj > xi and yj = yi,</li>
+<br><li>S stands for South. This means that xj = xi and yj < yi, </li>
+<br><li>W stands for West. This means that xj < xi and yj = yi,</li>
+<br><li>NE stands for NorthEast. This means that xj > xi and yj > yi,</li>
+<br><li>NW stands for NorthWest. This means that xj < xi and yj > yi,</li>
+<br><li>SE stands for SouthEast. This means that xj > xi and yj < yi, and</li>
+<br><li>SW stands for SouthWest. This means that xj < xi and yj < yi.</li></ol>The problem is to determine whether it possible to locate p1, p2, . . . , pn on the plane so that all
+<br>given rules are satisfied.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains a single integer t (1 &le; t &le; 20) which is the number of test cases in the input. The first line of each test case contains two integers n (2 &le; n &le; 500) which is the number of points and m (1 &le; m &le; 10000) which is the number of rules. In each of the following m lines, there is one rule of the form i rel j which means that pi has relation rel with pj. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output contains one line per each test case containing one of the words POSSIBLE or IMPOSSIBLE indicating if the set of points in the test case can be located on the plane according to the given rules.</div><p class="pst">Sample Input</p><pre class="sio">2
+3 2
+1 N 2
+2 N 1
+6 6
+1 E 2
+1 E 3
+2 N 4
+3 NW 5
+4 SW 6
+6 NE 5</pre><p class="pst">Sample Output</p><pre class="sio">IMPOSSIBLE
+POSSIBLE</pre><p class="pst">

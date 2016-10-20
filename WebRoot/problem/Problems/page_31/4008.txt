@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">The school track-and-field team is taking a running relay race. There are n (2&lt;=n&lt;=10<sup>4</sup>) members in the team. In order to let everybody participate in the race, each member should run at least d (0&lt;=d&lt;=10) meters. Besides that, everyone can run arbitrary distance. The whole length of the track is L (1&lt;=L&lt;=10<sup>5</sup>) meters.
+<br>
+<br>For the i<sup>th</sup> member in the team, if he is in a good mood , then it takes him t<sub>i</sub> seconds (1&lt;=t<sub>i</sub>&lt;=4×10<sup>4</sup>) to run one meter. If he is in a bad mood, then it takes him s<sub>i</sub> (1&lt;=s<sub>i</sub><=4×10<sup>4</sup>, 1&lt;=t<sub>i</sub>&lt;=s<sub>i</sub>) seconds to run one meter.
+<br>
+<br>As the coach of the team, you can assign the running distance of each member in advance. Suppose that, it takes S seconds for the team to complete the relay race if all the members are in bad moods and it takes T seconds for the team to complete the relay race if all the members are in good moods. You do want to have a good score. But you don’t want to have a very bad score even if someone is in a bad mood. So you want to know the minimum value of T on condition that S should not be larger than W (1&lt;=W&lt;=2147483647).
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input begins with a line containing an integer, indicating the number of test cases. There are no more than 100 test cases.
+<br>
+<br>For each case, the first line begins with four integers --- the above mentioned n, d, L and W. Then n lines follow, each representing a member. Each line contains two integers s and t, meaning that the member spend s seconds to run one meter when he/she is in a bad mood, and spend t seconds to run one meter when he/she is in a good mood.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, if you cannot find a proper way to assign the running distance of each member, output a string “No solution” in a line. Otherwise, output the minimum value of T (rounded to 2 digits after the decimal point) in a line.</div><p class="pst">Sample Input</p><pre class="sio">2
+2 1 20 141
+8 3
+6 6
+3 8 20 200
+8 3
+6 6
+7 1
+</pre><p class="pst">Sample Output</p><pre class="sio">88.50
+No solution
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">In the first case, the first member runs 10.5 meters and the second member runs 9.5m. S=8×10.5+6×9.5=141=W, T=3×10.5+6×9.5=88.5.
+<br>
+<br>In the second case, every member should run at least 8 meters. But the length of the track is only 20 meters. Because 8×3&gt;20, there is no solution.
+<br></div><p class="pst">

@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">A permutation of 1..<i>n</i> {<i>A<sub>n</sub></i>} is called a Perfect Permutation if the sequence {|<i>A<sub>i</sub></i> &minus; <i>i</i>|} is a permutation of 0..(<i>n</i> &minus; 1).
+<br>For example, {3, 2, 4, 1} is a perfect permutation for {2, 0, 1, 3} is a permutation of 0..3.
+<br>Given an integer <i>n</i>, your mission is to find a perfect permutation of 1..<i>n</i>.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several lines. Each line contains a positive integer <i>n</i> &le; 1000.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output contains one line for each line in the input. If no such perfect permutation exists, output a single number 0 otherwise the perfect permutation. If more than one solution exist, you can output anyone.
+<br></div><p class="pst">Sample Input</p><pre class="sio">1
+2
+4
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+0
+3 2 4 1
+</pre><p class="pst">

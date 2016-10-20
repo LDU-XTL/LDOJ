@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US">Today is Valentine's Day. Gnaf Ynot is going to present a beautiful necklace to his girl friend Mxxjx. He has bought a necklace of pearls some time ago. The necklace consists of many sheeny pearls and is very pretty. However, the necklace is too long for his girl friend. So Gnaf Ynot has to cut a slice from the necklace so that he can get a shorter one. He wants that the cut slice of necklace can be as evenly bright as possible, i.e. the average brightness of the slice should be maximized. Gnaf Ynot requests your help.
+<br>
+<br>The necklace is in the form of a ring of pearls. Each pearl has a brightness. Your task is to cut a substring of pearls from the ring, so that the substring has the largest average brightness of pearls. The substring you cut should not be too long or too short as well. To help Gnaf Ynot making Mxxjx happy, please try your best to solve this problem!</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains multiple test cases. Each test case starts a line containing three numbers N, L, U (1 <= L <= U <= N <= 1000000), which are the number of pearls of the necklace, the permitted shortest length and the longest length of the cut slice. Then the following line gives the brightness of each pearl (the value of brightness are integers and in the range of [-1000, 1000]).</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case print the largest average brightness of the slice you cut from the necklace in one line. The result should be represented using fraction form such as A/B (here A and B are integers, B > 0 and (A, B) = 1). </div><p class="pst">Sample Input</p><pre class="sio">4 2 3
+4 -1 3 1
+4 2 2
+4 -1 3 1
+</pre><p class="pst">Sample Output</p><pre class="sio">8/3
+5/2
+</pre><p class="pst">

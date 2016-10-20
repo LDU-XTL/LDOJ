@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US"><p>After a day trip with his friend Dick, Harry noticed a strange pattern of tiny holes in the door of his SUV. The local American Tire store sells fiberglass patching material only in square sheets. What is the smallest patch that Harry needs to fix his door? </p><p>Assume that the holes are points on the integer lattice in the plane. Your job is to find the area of the smallest square that will cover all the holes. </p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of input contains a single integer <i>T</i> expressed in decimal with no leading zeroes, denoting the number of test cases to follow. The subsequent lines of input describe the test cases. </p><p>Each test case begins with a single line, containing a single integer <i>n</i> expressed in decimal with no leading zeroes, the number of points to follow; each of the following <i>n</i> lines contains two integers <i>x</i> and <i>y</i>, both expressed in decimal with no leading zeroes, giving the coordinates of one of your points. </p><p>You are guaranteed that <i>T</i> ≤ 30 and that no data set contains more than 30 points. All points in each data set will be no more than 500 units away from (0,0). </p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Print, on a single line with two decimal places of precision, the area of the smallest square containing all of your points.</p></div><p class="pst">Sample Input</p><pre class="sio">2
+4
+-1 -1
+1 -1
+1 1
+-1 1
+4
+10 1
+10 -1
+-10 1
+-10 -1</pre><p class="pst">Sample Output</p><pre class="sio">4.00
+242.00</pre><p class="pst">

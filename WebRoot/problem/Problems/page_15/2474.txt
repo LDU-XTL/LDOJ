@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US">As you may already know, different countries in Europe use different railroad systems. Not only do they use different voltages for their trains, but also the distance between the two rails (gauge) differs. The following table shows some railway gauges used: 
+<br><CENTER><TABLE class=data cellSpacing=1 cellPadding=1 border=1><TBODY align=left><TR><TH>Broad gauge (Spain):</TH><TH>1674 mm</TH></TR><TR><TH>Broad gauge (Portugal):</TH><TH>1665 mm</TH></TR><TR><TH>Broad gauge (Ireland):</TH><TH>1600 mm</TH></TR><TR><TH>Broad gauge (Finland):</TH><TH>1524 mm</TH></TR><TR><TH>Broad gauge (former USSR):</TH><TH>1520 mm</TH></TR><TR><TH>Standard gauge:</TH><TH>1435 mm</TH></TR><TR><TH>Narrow gauge (meter gauge):</TH><TH>1000 mm</TH></TR></TBODY></TABLE></CENTER>
+<br>A museum has trains from several countries. It needs tracks for every train type in order to show visitors the trains in use. However, since only one train is used at a time, a rail can be used by trains of different types. It follows that for n trains, each requiring a different railway gauge, n + 1 rails are sufficient (each train uses the leftmost rail and a rail that has exactly the required distance to it). But sometimes it is possible to save even more rails.
+<br>
+<br>Given the required railway gauges, your task is to construct a railway track that can be used by every train and requires the least number of rails. Note that a train can use any two rails, provided the distance between them is right.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains a number representing the number of test cases to follow. Each test case starts with an integer n (the number of different railway gauges required). The next line contains n integers between 1000 and 5000, each defining one required railway gauge.
+<br>You can assume that 1 <= n <= 8. Moreover, for every test case in the input file, there will be a solution requiring at most 5 rails. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output for each test case consists of three lines:
+<br>The first line is of the form "Scenario #X", where X is the test case number starting with 1. The second line describes the solution your program has found; first your program should print how many rails are needed, followed by a colon, then the positions of each rail in increasing order (the first rail should be at position 0). The third line should be blank. If there are several solutions with the minimum number of rails, any one will do. </div><p class="pst">Sample Input</p><pre class="sio">3
+4
+1524 1520 1609 1435
+3
+1000 1520 1600
+6
+1000 2000 3000 4000 1500 2500</pre><p class="pst">Sample Output</p><pre class="sio">Scenario #1
+4: 0 1520 1609 3044
+
+Scenario #2
+4: 0 1000 1520 1600
+
+Scenario #3
+5: 0 1500 3000 4000 5000
+</pre><p class="pst">

@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">a program that, given a natural number N between 0 and 4999 (inclusively), and M distinct decimal digits X1,X2..XM (at least one), finds the smallest strictly positive multiple of N that has no other digits besides X1,X2..XM (if such a multiple exists).</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input has several data sets separated by an empty line, each data set having the following format:
+<br>
+<br>On the first line - the number N
+<br>On the second line - the number M
+<br>On the following M lines - the digits X1,X2..XM.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, the program should write to standard output on a single line the multiple, if such a multiple exists, and 0 otherwise.
+<br>
+<br>An example of input and output: </div><p class="pst">Sample Input</p><pre class="sio">22
+3
+7
+0
+1
+
+2
+1
+1</pre><p class="pst">Sample Output</p><pre class="sio">110
+0</pre><p class="pst">

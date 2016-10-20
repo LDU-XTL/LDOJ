@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">A certain spreadsheet program labels the columns of a spreadsheet using letters. Column 1 is labeled as ``A", column 2 as ``B", ..., column 26 as ``Z". When the number of columns is greater than 26, another letter is used. For example, column 27 is ``AA", column 28 is ``AB" and column 52 is ``AZ". It follows that column 53 would be ``BA" and so on. Similarly, when column ``ZZ" is reached, the next column would be ``AAA", then ``AAB" and so on. 
+<br>
+<br>The rows in the spreadsheet are labeled using the row number. Rows start at 1. 
+<br>
+<br>The designation for a particular cell within the spreadsheet is created by combining the column label with the row label. For example, the upper-left most cell would be ``A1". The cell at column 55 row 23 would be ``BC23". 
+<br>
+<br>You will write a program that converts numeric row and column values into the spreadsheet designation. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of lines of the form: RnCm. n represents the row number [1,300000000] and m represents the column number, 1<=m<=300000000. The values n and m define a single cell on the spreadsheet. Input terminates with the line: R0C0 (that is, n and m are 0). There will be no leading zeroes or extra spaces in the input. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each line of input (except the terminating line), you will print out the spreadsheet designation for the specified cell as described above.</div><p class="pst">Sample Input</p><pre class="sio">R1C1
+R3C1
+R1C3
+R299999999C26
+R52C52
+R53C17576
+R53C17602
+R0C0
+</pre><p class="pst">Sample Output</p><pre class="sio">A1
+A3
+C1
+Z299999999
+AZ52
+YYZ53
+YZZ53
+</pre><p class="pst">

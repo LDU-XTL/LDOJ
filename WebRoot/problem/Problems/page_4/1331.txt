@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">6*9 = 42" is not true for base 10, but is true for base 13. That is, 6(13) * 9(13) = 42(13) because 42(13) = 4 * 131 + 2 * 130 = 54(10). 
+<br>
+<br>You are to write a program which inputs three integers p, q, and r and determines the base B (2<=B<=16) for which p * q = r. If there are many candidates for B, output the smallest one. For example, let p = 11, q = 11, and r = 121. Then we have 11(3) * 11(3) = 121(3) because 11(3) = 1 * 31 + 1 * 30 = 4(10) and 121(3) = 1 * 32 + 2 * 31 + 1 * 30 = 16(10). For another base such as 10, we also have 11(10) * 11(10) = 121(10). In this case, your program should output 3 which is the smallest base. If there is no candidate for B, output 0. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of T test cases. The number of test cases (T ) is given in the first line of the input file. Each test case consists of three integers p, q, and r in a line. All digits of p, q, and r are numeric digits and 1<=p,q, r<=1,000,000. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Print exactly one line for each test case. The line should contain one integer which is the smallest base for which p * q = r. If there is no such base, your program should output 0. </div><p class="pst">Sample Input</p><pre class="sio">3
+6 9 42
+11 11 121
+2 2 2
+</pre><p class="pst">Sample Output</p><pre class="sio">13
+3
+0
+
+</pre><p class="pst">

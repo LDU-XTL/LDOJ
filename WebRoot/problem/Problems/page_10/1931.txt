@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">Recently, the term Biometrics been used to refer to the emerging field of technology devoted to identification of individuals using biological traits, such as those based on retinal or iris scanning, fingerprints, or face recognition. 
+<br>A simple biometric system translates a human image into a polygon by considering certain features (eyes, nose, ears, etc.) to be vertices and connecting them with line segments. The polygon has distinct vertices but may be degenerate in that the line segments could intersect. Because these polygons are generally created from remote images, there is some uncertainty as to their scale and rotation. Your job is to determine whether or not two polygons are similar; that is, can they be made equal by repositioning, rotating and magnifying them?</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of several test cases. Each test case consists of three lines containing: 
+<br><ul><li>f, the number of features 
+<br><li>f coordinate pairs giving the vertices of the first polygon 
+<br><li>f coordinate pairs giving the vertices of the second polygon </ul>
+<br>The vertices for both polygons correspond to the same set of features in the same order; for example, right ear tip, chin cleft, right eye, nose, left eye, left ear tip, space between front teeth. Each polygon has f vertices; each vertex is given as an x and y coordinate pair. There are at least three and no more than ten features. Coordinates are integers between -1000 and 1000. A line containing 0 follows the last test case. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case, output a line "similar" or "dissimilar" as appropriate. The two polygons are similar if, after some combination of translation, rotation, and scaling (but not reflection) both vertices corresponding to each feature are in the same position. </div><p class="pst">Sample Input</p><pre class="sio">4
+0 0 0 1 1 1 1 0
+0 1 1 0 0 -1 -1 0
+3
+0 0 10 0 10 10
+0 0 -10 0 -10 10
+3
+0 0 10 10 20 20
+0 0 11 11 22 22
+3
+0 0 10 10 20 20
+0 0 11 11 20 20
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">similar
+dissimilar
+similar
+dissimilar
+</pre><p class="pst">

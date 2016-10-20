@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US"><p>Alice has invented an Auto-Calculation Machine (ACM) that operates on very large integer arrays. The machine is so simple that only one operation of the format <i>sum</i>(<i>i</i>, <i>j</i>) can be performed on it. An operation <i>sum</i>(<i>i</i>, <i>j</i>) means to calculate the sum of all integers between the <i>i</i>-th and <i>j</i>-th ones (inclusive) in the array. Despite its simplicity, the machine is not carefully designed. From time to time, it makes mistakes.</p><p>Alice has recorded a list of operations on a certain integer array of the ACM. Your task is to check whether it has made any mistakes not given any information about the array. For any record in the list, it is considered mistaken if it conflicts with the former ones, otherwise it is all right.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input consists of multiple lines. The first line contains a single positive integer <i>M</i> &le; 10,000 indicating the number of records in the list. Each of the next M lines contain a record <i>i</i> <i>j</i> <i>v</i> (1 &le; <i>i</i>, <i>j</i> &le; 10<sup>9</sup>, &minus;20,000 &le; <i>v</i> &le; 20,000) in the list meaning that the result of an operation <i>sum</i>(<i>i</i>, <i>j</i>) is <i>v</i>.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output one line for each record in the list. If the operation referred to by the record is all right, output a single word &ldquo;Accept&rdquo;; otherwise output the phrase &ldquo;Bug Detected&rdquo; followed by and separated from by a single space the correct result of the operation.</p></div><p class="pst">Sample Input</p><pre class="sio">6
+1 2 1
+1 2 2
+5 6 3
+1 6 7
+3 4 50
+7 10 10</pre><p class="pst">Sample Output</p><pre class="sio">Accept
+Bug Detected 1
+Accept
+Accept
+Bug Detected 3
+Accept</pre><p class="pst">

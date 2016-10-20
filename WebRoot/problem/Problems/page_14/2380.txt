@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">The Unknown Trading Company have installed a new inventory-tracking system, which stores a complete database of goods and trading points worldwide. Each salespoint and each item was assigned an integer unique identifier (id). For every sale, the system logs id of the item, number of items sold, and id of the salespoint. 
+<br>
+<br>Your task is to output a summary report, tabulating total sales by items and salespoints. The report must be a two-dimensional table, with the first row containing item ids in increasing order, first column containing salespoint ids in increasing order, and values inside the table representing total sales of corresponding item from the corresponding salespoint. The value in first column of the first row must be −1. The values in cells without corresponding sales must be 0. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains number of records N, followed by N triplets of integers qi si vi, where qi -- item id, si -- salespoint id, vi -- number of items sold.
+<br>1 ≤ N ≤ 500000, 1 ≤ qi, si, vi ≤ 10<sup>9</sup>, the summary table will have no more than 10<sup>8</sup> cells, the summary value in each cell will not exceed than 2<sup>31</sup>−1.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output must a table as described above, row-by-row.</div><p class="pst">Sample Input</p><pre class="sio">4
+10 1 3
+20 2 5
+10 2 2
+20 2 1
+</pre><p class="pst">Sample Output</p><pre class="sio">-1 10 20
+1 3 0
+2 2 6
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">This problem has huge input and output data,use scanf() and printf() instead of cin and cout  to read data to avoid time limit exceed. </div><p class="pst">

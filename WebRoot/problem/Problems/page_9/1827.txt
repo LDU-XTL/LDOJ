@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US"><b>Background</b>
+<br>Jim is a brave explorer. One day, he set out for his next destination, a mysterious hill. When he arrived at the foot of the hill, he was told that there were a bunch of monsters living in that hill, and was dissuaded from continuing his trip by the residents near the hill. Nevertheless, our Jim was so brave that he would never think of giving up his exploration.
+<br>The monsters do exist! When he got into that hill, he was caught by a bunch of fearful monsters.
+<br>Fortunately, the monsters didn’t plan to kill him or eat him for they were planning a big party. They wanted to invite Jim, a clever human being, to their party, in order to let human beings know that the monsters also have wonderful parties.
+<br><b>Problem</b>
+<br>At the end of the party, the monsters promised that, after the last game, they would set Jim free. The game is described as follow:
+<br>1.	There are a great many boxes of treasure, which are numbered from 1 to X. One box has the only one number; one number can only appear on one box. Furthermore, we can assume that X is INFINITY, because the monsters have got a lot of treasure from the men they caught.
+<br>2.	There are N monsters in this game. Each picks up a card randomly. After that, he / she (it?) opens it, getting a positive integer number d[i], and cannot change it or pick up another card again. The range of d[i] is from 1 to M. If the i-th monster get the number d[i], he can only get the treasure box numbered equal to or less than d[i]. What’s more, one box only can be distributed to one monster; one monster can only get one box.
+<br>3.	Of course, there are many ways to distribute the boxes to the monsters when N monsters get their numbers; and not every monster can get a box in many cases. Jim has the right to make the arrangement; however, he also knows that the monsters that don’t get the boxes will also punish him.
+<br>Jim knows the strength of the N monsters. The i-th one has the strength s[i]. We call the sum of strength s[i] of all the monsters that don’t get the boxes --- the DAMAGE to Jim. Your task is to help Jim find out the minimum DAMAGE to him.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several test cases. In the first line of each test case, there are two positive integers N and M (1<=N<=50000, 1<=M<=50000), indicating the number of monsters and the range of numbers the monsters possibly get on the cards. Then there are N integers d[i] (1<=d[i]<=M) in the following lines, which are the numbers those monsters got. And in the rest lines of one test case, there are other N positive integers s[i] (1<=s[i]<=20000), indicating the strength of each monsters. The test case starting with 2 zeros is the final test case and has no output.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print your answer, the minimum DAMAGE, in one line without any redundant spaces.</div><p class="pst">Sample Input</p><pre class="sio">1 1
+1
+1
+7 7
+6 4 4 2 3 4 3
+10 70 20 60 30 50 40
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">0
+50
+</pre><p class="pst">

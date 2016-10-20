@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">Once upon a time there lived a king and he had N sons. And there were N beautiful girls in the kingdom and the king knew about each of his sons which of those girls he did like. The sons of the king were young and light-headed, so it was possible for one son to like several girls. 
+<br>
+<br>So the king asked his wizard to find for each of his sons the girl he liked, so that he could marry her. And the king's wizard did it -- for each son the girl that he could marry was chosen, so that he liked this girl and, of course, each beautiful girl had to marry only one of the king's sons. 
+<br>
+<br>However, the king looked at the list and said: "I like the list you have made, but I am not completely satisfied. For each son I would like to know all the girls that he can marry. Of course, after he marries any of those girls, for each other son you must still be able to choose the girl he likes to marry." 
+<br>
+<br>The problem the king wanted the wizard to solve had become too hard for him. You must save wizard's head by solving this problem. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains N -- the number of king's sons (1 <= N <= 2000). Next N lines for each of king's sons contain the list of the girls he likes: first Ki -- the number of those girls, and then Ki different integer numbers, ranging from 1 to N denoting the girls. The sum of all Ki does not exceed 200000. 
+<br>
+<br>The last line of the case contains the original list the wizard had made -- N different integer numbers: for each son the number of the girl he would marry in compliance with this list. It is guaranteed that the list is correct, that is, each son likes the girl he must marry according to this list.
+<br>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Output N lines.For each king's son first print Li -- the number of different girls he likes and can marry so that after his marriage it is possible to marry each of the other king's sons. After that print Li different integer numbers denoting those girls, in ascending order.</div><p class="pst">Sample Input</p><pre class="sio">4
+2 1 2
+2 1 2
+2 2 3
+2 3 4
+1 2 3 4
+</pre><p class="pst">Sample Output</p><pre class="sio">2 1 2
+2 1 2
+1 3
+1 4
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">This problem has huge input and output data,use scanf() and printf() instead of cin and cout to read data to avoid time limit exceed. </div><p class="pst">

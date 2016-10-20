@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US"><p>PizzaSocks company makes and delivers pizza. Pizza is delivered on regular schedule. A schedule has a period of 1, 2, 3 or 4 weeks. Quantity of pizzas to be delivered is known for each day of the period. First day of a period is always the first day of the week.</p><p>So formally pizza delivery schedule can be described by the following numbers: <i>L</i> — length of the schedule period (from 1 to 4), <i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, …, <i>A<sub>L</sub></i> &times; 7 — quantity of pizzas to be delivered for each day of the period (<i>A<sub>i</sub></i> ≥ 0).</p><p>Once an absent-minded PizzaSocks manager lost a schedule for one Very Big and Important Client. Only the history of past deliveries was preserved. Your task is to restore the schedule from the history.</p><p>The problem is complicated by the fact that occasionally Very Big and Important Client changed his orders, ordering either more or less pizzas than scheduled, even sometimes cancelling the order competely or placing an unscheduled order.</p><p>So it's often impossible to restore the original schedule exactly. That is why your task is to find an optimal schedule, i. e. to minimize the total number of days when historically ordered quantity is different from the quantity according to that schedule. The days before the first recorded order and after the last recorded one should not be taken into consideration.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input file contains the following integer numbers:<br><br><i>N</i> — number of fulfilled orders in the delivery history <i>w</i><sub>1</sub> <i>d</i><sub>1</sub> <i>q</i><sub>1</sub> <i>w</i><sub>2</sub> <i>d</i><sub>2</sub> <i>q</i><sub>2 </sub>...<i> w<sub>N</sub></i> <i>d<sub>N</sub></i> <i>q<sub>N</sub></i> — description of historical orders: week number, day of the week, and quantity of pizzas delivered. For each day there is no more than one record. It's considered that on those days that are not explicitly mentioned in the input file, but fall between the earliest and the latest mentioned days, zero-quantity orders were fulfilled.</p><p><b>Constraints</b></p><p>1 ≤ <i>q<sub>i</sub></i> ≤ 100, 1 ≤ <i>w<sub>i</sub></i> ≤ 52, 1 ≤ <i>d<sub>i</sub></i> ≤ 7</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output periodicity of the optimal schedule — integer number L from 1 to 4. Then output numbers <i>A<sub>i</sub></i> for each <i>i</i> from 1 to <i>L</i> × 7. If several solutions exist, output any of them. However, make sure that the first week of your schedule corresponds to the earliest week mentioned in the input file.</p></div><p class="pst">Sample Input</p><pre class="sio"><b>Sample input 1</b>
+6
+1 5 3  3 1 3  3 5 3
+5 1 3  5 5 3  7 5 3
+<b>Sample input 2</b>
+15
+1 3 1  1 5 2
+2 3 1  2 5 2
+3 3 1   
+4 3 1  4 5 3
+5 3 1  5 5 2
+6 3 1  6 5 2
+7 3 1  7 5 2
+8 3 1  8 5 2</pre><p class="pst">Sample Output</p><pre class="sio"><b>Sample output 1</b>
+2
+3 0 0 0 3 0 0
+0 0 0 0 0 0 0
+<b>Sample output 2</b>
+1
+0 0 1 0 2 0 0</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Bold texts appearing in the sample sections are informative and do not form part of the actual data.</div><p class="pst">

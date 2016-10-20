@@ -1,0 +1,47 @@
+</p><div class="ptx" lang="en-US"><b>Background</b>
+<br>Angelo, the famous Italian cocktail mixer, has finally opened his new bar in Rome and is about to have his company "Angelo's Cocktail Mix" (ACM) noted at the stock exchange. In order to give the stock exchange speculators some meat, he would like to publish some statistics about what cocktails he mixes most.
+<br><b>The Problem</b>
+<br>Angelo has collected some data about what cocktails are ordered on a typical evening in his bar. It is your task to compute the "top ten favourite cocktails" list which features the cocktails together with their prices.This list will be published in "Gazetto dello cocktail famoso", the specialized cocktail magazine that appears in Italy on a daily basis.
+<br>The ordering criterion for the top ten is mainly how often they got mixed. If two or more cocktails have been mixed the same number of times, their position in Angelos recipe book decides which one is first.Cocktails in the top ten must have been mixed at least once.
+<br>Of course, if some drunk customer orders a cocktail which does not exist in Angelos recipe book, then he ignores the order. If the cocktail is in the book, then there is one small detail which Angelo has forgotten to tell you. He never mixes the same cocktail more than once in turn. So if Angelo gets the order for the same cocktail he has just been mixing then he will mix the next cocktail in his recipe book instead, or, for the last cocktail in his book, the first cocktail instead.
+<br>If there are not enough ingredients left to mix a cocktail, Angelo does the same (i.e., he tries the next cocktail in his book, turning to the front of the book if necessary). If there are no ingredients left to mix any cocktail in his book, he ignores the current order.
+<br>The cocktail prices can be computed by the weighted prices of their ingredients multiplied by 3 plus 10000 Lira for mixing and service.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains the number of scenarios. Scenarios are implicitly numbered starting from 1. For each scenario there are three tables:
+<br>1. Angelo's recipe book.
+<br>2. A table of ingredients.
+<br>3. A table of cocktail orders.
+<br>The recipe book consists of:
+<br><ul><li>One line with the total number of cocktails in the book.
+<br><li>Following it, for each cocktail two lines:
+<br><ul><li>The first line contains the name of the cocktail and the number of different ingredients.
+<br><li>The second line contains the ingredient names and their amounts in centi-liters separated by blanks.</ul></ul>
+<br>The table of ingredients consists of:
+<br><ul><li>One line containing the number of available ingredients.
+<br><li>For each ingredient a line containing the name, the available amount of that ingredient in centi-liters and the price in Lira per centi-liter.</ul>
+<br>Finally, the table of cocktail orders consists of:
+<br><ul><li>One line containing the number of orders.
+<br><li>For each order the name of the cocktail.</ul>
+<br>Names of cocktails and ingredients are strings containing only alphanumeric characters or underscores (no whitespace). All values are integer values smaller which are at most 10000.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For every scenario i in the input print a line "Scenario i top cocktails:", followed by the top ten list ordered by rank 1 to 10.
+<br>For every entry in the list print a line containing the rank, name, number of times that the cocktail was mixed, and price of the cocktail each separated by a single space.</div><p class="pst">Sample Input</p><pre class="sio">1
+3
+White_Russian 3
+Vodka 3 Coffe_Liqueur 2 Cream 1
+Pina_Collada 4
+White_Rum 4 Cream_of_Coconut 5 Pineapple_Juice 5 Cream 1
+Cuba_Libre 3
+White_Rum 4 Lemon_Juice 1 Cola 10
+6
+White_Rum 70 240
+Vodka 70 120
+Coffe_Liqueur 50 200
+Cream_of_Coconut 20 150
+Pineapple_Juice 100 40
+Cream 40 20
+4
+Pina_Collada
+Pina_Collada
+White_Russian
+Pina_Collada
+</pre><p class="pst">Sample Output</p><pre class="sio">Scenario 1 top cocktails:
+1 White_Russian 2 12340
+2 Pina_Collada 2 15790
+</pre><p class="pst">

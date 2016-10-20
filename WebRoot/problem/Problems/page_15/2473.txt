@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">After building his huge villa, Mr. Rich cannot help but notice that the interior walls look rather blank. To change that, he starts to hang paintings from his wonderful collection. But soon he realizes that it becomes quite difficult to find a place on the wall where a painting can be placed without overlapping other paintings. Now he needs a program which would tell him, given the already placed paintings, where to place the next painting without moving any other paintings (or indicating that this is impossible). Paintings have a rectangular shape and are to be placed parallel to the side of the wall. If you do not mind a nice reward from Mr. Rich, go on and solve the problem.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains a number representing the number of test cases to follow. Each test case starts with a line containing three numbers n, w and h. n is the number of paintings already hanging on the wall, w is the width of the wall and h is the height of the wall. The next n lines contain 4 integers x1, y1, x2, y2 each (0 <= x1 < x2 <= w, 0 <= y1 < y2 <= h); the x-coordinates give the distance to the left end of the wall, the y-coordinates give the distance to the bottom of the wall. (x1, y1) is the position of the lower left corner of a painting, (x2, y2) is the position of the upper right corner. The last line of each test case contains the dimensions of the next painting to be placed, first its width w', then its height h' (1 <= w' <= w, 1 <= h' <= h). You are not allowed to rotate the painting. 
+<br>You can assume that 0 <= n <= 200 and 1 <= w, h <= 1000000. Moreover, all paintings already hanging do not overlap.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Produce one line of output for each test case. Write "Fail!" if there is no place left on the wall where the painting could be placed without overlapping other paintings. Otherwise, write the coordinates where the lower left corner of the painting should be placed. In case there is more than one solution, select the solution with a minimum y-coordinate, and break ties using the minimum x-coordinate. </div><p class="pst">Sample Input</p><pre class="sio">2
+1 10 9
+5 4 10 9
+9 5
+2 10 10
+5 5 10 10
+0 0 4 3
+3 4
+</pre><p class="pst">Sample Output</p><pre class="sio">Fail!
+4 0
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">The following image illustrates the second sample test case:
+<br><img src=images/2473_1.jpg></div><p class="pst">

@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">Let the set Σ consist of all words composed of 1-4 lower case letters, such as the words "a", "b", "f", "aa", "fun" and "kvqf". Consider expressions according to the grammar with the two rules
+<br><center>E -> f
+<br>E -> f(E, E)</center>
+<br>for every symbol f ∈ Σ. Any expression can easily be represented as a tree according to its syntax.
+<br>For example, the expression "a(b(f(a,a),b(f(a,a),f)),f(b(f(a,a),b(f(a,a),f)),f))" is represented by he tree on the left in the following figure:
+<br><center><img src=images/3843_1.png></center>
+<br>Last night you dreamt of a great invention which considerably reduces the size of the representation:
+<br>use a graph instead of a tree, to share common subexpressions. For example, the expression above can be represented by the graph on the right in the figure. While the tree contains 21 nodes, the graph just contains 7 nodes.
+<br>Since the tree on the left in the figure is also a graph, the representation using graphs is not necessarily unique. Given an expression, find a graph representing the expression with as few nodes as possible!</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains the number c (1 <= c <= 200), the number of expressions. Each of the following c lines contains an expression according to the given syntax, without any whitespace.
+<br>Its tree representation contains at most 50 000 nodes.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each expression, print a single line containing a graph representation with as few nodes as possible.
+<br>The graph representation is written down as a string by replacing the appropriate subexpressions with numbers. Each number points to the root node of the subexpression which should be inserted at that position. Nodes are numbered sequentially, starting with 1; this numbering includes just the nodes of the graph (not those which have been replaced by numbers). Numbers must point to nodes written down before (no forward pointers). For our example, we obtain "a(b(f(a,4),b(3,f)),f(2,6))".</div><p class="pst">Sample Input</p><pre class="sio">3
+this(is(a,tiny),tree)
+a(b(f(a,a),b(f(a,a),f)),f(b(f(a,a),b(f(a,a),f)),f))
+z(zz(zzzz(zz,z),zzzz(zz,z)),zzzz(zz(zzzz(zz,z),zzzz(zz,z)),z))</pre><p class="pst">Sample Output</p><pre class="sio">this(is(a,tiny),tree)
+a(b(f(a,4),b(3,f)),f(2,6))
+z(zz(zzzz(zz,z),3),zzzz(2,5))</pre><p class="pst">

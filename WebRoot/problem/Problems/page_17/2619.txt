@@ -1,0 +1,6 @@
+</p><div class="ptx" lang="en-US"><img src=images/2619_1.jpg align=right>A triangle field is numbered with successive integers in the way shown on the picture below.
+<br>
+<br>The traveller needs to go from the cell with number M to the cell with number N. The traveller is able to enter the cell through cell edges only, he can not travel from cell to cell through vertices. The number of edges the traveller passes makes the length of the traveller's route.
+<br>
+<br>Write the program to determine the length of the shortest route connecting cells with numbers N and M.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains two integer numbers M and N in the range from 1 to 1000000000 separated with space(s).</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output should contain the length of the shortest route.</div><p class="pst">Sample Input</p><pre class="sio">6 12 </pre><p class="pst">Sample Output</p><pre class="sio">3</pre><p class="pst">

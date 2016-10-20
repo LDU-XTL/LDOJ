@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">The pH scale measures the concentration of protons (H<sup>+</sup>) in a solution and, therefore, its acidity or alkalinity. The pH value of a solution is a number between 0 and 14; it is less than 7 if the solution is acidic, greater than 7 if the solution is basic, and 7 if it is neutral. 
+<br>
+<br>The formula for calculating pH is 
+<br><center>pH = -log<sub>10</sub> [H<sup>+</sup>]</center>
+<br>where [H<sup>+</sup>] is the concentration of protons measured in moles per litre. 
+<br>
+<br>To calculate the pH value of an acid, one has to determine the concentration of protons in the solution. When an acid is dissolved in water, an equilibrium is reached and is governed by the equation 
+<br><center>K<sub>a</sub> = [H<sup>+</sup>] [acid ions] / [acid]</center>
+<br>where K<sub>a</sub> is the acidity constant (known for each acid), [acid ions] is the concentration of the acid ions that have dissolved, and [acid] is the concentration of the undissolved acid. Before the acid is added, both [H<sup>+</sup>] and [acid ions] are assumed to be 0. 
+<br>For example, the acidity constant of methanoic acid is 1.6 * 10<sup>-4</sup>. Dissolving one mole of acid molecules results in one mole of H<sup>+</sup> and one mole of acid ions. If the initial concentration of the methanoic acid is 0.1 moles/L and x moles of acid are dissolved (per liter), then the final concentration at equilibrium would be 0.1 - x moles/L for the acid and x moles/L for H<sup>+</sup> and the acid ions. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of a number of test cases. Each test case contains 4 numbers on a line: two positive floating-point numbers specifying the acidity constant K<sub>a</sub> and the original concentration of the acid (in moles/liter) added to the water, as well as two positive integers m and n indicating that each mole of acid molecules is dissolved into m moles of H<sup>+</sup> ions and n moles of acid ions. The floating-point numbers are specified in scientific notation as shown below. The input is terminated with a line containing four zeros. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print on a line the pH value of the solution, rounded to 3 decimal places. </div><p class="pst">Sample Input</p><pre class="sio">1.6e-04 1.0e-01 1 1
+1.6e-04 1.0e-01 4 1
+1.5e-05 5.0e-02 1 2
+0 0 0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">2.407
+2.101
+3.216
+</pre><p class="pst">

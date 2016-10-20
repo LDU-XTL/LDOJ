@@ -1,0 +1,50 @@
+</p><div class="ptx" lang="en-US"><p>A determined army on a certain border decided to enumerate the coordinates in its patrol in a way to make it difficult for the enemy to know what positions they are referring to in the case that the radio signal used for communication is intercepted. The enumeration process chosen was the following: first it is decided where the axes <code>x</code> and <code>y</code> are; then, a linear equation that describes the position of the border relative to the the axes (yes, it is a straight line) is defined; finally, all points on the Cartesian plane that is not part of the border are enumerated, the number <code>0</code> being attributed to the coordinate <code>(0, 0)</code> and starting from there numbers being attributed to integral coordinates following a clockwise spiral, always skipping points that fall on the border (see Figure 1). If the point <code>(0, 0)</code> falls on the border, the number <code>0</code> is attributed to the first point that is not part of the border following the specified order.</p><div align="center"><img src="images/3119_1.png"></div><p align="center">Figure 1: Enumeration of points of integral coordinates</p><p>In fact the enemy does not have to know either what position the army is referring to or the system used to enumerate the points. Such a project, complicated the life of the army, once that it is difficult to determine whether two points are on the same side of the border or on opposite sides. That is where they need your help.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input contains several test cases. The first line of the input contains an integer <i>N</i> (1 &le; <i>N</i> &le; 100) which represents the quantity of test cases. <i>N</i> test cases follow. The first line of each test case contains two integers <i>a</i> and <i>b</i> (&minus;5 &le; <i>a</i> &le; 5 and &minus;10 &le; <i>b</i> &le; 10) which describe the equation of the border: <i>y</i> = <i>ax</i> + <i>b</i>. The second line of each test case contains an integer <i>K</i>, indicating the number of queries that follow it (1 &le; <i>K</i> &le; 1000). Each one of the following <i>K</i> lines describes a query, composed by two integers <i>M</i> and <i>N</i> representing the enumerated coordinates of two points (0 &le; <i>M</i>, <i>N</i> &le; 65535).</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case in the input your program should produce <i>K</i> + 1 lines. The first line should contain the identification of the test case in the form <code>Caso X</code>, where <code>X</code> should be substituted by the case number (starting from <code>1</code>). The <i>K</i> following lines should contain the results of the <i>K</i> queries made in the corresponding case in the input, in the form:</p><blockquote><p><code>Mesmo lado da fronteira</code> (<code>The same side of the border</code>)</p><p>or</p><p><code>Lados opostos da fronteira</code> (<code>Opposite sides of the border</code>)</p></blockquote></div><p class="pst">Sample Input</p><pre class="sio">2
+1 2
+10
+26 25
+25 11
+24 9
+23 28
+25 9
+25 1
+25 0
+9 1
+23 12
+26 17
+1 2
+12
+0 1
+1 2
+2 3
+3 4
+4 5
+5 6
+6 7
+7 8
+8 9
+9 10
+10 11
+11 12</pre><p class="pst">Sample Output</p><pre class="sio">Caso 1
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Lados opostos da fronteira
+Lados opostos da fronteira
+Lados opostos da fronteira
+Lados opostos da fronteira
+Lados opostos da fronteira
+Caso 2
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Lados opostos da fronteira
+Mesmo lado da fronteira
+Mesmo lado da fronteira
+Lados opostos da fronteira</pre><p class="pst">

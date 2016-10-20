@@ -1,0 +1,46 @@
+</p><div class="ptx" lang="en-US">Nearly everybody knows the popular game called Lloyd fifteen puzzle. The puzzle consists of fifteen numbered tiles placed in the square box. The dimensions of the box are 4 x 4, one place is free. The goal is to sort the tiles by moving the neighbouring ones to the free position. In the end the tiles should be orderd by their numbers. The tile with number 1 will be in the left upper corner and next tiles are ordered in row major order. The last position (the right bottom corner) will be free. 
+<br>
+<br>Also KOKODáKH contains the modification of this game. The game is destinated for the advanced players so the fifteen tiles would be too little. Our game can have arbitrary dimension of the array. Your goal is to write the program which will simulate the working of this game. For a given starting situation it has to replay the succession of valid moves and to display the final state of the puzzle. The valid move is moving the tile to the neighbouring free position up, down, right or left. Any other move is not valid. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of Z assignments. The number of them is given by the single positive integer Z appearing on the first line of input. The assignements follow. Each assignement consists of the description of the starting state of the puzzle and the list of the moves that should be done. 
+<br>
+<br>At the first line of the description of the game initialposition, there are two integers R and S (2 <= R,S <= 1000) separated by space. R is a number of rows, S is number of columns. The R lines of input describing the rows of the puzzle follow. On each line there is S integers separated by at least one and at most ten spaces. At the begining of the line can be up to ten spaces which should be ignored. There are no spaces at the end of the line. Each number is the number of the tile in the given line. First number in the first line corresponds to the upper left corner of the puzzle. All numbers are between 0 to R.S-1 (inclusive) and each number appeares only once. Zero appear also only once and gives the position of the empty field. 
+<br>
+<br>The list of moves follows. The list can be empty. Each move is on the separate line and consists of one number T (0 < T <= R.S-1), which is the number of the tile which should be moved. At the end of the list there is the line containing number 0. Zero indicates the end of input and is not the part of the list of moves. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each assignement the program prints out one line "Skladacka cislo C:" (Puzzle number C) where C is substitued by the number of the assignement. The numbering of assingement is ascending and begining with 1. 
+<br>
+<br>For each move in the list the program finds out if the move is valid. The move is valid if there is an empty field neighbouring. For each valid move the program prints out the following sentence at the separate line: "Kamen T presunut KAM." The tail number T moved KAM), where T is the number of the tile and KAM is one of the strings "doprava", "doleva", "nahoru" nebo "dolu" (right, left, up, down). If the move is not valid the sentence "Neplatny tah kamenem T." (Invalid move with tile T) is printed out. 
+<br>
+<br>When the list of moves ends, the program prints out the final state of the puzzle in the similar format that was used in the input. The output has to consist of R lines, each containing S numbers. The only difference from the input format is separating number by exactly one space. After each assignement (including the last one) the program prints out the empty line. Empty line consists only of the newline character. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">2
+4 4
+ 1  2  3  4
+ 5  6  7  8 
+ 9 10 11 12
+13 14 15  0
+15
+11
+7
+0
+4 4
+ 1  2  3  4
+ 5  6  7  8
+ 9 10 11 12
+13 14  0 15
+1
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">Skladacka cislo 1:
+Kamen 15 presunut doprava.
+Kamen 11 presunut dolu.
+Kamen 7 presunut dolu.
+1 2 3 4
+5 6 0 8
+9 10 7 12
+13 14 11 15
+
+Skladacka cislo 2:
+Neplatny tah kamenem 1.
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 0 15
+</pre><p class="pst">

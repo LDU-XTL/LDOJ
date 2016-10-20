@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US">Farmer John commanded his cows to search for different sets of numbers that sum to a given number. The cows use only numbers that are an integer power of 2.  Here are the possible sets of numbers that sum to 7:
+<br>
+<br>1) 1+1+1+1+1+1+1
+<br>2) 1+1+1+1+1+2
+<br>3) 1+1+1+2+2
+<br>4) 1+1+1+4
+<br>5) 1+2+2+2
+<br>6) 1+2+4
+<br>
+<br>Help FJ count all possible representations for a given integer N (1 <= N <= 1,000,000).
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">A single line with a single integer, N.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The number of ways to represent N as the indicated sum.  Due to the potential huge size of this number, print only last 9 digits (in base 10 representation).</div><p class="pst">Sample Input</p><pre class="sio">7</pre><p class="pst">Sample Output</p><pre class="sio">6</pre><p class="pst">

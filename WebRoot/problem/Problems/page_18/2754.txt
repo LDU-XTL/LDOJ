@@ -1,0 +1,51 @@
+</p><div class="ptx" lang="en-US">The background knowledge of this problem comes from "Similarity of necklaces". Do not worry. I will bring you all the information you need.
+<br>
+<br>The little cat thinks about the problem he met again, and turns that problem into a fair new one, by putting N * (N + 1) / 2 elements into a linear list, with M = N * (N + 1) / 2 elements:
+<br>
+<br><img src=images/2754_1.png>
+<br>
+<br>(The above table denotes Table and Pairs in description of <Similarity of necklaces> after converting)
+<br>
+<br>One more array named "Multi" appears here. Suppose Pairs and Multi are given, the little cat's purpose is to determine an array Table with M integers that obey:
+<br>
+<br><img src=images/2754_2.gif>
+<br> 
+<br>(this condition is similar with the condition
+<br>
+<br><img src=images/2754_3.gif> 
+<br> 
+<br>that appears in the problem "Similarity of necklaces") and make
+<br>
+<br><img src=images/2754_4.gif>
+<br> 
+<br>as large as possible. What is more, we must have Low[i] <= Table[i] <= Up[i] for any 1 <= i <= M. Here Low and Up are two more arrays with M integers given to you.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains a number of test cases. Each of the following blocks denotes a single test case. A test case starts by an integer M (1 <= M <= 200) and M lines followed. The i-th line followed contains four integers: Pairs[i], Multi[i], Low[i], Up[i].
+<br>
+<br>Restrictions: -25 <= Low[i] < Up[i] <= 25, 0 <= Pairs[i] <= 100000, 1 <= Multi[i] <= 20. From the input given, you may assume that there is always a solution.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output a single line with a single number, which is the largest
+<br><img src=images/2754_4.gif></div><p class="pst">Sample Input</p><pre class="sio">10
+7 1 1 10
+0 2 -10 10
+2 2 -10 10
+0 2 -10 10
+0 1 1 10
+0 2 -10 10
+0 2 -10 10
+0 1 1 10
+0 2 -10 10
+0 1 1 10
+
+10
+0 1 1 10
+2 2 -10 10
+2 2 -10 10
+2 2 -10 10
+0 1 1 10
+2 2 -10 10
+2 2 -10 10
+0 1 1 10
+2 2 -10 10
+0 1 1 10
+</pre><p class="pst">Sample Output</p><pre class="sio">90
+-4
+</pre><p class="pst">

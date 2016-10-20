@@ -1,0 +1,24 @@
+</p><div class="ptx" lang="en-US"><div><p>As we all know, grammar is very important when learning English. Now, YYF become a teacher of a primary school. The students are good at memory so they can tell the meaning and the function (noun, verb …) of the words in the textbook. But, they cannot use these words properly.</p><p>In YYF’s mind, writing sentences is a good way to learn grammar. So he tells the student to write 20 sentences a day, using the word learned in the class. As YYF has a lot of student, he will receive many sentences from his student. What a horrible work to check all the sentences. You are one of YYF’s friends, so he asks you for help. You task is to write a program to check the sentences. </p><p>To make the work simple, YYF chooses a part of the grammar: All the words can be grouped into seven divisions (noun, pronoun, adjective, adverb, preposition, article, and verb). A verb can be transitive or intransitive. So we use "n.", "pron.", "adj.", "adv.", "prep.", "art.", "vt." and "vi." to be short of noun, pronoun, adjective, adverb, preposition, article, transitive verb and intransitive verb. If a word is marked as "v.", it can be used as either transitive verb or intransitive verb. </p><p>Here comes the sentence structure:<br>1.	Subject + Intransitive Verb<br>2.	Subject + Transitive Verb + Object<br></p><p>Noun and pronoun can be used as Subject or Object. When using a noun, an article should be placed ahead of it. A noun can be modified by an adjective and a verb can be modified by an adverb. When an adjective is used to modify a noun, it should be put between article and noun. When an adverb is used to modify a verb, it should be put ahead of the verb. A prepositional phrase can be put ahead of Subject, between Subject and Verb, behind Intransitive Verb, between Verb and Object, or behind Object. A prepositional phrase is made up of a preposition and a noun/pronoun. In one sentence, at most one prepositional phrase is allowed. Any two parts of the sentence cannot intersect. For example, "He is a good student" is OK, but "He a good is student" is not. Every word in the dictionary will have only one function. The words are not case sensitive and Subject-Verb Agreement does not matter. That’s all the rules. Now, it's your time to show. </p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div>The input contains only one case.<br>The first line specifies two number <i>N</i> and <i>M</i> (1 &le; <i>N</i>, <i>M</i> &le; 5000). The next <i>N</i> lines will be the words and the functions. Every line contains a word and its function, separated by a space. The next <i>M</i> lines will be the sentences -- one sentence per line. Each sentences contains at most 20 words. Every word in the sentences will appear in the dictionary. </div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div>The output contains <i>M</i> lines. For each line, output "YES" if the sentence is OK, and output "NO" if not. </div></div><p class="pst">Sample Input</p><pre class="sio">10 6
+he pron.
+see vt.
+a art.
+baby n.
+at prep.
+the art.
+airport n.
+happy adj.
+guess v.
+immediately adv.
+He guess.
+He see baby.
+Happy he see a baby.
+He immediately see a baby.
+He see a baby immediately.
+At the airport, he see a happy baby.
+</pre><p class="pst">Sample Output</p><pre class="sio">YES
+NO
+NO
+YES
+NO
+YES
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Please read the Problem Description carefully. Do not use your own English knowledge to construct rules.</div><p class="pst">

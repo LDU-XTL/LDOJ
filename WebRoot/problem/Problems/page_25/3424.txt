@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US"><p>Young black-hat hacker Vasya routinely installs key loggers on every computer he can get his hands on. Browsing the logs collected, he sometimes can glance passwords of unaware users.</p><p>The IT department of the university where Vasya studies noticed suspicious activity and introduced a new, more secure way to enter passwords. Instead of password input field, window with 9 buttons is displayed. Buttons are arranged into 3 × 3 grid as shown in the table below.<br><table border="border"><tr><td>7</td><td>8</td><td>9</td></tr><tr><td>4</td><td>5</td><td>6</td></tr><tr><td>1</td><td>2</td><td>3</td></tr></table></p><p>Each button is a square of 100 by 100 pixels. There is no space between buttons. User must enter (digital) password by clicking buttons with a mouse.</p><p>To overcome this scheme, Vasya downloaded another cool program: mouse logger. It saves coordinates of clicks in a file, which Vasya is later able to browse. However, a complication has arisen: no information is saved about the position of password window on the screen. Indeed, it might even be partially off screen!</p><p>Your program must, given the series of mouse clicks, determine all possible corresponding passwords.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input file contains number of clicks <i>N</i> followed by integer coordinates <i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <i>x</i><sub>2</sub> <i>y</i><sub>2</sub>…<i>x<sub>N</sub></i> <i>y<sub>N</sub></i>.</p><h4>Constraints</h4><p>1 ≤ <i>N</i> ≤ 100, 0 ≤ <i>x<sub>i</sub></i> <i>y<sub>i</sub></i> ≤ 1000 </p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output file must contain one line per possible password. Each line must consist of exactly <i>N</i> digits. Lines must be sorted in lexicographical order. If there are no possible combinations, output file must contain the string NONE.</p></div><p class="pst">Sample Input</p><pre class="sio"><b>Sample Input 1</b>
+2
+10 12 110 12
+<b>Sample Input 2</b>
+2
+10 12 750 12</pre><p class="pst">Sample Output</p><pre class="sio"><b>Sample Output 1</b>
+12
+23
+45
+56
+78
+89
+<b>Sample Output 2</b>
+NONE</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Bold texts appearing in the sample sections are informative and do not form part of the actual data.</div><p class="pst">

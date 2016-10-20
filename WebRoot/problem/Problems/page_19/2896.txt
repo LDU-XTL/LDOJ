@@ -1,0 +1,43 @@
+</p><div class="ptx" lang="en-US">You are working for OTC, the Olandican Telecommunication Company. Unfortunately, OTC does not decide wisely in assigning telephone numbers to the clients. For example, it did not make a good estimate on demand increase. As a result, it had to increase the number of digits in the local telephone numbers of Oland (the capital) from six to seven, and then again from seven to eight digits.
+<br>
+<br>As usual, a telephone number consists of two parts: an area code, and the local number within that area code. For example, if 021 is the area code of the Oland city, a telephone number in that city may be 0211234567. Note that no area code is the prefix of another area code. The process of changing telephone numbers is not easy though. It requires updates to several databases of millions of records. Fortunately, these changes follow a limited number of rules as follows:
+<br>
+<br>1. For all local numbers in a given area code, repeat the ith digit. For example, for the area code 021, repeating the second digit causes the number 0211234567 change to 02112234567.
+<br>
+<br>2. For all numbers in a given area code, swap the ith and the (i + 1)th digit. For example, for the area code 021, swapping the second and the third digits causes the number 0211234567 change to 0211324567.
+<br>
+<br>3. Change a given area code. For example, changing 021 to 0211 causes the number 0211234567 change to 02111234567.
+<br>
+<br>Note that changing area codes in the third rule preserves the property that no area code is the prefix of another. You are to write a program that given the area code information, and the set of all telephone numbers, plus a given set of rules, determine the resulting telephone numbers after the changes.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first part of the input describes the set of area codes. It starts with a line containing a single integer A (1 <= A <= 1000), which is the number of area codes in Olandica, followed by A lines of the following form:
+<br><center>area-code area-name</center>
+<br>where area-code is a string of at least one, and at most 5 digits, and area-name is a string of at least one, and at most 20 letters (both uppercase and lowercase). There are no two lines with the same area-code or area-name.
+<br>
+<br>The second part of the input describes the rules applied by OTC. The first line of this part contains a single integer R (0 <= R <= 10000), the number of rules applied, followed by R lines of the following form: 
+<br><center>year rule-info</center>
+<br>where year is the year in which the rule is applied. You may assume the rule is applied on the first day of the year, and at most one rule is applied each year. The rule-info part depends on the specific rule applied. The following list shows the rule-info formats corresponding to the rules described in the problem statement:
+<br>• 1 area-name i
+<br>• 2 area-name i
+<br>• 3 area-name new-area-code
+<br>You can assume that input data is consistent; i.e. in the rules section, indices are not out of range, and an area code will never be prefix of another, at any fixed time. The third part of the input consists of several lines of the following form:
+<br><center>year1 year2 number</center>
+<br>The query says that in year1, there was a telephone number number, and asks for that number in year2 (year1 <= year2). You must change the number according to the rules applied in the years between year1 + 1 and year2 in that order. The queries end with a line containing three zeros. The years are positive integers less than 10^9.
+<br>
+<br>In every line in the input containing more than one data item (number or name), the data items are separated by one or more spaces. There may be arbitrary number of leading or trailing spaces too. Each data item is at least one character. Each line of the input is at most 50 characters.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output contains one line corresponding to each query containing the changed number.</div><p class="pst">Sample Input</p><pre class="sio">4
+021 Oland
+0511 Moland
+0311 Boland
+03121 Kamand
+7
+2002 1 Moland 2
+2001 3 Moland 0515
+2003 2 Boland 3
+2005 1 Kamand 1
+2000 1 Kamand 1
+1999 1 Kamand 1
+1998 3 Oland 012345
+2000 2005 0311243426
+2000 2005 05113837462
+2000 2005 03121437478
+0 0 0</pre><p class="pst">Sample Output</p><pre class="sio">0311244326
+051538837462
+031214437478</pre><p class="pst">

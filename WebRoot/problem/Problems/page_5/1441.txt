@@ -1,0 +1,35 @@
+</p><div class="ptx" lang="en-US"> A lot of text editors allows us to make tables with the help of pseudographical characters but do not let edit them, i.e. after alternation of the text in cells, to restore the marking of lines and columns you have to align the whole table manually. You are offered to implement an editor fragment carrying out an automatic table alignment.
+<br>
+<br>The table represents a rectangle divided into cells with vertical and horizontal lines, linking its borders. Vertical and horizontal markers as well as the rectangle itself are formed by pseudographical characters from figure 1.
+<br><img src=images/1441_1.jpg>
+<br>The text in table cells can be located in several lines. Text does not contain control and pseudographical characters.
+<br>
+<br>While editing a table the text of cells is being changed and as a result symbols 'i' can be shifted to the left or to the right. The number of lines and columns of the table as well as the number of lines in each cell is not being changed.
+<br>
+<br>The text in each line of each cell should be separated from vertical markers exactly with one space on the left and no less than with one space on the right in the aligned table. All spaces between words are significant. It is allowed only:
+<br>
+<br>to alter the number of leading and trailing spaces in cell lines; 
+<br>to add and delete characters "--" (ASCII 196) in horizontal table markers. 
+<br>The table does not contain empty columns, i.e. each column contains at least one cell with non-empty text.
+<br>
+<br>It is required to format a given table making its width (the length of table line) minimal.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains an edited table. It consists of no more than 100 lines and line length is no more then 255 characters. Lines themselves do not contain leading and trailing spaces. The input does not contain empty lines. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Write to the output the aligned table. Output lines should not contain leading and trailing spaces. The output should not contain empty lines. The input provides that the width of the formatted table does not exceed 255 characters. </div><p class="pst">Sample Input</p><pre class="sio">┌───────┬───────────────────────┬──────────────────────────────────────┐
+│ Name         │ Organization     │ JOB      │
+├───────┼───────────────────────┼──────────────────────────────────────┤
+│Bill Clinton│  USA      │ The President of the United States │
+├───────┼───────────────────────┼──────────────────────────────────────┤
+│Bill Gates│Microsoft Corporation     │ President                         │
+├───────┼───────────────────────┼──────────────────────────────────────┤
+│ Bill Poucher  │     A  C  M    │           International Collegiate Programming │
+│                │               │      Contest Director                     │
+└───────┴───────────────────────┴──────────────────────────────────────┘</pre><p class="pst">Sample Output</p><pre class="sio">┌──────────────┬───────────────────────┬──────────────────────────────────────┐
+│ Name         │ Organization          │ JOB                                  │
+├──────────────┼───────────────────────┼──────────────────────────────────────┤
+│ Bill Clinton │ USA                   │ The President of the United States   │
+├──────────────┼───────────────────────┼──────────────────────────────────────┤
+│ Bill Gates   │ Microsoft Corporation │ President                            │
+├──────────────┼───────────────────────┼──────────────────────────────────────┤
+│ Bill Poucher │ A  C  M               │ International Collegiate Programming │
+│              │                       │ Contest Director                     │
+└──────────────┴───────────────────────┴──────────────────────────────────────┘
+</pre><p class="pst">

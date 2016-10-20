@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US"><p>Young naturalist Bill studies ants in school. His ants feed on plant-louses that live on apple trees. Each ant colony needs its own apple tree to feed itself.</p><p>Bill has a map with coordinates of <i>n</i> ant colonies and <i>n</i> apple trees. He knows that ants travel from their colony to their feeding places and back using chemically tagged routes. The routes cannot intersect each other or ants will get confused and get to the wrong colony or tree, thus spurring a war between colonies.</p><p>Bill would like to connect each ant colony to a single apple tree so that all <i>n</i> routes are non-intersecting straight lines. In this problem such connection is always possible. Your task is to write a program that finds such connection.</p><div align="center"><img src="images/3565_1.gif"></div><p>On this picture ant colonies are denoted by empty circles and apple trees are denoted by filled circles. One possible connection is denoted by lines.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of the input file contains a single integer number <i>n</i> (1 ≤ <i>n</i> ≤ 100) — the number of ant colonies and apple trees. It is followed by n lines describing n ant colonies, followed by n lines describing n apple trees. Each ant colony and apple tree is described by a pair of integer coordinates <i>x</i> and <i>y</i> (−<nobr>10 000</nobr> ≤ <i>x</i>, <i>y</i> ≤ <nobr>10 000</nobr>) on a Cartesian plane. All ant colonies and apple trees occupy distinct points on a plane. No three points are on the same line.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Write to the output file <i>n</i> lines with one integer number on each line. The number written on <i>i</i>-th line denotes the number (from 1 to <i>n</i>) of the apple tree that is connected to the <i>i</i>-th ant colony.</p></div><p class="pst">Sample Input</p><pre class="sio">5
+-42 58
+44 86
+7 28
+99 34
+-13 -59
+-47 -44
+86 74
+68 -75
+-68 60
+99 -60</pre><p class="pst">Sample Output</p><pre class="sio">4
+2
+1
+5
+3</pre><p class="pst">

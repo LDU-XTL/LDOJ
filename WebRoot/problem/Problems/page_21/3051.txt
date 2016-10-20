@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">Farmer John purchased satellite photos of W x H pixels of his farm (1 <= W <= 80, 1 <= H <= 1000) and wishes to determine the largest 'contiguous' (connected) pasture. Pastures are contiguous when any pair of pixels in a pasture can be connected by traversing adjacent vertical or horizontal pixels that are part of the pasture.  (It is easy to create pastures with very strange shapes, even circles that surround other circles.)
+<br>
+<br>Each photo has been digitally enhanced to show pasture area as an asterisk ('*') and non-pasture area as a period ('.').  Here is a 10 x 5 sample satellite photo:
+<br>
+<br><tt>..*.....**
+<br>.**..*****
+<br>.*...*....
+<br>..****.***
+<br>..****.***</tt>
+<br>
+<br>This photo shows three contiguous pastures of 4, 16, and 6 pixels. Help FJ find the largest contiguous pasture in each of his satellite photos.</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: Two space-separated integers: W and H
+<br>
+<br>* Lines 2..H+1: Each line contains W "*" or "." characters representing one raster line of a satellite photograph.</div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: The size of the largest contiguous field in the satellite photo.</div><p class="pst">Sample Input</p><pre class="sio">10 5
+..*.....**
+.**..*****
+.*...*....
+..****.***
+..****.***</pre><p class="pst">Sample Output</p><pre class="sio">16</pre><p class="pst">

@@ -1,0 +1,43 @@
+</p><div class="ptx" lang="en-US">A year calendar is printed using the monospace font according to the following rules: 
+<br><ul><li>All spaces on the printed calendar are represented by dots (ASCII 46). 
+<br><li>Every month occupies a rectangle of 17 by 8 characters, with the name of the month written in all capital letters starting from the 2nd character of the first line. 
+<br><li>All days of the months are printed in 4, 5, or 6 columns 2 characters wide and 7 characters high, with one space between the columns. The first day of the week is Monday. 
+<br><li>Months of the year are arranged in the three rows separated by horizontal and vertical lines of spaces. Each row contains four months. The calendar margins are of 1 space from all sides. Therefore, the whole calendar has size of 73 by 28 characters. </ul>
+<br>Note that January 1st, 1900 was Monday. Also note that the year is a leap year if its number is divisible by 4 and not divisible by 100, or divisible by 400. For example, a part of the printed calendar from October to December 2002 looks like this: 
+<br><pre>.OCTOBER...........NOVEMBER..........DECEMBER.........
+<br>....7.14.21.28........4.11.18.25........2..9.16.23.30.
+<br>.1..8.15.22.29........5.12.19.26........3.10.17.24.31.
+<br>.2..9.16.23.30........6.13.20.27........4.11.18.25....
+<br>.3.10.17.24.31........7.14.21.28........5.12.19.26....
+<br>.4.11.18.25........1..8.15.22.29........6.13.20.27....
+<br>.5.12.19.26........2..9.16.23.30........7.14.21.28....
+<br>.6.13.20.27........3.10.17.24........1..8.15.22.29....
+<br>......................................................</pre>
+<br>The calendar was printed and then burned, with only a small rectangular piece left. Your program must determine to which of years from 1900 to 2100 this piece could belong. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains integer numbers N and M - the sizes of the piece, separated by spaces. The following M lines contain N characters each - the piece of calendar. 2 <= N, M <= 10 </div><p class="pst">Output</p><div class="ptx" lang="en-US">Output file must contain an ordered list of year numbers, one year per line. If given piece could not belong to any calendar, output must contain a single integer 0 (zero). </div><p class="pst">Sample Input</p><pre class="sio">4 4
+1..8
+....
+JUNE
+1..8
+</pre><p class="pst">Sample Output</p><pre class="sio">1903
+1914
+1925
+1931
+1942
+1953
+1959
+1970
+1981
+1987
+1998
+2009
+2015
+2026
+2037
+2043
+2054
+2065
+2071
+2082
+2093
+2099
+</pre><p class="pst">

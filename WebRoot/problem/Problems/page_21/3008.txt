@@ -1,0 +1,65 @@
+</p><div class="ptx" lang="en-US"><p>Hexwamp is a strange swamp, paved with regular hexagonal dimples. Hexerpents crawling in this area are serpents adapted to the environment, consisting of a chain of regular hexagonal sections. Each section fits in one dimple.</p><p>Hexerpents crawl moving some of their sections from the dimples they are in to adjacent ones. To avoid breaking their bodies, sections that are adjacent to each other before the move should also be adjacent after the move. When one section moves, sections adjacent to it support the move, and thus they cannot move at that time. Any number of sections, as far as no two of them are adjacent to each other, can move at the same time.</p><p>You can easily find that a hexerpent can move its sections at its either end to only up to two dimples, and can move intermediate sections to only one dimple, if any.</p><p>For example, without any obstacles, a hexerpent can crawl forward twisting its body as shown in Figure 1, left to right. In this figure, the serpent moves four of its eight sections at a time, and moves its body forward by one dimple unit after four steps of moves. Actually, they are much better in crawling sideways, like sidewinders.</p><p align="center"><img src=images/3008_1.gif border=1><br>Figure 1: Crawling forward</p><p>Their skin is so sticky that if two sections of a serpent that are not originally adjacent come to adjacent dimples (Figure 2), they will stick together and the serpent cannot but die. Two sections cannot fit in one dimple, of course. This restricts serpents' moves further. Sometimes, they have to make some efforts to get a food piece even when it is in the dimple next to their head.</p><p align="center"><img src=images/3008_2.gif border=1><br>Figure 2: Fatal case</p><p>Hexwamp has rocks here and there. Each rock fits in a dimple. Hexerpents' skin does not stick to rocks, but they cannot crawl over the rocks. Although avoiding dimples with rocks restricts their moves, they know the geography so well that they can plan the fastest paths.</p><p>You are appointed to take the responsibility of the head of the scientist team to carry out academic research on this swamp and the serpents. You are expected to accomplish the research, but never at the sacrifice of any casualty. Your task now is to estimate how soon a man-eating hexerpent may move its head (the first section) to the position of a scientist in the swamp. Their body sections except for the head are quite harmless and the scientist wearing high-tech anti-sticking suit can stay in the same dimple with a body section of the hexerpent.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input is a sequence of several datasets, and the end of the input is indicated by a line containing a single zero. The number of datasets never exceeds 10.</p><p>Each dataset looks like the following.</p><blockquote><p><i>the number of sections the serpent has </i>(=<i>n</i>) <br><i>x</i><sub>1</sub> <i>y</i><sub>1</sub><br><i>x</i><sub>2</sub> <i>y</i><sub>2</sub><br>...<br><i>x</i><sub><i>n</i></sub> <i>y</i><sub><i>n</i></sub><br><i>the number of rocks the swamp has (=k)</i> <br><i>u</i><sub>1</sub> <i>v</i><sub>1</sub><br><i>u</i><sub>2</sub> <i>v</i><sub>2</sub><br>...<br><i>u<sub>k</sub></i> <i>v<sub>k</sub></i><br><i>X</i> <i>Y</i></p></blockquote><p>The first line of the dataset has an integer <i>n</i> that indicates the number of sections the hexerpent has, which is 2 or greater and never exceeds 8. Each of the <i>n</i> following lines contains two integers <i>x</i> and <i>y</i> that indicate the coordinates of a serpent's section. The lines show the initial positions of the sections from the serpent's head to its tail, in this order.</p><p>The next line of the dataset indicates the number of rocks <i>k</i> the swamp has, which is a non-negative integer not exceeding 100. Each of the <i>k</i> following lines contains two integers <i>u</i> and <i>v</i> that indicate the position of a rock.</p><p>Finally comes a line containing two integers <i>X</i> and <i>Y</i>, indicating the goal position of the hexerpent, where the scientist is. The serpent's head is not initially here.</p><p>All of the coordinates <i>x, y, u, v, X,</i> and <i>Y</i> are between −999999 and 999999, inclusive. Two integers in a line are separated by a single space. No characters other than decimal digits, minus signs, and spaces to separate two integers appear in the input. The coordinate system used to indicate a position is as shown in Figure 3.</p><p align="center"><img src=images/3008_3.gif border=1><br>Figure 3: The coordinate system</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each dataset, output a line that contains a decimal integer that indicates the minimum number of steps the serpent requires for moving its head to the goal position. Output lines should not contain any other characters.</p><p>You can assume that the hexerpent can reach the goal within 20 steps.</p></div><p class="pst">Sample Input</p><pre class="sio">3
+2 -2
+2 -1
+1 0
+1
+0 2
+0 0
+4
+2 -2
+2 -1
+2 0
+3 0
+2
+1 -1
+0 2
+0 0
+8
+-6 0
+-5 0
+-4 0
+-3 0
+-2 0
+-1 0
+0 0
+1 0
+1
+-1 1
+0 0
+6
+2 -3
+3 -3
+3 -2
+3 -1
+3 0
+2 1
+3
+1 -1
+1 0
+1 1
+0 0
+3
+-8000 4996
+-8000 4997
+-8000 4998
+2
+-7999 4999
+-8001 5000
+-8000 5000
+8
+10 -8
+9 -7
+9 -6
+9 -5
+9 -4
+9 -3
+9 -2
+9 -1
+0
+0 0
+0</pre><p class="pst">Sample Output</p><pre class="sio">3
+9
+18
+18
+19
+20</pre><p class="pst">

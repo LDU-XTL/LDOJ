@@ -1,0 +1,53 @@
+</p><div class="ptx" lang="en-US">Prof. Bocchan is a mathematician and a sculptor. He likes to create sculptures with mathematics. His style to make sculptures is very unique. He uses two identical prisms. Crossing them at right angles, he makes a polyhedron that is their intersection as a new work. Since he finishes it up with painting, he needs to know the surface area of the polyhedron for estimating the amount of pigment needed.
+<br>For example, let us consider the two identical prisms in Figure 14. The definition of their cross section is given in Figure 15. The prisms are put at right angles with each other and their intersection is the polyhedron depicted in Figure 16. An approximate value of its surface area is 194.8255.
+<br>Given the shape of the cross section of the two identical prisms, your job is to calculate the surface area of his sculpture.
+<br><center><img src=images/2150_1.jpg></center></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of multiple datasets, followed by a single line containing only a zero. The first line of each dataset contains an integer n indicating the number of the following lines, each of which contains two integers ai and bi (i = 1, ...  , n).
+<br>A closed path formed by the given points (a1, b1), (a2, b2), ... , (an, bn), (a<sub>n+1</sub>; b<sub>n+1</sub>)(= (a1; b1)) indicates the outline of the cross section of the prisms. The closed path is simple, that is, it does not cross nor touch itself. The right-hand side of the line segment from (ai, bi) to (a<sub>i+1</sub>; b<sub>i+1</sub>) is the inside of the section.
+<br>You may assume that 3 <= n <= 4, 0 <= ai <= 10 and 0 <= bi <= 10 (i = 1, ... , n).
+<br>One of the prisms is put along the x-axis so that the outline of its cross section at x = ξ is indicated by points (xi, yi, zi) = (ξ, ai, bi) (0 <= ξ <= 10, i = 1, ...  n). The other prism is put along the y-axis so that its cross section at y = η is indicated by points (x, yi, zi) = (ai, η , bi) (0 <= η <= 10, i = 1, ... , n).</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output should consist of a series of lines each containing a single decimal fraction. Each number should indicate an approximate value of the surface area of the polyhedron defined by the corresponding dataset. The value must acurate to 4 digits after the decimal point. </div><p class="pst">Sample Input</p><pre class="sio">4
+5 0
+0 10
+7 5
+10 5
+4
+7 5
+10 5
+5 0
+0 10
+4
+0 10
+10 10
+10 0
+0 0
+3
+0 0
+0 10
+10 0
+4
+0 10
+10 5
+0 0
+9 5
+4
+5 0
+0 10
+5 5
+10 10
+4
+0 5
+5 10
+10 5
+5 0
+4
+7 1
+4 1
+0 1
+9 5
+0</pre><p class="pst">Sample Output</p><pre class="sio">194.8255
+194.8255
+600.0000
+341.4214
+42.9519
+182.5141
+282.8427
+149.2470</pre><p class="pst">

@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">A krunched word has no vowels ("A", "E", "I", "O", and "U") and no repeated letters.  Removing vowels and letters that appear twice or more from MISSISSIPPI yields MSP.  In a krunched word, a letter appears only once, the first time it would appear in the unkrunched word.  Vowels never appear.
+<br>
+<br>Krunched phrases similarly have no vowels and no repeated letters. Consider this phrase:
+<br><pre>        RAILROAD CROSSING</pre>
+<br>and its krunched version:
+<br><pre>        RLD CSNG</pre>
+<br>Blanks are krunched differently. Blanks are removed so that a krunched phrase has no blanks on its beginning or end, never has two blanks in a row, and has no blanks before punctuation.  Otherwise, blanks not removed. If we represent blanks by "_",
+<br><pre>        MADAM_I_SAY_I_AM_ADAM__</pre>
+<br>krunches to:
+<br><pre>        MD_SY</pre>
+<br>where the single remaining blank is shown by "_".
+<br>
+<br>Write a program that reads a line of input (whose length ranges from 2 to 70 characters), and krunches it.  Put the krunched word or phrase in the output file.  The input line has only capital letters, blanks, and the standard punctuation marks: period, comma, and question mark.</div><p class="pst">Input</p><div class="ptx" lang="en-US">A single line to be krunched.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">A single krunched line that follows the rules above.
+<br></div><p class="pst">Sample Input</p><pre class="sio">NOW IS THE TIME FOR ALL GOOD MEN TO COME TO THE AID OF THEIR COUNTRY.
+</pre><p class="pst">Sample Output</p><pre class="sio">NW S TH M FR L GD C Y.
+</pre><p class="pst">

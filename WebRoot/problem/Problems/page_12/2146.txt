@@ -1,0 +1,67 @@
+</p><div class="ptx" lang="en-US">Meikyokan University is very famous for its research and education in the area of computer science. This university has a computer center that has advanced and secure computing facilities including supercomputers and many personal computers connected to the Internet.
+<br>One of the policies of the computer center is to let the students select their own login names. Unfortunately, students are apt to select similar login names, and troubles caused by mistakes in entering or specifying login names are relatively common. These troubles are a burden on the staff of the computer center.
+<br>To avoid such troubles, Dr. Choei Takano, the chief manager of the computer center, decided to stamp out similar and confusing login names. To this end, Takano has to develop a program that detects confusing login names.
+<br>Based on the following four operations on strings, the distance between two login names is determined as the minimum number of operations that transforms one login name to the other.
+<br><blockquote>1. Deleting a character at an arbitrary position.
+<br>2. Inserting a character into an arbitrary position.
+<br>3. Replacing a character at an arbitrary position with another character.
+<br>4. Swapping two adjacent characters at an arbitrary position.</blockquote>
+<br>For example, the distance between "omura" and "murai" is two, because the following sequence of operations transforms "omura" to "murai".
+<br><pre>      delete 'o'      insert 'i'
+<br>omura ---------> mura --------> murai</pre>
+<br>Another example is that the distance between "akasan" and "kaason" is also two.
+<br><pre>       swap 'a' and 'k'        replace 'a' with 'o'
+<br>akasan ---------------> kaasan -------------------> kaason</pre>
+<br>Takano decided that two login names with a small distance are confusing and thus must be avoided.
+<br>Your job is to write a program that enumerates all the confusing pairs of login names.
+<br>Beware that the rules may combine in subtle ways. For instance, the distance between "ant" and "neat" is two.
+<br><pre>    swap 'a' and 'n'     insert 'e'
+<br>ant ---------------> nat ---------> neat</pre>
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of multiple datasets. Each dataset is given in the following format.
+<br><blockquote>n
+<br>d
+<br>name1
+<br>name2
+<br>...
+<br>namen</blockquote>
+<br>The first integer n is the number of login names. Then comes a positive integer d. Two login names whose distance is less than or equal to d are deemed to be confusing. You may assume that 0 < n <= 200 and 0 < d <= 2. The i-th student's login name is given by namei, which is composed of only lowercase letters. Its length is less than 16. You can assume that there are no duplicates in namei (1 <= i <= n).
+<br>The end of the input is indicated by a line that solely contains a zero.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each dataset, your program should output all pairs of confusing login names, one pair per line, followed by the total number of confusing pairs in the dataset.
+<br>In each pair, the two login names are to be separated only by a comma character (,), and the login name that is alphabetically preceding the other should appear first. The entire output of confusing pairs for each dataset must be sorted as follows. For two pairs "w1,w2" and "w3,w4", if w1 alphabetically precedes w3, or they are the same and w2 precedes w4, then "w1,w2" must appear before "w3,w4".</div><p class="pst">Sample Input</p><pre class="sio">8
+2
+omura
+toshio
+raku
+tanaka
+imura
+yoshoi
+hayashi
+miura
+3
+1
+tasaka
+nakata
+tanaka
+1
+1
+foo
+5
+2
+psqt
+abcdef
+abzdefa
+pqrst
+abdxcef
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">imura,miura
+imura,omura
+miura,omura
+toshio,yoshoi
+4
+tanaka,tasaka
+1
+0
+abcdef,abdxcef
+abcdef,abzdefa
+pqrst,psqt
+3</pre><p class="pst">

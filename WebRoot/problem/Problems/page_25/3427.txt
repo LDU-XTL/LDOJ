@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US"><p>In a big and rich on natural resources country, the government started a campaign to control deforestation. In fact the government is not too interested in how many trees get fallen, but rather how effectively the wood is utilized. So a law was passed which requires every logging company to pay amount of money in proportion to amount of wood that it wastes during operation.</p><p>A felling quota on some territory was allotted to a company in this country. Company lorries may only transport logs of exactly L meters long. So when a tree gets sawed into logs, the remainder is wasted.</p><p>Trees in this country grow exactly 1 meter per year, so the company may decrease the amount of tax to be paid by simply waiting for some years. Your task is to determine the number of years needed to achieve smallest possible tax. If there is more than one answer, find minimal (earliest) one.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input file contains number of trees <i>N</i>, length of log <i>L</i>, followed by integers <i>i</i><sub>1</sub> <i>i</i><sub>2</sub> ... <i>i<sub>N</sub></i> — heights of each tree.</p><h4>Constraints</h4><p>1 ≤ <i>N</i> ≤ 30000, 1 ≤ <i>L</i>, <i>i<sub>k</sub></i> ≤ 30000 </p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output file must contain single integer — number of years to wait.</p></div><p class="pst">Sample Input</p><pre class="sio"><b>Sample Input 1</b>
+3 1 
+10 15 11
+<b>Sample Input 2</b>
+3 2
+5 3 6</pre><p class="pst">Sample Output</p><pre class="sio"><b>Sample Output 1</b>
+0
+<b>Sample Output 2</b>
+1</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><p>Bold texts appearing in the sample sections are informative and do not form part of the actual data.</p></div><p class="pst">

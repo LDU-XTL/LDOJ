@@ -1,0 +1,30 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>In the year 2050, after different attempts of the UN to maintain peace in the world, the third world war broke out. The importance of industrial, commercial and military secrets obliges all the countries to use extremely sophisticated espionage services, so that each city in the world has at least one spy of each country. These spies need to communicate with other spies, informers as well as their headquarters during their actions. Unluckily there doesn&rsquo;t exist a secure way for a spy to communicate during the war period, therefore the messages are always sent in code so that only the addressee is able to read the message and understand its meaning.</p><p>The spies use the only service that functions during the war period, the post. Each city has a postal agency where the letters are sent. The letters can be sent directly to their destination or to other postal agencies, until the letter arrives at the postal agency of the destination city, if possible.</p><p>The postal agency in city A can send a printed letter to the postal agency in city B if there is an agreement on sending letters, which determines the time, in hours, that a letter takes to reach city B from city A (and not necessarily the opposite). If there is no agreement between the agencies A and B, the agency A can try to send the letter to any agency so that the letter can reach its destination as early as possible</p><p>Some agencies are connected with electronic communication media, such as satellites and optical fibers. Before the war, these connections could reach all the agencies, making that a letter could be sent instantly. But during the period of hostilities every country starts to control electronic communication and an agency can only send a letter to another agency by electronic media (or instantly) if they are in the same country. Two agencies, A and B, are in the same country if a printed letter sent from any one of the agencies can be delivered to the other one.</p><p>The espionage service of your country has managed to obtain the content of all the agreements on sending messages existing in the world and desires to find out the minimum time to send a letter between different pairs of cities. Are you capable of helping them?</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input contains several test cases. The first line of each test case contains two integer separated by a space, <i>N</i> (1 &le; <i>N</i> &le; 500) and <i>E</i> (0 &le; <i>E</i> &le; <i>N</i><sup>2</sup>), indicating the numbers of cities (numbered from 1 to <i>N</i>) and of agreements on sending messages, respectively. Following them, then, <i>E</i> lines, each containing three integers separated by spaces, <i>X</i>, <i>Y</i> and <i>H</i> (1 &le; <i>X</i>, <i>Y</i> &le; <i>N</i>, 1 &le; <i>H</i> &le; 1000), indicating that there exist an agreement to send a printed letter from city <i>X</i> to city <i>Y</i>, and that such a letter will be delivered in <i>H</i> hours.</p><p>After that, there will be a line with an integer <i>K</i> (0 &le; <i>K</i> &le; 100), the number of queries. Finally, there will be <i>K</i> lines, each representing a query and containing two integers separated by a space, <i>O</i> and <i>D</i> (1 &le; <i>O</i>, <i>D</i> &le; <i>N</i>). You must determine the minimum time to send a letter from city <i>O</i> to city <i>D</i>.</p><p>The end of the input is indicated by <i>N</i> = 0.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>For each test case your program should produce <i>K</i> lines of output. The <i>I</i>-th line should contain an integer <i>M</i>, the minimum time, in hours, to send a letter in the <i>I</i>-th query. If there aren&rsquo;t communication media between the cities of the query, you should print &ldquo;Nao e possivel entregar a carta&rdquo; (&ldquo;It&rsquo;s impossible to deliver the letter&rdquo;).</p><p>Print a blank line after each test case.</p></span></div><p class="pst">Sample Input</p><pre class="sio">4 5
+1 2 5
+2 1 10
+3 4 8
+4 3 7
+2 3 6
+5
+1 2
+1 3
+1 4
+4 3
+4 1
+3 3
+1 2 10
+2 3 1
+3 2 1
+3
+1 3
+3 1
+3 2
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">0
+6
+6
+0
+Nao e possivel entregar a carta
+
+10
+Nao e possivel entregar a carta
+0
+</pre><p class="pst">

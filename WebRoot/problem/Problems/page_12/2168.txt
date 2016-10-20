@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">There is a famous joke-riddle for children:
+<br><blockquote>Three turtles are crawling along a road. One turtle says: "There are two turtles ahead of me."
+<br>The other turtle says: "There are two turtles behind me." The third turtle says: "There are
+<br>two turtles ahead of me and two turtles behind me." How could this have happened?
+<br>The answer is -- the third turtle is lying!</blockquote>
+<br>Now in this problem you have n turtles crawling along a road. Some of them are crawling in a group, so that they do not see members of their group neither ahead nor behind them. Each turtle makes a statement of the form: "There are ai turtles crawling ahead of me and bi turtles crawling behind me." Your task is to find the minimal number of turtles that must be lying.
+<br>Let us formalize this task. Turtle i has xi coordinate. Some turtles may have the same coordinate. Turtle i tells the truth if and only if ai is the number of turtles such that xj > xi and bi is the number of turtles such that xj < xi. Otherwise, turtle i is lying.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains integer number n (1 <= n <= 1000). It is followed by n lines containing numbers ai and bi (0 <= ai, bi <= 1000) that describe statements of each turtle for i from 1 to n.</div><p class="pst">Output</p><div class="ptx" lang="en-US">On the first line of the output file write an integer number m -- the minimal number of turtles that must be lying, followed by m integers -- turtles that are lying. Turtles can be printed in any order. If there are different sets of m lying turtles, then print any of them.</div><p class="pst">Sample Input</p><pre class="sio">5
+0 2
+0 3
+2 1
+1 2
+4 0</pre><p class="pst">Sample Output</p><pre class="sio">2 1 4</pre><p class="pst">

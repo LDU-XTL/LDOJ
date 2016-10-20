@@ -1,0 +1,6 @@
+</p><div class="ptx" lang="en-US">A single positive integer i is given. Write a program to find the digit located in the position i in the sequence of number groups S1S2...Sk. Each group Sk consists of a sequence of positive integer numbers ranging from 1 to k, written one after another.
+<br>For example, the first 80 digits of the sequence are as follows:
+<br>11212312341234512345612345671234567812345678912345678910123456789101112345678910</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains a single integer t (1 ≤ t ≤ 10), the number of test cases, followed by one line for each test case. The line for a test case contains the single integer i (1 ≤ i ≤ 2147483647)</div><p class="pst">Output</p><div class="ptx" lang="en-US">There should be one output line per test case containing the digit located in the position i.</div><p class="pst">Sample Input</p><pre class="sio">2
+8
+3</pre><p class="pst">Sample Output</p><pre class="sio">2
+2</pre><p class="pst">

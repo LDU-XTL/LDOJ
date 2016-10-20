@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US">Consider a real polynomial P (x, y) in two variables. It is called invariant with respect to the rotation 
+<br>by an angle α if 
+<br><center>P (x cos α - y sin α, x sin α + y cos α) = P (x, y) </center>
+<br>for all real x and y. 
+<br>Let's consider the real vector space formed by all polynomials in two variables of degree not greater than d invariant with respect to the rotation by 2π/n. Your task is to calculate the dimension of this vector space. 
+<br>You might find useful the following remark: Any polynomial of degree not greater than d can be uniquely written in form 
+<br><center><font size=5>P (x, y) = Σ<sub>i,j>=0,i+j<=d</sub>a<sub>ij</sub>x<sup>i</sup>y<sup>j</sup> </font></center>
+<br>for some real coefficients a<sub>ij</sub> . </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains two positive integers d and n separated by one space. It is guaranteed that they are less than one thousand. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Output a single integer M which is the dimension of the vector space described. </div><p class="pst">Sample Input</p><pre class="sio">2 2</pre><p class="pst">Sample Output</p><pre class="sio">4</pre><p class="pst">

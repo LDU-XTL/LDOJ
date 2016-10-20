@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">To help you move from Waterloo to the big city, you are considering renting a moving truck. Gas prices being so high these days, you want to know how much the gas for such a beast will set you back. 
+<br>The truck consumes a full litre of gas for each kilometre it travels. It has a 200 litre gas tank. When you rent the truck in Waterloo, the tank is half full. When you return it in the big city, the tank must be at least half full, or you'll get gouged even more for gas by the rental company. You would like to spend as little as possible on gas, but you don't want to run out along the way. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input is all integers. The first integer is the distance in kilometres from Waterloo to the big city, at most 10000. Next comes a set of up to 100 gas station specifications, describing all the gas stations along your route, in non-decreasing order by distance. Each specification consists of the distance in kilometres of the gas station from Waterloo, and the price of a litre of gas at the gas station, in tenths of a cent, at most 2000.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output is the minimum amount of money that you can spend on gas to get you from Waterloo to the big city. If it is not possible to get from Waterloo to the big city without running out of gas along the way, output "Impossible".</div><p class="pst">Sample Input</p><pre class="sio">500
+100 999
+150 888
+200 777
+300 999
+400 1009
+450 1019
+500 1399
+</pre><p class="pst">Sample Output</p><pre class="sio">450550</pre><p class="pst">

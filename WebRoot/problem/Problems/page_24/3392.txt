@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US"><p>For professional baseball team managers, it is an important task to decide the starting pitcher for each game. In the information era, massive data has been collected in professional sports. The manager knows the winning percentage of each pitcher against each team. Unfortunately, when playing against a certain team you cannot always pick the pitcher with the highest winning percentage against that team because there is a rule saying that after pitching a game the pitcher has to rest for at least four days. There are <i>n</i> pitchers (5 &#8804; <i>n</i> &#8804; 100), <i>m</i> opponent teams (3 &#8804; <i>m</i> &#8804; 30), and there are <i>g</i> (3 &#8804; <i>g</i> &#8804; 200) games in a season, and the season lasts for <i>g</i> + 10 days. Furthermore, there is at most one game per day. You are given an <i>m</i> by <i>n</i> matrix <i>P</i>, where an element in <i>P</i>, <i>P<sub>ij</sub></i>, denote the winning percentage of pitcher <i>j</i> against team <i>i</i>, and a list of <i>g</i> + 10 numbers, <i>d</i><sub>1</sub>, <i>d</i>2, &#8230;, <i>d<sub>g</sub></i><sub> + 10</sub>, to represent the schedule of the team, where <i>d<sub>i</sub></i> denotes the opponent team and <i>d<sub>i</sub></i> = 0 denotes that there is no game at the <i>i<sup>th</sup></i> day of the season. Your task is to decide the starting pitcher for each game so that the expected number of winning game is maximized.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line contains an integer <i>t</i> (1 &#8804; <i>t</i> &#8804; 5) indicating the number of teams that need your help. The data about these <i>t</i> teams follows. For each team, the first line contains the number of pitchers <i>n</i>, the number of opponent teams <i>m</i>, and the number of games in a season <i>g</i>. The next <i>m</i> lines contains the information about winning percentage of each pitcher against each team; the first line is <i>p</i><sub>11</sub>, <i>p</i><sub>12</sub>, &#8230;, <i>p</i><sub>1<i>n</i></sub>, and the <i>i<sup>th</sup></i> line is <i>p<sub>i</sub></i><sub>1</sub>, <i>p<sub>i</sub></i><sub>2</sub>, &#8230;, <i>p<sub>in</sub></i>, where each <i>p<sub>ij</sub></i> is a two-digit number (for example, 92 represents 0.92). The next <i>g</i> + 10 lines describe the schedule of the season, <i>d</i><sub>1</sub>, <i>d</i><sub>2</sub>, &#8230;, <i>d<sub>g</sub></i><sub> + 10</sub>.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>The maximum value with exactly two digits past the decimal point of expected game won for these <i>t</i> teams in the order of their appearance in the input file, output the answer for each team in separated lines.</p></div><p class="pst">Sample Input</p><pre class="sio">1
+5 3 6
+91 90 50 50 50
+65 40 60 60 60
+66 40 60 60 60
+1
+2
+3
+3
+2
+1
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0</pre><p class="pst">Sample Output</p><pre class="sio">4.26</pre><p class="pst">

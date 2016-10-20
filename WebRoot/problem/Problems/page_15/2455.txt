@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">Farmer John is constructing a new milking machine and wishes to keep it secret as long as possible. He has hidden in it deep within his farm and needs to be able to get to the machine without being detected.  He must make a total of T (1 <= T <= 200) trips to the machine during its construction. He has a secret tunnel that he uses only for the return trips.
+<br>
+<br>The farm comprises N (2 <= N <= 200) landmarks (numbered 1..N) connected by P (1 <= P <= 40,000) bidirectional trails (numbered 1..P) and with a positive length that does not exceed 1,000,000. Multiple trails might join a pair of landmarks.
+<br>
+<br>To minimize his chances of detection, FJ knows he cannot use any trail on the farm more than once and that he should try to use the shortest trails.
+<br>
+<br>Help FJ get from the barn (landmark 1) to the secret milking machine (landmark N) a total of T times.  Find the minimum possible length of the longest single trail that he will have to use, subject to the constraint that he use no trail more than once. (Note well: The goal is to minimize the length of the longest trail, not the sum of the trail lengths.)
+<br>
+<br>It is guaranteed that FJ can make all T trips without reusing a trail.</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: Three space-separated integers: N, P, and T
+<br>
+<br>* Lines 2..P+1: Line i+1 contains three space-separated integers, A_i, B_i, and L_i, indicating that a trail connects landmark A_i to landmark B_i with length L_i.</div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: A single integer that is the minimum possible length of the longest segment of Farmer John's route.</div><p class="pst">Sample Input</p><pre class="sio">7 9 2
+1 2 2
+2 3 5
+3 7 5
+1 4 1
+4 3 1
+4 5 7
+5 7 1
+1 6 3
+6 7 3</pre><p class="pst">Sample Output</p><pre class="sio">5</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Farmer John can travel trails 1 - 2 - 3 - 7 and 1 - 6 - 7.  None of the trails travelled exceeds 5 units in length.  It is impossible for Farmer John to travel from 1 to 7 twice without using at least one trail of length 5.
+<br>
+<br>Huge input data,scanf is recommended.</div><p class="pst">

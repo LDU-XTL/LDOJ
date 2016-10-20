@@ -1,0 +1,54 @@
+</p><div class="ptx" lang="en-US">Let's try a dice puzzle. The rules of this puzzle are as follows.
+<br><blockquote>1. Dice with six faces as shown in Figure 6 are used in the puzzle.
+<br>2. With twenty seven such dice, a 3 * 3 * 3 cube is built as shown in Figure 7.
+<br>3. When building up a cube made of dice, the sum of the numbers marked on the faces of adjacent dice that are placed against each other must be seven (See Figure 8). For example, if one face of the pair is marked "2", then the other face must be "5".
+<br>4. The top and the front views of the cube are partially given, i.e. the numbers on faces of some of the dice on the top and on the front are given (See Figure 9).
+<br>5. The goal of the puzzle is to find all the plausible dice arrangements that are consistent with the given top and front view information.</blockquote>
+<br>Your job is to write a program that solves this puzzle.
+<br><center><img src=images/2147_1.jpg></center>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of multiple datasets in the following format.
+<br><blockquote>N
+<br>Dataset1
+<br>Dataset2
+<br>: : :
+<br>DatasetN</blockquote>
+<br>N is the number of the datasets.
+<br>The format of each dataset is as follows.
+<br><blockquote>T11 T12 T13
+<br>T21 T22 T23
+<br>T31 T32 T33
+<br>F11 F12 F13
+<br>F21 F22 F23
+<br>F31 F32 F33</blockquote>
+<br>Tij and Fij (1 <= i <= 3, 1 <= j <= 3) are the faces of dice appearing on the top and front views, as shown in Figure 7, or a zero. A zero means that the face at the corresponding position is unknown.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each plausible arrangement of dice, compute the sum of the numbers marked on the nine faces appearing on the right side of the cube, that is, with the notation given in Figure 7,Σ<sub>1<=i<=3</sub>Σ<sub>1<=j<=3</sub>Rij.
+<br>For each dataset, you should output the right view sums for all the plausible arrangements, in ascending order and without duplicates. Numbers should be separated by a single space. When there are no plausible arrangements for a dataset, output a zero. 
+<br>For example, suppose that the top and the front views are given as Figure 10.
+<br>There are four plausible right views as shown in Figure 11. The right view sums are 33, 36, 32, and 33, respectively. After rearranging them into ascending order and eliminating duplicates, the answer should be "32 33 36".
+<br>The output should be one line for each dataset. </div><p class="pst">Sample Input</p><pre class="sio">4
+1 1 1
+1 1 1
+1 1 1
+2 2 2
+2 2 2
+2 2 2
+4 3 3
+5 2 2
+4 3 3
+6 1 1
+6 1 1
+6 1 0
+1 0 0
+0 2 0
+0 0 0
+5 1 2
+5 1 2
+0 0 0
+2 0 0
+0 3 0
+0 0 0
+0 0 0
+0 0 0
+3 0 1</pre><p class="pst">Sample Output</p><pre class="sio">27
+24
+32 33 36
+0</pre><p class="pst">

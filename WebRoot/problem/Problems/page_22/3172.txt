@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">Farmer John has a balance for weighing the cows. He also has a set of N (1 <= N <= 1000) weights with known masses (all of which fit in 31 bits) for use on one side of the balance. He places a cow on one side of the balance and then adds weights to the other side until they balance. (FJ cannot put weights on the same side of the balance as the cow, because cows tend to kick weights in his face whenever they can.) The balance has a maximum mass rating and will break if FJ uses more than a certain total mass C (1 <= C < 2^30) on one side.
+<br>
+<br>The weights have the curious property that when lined up from smallest to biggest, each weight (from the third one on) has at least as much mass as the previous two combined.
+<br>
+<br>FJ wants to determine the maximum mass that he can use his weights to measure exactly. Since the total mass must be no larger than C, he might not be able to put all the weights onto the scale.
+<br>
+<br>Write a program that, given a list of weights and the maximum mass the balance can take, will determine the maximum legal mass that he can weigh exactly.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Line 1: Two space-separated positive integers, N and C.
+<br>
+<br>Lines 2..N+1: Each line contains a single positive integer that is the mass of one weight. The masses are guaranteed to be in non-decreasing order.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Line 1: A single integer that is the largest mass that can be accurately and safely measured.</div><p class="pst">Sample Input</p><pre class="sio">3 15
+1
+10
+20</pre><p class="pst">Sample Output</p><pre class="sio">11</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Explanation of the sample:
+<br>
+<br>FJ has 3 weights, with masses of 1, 10, and 20 units. He can put at most 15 units on one side of his balance.
+<br>
+<br>The 1 and 10 weights are used to measure 11. Any greater weight that can be formed from the weights will break the balance.</div><p class="pst">

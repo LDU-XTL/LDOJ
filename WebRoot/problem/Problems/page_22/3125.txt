@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US"><img src=images\3125_1.jpg align=right>The only printer in the computer science students' union is experiencing an extremely heavy workload. Sometimes there are a hundred jobs in the printer queue and you may have to wait for hours to get a single page of output.
+<br>
+<br>Because some jobs are more important than others, the Hacker General has invented and implemented a simple priority system for the print job queue. Now, each job is assigned a priority between 1 and 9 (with 9 being the highest priority,
+<br>and 1 being the lowest), and the printer operates as follows.<ul><li>The first job J in queue is taken from the queue.<li>If there is some job in the queue with a higher priority than job J, thenmove J to the end of the queue without printing it.<li>Otherwise, print job J (and do not put it back in the queue).</ul>In this way, all those importantmuffin recipes that the Hacker General is printing get printed very quickly. Of course, those annoying term papers that others are printing may have to wait for quite some time to get printed, but that's life.
+<br>
+<br>Your problem with the new policy is that it has become quite tricky to determine when your print job will actually be completed. You decide to write a program to figure this out. The program will be given the current queue (as a list of priorities) as well as the position of your job in the queue, and must then calculate how long it will take until your job is printed, assuming that no additional jobs will be added to the queue. To simplifymatters, we assume that printing a job always takes exactly one minute, and that adding and removing jobs from the queue is instantaneous.</div><p class="pst">Input</p><div class="ptx" lang="en-US">One line with a positive integer: the number of test cases (at most 100). Then for each test case:<ul><li>One line with two integers n and m, where n is the number of jobs in the queue (1 &le; n &le; 100) and m is the position of your job (0 &le; m &le; n −1). The first position in the queue is number 0, the second is number 1, and so on.<li>One linewith n integers in the range 1 to 9, giving the priorities of the jobs in the queue. The first integer gives the priority of the first job, the second integer the priority of the second job, and so on.</ul>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print one line with a single integer; the number of minutes until your job is completely printed, assuming that no additional print jobs will arrive.</div><p class="pst">Sample Input</p><pre class="sio">3
+1 0
+5
+4 2
+1 2 3 4
+6 0
+1 1 9 1 1 1</pre><p class="pst">Sample Output</p><pre class="sio">1
+2
+5</pre><p class="pst">

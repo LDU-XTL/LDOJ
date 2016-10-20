@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US">You work for an art store that has decided to carry every style and size of drafting triangle in existence. Unfortunately, sorting these has become a problem. The manager has given you the task of organizing them. You have decided to classify them by edge length and angles. To measure each triangle, you set it on a large sheet of very accurate graph paper and record the coordinate of each point. You then run these three points through a computer program to classify the triangles according to:
+<br><b>Scalene</b> no equal sides
+<br><b>Isosceles</b> two equal sides
+<br><b>Equilateral</b> three equal sides
+<br>and
+<br><b>Acute</b> all angles under 90
+<br><b>Right</b> one angle equal 90
+<br><b>Obtuse</b> one angle over 90
+<br>Of course, sometimes you make mistakes entering the data, so if you input points that do not form a valid triangle, your program should tell you.</div><p class="pst">Input</p><div class="ptx" lang="en-US">One triangle is described per line. Each line has six measurements taken to the nearest 0.001 in the order:
+<br>x1 y1 x2 y2 x3 y3
+<br>The final line of input will contain only a -1.
+<br>None of the test sets contain non-right angles in the range 88-92 degrees, nor do any of the test sets include any non-equal side lengths for one triangle within 0.01 of one another.</div><p class="pst">Output</p><div class="ptx" lang="en-US">You will output one line for each triangle, which will contain two words:
+<br>< length classification > < angle classification >
+<br>or
+<br>Not a Triangle
+<br>The final line of your output file will be:
+<br>End of Output</div><p class="pst">Sample Input</p><pre class="sio">10.000 10.000 10.000 20.000 20.000 10.000
+0.000 0.000 4.000 0.000 2.000 3.464
+-1</pre><p class="pst">Sample Output</p><pre class="sio">Isosceles Right
+Equilateral Acute
+End of Output</pre><p class="pst">

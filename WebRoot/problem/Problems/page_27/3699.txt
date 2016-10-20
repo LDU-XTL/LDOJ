@@ -1,0 +1,49 @@
+</p><div class="ptx" lang="en-US"><div><p>Joan is taking an internship at a company these days. Every day she is assigned tons of dull statistical jobs such as counting how many products made by the company values more than $100. In order to have more time to chat with the handsome intern nearby, she asks you to program a clever software that helps her get released from the onerous work.</p><p>The software should take as input a table of records together with several queries and for each query output all the records respectively.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>The first part of the input is a single line consisting of three integers, <i>m</i>(1 &le;<i> m</i> &le; 10), <i>n</i>(1 &le; <i>n</i> &le; 10000), <i>k</i>(1 &le; k &le; 100) indicating the number of columns in the table, the number of records and the number of queries.</p><p>The second part of the input is the description of the table, which consists of <i>m</i> lines. The <i>i</i>-th line of this part consists two strings in the format <i>Column_Name</i> <i>Type</i> which describes the <i>i</i>-th column of the table.</p><ul><li><i>Column_Name</i> contains only letters(a-zA-Z), digits(0-9) and underline(_).</li><li><i>Type</i> is either &quot;STR&quot; or &quot;INT&quot; indicating the type of this column.</li></ul><p>The third part of the input shows the content of the table which contains <i>n</i> lines. The <i>i</i>-th line of this part shows the <i>i</i>-th record in the table which consists of <i>m</i> items.</p><ul><li>if the type of the i-th column is &quot;INT&quot;, the i-th item will be a 32-bit integer.</li><li>if the type of the i-th column is &quot;STR&quot; , the i-th item will be a string containing only letters(a-zA-Z), digits(0-9) and underline(_).</li></ul><p>The last part of the input gives the <i>k</i> queries which are similar to SQL select statements. The query is in the format select <i>Column_List</i> where <i>Condition</i></p><ul><li><i>Column_List</i> contains a list of column names which are separated by a single comma. All the names occured in the description of the table.</li><li><i>Condition</i> is in the format <i>Column_Name Op Value</i></li> <ul><li><i>Column_Name</i> is one of the column name in the description of the table.</li><li>if the column's type is &quot;STR&quot;, <i>Op</i> is &quot;=&quot;. Otherwise it may be &quot;=&quot;, &quot;&lt;&quot; or &quot;&gt;&quot;. </li><li>if the column's type is &quot;STR&quot;, <i>Value</i> will be a quoted string containing only letters(a-zA-Z), digits(0-9) and underline(_). Otherwise it will be a 32-bit integer. </li></ul></ul><p>The size of the input will not exceed 1M bytes.</p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div><p>For each query output a table and a blank line as Sample Output shows.</p></div></div><p class="pst">Sample Input</p><pre class="sio">3 10 4
+SID INT
+NAME STR
+PRIZE INT
+1000 Potion 50
+1001 Phoenix_Down 150
+1002 Remedy 300
+1003 Dagger 320
+1004 Rod 260
+1005 Flame_Staff 1100
+1006 Broad_Sword 330
+1007 Fork 1100
+1008 Javelin 880
+1009 Cats_Claws 4000
+select SID,NAME,PRIZE where PRIZE>100
+select SID,SID where NAME="Dagger"
+select PRIZE where NAME="Rod"
+select SID,NAME,PRIZE where NAME="Excalibur"</pre><p class="pst">Sample Output</p><pre class="sio"><span font="Courier">
++-----------------------------+
+| SID  |     NAME     | PRIZE |
+|------|--------------|-------|
+| 1001 | Phoenix_Down |  150  |
+| 1002 |    Remedy    |  300  |
+| 1003 |    Dagger    |  320  |
+| 1004 |     Rod      |  260  |
+| 1005 | Flame_Staff  | 1100  |
+| 1006 | Broad_Sword  |  330  |
+| 1007 |     Fork     | 1100  |
+| 1008 |   Javelin    |  880  |
+| 1009 |  Cats_Claws  | 4000  |
++-----------------------------+
+
++-------------+
+| SID  | SID  |
+|------|------|
+| 1003 | 1003 |
++-------------+
+
++-------+
+| PRIZE |
+|-------|
+|  260  |
++-------+
+
++--------------------+
+| SID | NAME | PRIZE |
+|-----|------|-------|
++--------------------+
+</span></pre><p class="pst">

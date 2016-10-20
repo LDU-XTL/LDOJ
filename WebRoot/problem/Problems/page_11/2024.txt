@@ -1,0 +1,35 @@
+</p><div class="ptx" lang="en-US">Poker is played with a standard deck of cards (no jokers). Every card has rank and suit. Possible card ranks in ascending order are: A,2,3,4,5,6,7,8,9,T,J,Q,K,A (Note that 'A' can be either high or low). Possible card suits in ascending order (the order of suits is for display purposes only and should not be used in determining hand or card value) are: Clubs (c), Diamonds (d), Hearts (h), Spades (s). This yields a total of 13 x 4 = 52 cards in a deck. 
+<br>
+<br>Poker hands consist of five cards. The possible poker hands are listed below from best to worst. Examples for each type of hand are given in bold. 
+<br><ul><li>Royal Flush -- Ace, King, Queen, Jack, Ten; all of the same suit. Ex: Ad Kd Qd Jd Td 
+<br><li>Straight Flush -- Five cards with sequential rank, all of the same suit. Ace can be high or low, but not both. When there are two or more straight flushes, the straight flush with the highest ranked card wins. Ex: Ah 5h 4h 3h 2h 
+<br><li>Four of a Kind -- Four cards of the same rank. If there are two or more hands that qualify, the hand with the higher ranking four of a kind wins. If there are two four of a kinds with the same rank, then the one with the high card outside the four of the kind wins. Ex: Kc 8s 8h 8d 8c 
+<br><li>Full House -- Three cards of the same rank plus two cards sharing a different rank. When comparing full houses, the rank of the three cards determines which is higher. If the threes of a kind were equal, the rank of the pairs would decide. For example 9s 9h 9d 4d 4c beats As Ah 8s 8h 8d. Ex: Ts Th 3s 3h 3d 
+<br><li>Flush -- Five cards of the same suit, any rank. When comparing two flushes, the highest card determines which is higher. If the highest cards are equal then the second highest cards are compared; if those are equal too, then the third highest cards, and so on. Ex: Kc 9c 8c 5c 2c 
+<br><li>Straight -- Five cards with sequential rank, mixed suits. Ace can be high or low, but not both. When there are two straights, the straight with the highest ranked card wins. Ex: 9s 8h 7h 6c 5d 
+<br><li>Three of a Kind -- Three cards with the same rank. The highest three of a kind rank wins. If both three of a kinds are the same rank, then the one with the highest cards outside the three of the kind wins. Ex: Ks 8h 6h 6d 6c </ul>
+<br>"Texas Hold 'em" is a variation of poker that has gained popularity recently due to frequent national TV exposure. Each player receives two cards face down, known as "hole cards". Five cards, known as "the board", are then placed face up in the middle of the table. A player wins by making the best five-card poker hand possible using any combination of their two "hole cards" and the five cards on "the board". A useful skill for a Hold 'em player is to be able to tell the best possible hand an opponent might have. All the player knows are the five face up cards and his/her two hole cards. If an opponent can't make a better hand than the player, then the player knows to bet as much as possible. 
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains a single integer n indicating the number of data sets. 
+<br>
+<br>Each data set is a line consisting of seven two-character strings separated from each other by single spaces. Each string represents a playing card. The first character will be the card's rank; the second character will be the card's suit. The first five cards represent "the board" while the last two represent the player's "hole cards". These cards are not in any specific order. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each line of input, output the best five-card hand an opponent might make. If there are two or more cards of different suits that can be used to form the best hand (i.e., there is a tie), display those cards' suits as '*'. The cards should be listed in descending order based on rank first (Aces always considered high for display purposes) then suit (with '*' being lowest in the suit order). On the same line, output the name of the hand after the card list. Poker hand names: ROYAL FLUSH, STRAIGHT FLUSH, FOUR OF A KIND, FULL HOUSE, FLUSH, STRAIGHT, THREE OF A KIND. </div><p class="pst">Sample Input</p><pre class="sio">9
+9c As 3h 8d 2s Jh Ah
+6s 5h 5d 4s 4h 5s 5c
+Qc 3d Qd Qh 3h 3c Qs
+Ah 2c 8d 6h Js 2d As
+8c 3d 2c Ad Tc Kc 4d
+As Js Kc Tc Qs 9s 8s
+2d Kd Ad 6h 3d As Ac
+Qc Qh As Qd Qs Ah Ac
+2d 5h 8s Jh Kd Ks As
+</pre><p class="pst">Sample Output</p><pre class="sio">As 5* 4* 3h 2s STRAIGHT
+6s 4s 4h 4d 4c FOUR OF A KIND
+A* A* Qh Qd Qc FULL HOUSE
+Ah Ad Ac Js 8d THREE OF A KIND
+Ac Qc Tc 8c 2c FLUSH
+As Ks Qs Js Ts ROYAL FLUSH
+Ad 5d 4d 3d 2d STRAIGHT FLUSH
+A* Qs Qh Qd Qc FOUR OF A KIND
+Kh Kd Kc Jh 8s THREE OF A KIND
+</pre><p class="pst">

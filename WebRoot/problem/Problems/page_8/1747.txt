@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">It is known that Sheffer stroke function (NOT-AND) can be used to construct any Boolean function. The truth table for this function is given below: 
+<br><table width="50%" align="center" border="1" rules="groups"><caption><em>Truth table for Sheffer stroke function</em></caption><colgroup><col width="33%" align="center"><col width="33%" align="center"><colgroup><col width="33%" align="center"><thead style="font-weight: bold"><tr><td>x<td>y<td>x|y<tbody><tr><td>0<td>0<td>1<tr><td>0<td>1<td>1<tr><td>1<td>0<td>1<tr><td>1<td>1<td>0</table>
+<br>Consider the problem of adding two binary numbers A and B, each containing N bits. The individual bits of A and B are numbered from 0 (the least significant) to N-1 (the most significant). The sum of A and B can always be represented by N+1 bits. Let's call most significant bit of the sum (bit number N) the overflow bit. 
+<br>
+<br>Your task is to construct a logical expression using the Sheffer stroke function that computes the value of the overflow bit for arbitrary values of A and B. Your expression shall be constructed according to the following rules: 
+<br><ol><li>Ai is an expression that denotes value of i<sup>th</sup> bit of number A. 
+<br><li>Bi is an expression that denotes value of i<sup>th</sup> bit of number B. 
+<br><li>(x|y) is an expression that denotes the result of Sheffer stroke function for x and y, where x and y are expressions. </ol>
+<br>When writing the index, i, for bits in A and B, the index shall be written as a decimal number without leading zeros. For example, bit number 12 of A must be written as A12. The expression should be completely parenthesized (according to the 3rd rule). No blanks are allowed inside the expression. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains a single integer N (1 <= N <= 100). </div><p class="pst">Output</p><div class="ptx" lang="en-US">Write to the output an expression for calculating overflow bit of the addition of two N-bit numbers A and B according to the rules given in the problem statement. 
+<br>Note: The stroke symbol ( | ) is an ASCII character with code 124 (decimal). 
+<br>
+<br>The output size shall not exceed 50*N bytes. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">2</pre><p class="pst">Sample Output</p><pre class="sio">((A1|B1)|(((A0|B0)|(A0|B0))|((A1|A1)|(B1|B1))))
+</pre><p class="pst">

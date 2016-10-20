@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">We need to have at least one computer game in our collection, of course. The typical one could be described as "chase in the town". The smiling face called Jack in our case is walking through the town divided into small fields. Some of the fields are covered with the wall and it is not possible to go through them. Jack collects the points and tries to avoid contact with the monsters who chase him. Once the Jack eats the special point (or asterisk), the situation turns upside-down and Jack can eat monsters. And so on, still again and again. I am sure everyone of you have ever seen such game. 
+<br>
+<br>The town is randomly generated in our case. Jack always starts in the top left corner and the "bonus asterisk" is in the bottom right corner. At the most difficult level, the bonus is set to disappear after exactly as much steps that are sufficient to get from one corner to another, providing Jack only makes steps to the left and to the bottom. Should he made one single step into the wrong direction and he never could be there in time. But it is still important to prevent being catched by monsters. So the player has to choose the best possible way to the bottom right corner. You are to determine how many different ways exist in the town. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of Z assignments. The number of them is given by the single positive integer Z appearing on the first line of input. Each assignment begins with the line containing two possitive numbers R and S (1 <= R,S <= 1000). The numbers determine the number of town rows and columns. Then there are R lines each containing exactly S characters. Each character may be either hash (#) or period (.). Hash mark means the wall and the period is free space. The top left and bottom right corners are always free. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Print exactly one line for each of the input cases. The line must contain the statement "Existuje X ruznych cest.", (There are X different paths). Replace X with the number of all existing different paths between the top left and the bottom right corner. Each path must consist of R+S-2 steps, each leading to the left or to the right. No path can cross any field with the wall. </div><p class="pst">Sample Input</p><pre class="sio">2
+3 3
+...
+.#.
+...
+1 6
+...#..
+</pre><p class="pst">Sample Output</p><pre class="sio">Existuje 2 ruznych cest.
+Existuje 0 ruznych cest.
+</pre><p class="pst">

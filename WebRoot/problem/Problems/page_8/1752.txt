@@ -1,0 +1,43 @@
+</p><div class="ptx" lang="en-US">The Department of Recreation has decided that it must be more profitable, and it wants to sell advertising space along a popular jogging path at a local park. They have built a number of billboards (special signs for advertisements) along the path and have decided to sell advertising space on these billboards. Billboards are situated evenly along the jogging path, and they are given consecutive integer numbers corresponding to their order along the path. At most one advertisement can be placed on each billboard. 
+<br>
+<br>A particular client wishes to purchase advertising space on these billboards but needs guarantees that every jogger will see it's advertisement at least K times while running along the path. However, different joggers run along different parts of the path. 
+<br>
+<br>Interviews with joggers revealed that each of them has chosen a section of the path which he/she likes to run along every day. Since advertisers care only about billboards seen by joggers, each jogger's personal path can be identified by the sequence of billboards viewed during a run. Taking into account that billboards are numbered consecutively, it is sufficient to record the first and the last billboard numbers seen by each jogger. 
+<br>
+<br>Unfortunately, interviews with joggers also showed that some joggers don't run far enough to see K billboards. Some of them are in such bad shape that they get to see only one billboard (here, the first and last billboard numbers for their path will be identical). Since out-of-shape joggers won't get to see K billboards, the client requires that they see an advertisement on every billboard along their section of the path. Although this is not as good as them seeing K advertisements, this is the best that can be done and it's enough to satisfy the client. 
+<br>
+<br>In order to reduce advertising costs, the client hires you to figure out how to minimize the number of billboards they need to pay for and, at the same time, satisfy stated requirements. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains two integers K and N (1 <= K, N <= 1000) separated by a space. K is the minimal number of advertisements that every jogger must see, and N is the total number of joggers. 
+<br>
+<br>The following N lines describe the path of each jogger. Each line contains two integers Ai and Bi (both numbers are not greater than 10000 by absolute value). Ai represents the first billboard number seen by jogger number i and Bi gives the last billboard number seen by that jogger. During a run, jogger i will see billboards Ai, Bi and all billboards between them. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">On the fist line of the output file, write a single integer M. This number gives the minimal number of advertisements that should be placed on billboards in order to fulfill the client's requirements. Then write M lines with one number on each line. These numbers give (in ascending order) the billboard numbers on which the client's advertisements should be placed.</div><p class="pst">Sample Input</p><pre class="sio">5 10
+1 10
+20 27
+0 -3
+15 15
+8 2
+7 30
+-1 -10
+27 20
+2 9
+14 21</pre><p class="pst">Sample Output</p><pre class="sio">19
+-5
+-4
+-3
+-2
+-1
+0
+4
+5
+6
+7
+8
+15
+18
+19
+20
+21
+25
+26
+27
+</pre><p class="pst">

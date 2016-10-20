@@ -1,0 +1,75 @@
+</p><div class="ptx" lang="en-US">The program fragment below performs binary search of an integer number in an array that is sorted in a nondescending order:
+<br><table width=90%><tr><td><pre>
+<br>Pascal (file "sproc.pas")
+<br>
+<br>const
+<br>  MAXN = 10000;
+<br>var
+<br>  A: array[0..MAXN-1] of integer;
+<br>  N: integer;
+<br>
+<br>procedure BinarySearch(x: integer);
+<br>var
+<br>  p, q, i, L: integer;
+<br>begin
+<br>  p := 0;   { Left border of the search  }
+<br>  q := N-1; { Right border of the search }
+<br>  L := 0;   { Comparison counter         }
+<br>  while p <= q do begin
+<br>    i := (p + q) div 2;
+<br>    inc(L);
+<br>    if A[i] = x then begin
+<br>      writeln('Found item i = ', i,
+<br>        ' in L = ', L, ' comparisons');
+<br>      exit
+<br>    end;
+<br>    if x < A[i] then
+<br>      q := i - 1
+<br>    else
+<br>      p := i + 1
+<br>  end
+<br>end;</pre></td>
+<br><td>
+<br><pre>C (file "sproc.c")
+<br>
+<br>#define MAXN 10000
+<br>
+<br>int A[MAXN];
+<br>int N;
+<br>
+<br>void BinarySearch(int x)
+<br>{
+<br>  int p, q, i, L;
+<br>
+<br>  p = 0;   /* Left border of the search  */
+<br>  q = N-1; /* Right border of the search */
+<br>  L = 0;   /* Comparison counter         */
+<br>  while (p <= q) {
+<br>    i = (p + q) / 2;
+<br>    ++L;
+<br>    if (A[i] == x) {
+<br>      printf("Found item i = %d"
+<br>        " in L = %d comparisons\n", i, L);
+<br>      return;
+<br>    }
+<br>    if (x < A[i])
+<br>      q = i - 1;
+<br>    else
+<br>      p = i + 1;
+<br>  }
+<br>}</pre></td></tr></table>
+<br>Before BinarySearch was called, N was set to some integer number from 1 to 10000 inclusive and array A was filled with a nondescending integer sequence.
+<br>
+<br>It is known that the procedure has terminated with the message "Found item i = XXX in L = XXX comparisons" with some known values of i and L.
+<br>
+<br>Your task is to write a program that finds all possible values of N that could lead to such message. However, the number of possible values of N can be quite big. Thus, you are asked to group all consecutive Ns into intervals and write down only first and last value in each interval.
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input file consists of a single line with two integers i and L (0 <= i < 10000 and 1 <= L <= 14), separated by a space.</div><p class="pst">Output</p><div class="ptx" lang="en-US">On the first line of the output file write the single integer number K representing the total number of intervals for possible values of N. Then K lines shall follow listing those intervals in an ascending order. Each line shall contain two integers Ai and Bi (Ai <= Bi) separated by a space, representing first and last value of the interval.
+<br>
+<br>If there are no possible values of N exist, then the output file shall contain the single 0.
+<br></div><p class="pst">Sample Input</p><pre class="sio">10 3</pre><p class="pst">Sample Output</p><pre class="sio">4
+12 12
+17 18
+29 30
+87 94
+</pre><p class="pst">

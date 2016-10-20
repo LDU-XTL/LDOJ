@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Zebel, the tour coordinator, has reserved a limited number of hotel rooms for his clients. Rooms have different capacities and naturally, different prices. Zebel decides to find the least cost assignment of the tour participants to the available rooms. His strategy is to fill the rooms with appropriate collection of people to minimize the overall room cost, but he is facing some restrictions that no two people of different sex that are not married may stay in the same room, and if a room is assigned to a married couple, no other person may stay in that room. Note that it is not necessary to put a married couple in the same room. It is also possible that we do not fill a room to its capacity.
+<br>
+<br>You are to write a program to help Zebel find a least cost assignment of the tour participants to the reserved hotel rooms.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The only number in the first line is t, the number of test cases that follow. The first line of each test case contains four integer numbers, 0 &le; m &le; 500 the number of male tour participants, 0 &le; f &le; 500 the number of female tour participants, 0 &le; r &le; 500 the number of rooms reserved by Zebel, and c &ge; 0 which is the number of marriage relations between tour participants. Note that polygamy is not allowed in the tour; i.e. each participant is either single or has a unique mate. 
+<br>
+<br>The description of the reserved rooms comes on the following r lines. Each line describes a room, by two integer numbers 1 &le; bi &le; 5, and 1 &le; pi &le; 1000, which are the capacity and price of this room.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case in the input, output the minimum cost of assigning the rooms to the tour participants. If this is not possible, output the phrase "Impossible" instead.
+<br></div><p class="pst">Sample Input</p><pre class="sio">2
+2 1 3 1
+3 5
+2 10
+2 4
+1 1 1 0
+1 4</pre><p class="pst">Sample Output</p><pre class="sio">9
+Impossible</pre><p class="pst">

@@ -1,0 +1,19 @@
+</p><div class="ptx" lang="en-US">A domino is a flat, thumbsized tile, the face of which is divided into two squares, each left blank or bearing from one to six dots. There is a row of dominoes laid out on a table: 
+<br><center><img src=images/1717_1.jpg></center>
+<br>The number of dots in the top line is 6+1+1+1=9 and the number of dots in the bottom line is 1+5+3+2=11. The gap between the top line and the bottom line is 2. The gap is the absolute value of difference between two sums. 
+<br>
+<br>Each domino can be turned by 180 degrees keeping its face always upwards. 
+<br>
+<br>What is the smallest number of turns needed to minimise the gap between the top line and the bottom line? 
+<br>
+<br>For the figure above it is sufficient to turn the last domino in the row in order to decrease the gap to 0. In this case the answer is 1. 
+<br>Write a program that: computes the smallest number of turns needed to minimise the gap between the top line and the bottom line.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains an integer n, 1 <= n <= 1000. This is the number of dominoes laid out on the table. 
+<br>
+<br>Each of the next n lines contains two integers a, b separated by a single space, 0 <= a, b <= 6. The integers a and b written in the line i + 1 of the input file, 1 <= i <= 1000, are the numbers of dots on the i-th domino in the row, respectively, in the top line and in the bottom one. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Output the smallest number of turns needed to minimise the gap between the top line and the bottom line. </div><p class="pst">Sample Input</p><pre class="sio">4
+6 1
+1 5
+1 3
+1 2
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+</pre><p class="pst">

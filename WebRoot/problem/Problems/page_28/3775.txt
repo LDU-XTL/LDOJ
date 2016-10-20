@@ -1,0 +1,29 @@
+</p><div class="ptx" lang="en-US">Jack the Robber appears again! He just robbed a bank in town and is running away with a huge amount of dollar cash. Senior FBI agent Don Epps is taking responsibility to catch him. He must deploy his men immediately to hold up and capture Jack on some spot in town. Because this task is extremely urgent and crucial, Don asks his brother Charlie Epps, the mathematics professor in the University of CalSci, to help him find the theoretically best deployment.
+<br>
+<br>Let us assume that the town can be described as N spots (numbered from 0 to N-1) and M bidirectional roads between those N spots. Jack the Robber starts running from Spot 0. After several rounds of chasing and fleeing in the past, Don summarized Jack’s rules of escape:
+<br><ol>
+<br><li>He will never visit a spot more than once.</li>
+<br><li>He is an expert about the geography of this town, so no matter which spot he reaches, the route he has traveled is always the shortest path from Spot 0 to that spot. To simplify the situation, we assume that there is only one shortest path from Spot 0 to any other spot.</li>
+<br><li>He has no certain destination spot to go. He just runs AS FAR AS HE CAN, following the two rules above. As you may see, if he never gets caught, he will definitely come to a spot where he has to stop because if he keeps running, he will violate the two rules above. When he reaches a spot where he has to stop and is not arrested by FBI at that spot, he hides and FBI will never find him.</li>
+<br><li>When he comes to a spot and is NOT captured by FBI at that spot, he will randomly choose a road to continue running. Of course, his choice can’t conflict with the above mentioned rules. The term “randomly” means that he chooses each valid road on the same probability.</li>
+<br></ol>
+<br>Even if Jack gets to a spot where agents are already deployed, he may still get a chance to run away. For example, if the spot is very crowded, even all agents are deployed there, Jack may still run away easily. So Charlie finds out an N×(P+1) probability matrix PT. PT(i, j) represents the probability of j FBI agents deployed at spot i arresting Jack when Jack comes to Spot i. For example, PT(0, 1) can be only 5%, which means sending only 1 agent to the initial spot may miss the target in large probability, because the agent may be killed by Jack. In another case, if Spot 5 is suitable for capturing and 10 agents are deployed there, PT(5, 10) may be over 80%. Of cause, PT(i, 0) is always 0.
+<br>
+<br>According to the given matrix PT, you need to help Charlie to figure out the best way to deploy agents in which the probability of catching the robber reaches the maximum.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains several test cases. In the first line of each case, there are two integers N (N&lt;=100) and M (M&lt;=10000), representing the number of spots and the number of roads between them.
+<br>
+<br>Next M lines describe all roads. In each line, there are three integers a, b and c (0&lt;=a, b&lt;N, 0&lt;c&lt;=10000), representing a road of length c between Spot a and Spot b. Pay attention that there may be more than one roads between two spots, as well as some roads may come into a self-loop (a=b).
+<br>
+<br>The following line contains an integer P (0&lt;P&lt;=50), representing the total number of agents. Following N lines describe the probability matrix PT. PT(i,j) (0&lt;= PT(i,j)&lt;=1) represents the probability that robber can be captured by j FBI agents in Spot i when he comes to Spot i . We don’t give the leftmost column of the matrix for they are all zero, so the matrix only has P columns. In other words, the first number you read from the matrix is PT(0,1) .
+<br>
+<br>The input file ends with a line that contains “0 0”.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output a single line with a real number, representing the largest probability that the robber can be captured if all agents are deployed in the best way. The answer needs to be transferred into percentage pattern and rounded to 2 digits after decimal point.
+<br></div><p class="pst">Sample Input</p><pre class="sio">4 4
+0 1 1
+0 2 2
+1 3 3
+2 3 1
+2
+0.01 0.1
+0.5 0.8
+0.5 0.8
+0.7 0.9
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">60.00</pre><p class="pst">

@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Babel Inc. is a company that designs structures for skyscrapers. They have developed a simple technique to estimate the feasibility of a design, based on the fact that their designs are equivalent to stack blocks of circular section and constant height. The height of a block is used as the unit of lineal measure.</p><p>Blocks are all made of the same non deformable uniform material, so that the weight of a block is proportional to its volume and its center of mass is the geometrical center of the block. A typical block is of the form</p><div align="center"><img src="images/3200_1.gif"></div><p>which weight is determined by the radius of the circular section (because every one has height 1).</p><p>For <i>n</i> &ge; 1, an <i>n</i>-tower is a stack of n blocks. Blocks in an <i>n</i>-tower are numbered 0, 1, &hellip;, <i>n</i> &minus; 1 , from the bottom to the top. Given an <i>n</i>-tower, its <i>k</i>-subtower is defined as the <i>k</i>-tower with the first <i>k</i> blocks of the <i>n</i>-tower, 0 &le; <i>k</i> &lt; <i>n</i> . An example of a 5-tower could look like the following figure:</p><div align="center"><img src="images/3200_2.png"></div><p>A tower is <i>feasible</i> when it can be built putting its blocks one by one from bottom to top. At each building step the corresponding subtower should be <i>stable</i>, i.e., every block of it must remain in the position that it is designed to stay. When placing a block results in a stack of blocks which part of it has a center of mass that lies out of the base on that it is supported we say that the resulting tower <i>collapses</i> and is <i>unfeasible</i>.</p><p>Babel Inc. does not consider stable a situation where the center of mass of the system of blocks that are supposed to rest on a block lies on the border of the supporting surface. For instance, two blocks of the same dimensions with one of them placed centered on the circumference of the other constitute a 2-tower that collapses; but if the second one is placed within the circle of the first one the system is feasible.</p><p>Your problem is to help Babel Inc. in the evaluation of tower designs. Given a design for a <i>n</i>-tower you must judge if it is feasible and, if it is not, you must tell at which floor it would collapse. In this last case you give <i>k</i> as answer, with 0 &lt; <i>k</i> &lt; <i>n</i>, if the (<i>k</i> &minus; 1)-subtower is feasible but the <i>k</i>-subtower collapses.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input file contains several test cases.</p><p>Each test case begins with a line indicating <i>N</i>, 0 &lt; <i>N</i> &lt; 1000, the number of blocks that the designed tower should have.</p><p>Then, there is a line describing each one of the blocks. The block <i>k</i>, 0 &le; <i>k</i> &lt; <i>N</i>, is described by a line containing 3 integers separated by blanks, of the form</p><p align="center"><i>x<sub>k</sub></i> <i>y<sub>k</sub></i> <i>r<sub>k</sub></i></p><p>which indicates that the block <i>k</i> with radius <i>r<sub>k</sub></i> must be placed supported on the block <i>k</i> &minus; 1 (exception: block 0 is placed on the ground) with its center of mass on the point &lsaquo;<i>x<sub>k</sub></i>, <i>y<sub>k</sub></i>, <i>k</i> + 0.5&rsaquo; with respect to a grid with origin in &lsaquo;0, 0, 0&rsaquo; , for |<i>x<sub>k</sub></i>|, |<i>y<sub>k</sub></i>| &le; 10<sup>5</sup> and <i>r<sub>k</sub></i> &le; 10<sup>5</sup>.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Output texts for each input case are presented in the same order that input is read.</p><p>For each test case the answer must be of the form &lsquo;<code>Feasible</code>&rsquo; if the design is feasible. In other case, the answer should be of the form &lsquo;<code>Unfeasible k</code>&rsquo; indicating that the (<i>k</i> &minus; 1)-subtower is feasible but the <i>k</i>-subtower is unfeasible.</p></span></div><p class="pst">Sample Input</p><pre class="sio">3
+0 0 10
+2 0 12
+-4 1 1
+4
+0 0 12
+0 0 10
+0 9 10
+0 17 5
+4
+0 0 4
+0 1 4
+1 0 4
+-1 -1 4
+2
+10 10 5
+0 0 3
+0</pre><p class="pst">Sample Output</p><pre class="sio">Feasible
+Unfeasible 3
+Feasible
+Unfeasible 1</pre><p class="pst">

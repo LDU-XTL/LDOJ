@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">In a recent DOTA game, Littlepig picked Priestess of the Moon (also been called as “POM”) and wanted to practice his skills. As you may know, POM is famous for her second skill “Elune’s Arrow”, which allows POM to fire a fast magic arrow to deal large damage to the enemy unit. In fact, POM’s arrow always flies in a straight line and disappear after hitting an enemy unit.
+<br>
+<br>Littlepig’s POM was hiding in the forest and intended to shoot a certain important target on the lane. There were also several other enemy units nearby. POM’s arrow might fly in a wrong direction and miss the target, or even if the arrow flew straight to the target, it still could be blocked by other enemy units and couldn’t reach the target. So given a flying direction, your job is to determine whether Littlepig’s arrow would hit his target.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several test cases, and each test case is given in the following format:
+<br>The first line contains an integer n (0 &lt; n &lt;= 5), indicating the number of enemy units in the game.
+<br>The second line are two integers (x0,y0) representing the position where POM stands.
+<br>The third line gives a vector (dx,dy) describing the flying direction of the arrow.
+<br>Then n lines follows, each describing an enemy unit. An enemy unit can be considered as a convex polygon and the polygon is given in the following format in a line:
+<br><p style="padding-left: 30px">
+<br>    m x1 y1 x2 y2…xm ym
+<br></p>
+<br>m is the number of vertices(m &lt;= 10), and (x1,y1)…(xm,ym) are the vertices coordinates of the polygon, given in counter-clockwise order.
+<br>The first enemy unit is the POM’s target.
+<br>
+<br>The input ends with a zero in a separate line (n=0). All input numbers are integers that do not exceed 105 in magnitude. It is guaranteed that polygons do not contact or overlap, and the point (x0,y0) isn’t inside (or on) any polygons.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output “HIT” if the arrow hits its target and “MISS” otherwise, in a separate line.</div><p class="pst">Sample Input</p><pre class="sio">1
+0 0
+0 1
+3 2 0 0 2 0 1
+1
+0 0
+-1 -1
+3 2 0 0 2 0 1
+0</pre><p class="pst">Sample Output</p><pre class="sio">HIT
+MISS</pre><p class="pst">

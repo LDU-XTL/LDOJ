@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">A new Solar Eclipse is going to happen in Mars. Scientists from different parts of the world are travelling to Mars to watch and study this phenomenon. You just managed to calculate exactly the best point of Mars lands for your study of the eclipse, and want to land your flying saucer on that place. But, you notice that there are already other spacecrafts landed on near that area.
+<br>
+<br>In the bird’s eye view, all the spacecrafts (including yours) are circles with constant radius R. Logically, you hate to land your spacecraft on the others (no intersection of areas is allowed, but touching the other crafts is acceptable), though, the other saucers did not obey this rule on their own landings (i.e. their circles might have positive-area intersections with each other). In order to land your own craft on Mars, you want to find the place which minimizes the distance between the center of your flying saucer and your already calculated best point (and obeys the no-intersection rule). That’s what you should do in this problem.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input has multiple test cases. Each test case starts with a line containing an integer n (number of already landed spacecrafts), and a real number R. The land is small enough for us to be modeled by a two-dimensional plane, and (0,0) is conventionally the best point for us to land. Each of the next n lines specifies the location of a landed flying saucer by giving two real numbers x and y as the coordinates of its center.
+<br>The input ends with a case of n = R = 0 which must not be processed. Assume n ≤ 100, R > 0, and their absolute value does not exceed 1000.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Write the result of the ith test case on the ith line of the output. You should just write the minimum possible distance between the center of your landed craft and the origin of the plane, rounded to exactly 6 digits after the decimal point.</div><p class="pst">Sample Input</p><pre class="sio">1 1.234
+2.468 0
+1 2
+2 2
+2 1
+1 1
+-1 -1
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">0.000000
+1.171573
+1.414214</pre><p class="pst">

@@ -1,0 +1,54 @@
+</p><div class="ptx" lang="en-US">A regular palindrome is a string of numbers or letters that is the same forward as backward. For example, the string "ABCDEDCBA" is a palindrome because it is the same when the string is read from left to right as when the string is read from right to left. 
+<br>
+<br>A mirrored string is a string for which when each of the elements of the string is changed to its reverse (if it has a reverse) and the string is read backwards the result is the same as the original string. For example, the string "3AIAE" is a mirrored string because "A" and "I" are their own reverses, and "3" and "E" are each others' reverses. 
+<br>
+<br>
+<br>A mirrored palindrome is a string that meets the criteria of a regular palindrome and the criteria of a mirrored string. The string "ATOYOTA" is a mirrored palindrome because if the string is read backwards, the string is the same as the original and because if each of the characters is replaced by its reverse and the result is read backwards, the result is the same as the original string. Of course, "A", "T", "O", and "Y" are all their own reverses. 
+<br>
+<br>A list of all valid characters and their reverses is as follows. 
+<br><pre>
+<br>Character  Reverse  Character  Reverse  Character  Reverse  
+<br>    A         A         M         M         Y         Y
+<br>    B                   N                   Z         5
+<br>    C                   O         O         1         1
+<br>    D                   P                   2         S
+<br>    E         3         Q                   3         E
+<br>    F                   R                   4
+<br>    G                   S         2         5         Z
+<br>    H         H         T         T         6
+<br>    I         I         U         U         7
+<br>    J         L         V         V         8         8
+<br>    K                   W         W         9
+<br>    L         J         X         X</pre>
+<br>Note that O (zero) and 0 (the letter) are considered the same character and therefore ONLY the letter "0" is a valid character. 
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of strings (one per line) each of which will consist of one to twenty valid characters. There will be no invalid characters in any of the strings. Your program should read to the end of file. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each input string, you should print the string starting in column 1 immediately followed by exactly one of the following strings. 
+<br>
+<br>" -- is not a palindrome." 
+<br>if the string is not a palindrome and is not a mirrored string 
+<br>
+<br>" -- is a regular palindrome." 
+<br>if the string is a palindrome and is not a mirrored string 
+<br>
+<br>" -- is a mirrored string." 
+<br>if the string is not a palindrome and is a mirrored string 
+<br>
+<br>" -- is a mirrored palindrome." 
+<br>if the string is a palindrome and is a mirrored string 
+<br>
+<br>
+<br>Note that the output line is to include the -'s and spacing exactly as shown in the table above and demonstrated in the Sample Output below. 
+<br>
+<br>In addition, after each output line, you must print an empty line. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">NOTAPALINDROME 
+ISAPALINILAPASI 
+2A3MEAS 
+ATOYOTA
+</pre><p class="pst">Sample Output</p><pre class="sio">NOTAPALINDROME -- is not a palindrome.
+
+ISAPALINILAPASI -- is a regular palindrome.
+
+2A3MEAS -- is a mirrored string.
+
+ATOYOTA -- is a mirrored palindrome.
+</pre><p class="pst">

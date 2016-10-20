@@ -1,0 +1,61 @@
+</p><div class="ptx" lang="en-US">On a small planet named Bandai, a landing party of the starship Tadamigawa discovered colorful cubes traveling on flat areas of the planet surface, which the landing party named beds. A cube appears at a certain position on a bed, travels on the bed for a while, and then disappears. After a longtime observation, a science officer Lt. Alyssa Ogawa of Tadamigawa found the rule how a cube travels on a bed.
+<br>A bed is a rectangular area tiled with squares of the same size.
+<br><p style="padding-left:30px">
+<br>One of the squares is colored red,
+<br>one colored green,
+<br>one colored blue,
+<br>one colored cyan,
+<br>one colored magenta,
+<br>one colored yellow,
+<br>one or more colored white, and
+<br>all others, if any, colored black.
+<br></p>
+<br>Initially, a cube appears on one of the white squares. The cube’s faces are colored as follows.
+<br><p style="padding-left:30px">
+<br>top red
+<br>bottom cyan
+<br>north green
+<br>south magenta
+<br>east blue
+<br>west yellow
+<br></p>
+<br>The cube can roll around a side of the current square at a step and thus rolls on to an adjacent square. When the cube rolls on to a chromatically colored (red, green, blue, cyan, magenta or yellow) square, the top face of the cube after the roll should be colored the same. When the cube rolls on to a white square, there is no such restriction. The cube should never roll on to a black square.
+<br>Throughout the travel, the cube can visit each of the chromatically colored squares only once, and any of the white squares arbitrarily many times. As already mentioned, the cube can never visit any of the black squares. On visit to the final chromatically colored square, the cube disappears. Somehow the order of visits to the chromatically colored squares is known to us before the travel starts.
+<br>Your mission is to find the least number of steps for the cube to visit all the chromatically colored squares in the given order.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input is a sequence of datasets. A dataset is formatted as follows:
+<br><p style="padding-left:30px">
+<br>w d
+<br>c<sub>11</sub> . . . c<sub>w1</sub>
+<br>.
+<br>.
+<br>.
+<br>c<sub>1d</sub> . . . c<sub>wd</sub>
+<br>v<sub>1</sub>v<sub>2</sub>v<sub>3</sub>v<sub>4</sub>v<sub>5</sub>v<sub>6</sub>
+<br></p>
+<br>The first line is a pair of positive integers w and d separated by a space. The next d lines are w-character-long strings c<sub>11</sub> ... c<sub>w1</sub>,... , c<sub>1d</sub> ... c<sub>wd</sub> with no spaces. Each character c<sub>ij</sub> is one of the letters r, g, b, c, m, y, w and k, which stands for red, green, blue, cyan, magenta, yellow, white and black respectively, or a sign #. Each of r, g, b, c, m, y and # occurs once and only once in a dataset. The last line is a six-character-long string v<sub>1</sub>v<sub>2</sub>v<sub>3</sub>v<sub>4</sub>v<sub>5</sub>v<sub>6</sub> which is a permutation of “rgbcmy”.
+<br>The integers w and d denote the width (the length from the east end to the west end) and the depth (the length from the north end to the south end) of a bed. The unit is the length of a side of a square. You can assume that neither w nor d is greater than 30.
+<br>Each character c<sub>ij</sub> shows the color of a square in the bed. The characters c<sub>11</sub>, c<sub>w1</sub>, c<sub>1d</sub> and c<sub>wd</sub> correspond to the north-west corner, the north-east corner, the south-west corner and the south-east corner of the bed respectively. If c<sub>ij</sub> is a letter, it indicates the color of the corresponding square. If c<sub>ij</sub> is a #, the corresponding square is colored white and is the initial position of the cube.
+<br>The string v<sub>1</sub>v<sub>2</sub>v<sub>3</sub>v<sub>4</sub>v<sub>5</sub>v<sub>6</sub> shows the order of colors of squares to visit. The cube should visit the squares colored v<sub>1</sub>, v<sub>2</sub>, v<sub>3</sub>, v<sub>4</sub>, v<sub>5</sub> and v<sub>6</sub> in this order.
+<br>The end of the input is indicated by a line containing two zeros separated by a space.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each input dataset, output the least number of steps if there is a solution, or “unreachable” if there is no solution. In either case, print it in one line for each input dataset.</div><p class="pst">Sample Input</p><pre class="sio">10 5
+kkkkkwwwww
+w#wwwrwwww
+wwwwbgwwww
+kwwmcwwwkk
+kkwywwwkkk
+rgbcmy
+10 5
+kkkkkkkkkk
+k#kkkkkkkk
+kwkkkkkwwk
+kcmyrgbwwk
+kwwwwwwwwk
+cmyrgb
+10 5
+kkkkkkkkkk
+k#kkkkkkkk
+kwkkkkkwkk
+kcmyrgbwwk
+kwwwwwwwwk
+cmyrgb
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">9
+49
+unreachable</pre><p class="pst">

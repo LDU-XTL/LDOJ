@@ -1,0 +1,4 @@
+</p><div class="ptx" lang="en-US">Consider two natural numbers A and B. Let S be the sum of all natural divisors of A^B. Determine S modulo 9901 (the rest of the division of S by 9901).</div><p class="pst">Input</p><div class="ptx" lang="en-US">The only line contains the two natural numbers A and B, (0 <= A,B <= 50000000)separated by blanks.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The only line of the output will contain S modulo 9901.</div><p class="pst">Sample Input</p><pre class="sio">2 3</pre><p class="pst">Sample Output</p><pre class="sio">15</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">2^3 = 8.
+<br>The natural divisors of 8 are: 1,2,4,8. Their sum is 15.
+<br>15 modulo 9901 is 15 (that should be output). 
+<br></div><p class="pst">

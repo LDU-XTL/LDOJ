@@ -1,0 +1,36 @@
+</p><div class="ptx" lang="en-US">Having realized that the quadtree-encoded treasure map was a fake, Florida Jones maliciously plans to also play a prank for the next treasure hunter after him. But for that, he needs your help once again: 
+<br>
+<br>Can you write a program that takes a picture in the XBM format and encodes it with the quadtree scheme? </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line will be "#define quadtree_width n" where n is the picture size in pixels. (The picture is quadratic: n*n pixels) 
+<br>The second line will be "#define quadtree_height n" accordingly. 
+<br>The third line will be "static char quadtree_bits[] = {". 
+<br>Then, n lines will follow, each one encoding one pixel row of the picture. There will be n/8 hexadecimal numbers per line.
+<br>Each hexadecimal number is composed of 8 bits that encode 8 pixels from left to right (where the leftmost bit has the value 1 and the rightmost bit has the value 128). The hexadecimal numbers are printed in the form 0xdd where d is one character of the set { 0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f }. 
+<br>Example: The 8 pixels WBBBBWWB are written as 0x9e. (2+4+8+16+128 = 158 = 0x9e) 
+<br>After each hexadecimal number, a comma follows. 
+<br>The last line will be "};". 
+<br><b>Note</b>: The comments (enclosed by /* and */) in the sample input are not part of the input. They should help to explain the XBM format
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">First, print the integer n (8 <= n <= 512) on a line by itself. 
+<br>Then, print a string consisting of the letters B, W and Q that correctly encodes the picture with the quadtree scheme. 
+<br>Finally, terminate the string with a newline character. </div><p class="pst">Sample Input</p><pre class="sio">#define quadtree_width 16
+#define quadtree_height 16
+static char quadtree_bits[] = {
+0xf0,0xf0,                       /* WWWWBBBB WWWWBBBB */
+0xf0,0xf0,                       /* WWWWBBBB WWWWBBBB */
+0xf0,0xf0,                       /* WWWWBBBB WWWWBBBB */
+0xf0,0xf0,                       /* WWWWBBBB WWWWBBBB */
+0x0f,0x0f,                       /* BBBBWWWW BBBBWWWW */
+0x0f,0x0f,                       /* BBBBWWWW BBBBWWWW */
+0x0f,0x0f,                       /* BBBBWWWW BBBBWWWW */
+0x0f,0x0f,                       /* BBBBWWWW BBBBWWWW */
+0xf0,0xf0,                       /* WWWWBBBB WWWWBBBB */
+0xf0,0xf0,                       /* WWWWBBBB WWWWBBBB */
+0xf0,0xf0,                       /* WWWWBBBB WWWWBBBB */
+0xf0,0xf0,                       /* WWWWBBBB WWWWBBBB */
+0x0f,0x0f,                       /* BBBBWWWW BBBBWWWW */
+0x0f,0x0f,                       /* BBBBWWWW BBBBWWWW */
+0x0f,0x0f,                       /* BBBBWWWW BBBBWWWW */
+0x0f,0x0f,                       /* BBBBWWWW BBBBWWWW */
+};
+</pre><p class="pst">Sample Output</p><pre class="sio">16
+QQWBBWQWBBWQWBBWQWBBW
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Since the problems "Quadtree" and "Quadtree II" are inverse to each other, you can double check your programs by converting back and forth between the respective input and output files. </div><p class="pst">

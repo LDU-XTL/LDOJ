@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US"><div><p>Facer is the chemical keeper in a laboratory. Every day he receives <i>M</i> requests of a certain kind of chemical which is vital to a large variety of experiments. The <i>i</i>th request asks for <i>R<sub>i</sub></i> grams of the chemical and Facer has to weigh the chemicals in the exact order as the requests listed or he will mess up all the experiments.</p><img src="images/3677_1.JPG" /> <p>The balance used in the laboratory has <i>N</i> different kinds of poises. The <i>i</i>th kind weighs<i> W<sub>i</sub></i> grams. The amount of poises of each kind is so large that can be considered as infinite. The poises are all in a flat shape. When Facer wants to weigh the chemical, he has to stack the poises on the left side of the balance one by one in such a way that the lighter ones are always above the heavier ones. For example, a 2-gram poise is never allowed to be on the top of a 1-gram poise.</p><p>To accelerate his work, Facer tries to use the minimum steps to finish the weighing. For each step he can put one poise on the top of the stack (as long as no poises in the stack is lighter than it) or remove the poise which is currently on the top.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>The first line of the input contains the number of the test cases.<br>Each test case follows the format below:<br></p><ul><li>One line contains an integer <i>N</i> (1 ≤ <i>N</i> ≤ 15), the number of different kinds of poises</li><li>One line contains <i>N</i> integers, <i>W</i><sub>1</sub>, <i>W</i><sub>2</sub> ... <i>W<sub>N</sub></i>, ( 1 ≤ <i>W<sub>i</sub></i> ≤ 30)</li><li>One line contains an integer <i>M</i> (1 ≤ <i>M</i> ≤ 500), the number of requests</li><li>One line contains <i>M</i> integers, <i>R</i><sub>1</sub>, <i>R</i><sub>2</sub>, ... <i>R<sub>M</sub></i> ( 1 ≤ <i>R<sub>i</sub></i> ≤ 30)</li></ul></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output a line containing the minimum number of steps Facer needed to finish all the requests. If any request can not be weighed out, output -1 instead.</p></div><p class="pst">Sample Input</p><pre class="sio">2
+3
+1 2 3
+3
+4 5 6
+2
+3 4
+3
+1 6 8
+</pre><p class="pst">Sample Output</p><pre class="sio">4
+-1
+</pre><p class="pst">

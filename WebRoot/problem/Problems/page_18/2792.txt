@@ -1,0 +1,29 @@
+</p><div class="ptx" lang="en-US">Let us consider arithmetic expressions that consist of variables denoted by lower-case letters "a" to "z"; 
+<br>
+<br>four binary arithmetic operations: addition ("+"), subtraction ("-"), multiplication ("*"), and division("/"); opening ("(") and closing (")") round brackets. The normal order of precedence is used -- multiplication and division have the highest precedence, addition and subtraction have the lowest precedence. 
+<br>
+<br>Operations of the same precedence are evaluated from left to right (for example a - b + c = (a - b) + c). 
+<br>
+<br>Thus, the grammar for the expressions is the following: 
+<br><pre>&lt;expression> --> &lt;term> | &lt;expression> + &lt;term> | &lt;expression> - &lt;term>
+<br>      &lt;term> --> &lt;factor> | &lt;term> * &lt;factor> | &lt;term> / &lt;factor>
+<br>    &lt;factor> --> &lt;variable> | (&lt;expression>)  
+<br>  &lt;variable> --> a | b | . . . | z    </pre>
+<br>Your task is to rewrite the given expression so that its semantics is not changed, but the resulting expression has the minimal number of round brackets. 
+<br>
+<br>You can remove any excessive brackets that do not change the order of evaluation, for example 
+<br>(a + b) + (c) => a + b + c,
+<br>(a * b)/(c) ) => a * b/c,
+<br>and you can rewrite expressions using the following rules: 
+<br><ul><li>If A and B are arbitrary expressions, you can change A + (B) to A + B, for example
+<br>a - g/h + (b + c - d + e * (f + h - i)) => a - g/h + b + c - d + e * (f + h - i).
+<br><li>If A and B are arbitrary expressions, you can change A-(B) to A-B' where B' is obtained from B by replacing all top-level "+" operations to "-" operations and vice versa, for example
+<br>a - g/h - (b + c - d + e * (f + h - i)) => a - g/h - b - c + d - e * (f + h - i)).
+<br><li>If A and B are arbitrary terms, you can change A * (B) to A * B, for example
+<br>x/(y + z) * (a * (b - c)/d/(e/f)) => x/(y + z) * a * (b - c)/d/(e/f).
+<br><li>If A and B are arbitrary terms, you can change A/(B) to A/B', where B' is obtained from B by replacing all top-level "*" operations to "/" operations and vice versa, for example
+<br>x/(y + z)/(a * (b - c)/d/(e/f)) => x/(y + z)/a/(b - c) * d * (e/f).</ul>
+<br>You can think about these transformations as ones that only use "+" and "*" associativity, the fact that "-" is the reverse operation to "+", "/" is the reverse operation to "*", and nothing else. 
+<br>
+<br>You can apply the described transformations and remove excessive brackets as many times as you need to get the expression with the minimal number of round brackets. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains a single line with the expression. Expression does not have any leading, trailing, or inner spaces and consists of at most 1000 characters.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Write to the output a single line with the same expression that is rewritten with the minimal number of round brackets. Do not write any spaces. </div><p class="pst">Sample Input</p><pre class="sio">((a-b)-(c-d)-(z*z*g/f)/(p*(t))*((y-u)))
+</pre><p class="pst">Sample Output</p><pre class="sio">a-b-c+d-z*z*g/f/p/t*(y-u)</pre><p class="pst">

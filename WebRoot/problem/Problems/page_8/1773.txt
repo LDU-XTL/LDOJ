@@ -1,0 +1,122 @@
+</p><div class="ptx" lang="en-US">A company named Outdaters is running a small computer wire line network, called Outernet. Not like Internet, Outernet is not base on the TCP/IP protocol. Due to lacking of money, not all the computers in Outernet can communicate with each other directly.
+<br>Outdaters have already found the solution. They created a protocol to make all computers in the network become application proxies. An application proxy can receive data from a connected computer and send them out to another connected computer. Therefore, by using this protocol in Outernet, if a computer wants to send something to a computer not linked directly, it has to send them to a connected computer/application proxy and ask it to help sending them to the destination or another connected computer/application proxy.
+<br><center><img src=images/1773_1.jpg></center> 
+<br>The protocol is described as
+<br>A. Port
+<br>Application proxies use port to indicate each connected computer. Port number is an integer number from 0 to 32,767. To an application proxy, 0 means the application proxy itself, each other port number represents a unique computer connected to the application proxy.
+<br>
+<br>B. Commands
+<br>The application proxy accepts only 3 commands, case sensitive: TO, DATA, QUIT.
+<br>To each incoming command, application proxy will response with 3-digit result code in a line to the incoming port after handled this command.
+<br>Format:
+<br>xxx< LF > xxx -- the 3-digit result code
+<br>Result codes:
+<br>100: OK. No error/Data routed to destination
+<br>101: OK. Data routed to application. (Destination computer is application proxy itself.)
+<br>200: Session ends (Response to QUIT command)
+<br>300: Unknown command
+<br>301: Unknown destination
+<br>302: No session began
+<br>303: Looping not allowed (when incoming port = outgoing port)
+<br>
+<br>Details for each command:
+<br>1. TO:< destination computer name >< LF >
+<br>Tell the application proxy, the following data need to be sent to < destination computer name > ,and cancel the last "TO" command's effect (send a "QUIT" command to the original destination computer). If TO command fails (result code is neither 100 nor 101), the state of the application proxy will not be changed.
+<br>Possible result codes are:
+<br>100: The destination computer is found in routing table, and not the application proxy itself.
+<br>101: The destination computer is found in routing table, and IS the application proxy itself.
+<br>301: The destination computer is not found in routing table
+<br>303: The destination computer is found in routing table, but incoming port = outgoing port
+<br>
+<br>2. DATA< LF >< the data >< a dot "." > < LF >
+<br>Send < the data > to destination computer. < the data > will be regarded as a data stream, and sent to the destination without any alteration if the destination computer is not the application proxy itself. The backslash ("\") is the meta character, "\." means a simple dot ".", instead of then end indicator, and "\\" means "\".
+<br>Possible result codes are:
+<br>100: The destination computer is found in routing table, and not the application proxy itself. The data is routed to the corresponding outgoing port.
+<br>101: The destination computer is found in routing table, and IS the application proxy itself.The data is routed to the application running on this application proxy.
+<br>302: No session began, this command is ignored.
+<br>
+<br>3. QUIT< LF >
+<br>End this communication session.
+<br>Possible result codes are:
+<br>200: Session ends(Response to QUIT command)
+<br>302: No session began, this command is ignored.
+<br>
+<br>C. Session
+<br>When a computer (the requester) sends a "TO" command to an application proxy, a communication session begins; when a "QUIT" command is sent to the application proxy, the session ends. In a session, the requester can send multiple "TO" and "DATA" commands to an application proxy to send out multiple messages.
+<br><b> An application proxy is able to handle sessions simultaneously from different ports.</b> 
+<br>
+<br>D. Routing table
+<br>Each application proxy holds a routing table. It uses this table to find which port should be used the destination computer name. Each line in the routing table contains 2 fields, the first is the destination computer name, and the second is the outgoing port number. It means, the data to be sent to a computer with the destination computer name, will be sent out via the port with the outgoing port number. Port number 0 means, the data should be routed to the application running on this application proxy; that destination computer name is actually the application proxy's name.
+<br>
+<br>E. Routing
+<br>Application proxies use the same "TO", "DATA", "QUIT" commands to route the incoming data if the routing is possible.
+<br>After searching on the routing table, if the outgoing port found, application proxies must create a complete session on the outgoing port for each valid incoming "TO" command: one "TO" command at the beginning, zero or more DATA commands to route the data, one "QUIT" command in the end if the incoming session ends or another incoming "TO" command is received.
+<br>
+<br><b>Port 0 is handled as same as other outgoing ports except that no actually outgoing command is sent</b> , i.e. all the commands' result code will be sent to the incoming port, but no commands will be sent to any outgoing port.
+<br>Now, Outdaters hires you to write the engine to implement the protocol for the application proxy.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of a sequence of testcases. Each begins with a routing table of an application proxy and then the incoming requests of the application proxy.
+<br>A routing table includes, in order, a line with an integer M (1 <= M <= 32,768), the number of lines in the routing table; M lines, each of which has a routing line. Each routing line contains a unique destination computer name (1 to 15 alphanumeric characters in the routing table), and then the outgoing port number (0 to 32,767 integer), separated by a space, and the computer names are case sensitive.
+<br>The incoming requests of the application proxy include several request sessions from the connected computers. A line starts with a number sign "#" and then an integer P (-1, 1 to 32,767),means the following input is from port P, P < 0 means the testcase finishes. The commands in request sessions will not be broken by the "#" lines. To simplify the input handling, data commands in our input file will just contain "0"-"9", "a"-"z", "A"-"Z", "@", "#", "_", "+", "-", "*","/" , "\", "?", ",", "." and < LF >.
+<br>The input is terminated by a single zero</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each testcase, print all the outputs of the ports sending out data, in the order of the corresponding input. For each port's output, a line starts with a number sign "#" and then an integer P (-1, 1 to 32,767), means the following commands are output in port P, P=-1 means the output of the current testcase finishes. Following the "#" line is the commands output in this port till another "#" line. A "#" line is needed only when the port number need to be changed.
+<br>#< port number >< LF >
+<br>the commands output in this port
+<br>#< another port number >< LF >
+<br>the commands output in this port
+<br>...
+<br>#-1< LF ></div><p class="pst">Sample Input</p><pre class="sio">5
+RED 0
+YELLOW 1
+GREEN 2
+BLUE 3
+WHITE 3
+#1
+TO:GREEN
+DATA
+HELLO
+.
+#4
+TO:WHITE
+#1
+Quit
+QUIT
+#2
+TO:GREEN
+DATA
+A JOKE to myself
+.
+QUIT
+#3
+TO:ORANGE
+QUIT
+#4
+QUIT
+#-1
+0</pre><p class="pst">Sample Output</p><pre class="sio">#2
+TO:GREEN
+#1
+100
+#2
+DATA
+HELLO
+.
+#1
+100
+#3
+TO:WHITE
+#4
+100
+#1
+300
+#2
+QUIT
+#1
+200
+#2
+303
+302
+302
+#3
+301
+302
+QUIT
+#4
+200</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">< LF > means 0xa.</div><p class="pst">

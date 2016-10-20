@@ -1,0 +1,30 @@
+</p><div class="ptx" lang="en-US">A song consists of one or more verses, each verse consists of four lines, each line consists of one or more words separated by single blank character, and finally, each word consists of one or more letters (a - z, A - Z).
+<br>
+<br>We define the last syllable of a word to be the sequence of letters from the last vowel (inclusively) to the end of the word. If a word has no vowel, then the last syllable is the word itself. 
+<br>
+<br>We say that two lines rhyme if they have same last syllables (ignoring the letter case). Verse may have perfect rhyme, even rhyme, cross rhyme, shell rhyme or there may be no rhyme at all (free rhyme).
+<br>
+<br>Verse has a perfect rhyme if all lines in a verse mutually rhyme (a a a a).
+<br>
+<br>If verse does not have a perfect rhyme then we say that it has:
+<br>
+<br>Even rhyme: if the first and second line rhyme and also third and fourth line rhyme (a a b b).
+<br>Cross rhyme: if the first and third line rhyme and also second and fourth line rhyme (a b a b).
+<br>Shell rhyme: if the first and fourth line rhyme and also second and third line rhyme (a b b a).
+<br>
+<br>Write a program that will determine the rhyme for each verse in a song. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains an integer N, the number of verses in the song, 1 <= N <= 5.
+<br>
+<br>The following 4N lines of the input contain the lines of the song. Maximal length of each line is 50.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Output should have N lines. For each verse in a song there should a single line containing one of the words 'perfect', 'even', 'cross', 'shell' or 'free' describing the rhyme in that verse.</div><p class="pst">Sample Input</p><pre class="sio">2
+Tko je to
+to je Zlo
+nije Zlo
+to je Mo
+Gdje je Mu
+jel na putu
+Brijem da nije
+vidlo bi se
+</pre><p class="pst">Sample Output</p><pre class="sio">perfect
+even
+</pre><p class="pst">

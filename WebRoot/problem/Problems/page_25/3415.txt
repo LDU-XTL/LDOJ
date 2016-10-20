@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US"><div><p>A substring of a string <i>T</i> is defined as:</p><p><center><i>T</i>(<i>i</i>, <i>k</i>)=<i>T<sub>i</sub>T<sub>i</sub></i><sub>+1</sub>...<i>T<sub>i+k</sub></i><sub>-1</sub>, 1&le;<i>i</i>&le;<i>i+k</i>-1&le;|<i>T</i>|.</center></p><p>Given two strings <i>A</i>, <i>B</i> and one integer <i>K</i>, we define <i>S</i>, a set of triples (<i>i</i>, <i>j</i>, <i>k</i>):</p><p><center><i>S</i> = {(<i>i</i>, <i>j</i>, <i>k</i>) | <i>k</i>&ge;<i>K</i>, <i>A</i>(<i>i</i>, <i>k</i>)=<i>B</i>(<i>j</i>, <i>k</i>)}.</center></p><p>You are to give the value of |<i>S</i>| for specific <i>A</i>, <i>B</i> and <i>K</i>.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>The input file contains several blocks of data. For each block, the first line contains one integer <i>K</i>, followed by two lines containing strings <i>A</i> and <i>B</i>, respectively. The input file is ended by <i>K</i>=0.</p><p>1 &le; |<i>A</i>|, |<i>B</i>| &le; 10<sup>5</sup><br>1 &le; <i>K</i> &le; <i>min</i>{|<i>A</i>|, |<i>B</i>|}<br>Characters of <i>A</i> and <i>B</i> are all Latin letters.</p><p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each case, output an integer |<i>S</i>|.</p></div><p class="pst">Sample Input</p><pre class="sio">2
+aababaa
+abaabaa
+1
+xx
+xx
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">22
+5
+</pre><p class="pst">

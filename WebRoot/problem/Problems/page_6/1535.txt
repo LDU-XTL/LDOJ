@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Each Sunday Mrs. Mahtaj who is an old woman goes to David Church and after the Sunday pray she comes back home. The traffic center has a complicated rule for closing crossroads that Mrs. Mahtaj can't  understand. She is a forgetful woman who can only memorize the path from her house to church. The streets of her city are   vertical or horizontal, the same as a grid with the squares of the same size. So she memorizes a path by a string of F (Forward), B  (Backward), L (Left) and R (Right). For example, if there is no closed crossroad and Mahtaj is in crossroad (1,0) and faces east, if the string is BRFRLFL she reaches the crossroad (0,4). His son, Khashayar, decides to help her finding a path that can be used both for going from their house to the church and for coming back from the church to their house and does not pass any closed crossroad. I.e. Mahtaj should be able to go from her house to the church and from the church to her house by just one string.  Help Khashayar to find such a path.  When Mrs. Mahtaj starts the path from her house, she faces east and when she starts from the church she faces west. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several test cases. Each test case begins with a line containing m and n, the number of vertical and horizontal lines (streets) in the grid, which are in range 1 to 100. The second line of a test case contains two pairs of integer, which are  x and  y coordinates of the source (Mrs. Mahtaj's house) and x and  y coordinates of the destination (David church). The horizontal and vertical lines in the grid are indexed from left to right and bottom to up from 0, so coordinates can be expressed using the indices. The third line of a test case contains a single numbe r N, which is the number of closed crossroads. It follows by N lines that each line contains x and y coordinates of a closed crossroad. The test case with m=n=0 indicates the end of the input file. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output for each test case is  "YES" if there is such path and otherwise "NO". Output for each test case must be written on a separate line and the test case with m=n=0 has no output. </div><p class="pst">Sample Input</p><pre class="sio">3 3
+0 0 2 2
+2
+1 2
+2 1
+6 5
+0 0 5 4
+5
+3 0 
+3 2
+2 2
+0 2
+5 2 
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">NO
+YES</pre><p class="pst">

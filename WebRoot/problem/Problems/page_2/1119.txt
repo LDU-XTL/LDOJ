@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">Clearly the economy is bound to pick up again soon. As a forward-thinking Internet entrepreneur, you think that the 'Net will need a new search engine to serve all the people buying new computers. Because you're frustrated with the poor results most search engines produce, your search engine will be better. 
+<br>
+<br>You've come up with what you believe is an innovative approach to document matching. By giving weight to the number of times a term appears in both the search string and in the document being checked, you believe you can produce a more accurate search result. 
+<br>
+<br>Your program will be given a search string, followed by a set of documents. You will calculate the score for each document and print it to output in the order the document appears in the input. To calculate the score for a document you must first calculate the term score for each term appearing in the search string. A term score is the number of times a term occurs in the search string multiplied by the number of times it occurs in the document. The document score is the sum of the square roots of each term score. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of a set of documents separated by single lines containing only ten dashes, "---------" No line will be longer than 250 characters. No document will be longer than 100 lines. The first document is the search string. The input terminates with two lines of ten dashes in a row. 
+<br>
+<br>The input documents will use the full ASCII character set. You must parse each document into a set of terms. 
+<br>
+<br>Terms are separated by whitespace in the input document. Comparisons between terms are case-insensitive. Punctuation is removed from terms prior to comparisons, e.g. "don't" becomes "dont" The resulting terms should contain only the characters {[a-z],[0-9]}. A term in the input consisting only of punctuation should be ignored. You may assume the search string and each document will have at least one valid term. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output is a series of scores, one per line, printed to two decimal places. The scores are printed in the order the documents occur in the input. No other characters may appear in the output. </div><p class="pst">Sample Input</p><pre class="sio">fee fi fo fum 
+---------- 
+fee, fi, fo! fum!! 
+---------- 
+fee fee fi, me me me 
+---------- 
+---------- </pre><p class="pst">Sample Output</p><pre class="sio">4.00
+2.41</pre><p class="pst">

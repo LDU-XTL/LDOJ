@@ -1,0 +1,7 @@
+</p><div class="ptx" lang="en-US">There are three berries on a round birthday cake. You are required to divide the cake into three identical parts such that each part contains exactly one berry. To make it easy, it is assumed that the radius of the berries is 0 and each part of the cake is a sector with 120 degrees. Any line that divides the cake should not go through any berry.
+<br><center><img src=images/1675_1.jpg></center></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains a single integer t (1 <= t <= 20) that indicates the number of test cases. Then follow the t cases. Each case contains exactly 7 integers r, x1, y1, x2, y2, x3 and y3. r is the radius of the cake, (xi, yi) is the coordinates of i-th berry. The center of the cake is at (0, 0) and it's confirmed that all the berries will be on the cake.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case, output 'Yes' if there is a valid solution, 'No' otherwise.</div><p class="pst">Sample Input</p><pre class="sio">2
+2 1 1 -1 1 0 -1
+10 0 9 1 8 -1 8
+</pre><p class="pst">Sample Output</p><pre class="sio">Yes
+No
+</pre><p class="pst">

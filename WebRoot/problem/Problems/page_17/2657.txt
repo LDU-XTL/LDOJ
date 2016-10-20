@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">A game-board consists of N fields placed around a circle. Fields are successively numbered from1 to N clockwise. In some fields there may be obstacles.
+<br>
+<br>Player starts on a field marked with number 1. His goal is to reach a given field marked with number Z. The only way of moving is a clockwise jump of length K. The only restriction is that the fields the player may jump to should not contain any obstacle.
+<br>
+<br>For example, if N = 13, K = 3 and Z = 9, the player can jump across the fields 1, 4, 7, 10, 13, 3, 6 and 9, reaching his goal under condition that none of these fields is occupied by an obstacle.
+<br>
+<br>Your task is to write a program that finds the smallest possible number K.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">First line of the input consists of integers N, Z and M, 2 <= N <= 1000, 2 <= Z <= N, 0 <= M <= N - 2. N represents number of fields on the game-board and Z is a given goal-field.
+<br>
+<br>Next line consists of M different integers that represent marks of fields having an obstacle. It is confirmed that fields marked 1 and Z do not contain an obstacle.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output a line contains the requested number K described above.</div><p class="pst">Sample Input</p><pre class="sio">9 7 2
+2 3
+</pre><p class="pst">Sample Output</p><pre class="sio">3</pre><p class="pst">

@@ -1,0 +1,29 @@
+</p><div class="ptx" lang="en-US">A vocational preference test, unlike an aptitude test, seeks to identify careers that the candidate might find satisfying. Based on the answers to a slew of seemingly inane multiple-choice questions like the one below, the test determines which occupations suit the candidate's personality. 
+<br><pre>   Which would you rather spend an afternoon doing?
+<br>
+<br>   (a) feeding chickens
+<br>   (b) driving a race car
+<br>   (c) watching The Simpsons on TV
+<br>   (d) suntanning
+<br>   (e) building a dog house</pre>
+<br>Each question asks the candidate to express a preference from among five activities, selected from a common larger set. That is, activities like feeding chickens or suntanning are likely to appear in several different questions. 
+<br>If a candidate answers A in a question containing A, B, C, D, E as alternatives, this choice indicates a preference for A over each of B, C, D, E. Also, if one answer indicates a preference for X over Y and one or more other answers indicate a preference for Y over Z, the combined set of answers indicates a preference for X over Z. 
+<br>
+<br>The candidate may provide contradictory answers; that is, the answers may indicate a preference for X over Y and also for Y over X. These contradictions indicate inconsistency, a personalitiy attribute that may suggest a career in politics or used auto sales. 
+<br>
+<br>Given a set of answers to a vocational preference test, you are to partition the activities into the minimal number of sets such that, for each pair within a given set, the answers indicate a contradictory preference. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several test cases followed by a line containing 0. Each case begins with n, the number of questions in the test. n lines follow, each containing the names of five distinct activities, followed by the candidate's answer - one of the five alternatives. Each activity is named by a single upper case letter. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output the sets, one per line. Output the elements of each set in alphabetical order, and output the sets in alphabetical order by their least element. The sets should together contain exactly the set of activities that appear in the input. Leave an empty line between test cases. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">4
+A B C D E C
+F C H I J J
+K B H I F I
+K C E B J K
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">A
+B
+C
+D
+E
+F
+H
+I J K
+</pre><p class="pst">

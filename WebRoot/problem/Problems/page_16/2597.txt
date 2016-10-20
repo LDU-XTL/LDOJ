@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">Bob has drawn some line segments on the x-axis. But he is unsatisfied with his work, because some line segments overlap with others. So he decides to erase some of them so that none of them overlaps with others. Of course, Bob only wants to erase the minimum number of line segments. Clever Bob quickly finds a method to do this, but now he wants to know how many different choices he has to remove the overlapping?</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains multiple test cases. For each test case, it consists of M + 1 lines:
+<br>Line 1: a single positive integer M (M <= 80), indicating the number of line segments Bob has drawn. 
+<br>Line 2 to M +1: each contains two different integers S, E (-10000 <= S, E <=10000), indicating the two end positions of a line segment.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output the number of sticks Bob will erase and the number of different choices in a single line, separated by a single space.</div><p class="pst">Sample Input</p><pre class="sio">5
+1 3
+3 5
+4 6
+8 9
+4 6
+1
+1 3
+</pre><p class="pst">Sample Output</p><pre class="sio">2 3
+0 1
+</pre><p class="pst">

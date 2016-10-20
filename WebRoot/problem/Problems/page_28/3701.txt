@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US"><div><p>Rubik's Cube is one of the most popular toys in the world. For convenience, let's mark the six faces by 1 to 6 and its expanded view is illustrated in Fig-1. Fig-2 shows the 18 possible moves. This problem considers a variation of Rubik's Cube. In our cube, the 54 stickers are marked by either 0 or 1, instead of six colors. Given the expanded view of a cube, your task is to take several moves that makes all the stickers marked by 1 located on the face marked by 1.</p><p><img border="0" src="images/3671_1.PNG">Fig-1</img></p><p><img border="0" src="images/3671_2.PNG">Fig-2</img></p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The expanded view of the cube.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Print “yes” or “no” in the first line to indicate “the task could be done” or “the task is impossible”. When “yes” is printed, the second line should be an integer <i>T</i>, the number of moves you take. The following <i>T</i> lines describe your moves by its number as in Fig-2. Any answer with <i>T</i> &le; 10000 is available.</p></div><p class="pst">Sample Input</p><pre class="sio"><pre>
+   000
+   000
+   000
+000100000000
+000100000000
+000100000000
+   011
+   011
+   011
+<pre>
+</pre><p class="pst">Sample Output</p><pre class="sio">yes
+1
+8
+</pre><p class="pst">

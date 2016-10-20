@@ -1,0 +1,29 @@
+</p><div class="ptx" lang="en-US"><div>The International Clown and Pierrot Competition (ICPC), is one of the most distinguished and also the most popular events on earth in the show business. <!-- end en only --><!-- begin en only --><p>One of the unique features of this contest is the great number of judges that sometimes counts up to one hundred. The number of judges may differ from one contestant to another, because judges with any relationship whatsoever with a specific contestant are temporarily excluded for scoring his/her performance. </p><!-- end en only --><!-- begin en only --><p>Basically, scores given to a contestant's performance by the judges are averaged to decide his/her score. To avoid letting judges with eccentric viewpoints too much influence the score, the highest and the lowest scores are set aside in this calculation. If the same highest score is marked by two or more judges, only one of them is ignored. The same is with the lowest score. The average, which may contain fractions, are truncated down to obtain final score as an integer. </p><!-- end en only --><!-- begin en only --><p>You are asked to write a program that computes the scores of performances, given the scores of all the judges, to speed up the event to be suited for a TV program. </p><!-- end en only --></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><!-- begin en only --><p>The input consists of a number of datasets, each corresponding to a contestant's performance. There are no more than 20 datasets in the input. </p><!-- end en only --><!-- begin en only --><p>A dataset begins with a line with an integer <i>n</i>, the number of judges participated in scoring the performance (3 ≤ <i>n</i> ≤ 100). Each of the <i>n</i> lines following it has an integral score <i>s</i> (0 ≤ <i>s</i> ≤ 1000) marked by a judge. No other characters except for digits to express these numbers are in the input. Judges' names are kept secret. </p><!-- end en only --><!-- begin en only --><p>The end of the input is indicated by a line with a single zero in it. </p><!-- end en only --></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div><!-- begin en only --><p>For each dataset, a line containing a single decimal integer indicating the score for the corresponding performance should be output. No other characters should be on the output line. </p></div></div><p class="pst">Sample Input</p><pre class="sio">3
+1000
+342
+0
+5
+2
+2
+9
+11
+932
+5
+300
+1000
+0
+200
+400
+8
+353
+242
+402
+274
+283
+132
+402
+523
+0</pre><p class="pst">Sample Output</p><pre class="sio">342
+7
+300
+326</pre><p class="pst">

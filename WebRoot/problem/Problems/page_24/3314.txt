@@ -1,0 +1,40 @@
+</p><div class="ptx" lang="en-US"><p>The Knick Knack Plaque Shack designs plaques of unusual shapes. All the plaques are 1 inch deep, and have a wide variety of shapes, some of which are shown below.</p><p><center><img src = "images/3314_1.gif"></img></center></p><p>Ben Fitt is one of several workers in the shipping department (part of the Knick Knack Plaque Shack Pack, as they like to call themselves). Each day he is assigned the task of shipping all the plaques of a certain width to the various department stores which sell them. He has at his disposal boxes with a depth of 1 and a width equal to the plaques' width. As the plaques come off the assembly line, he fits them into the boxes one at a time. When placed in a box, each plaque will slide down until some part of it touches the topmost plaque already in the box (or the bottom of the box if it is the first plaque). For example, if the leftmost plaque above came off the assembly line first, followed by the middle and then the rightmost, they would stack up one on top of the other as shown on the left. If they came off the assembly line in reverse order, they would stack up as shown on the right.</p><p><center><img src = "images/3314_2.gif"></img></center></p><p>When a plaque comes off the assembly line which will not fit into the box (i.e., it sticks up over the top), Ben closes that box, ships it off, and starts a new box. In the above examples, the height of the boxes is only 12, so it would take two boxes for the first ordering of plaques, but only one for the second. During his free moments between packing plaques, Ben wonders what it would be like if hundreds of computer programmers tried to write code to simulate this monotonous drudgery.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input will consist of multiple test cases. Each test case will start with a line containing three integers <i>n</i> <i>w</i> <i>b</i>, where <i>n</i> indicates the number of plaques to ship, <i>w</i> indicates the width of each plaque, and <i>b</i> indicates the height of each shipping box. These values will lie in the ranges 1 ... 100, 1 ... 10 and 1 ... 100, respectively. Following this line will be <i>n</i> specifications of plaque shapes. Each shape specification starts with a single line containing the integer height <i>h</i> of the plaque (1 &le; h &le; 10 and h &le; b). Following this will be <i>h</i> lines containing <i>w</i> characters each, where each character is either 'X' (indicating a part of the plaque ) or '.', indicating empty space. The order in which the plaques appear in the input is the order in which they must be packed in the boxes, and rotating or inverting the plaques is not allowed. The input file will end with the line 0 0 0.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output a single line containing the maximum height of the plaques in each box, in the order in which they are filled.</p></div><p class="pst">Sample Input</p><pre class="sio">3 5 12
+5
+XXXXX
+.XXXX
+..XXX
+...XX
+....X
+4
+XXX..
+..X..
+..XXX
+..X..
+6
+X....
+X....
+X....
+X....
+X....
+XXXXX
+3 5 12
+6
+X....
+X....
+X....
+X....
+X....
+XXXXX
+4
+XXX..
+..X..
+..XXX
+..X..
+5
+XXXXX
+.XXXX
+..XXX
+...XX
+....X
+0 0 0</pre><p class="pst">Sample Output</p><pre class="sio">9 6
+10</pre><p class="pst">

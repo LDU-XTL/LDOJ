@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">Farmer John's cows have taken a side job designing interesting punch-bowl designs. The designs are created as follows:
+<br><ul>* A flat board of size W cm x H cm is procured (3 <= W <= 300, 3 <= H <= 300)
+<br>* On every 1 cm x 1 cm square of the board, a 1 cm x 1 cm block is placed.  This block has some integer height B (1 <= B <= 1,000,000,000)</ul>
+<br>The blocks are all glued together carefully so that punch will not drain through them. They are glued so well, in fact, that the corner blocks really don't matter!
+<br>
+<br>FJ's cows can never figure out, however, just how much punch their bowl designs will hold. Presuming the bowl is freestanding (i.e., no special walls around the bowl), calculate how much juice the bowl can hold.  Some juice bowls, of course, leak out all the juice on the edges and will hold 0.</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: Two space-separated integers, W and H
+<br>
+<br>* Lines 2..H+1: Line i+1 contains row i of bowl heights: W space-separated integers each of which represents the height B of a square in the bowl.  The first integer is the height of column 1, the second integers is the height of column 2, and so on.</div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: A single integer that is the number of cc's the described bowl will hold.</div><p class="pst">Sample Input</p><pre class="sio">4 5
+5 8 7 7
+5 2 1 5
+7 1 7 1
+8 9 6 9
+9 8 9 9
+</pre><p class="pst">Sample Output</p><pre class="sio">12</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">OUTPUT DETAILS:
+<br>
+<br>Fill-up the two squares of height 1 to height 5, for 4 cc for each square. Fill the square of height 2 to height 5, for 3 cc of joice.  Fill the square of height 6 to height 7 for 1 cc of juice.  2*4 + 3 + 1 = 12.</div><p class="pst">

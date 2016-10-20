@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">A D0L (Deterministic Lindenmayer system without interaction) system consists of a finite set SIGMA of symbols (the alphabet), a finite set P of productions and a starting string w. The productions in P are of the form x -> u, where x in SIGMA and u in SIGMA+ (u is called the right side of the production), SIGMA+ is the set of all strings of symbols from SIGMA excluding the empty string. Such productions represent the transformation of the symbol x into the string u. For each symbol x in SIGMA , P contains exactly one production of the form x -> u. Direct derivation from string u1 to u2 consists of replacing each occurrence of the symbol x in SIGMA in u1 by the string on the right side of the production for that symbol. The language of the D0L system consists of all strings which can be derived from the starting string w by a sequence of the direct derivations. 
+<br>Suppose that the alphabet consists of two symbols a and b. So the set of productions includes two productions of the form a -> u, b -> v, where u and v in {a,b}+, and the starting string w in {a,b}+. Can you answer whether there exists a string in the language of the D0L system of the form xzy for a given string z? (x and y are some strings from SIGMA*, SIGMA* is the set of all strings of symbols from SIGMA, including the empty string.). Certainly you can. Write the program which will solve this problem. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input of the program consists of several blocks of lines. Each block includes four lines. There are no empty lines between any successive two blocks. The first line of a block contains the right side of the production for the symbol a. The second one contains the right side of the production for the symbol b and the third one contains the starting string and the fourth line the given string z. The right sides of the productions, the given string z and the starting string are at most 15 characters long. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each block in the input there is one line in the output containing YES or NO according to the solution of the given problem. </div><p class="pst">Sample Input</p><pre class="sio">aa
+bb
+ab
+aaabb
+a
+b
+ab
+ba</pre><p class="pst">Sample Output</p><pre class="sio">YES
+NO</pre><p class="pst">

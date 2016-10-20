@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">One of the reasons for which École polytechnique (nicknamed ``X" for reasons to be explained during the debriefing talk) is so deeply rooted in French society is its famous network of camarades - former students of the same school. When one camarade wants something (money, job, etc.), he can ask this network for help and support. In practice, this means that when he/she wants to reach some other camarade, not always of the same year, then surely he can find intermediate camarades to get to her/him. Note that the ``camarade" relationship is symmetric. Due to the magic of the X network, there is always a means to reach anybody. 
+<br>
+<br>The program you have to write is supposed to help to minimize the number of these intermediate camarades. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The huge file of all living camarades is simplified so as to obey the following format. The first line in the file is the number of camarades, say N , an integer 1<=N<=10<sup>5</sup> . Camarades are labeled from 0 to N - 1 . Follow N lines. Each line starts with the camarade label c , followed by the number of other camarades he/she knows, say n<sub>c</sub> , followed by the labels of those nc camarades. All these integers are separated by a single blank. It is assumed that nc is always less than 100. The last line in the file is the label of the camarade seeking help (say c1 ) followed by the label of the camarade he wants help from, say c2 ( c2 != c1 ). </div><p class="pst">Output</p><div class="ptx" lang="en-US">Your program should output three integers separated by a blank: c1 , c2 and the minimal number of intermediate camarades to reach c2 . </div><p class="pst">Sample Input</p><pre class="sio">4
+0 3 1 2 3
+1 1 0
+2 2 0 3
+3 2 0 2
+1 2
+</pre><p class="pst">Sample Output</p><pre class="sio">1 2 1
+</pre><p class="pst">

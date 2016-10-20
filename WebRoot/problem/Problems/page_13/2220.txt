@@ -1,0 +1,47 @@
+</p><div class="ptx" lang="en-US">You've been a treasure hunter for a long time. You're pretty good at disarming traps, sneaking past the natives, and generally getting the goods while leaving your skin intact. That stuff doesn't really worry you, but what really raises a sweat is after each expedition there are always very tense arguments about how to split up the loot. You've worked with all kinds of characters and nobody ever agrees on what each piece of treasure is actually worth. You need to come up with a way of splitting the booty as fairly as possible. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input to this problem will consist of a (non-empty) series of up to 100 data sets. Each data set will be formatted according to the following description, and there will be no blank lines separating data sets. 
+<br>
+<br>A single data set has 5 components: 
+<br><ol><li>Start line - A single line, "START" 
+<br><li>Number of Treasures - A single line with a single integer, t, where 1 <= t <= 8, indicating the number of treasures. 
+<br><li>Number of Hunters - A single line with a single integer, h, where 1 <= h <= 6, indicating the number of treasure hunters. 
+<br><li>Treasure Value List - A series of h lines, one for each hunter in sequence (line 1 for hunter 1, line 2 for hunter 2, etc.). Each line contains a space-separated list of estimated treasure values for that hunter. The first estimate on each line is for treasure 1, the second is for treasure 2, etc., and an estimate for each treasure will appear for every hunter. Each estimate will be a positive integer strictly less than 10000. 
+<br><li>End line - A single line, "END" </ol>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each input data set, there will be exactly one output set, and there will be exactly one blank line separating output sets. 
+<br>
+<br>Each output set consists of multiple lines, where each line represents a hunter (listed in the same order as the corresponding input data set). Each line contains a list of the treasures given to that hunter followed by the total perceived cash value (by that hunter), of all the treasures they receive. Treasures will be listed in ascending order by treasure number, and all values on each line will be space-separated. 
+<br>
+<br>Treasures will be divided among the hunters in the fairest way possible. The "fairest" way to divide the treasure is defined to be the distribution with the minimum difference between the highest perceived total value and the lowest perceived total value of treasures received by any hunter. In other words, find the distribution that minimizes the difference between the hunter that gets the "most" and the hunter that gets the "least." 
+<br>
+<br>There will not be multiple "fair" distributions. </div><p class="pst">Sample Input</p><pre class="sio">START
+5
+3
+42 500 350 700 100
+250 200 500 1000 75
+150 400 800 800 150
+END
+START
+5
+3
+42 500 350 200 100
+250 200 500 1000 75
+150 400 800 800 150
+END
+START
+5
+3
+500 500 350 200 100
+250 200 500 1000 75
+150 400 800 800 150
+END
+</pre><p class="pst">Sample Output</p><pre class="sio">4 700
+3 5 575
+1 2 550
+
+1 4 5 342
+3 500
+2 400
+
+1 2 1000
+4 1000
+3 5 950
+</pre><p class="pst">

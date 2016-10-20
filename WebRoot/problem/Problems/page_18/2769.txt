@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">T. Chur teaches various groups of students at university U. Every U-student has a unique Student Identification Number (SIN). A SIN s is an integer in the range 0 &le; s &le; MaxSIN with MaxSIN = 10<sup>6</sup>-1. T. Chur finds this range of SINs too large for identification within her groups. For each group, she wants to find the smallest positive integer m, such that within the group all SINs reduced modulo m are unique. </div><p class="pst">Input</p><div class="ptx" lang="en-US">On the first line of the input is a single positive integer N, telling the number of test cases (groups) to follow. Each case starts with one line containing the integer G (1 &le; G &le; 300): the number of students in the group. The following G lines each contain one SIN. The SINs within a group are distinct, though not necessarily sorted. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output one line containing the smallest modulus m, such that all SINs reduced modulo m are distinct. </div><p class="pst">Sample Input</p><pre class="sio">2
+1
+124866
+3
+124866
+111111
+987651
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+8
+</pre><p class="pst">

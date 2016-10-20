@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">When FJ's friends visit him on the farm, he likes to show them around. His farm comprises N (1 <= N <= 1000) fields numbered 1..N, the first of which contains his house and the Nth of which contains the big barn.  A total M (1 <= M <= 10000) paths that connect the fields in various ways. Each path connects two different fields and has a nonzero length smaller than 35,000.
+<br>
+<br>To show off his farm in the best way, he walks a tour that starts at his house, potentially travels through some fields, and ends at the barn.  Later, he returns (potentially through some fields) back to his house again.
+<br>
+<br>He wants his tour to be as short as possible, however he doesn't want to walk on any given path more than once. Calculate the shortest tour possible.  FJ is sure that some tour exists for any given farm.</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: Two space-separated integers: N and M.
+<br>
+<br>* Lines 2..M+1: Three space-separated integers that define a path: The starting field, the end field, and the path's length.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">A single line containing the length of the shortest tour.
+<br></div><p class="pst">Sample Input</p><pre class="sio">4 5
+1 2 1
+2 3 1
+3 4 1
+1 3 2
+2 4 2</pre><p class="pst">Sample Output</p><pre class="sio">6
+</pre><p class="pst">

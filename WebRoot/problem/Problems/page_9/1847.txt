@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">Tram network in Zagreb consists of a number of intersections and rails connecting some of them. In every intersection there is a switch pointing to the one of the rails going out of the intersection. When the tram enters the intersection it can leave only in the direction the switch is pointing. If the driver wants to go some other way, he/she has to manually change the switch.
+<br>
+<br>When a driver has do drive from intersection A to the intersection B he/she tries to choose the route that will minimize the number of times he/she will have to change the switches manually.
+<br>
+<br>Write a program that will calculate the minimal number of switch changes necessary to travel from intersection A to intersection B.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains integers N, A and B, separated by a single blank character, 2 <= N <= 100, 1 <= A, B <= N, N is the number of intersections in the network, and intersections are numbered from 1 to N.
+<br>
+<br>Each of the following N lines contain a sequence of integers separated by a single blank character. First number in the i-th line, Ki (0 <= Ki <= N-1), represents the number of rails going out of the i-th intersection. Next Ki numbers represents the intersections directly connected to the i-th intersection.Switch in the i-th intersection is initially pointing in the direction of the first intersection listed.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The first and only line of the output should contain the target minimal number. If there is no route from A to B the line should contain the integer "-1". </div><p class="pst">Sample Input</p><pre class="sio">3 2 1
+2 2 3
+2 3 1
+2 1 2
+</pre><p class="pst">Sample Output</p><pre class="sio">0</pre><p class="pst">

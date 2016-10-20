@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">Goneril is a very sleep-deprived cow. Her day is partitioned into N (3 <= N <= 3,830) equal time periods but she can spend only B (2 <= B < N) not necessarily contiguous periods in bed.  Due to her bovine hormone levels, each period has its own utility U_i (0 <= U_i <= 200,000), which is the amount of rest derived from sleeping during that period.  These utility values are fixed and are independent of what Goneril chooses to do, including when she decides to be in bed.
+<br>
+<br>With the help of her alarm clock, she can choose exactly which periods to spend in bed and which periods to spend doing more critical items such as writing papers or watching baseball. However, she can only get in or out of bed on the boundaries of a period.
+<br>
+<br>She wants to choose her sleeping periods to maximize the sum of the utilities over the periods during which she is in bed.  Unfortunately, every time she climbs in bed, she has to spend the first period falling asleep and gets no sleep utility from that period.
+<br>
+<br>The periods wrap around in a circle; if Goneril spends both periods N and 1 in bed, then she does get sleep utility out of period 1.
+<br>
+<br>What is the maximum total sleep utility Goneril can achieve?</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: Two space-separated integers: N and B
+<br>
+<br>* Lines 2..N+1: Line i+1 contains a single integer, U_i, between 0 and 200,000 inclusive</div><p class="pst">Output</p><div class="ptx" lang="en-US">The day is divided into 5 periods, with utilities 2, 0, 3, 1, 4 in that order. Goneril must pick 3 periods.</div><p class="pst">Sample Input</p><pre class="sio">5 3
+2
+0
+3
+1
+4</pre><p class="pst">Sample Output</p><pre class="sio">6</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">INPUT DETAILS:
+<br>
+<br>The day is divided into 5 periods, with utilities 2, 0, 3, 1, 4 in that order. Goneril must pick 3 periods.
+<br>
+<br>OUTPUT DETAILS:
+<br>
+<br>Goneril can get total utility 6 by being in bed during periods 4, 5, and 1, with utilities 0 [getting to sleep], 4, and 2 respectively.</div><p class="pst">

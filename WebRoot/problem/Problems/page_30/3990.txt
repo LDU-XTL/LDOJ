@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">In geometry the Fermat point of a triangle, also called Torricelli point, is a point such that the total distance from the three vertices of the triangle to the point is the minimum. It is so named because this problem is first raised by Fermat in a private letter. In the following picture, P<sub>0</sub> is the Fermat point. You may have already known the property that:
+<br>
+<br><center><img src="http://media.openjudge.cn/images/g3607/fermat.png"></center>
+<br>
+<br>Alice and Bob are learning geometry. Recently they are studying about the Fermat Point. 
+<br>Alice: I wonder whether there is a similar point for quadrangle.
+<br>Bob: I think there must exist one.
+<br>Alice: Then how to know where it is? How to prove?
+<br>Bob: I don’t know. Wait… the point may hold the similar property as the case in triangle. 
+<br>Alice: It sounds reasonable. Why not use our computer to solve the problem? Find the Fermat point, and then verify your assumption.
+<br>Bob: A good idea.
+<br>
+<br>So they ask you, the best programmer, to solve it. Find the Fermat point for a quadrangle, i.e. find a point such that the total distance from the four vertices of the quadrangle to that point is the minimum.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains no more than 1000 test cases.
+<br>Each test case is a single line which contains eight float numbers, and it is formatted as below:
+<br> x<sub>1</sub> y<sub>1</sub> x<sub>2</sub> y<sub>2</sub> x<sub>3</sub> y<sub>3</sub> x<sub>4</sub> y<sub>4</sub>
+<br>x<sub>i</sub>, y<sub>i</sub> are the x- and y-coordinates of the i<sup>th</sup> vertices of a quadrangle. They are float numbers and satisfy 0 ≤ x<sub>i</sub> ≤ 1000 and 0 ≤ y<sub>i</sub> ≤ 1000 (i = 1, …, 4).
+<br>The input is ended by eight -1.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, find the Fermat point, and output the total distance from the four vertices to that point. The result should be rounded to four digits after the decimal point.</div><p class="pst">Sample Input</p><pre class="sio">0 0 1 1 1 0 0 1
+1 1 1 1 1 1 1 1
+-1 -1 -1 -1 -1 -1 -1 -1
+</pre><p class="pst">Sample Output</p><pre class="sio">2.8284
+0.0000
+</pre><p class="pst">

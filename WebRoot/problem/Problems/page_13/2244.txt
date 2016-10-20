@@ -1,0 +1,27 @@
+</p><div class="ptx" lang="en-US">Surely you have made the experience that when too many people use the Internet simultaneously, the net becomes very, very slow.
+<br>To put an end to this problem, the University of Ulm has developed a contingency scheme for times of peak load to cut off net access for some cities of the country in a systematic, totally fair manner. Germany's cities were enumerated randomly from 1 to n. Freiburg was number 1, Ulm was number 2, Karlsruhe was number 3, and so on in a purely random order.
+<br>Then a number m would be picked at random, and Internet access would first be cut off in city 1 (clearly the fairest starting point) and then in every mth city after that, wrapping around to 1 after n, and ignoring cities already cut off. For example, if n=17 and m=5, net access would be cut off to the cities in the order [1,6,11,16,5,12,2,9,17,10,4,15,14,3,8,13,7]. The problem is that it is clearly fairest to cut off Ulm last (after all, this is where the best programmers come from), so for a given n, the random number m needs to be carefully chosen so that city 2 is the last city selected. 
+<br>
+<br>Your job is to write a program that will read in a number of cities n and then determine the smallest integer m that will ensure that Ulm can surf the net while the rest of the country is cut off. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will contain one or more lines, each line containing one integer n with 3 <= n < 150, representing the number of cities in the country.
+<br>Input is terminated by a value of zero (0) for n.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each line of the input, print one line containing the integer m fulfilling the requirement specified above.</div><p class="pst">Sample Input</p><pre class="sio">3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">2
+5
+2
+4
+3
+11
+2
+3
+8
+16
+</pre><p class="pst">

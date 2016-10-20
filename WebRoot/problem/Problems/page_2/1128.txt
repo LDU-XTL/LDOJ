@@ -1,0 +1,49 @@
+</p><div class="ptx" lang="en-US">Consider the following 5 picture frames placed on an 9 x 8 array.
+<br><pre>
+<br>........ ........ ........ ........ .CCC....
+<br>EEEEEE.. ........ ........ ..BBBB.. .C.C....
+<br>E....E.. DDDDDD.. ........ ..B..B.. .C.C....
+<br>E....E.. D....D.. ........ ..B..B.. .CCC....
+<br>E....E.. D....D.. ....AAAA ..B..B.. ........
+<br>E....E.. D....D.. ....A..A ..BBBB.. ........
+<br>E....E.. DDDDDD.. ....A..A ........ ........
+<br>E....E.. ........ ....AAAA ........ ........
+<br>EEEEEE.. ........ ........ ........ ........
+<br>    1        2        3        4        5   </pre>
+<br>Now place them on top of one another starting with 1 at the bottom and ending up with 5 on top. If any part of a frame covers another it hides that part of the frame below.
+<br>
+<br>Viewing the stack of 5 frames we see the following.
+<br><pre>
+<br>.CCC....
+<br>ECBCBB..
+<br>DCBCDB..
+<br>DCCC.B..
+<br>D.B.ABAA
+<br>D.BBBB.A
+<br>DDDDAD.A
+<br>E...AAAA
+<br>EEEEEE..
+<br>
+<br></pre>
+<br>
+<br>
+<br>In what order are the frames stacked from bottom to top? The answer is EDABC.
+<br>
+<br>Your problem is to determine the order in which the frames are stacked from bottom to top given a picture of the stacked frames. Here are the rules:
+<br>
+<br>1. The width of the frame is always exactly 1 character and the sides are never shorter than 3 characters.
+<br>
+<br>2. It is possible to see at least one part of each of the four sides of a frame. A corner shows two sides.
+<br>
+<br>3. The frames will be lettered with capital letters, and no two frames will be assigned the same letter. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Each input block contains the height, h (h<=30) on the first line and the width w (w<=30) on the second. A picture of the stacked frames is then given as h strings with w characters each.
+<br>Your input may contain multiple blocks of the format described above, without any blank lines in between. All blocks in the input must be processed sequentially.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Write the solution to the standard output. Give the letters of the frames in the order they were stacked from bottom to top. If there are multiple possibilities for an ordering, list all such possibilities in alphabetical order, each one on a separate line. There will always be at least one legal ordering for each input block. List the output for all blocks in the input sequentially, without any blank lines (not even between blocks).</div><p class="pst">Sample Input</p><pre class="sio">9
+8
+.CCC....
+ECBCBB..
+DCBCDB..
+DCCC.B..
+D.B.ABAA
+D.BBBB.A
+DDDDAD.A
+E...AAAA
+EEEEEE..</pre><p class="pst">Sample Output</p><pre class="sio">EDABC</pre><p class="pst">

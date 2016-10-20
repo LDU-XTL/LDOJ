@@ -1,0 +1,53 @@
+</p><div class="ptx" lang="en-US">Unfortunately, Peter's Calculator broke down last week. Now Peter is left with his computer, which has no calculator application, and paper and pencil, which is too tiresome for an engineer. As one of Peter's friends, you are asked to write him a calculator application. After talking to him, you figure out the following: 
+<br><ul>
+<br><li>Peter does only integer arithmetic. The operations he needs are addition, subtraction and multiplication. 
+<br><li>He would like to use an arbitrary number of variables whose names are not longer than 50 characters. 
+<br><li>His main way of doing calculations are to type in a few formulas and to assign them to variables. Some formulas are complicated expressions, which can refer to yet undefined variables, while other formulas consist of a single number. Then Peter asks for the value of some variables, i.e. he evaluates the formulas. 
+<br><li>Peters wants to redefine some variables and then to reevaluate formulas that depend on these variables. 
+<br></ul>
+<br>The input strictly adheres to the following syntax (given in EBNF): 
+<br><pre>
+<br>file = line { line } <EOF>.
+<br>line = [ assignment | print | reset ] <CR>.
+<br>assignment = var ":=" expression.
+<br>print = "PRINT" var.
+<br>reset = "RESET".
+<br>expression = term { addop term }.
+<br>term = factor { mulop factor }.
+<br>factor = "(" expression ")" | var | number.
+<br>addop = "+" | "-".
+<br>mulop = "*". </pre>
+<br>
+<br>
+<br>In the Extended Backus-Naur Formalism (EBNF), A = B C declares that the grammatical construct A consists of a B followed by a C. A = B | C means that A consists of a B or, alternatively, of a C. A = [ B ] defines construct A to be either a B or nothing and A = { B } tells you that A consists of the concatenation of any number of Bs (including none).
+<br>
+<br>The production var stands for the name of a variable, which starts with a letter followed by up to 49 letters or digits. Letters may be uppercase or lowercase. The production number stands for a integer number. The precise syntax for these productions are given below. The case of letters is important for both variables and statements. 
+<br><pre>
+<br>var = letter { letter | digit }.
+<br>number = [ "-" ] digit { digit }.
+<br>letter = "A" | "B" | ... | "Z" | "a" | "b" | ... | "z".
+<br>digit = "0" | "1" | ... | "8" | "9".</pre>
+<br>
+<br>
+<br>Between the parts of a grammatical construct but not within the names of variables or integer numbers, any number of spaces may appear. <EOF> stands for the end of the input file and <CR> stands for the new-line character. All lines in the input file are shorter than 200 characters.
+<br>
+<br>The value of a variable is said to be undefined: 
+<br><ul>
+<br><li>if it has not yet been defined or it refers to a variable, which has not yet been defined; 
+<br><li>if the definition of the variable contains a cycle. 
+<br></ul>
+<br>Your are to write a program that implements Peter's calculator. It should store all variable definitions and for each "PRINT" statement evaluate the specified variable based on the latest variable definitions. If your program encounters a "RESET" statement, it should delete all stored variables so that all variables become undefined. 
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains calculations adhering to the syntax given above. Each line contains either an assignment to a variable, a "PRINT" statement, a "RESET" statement or nothing. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each "PRINT" statement found in the input, your program should output a line containing the numerical value of the specified variable or the word "UNDEF" if the variable is undefined. </div><p class="pst">Sample Input</p><pre class="sio">a := b + c
+b := 3
+c := 5
+PRINT d
+PRINT a
+b := 8
+PRINT a
+RESET
+PRINT a
+</pre><p class="pst">Sample Output</p><pre class="sio">UNDEF
+8
+13
+UNDEF</pre><p class="pst">

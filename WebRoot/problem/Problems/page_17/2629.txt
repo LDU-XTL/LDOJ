@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US">Given two strings of lowercase letters, a and b, print the longest string x of lowercase letters such that there is a permutation of x that is a subsequence of a and there is a permutation of x that is a subsequence of b.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of pairs of lines. The first line of a pair contains a and the second contains b. Each string is on a separate line and consists of at most 1,000 lowercase letters. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each subsequent pair of input lines, output a line containing x. If several x satisfy the criteria above, choose the first one in alphabetical order. </div><p class="pst">Sample Input</p><pre class="sio">pretty
+women
+walking
+down
+the
+street
+</pre><p class="pst">Sample Output</p><pre class="sio">e
+nw
+et
+
+</pre><p class="pst">

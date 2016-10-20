@@ -1,0 +1,44 @@
+</p><div class="ptx" lang="en-US">Lazy functional languages like Haskell and Miranda support features that are not found in other programming languages, including infinite lists. Consider the following simple (and useful) recursive declaration: 
+<br>letrec
+<br> count n = cons n (count (n+1))
+<br>in
+<br> count 0
+<br>
+<br>The function cons constructs lists, so the above declaration creates the following structure: 
+<br>
+<br>cons 0 (count 1)
+<br>= cons 0 (cons 1 (count 2))
+<br>= cons 0 (cons 1 (cons 2 ...))
+<br>= [0,1,2,...]
+<br>
+<br>Lazy languages can do this because they only evaluate expressions that are actually used. If a program creates an infinite list and only looks at items 2 and 3 in it, the values in positions 0 and 1 are never evaluated and the list structure is only evaluated so far as the fourth node. 
+<br>
+<br>It is also possible to use more than one function to build an infinite list. Here is a declaration that creates the list ["even","odd","even",...]: 
+<br>
+<br>letrec
+<br> even = cons "even" odd
+<br> odd = cons "odd" even
+<br>in
+<br> even
+<br>
+<br>There are also functions that manipulate infinite lists. The functions take and drop can be used to remove elements from the start of the list, returning the (removed) front elements or the remainder of the list, respectively. Another useful function is zip, which combines two lists like the slider on a zipper combines the teeth. For example, 
+<br>
+<br>zip (count 0) (count 10) = [0,10,1,11,2,12,...]
+<br>
+<br>Your task is to implement a subset of this functionality. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input consists of two positive integers, n and m. n is the number of declarations to follow and m is the number of test cases. 
+<br>
+<br>Each declaration takes the form name = expr. There are two forms for expr : zip name1 name2 and x0 x1 ... xi name3. In the first case, name is the result of zipping name1 and name2 together. The other case defines the first i + 1 non-negative integers in the list name (where i is at least 0) and name3 is the name of the list that continues it (mandatory--all lists will be infinite). 
+<br>
+<br>The test cases take the form name s e, where s and e are non-negative integers, s <= e and e - s < 250. 
+<br>
+<br>No line of input will be longer than 80 characters. Names consist of a single capital letter. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print the integers in positions s to e of the list name. List elements are numbered starting with 0. </div><p class="pst">Sample Input</p><pre class="sio">5 3
+S = 4 3 2 1 A
+O = 1 O
+E = 0 E
+A = zip E O
+Z = zip Z S
+A 43455436 43455438
+S 2 5
+Z 1 10</pre><p class="pst">Sample Output</p><pre class="sio">0 1 0
+2 1 0 1
+4 4 3 4 2 3 1 4 0 2</pre><p class="pst">

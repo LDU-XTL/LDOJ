@@ -1,0 +1,7 @@
+</p><div class="ptx" lang="en-US">There is a very simple but interesting game. In this game we have a match and a table with some parallel lines on it (as shown in the figure). We have known that the distance between two neighboring lines on the table are all 1 and the length of the match is L. For the match is very thin, we ignore the width of the match, and treat the match as a line segment. Then we throw the match for 1000 times, sometimes the match will intersect with lines (the case that one ending point of the match is on the lines is also treated as intersecting), and sometimes not. When throwing, we count how many times the match intersects with the lines (we use P to record the number of intersecting cases). You job is to calculate the most probable value of P.
+<br><center><img src=images/2598_1.jpg></center>
+<br>Why this game is interesting? Let's take L = 0.5 for example, in this case, P will be 318. 1000 / 318 = 3.14..., do you see something interesting?</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of many test cases. Each case contains a float number L (0 < L < 10) in a single line.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case, output P in a single line.</div><p class="pst">Sample Input</p><pre class="sio">0.5
+1.21
+</pre><p class="pst">Sample Output</p><pre class="sio">318
+718
+</pre><p class="pst">

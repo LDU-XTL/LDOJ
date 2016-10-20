@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">John owns a furniture workshop. His clients are very rich people, so they often order furniture suites made of precious sorts of hardwood. 
+<br>
+<br>Recently John has got a series of orders from his clients, so now he needs to cut a hardwood board to several pieces. The board has a rectangular form of m * n feet. John has marked the outlines of the pieces to cut out on the board, and is planning to use his circular saw to cut it. 
+<br>
+<br>However, there is a little problem. Due to the construction of the circular saw, it is only possible to make straight cuts starting at the edge of the board. Although, after cutting away a part of the board Johncan take it away and make a cut from the new part of the edge, some pieces still cannot be separated using a circular saw. For example, pieces 'C' and 'D' on the picture below cannot be separated, neither can 'E' and 'Z'. To deal with such situations John will need to use his fret-saw to finish the cutting. 
+<br>
+<br>Now John wonders what is the maximal number of parts he can cut the board to with his circular saw,so that he needs less work to do with his fret-saw. Help him to find that out. After cutting some part away John can rearrange the parts in any way he likes. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains two integer numbers m and n - the sizes of the board(1 <= m, n <= 20). 
+<br>
+<br>The following m lines contain n characters each and describe the marking of the board. Each unit squarefoot of the initial board is marked with some English letter or digit. Unit squares that belong to thesame piece are marked with the same character. All unit squares that are marked with some character form an edge-connected piece of hardwood. Capital and lower-case letters are considered different. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Output one line containing the number of parts that John can cut the board to with his circular saw.</div><p class="pst">Sample Input</p><pre class="sio">6 7
+CCCDDAA
+CCDDDAa
+EEEEEEE
+EEEZEEE
+EEEZEGG
+EEEZEGG</pre><p class="pst">Sample Output</p><pre class="sio">5
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><img src=images/2798_1.jpg></div><p class="pst">

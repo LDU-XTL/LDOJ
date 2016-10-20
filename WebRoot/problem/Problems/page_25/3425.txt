@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US"><p>Customer support department in an &quot;Incomprehension Amateurs, Ltd&quot; software company has call center for answering users' questions. Support prices are as follows:<br><table border="border"><tr><td>1.</td><td>Answer to a question</td><td>10 USD</td></tr><tr><td>2.</td><td>Correct answer to a question</td><td>20 USD</td></tr><tr><td>3.</td><td>Correct answer to a question with explanation</td><td>40 USD</td></tr><tr><td>4.</td><td>Correct answer to a question which was already correctly answered before</td><td>+10 USD for each previous correct answerD</td></tr></table></p><p>So, for example, if user asks the same question three times, first receives incorrect answer, then correct one, and the third time correct answer with explanation, it will cost him 10 + 20 + (40 + 1 * 10) = 80 USD.</p><p>Customers are billed monthly according to call log. Company engineers review the log and for each question determine:</p><p>1. unique number, so the equivalent questions have same numbers,<br>2. whether the answer was correct,<br>3. whether the answer was short or included detailed enough explanation. </p><p>Given that data, your program must calculate the payment amount.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input file contains number of calls <i>N</i> followed by <i>N</i> triples <i>q<sub>i</sub></i> <i>a<sub>i</sub></i> <i>x<sub>i</sub></i>, where <i>q<sub>i</sub></i> is integer question number, <i>a<sub>i</sub></i> = 1 if the answer was correct, 0 otherwise, <i>x<sub>i</sub></i> = 1 if explanation was given, 0 otherwise.</p><h4>Constraints</h4><p>1 ≤ <i>N</i> ≤ 10000, 1 ≤ <i>q<sub>i</sub></i> ≤ 10<sup>6</sup>. </p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output file must contain a single number — payment amount.</p></div><p class="pst">Sample Input</p><pre class="sio"><b>Sample Input 1</b>
+1
+9834 0 1
+<b>Sample Input 2</b>
+3
+33 1 0
+33 0 0
+33 1 1</pre><p class="pst">Sample Output</p><pre class="sio"><b>Sample Output 1</b>
+10
+<b>Sample Output 2</b>
+80</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Bold texts appearing in the sample sections are informative and do not form part of the actual data.</div><p class="pst">

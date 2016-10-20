@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">Sociologists are interested in the phenomenon of "friendship". To study this property, they analyze various groups of people. For each two persons in such a group they determine whether they are friends (it is assumed that this relation is symmetric). The sociologists are mostly interested in the sets of friends. The set S of people is the set of friends if every two persons in S are friends. However, studying the sets of friends turns out to be quite complicated, since there are too many such sets. Therefore, they concentrate just on the maximal sets of friends. A set of friends S is maximal if every person that does not belong to S is not a friend with someone in S.
+<br>
+<br>Your task is to determine the number of maximal sets of friends in each group. In case this number exceeds 1 000, you just need to report this -- such a group is too complicated to study. 
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several instances, separated by single empty lines. 
+<br>
+<br>The first line of each instance consists of two integers 1 &le; n &le; 128 and m -- number of persons in the group and number of friendship relations. Each of m following lines consists of two integers ai and bi (1 &le; ai, bi &le; n). This means that persons ai and bi (ai &ne; bi) are friends. Each such relationship is described at most once. 
+<br>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output for each instance consists of a single line containing the number of maximal sets of friends in the described group, or string "Too many maximal sets of friends." in case this number is greater than 1 000. </div><p class="pst">Sample Input</p><pre class="sio">5 4
+1 2
+3 4
+2 3
+4 5</pre><p class="pst">Sample Output</p><pre class="sio">4</pre><p class="pst">

@@ -1,0 +1,4 @@
+</p><div class="ptx" lang="en-US">Bulls are so much better at math than the cows. They can multiply huge integers together and get perfectly precise answers ... or so they say. Farmer John wonders if their answers are correct. Help him check the bulls' answers. Read in two positive integers (no more than 40 digits each) and compute their product.  Output it as a normal number (with no extra leading zeros).
+<br>
+<br>FJ asks that you do this yourself; don't use a special library function for the multiplication.</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Lines 1..2: Each line contains a single decimal number.</div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: The exact product of the two input lines</div><p class="pst">Sample Input</p><pre class="sio">11111111111111
+1111111111</pre><p class="pst">Sample Output</p><pre class="sio">12345679011110987654321</pre><p class="pst">

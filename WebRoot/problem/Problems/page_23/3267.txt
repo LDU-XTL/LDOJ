@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US"><p>Few know that the cows have their own dictionary with <i>W</i> (1 &le; <i>W</i> &le; 600) words, each containing no more 25 of the characters 'a'..'z'. Their cowmunication system, based on mooing, is not very accurate; sometimes they hear words that do not make any sense. For instance, Bessie once received a message that said &quot;browndcodw&quot;. As it turns out, the intended message was &quot;browncow&quot; and the two letter &quot;d&quot;s were noise from other parts of the barnyard.</p><p>The cows want you to help them decipher a received message (also containing only characters in the range 'a'..'z') of length <i>L</i> (2 &le; <i>L</i> &le; 300) characters that is a bit garbled. In particular, they know that the message has some extra letters, and they want you to determine the smallest number of letters that must be removed to make the message a sequence of words from the dictionary.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US">Line 1: Two space-separated integers, respectively: <i>W</i> and <i>L</i>
+<br>Line 2: <i>L</i> characters (followed by a newline, of course): the received message
+<br>Lines 3..<i>W</i>+2: The cows' dictionary, one word per line</div><p class="pst">Output</p><div class="ptx" lang="en-US">Line 1: a single integer that is the smallest number of characters that need to be removed to make the message a sequence of dictionary words.</div><p class="pst">Sample Input</p><pre class="sio">6 10
+browndcodw
+cow
+milk
+white
+black
+brown
+farmer</pre><p class="pst">Sample Output</p><pre class="sio">2</pre><p class="pst">

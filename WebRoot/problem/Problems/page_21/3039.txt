@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US">Lacking even a fifth grade education, the cows are having trouble with a fraction problem from their textbook. Please help them. The problem is simple:
+<br>
+<br>Given a properly reduced fraction (i.e., the greatest common divisor of the numerator and denominator is 1, so the fraction cannot be further reduced) find the smallest properly reduced fraction with numerator and denominator in the range 1..32,767 that is closest (but not equal) to the given fraction.</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: Two positive space-separated integers N and D (1 <= N < D <= 32,767), respectively the numerator and denominator of the given fraction</div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: Two space-separated integers, respectively the numerator and denominator of the smallest, closest fraction different from the input fraction.</div><p class="pst">Sample Input</p><pre class="sio">2 3
+</pre><p class="pst">Sample Output</p><pre class="sio">21845 32767</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">INPUT DETAILS:
+<br>2/3
+<br>
+<br>OUTPUT DETAILS:
+<br>21845/32767 = .666676839503.... ~ 0.666666.... = 2/3.</div><p class="pst">

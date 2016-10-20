@@ -1,0 +1,44 @@
+</p><div class="ptx" lang="en-US">Tom is a barber in a small town. He owns a little store, several apprentices and good credit for his high quality service. However, as his customers become more and more, he got some problems.
+<br>Let's look at the procedure of the haircut at first. Customers are served to change clothes for haircut; after having the hair washed, start the haircut; wash the hair again after that, get the hair dried, change the clothes back and then pay. In Tom's store, he does every haircut, dry work and cash job by himself and leaves the changing clothes and washing hair to his apprentices. Assume each action takes 1 unit time, as shown in Fig. 1.
+<br><center><img src=images/2667_1.jpg></center>
+<br>Usually, Tom pipelines the whole procedure, so that he could serve several customers at the same time. Here is the simple case for two customers:
+<br><center><img src=images/2667_2.jpg></center>
+<br>However, when three customers are coming together, the simple pipeline will meet the problem:
+<br><center><img src=images/2667_3.jpg></center>
+<br>At time 5 and time 7, both customer 1 and 3 need Tom. It is too bad, Tom could only do one thing in 1-unit time, but how could he let his customers wait for him with their hair wet? 
+<br>Of course this is not a big deal for Tom. He just add some wait units in his procedure, as described in Fig. 4:
+<br><center><img src=images/2667_4.jpg></center>
+<br>Nobody will complain for a little rest after haircut and dry, and now all three customers are served in time (Fig. 5).
+<br><center><img src=images/2667_5.jpg></center>
+<br>But what should Tom do for more complicated situations?
+<br>
+<br>Now Tom needs your help. Assuming Tom is able to know when the customer comes, you will judge whether it is possible to add some wait units into the procedure to satisfy:
+<br>
+<br>(1) Enable all the customers to be served as soon as they come (Customers are impatient and will leave if they could not be served in time). 
+<br>(2) Eliminate the collisions in the pipeline (The collision means that Tom has to serve two and more than two customers at the same time, but many customers can be served to change clothes or wash hair at the same time, because there are enough apprentices)
+<br>
+<br>Some other notes you need to keep in mind: 
+<br>
+<br>(1) The wait units you add must be finite.
+<br>(2) The wait units can be adjacent.
+<br>(3) The procedure for every customer should be the same. Nobody is happy to wait more time than others. 
+<br>(4) You can only add wait units into procedure, but not exchange or remove any existing step. The original sequence must be kept: Change-Wash-Cut-Wash-Dry-Change-Pay.</div><p class="pst">Input</p><div class="ptx" lang="en-US">There are several test cases in the input.
+<br>
+<br>The following lines describe test cases. Each line for one case is given in such format:
+<br>
+<br>(n<sub>1</sub>, n<sub>2</sub>, ... n<sub>k</sub> )				0 < n<sub>i</sub> <= 20, 0 < k <= 20
+<br>
+<br>It gives the time when customers come. n<sub>i</sub> represents the interval time of each sequential customer. The parenthesis means that the customer will come periodically. 
+<br>For example, assuming the first customer at time 1, if the customers arrive at 1, 3, 5, 7, 9, 11, 13, ... the representation is (2). The representation (1,3,7) represents that the customers will come at time 1, 2, 5, 12, 13, 16, 23, 24, 27, 34... 
+<br>
+<br>The example shown in Fig. 5 the description corresponds to the representation (1), and of course more customers will come in time 4, 5, 6, 7...
+<br>
+<br>A line containing "(0)" ends the input.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Your task is to decide whether there is a solution to add FINITE wait units into the haircut procedure to eliminate the collision in the pipeline and enable all the customers to be served as soon as he comes. If it can be solved, print "Yes", otherwise "No", each in one line.
+<br>
+<br>For example, for the input (1), you can add 2 wait units as shown in Fig. 5 above to solve the situation of 3 customers, but when more and more customers come, you can't satisfy everyone except adding more and more wait units. There is not an end. So the answer is "No". For the input (2,3,7), you may add 4 wait units into the procedure to satisfy the pipeline, as explained in Fig. 6. So the answer is "Yes". 
+<br><center><img src=images/2667_6.jpg></center></div><p class="pst">Sample Input</p><pre class="sio">(1)
+(2,3,7)
+(0)
+</pre><p class="pst">Sample Output</p><pre class="sio">No
+Yes
+</pre><p class="pst">

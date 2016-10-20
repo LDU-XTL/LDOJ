@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">John is the only priest in his town. October 26th is the John's busiest day in a year because there is an old legend in the town that the couple who get married on that day will be forever blessed by the God of Love. This year N couples plan to get married on the blessed day. The i-th couple plan to hold their wedding from time Si to time Ti. According to the traditions in the town, there must be a special ceremony on which the couple stand before the priest and accept blessings. Moreover, this ceremony must be longer than half of the wedding time and can't be interrupted. Could you tell John how to arrange his schedule so that he can hold all special ceremonies of all weddings? 
+<br> 
+<br>Please note that: 
+<br>John can not hold two ceremonies at the same time. 
+<br>John can only join or leave the weddings at integral time. 
+<br>John can show up at another ceremony immediately after he finishes the previous one.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several test cases and ends with a line containing a zero. 
+<br>In each test case, the first line contains a integer N ( 1 ≤ N ≤ 100,000) indicating the total number of the weddings. 
+<br>In the next N lines, each line contains two integers Si and Ti. (0 &lt;= Si &lt; Ti &lt;= 2147483647)</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test, if John can hold all special ceremonies, print "YES"; otherwise, print “NO”.</div><p class="pst">Sample Input</p><pre class="sio">3 
+1 5 
+2 4 
+3 6 
+2 
+1 5 
+4 6 
+0</pre><p class="pst">Sample Output</p><pre class="sio">NO
+YES</pre><p class="pst">

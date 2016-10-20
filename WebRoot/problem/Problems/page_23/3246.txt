@@ -1,0 +1,7 @@
+</p><div class="ptx" lang="en-US"><body><p>Wintokk likes playing games on convex-hull. One day, Dragon wants to test him.</p><p>Dragon has drawn <i>N</i> points on a plane with no points in the same place. Dragon wants to know the smallest of the <i>N</i> convex-hulls formed by removing exactly one point from the <i>N</i> points.</p><p>But Wintokk is so stupid. Can you help him find the smallest area after removing a single point?</p></body></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input contains several test cases.</p><p>Each test starts with an integer <i>N</i>(4 &le; <i>N</i> &lt; 10<sup>5</sup>+1), the total number of points on the plane.</p><p>The next <i>N</i> lines, each contains two integers <i>x</i> and <i>y</i>, indicating the position of the point.</p><p>The input ends up with <i>N</i>=0.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output the smallest area with two digits after the decimal point.</p></div><p class="pst">Sample Input</p><pre class="sio">4
+1 0
+0 0
+0 1
+1 1
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">0.50</pre><p class="pst">

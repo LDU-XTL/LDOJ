@@ -1,0 +1,31 @@
+</p><div class="ptx" lang="en-US">When a radio station is broadcasting over a very large area, repeaters are used to retransmit the signal so that every receiver has a strong signal. However, the channels used by each repeater must be carefully chosen so that nearby repeaters do not interfere with one another. This condition is satisfied if adjacent repeaters use different channels.
+<br>
+<br>Since the radio frequency spectrum is a precious resource, the number of channels required by a given network of repeaters should be minimised. You have to write a program that reads in a description of a repeater network and determines the minimum number of channels required.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of a number of maps of repeater networks. Each map begins with a line containing the number of repeaters. This is between 1 and 26, and the repeaters are referred to by consecutive upper-case letters of the alphabet starting with A. For example, ten repeaters would have the names A,B,C,...,I and J. A network with zero repeaters indicates the end of input.
+<br>
+<br>Following the number of repeaters is a list of adjacency relationships. Each line has the form:
+<br>
+<br>A:BCDH
+<br>
+<br>which indicates that the repeaters B, C, D and H are adjacent to the repeater A. The first line describes those adjacent to repeater A, the second those adjacent to B, and so on for all of the repeaters. If a repeater is not adjacent to any other, its line has the form
+<br>
+<br>A:
+<br>
+<br>The repeaters are listed in alphabetical order.
+<br>
+<br>Note that the adjacency is a symmetric relationship; if A is adjacent to B, then B is necessarily adjacent to A. Also, since the repeaters lie in a plane, the graph formed by connecting adjacent repeaters does not have any line segments that cross. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each map (except the final one with no repeaters), print a line containing the minumum number of channels needed so that no adjacent channels interfere. The sample output shows the format of this line. Take care that channels is in the singular form when only one channel is required.</div><p class="pst">Sample Input</p><pre class="sio">2
+A:
+B:
+4
+A:BC
+B:ACD
+C:ABD
+D:BC
+4
+A:BCD
+B:ACD
+C:ABD
+D:ABC
+0</pre><p class="pst">Sample Output</p><pre class="sio">1 channel needed.
+3 channels needed.
+4 channels needed. </pre><p class="pst">

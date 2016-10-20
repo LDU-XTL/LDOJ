@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US">Coco is a clever boy, who is good at mathematics. However, he is puzzled by a difficult mathematics problem. The problem is: Given three integers N, K and M, N may adds ('+') M, subtract ('-') M, multiples ('*') M or modulus ('%') M (The definition of '%' is given below), and the result will be restored in N. Continue the process above, can you make a situation that "[(the initial value of N) + 1] % K" is equal to "(the current value of N) % K"? If you can, find the minimum steps and what you should do in each step. Please help poor Coco to solve this problem. 
+<br>
+<br>You should know that if a = b * q + r (q > 0 and 0 <= r < q), then we have a % q = r.</div><p class="pst">Input</p><div class="ptx" lang="en-US">There are multiple cases. Each case contains three integers N, K and M (-1000 <= N <= 1000, 1 < K <= 1000, 0 < M <= 1000) in a single line.
+<br> 
+<br>The input is terminated with three 0s. This test case is not to be processed.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case, if there is no solution, just print 0. Otherwise, on the first line of the output print the minimum number of steps to make "[(the initial value of N) + 1] % K" is equal to "(the final value of N) % K". The second line print the operations to do in each step, which consist of '+', '-', '*' and '%'. If there are more than one solution, print the minimum one. (Here we define '+' < '-' < '*' < '%'. And if A = a1a2...ak and B = b1b2...bk are both solutions, we say A < B, if and only if there exists a P such that for i = 1, ..., P-1, ai = bi, and for i = P, ai < bi)</div><p class="pst">Sample Input</p><pre class="sio">2 2 2
+-1 12 10
+0 0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">0
+2
+*+
+</pre><p class="pst">

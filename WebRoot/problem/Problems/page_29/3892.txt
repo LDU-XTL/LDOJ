@@ -1,0 +1,5 @@
+</p><div class="ptx" lang="en-US">The positive integer n is given. It is known that n = p * q, where p and q are primes, q &lt;= p and |q - kp| &lt;= 10<sup>5</sup> for some given positive integer k. You must find p and q.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Each line contains integers n (1 < n < 10<sup>120</sup>) and k (0 < k < 10<sup>8</sup>).</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each pair of numbers n and k print in separate line the product p * q  such that q &lt;= p.</div><p class="pst">Sample Input</p><pre class="sio">35 1 
+121 1 
+1000730021 9</pre><p class="pst">Sample Output</p><pre class="sio">5 * 7 
+11 * 11 
+10007 * 100003</pre><p class="pst">

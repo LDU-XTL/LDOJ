@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">国际象棋的棋盘是黑白相间的8 * 8的方格，棋子放在格子中间。如下图所示：
+<br><center><img src=images/1657_1.jpg></center>
+<br>王、后、车、象的走子规则如下：
+<br><ul><li>王：横、直、斜都可以走，但每步限走一格。
+<br><li>后：横、直、斜都可以走，每步格数不受限制。
+<br><li>车：横、竖均可以走，不能斜走，格数不限。
+<br><li>象：只能斜走，格数不限。</ul>
+<br>
+<br>写一个程序，给定起始位置和目标位置，计算王、后、车、象从起始位置走到目标位置所需的最少步数。
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">第一行是测试数据的组数t（0 <= t <= 20）。以下每行是一组测试数据，每组包括棋盘上的两个位置，第一个是起始位置，第二个是目标位置。位置用"字母-数字"的形式表示，字母从"a"到"h"，数字从"1"到"8"。
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">对输入的每组测试数据，输出王、后、车、象所需的最少步数。如果无法到达,就输出"Inf".</div><p class="pst">Sample Input</p><pre class="sio">2
+a1 c3
+f5 f8</pre><p class="pst">Sample Output</p><pre class="sio">2 1 2 1
+3 1 1 Inf</pre><p class="pst">

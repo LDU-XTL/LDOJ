@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">The world financial crisis is quite a subject. Some people are more relaxed while others are quite anxious. John is one of them. He is very concerned about the evolution of the stock exchange. He follows stock prices every day looking for rising trends. Given a sequence of numbers p1, p2,...,pn representing stock prices, a rising trend is a subsequence pi1 &lt; pi2 &lt; ... &lt; pik, with i1 &lt; i2 &lt; ... &lt; ik. John’s problem is to find very quickly the longest rising trend.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Each data set in the file stands for a particular set of stock prices. A data set starts with the length L (L ≤ 100000) of the sequence of numbers, followed by the numbers (a number fits a long integer). 
+<br>White spaces can occur freely in the input. The input data are correct and terminate with an end of file.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The program prints the length of the longest rising trend.
+<br>For each set of data the program prints the result to the standard output from the beginning of a line.</div><p class="pst">Sample Input</p><pre class="sio">6 
+5 2 1 4 5 3 
+3  
+1 1 1 
+4 
+4 3 2 1</pre><p class="pst">Sample Output</p><pre class="sio">3 
+1 
+1</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">There are three data sets. In the first case, the length L of the sequence is 6. The sequence is 5, 2, 1, 4, 5, 3. The result for the data set is the length of the longest rising trend: 3.</div><p class="pst">

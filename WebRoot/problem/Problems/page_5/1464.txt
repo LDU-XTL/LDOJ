@@ -1,0 +1,46 @@
+</p><div class="ptx" lang="en-US">company pays different hourly wages for different job types. Each week the company keeps evidence of the total number of work hours for every job type and the total amount paid to all employees for that week. In different weeks different job types can be accomplished. The hourly wage for any job type in the same company remains unchanged. The hourly wage for any job type is a positive integer and the ratio between the maximum wage and the minimum wage is less than 6.
+<br>
+<br>You are asked to write a program that computes the hourly wage for every job type using the data collected a period of time (one or several weeks). The number of job types is limited to 200 and the number of weeks in one data set is limited to 50.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several data sets in text format.
+<br>
+<br>The format for the data set is:
+<br>
+<br>The number of lines for the data set;
+<br>information_for__one_or_more_weeks
+<br>The format of the information for a week is the following:
+<br>job_type1 number_of _hours1
+<br>job_type2 number_of _hours2
+<br>job_type3 number_of _hours3
+<br>... ...
+<br>. total_paid ( the dot marks the ending of info for a week)
+<br>
+<br>The job type is represented as a string of characters (limited to 20). The number of hours is a positive integer (smaller than 1E5). The total paid is a positive integer (smaller than 2E10).
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The program should write to standard output (for every job type involved in the data set) a line containing the job type and the hourly wage. The output for a data set ends with a line containing a dot.
+<br>
+<br>If the program cannot compute a unique hourly wage for every job type it will print "Incomplete data" and if it cannot compute an integer hourly wage it will print "Inconsistent data"
+<br>
+<br>An example is given in the following: 
+<br></div><p class="pst">Sample Input</p><pre class="sio">5
+job1 6
+job2 5
+job8 4
+job10 3
+. 100
+13
+job3 1
+job2 2
+. 40
+job1 3
+job2 1
+. 100
+job1 1
+job3 2
+job2 3
+. 100
+job1 1
+job2 5
+. 80</pre><p class="pst">Sample Output</p><pre class="sio">Incomplete data
+.
+job3 20
+job2 10
+job1 30
+.</pre><p class="pst">

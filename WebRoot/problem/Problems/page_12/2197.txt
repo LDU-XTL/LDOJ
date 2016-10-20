@@ -1,0 +1,63 @@
+</p><div class="ptx" lang="en-US">Every year, Jill takes a bicycle tour between two villages. There are different routes she can take between these villages, but she does have an upper limit on the distance that she wants to travel. Given a map of the region indicating the cities and the roads between them (and their distances), Jill would like to have a list of the various routes between the selected cities that will meet her distance requirements. Your task is to write a program that will produce a list of these routes, in increasing order of distance.
+<br>We make the following assumptions.
+<br><ul><li>At most one road connects any pair of villages, and this road is two-way and has a non-zero positive distance.
+<br><li>There are no roads that lead directly from a village back to the same village.
+<br><li>Jill is only concerned about a one-way trip. That is, she is not concerned about returning to the village from which she starts her tour.
+<br><li>Jill will not visit any village more than once during the tour.
+<br><li>The farthest Jill will ever travel is 9999 units</ul>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will contain several possible cases, each including a route map, identification of the start and destination villages, and the maximum distance Jill is willing to travel.
+<br>Each case appears in the input as a set of integers separated by blanks and/or ends of lines. The order and interpretation of these integers in each case is as follows:
+<br><ul><li>NV – the number of villages in the route map. This number will be no larger than 20.
+<br><li>NR – the number of roads that appear in the route map. Each road connects a distinct pair of villages.
+<br><li>NR triples, one for each road, containing C1, C2, and DIST – C1 and C2 identify two villages connected by a road, and DIST gives the distance between these villages on that road.
+<br><li>SV, DV – the numbers associated with the start and destination villages; the villages are numbered 1 to NV.
+<br><li>MAXDIST – the maximum distance Jill is willing to travel (one way).</ul>
+<br>The data for the last case will be followed by a single integer with the value –1.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case, display the case number (1, 2, ...) on the first line of output. Then, each on a separate additional line, list the routes that Jill might take preceded by the length of the route. Order the routes first by length, from shortest to longest. Within routes having the same length, order them in increasing lexicographic order. The sample input and output provide suitable examples, and the formatting shown there should be followed closely (each village number should be separated by a single space).
+<br>If there is no route, print out " NO ACCEPTABLE TOURS"
+<br>Separate the output for consecutive cases by a single blank line.</div><p class="pst">Sample Input</p><pre class="sio">4 5
+1 2 2
+1 3 3
+1 4 1
+2 3 2
+3 4 4
+1 3
+4
+
+4 5
+1 2 2
+1 3 3
+1 4 1
+2 3 2
+3 4 4
+1 4
+10
+
+5 7
+1 2 2
+1 4 5
+2 3 1
+2 4 2
+2 5 3
+3 4 3
+3 5 2
+1 3
+8
+
+-1
+</pre><p class="pst">Sample Output</p><pre class="sio">Case 1:
+ 3: 1 3 
+ 4: 1 2 3 
+
+Case 2:
+ 1: 1 4 
+ 7: 1 3 4 
+ 8: 1 2 3 4 
+
+Case 3:
+ 3: 1 2 3 
+ 7: 1 2 4 3 
+ 7: 1 2 5 3 
+ 8: 1 4 2 3 
+ 8: 1 4 3 
+</pre><p class="pst">

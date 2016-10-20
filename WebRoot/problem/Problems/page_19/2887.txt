@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US"><p>You are given a string and supposed to do some string manipulations.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of the input contains the initial string. You can assume that it is non-empty and its length does not exceed 1,000,000.</p><p>The second line contains the number of manipulation commands <i>N</i> (0 &lt; <i>N</i> <span lang="en-us">&le;</span> 2,000). The following <i>N</i> lines describe a command each. The commands are in one of the two formats below:</p><ol><li><tt>I ch p</tt>: Insert a character <i>ch</i> before the <i>p</i>-th character of the current string. If <i>p</i> is larger than the length of the string, the character is appended to the end of the string.</li><li><tt>Q p</tt>: Query the <i>p</i>-th character of the current string. The input ensures that the <i>p</i>-th character exists.</li></ol><p>All characters in the input are digits or lowercase letters of the English alphabet.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each <i>Q</i> command output one line containing only the single character queried.</p></div><p class="pst">Sample Input</p><pre class="sio">ab
+7
+Q 1
+I c 2
+I d 4
+I e 2
+Q 5
+I f 1
+Q 3</pre><p class="pst">Sample Output</p><pre class="sio">a
+d
+e</pre><p class="pst">

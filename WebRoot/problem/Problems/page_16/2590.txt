@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US">One steps through integer points of the straight line. The length of a step must be nonnegative and can be by one bigger than, equal to, or by one smaller than the length of the previous step. 
+<br>What is the minimum number of steps in order to get from x to y? The length of the first and the last step must be 1.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of a line containing n, the number of test cases.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, a line follows with two integers: 0 <= x <= y < 2^31. For each test case, print a line giving the minimum number of steps to get from x to y.</div><p class="pst">Sample Input</p><pre class="sio">3
+45 48
+45 49
+45 50
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+3
+4
+</pre><p class="pst">

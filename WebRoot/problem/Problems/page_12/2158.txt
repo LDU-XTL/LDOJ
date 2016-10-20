@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">Here is a difficult mathematics problem; your job is to solve it.
+<br>
+<br>Given two integer N and K, we have
+<br>A(N, K) = {a | a = (a1 a2 a3 … aN),  ai  is integer and 0 <= ai <= K-1, i = 1,...,N}.
+<br>
+<br>We define a function d = Image(a) from A(N, K) to A(N-1, K) as below:
+<br>For any a = (a1 a2 a3 ... aN), which is belonged to A(N, K), we have d = (d1 d2 ... d<sub>N-1</sub>) = Image(a) with di = min(ai, a<sub>i+1</sub>), i.e., di is the smaller one between ai and ai+1.
+<br>
+<br>You should calculate the expression below
+<br><center><img src=images/2158_1.jpg></center>
+<br>For any element a belonged to A(N, K), the expression first obtains d = (d1 d2 ... d<sub>N-1</sub>) = Image(a); then gain a value by calculating (d1+1)(d2+1)...(d<sub>N-1</sub>+1). Each a corresponding to a value, and f(N, K) is just the sum of these values.
+<br>
+<br>For example, If N = 2, K = 3, then A(N, K)={(00), (01), (02), (11), (10), (12), (20), (21), (22)}; the values obtained from each element in A(N, K) are 1, 1, 1, 2, 1, 2, 1, 2, 3 and we can know that  f(2, 3) = 14 by adding these values.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of only one line, which contains two integer N and K (N = 2, 3, 4. And if N=2, we has 1 <= K <= 5000; if N=3, we has 1 <= K <= 1000; if N=4, we has 1 <= K <= 500). </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output contains a single integer, which is the value of f(N, K). It's confirmed that the result is less than 2^63.</div><p class="pst">Sample Input</p><pre class="sio">2 3</pre><p class="pst">Sample Output</p><pre class="sio">14</pre><p class="pst">

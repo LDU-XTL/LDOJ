@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">Base on a real story, with real atom bombs!
+<br>
+<br>The little cat has been invited to visit the Chinese nuclear physics research institute, Mianyang, Sichuan Prov. N (1 <= N <= 500) atomic warheads have been displayed in a large room, and each one has been assigned to an uppercase letter. Look at the following graph:
+<br><center><img src=images\2779_1.jpg></center>
+<br>Three atomic warheads are displayed there, where two of them are assigned to letter ‘L’ and one of them to ‘O’. Visitors are only allowed to move back and forth on the guard line. At some point of the guard line, visitors may see some strange words formed by all the N letters. For instance, at the leftmost and rightmost part of the guard line, people may see a word “LOL” (words are obtained by letters from left to right). The positions that make some warheads blocked by others in line of sight should not be valid.
+<br>
+<br>You are given an expected word to be seen, along with the coordinates of atomic booms (x, y) where y > 0. The guard line is just the x-axis. You are to output the whole intervals of places on x-axis, where the expected word can be seen. The intervals (A1, B1), (A2, B2), ... (AM, BM) should be expressed as a sequence of 2 * M values, A1, B1, A2, B2, … AM, BM. A1 should be replaced by * if it is –infinity, similarly BM should be replaced by * if it is infinity. What is more, we have restrictions that A1 < B1 <= A2 < B2 <=… <= AM < BM. (since we are always using open intervals, Bi may be equal with A<sub>i+1</sub>)
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">First line – an integer N.
+<br>Second line – a sequence of N uppercase letters, denoting the expected word to be seen.
+<br>3rd – (2 + N)-th lines – each contains the information of a single atomic warhead: an uppercase letter (assigned to that warhead), and two integers Xi, Yi denoting the coordinate of this warhead. (-2000 <= Xi <= 2000, 0 < Yi <= 2000).
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">First line – an integer M.
+<br>Second line – 2 * M values. Values may be a single character *, or a real number. You should round the result to seven digits after the decimal point. We ensure double is OK for this problem.
+<br></div><p class="pst">Sample Input</p><pre class="sio">3
+LOL
+L 0 3
+O -1 2
+L 1 1
+</pre><p class="pst">Sample Output</p><pre class="sio">2
+* -3.0000000 3.0000000 *
+</pre><p class="pst">

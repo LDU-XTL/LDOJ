@@ -1,0 +1,34 @@
+</p><div class="ptx" lang="en-US">Order is an important concept in mathematics and in computer science. For example, Zorn's Lemma states: ``a partially ordered set in which every chain has an upper bound contains a maximal element.'' Order is also important in reasoning about the fix-point semantics of programs. 
+<br>
+<br>
+<br>This problem involves neither Zorn's Lemma nor fix-point semantics, but does involve order. 
+<br>Given a list of variable constraints of the form x < y, you are to write a program that prints all orderings of the variables that are consistent with the constraints. 
+<br>
+<br>
+<br>For example, given the constraints x < y and x < z there are two orderings of the variables x, y, and z that are consistent with these constraints: x y z and x z y. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of a sequence of constraint specifications. A specification consists of two lines: a list of variables on one line followed by a list of contraints on the next line. A constraint is given by a pair of variables, where x y indicates that x < y. 
+<br>
+<br>
+<br>All variables are single character, lower-case letters. There will be at least two variables, and no more than 20 variables in a specification. There will be at least one constraint, and no more than 50 constraints in a specification. There will be at least one, and no more than 300 orderings consistent with the contraints in a specification. 
+<br>
+<br>
+<br>Input is terminated by end-of-file. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each constraint specification, all orderings consistent with the constraints should be printed. Orderings are printed in lexicographical (alphabetical) order, one per line. 
+<br>
+<br>
+<br>Output for different constraint specifications is separated by a blank line. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">a b f g
+a b b f
+v w x y z
+v y x v z v w v</pre><p class="pst">Sample Output</p><pre class="sio">abfg
+abgf
+agbf
+gabf
+
+wxzvy
+wzxvy
+xwzvy
+xzwvy
+zwxvy
+zxwvy
+</pre><p class="pst">

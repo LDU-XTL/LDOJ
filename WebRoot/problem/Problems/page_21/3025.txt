@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US">Little John is in big trouble. Playing with his different-sized (and colored!) rings and glue seemed such a good idea... However, the rings now lay on the floor, glued together with something that will definitely not come off with water. Surprisingly enough, it seems like no rings are actually glued to the floor, only to other rings. How about that!
+<br>
+<br>You must help Little John to pick the rings off the floor before his mom comes home from work. Since the glue is dry by now, it seems like an easy enough task. This is not the case. Little John is an irrational kid of numbers, and so he has decided to pick up the largest component (most rings) of glued-together rings first. It is the number of rings in this largest component you are asked to find. Two rings are glued together if and only if they overlap at some point but
+<br>no rings will ever overlap in only a single point. All rings are of the doughnut kind (with a hole in them). They can however, according to Little John, be considered “infinitely thin”.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of a number ( > 0) of problems. Each problem starts with the number of rings, n, where 0 &le; n <= 100. After that, n rows follow, each containing a rings' physical attributes. That is, 3 floating point numbers, with an arbitraty number of spaces between them, describing the x coordinate and y coordinate for it's center and it's radius. All floating point numbers fit into the standard floating point type of your favorite programming language (e.g, float for C/C++). Input ends with a single row with the integer -1. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Output consists of as many answers as there were problems, each answer, on a separate line, being ‘The largest component contains X rings’ where X is the number of rings in the largest component.</div><p class="pst">Sample Input</p><pre class="sio">4
+0.0 0.0 1.0
+-1.5 -1.5 0.5
+1.5 1.5 0.5
+-2.0 2.0 3.5
+3
+3.0 2.0 2.0
+0.0 -0.5 1.0
+0.0 0.0 2.0
+5
+-2.0 0.0 1.0
+1.0 -1.0 1.0
+0.0 1.0 0.5
+2.0 0.0 1.0
+-1.0 1.0 1.0
+-1</pre><p class="pst">Sample Output</p><pre class="sio">The largest component contains 4 rings
+The largest component contains 2 rings
+The largest component contains 3 rings</pre><p class="pst">

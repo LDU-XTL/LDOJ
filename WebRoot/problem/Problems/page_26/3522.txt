@@ -1,0 +1,62 @@
+</p><div class="ptx" lang="en-US"><p>Given an undirected weighted graph <i>G</i>, you should find one of spanning trees specified as follows.</p><p>The graph <i>G</i> is an ordered pair (<i>V</i>, <i>E</i>), where <i>V</i> is a set of vertices {<i>v</i><sub>1</sub>, <i>v</i><sub>2</sub>, …, <i>v<sub>n</sub></i>} and <i>E</i> is a set of undirected edges {<i>e</i><sub>1</sub>, <i>e</i><sub>2</sub>, …, <i>e<sub>m</sub></i>}. Each edge <i>e</i> ∈ <i>E</i> has its weight <i>w</i>(<i>e</i>).</p><p>A spanning tree <i>T</i> is a tree (a connected subgraph without cycles) which connects all the n vertices with <i>n</i> − 1 edges. The slimness of a spanning tree <i>T</i> is defined as the difference between the largest weight and the smallest weight among the <i>n</i> − 1 edges of <i>T</i>.</p><div align="center"><img src="images/3522_1.png"><br>Figure 5: A graph <i>G</i> and the weights of the edges</div><p>For example, a graph <i>G</i> in Figure 5(a) has four vertices {<i>v</i><sub>1</sub>, <i>v</i><sub>2</sub>, <i>v</i><sub>3</sub>, <i>v</i><sub>4</sub>} and five undirected edges {<i>e</i><sub>1</sub>, <i>e</i><sub>2</sub>, <i>e</i><sub>3</sub>, <i>e</i><sub>4</sub>, <i>e</i><sub>5</sub>}. The weights of the edges are <i>w</i>(<i>e</i><sub>1</sub>) = 3, <i>w</i>(<i>e</i><sub>2</sub>) = 5, <i>w</i>(<i>e</i><sub>3</sub>) = 6, <i>w</i>(<i>e</i><sub>4</sub>) = 6, <i>w</i>(<i>e</i><sub>5</sub>) = 7 as shown in Figure 5(b).</p><div align="center"><img src="images/3522_2.png"><br>Figure 6: Examples of the spanning trees of <i>G</i></div><p>There are several spanning trees for <i>G</i>. Four of them are depicted in Figure 6(a)~(d). The spanning tree <i>T<sub>a</sub></i> in Figure 6(a) has three edges whose weights are 3, 6 and 7. The largest weight is 7 and the smallest weight is 3 so that the slimness of the tree <i>T<sub>a</sub></i> is 4. The slimnesses of spanning trees <i>T<sub>b</sub></i>, <i>T<sub>c</sub></i> and <i>T<sub>d</sub></i> shown in Figure 6(b), (c) and (d) are 3, 2 and 1, respectively. You can easily see the slimness of any other spanning tree is greater than or equal to 1, thus the spanning tree Td in Figure 6(d) is one of the slimmest spanning trees whose slimness is 1.</p><p>Your job is to write a program that computes the smallest slimness.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input consists of multiple datasets, followed by a line containing two zeros separated by a space. Each dataset has the following format.</p><div style="padding-left: 2em;"><table border="0"><tr><td><i>n</i></td><td><i>m</i></td><td></td></tr><tr><td><i>a</i><sub>1</sub></td><td><i>b</i><sub>1</sub></td><td><i>w</i><sub>1</sub></td></tr><tr><td></td><td align="center">⋮</td><td></td></tr><tr><td><i>a<sub>m</sub></i></td><td><i>b<sub>m</sub></i></td><td><i>w<sub>m</sub></i></td></tr></table></div><p>Every input item in a dataset is a non-negative integer. Items in a line are separated by a space. n is the number of the vertices and m the number of the edges. You can assume 2 ≤ <i>n</i> ≤ 100 and 0 ≤ <i>m</i> ≤ <i>n</i>(<i>n</i> − 1)/2. <i>a<sub>k</sub></i> and <i>b<sub>k</sub></i> (<i>k</i> = 1, …, <i>m</i>) are positive integers less than or equal to <i>n</i>, which represent the two vertices <i>v<sub>a<sub>k</sub></sub></i> and <i>v<sub>b<sub>k</sub></sub></i> connected by the <i>k</i>th edge <i>e<sub>k</sub></i>. <i>w<sub>k</sub></i> is a positive integer less than or equal to 10000, which indicates the weight of <i>e<sub>k</sub></i>. You can assume that the graph <i>G</i> = (<i>V</i>, <i>E</i>) is simple, that is, there are no self-loops (that connect the same vertex) nor parallel edges (that are two or more edges whose both ends are the same two vertices).</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each dataset, if the graph has spanning trees, the smallest slimness among them should be printed. Otherwise, −1 should be printed. An output should not contain extra characters.</p></div><p class="pst">Sample Input</p><pre class="sio">4 5
+1 2 3
+1 3 5
+1 4 6
+2 4 6
+3 4 7
+4 6
+1 2 10
+1 3 100
+1 4 90
+2 3 20
+2 4 80
+3 4 40
+2 1
+1 2 1
+3 0
+3 1
+1 2 1
+3 3
+1 2 2
+2 3 5
+1 3 6
+5 10
+1 2 110
+1 3 120
+1 4 130
+1 5 120
+2 3 110
+2 4 120
+2 5 130
+3 4 120
+3 5 110
+4 5 120
+5 10
+1 2 9384
+1 3 887
+1 4 2778
+1 5 6916
+2 3 7794
+2 4 8336
+2 5 5387
+3 4 493
+3 5 6650
+4 5 1422
+5 8
+1 2 1
+2 3 100
+3 4 100
+4 5 100
+1 5 50
+2 5 50
+3 5 50
+4 1 150
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">1
+20
+0
+-1
+-1
+1
+0
+1686
+50</pre><p class="pst">

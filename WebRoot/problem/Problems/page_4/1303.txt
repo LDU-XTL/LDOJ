@@ -1,0 +1,75 @@
+</p><div class="ptx" lang="en-US">You are a dealer at The One, the first all-binary casino in Las Vegas. What makes The One special is that its blackjack tables don't use cards; they use bytes (an 8-bit sequence representing a number from 0 to 255) and nibbles (a 4-bit sequence representing a number from 0 to 15). 
+<br>
+<br>All day long, you play the house's hand against individual opponents. Of course, the casino owners know their statistics, and they have devised a strategy for you that gives gamblers just less than even odds. 
+<br>
+<br>Here are the rules of binary blackjack: 
+<br><ol>
+<br><li>The goal of the game is to be the player closest to 510 points without going over. 
+<br><li>Each player is dealt two bytes, one face up and one face down. 
+<br><li>The players then have the opportunity to take more bytes (by saying, "Byte Me!") or more nibbles (by saying, "Nibble Me!") until he reaches his limit of 4 hits or has more than 510 points showing. 
+<br><li>All hits are played face up. 
+<br><li>If a player goes over 510, he immediately busts and loses the hand. 
+<br><li>The dealer hits last. 
+<br><li>The dealer wins any ties (this includes a tie where everyone busts). 
+<br></ol>
+<br>The rules for the dealer are (in order of precedence, where lower numbered rules override higher numbered ones): 
+<br><ol>
+<br><li>Never hit when it is certain that you've won by simply looking at your hand and what is showing of other people's hands. 
+<br><li>If your total is strictly less than 382 take a byte hit. 
+<br><li>If your total is less than or equal to 500 take a nibble hit. 
+<br><li>Take no hits 
+<br></ol></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input to this problem will consist of a (non-empty) series of up to 100 data sets. Each data set will be formatted according to the following description, and there will be no blank lines separating data sets. 
+<br>
+<br>A single data set has 6 components: 
+<br><ol>
+<br><li>Start line : A single line, "START N", where N is the number of players playing this hand (not including the dealer). There will never be more than 10 non-dealer players, and the dealer never plays by himself. 
+<br><li>Dealer Line : A single line containing 2 binary strings of exactly eight digits separated by exactly one space. These two strings represent the two cards in the dealer's hand. 
+<br><li>Player Line : A single line containing N 8-digit binary strings, each separated from the others by a single space. These represent the face-up cards of all of the non-dealer players. 
+<br><li>Byte Line : A single line containing 4 8-digit binary strings, each separated from the others by a single space. These represent the next 4 bytes in the byte deck, in the order they will be drawn. 
+<br><li>Nibble Line : A single line containing 4 4-digit binary strings, each separated from the others by a single space. These represent the next 4 nibbles in the nibble deck, in the order they will be drawn. 
+<br><li>End line : A single line, "END". 
+<br></ol>
+<br>Following the final data set will be a single line, "ENDOFINPUT". 
+<br>
+<br>
+<br>Here are some other useful facts: 
+<br><ul>
+<br><li>Oddly enough, each non-dealer player is always dealt a face-down card 11111111, value 255, but the dealer has no knowledge of this. 
+<br><li>Players other than the dealer never hit (they aren't too bright). 
+<br>
+<br></ul></div><p class="pst">Output</p><div class="ptx" lang="en-US">Calculate the actions taken by the dealer and how the dealer fares with the resulting hand. 
+<br>
+<br>
+<br>For each data set, there will be exactly one output set, consisting of the following components: 
+<br><ol>
+<br><li>Hand Line : A single line, "HAND N", where N is the number of players playing this hand (not including the dealer). 
+<br><li>Dealer Hit List : A single line will be printed for each hit the dealer takes on his turn. For a byte hit, print a line "Byte me!", and for a nibble hit print, "Nibble me!" 
+<br><li>Outcome Line : A single line containing "Win!" if the dealer wins, "Bust!" if the dealer loses by busting, and "Lose!" if the dealer loses without busting. 
+<br></ol></div><p class="pst">Sample Input</p><pre class="sio">START 1
+11111111 11111111
+00000001
+10101010 01010101 11110000 00001111
+1010 0101 1100 0011
+END
+START 1
+10111110 10111111 
+11111110
+00010010 10101010 01010101 11110000
+0001 1010 1100 0011
+END
+START 8
+11111111 00001000
+00000000 00000001 00000010 00000011 00000100 00000101 00000110 00000111 
+00010010 10101010 01010101 11110000
+0001 1010 1100 0011
+END
+ENDOFINPUT</pre><p class="pst">Sample Output</p><pre class="sio">HAND 1
+Win!
+HAND 1
+Byte me!
+Nibble me!
+Nibble me!
+Nibble me!
+Lose!
+HAND 8
+Win!</pre><p class="pst">

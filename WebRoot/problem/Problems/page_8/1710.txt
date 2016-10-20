@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US">The well-known magician David Copperfield loves to show the following trick: a square with N rows and N columns of different pictures appears on a TV screen. Let us number all the pictures in the following order: 
+<br><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=40%><TR><TD WIDTH="25%" VALIGN="TOP"><FONT SIZE=2><P ALIGN="CENTER">1</FONT></TD><TD WIDTH="25%" VALIGN="TOP"><FONT SIZE=2><P ALIGN="CENTER">2</FONT></TD><TD WIDTH="25%" VALIGN="TOP"><FONT SIZE=2><P ALIGN="CENTER">...</FONT></TD><TD WIDTH="25%" VALIGN="TOP"><FONT SIZE=2><P ALIGN="CENTER">N</FONT></TD></TR><TR><TD WIDTH="25%" VALIGN="TOP"><FONT SIZE=2><P ALIGN="CENTER">:</FONT></TD><TD WIDTH="25%" VALIGN="TOP"><FONT SIZE=2><P ALIGN="CENTER">:</FONT></TD><TD WIDTH="25%" VALIGN="TOP"><FONT SIZE=2><P ALIGN="CENTER">...</FONT></TD><TD WIDTH="25%" VALIGN="TOP"><FONT SIZE=2><P ALIGN="CENTER">:</FONT></TD></TR><TR><TD WIDTH="25%" VALIGN="TOP"><FONT SIZE=2><P ALIGN="CENTER">N*(N-1)+1</FONT></TD><TD WIDTH="25%" VALIGN="TOP"><FONT SIZE=2><P ALIGN="CENTER">N*(N-1)+2</FONT></TD><TD WIDTH="25%" VALIGN="TOP"><FONT SIZE=2><P ALIGN="CENTER">...</FONT></TD><TD WIDTH="25%" VALIGN="TOP"><FONT SIZE=2><P ALIGN="CENTER">N*N</FONT></TD></TR></TABLE></CENTER>
+<br>Each member of the audience is asked to put a finger on the upper left picture (i.e., picture number one) and The Magic begins: the magician tells the audience to move the finger k1 times through the pictures (each move is a shift of the finger to the adjacent picture up, down, left or right provided that there is a picture to move to), then with a slight movement of his hand he removes some of the pictures with an exclamation "You are not there!", and ... it is true - your finger is not pointing to any of the pictures removed. Then again, he tells the audience to make k2 moves, and so on. At the end he removes all the pictures but one and smiling triumphantly declares, "I've caught you" (applause). 
+<br>
+<br>Just now, David is trying to repeat this trick. Unfortunately, he had a hard day before, and you know how hard to conjure with a headache. You have to write a program that will help David to make his trick. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains a single integer number N (2<=N<=100). </div><p class="pst">Output</p><div class="ptx" lang="en-US">Your program should write the following lines with numbers to the output file: 
+<br>
+<br><pre><P>k<SUB>1</SUB> x<SUB>1,1</SUB> x<SUB>1,2</SUB> ... x<SUB>1,m1</SUB></P>
+<br><P>k<SUB>2</SUB> x<SUB>2,1</SUB> x<SUB>2,2</SUB> ... x<SUB>2,m2</SUB></P>
+<br><P>   ...</P>
+<br><P>k<SUB>e</SUB> x<SUB>e,1</SUB> x<SUB>e,2</SUB> ... x<SUB>e,me</SUB></P></pre>
+<br>where ki is a number of moves the audience should make on the i-th turn (2N<=k<=10000). All ki should be different (i.e. ki <> kj when i <> j). x<sub>i,1</sub>, x<sub>i,2</sub>, ... , x<sub>i, mi</sub> are the numbers of the pictures David should remove after the audience will make ki moves (the number of the pictures removed is arbitrary, but each picture should be listed only once, and at least one picture should be removed on each turn). 
+<br>
+<br>A description of the every next turn should begin with a new line. All numbers on each line should be separated by one space. After e iterations, all pictures except one should be removed. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">3
+</pre><p class="pst">Sample Output</p><pre class="sio">8 4 6
+13 9
+10 7 1
+7 8
+11 3 5
+</pre><p class="pst">

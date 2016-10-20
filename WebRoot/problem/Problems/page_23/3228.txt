@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US"><img src=images/3228_1.jpg align=right hspace=10 vspace=10>Recently, a number of gold mines have been discovered in Zorroming State. To protect this treasure, we must transport this gold to the storehouses as quickly as possible. Suppose that the Zorroming State consists of N towns and there are M bidirectional roads among these towns. The gold mines are only discovered in parts of the towns, while the storehouses are also owned by parts of the towns. The storage of the gold mine and storehouse for each town is finite. The truck drivers in the Zorroming State are famous for their bad temper that they would not like to drive all the time and they need a bar and an inn available in the trip for a good rest. Therefore, your task is to minimize the maximum adjacent distance among all the possible transport routes on the condition that all the gold is safely transported to the storehouses. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several test cases. For each case, the first line is integer N(1&lt;=N&lt;=200). The second line is N integers associated with the storage of the gold mine in every towns .The third line is also N integers associated with the storage of the storehouses in every towns .Next is integer M(0&lt;=M&lt;=(n-1)*n/2).Then M lines follow. Each line is three integers x y and d(1&lt;=x,y&lt;=N,0&lt;d&lt;=10000), means that there is a road between x and y for distance of d. N=0 means end of the input.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case, output the minimum of the maximum adjacent distance on the condition that all the gold has been transported to the storehouses or "No Solution".</div><p class="pst">Sample Input</p><pre class="sio">4
+3 2 0 0
+0 0 3 3
+6
+1 2 4
+1 3 10
+1 4 12
+2 3 6
+2 4 8
+3 4 5
+0</pre><p class="pst">Sample Output</p><pre class="sio">6</pre><p class="pst">

@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">In some simplistic DBMS named PreQueL, the only column type allowed is CHAR(1) (a single character), and furthermore, its values are restricted to English upper-case letters ('A' to 'Z'). Table may contain up to 9 columns, numbered from 1 to 9. Tables themselves are named with lower-case English letters ('a' to 'z').
+<br>
+<br>The only database query possible first joins all the tables, then selects some rows according to conditions in one of two forms: either < column>=< value> or < column1>=< column2>, for example a2=A or b1=c4. All conditions must hold simultaneously, as if they were connected by 'AND' operator.
+<br>
+<br>You must write a PreQueL processor, which, given a tables and a set of conditions, will produce query result, i.e. those rows of a join satisfying all the conditions. Resulting rows must be sorted alphabetically.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input file contains of two integers - number of tables T and number of conditions D.
+<br>
+<br>Starting from the second line there are T tables represented with number of rows RN and number of columns CN in the first line of a table, which is followed by RN lines consisting of exactly CN characters each. D lines with conditions follow the whole set of tables.
+<br>
+<br>The constraints are: 1 <= T <= 26, 1 <= D <= 50, 1 <= CN <= 9, 1 <= RN <= 1000.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output file contains result rows, one row per line. No input query will produce more than 1000 rows. The result rows are to be sorted alphabetically.</div><p class="pst">Sample Input</p><pre class="sio">2 2
+3 2
+AX
+BX
+BY
+2 3
+ACD
+BCC
+a1=b1
+a2=X</pre><p class="pst">Sample Output</p><pre class="sio">AXACD
+BXBCC
+</pre><p class="pst">

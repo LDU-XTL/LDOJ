@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">There is a well know game with words. Given a word you have to write as many other words as possible using the letters from the given word. If the letter repeats multiple times in the original word, you can use it up to as many times in the new words. The order of letters in the original word does not matter. For example, given the word CONTEST you can write NOTE, NET, ON, TEST, SET, etc.
+<br>Now you are in charge of writing a new dictionary. Your task is to sneak n new words into it. You know in advance m words Wi (1 &lt;= i &lt;= m) that you will have to play a game with and you need to figure out which new n words to add to the dictionary to maximize the total number of words you can write out of these m words.
+<br>More formally, find such a set of nonempty words S where |S| = n, Wi <img src="formula?tex=%5Cnotin" alt="\notin" align="absmiddle"> S for any i, and <img src="formula?tex=%5Csum%5Climits_%7Bi+%3D+1%7D%5Em+%7B%7CS_i%7C%7D" alt="\sum\limits_{i = 1}^m {|S_i|}" align="absmiddle"> is maximal, where Si <img src="formula?tex=%5Csubset" alt="\subset" align="absmiddle"> S is the set of words that can be written using letters from Wi.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains two integer numbers n (1 &lt;= n &lt;= 100) - the number of new words you can add to the dictionary and m (1 &lt;= m &lt;= 1 000) - the number of words you will play the game with. The following m lines contain original words. Each word consists of at most 100 uppercase letters from A to Z.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Write to the output file n lines with a new word on a line.</div><p class="pst">Sample Input</p><pre class="sio">3 5
+A
+ACM
+ICPC
+CONTEST
+NEERC</pre><p class="pst">Sample Output</p><pre class="sio">C
+CN
+E</pre><p class="pst">

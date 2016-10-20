@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">Recall the definition of the Fibonacci numbers: 
+<br><pre>f1 := 1 
+<br>f2 := 2 
+<br>fn := f<sub>n-1</sub> + f<sub>n-2</sub>     (n>=3) </pre>
+<br>Given two numbers a and b, calculate how many Fibonacci numbers are in the range [a,b]. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several test cases. Each test case consists of two non-negative integer numbers a and b. Input is terminated by a=b=0. Otherwise, a<=b<=10<sup>100</sup>. The numbers a and b are given with no superfluous leading zeros. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case output on a single line the number of Fibonacci numbers fi with a<=fi<=b. </div><p class="pst">Sample Input</p><pre class="sio">10 100
+1234567890 9876543210
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">5
+4
+</pre><p class="pst">

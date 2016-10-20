@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US">Max separation problem is an interesting geometry problem: given N+1 point sets S0,S1,...,SN in 2-dimension panel, which including k0,k1,...kN points. These points can represented by Cartesian-coordinate  as follows:  Si={(xi1,yi1),...,(xik,yik)},i=0,1,...,N. 
+<br>
+<br>If these is a line separating S0 and p(p<=N) point sets in S1,S2,...,SN, that means S0 is in one side of the line, and the p sets of S1,S2...SN are in the other side of the line, we called S0 is p-separated with respect to S1,S2,...SN.
+<br>
+<br>Now give you the point sets S0,S1,...SN, find the max value of p.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains an integer N(1 <= N<=30). The next N+1 line contains the point set S0,S1,...SN, that is, in the next i'th line, there are all the points coordinate in Si-1. One point is represented by x and y coordinate, separated by a comma. And every point is preceded a semicolon. Every line of Si configuration is ended by '#'. All coordinates are integers. See the sample input for detailed information.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output contains only one line -- the max separation p.</div><p class="pst">Sample Input</p><pre class="sio">2
+0,0;1,1;#
+1,0;0,1;#
+1,0;0,-1;#</pre><p class="pst">Sample Output</p><pre class="sio">1</pre><p class="pst">

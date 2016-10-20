@@ -1,0 +1,35 @@
+</p><div class="ptx" lang="en-US">A team of k (1 <= K <= 100) workers should paint a fence which contains N (1 <= N <= 16 000) planks numbered from 1 to N from left to right. Each worker i (1 <= i <= K) should sit in front of the plank Si and he may paint only a compact interval (this means that the planks from the interval should be consecutive). This interval should contain the Si plank. Also a worker should not paint more than Li planks and for each painted plank he should receive Pi $ (1 <= Pi <= 10 000). A plank should be painted by no more than one worker. All the numbers Si should be distinct.
+<br>
+<br>Being the team's leader you want to determine for each worker the interval that he should paint, knowing that the total income should be maximal. The total income represents the sum of the workers personal income.
+<br>
+<br>Write a program that determines the total maximal income obtained by the K workers.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains: 
+<br><b>Input</b>
+<br>
+<br>N K
+<br>L1 P1 S1
+<br>L2 P2 S2
+<br>...
+<br>LK PK SK
+<br>
+<br><b>Semnification</b>
+<br>
+<br>N -the number of the planks; K ? the number of the workers
+<br>Li -the maximal number of planks that can be painted by worker i 
+<br>Pi -the sum received by worker i for a painted plank
+<br>Si -the plank in front of which sits the worker i 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output contains a single integer, the total maximal income.</div><p class="pst">Sample Input</p><pre class="sio">8 4
+3 2 2
+3 2 3
+3 3 5
+1 1 7 
+</pre><p class="pst">Sample Output</p><pre class="sio">17</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Explanation of the sample: 
+<br>
+<br>the worker 1 paints the interval [1, 2];
+<br>
+<br>the worker 2 paints the interval [3, 4];
+<br>
+<br>the worker 3 paints the interval [5, 7];
+<br>
+<br>the worker 4 does not paint any plank
+<br></div><p class="pst">

@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US"><p>A Benedict monk No.16 writes down the decimal representations of all natural numbers between and including <i>m</i> and <i>n</i>, <i>m</i> &le; <i>n</i>. How many 0's will he write down? </p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input consists of a sequence of lines. Each line contains two unsigned 32-bit integers <i>m</i> and <i>n</i>, <i>m</i> &le; <i>n</i>. The last line of input has the value of <i>m</i> negative and this line should not be processed. </p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each line of input print one line of output with one integer number giving the number of 0's written down by the monk. </p></div><p class="pst">Sample Input</p><pre class="sio">10 11
+100 200
+0 500
+1234567890 2345678901
+0 4294967295
+-1 -1</pre><p class="pst">Sample Output</p><pre class="sio">1
+22
+92
+987654304
+3825876150</pre><p class="pst">

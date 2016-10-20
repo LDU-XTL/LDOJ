@@ -1,0 +1,33 @@
+</p><div class="ptx" lang="en-US">The table surface is divided into N by M square cells. Some cubes are stacked one upon another over the cells, forming towers. For each cell the number of cubes stacked over it is given in the matrix A.
+<br>
+<br>Your program must output the view of the table in ASCII graphics, where each cube is represented as shown below:
+<br><pre>  +---+
+<br> /   /|      
+<br>+---+ |      
+<br>|   | + 
+<br>|   |/ 
+<br>+---+</pre>
+<br> (here the characters used are '+', '-', '/', '|', their ASCII codes are ASCII 43, 45, 47, 124) 
+<br>
+<br>
+<br>The dot (ASCII 46) must be used as a background. 
+<br>
+<br><b>Constraints </b>
+<br>1 ≤ N, M, Aij ≤ 50 </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains integers N M, followed by matrix A, row-by-row. The first row describes the cube tower furthest from the viewer, left to right, and the last row -- nearest to the viewer. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Output must contain a string representation of the table view, with minimal number of lines required to show all cubes. Each line must contain a string of equal length, which is the minimal width required to show all cubes. </div><p class="pst">Sample Input</p><pre class="sio">3 5
+2 2 1 2 2
+2 2 1 1 2
+3 2 1 2 2
+</pre><p class="pst">Sample Output</p><pre class="sio">......+---+---+...+---+---+
+..+---+  /   /|../   /   /|
+./   /|-+---+ |.+---+---+ |
++---+ |/   /| +-|  /   /| +
+|   | +---+ |/+---+---+ |/|
+|   |/   /| +/   /   /| + |
++---+---+ |/+---+---+ |/| +
+|   |   | +-|   |   | + |/.
+|   |   |/  |   |   |/| +..
++---+---+---+---+---+ |/...
+|   |   |   |   |   | +....
+|   |   |   |   |   |/.....
++---+---+---+---+---+......
+</pre><p class="pst">

@@ -1,0 +1,6 @@
+</p><div class="ptx" lang="en-US">You are given two sequences of integer numbers. Write a program to determine their common increasing subsequence of maximal possible length. 
+<br>Sequence S<sub>1</sub> , S<sub>2</sub> , . . . , S<sub>N</sub> of length N is called an increasing subsequence of a sequence A<sub>1</sub> , A<sub>2</sub> , . . . , A<sub>M</sub> of length M if there exist 1 <= i<sub>1</sub> < i<sub>2</sub> < . . . < i<sub>N</sub> <= M such that S<sub>j</sub> = A<sub>i<sub>j</sub></sub> for all 1 <= j <= N , and S<sub>j</sub> < S<sub>j+1</sub> for all 1 <= j < N . </div><p class="pst">Input</p><div class="ptx" lang="en-US">Each sequence is described with M --- its length (1 <= M <= 500) and M integer numbers A<sub>i</sub> (-2<sup>31</sup> <= A<sub>i</sub> < 2<sup>31</sup> ) --- the sequence itself. </div><p class="pst">Output</p><div class="ptx" lang="en-US">On the first line of the output file print L --- the length of the greatest common increasing subsequence of both sequences. On the second line print the subsequence itself. If there are several possible answers, output any of them. </div><p class="pst">Sample Input</p><pre class="sio">5
+1 4 2 5 -12
+4
+-12 1 2 4</pre><p class="pst">Sample Output</p><pre class="sio">2
+1 4</pre><p class="pst">

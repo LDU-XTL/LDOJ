@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">One company develops a CAD system for crankshaft design. The crankshafts in question are combined of 0 < N <= 100 metal plates. All plates are made of the same alloy and have equal (small) thickness. Each plate has the shape of a polygon with 3 <= Vi <= 200 vertices. All plates in the crankshaft are parallel and firmly connected to each other. They are the only elements of the crankshaft. 
+<br>Among other features, this CAD system should have a routine for determining the rotation axis of the crankshaft. More precisely, customers sometimes need to find a line, perpendicular to the plane of the crankshaft plates, rotation around which causes minimal vibration of the crankshaft. It is well known that such axis must pass through the mass center of the crankshaft. 
+<br>The crankshaft design is stored as a set of vertex coordinates for each plate in some Cartesian coordinate system. The plane OXY of the system is parallel to the plates surfaces. All the coordinates are integer, -10<sup>4</sup> <= Xij , Yij <= 10<sup>4</sup> , where 1 <= j <= Vi , 1 <= i <= N . The vertices are numbered clockwise (OX axis is directed rightwards, OY axis is directed upwards). 
+<br>Your program should print the rotation axis coordinates (XR and YR ). The correct answer should be given even for a partially designed crankshaft (consisting of two or more non-connected parts). You should suppose that these parts are firmly connected. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input file consists of integer numbers, delimited by spaces and/or line feeds. The numbers are specified in the following order: 
+<br>N 
+<br>V1 X11 Y11 ... X<sub>1V1</sub> Y<sub>1V1</sub> 
+<br>... 
+<br>V<sub>N</sub> X<sub>N1</sub> Y<sub>N1</sub> ... X<sub>NV<sub>N</sub></sub> Y<sub>NV<sub>N</sub></sub> 
+<br>Output 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output file should contain two real numbers: XR and YR . These values must be exact to four digits to the right of the decimal point. </div><p class="pst">Sample Input</p><pre class="sio">2
+4 -1 -1 -1 1 1 1 1 -1
+4 -1 -1 -1 0 0 0 0 -1</pre><p class="pst">Sample Output</p><pre class="sio">-0.1000 -0.1000</pre><p class="pst">

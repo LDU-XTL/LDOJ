@@ -1,0 +1,41 @@
+</p><div class="ptx" lang="en-US"><p>In his freshman year, flymouse studied integral. Symbolic integration frustrated him a lot. He was often confused by those subtle techniques: alternately trying integration by substitution and integration by parts until the integrand appears in a tabulated form then employing integration by quadrature to have the work finally done. In contrast, numerical integration intrigued him much. By following some fixed procedures such as Newton-Cotes formulas, he could easily find the approximation to some definite integrals without too much effort. Given the exercises flymouse did, can your program do as nice a job as flymouse did?</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input contains several test cases. Each test case consists of one line containing a univariate function <i>f</i>(<i>x</i>) and two real numbers <i>a</i> and <i>b</i> meaning the approximate value of <img src="images/3161_1.gif" align="absmiddle"> is to be found. <i>f</i>(<i>x</i>) is expressed as a C-expression-like string. Allowed tokens are summarized in the following table:</p><div align="center"><table border="1" style="border-collapse: collapse" bordercolor="#000000"><tr><td><i>Token</i></td><td><i>Meaning</i></td><td><i>Example</i></td><td><i>Example in Mathematical Form</i></td></tr><tr><td><code>+</code></td><td>addition, positive</td><td><code>x+1</code>, <code>+x</code></td><td><i>x</i> + 1, +<i>x</i></td></tr><tr><td><code>-</code></td><td>subtraction, negative</td><td><code>x-1</code>, <code>-x</code></td><td><i>x</i> &minus; 1, &minus;<i>x</i></td></tr><tr><td><code>*</code></td><td>multiplication</td><td><code>x*x</code></td><td><i>x</i> &middot; <i>x</i></td></tr><tr><td><code>/</code></td><td>division</td><td><code>x/2</code></td><td><sup><i>x</i></sup>&frasl;<sub>2</sub></td></tr><tr><td><code>^</code></td><td>power</td><td><code>x^-x</code></td><td><i>x<sup>&minus;x</sup></i></td></tr><tr><td><code>(</code></td><td>left parenthesis</td><td><code>(x+1)*x</code></td><td>(<i>x</i> + 1) <i>x</i></td></tr><tr><td><code>)</code></td><td>right parenthesis</td><td><code>-(x+1)</code></td><td>&minus;(<i>x</i> + 1)</td></tr><tr><td><code>sin</code></td><td>sine</td><td><code>sin(x)</code></td><td>sin <i>x</i></td></tr><tr><td><code>cos</code></td><td>cosine</td><td><code>cos(x)</code></td><td>cos <i>x</i></td></tr><tr><td><code>tan</code></td><td>tangent</td><td><code>tan(x)</code></td><td>tan <i>x</i></td></tr><tr><td><code>log</code></td><td>natural logarithm</td><td><code>log(x)</code></td><td>ln <i>x</i></td></tr><tr><td><code>exp</code></td><td>exponential</td><td><code>exp(x)</code></td><td><i>e<sup>x</sup></i></td></tr><tr><td><code>asin</code></td><td>inverse sine</td><td><code>asin(x)</code></td><td>arcsin <i>x</i></td></tr><tr><td><code>acos</code></td><td>inverse cosine</td><td><code>acos(x)</code></td><td>arccos <i>x</i></td></tr><tr><td><code>atan</code></td><td>inverse tangent</td><td><code>atan(x)</code></td><td>arctan <i>x</i></td></tr><tr><td><code>abs</code></td><td>absolute value</td><td><code>abs(x)</code></td><td>|<i>x</i>|</td></tr><tr><td><code>x</code></td><td>variable</td><td><code>x</code></td><td><i>x</i></td></tr><tr><td><i>constant</i></td><td>C floating-point constants without suffixes</td><td><code>0</code>, <code>1.5</code></td><td>0, 1.5</td></tr></table></div><p>And the syntax is given below:</p><div align="center"><table border="0"><tr><td valign="top"><i><code>S</code></i></td><td valign="top" align="center" width="40"><code>::=</code></td><td valign="top"><code>+<i>S</i> | -<i>S</i> | <i>S</i>+<i>S</i> | <i>S</i>-<i>S</i> | <i>S</i>*<i>S</i> | <i>S</i>/<i>S</i> | <i>S</i>^<i>S</i> | <i>F</i>(<i>S</i>) | (<i>S</i>) | x | <i>constant</i></code></td></tr><tr><td valign="top"><i><code>F</code></i></td><td valign="top" align="center" width="40"><code>::=</code></td><td valign="top"><code>sin | cos | tan | log | exp | asin | acos | atan</code></td></tr></table></div><p>Operator precedence and associativity are almost the same as those in C except that &lsquo;<code>^</code>&rsquo; takes higher precedence than &lsquo;<code>*</code>&rsquo; and &lsquo;<code>/</code>&rsquo; and has right associativity.</p><p><i>f</i>(<i>x</i>) is not necessarily continuous. It can have singularities which are always isolated if exist. It can be oscillatory, but it will never be oscillatory in the neighborhood of singularities where it blows up. The integral is guaranteed to converge.</p><p>Length of the interval over which <i>f</i>(<i>x</i>) is integrated is not longer than 10.</p><p>Process to end of file.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output one line with only the approximate value of the integral rounded to exactly four digits past the decimal point.</p></div><p class="pst">Sample Input</p><pre class="sio">x+1 0 1
++x 0 1
+x-1 0 1
+-x 0 1
+x*x 0 1
+x/2 0 1
+x^-x 0 1
+(x+1)*x 0 1
+-(x+1) 0 1
+sin(x) 0 1
+cos(x) 0 1
+tan(x) 0 1
+log(x) 1 2
+exp(x) 0 1
+asin(x) 0 1
+acos(x) 0 1
+atan(x) 0 1
+abs(x) 0 1
+x 0 1
+1 0 1
+sin(x)/x 0 1</pre><p class="pst">Sample Output</p><pre class="sio">1.5000
+0.5000
+-0.5000
+-0.5000
+0.3333
+0.2500
+1.2913
+0.8333
+-1.5000
+0.4597
+0.8415
+0.6156
+0.3863
+1.7183
+0.5708
+1.0000
+0.4388
+0.5000
+0.5000
+1.0000
+0.9461</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><span lang="en-us"><ol><li>Be cautious about outputting &lsquo;<code>-0.0000</code>&rsquo;.</li><li>Make your integration module as robust as possible.</li></ol></span></div><p class="pst">

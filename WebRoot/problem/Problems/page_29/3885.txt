@@ -1,0 +1,30 @@
+</p><div class="ptx" lang="en-US">After a failed parachute drop lieutenant Jones nds himself in a precarious situation. Instead of landing at the target coordinates, he and his platoon are trapped in the middle of an enemy minefield!
+<br>Fortunately, as a special-ops soldier, lieutenant Jones has come prepared for all situations. Among other things, he carries an accurate map that shows the locations of all the mines in the area. Intelligence briengs further suggest that the type of anti-personnel mine used by the enemy has a blast- and detection-radius of 2 meters; if you get any closer, you die.
+<br>For the moment Jones' platoon is safe, hiding beneath a bush. To keep things simple they plan to make a run for it while staying in a circular formation (In a circular formation the distance of each soldier to the circle's center is less than the circle's radius. The total area of the circle should be enough to accommodate all soldiers.), starting centered at the bush. In this formation each soldier needs an area of 1 square meter on average. For the sake of morale the entire formation should stay outside the blast-radius of any mines.
+<br>Of course, lieutenant Jones wants to escape with as many soldiers as possible. But in order to ensure that no one steps on a mine he may have to leave some men behind to be captured by the enemy.</div><p class="pst">Input</p><div class="ptx" lang="en-US">On the first line of the input is a positive integer, the number of test cases. Then for each test case:
+<br>A line with a single positive integer n < 10<sup>5</sup>, the number of mines in the minefield.
+<br>n lines, each containing two integers, the x and y coordinates (in meters) of each mine relative to Jones' current location. |x|, |y| < 10<sup>5</sup>. No two mines have the exact same coordinates.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case:
+<br>One line containing a single integer, the maximum number of soldiers that can escape.</div><p class="pst">Sample Input</p><pre class="sio">3
+3
+2 2
+2 -2
+-2 -2
+8
+4 2
+4 -1
+1 4
+-2 4
+-4 2
+-4 -2
+-1 -4
+2 -4
+7
+-10 -1
+-4 3
+-4 -4
+-1 -6
+2 4
+3 -4
+7 0</pre><p class="pst">Sample Output</p><pre class="sio">2
+0
+7</pre><p class="pst">

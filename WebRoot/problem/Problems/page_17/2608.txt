@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">Soundex coding groups together words that appear to sound alike based on their spelling. For example, "can" and "khawn", "con" and "gone" would be equivalent under Soundex coding. 
+<br>Soundex coding involves translating each word into a series of digits in which each digit represents a letter: 
+<br><pre>      1 represents B, F, P, or V
+<br>      2 represents C, G, J, K, Q, S, X,  or Z
+<br>      3 represents D or T
+<br>      4 represents L
+<br>      5 represents M or N
+<br>      6 represents R</pre>
+<br>The letters A, E, I, O, U, H, W, and Y are not represented in Soundex coding, and repeated letters with the same code digit are represented by a single instance of that digit. Words with the same Soundex coding are considered equivalent.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Each line of input contains a single word, all upper case, less than 20 letters long.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each line of input, produce a line of output giving the Soundex code. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">KHAWN
+PFISTER
+BOBBY
+</pre><p class="pst">Sample Output</p><pre class="sio">25
+1236
+11
+</pre><p class="pst">

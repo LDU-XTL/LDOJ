@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">Boudreaux and Thibodeaux are on the road again . . . 
+<br>
+<br>"Boudreaux, we have to get this shipment of mudbugs to Baton Rouge by tonight!" 
+<br>
+<br>"Don't worry, Thibodeaux, I already checked ahead. There are three underpasses and our 18-wheeler will fit through all of them, so just keep that motor running!" 
+<br>
+<br>"We're not going to make it, I say!" 
+<br>
+<br>So, which is it: will there be a very messy accident on Interstate 10, or is Thibodeaux just letting the sound of his own wheels drive him crazy? </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input to this problem will consist of a single data set. The data set will be formatted according to the following description. 
+<br>
+<br>The data set will consist of a single line containing 3 numbers, separated by single spaces. Each number represents the height of a single underpass in inches. Each number will be between 0 and 300 inclusive. </div><p class="pst">Output</p><div class="ptx" lang="en-US">There will be exactly one line of output. This line will be: 
+<br>
+<br>   NO CRASH
+<br>
+<br>if the height of the 18-wheeler is less than the height of each of the underpasses, or: 
+<br>   CRASH X
+<br>
+<br>otherwise, where X is the height of the first underpass in the data set that the 18-wheeler is unable to go under (which means its height is less than or equal to the height of the 18-wheeler). 
+<br>The height of the 18-wheeler is 168 inches. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">180 160 170
+</pre><p class="pst">Sample Output</p><pre class="sio">CRASH 160
+</pre><p class="pst">

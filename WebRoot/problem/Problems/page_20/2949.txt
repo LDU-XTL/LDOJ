@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">A word ring is a sequence of words where the last two letters of each word are the same as the first two letters of the next word (and the last two letters of the last word are the same as the first two letters of the first word). For example, the following sequence is a word ring: 
+<br>
+<br>intercommunicational
+<br>alkylbenzenesulfonate 
+<br>tetraiodophenolphthalein
+<br>
+<br>Your task is to write a program that, given a list of words, finds a word ring. You have to make the word ring as impressive as possible: the average length of the words in the ring has to be as large as possible. In the above example, the average length is (20 + 21 + 24)/3 &asymp; 21.6666 , which makes it somewhat impressive. Note that each word can be used at most once in the ring, and the ring can consist of a single word. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several blocks of test cases. Each case begins with a line containing a single integer 1 &le; n &le; 100000 , the number of possible words that can be used. The next n lines contain these words. The words contain only the characters `a'-`z' and the length of each word is at most 1000. 
+<br>
+<br>The input is terminated by a block with n = 0 . 
+<br>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case in the input, you have to output a single number on a separate line: the maximum average length of a ring composed from (a subset of) the words given in the input. The average length should be presented as a real number with two digits of precision. If it is not possible to compose a ring from these words, then output `No solution.' (without quotes). To avoid rounding problems, we accept solutions with a maximum of &plusmn;0.01 error. </div><p class="pst">Sample Input</p><pre class="sio">3
+intercommunicational
+alkylbenzenesulfonate
+tetraiodophenolphthalein
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">21.66</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Huge input file, 'scanf' recommended to avoid TLE.
+<br></div><p class="pst">

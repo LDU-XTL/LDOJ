@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Here is game played by little guys. There is a 4 * 4 square, and the square is filled with the characters 'A', 'B', 'C' and 'D'. Each kind of character appears exactly 4 times. You can arbitrarily swap two adjacent characters (horizontal or vertical). At the beginning of the game you should choose a character (from 'A', 'B', 'C' and 'D') as you target character, when any 2 * 2 sub-square contains the same character as the character you have chosen before, you win the game.
+<br>
+<br>These little guys want to use minimal times of swap to win the game. Now they turn to you. Can you help them?</div><p class="pst">Input</p><div class="ptx" lang="en-US">There are multiple test cases. Each contains a 4 * 4 square as the initial situation. Notice that the square only contains 'A', 'B', 'C' and 'D', and each kind of characters will appear exactly 4 times.</div><p class="pst">Output</p><div class="ptx" lang="en-US">You should output the minimal swap times to win the game, and you should also output how many kinds of strategies you can achieve the minimal swap times. 
+<br>
+<br>You should pay attention that if two strategies swap the characters in the same order but with the different target characters, these two strategies are still considered as different.</div><p class="pst">Sample Input</p><pre class="sio">AABB
+ABAB
+CDCD
+CCDD
+
+ACAB
+CBBD
+ADAD
+DCBC
+</pre><p class="pst">Sample Output</p><pre class="sio">1 4
+4 96</pre><p class="pst">

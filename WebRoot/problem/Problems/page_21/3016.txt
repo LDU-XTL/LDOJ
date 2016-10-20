@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>A sequence of integer numbers is called strictly monotonically increasing if every term of the sequence is strictly greater than the one preceding it. Similarly, a sequence is called strictly monotonically decreasing if every term is strictly less than the one preceding it. A strictly monotonic sequence is a sequence that is either strictly monotonically increasing or decreasing. A sequence of integers is called <i>k</i>-monotonic if it can be decomposed into <i>k</i> disjoint contiguous subsequences that are strictly monotonic.</p><p>For example a strictly monotonically increasing sequence is 1-monotonic &mdash; in fact it is <i>k</i>-monotonic for every <i>k</i> between 1 and the number of elements it contains. The sequence { 1, 2, 3, 2, 1 } is 2-monotonic since it can be decomposed into { 1, 2, 3 } and { 2, 1 }.</p><p>If a sequence is not <i>k</i>-monotonic, you can transform it into a <i>k</i>-monotonic sequence by performing the following operation one or more times: select any term in the sequence and either increase it or decrease it by one. You are allowed to perform any number of these operations on any of the terms. Given a sequence of numbers <i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, &hellip;, <i>A<sub>n</sub></i> and an integer <i>k</i>, you are to calculate the minimum number of operations required to transform the given sequence into a <i>k</i>-monotonic sequence.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input contains multiple test cases.</p><p>Each test case contains consists of two lines. The first line gives the integers <i>n</i> (1 &le; <i>n</i> &le; 1000) and <i>k</i> (1 &le; <i>k</i> &le; min{ <i>n</i>, 10 }). The second line gives the integers <i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, &hellip;, <i>A<sub>n</sub></i> (&minus;100 000 &le; <i>A<sub>i</sub></i> &le; 100 000).</p><p>A pair of zeroes indicates the end of the input and should not be processed.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output the answer of each test case on a separate line.</p></div><p class="pst">Sample Input</p><pre class="sio">4 1
+1 1 1 1
+4 2
+1 1 1 1
+4 4
+1 1 1 1
+6 1
+1 2 3 3 2 1
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">4
+2
+0
+9</pre><p class="pst">

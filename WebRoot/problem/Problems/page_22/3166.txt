@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US"><p>A rivulet is situated in the heartland of Byterland. For centuries it was renowned for its beauty but the beauty is now gone. During the recent years, an increasing number of people have built their villas by the riverside and kept dumping garbage into the rivulet. This evening a little frog loses himself on the river when he is hurrying home.</p><div align="center"><img src="images/3166_1.png"></div><p>The figure above shows why the frog gets lost. Seen from above, garbage dumped into the river sticks together and become beam-shaped blocks that extend from the mid-axis (<i>x</i>-axis in the figure) of the rivulet till they reach one of the banks. The garbage blocks alternate in touching the two banks and the leftmost block always touches the bank shown at the bottom. The blocks are always located at integral coordinates and they divide the rivulet into several segments of possibly different lengths. As in the figure above, there are three segments of lengths 2, 5 and 3 in order. At each integral abscissa strictly inside a segment (not on the border), there is a lotus leaf located at some ordinate. The ordinates are also integral.</p><p>The little frog is going home by jumping from one leaf to another. At first it is standing on the leftmost leaf and its home is where the rightmost leaf lies. The frog jumps straight and it cannot jump higher than the garbage blocks. If the trajectory of its jump touches any garbage, it will get stuck in and have little chance to get out.</p><p>Please calculate the minimal distance the frog has to jump before arriving at home or determine that it is impossible to go home. Sizes of the frog and the leaves and thickness of the garbage blocks are negligible in your calculation.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>For <i>n</i> segments divided into by <i>n</i> &minus; 1 garbage blocks, you will be given <i>n</i> strings with the information of&nbsp; the coordinates of each lotus leaf. The <i>i</i>-th string is for the <i>i</i>-th segment from the left and if it is <i>l<sub>i</sub></i> characters long, that means the corresponding segment has length <i>l<sub>i</sub></i> + 1. The characters in a string describe the leaves in a segment from left to right. A character is one of <code>A</code>&hellip;<code>Z</code> and <code>b</code>&hellip;<code>z</code>, indicating an ordinate of 0&hellip;25 and &minus;1&hellip;&minus;25 respectively.</p><p>Each test case starts with <i>n</i> (1 &le; <i>n</i> &le; 50) on the first line. The next <i>n</i> lines each contain a non-empty string with no more than 50 characters.</p><p>This is a multiple test cases problem. Test cases are followed by blank lines. Please process to the end of the input.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>For each test case, output a single line with a real number representing the minimal distance (rounded up to 4 digits after the decimal point) the frog has to jump from the leftmost leaf to the rightmost one. Output &minus;1 if the poor frog can never get home.</p></span></div><p class="pst">Sample Input</p><pre class="sio">3
+b
+CCbB
+bA
+
+3
+bbb
+bB
+b
+
+2
+B
+b
+
+3
+O
+K
+q</pre><p class="pst">Sample Output</p><pre class="sio">10.8507
+10.6212
+-1
+30.2655</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><p>Explanation for the sample test cases:</p><ul><li>For the first case: This case follows the figure above.</li><li>For the second case: Sometimes the little frog needs to jump from right to left.</li><li>For the fourth case: The frog can jump directly from the first to the last leaf.</li></ul></div><p class="pst">

@@ -1,0 +1,24 @@
+</p><div class="ptx" lang="en-US">Consider a group of N students and P courses. Each student visits zero, one or more than one courses. Your task is to determine whether it is possible to form a committee of exactly P students that satisfies simultaneously the conditions:
+<br><ul>
+<br><li>	every student in the committee represents a different course (a student can represent a course if he/she visits that course)
+<br><li>	each course has a representative in the committee
+<br></ul></div><p class="pst">Input</p><div class="ptx" lang="en-US">Your program should read sets of data from the std input. The first line of the input contains the number of the data sets. Each data set is presented in the following format:
+<br>
+<br>P   N
+<br>Count1   Student<sub>1 1</sub>   Student<sub>1 2</sub>   ...   Student<sub>1 Count1</sub>
+<br>Count2   Student<sub>2 1</sub>   Student<sub>2 2</sub>   ...   Student<sub>2 Count2</sub>
+<br>...
+<br>CountP   Student<sub>P 1</sub>   Student<sub>P 2</sub>   ...   Student<sub>P CountP</sub>
+<br>
+<br>The first line in each data set contains two positive integers separated by one blank: P (1 <= P <= 100) - the number of courses and N (1 <= N <= 300) - the number of students. The next P lines describe in sequence of the courses �from course 1 to course P, each line describing a course. The description of course i is a line that starts with an integer Count i (0 <= Count i <= N) representing the number of students visiting course i. Next, after a blank, you抣l find the Count i students, visiting the course, each two consecutive separated by one blank. Students are numbered with the positive integers from 1 to N.
+<br>There are no blank lines between consecutive sets of data. Input data are correct.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The result of the program is on the standard output. For each input data set the program prints on a single line "YES" if it is possible to form a committee and "NO" otherwise. There should not be any leading blanks at the start of the line. </div><p class="pst">Sample Input</p><pre class="sio">2
+3 3
+3 1 2 3
+2 1 2
+1 1
+3 3
+2 1 3
+2 1 3
+1 1</pre><p class="pst">Sample Output</p><pre class="sio">YES
+NO</pre><p class="pst">

@@ -1,0 +1,36 @@
+</p><div class="ptx" lang="en-US">"In the fresh morning, there always gleams a star in the rosy sky. She is the brightest start - the Phosphor. Her rays are suspended high, but sometimes tremble around the white walls, as if she would like to share some touching stories with us. Since there appear the human beings, she has been always there, telling us everything she has heard and seen for thousands of years in the rolling world." Now let's meet one of its stories:
+<br>
+<br>"A short time ago" - to her opinion, even thousands of years in men's eyes takes up a blink in her life – "my beam focused on a prince named Remmarguts, (what a strange language) who is recognized as the wisest and most kind-hearted man in his country UDF - United Delta of Freedom."
+<br><center><img src=images/2439_1.jpg></center>
+<br>She proceeds to say, "that was a terribly cold day, and flakes of snow were falling outside, while one of them rested on a large box. The snowflake grew larger and larger; actually turn out to be a maiden in white! 'I am Goddess Uohzgnah and I am going to tell you the potential tragedy brought from Ahriman (the spirit of evil). The only way to prevent Ahriman's evil world-rebuilding from happening is to solve her puzzle successfully. We have tried our best, but failed to solve it. Wise guy, I will give you the only chance to protect your citizens. Take it –' "
+<br><center><img src=images/2439_2.jpg></center>
+<br>That were N (4 <= N <= 269) pieces of the orange skin. Ahriman had made it into a lovely connected figure (the lovelier it is, the more awful problem we are facing). Look at the picture above as an example.
+<br>
+<br>Ahriman had also tied some HEAVY magic strings between some of them. The strings were of three different colors – white (peace), light green (nature) and light blue (people) (which are the three basic elements in Ahriman's so-called "ideal world").
+<br>
+<br>"Goddess Uohzgnah handed two special magic stick to Prince Remmarguts, and told him the usage 'the first stick can make you sure about what color each string is (these three colors are very much alike); the second stick can disconnect any two connected pieces as you like' "
+<br>
+<br>His aim was to cut off as many strings as possible (making it lighter) and to make the minimal number among three types of strings maximal (i.e., if we put the numbers of three different strings X, Y, Z, our aim is to make min{X, Y, Z} as large as we can). Meanwhile for any K (2 <= K <= N), the first K pieces are required to be connected all the time (i.e., if we remove other pieces, these K pieces are still connected)!
+<br>
+<br>"Goddess Uohzgnah disappeared in Remmarguts' sight, but I know she was hiding there watching the whole course that our hero successfully solved the puzzle in a single day!" said the Phosphor, "Uohzgnah was affected by such a clever prince, and told him that this was only a joke. (Faint to death) Remmarguts didn't mind at all, because both of them fell in love..."
+<br>
+<br>Hearing such an interesting story, dare you solve the puzzle then?</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains two integer numbers N and M (N – 1 <= M <= N * (N - 1) / 2). N denotes number of pieces of that miraculous orange and M denotes the number of strings. The pieces are numbered from 1 to N.
+<br>
+<br>Each of the following lines contains three integer numbers A, B and C (1 <= A, B <= N, A is not equal to B, 0 <= C <= 2). It shows that there's a string connecting piece A and piece B in color C.
+<br>
+<br>We ensure at beginning of the puzzle, for any K (2 <= K <= N), the pieces numbered from 1 to K are connected independently (i.e., without considering the pieces numbered from K + 1 to N, the pieces numbered from 1 to K are still connected).</div><p class="pst">Output</p><div class="ptx" lang="en-US">After removing the strings, you should print a single line containing a single integer number, which is the smallest one among the numbers of three different colors in the remainder strings.</div><p class="pst">Sample Input</p><pre class="sio">10 13
+1 2 0
+2 3 1
+2 4 2
+4 5 0
+4 6 2
+6 7 1
+4 7 0
+7 8 1
+7 9 0
+7 10 1
+8 9 2
+9 10 0
+3 8 2
+</pre><p class="pst">Sample Output</p><pre class="sio">3</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><center><img src=images/2439_3.jpg></center>
+<br>We must cut off exactly (M – N + 1) strings! Enjoy it!</div><p class="pst">

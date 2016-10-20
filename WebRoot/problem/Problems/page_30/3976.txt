@@ -1,0 +1,54 @@
+</p><div class="ptx" lang="en-US">It's year 2250 people are still playing chess but a new kind of chess is here, check out the new chess rules:
+<br>
+<br>Cells are no more on a grid, rather on a graph. i.e. cells are not tiled together they are sparse and connected by bi-directed links, two cells are said to be adjacent/connected if there’s a link between them. Cells still have colors (Black and white) and a cell color may change within the game according to the movements of the chess pieces!!
+<br>
+<br>Black and white kings are the only pieces available. The game is no longer player vs. player game; it’s a 1 player game to deliver both kings to cells on the grid with total minimum cost. (Pretty much changes this is not the 2000s chess anymore!).
+<br>
+<br>Let ws and we represent the start and the end locations of the white king.
+<br>Let bs and be represent the start and the end locations of the black king.
+<br>
+<br>Define wc as the base cost of moving white king alone in a turn.
+<br>Define bc as the base cost of moving black king alone in a turn.
+<br>Define cc as the base cost of moving both kings in a turn.
+<br>
+<br>As you may notice the word “base” before cost because costs may be multiplied by a factor before being added to the total cost (as you will see later).
+<br>
+<br>The game starts with each king on a separate cell (ws, bs) and the goal is that both kings arrive to their respective destination cells (we, be) with the minimum cost possible. Initially black king is standing on a black cell (bs) and white king is standing on a white cell (ws), all other cells are white.
+<br>
+<br>Each turn one of three possible actions could happen:
+<br><ol>
+<br><li>Black king moves to an adjacent cell, adding a cost of bc or a cost of 2*bc iff the destination cell is white.</li>
+<br><li>White king moves to an adjacent cell, adding a cost of wc or a cost of 2*wc iff the destination cell is black.</li>
+<br><li>Both black and white kings move – simultaneously < to adjacent cells, adding a cost of cc, which could be 2*cc if and only if ONE king rests on a cell of different color (i.e. Either Black king moves to a white cell OR white king moves to a black cell), or 4*cc if BOTH kings rest on a cells of different colors than the kings them selves. (i.e. Black king moves to a white cell AND white king moves to a black cell)</li>
+<br></ol>
+<br>
+<br>Moves are permitted as long as a king doesn’t move to the same position it’s already standing on and both kings are on 2 separate cells after the move is done.
+<br>
+<br>Note: When a king rests on a cell, the cell color is instantly changed to the king color, i.e. When a White king steps the cell instantly turns white and When a Black king steps the cell instantly turns black.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input starts with the number of test cases, t such that 1 ≤ t ≤ 20
+<br>
+<br>Following t test cases formatted as follows:
+<br>Number of cells in the chess graph, 2 ≤ N ≤ 11.
+<br>
+<br>Following N lines (each of length N) containing 0s and 1s only, representing the chess graph. (Cell i is connected to cell j iff the j’s character of the i’s string is ‘1’). Nodes are numbered from 0 to N-1.
+<br>
+<br>After that come White, black and combined costs 0 ≤ (wc, bc, cc) ≤ 100
+<br>
+<br>Then White start and end locations (ws, we).
+<br>Then Black start and end locations (bs, be)
+<br>
+<br>There will be a blank line between each 2 test cases.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case a single line containing “Case #” then the case number, a colon, a space then the minimum cost to move white king from ws to we and black king from bs to be, or the word “Stalemate” if this is not achievable. Check the sample output section.</div><p class="pst">Sample Input</p><pre class="sio">2
+3
+010
+100
+000
+79 53 97
+0 1 2 1
+
+4
+0101
+1011
+0101
+1110
+14 86 76
+2 2 1 0</pre><p class="pst">Sample Output</p><pre class="sio">Case #1: Stalemate
+Case #2: 166</pre><p class="pst">

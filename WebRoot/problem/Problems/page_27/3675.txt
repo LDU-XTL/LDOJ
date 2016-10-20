@@ -1,0 +1,6 @@
+</p><div class="ptx" lang="en-US"><p>Updog is watching a plane object with a telescope. The field of vision in the telescope can be described as a circle. The center is at the origin and the radius is <i>R</i>. The object can be seen as a simple polygon of <i>N</i> vertexes. Updog wants to know the area of the part of the object that can be seen in the telescope.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input will contain several test cases. For each case:<br>The first line contains only one real number <i>R</i>. <br>The second line contains an integer <i>N</i>. The following <i>N</i> lines contain two real numbers <i>x<sub>i</sub></i> and <i>y<sub>i</sub></i> each, which describe the coordinates of a vertex. Two vertexes in adjacent lines are also adjacent on the polygon. <br>Constraints: 3 &le;<i> N </i>&le;50, 0.1 &le;<i> R </i>&le;1000, -1000 &le; <i>x<sub>i</sub></i>, <i>y<sub>i</sub></i> &le; 1000</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output one real number on a separate line, which is the area of the part that can be seen. The result should be rounded to two decimal places.</p></div><p class="pst">Sample Input</p><pre class="sio">10
+3
+0 20
+10 0
+-10 0
+</pre><p class="pst">Sample Output</p><pre class="sio">144.35</pre><p class="pst">

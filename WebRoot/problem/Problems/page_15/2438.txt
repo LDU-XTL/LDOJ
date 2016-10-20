@@ -1,0 +1,38 @@
+</p><div class="ptx" lang="en-US">Usually children in kindergarten like to quarrel with each other. This situation annoys the child-care women. For instant, when diner time comes, a fierce conflict may break out when a certain couple of children sitting side by side who are hostile with each other. Although there aren't too many children dining at the same round table, but the relationship of "enemy" or "friend" may be very complex. The child-care women do come across a big problem. Now it is time for you to help them to figure out a proper arrangement of sitting, with which no two "enemy" children is adjacent.
+<br>
+<br>Now we assume that there are 2 * n children who sit around a big table, and that none has more than n - 1 "enemies".</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input is consisted of several test blocks. For each block, the first line contains two integers n and m (1 <= n <= 200, 0 <= m <= n (n - 1)). We use positive integers from 1 to 2 * n to label the children dining round table. Then m lines followed. Each contains positive integers i and j ( i is not equal to j, 1 <= i, j <= 2 * n), which indicate that child i and child j consider each other as "enemy". In a input block, a same relationship isn't given more than once, which means that if "i j" has been given, "j i" will not be given.
+<br>
+<br>There will be a blank line between input blocks. And m = n = 0 indicates the end of input and this case shouldn't be processed.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test block, if the proper arrangement exist, you should print a line with a proper one; otherwise, print a line with "No solution!". </div><p class="pst">Sample Input</p><pre class="sio">1 0
+
+2 2
+1 2
+3 4
+
+3 6
+1 2
+1 3
+2 4
+3 5
+4 6
+5 6
+
+4 12
+1 2
+1 3
+1 4
+2 5
+2 6
+3 7
+3 8
+4 8
+4 7
+5 6
+5 7
+6 8
+
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">1 2
+4 2 3 1
+1 6 3 2 5 4
+1 6 7 2 3 4 5 8
+</pre><p class="pst">

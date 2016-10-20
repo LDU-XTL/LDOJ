@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">已知一个n元高次方程：
+<br><img src=images/1186_1.jpg>
+<br>其中：x1, x2,...,xn是未知数，k1,k2,...,kn是系数，p1,p2,...pn是指数。且方程中的所有数均为整数。
+<br>假设未知数1 <= xi <= M, i=1,,,n，求这个方程的整数解的个数。
+<br>1 <= n <= 6；1 <= M <= 150。
+<br><img src=images/1186_2.jpg>
+<br>方程的整数解的个数小于2<sup>31</sup>。
+<br>★本题中，指数Pi(i=1,2,...,n)均为正整数。
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">第1行包含一个整数n。第2行包含一个整数M。第3行到第n+2行，每行包含两个整数，分别表示ki和pi。两个整数之间用一个空格隔开。第3行的数据对应i=1，第n+2行的数据对应i=n。</div><p class="pst">Output</p><div class="ptx" lang="en-US">仅一行，包含一个整数，表示方程的整数解的个数。</div><p class="pst">Sample Input</p><pre class="sio">3
+150
+1  2
+-1  2
+1  2</pre><p class="pst">Sample Output</p><pre class="sio">178</pre><p class="pst">

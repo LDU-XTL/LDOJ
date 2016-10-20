@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US"><p>Given a string <i>s</i> of length <i>n</i>, a subsequence of it, is defined as another string <i>s' = s<sub>u</sub></i><sub><sub>1</sub></sub><i>s<sub>u</sub></i><sub><sub>2</sub></sub><i>...s<sub>u<sub>m</sub></sub></i> where 1 &le; <i>u</i><sub>1</sub> &lt; <i>u</i><sub>2</sub> &lt; ... &lt; <i>u<sub>m</sub></i> &le; <i>n</i> and <i>s<sub>i</sub></i> is the <i>i</i>th character of <i>s</i>. Your task is to write a program that, given two strings <i>s1</i> and <i>s2</i>, checks whether either <i>s2</i> or its reverse is a subsequence of <i>s1</i> or not.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of input contains an integer <i>T</i>, which is the number of test cases. Each of the next <i>T</i> lines contains two non-empty strings <i>s1</i> and <i>s2</i> (with length at most 100) consisted of only alpha-numeric characters and separated from each other by a single space.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, your program must output &quot;YES&quot;, in a single line, if either <i>s2</i> or its reverse is a subsequence of <i>s1</i>. Otherwise your program should write &quot;NO&quot;.</p></div><p class="pst">Sample Input</p><pre class="sio">5
+arash aah
+arash hsr
+kick kkc
+A a
+a12340b b31</pre><p class="pst">Sample Output</p><pre class="sio">YES
+YES
+NO
+NO
+YES</pre><p class="pst">

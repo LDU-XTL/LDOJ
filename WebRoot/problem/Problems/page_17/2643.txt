@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">Canada has a multi-party system of government. Each candidate is generally associated with a party, and the party whose candidates win the most ridings generally forms the government. Some candidates run as independents, meaning they are not associated with any party. Your job is to count the votes for a particular riding and to determine the party with which the winning candidate is associated. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains a positive integer n satisfying 2 <= n <= 20, the number of candidates in the riding. n pairs of lines follow: the first line in each pair is the name of the candidate, up to 80 characters; the second line is the name of the party, up to 80 characters, or the word "independent" if the candidate has no party. No candidate name is repeated and no party name is repeated in the input. No lines contain leading or trailing blanks. 
+<br>The next line contains a positive integer m <= 10000, and is followed by m lines each indicating the name of a candidate for which a ballot is cast. Any names not in the list of candidates should be ignored. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Output consists of a single line containing one of: 
+<br><ul><li>The name of the party with whom the winning candidate is associated, if there is a winning candidate and that candidate is associated with a party. 
+<br><li>The word "independent" if there is a winning candidate and that candidate is not associated with a party. 
+<br><li>The word "tie" if there is no winner; that is, if no candidate receives more votes than every other candidate. </ul></div><p class="pst">Sample Input</p><pre class="sio">3
+Marilyn Manson
+Rhinoceros
+Jane Doe
+Family Coalition
+John Smith
+independent
+6
+John Smith
+Marilyn Manson
+Marilyn Manson
+Jane Doe
+John Smith
+Marilyn Manson
+</pre><p class="pst">Sample Output</p><pre class="sio">Rhinoceros</pre><p class="pst">

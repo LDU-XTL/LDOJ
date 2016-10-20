@@ -1,0 +1,7 @@
+</p><div class="ptx" lang="en-US"><div><p>It's Halloween! Farmer John is taking the cows to a costume party, but unfortunately he only has one costume. The costume fits precisely two cows with a length of <i>S </i>(1 &le; <i>S</i> &le; 1,000,000). FJ has <i>N</i> cows (2 &le; <i>N</i> &le; 20,000) conveniently numbered 1..<i>N</i>; cow <i>i</i> has length <i>L<sub>i</sub></i> (1 &le; <i>L<sub>i</sub></i> &le; 1,000,000). Two cows can fit into the costume if the sum of their lengths is no greater than the length of the costume. FJ wants to know how many pairs of two distinct cows will fit into the costume.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>* Line 1: Two space-separated integers: <i>N</i> and <i>S</i><br>* Lines 2..<i>N</i>+1: Line <i>i</i>+1 contains a single integer: <i>L<sub>i</sub></i> </p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>* Line 1: A single integer representing the number of pairs of cows FJ can choose. Note that the order of the two cows does not matter.</p></div><p class="pst">Sample Input</p><pre class="sio">4 6
+3
+5
+2
+1
+</pre><p class="pst">Sample Output</p><pre class="sio">4
+</pre><p class="pst">

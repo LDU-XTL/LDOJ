@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Consider the set of all non-negative integer powers of 3. 
+<br><center>S = { 1, 3, 9, 27, 81, ... } </center>
+<br>Consider the sequence of all subsets of S ordered by the value of the sum of their elements. The question is simple: find the set at the n-th position in the sequence and print it in increasing order of its elements. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Each line of input contains a number n, which is a positive integer with no more than 19 digits. The last line of input contains 0 and it should not be processed. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each line of input, output a single line displaying the n-th set as described above, in the format used in the sample output. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">1
+7
+14
+783
+1125900981634049
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">{ }
+{ 3, 9 }
+{ 1, 9, 27 }
+{ 3, 9, 27, 6561, 19683 }
+{ 59049, 3486784401, 205891132094649, 717897987691852588770249 }
+</pre><p class="pst">

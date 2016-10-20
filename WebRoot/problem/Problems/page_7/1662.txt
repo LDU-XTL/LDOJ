@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US">一摞硬币共有M枚，每一枚都是正面朝上。取下最上面的一枚硬币，将它翻面后放回原处。然后取下最上面的2枚硬币，将他们一起翻面后再放回原处。再取3枚，取4枚厖直至M枚。然后再从这摞硬币最上面的一枚开始，重复刚才的做法。这样一直做下去，直到这摞硬币中的每一枚又都是正面朝上为止。</div><p class="pst">Input</p><div class="ptx" lang="en-US">第一行是测试数据的组数t（0 <= t <= 20）。以下每行是一组测试数据，每行仅有的一个数字是这摞硬币的枚数M，0< M< 10^8。</div><p class="pst">Output</p><div class="ptx" lang="en-US">对输入的每组测试数据，输出为了使这摞硬币中的每一枚又都是正面朝上所必需翻的次数。在你的程序中可能需要使用64位的整数来保存这个次数。</div><p class="pst">Sample Input</p><pre class="sio">4
+4
+1
+30
+9
+</pre><p class="pst">Sample Output</p><pre class="sio">11
+2
+899
+80</pre><p class="pst">

@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US"><p>There are some theories that if one keeps doing something, the result which that something may lead to will eventually take place. For example, if one crosses a road every day, he will certainly be run over by a car. Jon is a man who believe in such theories. Unfortunately, he lost Cely. But he knows that if he keeps waiting in some place on the earth, they will meet again at last.</p><p>There are a number of places on the earth. Some are connected by bidirectional roads. (To make things easier, we assume that each road takes exactly 5 days to travel.) Jon&rsquo;s home in the place numbered zero. For the reason of fate, he will never know where Cely lives. But during the first days, he will go to some places in search of Cely. Each time he goes to a place, he takes the shortest possible path. When he reaches the place without finding Cely, he will immediately take the same way back to his home. A long wait will follow his last trip back home.</p><p>Cely will appear in some places on some days. If Jon reaches those places as his destination on the very day when Cely appears there, they are lucky to meet. Otherwise they will regrettably miss each other, even if they are in the same place on the way.</p><p>Jon will do nothing but search blindly and wait reverently. When will they meet?</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input contains four parts separated by a blank line:
+<br>Part 1: An integer <i>M</i> (2 &le; <i>M</i> &lt; 10,000) which is the number of places. The places are number 0 through <i>M</i> &minus; 1.
+<br>Part 2: An integer <i>R</i> (0 &le; <i>R</i> &lt; 1,000) which is the number of roads and is followed by <i>R</i> lines each giving the numbers of two places connected by a road.
+<br>Part 3: An integer <i>F</i> (0 &le; <i>F</i> &lt; <i>M</i>) which is the number of Jon&rsquo;s destinations and is followed by a line containing the numbers of the destinations in the order Jon reaches them.
+<br>Part 4: An integer <i>T</i> (0 &le; <i>T</i> &lt; <i>M</i>) which is the number of Cely&rsquo;s appearances and is followed by <i>T</i> lines each giving a pair of integers <i>p</i> and <i>d</i> meaning Cely will appear in the place numbered <i>p</i> on day <i>d</i> in increasing order of <i>d</i>.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output the earliest day when Jon and Cely will meet. If they will never meet or Jon cannot reach any of his destinations before meeting Cely, output &ldquo;Being expected..&rdquo;.</p></div><p class="pst">Sample Input</p><pre class="sio">4
+
+2
+0 1
+1 2
+
+2
+1 2
+
+3
+2 5 
+1 150 
+0 3652
+</pre><p class="pst">Sample Output</p><pre class="sio">3652</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><p>Jon&rsquo;s whole trip of search described in the sample input will be: home (day 0) &rarr; place 1 (day 5) &rarr; home (day 10) &rarr; place 2 (day 20) &rarr; home (day 30). On none of these five days can Jon   meet Cely. But Jon&rsquo;s patient wait is rewarded on day 3,652, when Cely arrives at his home.</p></div><p class="pst">

@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US"><p>Maybe you wonder what an annoying painting tool is? First of all, the painting tool we speak of supports only black and white. Therefore, a picture consists of a rectangular area of pixels, which are either black or white. Second, there is only one operation how to change the colour of pixels:</p><p>Select a rectangular area of <strong>r</strong> rows and <strong>c</strong> columns of pixels, which is completely inside the picture. As a result of the operation, each pixel inside the selected rectangle changes its colour (from black to white, or from white to black).</p><p>Initially, all pixels are white. To create a picture, the operation described above can be applied several times. Can you paint a certain picture which you have in mind?</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input contains several test cases. Each test case starts with one line containing four integers <strong>n</strong>, <strong>m</strong>, <strong>r</strong> and <strong>c</strong>. (<i>1 &le; r &le; n &le; 100, 1 &le; c &le; m &le; 100</i>), The following <strong>n</strong> lines each describe one row of pixels of the painting you want to create. The <strong>i<sup>th</sup></strong> line consists of <strong>m</strong> characters describing the desired pixel values of the <strong>i<sup>th</sup></strong> row in the finished painting ('0' indicates white, '1' indicates black).</p><p>The last test case is followed by a line containing four zeros.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, print the minimum number of operations needed to create the painting, or -1 if it is impossible.</p></div><p class="pst">Sample Input</p><pre class="sio">3 3 1 1
+010
+101
+010
+4 3 2 1
+011
+110
+011
+110
+3 4 2 2
+0110
+0111
+0000
+0 0 0 0</pre><p class="pst">Sample Output</p><pre class="sio">4
+6
+-1</pre><p class="pst">

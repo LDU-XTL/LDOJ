@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US">An airline company is a sponsor of the 80-th Anniversary celebration at the Ural State University. In return for it the company wants the University to help it. The company serves n airports and carries out flights between some of them. In order to simplify the work the flights are numbered with integers from 1 up to m. If there is a flight between two airports a plane flies in the both directions with the same flight number. There may be only one flight between any two airports.
+<br>The airline company understands that its planes may attract terrorists. In order to create difficulties for terrorists the company wants to number the flights in some special manner. If there are several flights that depart from one airport then the greatest common divisor of their flight numbers should be equal to 1. The company turns to you for help (remember, this is a sponsor; you are to work properly).
+<br>You should write a program that finds a required numbering or informs that it is impossible to satisfy the requirements. If several numberings are possible, it is sufficient to find any one of them.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains numbers n and m separated with a space (2 <= n <= 50). The next m lines contain information on flights. Each flight is determined by the numbers of the airports that it connects. The numbers of the airports are separated with a space.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The first line of an output should contain YES, if it is possible to find a required numbering, and NO otherwise. If the answer is YES, the second line should contain a possible numbering of flights. The numbers are to be ordered as it is done in the input. Flight numbers are to be separated with a space.</div><p class="pst">Sample Input</p><pre class="sio">6 5
+1 2
+2 3
+2 4
+4 3
+5 6
+</pre><p class="pst">Sample Output</p><pre class="sio">YES
+4 2 3 1 5
+</pre><p class="pst">

@@ -1,0 +1,51 @@
+</p><div class="ptx" lang="en-US"><div>You have a computer literacy course in your university. In the computer system, the login/logout records of all PCs in a day are stored in a file. Although students may use two or more PCs at a time, no one can log in to a PC which has been logged in by someone who has not logged out of that PC yet. <!-- end en only --><!-- begin en only --><p>You are asked to write a program that calculates the total time of a student that he/she used at least one PC in a given time period (probably in a laboratory class) based on the records in the file. </p><!-- end en only --><!-- begin en only --><p>The following are example login/logout records. </p><ul><li>The student 1 logged in to the PC 1 at 12:55 </li><li>The student 2 logged in to the PC 4 at 13:00 </li><li>The student 1 logged in to the PC 2 at 13:10 </li><li>The student 1 logged out of the PC 2 at 13:20 </li><li>The student 1 logged in to the PC 3 at 13:30 </li><li>The student 1 logged out of the PC 1 at 13:40 </li><li>The student 1 logged out of the PC 3 at 13:45 </li><li>The student 1 logged in to the PC 1 at 14:20 </li><li>The student 2 logged out of the PC 4 at 14:30 </li><li>The student 1 logged out of the PC 1 at 14:40 </li></ul>For a query such as &quot;Give usage of the student 1 between 13:00 and 14:30&quot;, your program should answer &quot;55 minutes&quot;, that is, the sum of 45 minutes from 13:00 to 13:45 and 10 minutes from 14:20 to 14:30, as depicted in the following figure. <p>　</p><!-- end en only --><p align="center"><img src="images/3326_1.png"><br>　</div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><!-- begin en only --><p>The input is a sequence of a number of datasets. The end of the input is indicated by a line containing two zeros separated by a space. The number of datasets never exceeds 10. </p><!-- end en only --><!-- begin en only --><p>Each dataset is formatted as follows. </p><blockquote><i>N</i>&nbsp;<i>M</i>&nbsp;<br><i>r</i>&nbsp;<br>record<sub>1</sub><br>... <br>record<sub><i>r</i>&nbsp;</sub><br><i>q</i>&nbsp;<br>query<sub>1</sub><br>... <br>query<sub><i>q</i>&nbsp;</sub><br>　</blockquote><p>　</p><!-- end en only --><p><!-- begin en only -->The numbers <i>N</i>&nbsp; and <i>M</i>&nbsp; in the first line are the numbers of PCs and the students, respectively. <i>r</i>&nbsp; is the number of records. <i>q</i>&nbsp; is the number of queries. These four are integers satisfying the following. <!-- end en only --></p><blockquote>1 ≤ <i>N</i>&nbsp; ≤ 1000, 1 ≤ <i>M</i>&nbsp; ≤ 10000, 2 ≤ <i>r</i>&nbsp; ≤ 1000, 1 ≤ <i>q</i>&nbsp; ≤ 50 </blockquote><p>　</p><!-- begin en only --><p>Each record consists of four integers, delimited by a space, as follows. </p><!-- end en only --><blockquote><i>t</i>&nbsp; <i>n</i>&nbsp; <i>m</i>&nbsp; <i>s</i>&nbsp; </blockquote><p><!-- begin en only --><i>s</i>&nbsp; is 0 or 1. If <i>s</i>&nbsp; is 1, this line means that the student <i>m</i>&nbsp; logged in to the PC <i>n</i>&nbsp; at time <i>t</i>&nbsp;. If <i>s</i>&nbsp; is 0, it means that the student <i>m</i>&nbsp; logged out of the PC <i>n</i>&nbsp; at time <i>t</i>&nbsp;. The time is expressed as elapsed minutes from 0:00 of the day. <i>t</i>&nbsp;, <i>n</i>&nbsp; and <i>m</i>&nbsp; satisfy the following. <!-- end en only --></p><blockquote>540 ≤ <i>t</i>&nbsp; ≤ 1260, 1 ≤ <i>n</i>&nbsp; ≤ <i>N</i>&nbsp;, 1 ≤ <i>m</i>&nbsp; ≤ <i>M</i>&nbsp; </blockquote><p><!-- begin en only -->You may assume the following about the records. <nl></p><li>Records are stored in ascending order of time <i>t.</i>&nbsp; </li><li>No two records for the same PC has the same time <i>t.</i>&nbsp; </li><li>No PCs are being logged in before the time of the first record nor after that of the last record in the file. </li><li>Login and logout records for one PC appear alternatingly, and each of the login-logout record pairs is for the same student. </nl><!-- end en only -->　</p><p>　</p><!-- begin en only --><p>Each query consists of three integers delimited by a space, as follows. </p><!-- end en only --><blockquote><i>t<sub>s</sub></i>&nbsp; <i>t<sub>e</sub></i>&nbsp; <i>m</i>&nbsp; </blockquote><p><!-- begin en only -->It represents &quot;Usage of the student <i>m</i>&nbsp; between <i>t<sub>s</sub></i>&nbsp; and <i>t<sub>e</sub></i>&nbsp;&quot;. <i>t<sub>s</sub></i>&nbsp;, <i>t<sub>e</sub></i>&nbsp; and <i>m</i>&nbsp; satisfy the following. <!-- end en only --></p><blockquote>540 ≤ <i>t<sub>s</sub></i>&nbsp; &lt; <i>t<sub>e</sub></i>&nbsp; ≤ 1260, 1 ≤ <i>m</i>&nbsp; ≤ <i>M</i>&nbsp; </blockquote></li></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div><!-- begin en only --><p>For each query, print a line having a decimal integer indicating the time of usage in minutes. Output lines should not have any character other than this number. </div></div><p class="pst">Sample Input</p><pre class="sio">4 2
+10
+775 1 1 1
+780 4 2 1
+790 2 1 1
+800 2 1 0
+810 3 1 1
+820 1 1 0
+825 3 1 0
+860 1 1 1
+870 4 2 0
+880 1 1 0
+1
+780 870 1
+13 15
+12
+540 12 13 1
+600 12 13 0
+650 13 15 1
+660 12 15 1
+665 11 13 1
+670 13 15 0
+675 11 13 0
+680 12 15 0
+1000 11 14 1
+1060 12 14 1
+1060 11 14 0
+1080 12 14 0
+3
+540 700 13
+600 1000 15
+1000 1200 11
+1 1
+2
+600 1 1 1
+700 1 1 0
+5
+540 600 1
+550 650 1
+610 620 1
+650 750 1
+700 800 1
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">55
+70
+30
+0
+0
+50
+10
+50
+0</pre><p class="pst">

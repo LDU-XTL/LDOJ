@@ -1,0 +1,40 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Let&rsquo;s play a puzzle using eight cubes placed on a 3 &times; 3 board leaving one empty square.</p><p>Faces of cubes are painted with three colors. As a puzzle step, you can roll one of the cubes to a adjacent empty square. Your goal is to make the specified color pattern visible from above by a number of such steps.</p><p>The rules of this puzzle are as follows.</p><ol><li><p><b>Coloring of Cubes:</b> All the cubes area colored in the same way as shown in Figure 1. The opposite faces have the same color.</p><div align="center"><img src=images/3131_1.png></div><p align="center">Figure 1: Coloring of a cube</p></li><li><p><b>Initial Board State:</b> Eight cubes are placed on the 3 &times; 3 board leaving one empty square. All the cubes have the same orientation as shown in Figure 2. As shown in the figure, squares on the board are given <i>x</i> and <i>y</i> coordinates, (1, 1), (1, 2), &hellip;, and (3, 3). The position of the initially empty square may vary.</p><div align="center"><img src=images/3131_2.png></div><p align="center">Figure 2: Initial board state</p></li><li><p><b>Rolling Cubes:</b> At each step, we can choose one of the cubes adjacent to the empty square and roll it into the empty square, leaving the original position empty. Figure 3 shows an example.</p><div align="center"><img src=images/3131_3.png></div><p align="center">Figure 3: Rolling a cube</p></li><li><p><b>Goal:</b> The goal of this puzzle is to arrange the cubes so that their top faces form the specified color pattern by a number of cube rolling steps described above.</p></li></ol><p>Your task is to write a program that finds the minimum number of steps required to make the specified color pattern from the given initial state.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input is a sequence of datasets. The end of the input is indicated by a line containing two zeros separated by a space. The number of datasets is less than 16. Each dataset is formatted as follows.</p><blockquote><table border="0" width="120" id="table1"><tr><td width="33%"><i>x</i></td><td width="33%"><i>y</i></td><td width="33%"></td></tr><tr><td width="33%"><i>F</i><sub>11</sub></td><td width="33%"><i>F</i><sub>21</sub></td><td width="33%"><i>F</i><sub>31</sub></td></tr><tr><td width="33%"><i>F</i><sub>12</sub></td><td width="33%"><i>F</i><sub>22</sub></td><td width="33%"><i>F</i><sub>32</sub></td></tr><tr><td width="33%"><i>F</i><sub>13</sub></td><td width="33%"><i>F</i><sub>23</sub></td><td width="33%"><i>F</i><sub>33</sub></td></tr></table></blockquote><p>The first line contains two integers <i>x</i> and <i>y</i> separated by a space, indicating the position (<i>x</i>, <i>y</i>) of the initially empty square. The values of <i>x</i> and <i>y</i> are 1, 2, or 3.</p><p>The following three lines specify the color pattern to make. Each line contains three characters <i>F</i><sub>1<i>j</i></sub>, <i>F</i><sub>2<i>j</i></sub>, and <i>F</i><sub>3<i>j</i></sub>, separated by a space. Character <i>F<sub>ij</sub></i> indicates the top color of the cube, if any, at the position (<i>i</i>, <i>j</i>) as follows:</p><blockquote><p><code>B:</code> Blue,</p><p><code>W:</code> White,</p><p><code>R:</code> Red,</p><p><code>E:</code> the square is Empty.</p></blockquote><p>There is exactly one &lsquo;<code>E</code>&rsquo; character in each dataset.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>For each dataset, output the minimum number of steps to achieve the goal, when the goal can be reached within 30 steps. Otherwise, output &ldquo;<code>-1</code>&rdquo; for the dataset.</p></span></div><p class="pst">Sample Input</p><pre class="sio">1 2 
+W W W 
+E W W 
+W W W 
+2 1 
+R B W 
+R W W 
+E W W 
+3 3 
+W B W 
+B R E 
+R B R 
+3 3 
+B W R 
+B W R 
+B E R 
+2 1 
+B B B 
+B R B 
+B R E 
+1 1 
+R R R 
+W W W 
+R R E 
+2 1 
+R R R 
+B W B 
+R R E 
+3 2 
+R R R 
+W E W 
+R R R
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">0 
+3 
+13 
+23 
+29 
+30 
+-1 
+-1</pre><p class="pst">

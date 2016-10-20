@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US">Amtel has announced that it will release a 128-bit computer chip by 2010, a 256-bit computer by 2020, and so on, continuing its strategy of doubling the word-size every ten years. (Amtel released a 64-bit computer in 2000, a 32-bit computer in 1990, a 16-bit computer in 1980, an 8-bit computer in 1970, and a 4-bit computer, its first, in 1960.) 
+<br>Amtel will use a new benchmark - the Factstone - to advertise the vastly improved capacity of its new chips. The Factstone rating is defined to be the largest integer n such that n! can be represented as an unsigned integer in a computer word. 
+<br>Given a year 1960 <= y <= 2160, what will be the Factstone rating of Amtel's most recently released chip? </div><p class="pst">Input</p><div class="ptx" lang="en-US">There are several test cases. For each test case, there is one line of input containing y. A line containing 0 follows the last test case. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output a line giving the Factstone rating. </div><p class="pst">Sample Input</p><pre class="sio">1960
+1981
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+8
+</pre><p class="pst">

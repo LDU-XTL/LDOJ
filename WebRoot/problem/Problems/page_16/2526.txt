@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US"><img src=images/2526_1.jpg align=right>Given is a set of n points with integer coordinates. Your task is to decide whether the set has a center of symmetry. 
+<br>
+<br>A set of points S has the center of symmetry if there exists a point s (not necessarily in S) such that for every point p in S there exists a point q in S such that p-s = s-q.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains a number c giving the number of cases that follow. The first line of data for a single case contains number 1 <= n <= 10000. The subsequent n lines contain two integer numbers each which are the x and y coordinates of a point. Every point is unique and we have that -10000000 <= x, y <= 10000000. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each set of input data print yes if the set of points has a center of symmetry and no otherwise.</div><p class="pst">Sample Input</p><pre class="sio">1
+8
+1 10
+3 6
+6 8
+6 2
+3 -4
+1 0
+-2 -2
+-2 4
+</pre><p class="pst">Sample Output</p><pre class="sio">yes
+</pre><p class="pst">

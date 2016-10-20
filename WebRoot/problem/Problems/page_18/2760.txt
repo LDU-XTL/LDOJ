@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">Jiajia went back to his little hometown for Spring Festival. Due to the poverty of the town, Jiajia was unable to see Wind or hear her voice through QQ for 5 days. You know, that was terrible to Jiajia, so he could only sleep a lot, hopping to see Wind in wonderful dreams.
+<br>
+<br>Finally, Jiajia was in the airport, so he will soon be able to see his honey, Wind. Again, he decided a dream another dream, to spend the boring time in the waiting room. But this time he was unable to sleep, since there was a super light hanging in the ceiling, and the light was too strong to sleep in. Luckily, Jiajia found that there are some curtains somewhere below the light, blocking some rays. The floor and curtains are rectangular-shaped. The planes in which a curtain lies in are parallel to the floor, and when projected to the floor, the sides of curtains are parallel to those of the floor.
+<br>
+<br>Jiajia is interested in the total area on the floor covered by the light, could you write a program to do this? Jiajia would be very happy if he receives this program as a special gift, at the end of windless days.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains a single integer n, the number of curtains. The second line contains four integers minx,miny,maxx,maxy, where minx < maxx, miny < maxy. That means the floor lies in range [minx,miny]-[maxx,maxy]. The floor has a height of 0. The third line contains three integers lx, ly, lh, that is the position of the super light.
+<br>
+<br>The following n lines each has 5 integers x1,y1,x2,y2,h, where minx < x1 < x2 < maxx, miny < y1 < y2 < maxy, 0 < h < lh. This means the curtain lies in range [x1,y1]-[x2,y2], the height of the curtain is h.
+<br>
+<br>You may assume that n<=500, every other numbers in the input do not exceed 20000 in absolute value. If two numbers differ at most 10<sup>-6</sup>, they are considered to be equal. Be careful that there may be many many cases.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output contains a single real number, the total area on the floor covered by the light. The answer should be rounded to 4 decimal places.</div><p class="pst">Sample Input</p><pre class="sio">2
+-10 -10 10 10
+0 0 2
+0 0 5 5 1
+-5 -5 0 0 1
+</pre><p class="pst">Sample Output</p><pre class="sio">200.0000</pre><p class="pst">

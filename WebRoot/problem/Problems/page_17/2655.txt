@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">In programming language design circles, there has been much debate about the merits of "structural equivalence" vs. "name equivalence" for type matching. Pascal purports to have "name equivalence", but it doesn't; C purports to have structural equivalence, but it doesn't. Algol 68, the Latin of programming languages, has pure structural equivalence. 
+<br>A simplified syntax for an Algol 68 type definition is as follows: 
+<br><pre>   type_def -> type T = type_expr
+<br>   type_expr -> T | int | real | char | struct ( field_defs )
+<br>   field_defs -> T | field_defs T</pre>
+<br>In this syntax, T is a programmer-defined type name (in this problem, for simplicity, a single upper case letter). Plain text symbols appear literally in the input, and zero or more spaces may appear where there are spaces in the syntax. 
+<br>
+<br>Algol 68 type equivalence say that two types are equivalent if they are the same primitive type or they are both structures containing equivalent types in the same order. 
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of several test cases. Each test case is a sequence of Algol 68 definitions, as described above, one per line. A line containing "-" separates test cases. A line containing "--" follows the last test case.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output for each case will consist of several lines; each line should contain a list of type names, all of which represent equivalent types. Each type name should appear on exactly one line of output, and the number of output lines should be minimized. The names in each list should be in alphabetical order; the lines of output should also be in alphabetical order. Output an empty line between test cases. </div><p class="pst">Sample Input</p><pre class="sio">type A = int
+type B = A
+type C = int
+type X = struct(A B)
+type Y = struct(B A)
+type Z = struct(A Z)
+type S = struct(A S)
+type W = struct(B R)
+type R = struct(C W)
+--
+</pre><p class="pst">Sample Output</p><pre class="sio">A B C
+R S W Z
+X Y
+</pre><p class="pst">

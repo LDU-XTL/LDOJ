@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US"><div><p>Any function <i>f</i>(<i>x</i>) that is infinitely differentiable in the neighborhood of the point <i>x</i> = 0 can be expanded into a Maclaurin series</p><center><img src="formula?tex=f%280%29%2B%5Cfrac%7Bf%27%280%29%7D%7B1%21%7Dx%2B%5Cfrac%7Bf%27%27%280%29%7D%7B2%21%7Dx%5E2%2B%5Cfrac%7Bf%5E%7B%283%29%7D%280%29%7D%7B3%21%7Dx%5E3%2B%5Ccdots" alt="f(0)+\frac{f&#39;(0)}{1!}x+\frac{f&#39;&#39;(0)}{2!}x^2+\frac{f^{(3)}(0)}{3!}x^3+\cdots" align="absmiddle">,</center><p>or more compactly,</p><center><img src="formula?tex=%5Csum_%7Bk%3D0%7D%5E%7B%5Cinfty%7D%5Cfrac%7Bf%5E%7B%28k%29%7D%280%29%7D%7Bk%21%7Dx%5Ek" alt="\sum_{k=0}^{\infty}\frac{f^{(k)}(0)}{k!}x^k" align="absmiddle">.</center><p>Under certain conditions, <i>f</i>(<i>x</i>) is equal to its Maclaurin series for all <i>x</i> sufficiently close to 0. </p><p>Often, the Maclaurin series of <i>f</i>(<i>x</i>) is written up to only order <i>x</i><sup><i>n</i>-1</sup> with a Peano remainder term, i.e.,　</p><center><img src="formula?tex=%5Csum_%7Bk%3D0%7D%5E%7Bn-1%7D%5Cfrac%7Bf%5E%7B%28k%29%7D%280%29%7D%7Bk%21%7Dx%5Ek%2B%5Cmathcal%7BO%7D%28x%5En%29" alt="\sum_{k=0}^{n-1}\frac{f^{(k)}(0)}{k!}x^k+\mathcal{O}(x^n)" align="absmiddle">,</center><p>which facilitates the evaluation of <i>f</i>(<i>x</i>). The series being truncated to the <i>x</i><sup><i>n</i>-1</sup> term, details about higher-order terms are inevitably lost. However, certain information concerning the series remains well-preserved. For instance, the Maclaurin series of 1/<i>f</i>(<i>x</i>) with an identical Peano remainder term can still be found. </p><p>Given the Maclaurin series of a function <i>f</i>(<i>x</i>) with a Peano remainder term, determine that of the reciprocal of <i>f</i>(<i>x</i>).</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>The input consists of a single test case. </p><p>The first line contains an integer <i>n</i> (1 &le; n &le; 100). Each of the next <i>n</i> lines contains a fraction <i>p<sub>k</sub></i>/<i>q<sub>k</sub></i> (0 &le; k &le; n - 1) where <i>p<sub>k</sub></i> and <i>q<sub>k</sub></i> (-100 &le; <i>p<sub>k</sub></i> &le; 100, 1 &le; <i>q<sub>k</sub></i> &le; 100) are integers coprime to each other in the form either <i>p<sub>k</sub></i>/<i>q<sub>k</sub></i> (if qk &ne; 1) or <i>p<sub>k</sub></i> (if <i>q<sub>k</sub></i> = 1). It is guaranteed that <i>p</i><sub>0</sub> &ne; 0.</p><p>The given numbers represent the Maclaurin series</p><center><img src="formula?tex=%5Csum_%7Bk%3D0%7D%5E%7Bn-1%7D%5Cfrac%7Bp_k%7D%7Bq_k%7Dx%5Ek%2B%5Cmathcal%7BO%7D%28x%5En%29" alt="\sum_{k=0}^{n-1}\frac{p_k}{q_k}x^k+\mathcal{O}(x^n)" align="absmiddle"></center><p>of some function <i>f</i>(<i>x</i>).</p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div><p>Let the Maclaurin series of 1/<i>f</i>(<i>x</i>) be</p><center><img src="formula?tex=%5Csum_%7Bk%3D0%7D%5E%7Bn-1%7D%5Cfrac%7Bp%27_k%7D%7Bq%27_k%7Dx%5Ek%2B%5Cmathcal%7BO%7D%28x%5En%29" alt="\sum_{k=0}^{n-1}\frac{p&#39;_k}{q&#39;_k}x^k+\mathcal{O}(x^n)" align="absmiddle"></center><p>where <i>q<sub>k</sub>'</i> &gt; 0, and <i>p<sub>k</sub>'</i> and <i>q<sub>k</sub>'</i> are integers coprime to each other. Output <i>n</i> lines each of the form either <i>p<sub>k</sub>'</i>/<i>q<sub>k</sub>'</i> (if <i>q<sub>k</sub>'</i> &ne; 1) or <i>p<sub>k</sub>'</i> (if <i>q<sub>k</sub>'</i> = 1), listing the coefficients of 1, <i>x</i>, <i>x</i><sup>2</sup>, ... , <i>x</i><sup><i>n</i>-1</sup> in order.</p></div></div><p class="pst">Sample Input</p><pre class="sio">10
+1/2
+-46/3
+9/40
+61/80
+-22/5
+-87/41
+1/11
+-42/5
+-4/13
+-21/44</pre><p class="pst">Sample Output</p><pre class="sio">2
+184/3
+169199/90
+6223213/108
+28611844561/16200
+107867589093163/1992600
+545525329585163771/328779000
+401297234058997162673/7890696000
+2398505849871035056778279/1538685720000
+882189800570641237196128639/18464228640000</pre><p class="pst">

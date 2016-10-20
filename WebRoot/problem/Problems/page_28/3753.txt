@@ -1,0 +1,5 @@
+</p><div class="ptx" lang="en-US">把源字符串拷贝到目的字符串，如果指定关键字，则以该关键字结束(不包括关键字本身)，如果拷贝失败，则得到空串。
+<br>具体要求：实现如下函数原型SafeStrcpy2KeyWord()，并在代码中调用该函数实现上述功能。该函数的实现要考虑各种可能的参数取值，以确保程序不出现崩溃。
+<br><pre><i><b>
+<br>int SafeStrcpy2KeyWord(char* pDestBuffer,	//拷贝的目的地地址
+<br>		       char* p

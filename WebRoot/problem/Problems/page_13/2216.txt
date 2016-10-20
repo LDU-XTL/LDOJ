@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">The political Party needs some money to lead its campaign. PSOS have insufficient funds in this time, so they want to earn some money. One of the new members have designed a completely Electronic Roulette in Monte Carlo some time ago. During the obligatory Learn-How-to-Say-the-Truth Course, the member said that the random number generator follows the equation: 
+<br>
+<br>x<sub>k+1</sub> = (A * xk) mod 47 
+<br>
+<br>in which x<sub>k+1</sub> is the random number following the previous number xk, and A is the Constant of the Day that is determined by the director Karl Monte each morning. PSOS sent several members to Monte Carlo immediately, to get some money. The problem is that the author of the algorithm suddenly died during the Course. PSOS now need somebody who is able to break the algorithm and predict pseudo-random numbers. Given the succession 
+<br>
+<br>x<sub>t-n</sub>, x<sub>t-n+1</sub>, ..., x<sub>t-1</sub>, xt 
+<br>
+<br>the program should be able to decide, what the next number x<sub>t+1</sub> will be. The Constant A is always integer, non-negative, and less then 1000000. All the numbers xi are integer and non-negative.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">At the first line there is a positive integer N stating the number of assignments to follow. Each assignment consists of exactly two lines. There is an integer non-negative number M at the first line of each assignment. The next line contains the succession of exactly M numbers (x1, x2, ... xM) separated by spaces.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output a single line for each assignment. If it is possible to determine the next number in the succession, the line must contain the sentence "Vsad na X." (Bet on X). Replace X with the number which will follow in the succession. If it is not possible to determine the following number, output the sentence "Dalsi cislo nelze urcit." (It is not possible to determine the next number). If the given succession does not follow the above equation, output the sentence "Algoritmus byl zmenen." (The algorithm was changed). 
+<br></div><p class="pst">Sample Input</p><pre class="sio">3
+1
+5
+3
+7 33 28
+3
+25 26 25
+</pre><p class="pst">Sample Output</p><pre class="sio">Dalsi cislo nelze urcit.
+Vsad na 38.
+Algoritmus byl zmenen.</pre><p class="pst">

@@ -1,0 +1,77 @@
+</p><div class="ptx" lang="en-US">Thibodeaux has managed to once again lock himself inside his own house (this happens all too often). Boudreaux, being the good buddy that he is, has taken the precaution of scattering keys to the locked rooms throughout Thibodeaux's house. It is up to you to determine if Thibodeaux can make it to his bedroom (room 0).</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input to this problem will consist of a (non-empty) series of up to 100 data sets. Each data set will be formatted according to the following description, and there will be no blank lines separating data sets. 
+<br>
+<br>A single data set has 4 components: 
+<br><ol><li>Start line - A single line: 
+<br>         START M N
+<br>      
+<br>where M indicates the starting room, and N indicates the number of rooms in the house (1 <= N <= 20). 
+<br><li>Room list - A series of N lines. Each line lists, for a single room, every door that leads to a room of higher number and the keys necessary to open the door from either side. Rooms will be represented by numbers and each key will be represented by a single capital letter (A - Z). For example, if room 3 had doors to rooms 1, 5, and 7, and the door to room 1 took an A key, the door to room 5 took an F key, and the door to room 7 took an X key and a P key, the line for room 1 would read: 
+<br>	 3A
+<br>      
+<br>and the line for room 3 would read: 
+<br>	 5F 7PX
+<br>      
+<br>The first line in the list represents room 0. The second line represents room 1, and so on until the last line, which represents room N - 1. It is possible for lines to be empty (in particular, the last line will always be empty since it is the highest numbered room). On each line, the adjacent rooms are always listed in ascending order. It is possible for rooms to be connected by multiple doors and for doors to require multiple keys; required keys for a door will be listed in alphabetical order. 
+<br><li>Key list - A series of N lines. Each line lists, for a single room, the keys, in alphabetical order, that are in that room. 
+<br><li>End line - A single line: 
+<br>         END</ol>  
+<br>After the last data set, there will be a single line: 
+<br>   ENDOFINPUT
+<br>
+<br>Notes: 
+<br>There will be no more than 100 doors in any data set. 
+<br>No room will have more than 20 doors. 
+<br>Some doors may not require keys. 
+<br>In any data set, all keys are unique and can be used multiple times. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, there will be exactly one line of output. If it is possible for Thibodeaux to reach his bedroom (room 0), print a line: 
+<br>
+<br>   YES
+<br>
+<br>Otherwise, print a line: 
+<br>   NO
+<br>
+<br></div><p class="pst">Sample Input</p><pre class="sio">START 1 2
+1A
+
+
+A
+END
+START 1 5
+1F
+2A 2B 3CD 3E
+
+
+
+
+B
+C D
+F
+A E
+END
+START 1 10
+9I
+2A
+3B
+4C
+5D
+6E
+7F
+8G
+9H
+
+
+A
+B
+C
+D
+E
+F
+G
+H
+X
+END
+ENDOFINPUT
+</pre><p class="pst">Sample Output</p><pre class="sio">YES
+YES
+NO
+</pre><p class="pst">

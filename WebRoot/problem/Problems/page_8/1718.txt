@@ -1,0 +1,38 @@
+</p><div class="ptx" lang="en-US">Citizens of Byteland adore all sports in which logical thinking is as important as physical skills. One of these sports is crossing the Hex River - the widest river in Byteland. There are n poles numbered 1卬 (from left to right) stretching across the river. The citizens have to cross the river by going from the left bank to one pole perhaps to another and so on and then to the right bank. The left bank is located one pole to the left of pole 1; the right bank is located one pole to the right of pole n. 
+<br>
+<br>At time 0, the citizen is on the left bank of the Hex River with the goal of reaching the right bank of the river as quickly as possible. At any given time, each pole is either up or down and the citizen is standing on a pole or standing on a bank of the river. A citizen can stand on a pole only if it is up; such a pole is available. 
+<br>
+<br>Each pole is down at time 0 and then spends a time units up, b time units down, a time units up, b time units down, etc. The constants a and b are defined separately for each pole. For example the pole with a=2 and b=3 will be down at time 0, up at time 1 and 2, down at time 3, 4, 5 and so on. 
+<br>
+<br>At time t+1, a citizen can choose to be on any available pole or river bank within 5 poles of his location at time t or even to stay on his current pole (if available) or bank. For example from pole 5 you can reach any of the poles 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 or the left bank.
+<br>
+<br>Write a program that: computes the first possible time the citizen can stand on the right bank, if it is reachable.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains the number of data blocks x, 1 <= x <= 5. The following lines comprise the x blocks. The first block starts on the second line of the input file; each subsequent block starts directly after the previous one. 
+<br>
+<br>The first line of each block contains an integer n, 5 < n <= 1000, the number of poles.
+<br>
+<br>Each of the following n lines in the block contains two integers a, b separated by a single space, 1 <= a, b <= 5. The integers in line i + 1 (in the block), 1 <= i <= n, describe the behaviour of the pole i. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For the k-th block, 1 <= k <= x, write to the k-th line of the standard output the first time the citizen can reach the right bank or the word NO, when such a crossing is impossible. </div><p class="pst">Sample Input</p><pre class="sio">2
+10
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+1 1
+10
+1 1
+1 1
+1 1
+1 1
+2 1
+1 1
+1 1
+1 1
+1 1
+1 1
+</pre><p class="pst">Sample Output</p><pre class="sio">NO
+4
+</pre><p class="pst">

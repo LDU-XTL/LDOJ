@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US">The boss of a firm that you are employed with is dissatisfied with the text processor Word. He wants you to write a better text processor by tomorrow. The interface of the new processor should be clearer, there should be more options, and the resulting text should be more beautiful. You told the boss that this work would take not less than four days. Then your boss asked you to begin with a spell checking program. This program should check capital and small letters. It should detect a mistake in each of the following cases.
+<br>1) 	The first letter in a sentence is small.
+<br>2) 	A capital letter is not the first letter in a word.
+<br>A word is a sequence of letters not containing any other symbols or ends of line.
+<br>The end of a sentence is defined a full stop, a question-mark or an exclamation mark.    </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains a text that consists of capital and small letters of the Latin alphabet (A–Z, a–z), punctuation marks <b>(.,;:-!?)</b>  and spaces.The text length is not more than 10000.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output should contain a number of mistakes in the input text.</div><p class="pst">Sample Input</p><pre class="sio">This sentence iz correkt! -It Has,No mista;.Kes et oll.
+But there are two BIG mistakes in this one!
+and here is one more.
+</pre><p class="pst">Sample Output</p><pre class="sio">3</pre><p class="pst">

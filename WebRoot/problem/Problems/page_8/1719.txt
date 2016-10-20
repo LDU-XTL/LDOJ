@@ -1,0 +1,25 @@
+</p><div class="ptx" lang="en-US">Welcome to the Annual Byteland Shooting Contest. Each competitor will shoot to a target which is a rectangular grid. The target consists of r*c squares located in r rows and c columns. The squares are coloured white or black. There are exactly two white squares and r-2 black squares in each column. Rows are consecutively labelled 1,..,r from top to bottom and columns are labelled 1,..,c from left to right. The shooter has c shots. 
+<br>
+<br>A volley of c shots is correct if exactly one white square is hit in each column and there is no row without white square being hit. Help the shooter to find a correct volley of hits if such a volley exists. 
+<br><b>Example</b>
+<br>Consider the following target: 
+<br><center><img src=images/1719_1.jpg></center>
+<br>Volley of hits at white squares in rows 2, 3, 1, 4 in consecutive columns 1, 2, 3, 4 is correct. 
+<br>Write a program that: verifies whether any correct volley of hits exists and if so, finds one of them.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains the number of data blocks x, 1 <= x <= 5. The following lines constitute x blocks. The first block starts in the second line of the input file; each next block starts directly after the previous one. 
+<br>
+<br>The first line of each block contains two integers r and c separated by a single space, 2 <= r <= c <= 1000. These are the numbers of rows and columns, respectively. Each of the next c lines in the block contains two integers separated by a single space. The integers in the input line i + 1 in the block, 1 <= i <= c, are labels of rows with white squares in the i-th column. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For the i-th block, 1 <= i <= x, your program should write to the i-th line of the standard output either a sequence of c row labels (separated by single spaces) forming a correct volley of hits at white squares in consecutive columns 1, 2, ..., c, or one word NO if such a volley does not exists. </div><p class="pst">Sample Input</p><pre class="sio">2
+4 4
+2 4
+3 4
+1 3
+1 4
+5 5
+1 5
+2 4
+3 4
+2 4
+2 3
+</pre><p class="pst">Sample Output</p><pre class="sio">2 3 1 4
+NO
+</pre><p class="pst">

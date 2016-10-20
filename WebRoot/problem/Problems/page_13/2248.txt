@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">An addition chain for n is an integer sequence <a0, a1,a2,...,am> with the following four properties: 
+<br><ul><li>a0 = 1 
+<br><li>am = n 
+<br><li>a0 < a1 < a2 < ... < a<sub>m-1</sub> < am 
+<br><li>For each k (1<=k<=m) there exist two (not necessarily different) integers i and j (0<=i, j<=k-1) with ak=ai+aj </ul>
+<br>You are given an integer n. Your job is to construct an addition chain for n with minimal length. If there is more than one such sequence, any one is acceptable.
+<br>For example, <1,2,3,5> and <1,2,4,5> are both valid solutions when you are asked for an addition chain for 5. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will contain one or more test cases. Each test case consists of one line containing one integer n (1<=n<=100). Input is terminated by a value of zero (0) for n. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print one line containing the required integer sequence. Separate the numbers by one blank. 
+<br>Hint: The problem is a little time-critical, so use proper break conditions where necessary to reduce the search space.
+<br></div><p class="pst">Sample Input</p><pre class="sio">5
+7
+12
+15
+77
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">1 2 4 5
+1 2 4 6 7
+1 2 4 8 12
+1 2 4 5 10 15
+1 2 4 8 9 17 34 68 77
+</pre><p class="pst">

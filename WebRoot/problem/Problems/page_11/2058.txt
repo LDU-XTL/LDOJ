@@ -1,0 +1,37 @@
+</p><div class="ptx" lang="en-US">In any language, certain combinations of letters do not appear (or at least appear so seldom that they can be considered non-existent). For instance, there are no English words containing the three letter combination buv as a substring. Given a list of letter combinations that do not exist, the number of possible "words" in a language can be reduced a lot (a "word" here means any combination of letters that doesn't contain any of the given letter combinations as a substring). If we order all such words by increasing length, ordering words of the same length alphabetically, we can enumerate them starting from 1. Assume that the alphabet always consists of the lower case letters 'a' to 'z'.
+<br>For instance, if the list only contains the combinations q, ab and aaa, the words would be enumerated like this:
+<br><pre>1. a
+<br>2. b
+<br>...
+<br>16. p
+<br>17. r
+<br>...
+<br>26. aa
+<br>27. ac
+<br>...
+<br>649. zz
+<br>650. aac</pre>
+<br>Given the list of letter combinations, write a program that for a given word outputs its number, and for a given number ouputs its word. You can assume that none of the words will exceed 20 characters and no number will be greater than 2 000 000 000 (for both input and output).</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will contain several test cases. The number of test cases T appears on a line by itself. Then follow T test cases. Each test case starts with a line containing two integers,N (the number of letter combinations, non-negative, at most 1 000) and M (the number of queries for this list, positive, at most 100). Then follow N lines, each containing a lower case letter combination (between 1 and 3 letters, inclusive). After that follow M lines, each containing either a positive integer or a lower case word. If it's a word, it will not contain any of the combinations of letters in the list for this test case. If it's a number, it will not be greater than the number of words in the language.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each query, output a single line containing either the word's corresponding number, or the number's corresponding word.</div><p class="pst">Sample Input</p><pre class="sio">2
+3 4
+q
+ab
+aaa
+16
+r
+27
+aac
+7 2
+a
+b
+c
+d
+ef
+ghi
+ijk
+102345678
+ksvfuw</pre><p class="pst">Sample Output</p><pre class="sio">p
+17
+ac
+650
+xexgun
+39174383</pre><p class="pst">

@@ -1,0 +1,32 @@
+</p><div class="ptx" lang="en-US">Tom is designing a menu system for a test editor. The menu consists of some menuitems, and each menuitem may contain some sub-menuitems (a sub-menuitem is also a menuitem) recursively, e.g., menuitem "File" may contain sub-menuitems "Open", "Save", "Save As", "Recent Files", "Send" and "Exit", and "Recent Files" may contain "Setting File", "Send" may contain "Mail" and "Fax". A menuitem may contain several words, and it is confirmed that the first letter in each word is a capital letter, and that the other letters are all small letters.
+<br>
+<br>Each menuitem is associated with a hotkey, the menu is easier to use if the hotkeys are easier to remember. So Tom wants that the hotkey can only be a capital letter in a menuitem, which means the first letter in each word. Take "Save As" for example, the hotkey can only be 'S' or 'A'. It is clear that sub-menuitems of a menuitem can't be associated with the same hotkey, e.g., "Save" and "Save As" can't both use hotkey 'S', because they are both sub-menuitems of menu "File". 
+<br>
+<br>Since Tom believes press the same key twice is not convenient, he requests that the hotkeys of a menuitem and its sub-menuitems can't duplicate. In the previous example, "File" and "Recent Files" can't use the same hotkey 'F'. But this rule just affects the menuitem and its direct sub-menuitem, so "File" and "Setting File" can use the same hotkey 'F'.
+<br>
+<br>Given a menu description, Tom wants to know whether it is possible to assign a hotkey for each menuitem or not.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The menu is described as follows: a menuitem occupies a single line, and the sub-menuitems of a menuitem is listed just below this menu item. The description of the sub-menuitems starts with a "<" before the first sub-menuitem and ends with a ">" after the last sub-menuitem. "<" and ">" will take a whole line by itself. Since we may consider the menuitems in the top level belong to a global menu, there is always a "<" at the beginning of the input and a ">" at the end of the input.
+<br>
+<br>Each menuitem may contain words and white spaces separating them. The length of a menuitem name is less than 50 characters.
+<br>
+<br>There are no more than 10000 menuitems. It is confirmed that all the input are legal menuitems described above. </div><p class="pst">Output</p><div class="ptx" lang="en-US">A single line contains "Got It!" if a hotkey can be assigned to each menuitem; otherwise, output "No Solution".</div><p class="pst">Sample Input</p><pre class="sio"><
+File
+<
+Open
+Save
+Save As
+Recent Files
+Send
+<
+Mail
+Fax
+>
+Exit
+>
+Edit
+<
+Find
+Replace
+Replace All
+>
+>
+</pre><p class="pst">Sample Output</p><pre class="sio">No Solution</pre><p class="pst">

@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">Computer has greatly released scientists from heavy calculation. Before computer is invented, calculation must be done by hand, which is boring and easy to make mistake. But now, with the help of computer much calculation can be finished within a second.
+<br>
+<br>But one day Professor Smith met a strange problem. He had tried to find the positive solutions of the equation with the following form:
+<br><center>X ^ 2 – N * Y ^ 2 = 1,</center>
+<br>in which N is a positive integer. But for many values of N, his poor computer seems cannot find an answer!
+<br>
+<br>"That's strange!" said Professor Smith "There must be something wrong with my program!" And you, the assistant of Professor Smith, are assigned the work to solve the problem.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will contain several test cases; each contains a positive integer N (1 <= N <= 10 ^ 8) in a single line.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, in a line output two positive integers X and Y that satisfy the equation and are smaller than 10 ^ 1000. If there is no such solution, output "No solution!"</div><p class="pst">Sample Input</p><pre class="sio">52
+256
+991
+</pre><p class="pst">Sample Output</p><pre class="sio">649 90
+No solution!
+379516400906811930638014896080 12055735790331359447442538767
+</pre><p class="pst">

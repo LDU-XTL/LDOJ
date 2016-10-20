@@ -1,0 +1,44 @@
+</p><div class="ptx" lang="en-US">Let's play a card game called Gap. 
+<br>You have 28 cards labeled with two-digit numbers. The first digit (from 1 to 4) represents the suit of the card, and the second digit (from 1 to 7) represents the value of the card.
+<br>
+<br>First, you shu2e the cards and lay them face up on the table in four rows of seven cards, leaving a space of one card at the extreme left of each row. The following shows an example of initial layout.
+<br><center><img src=images/2046_1.jpg></center>
+<br>Next, you remove all cards of value 1, and put them in the open space at the left end of the rows: "11" to the top row, "21" to the next, and so on.
+<br>
+<br>Now you have 28 cards and four spaces, called gaps, in four rows and eight columns. You start moving cards from this layout.
+<br><center><img src=images/2046_2.jpg></center>
+<br>At each move, you choose one of the four gaps and fill it with the successor of the left neighbor of the gap. The successor of a card is the next card in the same suit, when it exists. For instance the successor of "42" is "43", and "27" has no successor.
+<br>
+<br>In the above layout, you can move "43" to the gap at the right of "42", or "36" to the gap at the right of "35". If you move "43", a new gap is generated to the right of "16". You cannot move any card to the right of a card of value 7, nor to the right of a gap.
+<br>
+<br>The goal of the game is, by choosing clever moves, to make four ascending sequences of the same suit, as follows.
+<br><center><img src=images/2046_3.jpg></center>
+<br>Your task is to find the minimum number of moves to reach the goal layout.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input starts with a line containing the number of initial layouts that follow.
+<br>
+<br>Each layout consists of five lines - a blank line and four lines which represent initial layouts of four rows. Each row has seven two-digit numbers which correspond to the cards.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each initial layout, produce a line with the minimum number of moves to reach the goal layout. Note that this number should not include the initial four moves of the cards of value 1. If there is no move sequence from the initial layout to the goal layout, produce "-1".</div><p class="pst">Sample Input</p><pre class="sio">4
+
+12 13 14 15 16 17 21
+22 23 24 25 26 27 31
+32 33 34 35 36 37 41
+42 43 44 45 46 47 11
+
+26 31 13 44 21 24 42
+17 45 23 25 41 36 11
+46 34 14 12 37 32 47
+16 43 27 35 22 33 15
+
+17 12 16 13 15 14 11
+27 22 26 23 25 24 21
+37 32 36 33 35 34 31
+47 42 46 43 45 44 41
+
+27 14 22 35 32 46 33
+13 17 36 24 44 21 15
+43 16 45 47 23 11 26
+25 37 41 34 42 12 31
+</pre><p class="pst">Sample Output</p><pre class="sio">0
+33
+60
+-1
+</pre><p class="pst">

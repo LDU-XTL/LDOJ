@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">Transmitting and memorizing information is a task that requires different coding systems for the best use of the available space. A well known system is that one where a number is associated to a character sequence. It is considered that the words are made only of small characters of the English alphabet a,b,c, ..., z (26 characters). From all these words we consider only those whose letters are in lexigraphical order (each character is smaller than the next character).
+<br>
+<br>The coding system works like this: 
+<br>•	The words are arranged in the increasing order of their length.
+<br>•	The words with the same length are arranged in lexicographical order (the order from the dictionary). 
+<br>•	We codify these words by their numbering, starting with a, as follows:
+<br>a 	- 1   
+<br>b 	- 2
+<br>...
+<br>z 	- 26
+<br>ab 	- 27
+<br>...
+<br>az 	- 51
+<br>bc 	- 52
+<br>...
+<br>vwxyz 	- 83681
+<br>...
+<br>
+<br>Specify for a given word if it can be codified according to this coding system. For the affirmative case specify its code. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The only line contains a word. There are some constraints:
+<br>•	The word is maximum 10 letters length
+<br>•	The English alphabet has 26 characters.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output will contain the code of the given word, or 0 if the word can not be codified. </div><p class="pst">Sample Input</p><pre class="sio">bf</pre><p class="pst">Sample Output</p><pre class="sio">55</pre><p class="pst">

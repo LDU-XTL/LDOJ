@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US"><div><p>Jack and Joe are playing a special card game in which each card has some points in three properties <i>apo</i>, <i>bqu</i> and <i>cri</i>. Jack has one card while Joe has the other <i>N</i> - 1 cards. Every round Joe picks one of his cards and compares it with Jack's card. The one has the more powerful card wins the round. The rule is as follows:</p><ul><li>The card has more points in <i>apo</i> is more powerful.</li><li>If two cards have the same points in <i>apo,</i> the one has more points in <i>bqu</i> is more powerful.</li><li>If two cards have the same points in <i>apo</i> and <i>bqu</i>, one has more points in <i>cri</i> is more powerful.</li><li>If two cards have the same points in <i>apo</i>, <i>bqu</i> and <i>cri</i>, Jack's card is more powerful.</li></ul><p>After the compare, Joe's card is discarded so that he can never use it any more.</p><p>To make the game more competitive, Jack and Joe are given <i>m</i> chances each to enhance the cards. For each time, Jack may add 1 point to either property of his card while Joe may add 1 point to <i>bqu</i> of one card and 1 point to <i>cri</i> of another.</p><p>Joe wants to know how many rounds he can win if they both plays optimally.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>Input consists several test case.</p><p>The first line of each test case is <i>N </i>(<i>N </i>&le; 100000), the total number of cards.</p><p>The following N lines describe the cards. Each line contains three integers <i>a, b, c</i> (<i>a, b, c </i>≤ 10000)<i> </i>which present the number of points in apo, <i>bqu</i> and <i>cri</i> of that card respectively. Jack has the first card.</p><p>The last of each test case is <i>M</i> (<i>M </i>&le; 10000000), the number of chances to enhance cards.</p><p>The input ends with <i>N</i> = 0.</p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output how many rounds Joe can win.</p></div><p class="pst">Sample Input</p><pre class="sio">3
+0 0 0
+1 0 0
+1 0 0
+1
+3
+0 0 0
+0 0 0
+0 0 0
+0
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">2
+0
+</pre><p class="pst">

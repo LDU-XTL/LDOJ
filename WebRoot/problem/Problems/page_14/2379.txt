@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">ACM contests, like the one you are participating in, are hosted by the special software. That software, among other functions, preforms a job of accepting and evaluating teams' solutions (runs), and displaying results in a rank table. The scoring rules are as follows: 
+<br><ol><li>Each run is either accepted or rejected. 
+<br><li>The problem is considered solved by the team, if one of the runs submitted for it is accepted. 
+<br><li>The time consumed for a solved problem is the time elapsed from the beginning of the contest to the submission of the first accepted run for this problem (in minutes) plus 20 minutes for every other run for this problem before the accepted one. For an unsolved problem consumed time is not computed. 
+<br><li>The total time is the sum of the time consumed for each problem solved. 
+<br><li>Teams are ranked according to the number of solved problems. Teams that solve the same number of problems are ranked by the least total time. 
+<br><li>While the time shown is in minutes, the actual time is measured to the precision of 1 second, and the the seconds are taken into account when ranking teams. 
+<br><li>Teams with equal rank according to the above rules must be sorted by increasing team number. </ol>
+<br>Your task is, given the list of N runs with submission time and result of each run, compute the rank table for C teams.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains integer numbers C N, followed by N quartets of integes ci pi ti ri, where ci -- team number, pi -- problem number, ti -- submission time in seconds, ri -- 1, if the run was accepted, 0 otherwise.
+<br>1 ≤ C, N ≤ 1000, 1 ≤ ci ≤ C, 1 ≤ pi ≤ 20, 1 ≤ ti ≤ 36000. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Output must contain C integers -- team numbers sorted by rank. </div><p class="pst">Sample Input</p><pre class="sio">3 3
+1 2 3000 0
+1 2 3100 1
+2 1 4200 1
+</pre><p class="pst">Sample Output</p><pre class="sio">2 1 3
+</pre><p class="pst">

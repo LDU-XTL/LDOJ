@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Marketing people are very creative and must regularly attend many creative meetings. In the past, the meetings used to repeat every week. Now, there are so many of them, that the period must have been changed to one month.
+<br>
+<br>The monthly schedule of ACM now contains one meeting for each of the first N days in every month (including weekends). Meetings are identified by non-negative integer numbers. Recently, ACM found out that the schedule must be reorganized and the order of meetings changed. The new order has already been chosen. The only problem is that the meeting-planning department has very limited privileges and must follow many directives that are in effect.
+<br>
+<br>It fact, the only change that the department is allowed to do, is to issue a request to reverse the order of meetings in the first D days of the month (D may be selected arbitrarily). For example, if the current schedule is “1 2 3 4 5” and the department issues a request to reverse the first 3 days, the new schedule will be “3 2 1 4 5”.
+<br>
+<br>Another limitation is that the department is allowed to issue only one request per week. Since they need the whole reorganization to finish in one year, the number of requests may not exceed 52. As you can see, their situation is not easy. Will you help?</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains a sequence of several reorganizations, the last one followed by a line with zero.
+<br>
+<br>Each reorganization consists of three lines: the first line contains a positive integer N — the number of days in month that are considered, 1 ≤ N ≤ 30. The second line describes the old schedule and the third line the new schedule, each of them contains N meeting identifiers, separated with spaces. Some meetings may appear more than once.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each reorganization, output a single line containing at most 52 positive integer numbers D1, D2, ..., Dk separated by a space (1 ≤ Di ≤ N). The numbers must form a valid sequence of requests that will be issued to transform the old schedule to the new one.
+<br> 
+<br>You are guaranteed that such a sequence will exist. If there are more valid sequences, feel free
+<br>to output any of them.</div><p class="pst">Sample Input</p><pre class="sio">5
+1 4 8 9 10
+4 8 9 10 1
+0</pre><p class="pst">Sample Output</p><pre class="sio">5 4</pre><p class="pst">

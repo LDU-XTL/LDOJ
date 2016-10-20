@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">The pasture contains a small, contiguous grove of trees that has no 'holes' in the middle of the it.  Bessie wonders: how far is it to walk around that grove and get back to my starting position? She's just sure there is a way to do it by going from her start location to successive locations by walking horizontally, vertically, or diagonally and counting each move as a single step. Just looking at it, she doesn't think you could pass 'through' the grove on a tricky diagonal. Your job is to calculate the minimum number of steps she must take.
+<br>
+<br>Happily, Bessie lives on a simple world where the pasture is represented by a grid with R rows and C columns (1 <= R <= 50, 1 <= C <= 50). Here's a typical example where '.' is pasture (which Bessie may traverse), 'X' is the grove of trees, '*' represents Bessie's start and end position, and '+' marks one shortest path she can walk to circumnavigate the grove (i.e., the answer):
+<br>
+<br><pre>...+...
+<br>..+X+..
+<br>.+XXX+.
+<br>..+XXX+
+<br>..+X..+
+<br>...+++*</pre>The path shown is not the only possible shortest path; Bessie might have taken a diagonal step from her start position and achieved a similar length solution. Bessie is happy that she's starting 'outside' the grove instead of in a sort of 'harbor' that could complicate finding the best path.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Line 1: Two space-separated integers: R and C
+<br>
+<br>Lines 2..R+1: Line i+1 describes row i with C characters (with no spaces between them).</div><p class="pst">Output</p><div class="ptx" lang="en-US">Line 1: The single line contains a single integer which is the smallest number of steps required to circumnavigate the grove.</div><p class="pst">Sample Input</p><pre class="sio">6 7
+.......
+...X...
+..XXX..
+...XXX.
+...X...
+......*</pre><p class="pst">Sample Output</p><pre class="sio">13</pre><p class="pst">

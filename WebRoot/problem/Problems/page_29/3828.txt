@@ -1,0 +1,59 @@
+</p><div class="ptx" lang="en-US">Facer was addicted to a popular game called "Plants VS Zombies". After Facer had completed all missions, he started to play the zombies' role to destroy plants and called the new game "Zombies VS Plants".
+<br>
+<br>In the game "Zombies VS Plants", there are 3 kinds of zombies: Little Zombie, Adult Zombie and Football player. Different zombies have different price and different "attacking value" indicating the capability to attack, as shown in the table below:
+<br>
+<br><center><table border="1"><tr><td>Zombie name</td><td>Attacking value</td><td>Price for one (in dollars)</td></tr><tr><td>Little Zombie</td><td>40</td><td>50</td></tr><tr><td>Adult Zombie</td><td>70</td><td>75</td></tr><tr><td>Football player</td><td>200</td><td>100</td></tr></table></center>
+<br>
+<br>Spiders also can destroy the plants. Every spider costs 125 dollars.
+<br>
+<br>There are 4 kinds of plants: Sunflower, Bean, Magnet and Lettuce. Every plant has a "defending value" indicating it's capability of defense.
+<br>
+<br>Facer's mission is to destroy ALL the plants in the field. In order to destroy plants, Facer needs to buy zombies or spiders and put them into the field. The plants field can be considered as a 5 x 5 grid (of course 25 cells), as shown in the figure below:
+<br>
+<br><center><table border="1"><tr><td>(1,1)</td><td>(1,2)</td><td>(1,3)</td><td>(1,4)</td><td>(1,5)</td></tr><tr><td>(2,1)</td><td>(2,2)</td><td>(2,3)</td><td>(2,4)</td><td>(2,5)</td></tr><tr><td>(3,1)</td><td>(3,2)</td><td>(3,3)</td><td>(3,4)</td><td>(3,5)</td></tr><tr><td>(4,1)</td><td>(4,2)</td><td>(4,3)</td><td>(4,4)</td><td>(4,5)</td></tr><tr><td>(5,1)</td><td>(5,2)</td><td>(5,3)</td><td>(5,4)</td><td>(5,5)</td></tr></table></center>
+<br><center>Plants field</center>
+<br>
+<br>There is a plant in every cell. Facer can destroy plants only by two ways:
+<br><ol>
+<br><li>If Facer puts one or more zombies together into a row of the field, and the sum of those zombies' attacking values is larger than the sum of defending values of the plants in the same row, all plants in that row will be destroyed.</li>
+<br><li>Putting a spider in a cell will destroy the plant in it. But there are some exceptions as shown in the description of plant ``Lettuce" in a table below.</li>
+<br></ol>
+<br>
+<br>Once a zombie is put into the plants field, it dies immediately after destroying the plants. So does a spider. In other words, Facer can use a zombie or a spider only once.
+<br>
+<br>This is a table describing the features of different kinds of plants:
+<br>
+<br><center><table border="1"><tr><td>Plant name</td><td>Defending value</td><td>Special features</td></tr><tr><td>Sunflower</td><td>0</td><td>None</td></tr><tr><td>Bean</td><td>100</td><td>None</td></tr><tr><td>Magnet</td><td>0</td><td>A magnet can make the attacking value of the football players in the same row and the adjacent rows become 50. For example, if there is a magnet in row 3, the attacking value of all football players Facer put into row 2, 3 and 4 will become 50.</td></tr><tr><td>Lettuce</td><td>0</td><td>Spiders can't destroy a lettuce and the plants in the eight cells around the lettuce. For example, if there is a lettuce at cell (3,3), spiders can't destroy the lettuce and the plants in (2,2), (2,3), (2,4), (3,2), (3,4), (4,2), (4,3) and (4,4).</td></tr></table></center>
+<br>
+<br>Facer can earn P<sub>1</sub> dollars after destroying a row of plants, and destroying a sunflower will earn extra P2 dollars for him. Facer has P3 dollars but no zombies and no spiders at the begging. Of course Facer can use the money he earned to buy zombies and spiders. Your job is helping Facer to accomplish his mission and keep money as much as possible after the mission.</div><p class="pst">Input</p><div class="ptx" lang="en-US">There are multiple test cases.
+<br>
+<br>The first line in the input is a integer T indicating the number of test cases. (1 &lt; T &lt;= 400)
+<br>
+<br>
+<br>For each test case:
+<br>
+<br>First line contains three integers P<sub>1</sub>, P<sub>2</sub> and P<sub>3</sub> (0 &lt;= P<sub>1</sub>, P<sub>2</sub>, P<sub>3</sub> &lt;= 10000), meaning that Facer earns P<sub>1</sub> dollars after destroying a row of plants and earns P<sub>2</sub> dollars after destroying a sunflower, and Facer has P<sub>3</sub> dollars at the beginning.
+<br>
+<br>Following are 5 lines describing the plants field by top to bottom order. Each line contains 5 integers, telling what's in the cells of a row, by left to right order. For those 5 integers:
+<br>
+<br>
+<br>"1" represents a sunflower.
+<br>
+<br>"2" represents a bean.
+<br>
+<br>"3" represents a magnet.
+<br>
+<br>"4" represents a lettuce.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output one line containing an integer indicating the maximum amount of dollars Facer can keep after he accomplishes the mission. If Facer can't destroy all the plants, print '-1' instead.</div><p class="pst">Sample Input</p><pre class="sio">2
+100 100 10000
+2 2 2 2 2
+2 3 2 2 2
+3 3 4 3 2
+2 3 2 2 2
+2 2 2 2 2
+0 0 0
+2 2 2 2 2
+2 2 2 2 2
+2 2 2 2 2
+2 2 2 2 2
+2 2 2 2 2</pre><p class="pst">Sample Output</p><pre class="sio">9025
+-1</pre><p class="pst">

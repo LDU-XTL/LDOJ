@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">Let a finite set of points M be defined on plane. The plane has a usual Cartesian coordinates. Well-formed convex hull of set M is minimal (relative to inclusion) set, containing M, and bounded by closed broken line. All sections of this broken line should be parrallel to axes or inclined by 45&deg;.
+<br>Your task is to find a well-formed convex hull for a given set M.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">In the first line an number N (1<=N<=100 000) of following lines is written. In the second and all next lines coordinates of set's points is written. In every line there are coordinates (two numbers separated several spaces, each number is greater or equal to 0 and less or equal to 1000) of only one point. Some points of set can overlap, thus the same coordinates can be found in different lines.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Your program should print the sequence of broken line's vertexes. Vertexes should be enumretated in the counter clock-wise order. As a first vertex any of them can be taken. In every line exactly one vertex's coordinates (two numbers, separated by spaces) should be put out. Every vertex of broken line should be mentioned in the file only once.
+<br>
+<br>No three consecutive vertexes of broken line should lie on a straight line.
+<br></div><p class="pst">Sample Input</p><pre class="sio">4
+3 3
+3 1
+2 2
+4 2
+</pre><p class="pst">Sample Output</p><pre class="sio">3 1
+4 2
+3 3
+2 2</pre><p class="pst">

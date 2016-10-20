@@ -1,0 +1,29 @@
+</p><div class="ptx" lang="en-US">There is a military base lost deep in the jungle. It is surrounded by n watchtowers with ultrasonic generators. In this problem watchtowers are represented by points on a plane.
+<br>Watchtowers generate ultrasonic field and protect all objects that are strictly inside the towers’ convex hull. There is no tower strictly inside the convex hull and no three towers are on a straight line.
+<br>The enemy can blow up some towers. If this happens, the protected area is reduced to a convex hull of the remaining towers.
+<br>
+<br><center><img src="images/3968_1.png"></center>
+<br>
+<br>The base commander wants to build headquarters inside the protected area. In order to increase its security, he wants to maximize the number of towers that the enemy needs to blow up to make the headquarters unprotected.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains a single integer n (3 &lt;= n &lt;= 50 000) — the number of watchtowers. The next n lines of the input file contain the Cartesian coordinates of watchtowers, one pair of coordinates per line. Coordinates are integer and do not exceed 10<sup>6</sup> by absolute value. Towers are listed in the order of traversal of their convex hull in clockwise direction.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Write to the output file the number of watchtowers the enemy has to blow up to compromise headquarters protection if the headquarters are placed optimally.</div><p class="pst">Sample Input</p><pre class="sio"><table border="1" style="border-collapse: collapse" bordercolor="#000000" id="table1"><tr>
+<td><b>#1</b></td><td>
+3<br>
+0 0<br>
+50 50<br>
+60 10</td>
+</tr>
+<tr>
+<td><b>#2</b></td><td>
+5<br>
+0 0<br>
+0 10<br>
+10 20<br>
+20 10
+25 0</td></tr>
+</table></pre><p class="pst">Sample Output</p><pre class="sio"><table border="1" style="border-collapse: collapse" bordercolor="#000000" id="table1"><tr>
+<td><b>#1</b></td><td>
+1</td>
+</tr>
+<tr>
+<td><b>#2</b></td><td>
+2</td></tr>
+</table></pre><p class="pst">

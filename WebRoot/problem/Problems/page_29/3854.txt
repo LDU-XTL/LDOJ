@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">After years as a brick-layer, you've been called upon to analyze the instability of brick walls. The instability of a wall can be approximated by the maximum damage to a wall in case of taking one brick out. A brick will fall if all bricks that are directly underneath it are removed. Note that if the space underneath a brick is partially empty, it does not fall.
+<br>You are given the description of all bricks in a wall, and must determine the instability of the wall as described in the following sections.</div><p class="pst">Input</p><div class="ptx" lang="en-US">There are multiple test cases in the input. Each test case consists of a single line, "M N" (1 ≤ M, N ≤ 100) where M and N indicate the height and width (in units), respectively, of the input wall.
+<br>
+<br>Each of the next M lines is a string of N digits which specifies a row in the wall. Each brick in a row is represented by a substring of the row (like s) such that every digit in s is the same, which is equal to the length of s too. For example, 333 and 22 are two bricks of length 3 and 2 respectively, but 111 specifies three bricks of length one. A 0 in a row means there is no brick in that place of wall. Note that the height of each brick is one. The input terminates with a line containing 0 0. You may assume that the input is correct. This means:
+<br>1) There is no brick such that the length of the brick does not conform to the digits in the brick (like 222 in the row 12221).
+<br>2) No brick can fall initially.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, write a single line containing maximum sum of the bricks’ lengths that will fall if we take one brick out (including that brick).</div><p class="pst">Sample Input</p><pre class="sio">4 5
+33322
+22333
+33322
+22333
+4 6
+122333
+444422
+111111
+333333
+3 3
+022
+220
+111
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">5
+8
+4</pre><p class="pst">

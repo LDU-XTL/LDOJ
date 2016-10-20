@@ -1,0 +1,32 @@
+</p><div class="ptx" lang="en-US"><p>In this problem, we consider a simple programming language that has only declarations of one-dimensional integer arrays and assignment statements. The problem is to find a bug in the given program.</p><p>The syntax of this language is given in BNF as follows:</p><table align="center" border="0"><tr><td valign="top">‹<i>program</i>›</td><td valign="top" style="width: 2em;" align="center">::=</td><td>‹<i>declaration</i>› | ‹<i>program</i>›‹<i>declaration</i>› | ‹<i>program</i>›‹<i>assignment</i>›</td></tr><tr><td valign="top">‹<i>declaration</i>›</td><td valign="top" style="width: 2em" align="center">::=</td><td>‹<i>array_name</i>›<tt>[</tt>‹<i>number</i>›<tt>]</tt>‹<i>new_line</i>›</td></tr><tr><td valign="top">‹<i>assignment</i>›</td><td valign="top" style="width: 2em;" align="center">::=</td><td>‹<i>array_name</i>›<tt>[</tt>‹<i>expression</i>›<tt>]=</tt>‹<i>expression</i>›‹<i>new_line</i>›</td></tr><tr><td valign="top">‹<i>expression</i>›</td><td valign="top" style="width: 2em;" align="center">::=</td><td>‹<i>number</i>› | ‹<i>array_name</i>›<tt>[</tt>‹<i>expression</i>›<tt>]</tt></td></tr><tr><td valign="top">‹<i>number</i>›</td><td valign="top" style="width: 2em;" align="center">::=</td><td>‹<i>digit</i>› | ‹<i>digit_positive</i>›‹<i>digit_string</i>›</td></tr><tr><td valign="top">‹<i>digit_string</i>›</td><td valign="top" style="width: 2em;" align="center">::=</td><td>‹<i>digit</i>› | ‹<i>digit</i>›‹<i>digit_string</i>›</td></tr><tr><td valign="top">‹<i>digit_positive</i>›</td><td valign="top" style="width: 2em;" align="center">::=</td><td><tt>1</tt> | <tt>2</tt> | <tt>3</tt> | <tt>4</tt> | <tt>5</tt> | <tt>6</tt> | <tt>7</tt> | <tt>8</tt> | <tt>9</tt> </td></tr><tr><td valign="top">‹<i>digit</i>›</td><td valign="top" style="width: 2em;" align="center">::=</td><td><tt>0</tt> | ‹<i>digit_positive</i>›</td></tr><tr><td valign="top">‹<i>array_name</i>›</td><td valign="top" style="width: 2em;" align="center">::=</td><td><tt>a</tt> | <tt>b</tt> | <tt>c</tt> | <tt>d</tt> | <tt>e</tt> | <tt>f</tt> | <tt>g</tt> | <tt>h</tt> | <tt>i</tt> | <tt>j</tt> | <tt>k</tt> | <tt>l</tt> | <tt>m</tt> |<tt><br>n</tt> | <tt>o</tt> | <tt>p</tt> | <tt>q</tt> | <tt>r</tt> | <tt>s</tt> | <tt>t</tt> | <tt>u</tt> | <tt>v</tt> | <tt>w</tt> | <tt>x</tt> | <tt>y</tt> | <tt>z</tt> |<br><tt>A</tt> | <tt>B</tt> | <tt>C</tt> | <tt>D</tt> | <tt>E</tt> | <tt>F</tt> | <tt>G</tt> | <tt>H</tt> | <tt>I</tt> | <tt>J</tt> | <tt>K</tt> | <tt>L</tt> | <tt>M</tt> |<br><tt>N</tt> | <tt>O</tt> | <tt>P</tt> | <tt>Q</tt> | <tt>R</tt> | <tt>S</tt> | <tt>T</tt> | <tt>U</tt> | <tt>V</tt> | <tt>W</tt> | <tt>X</tt> | <tt>Y</tt> | <tt>Z</tt> </td></tr></table><p>where ‹<i>new_line</i>› denotes a new line character (LF).</p><p>Characters used in a program are alphabetical letters, decimal digits, <tt>=</tt>, <tt>[</tt>, <tt>]</tt> and new line characters. No other characters appear in a program.</p><p>A declaration declares an array and specifies its length. Valid indices of an array of length <i>n</i> are integers between 0 and <i>n</i> − 1, inclusive. Note that the array names are case sensitive, i.e. array <tt>a</tt> and array <tt>A</tt> are different arrays. The initial value of each element in the declared array is undefined.</p><p>For example, array a of length 10 and array b of length 5 are declared respectively as follows.</p><pre>a[10]<br>b[5]</pre><p>An expression evaluates to a non-negative integer. A ‹<i>number</i>› is interpreted as a decimal integer. An ‹<i>array_name</i>›<tt>[</tt>‹<i>expression</i>›<tt>]</tt> evaluates to the value of the ‹<i>expression</i>›-th element of the array. An assignment assigns the value denoted by the right hand side to the array element specified by the left hand side.</p><p>Examples of assignments are as follows.</p><pre>a[0]=3<br>a[1]=0<br>a[2]=a[a[1]]<br>a[a[0]]=a[1]</pre><p>A program is executed from the first line, line by line. You can assume that an array is declared once and only once before any of its element is assigned or referred to.</p><p>Given a program, you are requested to find the following bugs.</p><ul><li><p>An index of an array is invalid.</p></li><li><p>An array element that has not been assigned before is referred to in an assignment as an index of array or as the value to be assigned.</p></li></ul><p>You can assume that other bugs, such as syntax errors, do not appear. You can also assume that integers represented by ‹<i>number</i>›s are between 0 and 2<sup>31</sup> − 1 (= 2147483647), inclusive.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input consists of multiple datasets followed by a line which contains only a single ‘<tt>.</tt>’ (period). Each dataset consists of a program also followed by a line which contains only a single ‘<tt>.</tt>’ (period). A program does not exceed 1000 lines. Any line does not exceed 80 characters excluding a new line character.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each program in the input, you should answer the line number of the assignment in which the first bug appears. The line numbers start with 1 for each program. If the program does not have a bug, you should answer zero. The output should not contain extra characters such as spaces.</p></div><p class="pst">Sample Input</p><pre class="sio">a[3]
+a[0]=a[1]
+.
+x[1]
+x[0]=x[0]
+.
+a[0]
+a[0]=1
+.
+b[2]
+b[0]=2
+b[1]=b[b[0]]
+b[0]=b[1]
+.
+g[2]
+G[10]
+g[0]=0
+g[1]=G[0]
+.
+a[2147483647]
+a[0]=1
+B[2]
+B[a[0]]=2
+a[B[a[0]]]=3
+a[2147483646]=a[2]
+.
+.</pre><p class="pst">Sample Output</p><pre class="sio">2
+2
+2
+3
+4
+0</pre><p class="pst">

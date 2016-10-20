@@ -1,0 +1,26 @@
+</p><div class="ptx" lang="en-US">The Fifth Season Resort consists of a number of condominiums which are frequently occupied by their owners. At other times, however, they are available as vacation rentals. Since the resort has no more than 26 condominiums, they are identified by upper case letters.
+<br>
+<br>One day the resort manager's telephone rings. She receives a reservation request for a vacation rental with an arrival date of December 2 and a departure date of December 9. She looks at the table of reservations, but doesn't find a condominium that would be available for the entire period. Most of the existing reservations were made by the owners of the respective condominiums (who want to stay in their own units), so it is not desirable to move an existing reservation from one unit to another. As she continues to scrutinize the table of reservations, however, she has an idea and says: "I can put you up in unit B for the first three nights, and transfer you to unit F for the rest of your stay. Will that work?" The person agrees and the reservation is made. Notice that reservations are done by "nights", so that a one night reservation implies that the guest departs one day after the arrival.
+<br>
+<br>The goal of this problem is to satisfy such reservation requests (without changing existing reservations), with a minimum number of transfers (from one unit to another) during the requested period.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of a number of cases. The first line of each case contains two positive integers M and N. M is the number of consecutive days for which the resort's manager has a reservation table, and N is the number of units (condominiums) in the resort. The units are labeled by upper case letters starting at 'A'. There are at most 100 days and at least 3 rooms in the reservation table. The days are numbered 1, 2, ..., M for simplicity.
+<br>
+<br>The reservation table is given in the next M lines. Each line (row) of the table refers to a particular day (in the order 1, 2, 3, etc.), and each column of the table to a particular unit of the resort (in the order 'A', 'B', 'C', etc.). An entry of 'X' means that the corresponding unit is reserved for that day, while an 'O' means that the unit is available.
+<br>
+<br>The reservation table is followed by one line of input, the reservation request, consisting of two integers: the arrival date and the departure date. The arrival date is in the range 1..M. The departure date is greater than the arrival date and less than or equal to M+1.
+<br>
+<br>The end of input is indicated by M = N = 0.</div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, first print the case number followed by a colon and a blank line. If the reservation request can be met, the output will show a reservation schedule with a minimum number of transfers (from one unit to another) during the stay at the resort. Each line of the schedule corresponds to a consecutive stay in the same unit, and should be printed in the following way:  <pre> &lt;unit&gt;: &lt;start date&gt;-&lt;end date&gt; </pre> where <tt>&lt;unit&gt;</tt> is the unit, <tt>&lt;start date&gt;</tt> is the date on which the guests moves into the unit,  and <tt>&lt;end date&gt;</tt> is the date on which the guests moves out of the unit. The lines in the schedule should be ordered in ascending order by the start date.</p>  <p><b>Tie breaking rule.</b>   There may be several schedules with a minimum number of transfers. In these cases, choose the schedule which uses the lowest "unit label" in the first day (so unit A is given preference to unit B). If there is still a tie, choose the schedule with the lowest unit number in the second day, and so on.</p>  <p>If the reservation request cannot be met, print the line: <pre> Not available </pre> instead of the schedule.</p>  <p>Separate the output of consecutive cases by a blank line.</p></div><p class="pst">Sample Input</p><pre class="sio">10 7
+XXXXXXX
+XOXXXXO
+XOXXXXO
+XOXXXOX
+OXXOXOX
+XOXOXOX
+OXXOXOX
+OXXXXOX
+XXXXXXX
+XXXXXXX
+2 9
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">Case 1:
+
+B: 2-5
+F: 5-9</pre><p class="pst">

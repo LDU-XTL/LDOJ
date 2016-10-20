@@ -1,0 +1,44 @@
+</p><div class="ptx" lang="en-US">A fisherman named Etadokah awoke in a very small island. He could see calm, beautiful and blue sea around the island. The previous night he had encountered a terrible storm and had reached this uninhabited island. Some wrecks of his ship were spread around him. He found a square wood-frame and a long thread among the wrecks. He had to survive in this island until someone came and saved him.
+<br>
+<br>In order to catch fish, he began to make a kind of fishnet by cutting the long thread into short threads and fixing them at pegs on the square wood-frame. He wanted to know the sizes of the meshes of the fishnet to see whether he could catch small fish as well as large ones.
+<br>
+<br>The wood frame is perfectly square with four thin edges on meter long: a bottom edge, a top edge, a left edge, and a right edge. There are n pegs on each edge, and thus there are 4n pegs in total. The positions of pegs are represented by their (x,y)-coordinates. Those of an example case with n=2 are depicted in figures below. The position of the ith peg on the bottom edge is represented by (ai,0). That on the top edge, on the left edge and on the right edge are represented by (bi,1), (0,ci) and (1,di), respectively. The long thread is cut into 2n threads with appropriate lengths. The threads are strained between (ai,0) and (bi,1),and between (0,ci) and (1,di) (i=1,...,n).
+<br>
+<br>You should write a program that reports the size of the largest mesh among the (n+1)2 meshes of the fishnet made by fixing the threads at the pegs. You may assume that the thread he found is long enough to make the fishnet and the wood-frame is thin enough for neglecting its thickness.
+<br><img src=images/1408_1.jpg>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of multiple sub-problems followed by a line containing a zero that indicates the end of input. Each sub-problem is given in the following format.
+<br>n
+<br>a1 a2 ... an
+<br>b1 b2 ... bn
+<br>c1 c2 ... cn
+<br>d1 d2 ... dn
+<br>you may assume 0 < n <= 30, 0 < ai,bi,ci,di < 1</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each sub-problem, the size of the largest mesh should be printed followed by a new line. Each value should be represented by 6 digits after the decimal point, and it may not have an error greater than 0.000001.</div><p class="pst">Sample Input</p><pre class="sio">2
+0.2000000 0.6000000
+0.3000000 0.8000000
+0.1000000 0.5000000
+0.5000000 0.6000000
+2
+0.3333330 0.6666670
+0.3333330 0.6666670
+0.3333330 0.6666670
+0.3333330 0.6666670
+4
+0.2000000 0.4000000 0.6000000 0.8000000
+0.1000000 0.5000000 0.6000000 0.9000000
+0.2000000 0.4000000 0.6000000 0.8000000
+0.1000000 0.5000000 0.6000000 0.9000000
+2
+0.5138701 0.9476283
+0.1717362 0.1757412
+0.3086521 0.7022313
+0.2264312 0.5345343
+1
+0.4000000
+0.6000000
+0.3000000
+0.5000000
+0</pre><p class="pst">Sample Output</p><pre class="sio">0.215657
+0.111112
+0.078923
+0.279223
+0.348958</pre><p class="pst">

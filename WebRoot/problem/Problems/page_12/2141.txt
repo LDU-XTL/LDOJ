@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">The cows are thrilled because they've just learned about encrypting messages.  They think they will be able to use secret messages to plot meetings with cows on other farms.
+<br>
+<br>Cows are not known for their intelligence.  Their encryption method is nothing like DES or BlowFish or any of those really good secret coding methods.  No, they are using a simple substitution cipher.
+<br>
+<br>The cows have a decryption key and a secret message.  Help them decode it.  The key looks like this:
+<br><pre>        yrwhsoujgcxqbativndfezmlpk</pre>
+<br>Which means that an 'a' in the secret message really means 'y'; a 'b' in the secret message really means 'r'; a 'c' decrypts to 'w'; and so on.  Blanks are not encrypted; they are simply kept in place.
+<br>
+<br>Input text is in upper or lower case, both decrypt using the same decryption key, keeping the appropriate case, of course. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: 26 lower case characters representing the decryption key
+<br>
+<br>* Line 2: As many as 80 characters that are the message to be decoded
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: A single line that is the decoded message.  It should have the same length as the second line of input.
+<br></div><p class="pst">Sample Input</p><pre class="sio">eydbkmiqugjxlvtzpnwohracsf
+Kifq oua zarxa suar bti yaagrj fa xtfgrj
+</pre><p class="pst">Sample Output</p><pre class="sio">Jump the fence when you seeing me coming
+</pre><p class="pst">

@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US">Alice and Bob want to go on holiday. Each of them has planned a route, which is a list of cities to be visited in a given order. A route may contain a city more than once. 
+<br>As they want to travel together, they have to agree on a common route. None wants to change the order of the cities on his or her route or add other cities. Therefore they have no choice but to remove some cities from the route. Of course the common route should be as long as possible. 
+<br>There are exactly 26 cities in the region. Therefore they are encoded on the lists as lower case letters from 'a' to 'z'. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of two lines; the first line is Alice's list, the second line is Bob's list. 
+<br>Each list consists of 1 to 80 lower case letters with no spaces inbetween. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output should contain all routes that meet the conditions described above, but no route should be listed more than once. Each route should be printed on a separate line. There is at least one such non-empty route, but never more than 1000 different ones. Output them in ascending order. </div><p class="pst">Sample Input</p><pre class="sio">abcabcaa
+acbacba</pre><p class="pst">Sample Output</p><pre class="sio">ababa
+abaca
+abcba
+acaba
+acaca
+acbaa
+acbca</pre><p class="pst">

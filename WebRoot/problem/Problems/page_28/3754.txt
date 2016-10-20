@@ -1,0 +1,44 @@
+</p><div class="ptx" lang="en-US">在嵌入式系统开发中，Modbus协议是工业控制系统中广泛应用的一种协议。本题用来简单模拟Modbus协议，只需根据条件生成符合该协议的数据帧，并解析所获取的数据。
+<br>假设设备使用的协议发送数据格式如下：
+<br><b>&lt;SlaveAddress, 1 Byte&gt; &lt;Function, 1 Byte&gt; &lt;Start Address, 2 Bytes&gt; &lt;NumberofBytes, 2 Bytes&gt; &lt;Checksum, 2 Bytes&gt;</b>
+<br>其中前四项将在输入条件中给出，最后一项为CRC校验和，需根据前四项的数据，按照CRC算法进行计算。注意数据的长度，多于1byte的高位在前，低位在后。该CRC校验算法的描述如下：
+<br>1)将CRC赋值0xFFFF。
+<br>2)取初始信息的第一个字节（8位）与CRC进行异或运算，将结果赋给CRC。
+<br>3)将CRC数据右移一位，最前位（左边）补0。
+<br>4)如果右移前，CRC最低位（最右端）为1，则将右移后的CRC与0xA001进行异或运算，且将结果赋给CRC。否则，跳过此步。
+<br>5)重复3，4步8次（即右边8位）。
+<br>6)对初始信息的下一个字节，同样执行2，3，4，5步，直到信息中所有字节都执行了同样的步骤。
+<br>7)将此时得到的CRC值的高8位和低8位交换，即得到CRC校验和。
+<br>
+<br>对应的接收格式如下：
+<br><b>&lt;SlaveAddress,1Byte&gt; &lt;Function,1Byte&gt; &lt;NumberofBytes,1Byte&gt; &lt;DataIEEE32,xByte&gt; &lt;Checksum,2Bytes&gt;</b>
+<br>其中<b>DataIEEE32</b>为<b>一个或多个</b>按IEEE754标准定义的32位浮点数，具体的数据长度由<b>NumberofBytes</b>项来决定(比如<b>NumberofBytes</b>为4，则<b>DataIEEE32</b>项为4 bytes，正好表示一个浮点数；如为8，则<b>DataIEEE32</b>项为8 bytes，可表示两个浮点数)。本题要求编程实现从IEEE32数据（如“420B999A”）到浮点数（如34.9）的转换，从而解析出浮点数值。
+<br>
+<br>提示：你可以根据IEEE754标准自行设计转换算法；或者直接利用C语言float类型的实现特性：x86 linux下，gcc编译器将C语言代码“float f = <b>34.9</b>;”编译成汇编代码“movl    <b>$0x420b999a</b>, -4(%ebp)” （AT&T x86汇编格式），也就是说，单精度浮点数<b>34.9</b>在内存中就是由整数<b>0x420b999a</b>来表示的，你可以利用这一特性来完成转换。</div><p class="pst">Input</p><div class="ptx" lang="en-US">输入包含多组数据，以EOF结束
+<br>每组数据共两行。
+<br>第一行共四个<b>十进制</b>整数，分别为协议格式要求的：<b>&lt;SlaveAddress, 1 Byte&gt;,&lt;Function, 1 Byte&gt;,&lt;Start Address, 2 Bytes&gt;,&lt;NumberofBytes, 2 Bytes&gt;</b>，以逗号“,”分开。
+<br>如：1,4,40,2 
+<br>其中：1为SlaveAddress；4为Function；40为Start Address；2为NumberofBytes。
+<br>第二行为符合接收格式的数据帧（16进制表示），需从其中解析所接收的数据，其长度小于64个字符，浮点数数据最多为4个（即DataIEEE32数据项最多为32bytes）。
+<br>如: 010404420B999A7405 
+<br>其中：01为SlaveAddress；04为Function；04为NumberofBytes； 420B999A 为DataIEEE32；7405为Checksum。</div><p class="pst">Output</p><div class="ptx" lang="en-US">每组数据输出共两行。
+<br>第一行：根据输入结果的第一行，输出完整的符合该协议发送格式的数据帧，数据用16进制大写表示，每部分的长度都要求符合协议格式，比如Start Address项如果不到2 bytes，则需要在左边补零。
+<br>如：010400280002F1C3
+<br>其中：01为SlaveAddress；04 为Function；0028为Start Address；0002为NumberofBytes；F1C3为Checksum。
+<br>
+<br>第二行：根据输入结果的第二行，依次解析IEEE32数据，将其转换成浮点数并打印结果（小数点后保留一位）。解析之前需检查CRC校验和，如校验失败则直接打印CRC_ERROR。如有多个数据，用逗号分隔。
+<br>如：34.9
+<br>该浮点值为420B999A所对应的值。</div><p class="pst">Sample Input</p><pre class="sio">1,4,40,2  
+010404420B999A7405  
+1,4,40,2
+010404420B999A7404
+2,4,383,4
+02040841CC0000477F2100DF85
+
+
+</pre><p class="pst">Sample Output</p><pre class="sio">010400280002F1C3
+34.9
+010400280002F1C3
+CRC_ERROR
+0204017F0004C1DE
+25.5,65313.0</pre><p class="pst">

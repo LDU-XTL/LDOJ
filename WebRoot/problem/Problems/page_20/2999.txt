@@ -1,0 +1,33 @@
+</p><div class="ptx" lang="en-US">The year is close to 2200 and machines with supreme artificial intelligence have conquered the world. Fortunately, the humans are still kept alive since they provide a good energy source for the machines. However, in order to keep mankind neutralized, most people are trapped in a computer program called the Matrix designed to simulate the 20th century, and thereby unaware of the 'real' world. Still, a few people like yourself have been released from the Matrix and others have even been born free. Together we try to fight the machines. The Oracle has spoken about one man who will save mankind, and the people outside the Matrix must enter it from time to time in order to try to find this chosen one. It is hazardous to enter though. The only way out of the Matrix is by being phoned from the outside on a stationary phone inside and there are supernatural agents in the Matrix who try to eliminate all trespassers. Everyone who has been caught by an agent so far has died, so the best thing to do when you encounter one is to run. Since the Matrix is a computer program, the agents know of your whereabouts all the time when you are inside it. On the other hand you know the location of the agents too, since the people helping you from outside the Matrix scan it and tell you what they see. You move at the same speed as the agents since you have learned to control the laws of the program. You want to know for a few scenarios if you would be able to escape the Matrix or if you would be caught by the agents, so you design a program. For simplicity, the Matrix is modelled by a two-player boardgame on an 8 by 8 square board with you and two agents as pieces. There are three kinds of squares: floor squares, wall squares and phone squares. A piece may be located on any square except the wall squares, even if the square is already occupied by another piece. The simulation begins by a move by you. Then the two agents move and after that it is your turn to move again. This moving scheme continues to alternate until either your piece gets to a vacant phone square which means that you succeed in escaping the Matrix, or until at least one of the agent pieces is on the same square as your piece, in which case you are captured, and thereby eliminated. A third outcome is possible if neither of the two breaking conditions mentioned above occurs. In that case you are said to be trapped in the Matrix. A move of a piece constitutes of moving the piece located at square (x,y) to one of (x,y),(x+1,y),(x-1,y),(x,y-1), or (x,y+1) that is not a wall square. 
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several scenarios. For each scenario you are to determine whether the agent pieces cannot be sure to prevent you from escaping the Matrix despite how hard they try, or whether you cannot be certain to stop the agents from eliminating you. The first line of input is a positive number n. Then follow n scenarios, each consisting of 8 rows of 8 characters each from the set {'.','#','P','A','M'} describing the Matrix board. A '.'-character symbolizes a floor square, a '#'-character a wall square and a 'P'-character a phone square. There are exactly two 'A'-characters in each scenario indicating the starting positions of the two agents, and exactly one 'M'-character giving your position in the Matrix. The initial squares of the three pieces are all floor squares. At least half of the 64 squares are wall squares for all scenarios. All scenarios, including the last one, end with a blank line. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each scenario, there should be one line of output. If your piece can escape the Matrix regardless of the efforts made by the agents to stop you, the text 'You can escape.' should be printed. If the agent pieces may capture you whatever moves your piece make, you are eliminated and the text 'You are eliminated.' should be printed. If neither of the two conditions described above are true, the text 'You are trapped in the Matrix.' should be printed. </div><p class="pst">Sample Input</p><pre class="sio">3
+#####.##
+#####.##
+#####.##
+AA.M...P
+#####.##
+#####.##
+#####.##
+#####.##
+
+########
+#..P...#
+#.####.#
+#P#M.#P#
+#.####.#
+#..P...#
+#A....A#
+########
+
+########
+#...A.P#
+#.######
+#..M...#
+#.####.#
+..####..
+#....A.#
+########
+</pre><p class="pst">Sample Output</p><pre class="sio">You can escape.
+You are trapped in the Matrix.
+You are eliminated.
+</pre><p class="pst">

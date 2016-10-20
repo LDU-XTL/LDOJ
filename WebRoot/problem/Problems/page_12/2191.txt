@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US">One of the world-wide cooperative computing tasks is the "Grand Internet Mersenne Prime Search" -- GIMPS -- striving to find ever-larger prime numbers by examining a particular category of such numbers.
+<br>A Mersenne number is defined as a number of the form (2<sup>p</sup>–1), where p is a prime number -- a number divisible only by one and itself.  (A number that can be divided by numbers other than itself and one are called "composite" numbers, and each of these can be uniquely represented by the prime numbers that can be multiplied together to generate the composite number — referred to as its prime factors.)
+<br>Initially it looks as though the Mersenne numbers are all primes.
+<br><table><tr><th>Prime</th><th>Corresponding Mersenne Number</th></tr><tr><td>2</td><td>4–1 = 3  --  prime</td></tr><tr><td>3</td><td>8–1 = 7  --  prime</td></tr><tr><td>5</td><td>32–1 = 31  --  prime</td></tr><tr><td>7</td><td>128–1 = 127  --  prime</td></tr></table>
+<br>If, however, we are having a "Grand Internet" search, that must not be the case.
+<br>Where k is an input parameter, compute all the Mersenne composite numbers less than 2<sup>k</sup> -- where k <= 63 (that is, it will fit in a 64-bit signed integer on the computer).  In Java, the "long" data type is a signed 64 bit integer.  Under gcc and g++ (C and C++ in the programming contest environment), the "long long" data type is a signed 64 bit integer.
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains a single number, without leading or trailing blanks, giving the value of k.  As promised, k <= 63.</div><p class="pst">Output</p><div class="ptx" lang="en-US">One line per Mersenne composite number giving first the prime factors (in increasing order) separate by asterisks, an equal sign, the Mersenne number itself, an equal sign, and then the explicit statement of the Mersenne number, as shown in the sample output.  Use exactly this format.  Note that all separating white space fields consist of one blank.</div><p class="pst">Sample Input</p><pre class="sio">31</pre><p class="pst">Sample Output</p><pre class="sio">23 * 89 = 2047 = ( 2 ^ 11 ) - 1
+47 * 178481 = 8388607 = ( 2 ^ 23 ) - 1
+233 * 1103 * 2089 = 536870911 = ( 2 ^ 29 ) - 1
+</pre><p class="pst">

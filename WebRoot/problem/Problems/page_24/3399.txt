@@ -1,0 +1,5 @@
+</p><div class="ptx" lang="en-US"><p>There is an array of <i>N</i> integer numbers in the interval from -30000 to 30000. The task is to select <i>K</i> elements of this array with maximal possible product.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input consists of <i>N </i>+ 1 lines. The first line contains <i>N</i> and <i>K</i> (1 &le; <i>K</i> &le; <i>N</i> &le; 100) separated by one or several spaces. The others contain values of array elements.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>The output contains a single line with values of selected elements separated by one space. These values must be in non-increasing order.</p></div><p class="pst">Sample Input</p><pre class="sio">4 2
+1
+7
+2
+0</pre><p class="pst">Sample Output</p><pre class="sio">7 2</pre><p class="pst">

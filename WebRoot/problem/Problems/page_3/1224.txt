@@ -1,0 +1,68 @@
+</p><div class="ptx" lang="en-US">One type of picture puzzle consists of nine square pieces, each of which has one-half of a picture on each edge. The pictures on each piece are either the left or the right half of one of four pictures designated B, C, K and P for this problem. The picture halves are aligned along the edges so that, if the left half is on one piece and the right on another, when the two pieces are aligned the pictures match. The purpose of the puzzle is to place the nine pieces into a three by three grid so that all the pictures along the adjacent edges match. Note that some of the pieces may need to be rotated to match.
+<br><center><img src=images/1224_1.jpg></center>
+<br>Write a program to solve one or more instances of the puzzle.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of a sequence of problems. Each problem begins with the problem number on a line by itself.The end of the data is indicated by a problem number of 0. Following the problem number line will be nine lines describing the pieces. Each of these lines begins with the piece number (1 through 9) followed by the picture on the top, right side, bottom and left side of the piece, in that order and separated by spaces. The picture halves are BL,BR, CL, CR, KL, KR, PL and PR. BL matches with BR, CL matches with CR, KL matches with KR and PL matches with PR. (For example, BL is the left half and BR is the right half of the picture designated B)
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output for each problem is to be: A line with the problem number followed by a colon (':'). If the problem has no solution, the next line should be "No Solution". If there is a solution, that solution should be displayed as follows:
+<br>Since any solution may be rotated 90, 180 or 270 degrees to obtain another, the center square should be in the orientation given in the input and other squares aligned accordingly. Each row of pieces is displayed on three lines with a blank line between rows. The format for a single piece is:
+<br><3 spaces><2 char top picture><3 spaces>
+<br><2 char left picture>&lt;sp><1 digit piece number>&lt;sp><2 char right picture>&lt;sp>
+<br><3 spaces><2 char bottom picture><3 spaces>
+<br>A single blank line should follow the output for each problem.</div><p class="pst">Sample Input</p><pre class="sio">1
+1 BR KR PL CR
+2 CL PR BL KR
+3 KR PR CR BL
+4 PL KR BL CL
+5 PL BR CL KR
+6 PR CL BR PL
+7 CR KL BL PR
+8 BL CR KL PL
+9 KL CL PR BL
+2
+1 PR PR BL CR
+2 BR KL CR PR
+3 CR BL PL KR
+4 KL PL BL CL
+5 BR CR PL KR
+6 KL BR PL CR
+7 CL PL BL KR
+8 KR KL CR BL
+9 CR KL PR BL
+3
+1 PL KL CL BR
+2 PL CR KL BL
+3 PR BR CL KR
+4 CR PL BR KR
+5 PR CL BR KR
+6 BL KL CR PR
+7 PL BL CL KR
+8 PR CR KL BR
+9 KL BL CL PL
+0</pre><p class="pst">Sample Output</p><pre class="sio">1:
+   CL      KR      KL   
+PR 6 BR BL 2 CL CR 7 BL 
+   PL      PR      PR   
+
+   PR      PL      PL   
+KR 3 CR CL 4 KR KL 8 BL 
+   BL      BL      CR   
+
+   BR      BR      CL   
+PL 5 CL CR 1 KR KL 9 PR 
+   KR      PL      BL   
+
+2:
+No Solution
+
+3:
+   KL      BR      BL   
+BL 6 CR CL 5 KR KL 9 CL 
+   PR      PR      PL   
+
+   PL      PL      PR   
+KR 7 BL BR 1 KL KR 3 BR 
+   CL      CL      CL   
+
+   CR      CR      CR   
+PL 2 KL KR 4 PL PR 8 KL 
+   BL      BR      BR   
+
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">注意，此题对格式要求很严，格式错都算wrong answer</div><p class="pst">

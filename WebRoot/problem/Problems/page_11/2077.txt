@@ -1,0 +1,58 @@
+</p><div class="ptx" lang="en-US">After bouncing 10 checks last month, you feel compelled to do something about your financial management. Your bank has started providing you with your statement online, and you believe that this is the opportunity to get your account in order by making sure you have the money to cover the checks you write.
+<br>Your bank provides you with a monthly statement that lists your starting balance, each transaction, and final balance. Your task is to compare the statement with the transactions from your checkbook register over the same time interval. You will identify transactions that appear in only the statement or register, as well as incorrect amounts recorded in the register (naturally the bank's statement is always correct) and math mistakes in your register.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The bank statement appears first. It begins and ends with lines of the form:
+<br>balance < X >
+<br>with the first line indicating the starting balance and the second line indicating the final balance.
+<br>In between the balances is the list of transactions, one per line, in the form:
+<br>{check|deposit} < N > < X >
+<br>Where N is the integer check or deposit number (the same check or deposit number will only appear once, although the same number can apply to both a check and deposit), and X is the amount of the transaction.
+<br>Following the final balance the register entries appear. The first line of the register is the starting balance
+<br>< X >
+<br>Following are pairs of lines, with the next transaction appearing followed by the balance you calculated by hand after entering the transaction.
+<br>{check | deposit} < N > < X >
+<br>< X >
+<br>The pairs repeat until the end of the input file.
+<br>For all input numbers and intermediates, |X| < 1000000. All dollar amounts are given to the penny (0.01).</div><p class="pst">Output</p><div class="ptx" lang="en-US">For ease correcting your register, the output for each transaction occurs in the order it appears in the register. Each register entry receives exactly one line in the output.
+<br>If the register entry is entirely correct, meaning that it is found in the statement for the same amount, the math in the register is correct, and it is not a duplicate entry for a transaction previously found in the register, then output the line
+<br>{check|deposit} < N > is correct
+<br>However, if the transaction is not entirely correct, you will output a single line beginning with the transaction type and number, and one or more of the following mistakes, whitespace separated, in this order:
+<br><ul><li>is not in statement the transaction type and number do not occur in the statement
+<br><li>repeated transaction the transaction has occurred previously in the register
+<br><li>incorrect amount the register amount is different than the statement amount
+<br><li>math uses correct value the math uses the value from the statement, although the actual transaction amount is recorded incorrectly in the register. This can only appear if incorrect amount is also displayed.
+<br><li>math mistake the register balance after the transaction matches neither the statement amount for the transaction, nor the register entry for the transaction (if different than the statement amount)</ul>
+<br>Following the line for the final entry in the register, a listing of all transactions missing from the register will be printed. These items must be printed in ascending order (check < deposit , 1 < 2 < 3 ... ), one per line:
+<br>missed {check|deposit} < N ></div><p class="pst">Sample Input</p><pre class="sio">balance 1000.00
+check 100 10.00
+check 101 20.00
+check 102 30.00
+check 103 100.00
+deposit 1 10.00
+deposit 2 20.00
+deposit 3 30.00
+deposit 4 500.00
+balance 1400.00
+1000.00
+check 100 10.00
+990.00
+deposit 2 25.00
+1015.00
+check 101 20.00
+990.00
+check 102 30.00
+960.00
+check 101 21.00
+940.00
+check 103 100.00
+840.00
+deposit 3 30.00
+870.00
+deposit 4 500.00
+1370.00</pre><p class="pst">Sample Output</p><pre class="sio">check 100 is correct
+deposit 2 incorrect amount
+check 101 math mistake
+check 102 is correct
+check 101 repeated transaction incorrect amount math uses correct value
+check 103 is correct
+deposit 3 is correct
+deposit 4 is correct
+missed deposit 1</pre><p class="pst">

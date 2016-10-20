@@ -1,0 +1,25 @@
+</p><div class="ptx" lang="en-US">In a well-known online game you play a yeti whose goal it is to hit a cute and cuddly penguin in such a way that it flies as far as possible. The game is set in sunny Antarctica, where the ground is littered with obstacles left by human and robotic expeditions. The most dangerous obstacles are sharp, pointy, metal objects, known as spikes. These spikes are most definitely not safe for penguins and children under three years of age.
+<br>Besides the occasional expedition, there have also been many wars in Antarctica. The result is that besides spikes, penguins (and yetis), one is also likely to encounter mines on the Antarctic surface. While they are not good for the health of a penguin, the explosions do improve the distance he will travel.
+<br>The best way to get a high score in this game is by guring out the optimal strategy in advance. To be able to do this you need to know the following facts:
+<br><p style="padding-left: 30px">
+<br>The yeti always bats at an integral angle between -90 and +90 degrees, -90° is straight down, 0° is to the right and +90° is straight up.
+<br>The penguin gets a total velocity of 25m/s regardless of the angle.
+<br>The yeti hits the 3kg penguin at exactly one meter above the ground.
+<br>Upon hitting the ground the penguin will slide along the ground, while undergoing friction. This will slow it down by 5m/s for every meter traveled.
+<br>Upon hitting a mine the penguin will be flung 2m forward through the air, and also undergo an instant increase in velocity of 4m/s forward.
+<br>If the penguin hits a spike, the game ends immediately with a score of -100. Otherwise the score will be the horizontal distance traveled in centimeters, rounded to the nearest integer.
+<br>Standard Earth gravity (9.81m/s<sup>2</sup>) is used and drag is ignored.
+<br></p></div><p class="pst">Input</p><div class="ptx" lang="en-US">On the first line of the input is a positive integer, the number of test cases. Then for each test case:
+<br>A line with a single integer n < 10<sup>5</sup>, the number of obstacles.
+<br>n lines, each containing:
+<br>- A single floating point number xi, the position of the obstacle in meters from the start.
+<br>- A string describing the obstacle, either "mine" or "spike".</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case:
+<br>One line containing two integers, the highest possible score, and the angle in degrees at which the yeti needs to hit the penguin to achieve that score. In case of a tie output the lowest angle.</div><p class="pst">Sample Input</p><pre class="sio">3
+0
+1
+64.7 spike
+2
+63.9 mine
+64.7 spike</pre><p class="pst">Sample Output</p><pre class="sio">6829 44
+6466 34
+7022 39</pre><p class="pst">

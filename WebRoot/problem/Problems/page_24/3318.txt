@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US"><p>You are given three <i>n</i> &times; <i>n</i> matrices <i>A</i>, <i>B</i> and <i>C</i>. Does the equation <i>A</i> &times; <i>B</i> = <i>C</i> hold true?</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of input contains a positive integer <i>n</i> (<i>n</i> &le; 500) followed by the the three matrices <i>A</i>, <i>B</i> and <i>C </i>respectively. Each matrix's description is a block of n &times; n integers.</p><p>It guarantees that the elements of <i>A</i> and <i>B</i> are less than 100 in absolute value and elements of <i>C</i> are less than 10,000,000 in absolute value.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output &quot;YES&quot; if the equation holds true, otherwise &quot;NO&quot;.</p></div><p class="pst">Sample Input</p><pre class="sio">2
+1 0
+2 3
+5 1
+0 8
+5 1
+10 26
+</pre><p class="pst">Sample Output</p><pre class="sio">YES</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Multiple inputs will be tested. So O(n<sup>3</sup>) algorithm will get TLE.</div><p class="pst">

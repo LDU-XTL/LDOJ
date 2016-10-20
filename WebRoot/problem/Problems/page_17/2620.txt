@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">Given set of line segments [Li , Ri] with integer coordinates of their end points. Your task is to find the minimal subset of the given set which covers segment [0,M] completely (M is a positive integer). </div><p class="pst">Input</p><div class="ptx" lang="en-US">First line of the input contains number M (1 <= M <= 5000). Subsequent lines of input contain pairs of numbers Li and Ri (abs(Li), abs(Ri) <= 50000). Each pair is placed on separate line. Numbers in the pair are separated with space(s). List of pairs is ended with pair of integers "0 0". i <= 100000</div><p class="pst">Output</p><div class="ptx" lang="en-US">Your program should print in the first line of output the power of minimal subset of segments which covers segment [0, M]. The list of segments of covering subset must follow. Format of the list must be the same as described in input with exception that ending pair "0 0" should not be printed. Segments should be printed in increasing order of their left end point coordinate. 
+<br>
+<br>If there is no covering subset then print "No solution" to output. </div><p class="pst">Sample Input</p><pre class="sio">1
+-1 0
+-5 -3
+2 5
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">No solution
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Huge input,scanf is recommended.
+<br>Sample input #2
+<br>1
+<br>-1 0
+<br>0 1
+<br>0 0
+<br>
+<br>Sample output #2
+<br>1
+<br>0 1</div><p class="pst">

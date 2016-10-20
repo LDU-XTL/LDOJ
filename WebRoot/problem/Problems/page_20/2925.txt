@@ -1,0 +1,31 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>With the FIFA World Cup 2006<sup>&trade;&reg;&dagger;</sup>, a lot of people run world cup pools, where friends or colleagues can join and predict the outcome of the world cup games. The world cup is divided into several rounds, each of which consists of several games. After each game, you gain points for correctly predicting the winner as well as for predicting the exact outcome. After each round, the one who scored highest that round receives a separate point &mdash; from now on called a <i>dot</i> &mdash; which might later serve as a tie-breaker. If several people have scored highest, a dot is given to all of them.</p><p>After the world cup, the one who scored highest wins the pot, or, if you decided not to play for money, unstinted admiration for being such an outstanding soccer expert.</p><p>A few weeks ago you thought that sounded fun, so you are also running a pool for your friends. But now, the world cup is about to end. The finals are tomorrow, and still you do not know who scored how. You decide to write a program that will help you find out.</p><p>Given a list of the participants, those peoples&rsquo; bets, and the outcomes of the games, calculate each participant&rsquo;s total number of points as well as the number of dots he received and output the sorted list of scores.</p><p>With your pool, you gain one point for correctly guessing which team wins, respectively whether the game ends in a draw. You receive two additional points for exactly guessing the correct result.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The first line contains the number of scenarios. Each scenario starts with a line containing the number of participants <i>p</i> (1 &le; <i>p</i> &le; 50) and the number of rounds <i>r</i> (1 &le; <i>r</i> &le; 14). First come <i>p</i> lines, where the <i>i</i>-th such line contains the name of the <i>i</i>-th participant. Each name is guaranteed to be shorter than 50 characters. Then follow <i>r</i> descriptions of individual rounds.</p><p>Each round again consists of individual games, and thus starts with a line containing the number <i>g</i> (1 &le; <i>g</i> &le; 16) of games in this round. Next, there are the <i>g</i> descriptions of these games.</p><p>A description of a game is given by a line containing the result followed by exactly <i>p</i> lines with the predicted results, where the <i>i</i>-th such line gives the result predicted by participant <i>i</i>. Each result is given in the format <i>X</i> : <i>Y</i> (with one space before and after the colon) where <i>X</i> and <i>Y</i> are non-negative integers.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The output for every scenario begins with a line containing &ldquo;<tt>Scenario #</tt><i>i</i><tt>:</tt>&rdquo;, where <i>i</i> is the number of the scenario starting at 1. Then print a sorted table of <i>p</i> lines giving the number of points, the number of dots, and the names of the participants in the following order:</p><ol><li>Participants with more points rank higher.</li><li>Among those with an equal number of points, participants with more dots rank higher.</li><li>If there is still a tie, use the order of the input.</li></ol><p>In each line, the number of points, the dots, and the name must be separated by single spaces. Terminate the output for the scenario with a blank line.</p></span></div><p class="pst">Sample Input</p><pre class="sio">2
+2 2
+Gerhard Delling
+Guenter Netzer
+1
+4 : 3
+0 : 1
+1 : 0
+2
+1 : 0
+1 : 0
+1 : 0
+0 : 0
+2 : 1
+0 : 0
+3 1
+Johannes B. Kerner
+Urs Meier
+Juergen Klopp
+1
+2 : 1
+2 : 1
+2 : 1
+2 : 1</pre><p class="pst">Sample Output</p><pre class="sio">Scenario #1:
+7 2 Guenter Netzer
+3 0 Gerhard Delling
+
+Scenario #2:
+3 1 Johannes B. Kerner
+3 1 Urs Meier
+3 1 Juergen Klopp</pre><p class="pst">

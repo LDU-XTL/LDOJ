@@ -1,0 +1,31 @@
+</p><div class="ptx" lang="en-US">BF is a language that was designed to challenge and amuse programmers. BF uses a simple machine model consisting, besides the program, of:
+<br><ul>
+<br><li>An array of 30,000 byte cells – byte value ranges from 0 to 255 - initialized to zeroes.</li>
+<br><li>A movable pointer into a circular array (initialized to point to location 0)</li>
+<br><li>Two streams of bytes for input and output (most often connected to a keyboard and a monitor respectively, and using the ASCII character encoding).</li>
+<br></ul>
+<br>In this problem you are asked to implement a BF interpreter, your program should read a BF program and an input stream and should print the output stream.
+<br>
+<br>BF syntax is easy, only the following commands are available:
+<br>
+<br><table border="1"><tr><td>Character</td><td>Spelled as</td><td>Meaning</td></tr><tr><td>&gt;</td><td>Greater than</td><td>Increment the pointer (to point to the next cell to the right).</td></tr><tr><td>&lt;</td><td>Less than</td><td>Decrement the pointer (to point to the next cell to the left).</td></tr><tr><td>+</td><td>Plus sign</td><td>Increment (increase by one) the byte at the pointer.</td></tr><tr><td>-</td><td>Minus sign</td><td>Decrement (decrease by one) the byte at the pointer.</td></tr><tr><td>.</td><td>Dot (period)</td><td>Puts the value of the byte at the pointer into the output stream.</td></tr><tr><td>,</td><td>Comma</td><td>Accept one byte of input - from the input stream - storing its value in the byte at the pointer.</td></tr><tr><td>[</td><td>Left square bracket</td><td>Jump forward to the command after the corresponding ‘]’ if the byte at the pointer is zero.</td></tr><tr><td>]</td><td>Right square bracket</td><td>Jump back to the command after the corresponding ‘[‘ if the byte at the pointer is nonzero.</td></tr></table>
+<br>
+<br>The given BF programs will be syntactically valid also the ‘&gt;’ and ‘&lt;’ operators will never lead to a value outside range [0-30000].</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input starts with the number of test cases on a line by itself. Then a number of test cases; each test case is formatted as follows.
+<br><ol>
+<br><li>A BF program (possibly with extra letters and/or white space characters embedded anywhere in the text).</li>
+<br><li>A white space and a dollar sign – ‘$’ – indicating end of BF program.</li>
+<br><li>A space, the input stream, another space and a dollar sign terminator indicating the end of the input stream.</li>
+<br><li>A new line.</li>
+<br></ol>
+<br>A test case may span on multiple lines and each two consecutive test cases are separated by a blank line.
+<br>
+<br>The <i>embedded</i> text could be any characters except the dollar sign terminator, you should ONLY process the 8 commands and detect the end of program/input by the dollar signs, discard any other characters when processing. In the sample input only the relevant input is underlined, however in the real test cases there will be no signs of input termination except for the dollar signs.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output should be “Case “ then test case number (starting with 1) , a colon, a space followed by the contents of the BF program output stream and a new line after each test case.</div><p class="pst">Sample Input</p><pre class="sio"><u>3
+,&gt;,&gt;,&gt;,.&lt;.&lt;.&lt;. $ abcde $</u>
+
+This is a sample BF program <u>,&gt;++++++[&lt;--------&gt;-],[&lt;+&gt;-]&lt;.</u> That
+Prints the summation of 2 numbers <u>$ 23 $</u>
+
+<u>,&gt;,&gt; ++++[&lt;++++++++&gt;-]&lt;. &gt;++++[&lt;&lt;++++++++&gt;&gt;-]&lt;&lt;.</u> Adds to
+every cell 8*4=32 and prints 'em in reverse order <u>$ AB $</u></pre><p class="pst">Sample Output</p><pre class="sio">Case 1: dcba
+Case 2: 5
+Case 3: ba</pre><p class="pst">

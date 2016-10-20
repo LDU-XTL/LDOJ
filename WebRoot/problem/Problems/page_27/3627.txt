@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US"><div><p>Farmer John recently bought a bookshelf for cow library, but the shelf is getting filled up quite quickly, and now the only available space is at the top.</p><p>Each of the <i>N</i> cows (1 &le; <i>N</i> &le; 20,000) has some height of <i>H<sub>i</sub></i> (1 &le; <i>H<sub>i</sub></i> &le; 10,000) and a total height summed across all<i> N</i> cows of <i>S</i>. The bookshelf has a height of <i>B</i> (1 &le; <i>B</i> &le; <i>S</i> &lt; 2,000,000,007).</p><p>To reach the top of the bookshelf taller than the tallest cow, one or more of the cows can stand on top of each other in a stack, so that their total height is the sum of each of their individual heights. This total height must be no less than the height of the bookshelf. Since more cows than necessary in the stack can be dangerous, your job is to find the set of cows that produces a stack of the smallest number of cows possible such that the stack can reach the bookshelf.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>* Line 1: Two space-separated integers: <i>N</i> and <i>B</i><br>* Lines 2..<i>N</i>+1: Line <i>i</i>+1 contains a single integer: <i>H<sub>i</sub></i> </p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>* Line 1: A single integer representing the size of the smallest set of cows that can reach the bookshelf.</p></div><p class="pst">Sample Input</p><pre class="sio">6 40
+6
+18
+11
+13
+19
+11
+</pre><p class="pst">Sample Output</p><pre class="sio">3</pre><p class="pst">

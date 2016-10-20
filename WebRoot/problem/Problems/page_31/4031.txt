@@ -1,0 +1,54 @@
+</p><div class="ptx" lang="en-US">There is a robot who lives on a cartesian plane and likes to walk around it. One day he planned a very interesting journey around the plane. To make that journey he developed a program which he is going to follow. The program consists of n functions: f<sub>1</sub>, f<sub>2</sub>, ..., f<sub>n</sub>. The i-th function f<sub>i</sub> is a sequence of c<sub>i</sub> commands. Each command is of one of the following types:
+<br><ul>
+<br><li> GO: Move forward one meter; </li>
+<br><li> LEFT: Turn 90 degrees to the left;</li>
+<br><li> RIGHT: Turn 90 degrees to the right;</li>
+<br><li> Fk: Follow the instructions of the function f<sub>k</sub>, then continue following the instructions of the current function.</li>
+<br></ul>
+<br>The robot starts the journey at his home located at the point with coordinates (0, 0) following the instructions of the function f<sub>1</sub>.
+<br>
+<br>For example, consider the following set of functions:
+<br>
+<br><center><img src="images/4031.png"></center>
+<br>
+<br>f<sub>1</sub>: GO F2 GO F2 GO F2
+<br>f<sub>2</sub>: F3 F3 F3 F3
+<br>f<sub>3</sub>: GO LEFT
+<br>
+<br>The robot’s journey for that case is shown on the picture.
+<br>
+<br>In some cases the journey of the robot might never end. Consider for example the set of instructions consisting of one function f<sub>1</sub> that has the following commands: GO F1. In that case the robot keeps going forward and never stops.
+<br>
+<br>The question that puzzles the robot now is how far from the home will he get during his journey. That is, consider the set of all points which the robot will visit. Find the maximum value of |x|+|y| among all those points. If there are points on the path of the robot with arbitrarily large values of |x|+|y|, output “Infinity”.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file consists of an integer number n (1 ≤ n ≤ 100). The following n lines contain a description of the functions. The i-th line describes function fi. It consists of the number ci (1 ≤ ci ≤ 100) — the number of commands for function fi, followed by a description of each command.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output the maximum value of |x| + |y| among all points visited during the journey or “Infinity”.</div><p class="pst">Sample Input</p><pre class="sio">Sample Input #1
+
+3
+6 GO F2 GO F2 GO F2
+4 F3 F3 F3 F3
+2 GO LEFT
+
+
+Sample Input #2
+
+1
+2 GO F1
+
+
+Sample Input #3
+
+4
+2 GO F2
+7 LEFT GO GO GO F3 LEFT F4
+5 GO F4 RIGHT F2 RIGHT
+7 GO GO LEFT LEFT GO LEFT GO</pre><p class="pst">Sample Output</p><pre class="sio">Sample Output #1
+
+5
+
+
+Sample Output #2
+
+Infinity
+
+
+Sample Output #3
+
+13</pre><p class="pst">

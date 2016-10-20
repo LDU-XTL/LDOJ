@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">To play the "fraction game" corresponding to a given list f1, f2, ..., fk of fractions and starting integer N, you repeatedly multiply the integer you have at any stage (initially N) by the earliest fi in the list for which the answer is integral. Whenever there is no such fi, the game stops. 
+<br>
+<br>Formally, we define a sequence by S0=N, and S<sub>j+1</sub>=fiSj, if for 1<=i<=k, the number fiSj is an integer but the numbers f1Sj, ..., f<sub>i-1</sub>Sj are not. 
+<br>
+<br>For example, if we have the list of eight fractions f1=170/39, f2=19/13, f3=13/17, f4=69/95, f5=19/23, f6=1/19, f7=13/7, f8=1/3, and start with N=21, we produce the (finite) sequence (21,39,170,130,190,138,114,6,2). In general, the sequence may be infinite. 
+<br>
+<br>Given a fraction list and a starting integer calculate a part of the defined sequence. Actually, we are interested only in the powers of 2 that appear in the sequence. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several test cases. Every test case starts with three integers m, N, k. You may assume that 1<=m<=40, 1<=N<=1000, and 1<=k<=100. Then follow k fractions f1, ..., fk. For each fraction, first its numerator is given, followed by its denominator. You may assume that both are positive integers less than 1000 and their greatest common divisor is 1. The last test case is followed by a zero. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case output on a line m numbers e1, ..., em, separated by one space character, such that 2<sup>e</sup>1, ..., 2<sup>e</sup>k are the first m numbers in the defined sequence that are powers of 2. You may assume that there are at least m powers of 2 among the first 7654321 elements of the sequence. </div><p class="pst">Sample Input</p><pre class="sio">1 21 8 170 39 19 13 13 17 69 95 19 23 1 19 13 7 1 3
+20 2 14 17 91 78 85 19 51 23 38 29 33 77 29 95 23 77 19 1 17 11 13 13 11 15 2 1 7 55 1
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+1 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67
+</pre><p class="pst">

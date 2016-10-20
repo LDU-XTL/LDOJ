@@ -1,0 +1,32 @@
+</p><div class="ptx" lang="en-US">Professor B. Heif is conducting experiments with a species of South American bees that he found during an expedition to the Brazilian rain forest. The honey produced by these bees is of superior quality compared to the honey from European and North American honey bees. Unfortunately, the bees do not breed well in captivity. Professor Heif thinks the reason is that the placement of the different maggots (for workers, queens, etc.) within the honeycomb depends on environmental conditions, which are different in his laboratory and the rain forest. 
+<br>As a first step to validate his theory, Professor Heif wants to quantify the difference in maggot placement. For this he measures the distance between the cells of the comb into which the maggots are placed. To this end, the professor has labeled the cells by marking an arbitrary cell as number 1, and then labeling the remaining cells in a clockwise fashion, as shown in the following figure. 
+<br><center><table><tr><td><pre>
+<br>       __    __    __    __
+<br>    __/  \__/  \__/  \__/  \__
+<br> __/  \__/  \__/53\__/  \__/  \__
+<br>/  \__/  \__/52\__/54\__/  \__/  \
+<br>\__/  \__/51\__/31\__/55\__/  \__/
+<br>/  \__/50\__/30\__/32\__/56\__/  \
+<br>\__/49\__/29\__/15\__/33\__/57\__/
+<br>/  \__/28\__/14\__/16\__/34\__/  \
+<br>\__/48\__/13\__/ 5\__/17\__/58\__/
+<br>/..\__/27\__/ 4\__/ 6\__/35\__/  \
+<br>\__/47\__/12\__/ 1\__/18\__/59\__/
+<br>/..\__/26\__/ 3\__/ 7\__/36\__/  \
+<br>\__/46\__/11\__/ 2\__/19\__/60\__/
+<br>/..\__/25\__/10\__/ 8\__/37\__/  \
+<br>\__/45\__/24\__/ 9\__/20\__/61\__/
+<br>/..\__/44\__/23\__/21\__/38\__/  \
+<br>\__/70\__/43\__/22\__/39\__/62\__/
+<br>/  \__/69\__/42\__/40\__/63\__/  \
+<br>\__/  \__/68\__/41\__/64\__/  \__/
+<br>/  \__/  \__/67\__/65\__/  \__/  \
+<br>\__/  \__/  \__/66\__/  \__/  \__/
+<br>   \__/  \__/  \__/  \__/  \__/
+<br>      \__/  \__/  \__/  \__/</pre></table></center>
+<br>For example, two maggots in cells 19 and 30 are 5 cells apart. One of the shortest paths connecting the two cells is via the cells 19 - 7 - 6 - 5 - 15 - 30, so you must move five times to adjacent cells to get from 19 to 30. 
+<br>Professor Heif needs your help to write a program that computes the distance, defined as the number of cells in a shortest path, between any pair of cells. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several lines, each containing two integers a and b (a,b <= 10000), denoting numbers of cells. The integers are always positive, except in the last line where a=b=0 holds. This last line terminates the input and should not be processed. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each pair of numbers (a,b) in the input file, output the distance between the cells labeled a and b. The distance is the minimum number of moves to get from a to b. </div><p class="pst">Sample Input</p><pre class="sio">19 30
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">The distance between cells 19 and 30 is 5.
+</pre><p class="pst">

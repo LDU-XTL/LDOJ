@@ -1,0 +1,33 @@
+</p><div class="ptx" lang="en-US">Once upon a time, there was a young man who loved adventure. He found an old lambskin in his grandfather's relic which described a secret buried treasure. The old lambskin told him to go to a particular deserted island. There was a big stretch of lawn on the north shore of the island. On the lawn there was an oak tree, a pine tree and a gallows. The instructions were as following: Walk from the gallows to the oak tree and remember the distance, turn right and walk the same distance, and make a mark there. Then return to the gallows, walk towards the pine tree and remember the distance, turn left and walk the same distance, and also make a mark. Excavate at the middle point of the segment between the two marks, and the treasure will be there (see Figure 1).
+<br><center><img src=images/2725_1.jpg>
+<br>Figure 1</center>
+<br>The young man found that island and also found the oak tree and the pine tree, but the gallows was destroyed due to the abrasion of time. The young person was disappointed and went back. What a pity! If the young man had some geometry knowledge, he would discover that the position of the treasure is independent from the position of the gallows. But I believe you will not make similar mistakes. Given a general description of how to find the treasure, your job is to find the position of the treasure, if the position can be fixed.
+<br>
+<br>First you will be given some points of original marks. The positions of some of these points are known, but the others are unknown. Then you will be given some instructions to make new marks. There are three kinds of instructions:
+<br><ol><li>Given two marks A and B, the new mark is at the middle point between A and B.
+<br><li>Given two marks A and B, walk from A to B, turn left, walk the same distance as the distance between A and B, and then make a mark.
+<br><li>Given two marks A and B, walk from A to B, turn right, walk the same distance as the distance between A and B, and then make a mark.</ol>
+<br>At last, you will be asked for the position of a mark.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">There are several test cases. Each test case has three parts of input. The first part contains several lines indicating the original marks with the one of the following two formats: 
+<br><ul>M</ul>
+<br>or:
+<br><ul>M x y</ul>
+<br>Here M is the mark symbol, and x and y are integers in the range of [0, 100]. The first format means that we don't know the position of the mark. The second format means that we know the position of the mark is (x, y). In this part, one mark will be mentioned at most once.
+<br>
+<br>The second part contains some instructions with the following formats:
+<br><ul>N A B C</ul>
+<br>Here N (= 1, 2 or 3) indicates which kind of instruction is used. A, B are symbols of the marks you have already had, and C is the symbol of a new mark you will get. You may assume that A and B are different marks and have been mentioned before, and it's the first time for C to show up.
+<br>
+<br>The third part is one line containing a mark symbol, of which we want to know the position. It is assured that this mark has been mentioned before.
+<br>
+<br>A line with "END" indicates the end of the input.
+<br>
+<br>To make it easier, we use 'A', 'B', ... and 'Z' as mark symbols, which implies there are no more than 26 marks.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output one line containing two decimal numbers x and y, which means (x, y) is the position we want to know. These numbers should be rounded two digits after the decimal point. If the position is uncertain, output "UNCERTAIN!" instead.</div><p class="pst">Sample Input</p><pre class="sio">B 0 0
+A
+C 100 0
+3 A B D
+2 A C E
+1 D E F
+F
+END
+</pre><p class="pst">Sample Output</p><pre class="sio">50.00 50.00</pre><p class="pst">

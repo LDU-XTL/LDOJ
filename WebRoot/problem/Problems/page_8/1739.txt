@@ -1,0 +1,19 @@
+</p><div class="ptx" lang="en-US">A square township has been divided up into n*m(n rows and m columns) square plots (1<=N,M<=8),some of them are blocked, others are unblocked. The Farm is located in the lower left plot and the Market is located in the lower right plot. Tony takes her tour of the township going from Farm to Market by walking through every unblocked plot exactly once.
+<br>Write a program that will count how many unique tours Betsy can take in going from Farm to Market. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several test cases. The first line of each test case contain two integer numbers n,m, denoting the number of rows and columns of the farm. The following n lines each contains m characters, describe the farm. A '#' means a blocked square, a '.' means a unblocked square.
+<br>The last test case is followed by two zeros.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case output the answer on a single line.</div><p class="pst">Sample Input</p><pre class="sio">2 2
+..
+..
+2 3
+#..
+...
+3 4
+....
+....
+....
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+1
+4
+</pre><p class="pst">

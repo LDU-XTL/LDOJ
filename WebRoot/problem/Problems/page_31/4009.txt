@@ -1,0 +1,55 @@
+</p><div class="ptx" lang="en-US">Recently, the Chinese government is going to hold a porcelain exhibition in every province.
+<br>For fascinating citizens, each exhibition should put at least MIN_K porcelains on show. And by the restriction of conditions, at most MAX_K porcelains can be shown in an exhibition.
+<br>
+<br>The number of porcelains in a province is in direct proportion to the area of that province. So some small provinces may don't have enough porcelains, and some big provinces may have more porcelains than it can show(having too much porcelains is not a problem for holding an exhibition, just don’t show some of them). The government decides to transport some porcelains between provinces so that every province can hold an exhibition.
+<br>
+<br>Because of the limitation of traffic, the amount of porcelains passing a boundary between two provinces is limited. So the government asks you to write a program to manage the transportation.
+<br>
+<br>The map of China can be seen as a connected planar graph embedded on a plane. Each face of the graph represents a province. This graph has N vertices and M edges. A vertex of the graph is also a point on the map, and an edge is also a line segment connecting two points, meaning a boundary between two provinces.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will consist of multiply test cases. For each case, The first line contains five positive integers --- above mentioned N, M, MIN_K,MAX_K and P( N &lt;= 1000,M &lt;= 10000, MIN_K &lt; MAX_K) . P means that if the area of a province is A, then there are A×P porcelains in that province. P is guaranteed to be even so that the amount of porcelains in each province will be a positive integer.
+<br>
+<br>The next N lines, each gives two integer x, y, representing the coordinate of a vertex(Vertexes have distinct coordinates). The vertexes are numbered from 0 to N-1 and the coordinates are given in the order of vertex No. 
+<br>
+<br>The next M lines, each gives three integers u,v, and w. It means that there is an edge connecting vertex u and vertex v. The edge is also a boundary between two provinces. w means that the boundary can’t let more than w porcelains to pass through. (w for the boundary of China is 0, and boundaries don't overlap). The number of province is less than 2000.
+<br>
+<br>The input ends with 0 0 0 0 0.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print one integer in a line representing the maximal number of porcelains can be exhibited in whole country. If one or more province can’t hold an exhibition, print -1.</div><p class="pst">Sample Input</p><pre class="sio">8 9 5 8 2
+0 0
+0 3
+3 3
+3 0
+1 1
+1 2
+2 2
+2 1
+0 1 0
+1 2 0
+2 3 0
+3 0 0
+4 5 1
+5 6 1
+6 7 1
+7 4 1
+0 4 1
+8 9 7 8 2
+0 0
+0 3
+3 3
+3 0
+1 1
+1 2
+2 2
+2 1
+0 1 0
+1 2 0
+2 3 0
+3 0 0
+4 5 1
+5 6 1
+6 7 1
+7 4 1
+0 4 1
+0 0 0 0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">14
+-1
+</pre><p class="pst">

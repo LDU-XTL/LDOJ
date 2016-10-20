@@ -1,0 +1,37 @@
+</p><div class="ptx" lang="en-US">Don't you know that at a school pupils' programming contest a new computer language has been being developed. We call it D++. Generally speaking it doesn't matter if you know about it or not. But to run programs written in D++ we need a new operating system. It should be rather powerful and complex. It should work fast and have a lot of possibilities. But all this should be done in future.
+<br>And now you are to... No. You should not devise the name for the operating system. You are to write the first module for this new OS. And of course it's the memory management module. Let's discuss how it is expected to work.
+<br>Our operating system is to allocate memory in pieces that we'll call "blocks". The blocks are to be numbered by integers from 1 up to N. When operating system needs more memory it makes a request to the memory management module. To process this request the memory management module should find free memory block with the least number. You may assume that there are enough blocks to process all requests.
+<br>Now we should define the meaning of words "free block". At the moment of first request to the memory management module all blocks are considered to be free. Also a block becomes free when there were no requests to it during T minutes.
+<br>You may wonder about a notion "request to allocated blocks". What does it mean, "request to allocated block"? The answer is simple: at any time the memory management module may be requested to access a given block. To process this request the memory management module should check if the requested block is really allocated. If it is, the request is considered to be successful and the block remains allocated for T minutes more. Otherwise the request is failed.
+<br>That's all about the algorithms of the memory management block. You are to implement them for N = 30 000 and T = 10 minutes.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Each line of input contains a request for memory block allocation or memory block access. Memory allocation request has a form:
+<br>< Time> +
+<br>where < Time> is a nonnegative integer number not greater than 65 000. Time is given in seconds. Memory block access request has a form:
+<br>< Time> . < BlockNo>
+<br>where < Time> meets conditions mentioned above for the memory allocation request and < BlockNo> is an integer value in range from 1 to N.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each line of input you should print exactly one line with a result of request processing. For memory allocation request you are to write an only integer — a number of allocated block. As it was mentioned above you may assume that every request can be satisfied, there will be no more than N simultaneously allocated blocks. For memory block access request you should print the only character:
+<br>'+' — if the request is successful (i.e. the block is really allocated)
+<br>'-' — if the request fails (i.e. the block with number given is free, so it can't be accessed)
+<br>Requests are arranged by their times in an increasing order. Requests with equal times should be processed as they appear in input.</div><p class="pst">Sample Input</p><pre class="sio">1 +
+1 +
+1 +
+2 . 2
+2 . 3
+3 . 30000
+601 . 1
+601 . 2
+602 . 3
+602 +
+602 +
+1202 . 2
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+2
+3
++
++
+-
+-
++
+-
+1
+3
+-
+</pre><p class="pst">

@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US"><p>A <i>wild number</i> is a string containing digits and question marks (like 36?1?8). A number <i>X</i> matches a wild number <i>W</i> if they have the same length, and every non-question mark character in <i>X</i> is equal to the character in the same position in <i>W</i> (it means that you can replace a question mark with any digit). For example, 365198 matches the wild number 36?1?8, but 360199, 361028, or 36128 does not. Write a program that reads a wild number <i>W</i> and a number <i>X</i> from input, both of length <i>n</i>, and determines the number of <i>n</i>-digit numbers that match <i>W</i> and are greater than <i>X</i>.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>There are multiple test cases in the input. Each test case consists of two lines of the same length. The first line contains a wild number <i>W</i>, and the second line contains an integer number <i>X</i>. The length of input lines is between 1 and 10 characters. The last line of input contains a single character #.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, write a single line containing the number of <i>n</i>-digit numbers matching <i>W</i> and greater than <i>X</i> (<i>n</i> is the length of <i>W</i> and <i>X</i>).</p></div><p class="pst">Sample Input</p><pre class="sio">36?1?8
+236428
+8?3
+910
+?
+5
+#
+</pre><p class="pst">Sample Output</p><pre class="sio">100
+0
+4
+</pre><p class="pst">

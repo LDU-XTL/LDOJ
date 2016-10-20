@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">Snail Alice is a snail indulged in math. One day, when she was walking on the grass, suddenly an accident happened. Snail Alice fell into a bottomless hole, which was deep enough that she kept falling for a very long time. In the end, she caught the lateral wall of the hole and stop falling down. She named the place where she stopped “lucky place” immediately.
+<br>
+<br>Snail Alice decided to climb up along the wall from the “lucky place”. The first day she climbed up q0 (q is a positive constant integer) metres, but at night when she fell asleep, she fell down q1 metres. She was shocked when she woke up, and she decided to make an extra effort. The second day she finally climbed up q2 metres. To her surprise, she fell down faster because of the tiredness. She fell down q3 metres at night. The longer she climbed up the longer she fell down. But finally, she still climbed out of the hole and slept on the ground.
+<br>
+<br>Lying on the grass safe, she was curious about a question. How many metres was the “lucky place” down under the ground? She remembered that the sum of the times of her climbing up and falling down is n(of course, n is odd), so the distance between the ground and the “lucky place” must be 1-q+q<sub>2</sub>-q<sub>3</sub>+...+(-1)<sup>n-1</sup>q<sub>n-1</sub>. Snail Alice simplified that long formula and get a beautiful result: (q<sup>n</sup>+1)/(q+1). But as a math professor, she wouldn’t stop. She came up with a good problem to test her students. Here is the problem:
+<br>
+<br>A function f(n), n is a positive integer, and
+<br><center><img src="formula?tex=f%28n%29%3D%5Cleft%5C%7B%5Cbegin%7Barray%7D%7Bcl%7D%5Cfrac%7Bq%5En%2B1%7D%7Bq%2B1%7D+%26+n%5C+is%5C+odd%5C%5C+%5Cfrac%7Bq%5En-1%7D%7Bq%2B1%7D+%26+n%5C+is%5C+even%5Cend%7Barray%7D%5Cright." alt="f(n)=\left\{\begin{array}{cl}\frac{q^n+1}{q+1} &#38; n\ is\ odd\\ \frac{q^n-1}{q+1} &#38; n\ is\ even\end{array}\right." align="absmiddle"></center>
+<br>
+<br>Given q and n, please calculate the value of f(n).Please note that q and n could be huge.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of multiple test cases, and ends with a line of “-1 -1 -1”.
+<br>For each test case:
+<br>The first line contains three integers x1, y1 and z1, representing q. q=x1<sup>y1</sup>+z1.
+<br>The second line contains two integers: y2 and z2, representing n. n=2<sup>y2</sup>+z2.
+<br>The third line contains a single integer P, meaning that what you really should output is the formula’s value mod P.
+<br>Note: 0&lt;=x1,y1,z1,y2,z2&lt;=50000, z1&gt;0, 0&lt;P&lt;100000000</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print one line containing an integer which equals to the formula’s value mod P.</div><p class="pst">Sample Input</p><pre class="sio">2 1 3
+0 0
+32551
+3 0 5
+0 2	
+70546
+-1 -1 -1</pre><p class="pst">Sample Output</p><pre class="sio">1
+31</pre><p class="pst">

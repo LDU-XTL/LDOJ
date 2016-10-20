@@ -1,0 +1,6 @@
+</p><div class="ptx" lang="en-US">Given a big integer number, you are required to find out whether it's a prime number.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains the number of test cases T (1 <= T <= 20 ), then the following T lines each contains an integer number N (2 <= N < 2<sup>54</sup>).</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, if N is a prime number, output a line containing the word "Prime", otherwise, output a line containing the smallest prime factor of N.</div><p class="pst">Sample Input</p><pre class="sio">2
+5
+10
+</pre><p class="pst">Sample Output</p><pre class="sio">Prime
+2
+</pre><p class="pst">

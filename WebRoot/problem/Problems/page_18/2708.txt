@@ -1,0 +1,28 @@
+</p><div class="ptx" lang="en-US">A prospective CS student is investigating how many semesters it will take to graduate from a variety of different universities. Each university provides a list of required courses, their prerequisites, and when each course is offered. Given this information, determine the minimum number of semesters to graduate.
+<br>
+<br>Consider the following example. A student is required to take 4 courses, mt42, cs123, cs456, and cs789. mt42 is only offered in the fall semester and has no prerequisites. Similarly, cs123 is only offered in the spring semester and has no prerequisites. cs456 is only offered in the spring semester and has both cs123 and mt42 as prerequisites. Finally, cs789 is offered in both fall and spring and has cs456 as its only prerequisite. The shortest time to graduate is 5 semesters, by taking mt42 in the fall, cs123 in the next spring, cs456 the following spring (since it is not offered in the fall) and finally cs789 the following fall.
+<br>
+<br>For this problem, there are only two semesters, fall and spring. Always start counting semesters from the fall. 
+<br>
+<br>In addition to the fall/spring scheduling issues, there is one slight complication. In order to keep the dormitories full, each university limits the number of courses that can be taken in any semester. This limit appears as part of the input data. The third example below illustrates this issue.</div><p class="pst">Input</p><div class="ptx" lang="en-US">There are one to twenty-five data sets, followed by a final line containing only the integers -1 -1. A data set starts with a line containing two positive integers n, 1 <= n <= 12, which is the number of courses in this data set and m, 2 <= m <= 6, which is the maximum number of courses that can be taken in any single semester. The next line contains the n course identifiers. Each is a 1-5 character string from the set {a-z, 0-9}. Following the course identifiers is the individual course information. This consists of n lines, one line for each course, containing the course identifier, semester offered ('F'=Fall, 'S'=Spring, 'B'=Both semesters), the number of prerequisite courses, p, 0 <= p <= 5, and finally p prerequisite course identifiers. The first example data set below corresponds to the problem described above.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output contains one line for each data set, formatted as shown in the sample output.</div><p class="pst">Sample Input</p><pre class="sio">4 6
+cs123 mt42 cs456 cs789
+mt42 F 0
+cs123 S 0
+cs456 S 2 cs123 mt42
+cs789 B 1 cs456
+3 6
+math1 comp2 comp3
+comp3 S 1 comp2
+math1 S 0
+comp2 F 1 math1
+4 3
+m10 m20 c33 c44
+m10 B 0
+m20 B 0
+c33 B 0
+c44 B 0
+-1 -1
+</pre><p class="pst">Sample Output</p><pre class="sio">The minimum number of semesters required to graduate is 5.
+The minimum number of semesters required to graduate is 4.
+The minimum number of semesters required to graduate is 2.</pre><p class="pst">

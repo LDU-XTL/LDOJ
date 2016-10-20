@@ -1,0 +1,5 @@
+</p><div class="ptx" lang="en-US">The inversion number of an integer sequence a1, a2, . . . , an is the number of pairs (ai, aj) that satisfy i < j and ai > aj . Given n and the inversion number m, your task is to find the smallest permutation of the set { 1, 2, . . . , n }, whose inversion number is exactly m.
+<br>A permutation a1, a2, . . . , an is smaller than b1, b2, . . . , bn if and only if there exists an integer k such that aj = bj for 1 <= j < k but ak < bk.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several test cases. Each line of the input contains two integers n and m. Both of the integers at the last line of the input is −1, which should not be processed. You may assume that 1 <= n <= 50000 and 0 <= m <= n(n − 1)/2.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print a line containing the smallest permutation as described above, separates the numbers by single spaces.</div><p class="pst">Sample Input</p><pre class="sio">5 9
+7 3
+-1 -1</pre><p class="pst">Sample Output</p><pre class="sio">4 5 3 2 1
+1 2 3 4 7 6 5</pre><p class="pst">

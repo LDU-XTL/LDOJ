@@ -1,0 +1,31 @@
+</p><div class="ptx" lang="en-US">Guangdong Province uses “standard point” to evaluate their students in the National Matriculation Examination. The calculating method is as follows: For example, after all the papers of a certain subject are marked, every students got a initial point which is an integer range from 0 to 150. The Examination Center of Guangdong Province sorts all the points from high to low. By computing the percentage of students whose point is lower than this student, the student’s standard point can be calculated. The completely computing process is as below:
+<br>
+<br>Firstly, define a function as below:
+<br><center><img src="formula?tex=%5CPhi%28x%29%3D%5Cint%5Climits_%7B-%5Cinfty%7D%5Ex%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi%7D%7De%5E%7B-%5Cfrac%7Bt%5E2%7D%7B2%7D%7Ddt%3D%5Cleft%5C%7B%5Cbegin%7Barray%7D%7Blc%7D0.5%2B%5Cint%5Climits_0%5Ex%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi%7D%7De%5E%7B-%5Cfrac%7Bt%5E2%7D%7B2%7D%7Ddt%26x%5Cge0%5C%5C+0.5-%5Cint%5Climits_0%5E%7B-x%7D%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi%7D%7De%5E%7B-%5Cfrac%7Bt%5E2%7D%7B2%7D%7Ddt%26x%3C0%5Cend%7Barray%7D%5Cright." alt="\Phi(x)=\int\limits_{-\infty}^x\frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}}dt=\left\{\begin{array}{lc}0.5+\int\limits_0^x\frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}}dt&#38;x\ge0\\ 0.5-\int\limits_0^{-x}\frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}}dt&#38;x&lt;0\end{array}\right." align="absmiddle"></center>
+<br>Secondly, For a give student, assuming that the percentage of students whose point is lower than this student is x (0 <= x < 1), we can get the standard point sp(x) as below:
+<br><center><img src="formula?tex=sp%27%28x%29%3D500%2B100%5CPhi%5E%7B-1%7D%28x%29" alt="sp&#39;(x)=500+100\Phi^{-1}(x)" align="absmiddle">
+<br><img src="formula?tex=sp%28x%29%3D%5Cleft%5C%7B%5Cbegin%7Barray%7D%7Blr%7D100%26sp%27%28x%29%5Cle100%5C%5C+%5Clfloor+sp%27%28x%29%5Crfloor%26100%3Csp%27%28x%29%5Cle501%5C%5C+%5Clceil+sp%27%28x%29%5Crceil%26501%3Csp%27%28x%29%5Cle900%5C%5C+900%26sp%27%28x%29%3E900%5Cend%7Barray%7D%5Cright." alt="sp(x)=\left\{\begin{array}{lr}100&#38;sp&#39;(x)\le100\\ \lfloor sp&#39;(x)\rfloor&#38;100&lt;sp&#39;(x)\le501\\ \lceil sp&#39;(x)\rceil&#38;501&lt;sp&#39;(x)\le900\\ 900&#38;sp&#39;(x)&gt;900\end{array}\right." align="absmiddle"></center>
+<br>Following the above steps, every percentage can be link to a certain standard point.
+<br> 
+<br>As one of the best programmer nowadays, you are invited to write a program to transform the initial points to standard points.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains multiply test cases. The first line in each case is an integer N (1 <= N <= 1000000), representing the number of student. Then come N lines, each contains a student’s point (The point is an integer within the range [0, 150]). The next line is an integer M (1 <= M <= 200), representing the number of queries (These numbers are all from the last N lines). Then come M line, each contains an initial point (also in the range [0, 150]).
+<br>
+<br>There may be blank lines between cases. And N = 0 represent the end of input. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each query in a case, output the standard point corresponding to the given initial point. You should print a blank line between cases.</div><p class="pst">Sample Input</p><pre class="sio">1
+150
+1
+150
+
+2
+135
+98
+2
+135
+98
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">100
+
+500
+100
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">For a given function F(x), if we want to compute A (as show in (1)), we can select a position integer n, and then compute B (using the formulas given in (2) and (3)). It is known that if n is very large, the difference between A and B will be very small.
+<br><center><img src="formula?tex=%5Cbegin%7Barray%7D%7Blc%7DA%3D%5Cint%5Climits_a%5EbF%28t%29dt%26%281%29%5C%5C+%5CDelta%3D%28b-a%29%2Fn%26%282%29%5C%5C+B%3D%5Csum%5Climits_%7Bi%3D1%7D%5En%28F%28a%2B%5CDelta*%28i-1%29%29%2BF%28a%2B%5CDelta*i%29%29*%5Cfrac%7B%5CDelta%7D%7B2%7D%26%283%29%5Cend%7Barray%7D" alt="\begin{array}{lc}A=\int\limits_a^bF(t)dt&#38;(1)\\ \Delta=(b-a)/n&#38;(2)\\ B=\sum\limits_{i=1}^n(F(a+\Delta*(i-1))+F(a+\Delta*i))*\frac{\Delta}{2}&#38;(3)\end{array}" align="absmiddle"></center>
+<br>
+<br>Huge input,scanf is recommended.</div><p class="pst">

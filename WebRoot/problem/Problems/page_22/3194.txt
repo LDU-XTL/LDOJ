@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>An equidivision of an <i>n</i> &times; <i>n</i> square array of cells is a partition of the <i>n</i><sup>2</sup> cells in the array in exactly <i>n</i> sets, each one with <i>n</i> contiguous cells. Two cells are contiguous when they have a common side.</p><p>A good equidivision is composed of contiguous regions. The figures show a good and a wrong equidivision for a 5 &times; 5 square:</p><div align="center"><img src="images/3194_1.png"></div><p>Note that in the second example the cells labeled with <code>4</code> describe three non-contiguous regions and cells labeled with <code>5</code> describe two non-contiguous regions. You must write a program that evaluates if an equidivision of the cells in a square array is good or not.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>It is understood that a cell in an <i>n</i> &times; <i>n</i> square array is denoted by a pair (<i>i</i>, <i>j</i>), with 1 &le; <i>i</i>, <i> j</i> &le; <i>n</i>. The input file contains several test cases. Each test case begins with a line indicating <i>n</i>, 0 &lt; <i> n</i> &lt; 100, the side of the square array to be partitioned. Next, there are <i>n</i> &minus; 1 lines, each one corresponding to one partition of the cells of the square, with some non-negative integer numbers. Consecutive integers in a line are separated with a single blank character. A line of the form</p><p align="center"><i>a</i><sub>1</sub><i>a</i><sub>2</sub><i>a</i><sub>3</sub><i>a</i><sub>4</sub>&hellip;</p><p>means that cells denoted with the pairs (<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>), (<i>a</i><sub>3</sub>, <i>a</i><sub>4</sub>), &hellip; belong to one of the areas in the partition. The last area in the partition is defined by those cells not mentioned in the <i>n</i> &minus; 1 given lines. If a case begins with <i>n</i> = 0 it means that there are no more cases to analyze.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case <code>good</code> must be printed if the equidivision is good, in other case, <code>wrong</code> must be printed. The answers for the different cases must preserve the order of the input.</p></div><p class="pst">Sample Input</p><pre class="sio">2
+1 2 2 1
+5
+1 1 1 2 1 3 3 2 2 2
+2 1 4 2 4 1 5 1 3 1
+4 5 5 2 5 3 5 5 5 4
+2 5 3 4 3 5 4 3 4 4
+5
+1 1 1 2 1 3 3 2 2 2
+2 1 3 1 4 1 5 1 4 2
+4 5 5 2 5 3 5 5 5 4
+2 4 1 4 3 5 4 3 4 4
+0</pre><p class="pst">Sample Output</p><pre class="sio">wrong
+good
+wrong</pre><p class="pst">

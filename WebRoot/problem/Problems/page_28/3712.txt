@@ -1,0 +1,6 @@
+</p><div class="ptx" lang="en-US"><p>What is the maximum number of edges in an undirected graph G of <i>n</i> vertices that avoids a <i>k</i>-matching? Note that loops and parallel edges are not allowed in the graph.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input contains several test cases.<br>For each test case, there is one line with two positive integers, <i>n</i> &le; 1000 and <i>k</i> &le; 1000.<br>The input ends with two zeroes.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case output the maximum number of edges.</p></div><p class="pst">Sample Input</p><pre class="sio">1000 1
+500 2
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">0
+499
+</pre><p class="pst">

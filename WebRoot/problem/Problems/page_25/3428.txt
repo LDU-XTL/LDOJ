@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US"><p>Text formatting functions (Format, sprintf, etc) are very common between programming languages. Your task is to implement a simplified one.</p><p>Formatting function receives format string and several arguments. Argument values are processed one by one and inserted into format string at positions designated by format specifiers. The following format specifiers must be implemented:</p><p>* %s — argument as a string<br>* %d — argument as an integer value, without any leading zeroes<br>* %% — literal '%' character </p><p>Formatting error is generated if:</p><p>* number of arguments required by format specifiers is not equal to the number of actually supplied arguments,<br>* argument for %d specifier contains non-digit character.<br>* '%' character in format string is not followed by either '%', 's' or 'd'. </p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input file contains format string followed by arguments, one per line.</p><h4>Constraints</h4><p>Number of arguments is not greater than 1000, length of each line is not greater than 50000 characters. </p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output file must contain a single string — either formatted text or ERROR in case of any formatting error.</p></div><p class="pst">Sample Input</p><pre class="sio"><b>Sample Input 1</b>
+%d x %d %s %d
+2
+02
+=
+4
+<b>Sample Input 2</b>
+%s
+<b>Sample Input 3</b>
+%d
+2a</pre><p class="pst">Sample Output</p><pre class="sio"><b>Sample Output 1</b>
+2 x 2 = 4
+<b>Sample Output 2</b>
+ERROR
+<b>Sample Output 3</b>
+ERROR</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><p>Bold texts appearing in the sample sections are informative and do not form part of the actual data.</p></div><p class="pst">

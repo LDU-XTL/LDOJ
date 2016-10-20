@@ -1,0 +1,25 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>In the Cartesian plane, there are <i>n</i> (odd) distinct lines <i>f<sub>i</sub></i>(<i>x</i>) = <i>a<sub>i</sub></i> + <i>xb<sub>i</sub></i> (<i>i</i> = 1, 2, …, <i>n</i>). For each <i>x</i>, <i>F</i>(<i>x</i>) denotes the median of {<i>f</i><sub>1</sub>(<i>x</i>), <i>f</i><sub>2</sub>(<i>x</i>), ..., <i>f<sub>n</sub></i>(<i>x</i>)}. You are required to find the solution space of the equation <i>F</i>(<i>x</i>) = 0.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><font face="Times New Roman"><p>The input contains multiple test cases. Each test case have <i>n</i> + 1 lines the first one of which contains <i>n</i> (1 &lt; <i>n</i> &lt; 10<sup>5</sup> and odd). Then <i>n</i> lines follow, each of which contains two integers <i>a<sub>i</sub></i> and <i>b<sub>i</sub></i> (|<i>a<sub>i</sub></i>| &le; 10<sup>8</sup>, 0 &le; <i>b<sub>i</sub></i> &lt; 10<sup>8</sup>). A zero follows the last test case.</font></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><font face="Times New Roman">For each test case, output the solution space as an interval on a separate line. Interval boundaries should be rounded to two digits beyond the decimal point. &ldquo;<code>+inf</code>&rdquo; and &ldquo;<code>-inf</code>&rdquo; are used to represent positive and negative infinities. The solution space will form at most one interval in this problem. If the solution space is empty, just output &ldquo;<code>-1</code>&rdquo;.</font></span></div><p class="pst">Sample Input</p><pre class="sio">3
+0 0
+1 0
+0 1
+3
+0 0
+1 2
+1 1
+3
+1 0
+2 0
+3 0
+3
+1 1
+1 2
+1 3
+3
+0 0 
+1 0
+-1 0
+0</pre><p class="pst">Sample Output</p><pre class="sio">(-inf,0.00]
+[-1.00,-0.50]
+-1
+[-0.50,-0.50]
+(-inf,+inf)</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Be cautious about outputting &ldquo;<code>-0.00</code>&rdquo;.</p><p>Illustration of the second test case in the sample input:</p><div align="center"><table border="0" cellspacing="20"><tr><td><img src="images/3215_1.png"></td><td><img src="images/3215_2.png"></td></tr></table></div></span></div><p class="pst">

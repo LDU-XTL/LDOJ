@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US"><p>The game of Scrabble is played with tiles. A tile either has a single letter written on it, or it is blank. In the latter case, the tile may be used to represent a letter of your choice. On your turn, you arrange the tiles to form a word. Each tile may be used at most once, but not all tiles need to be used. Given several Scrabble tiles and a dictionary, determine how many words in the dictionary can be formed using the given Scrabble tiles.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input test file will contain multiple test cases. In each test case, the first line contains a positive integer <i>n</i> &le; 1000 indicating the number of words in the dictionary. The following n lines each contain a single string with between 1 and 7 uppercase letters, representing a word in the dictionary. No word will appear in the dictionary twice. The next line contains a single string giving the tiles you have available. It will contain only capital letters, representing tiles with that letter on it, and underscores, representing blank tiles. The string will contain between 1 and 7 characters, possibly including duplicate tiles. The end-of-file is marked by a test case with <i>n</i> = 0 and should not be processed.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, write a single line with the number of dictionary words that can be spelled with the given Scrabble tiles.</p></div><p class="pst">Sample Input</p><pre class="sio">5
+PROGRAM
+CONTEST
+PIZZA
+ZA
+PITA
+_PIZA
+3
+BANANAS
+CARROTS
+FIGS
+A__AA__
+0</pre><p class="pst">Sample Output</p><pre class="sio">3
+2</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><p>In the first test case, <code>PIZZA</code>, <code>ZA</code> and <code>PITA</code> can be spelled as <code>PIZ_A</code>, <code>ZA</code> and <code>PI_A</code>. There are not enough letters to spell <code>PROGRAM</code> or <code>CONTEST</code>. In the second test case, <code>BANANAS</code> and <code>FIGS</code> can be spelled as <code>_A_A_A_</code> and <code>____</code>. On the other hand, <code>CARROTS</code> would require 6 blanks in addition to the <code>A</code>.</p></div><p class="pst">

@@ -1,0 +1,35 @@
+</p><div class="ptx" lang="en-US">You are trapped in a 3D dungeon and need to find the quickest way out! The dungeon is composed of unit cubes which may or may not be filled with rock. It takes one minute to move one unit north, south, east, west, up or down. You cannot move diagonally and the maze is surrounded by solid rock on all sides. 
+<br>
+<br>Is an escape possible? If yes, how long will it take? 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of a number of dungeons. Each dungeon description starts with a line containing three integers L, R and C (all limited to 30 in size). 
+<br>L is the number of levels making up the dungeon. 
+<br>R and C are the number of rows and columns making up the plan of each level. 
+<br>Then there will follow L blocks of R lines each containing C characters. Each character describes one cell of the dungeon. A cell full of rock is indicated by a '#' and empty cells are represented by a '.'. Your starting position is indicated by 'S' and the exit by the letter 'E'. There's a single blank line after each level. Input is terminated by three zeroes for L, R and C. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Each maze generates one line of output. If it is possible to reach the exit, print a line of the form 
+<br><blockquote>Escaped in x minute(s). </blockquote>
+<br>where x is replaced by the shortest time it takes to escape. 
+<br>If it is not possible to escape, print the line 
+<br><blockquote>Trapped! </blockquote></div><p class="pst">Sample Input</p><pre class="sio">3 4 5
+S....
+.###.
+.##..
+###.#
+
+#####
+#####
+##.##
+##...
+
+#####
+#####
+#.###
+####E
+
+1 3 3
+S##
+#E#
+###
+
+0 0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">Escaped in 11 minute(s).
+Trapped!
+</pre><p class="pst">

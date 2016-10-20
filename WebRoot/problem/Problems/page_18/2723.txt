@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">Ratish is a young man who always dreams of being a hero. One day his friend Luffy was caught by Pirate Arlong. Ratish set off at once to Arlong's island. When he got there, he found the secret place where his friend was kept, but he could not go straight in. He saw a large door in front of him and two locks in the door. Beside the large door, he found a strange rock, on which there were some odd words. The sentences were encrypted. But that was easy for Ratish, an amateur cryptographer. After decrypting all the sentences, Ratish knew the following facts:
+<br>
+<br>Behind the large door, there is a nesting prison, which consists of M floors. Each floor except the deepest one has a door leading to the next floor, and there are two locks in each of these doors. Ratish can pass through a door if he opens either of the two locks in it. There are 2N different types of locks in all. The same type of locks may appear in different doors, and a door may have two locks of the same type. There is only one key that can unlock one type of lock, so there are 2N keys for all the 2N types of locks. These 2N keys were divided into N pairs, and once one key in a pair is used, the other key will disappear and never show up again.
+<br>
+<br>Later, Ratish found N pairs of keys under the rock and a piece of paper recording exactly what kinds of locks are in the M doors. But Ratish doesn't know which floor Luffy is held, so he has to open as many doors as possible. Can you help him to choose N keys to open the maximum number of doors?</div><p class="pst">Input</p><div class="ptx" lang="en-US">There are several test cases. Every test case starts with a line containing two positive integers N (1 <= N <= 2<sup>10</sup>) and M (1 <= M <= 2<sup>11</sup>) separated by a space, the first integer represents the number of types of keys and the second integer represents the number of doors. The 2N keys are numbered 0, 1, 2, ..., 2N - 1. Each of the following N lines contains two different integers, which are the numbers of two keys in a pair. After that, each of the following M lines contains two integers, which are the numbers of two keys corresponding to the two locks in a door. You should note that the doors are given in the same order that Ratish will meet. A test case with N = M = 0 ends the input, and should not be processed.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output one line containing an integer, which is the maximum number of doors Ratish can open.</div><p class="pst">Sample Input</p><pre class="sio">3 6
+0 3
+1 2
+4 5
+0 1
+0 2
+4 1
+4 2
+3 5
+2 2
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">4</pre><p class="pst">

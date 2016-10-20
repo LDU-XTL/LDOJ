@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US"><div><p>Bessie is training for her next race by running on a path that includes hills so that she will be prepared for any terrain. She has planned a straight path and wants to run as far as she can -- but she must be back to the farm within <i>M</i> seconds (1 &le; <i>M</i> &le; 10,000,000).</p><p>The entire path she has chosen is<i> T</i> units (1 &le; <i>T </i>&le; 100,000) in length and consists of equal-length portions that are uphill, flat, or downhill. The input data describes path segment i with a single character <i>Si </i>that is <i>u</i>, <i>f</i>, or <i>d</i>, indicating respectively uphill, flat, or downhill.</p><p>Bessie takes<i> U</i> seconds (1 &le; <i>U </i>&le; 100) to run one unit of uphill path, <i>F</i> (1 &le;<i> F</i> &le; 100) seconds for a unit of flat path, and <i>D </i>(1 &le; <i>D</i> &le; 100) seconds for a unit of downhill path. Note that, when returning home, uphill paths become downhill paths and downhill paths become uphill paths.</p><p>Find the farthest distance Bessie can get from the farm and still make it back in time.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>* Line 1: Five space-separated integers: <i>M</i>, <i>T,</i> <i>U</i>, <i>F</i>, and <i>D</i><br>* Lines 2..<i>T</i>+1: Line <i>i</i>+1 describes path segment <i>i</i> with a single letter: <i>S<sub>i</sub></i></p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>* Line 1: A single integer that is the farthest distance (number of units) that Bessie can get from the farm and make it back in time.</p></div><p class="pst">Sample Input</p><pre class="sio">13 5 3 2 1
+u
+f
+u
+d
+f
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+</pre><p class="pst">

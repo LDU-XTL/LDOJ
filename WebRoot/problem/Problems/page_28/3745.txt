@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US"><div><p>This is a story from <i>Death Note</i>.</p><p>L has determined to find Killa out. Because Killa is a dangerous and cruel guy, L has to make a perfect plan. He has founded a team consisting of n detectives (include himself) to investigate Killa. These guys are extremely trusty, intelligent and cagey. So they won't be easily killed by Killa.</p><p>Moreover, m assistants are assigned to help L. Each of them is responsible to transporting information from one detective to another and only in this direction. These guys are also trusty and cagey, but not intelligent enough, so they may be easily killed and the information may be stolen by Killa. So L has a better plan.</p><p>Every time L has an instruction which he wants to inform all the detectives. He encodes the instruction and assigns some assistants to deliver the encoded instruction to the detectives they are responsible to contact. Then the detectives who receive the encoded instruction will deliver the instruction to other detectives in the same way. As we want to reduced the possibility of assistants’ being killed, we will always try to use least assistants to make all the detective receive the encoded instruction.</p><p>At the same time L will inform the way to decode the instruction to all the detectives in the same way. Of course L doesn’t want Killa to know their plan, so no assistants will be assigned to deliver the encoded instruction and the way to decode it at same time.</p><p>L believes that Killa can track and kill no more than one person at one time, so he believes that this plan is perfect. And L can directly get information from his detectives via some magical measure and you needn't worry about the feedback of the instruction.</p><p>The task for you is to select the assistants to deliver the encoded instruction and the way to decode it, or tell L that no valid schemes exist.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several test cases.
+<br>Each test case starts with two integers n(2≤n≤2,000) and m(1≤m≤1,000,000), representing the number of detectives and assistants, followed by n lines. The ith line describes the assistants who works for detective i . In the ith line , an integer k comes first , presenting the number of assistants who works detective i , then there are k integers . The jth number x means this assistant is assigned to transport message from detective i to detective x . 
+<br>For the detectives, L is numbered 1 and other detectives are numbered 2 to n.
+<br>For the assistants , they are numbered from 1 to m by the order they appeared in the input file.
+<br>A case with n = 0 and m = 0 indicates the end of the input file, and should not be processed by your program.. 
+<br>You can assume that the input file is valid , which means there are exactly m assistants appearing in each test case
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case:
+<br>If no valid schemes exist, the output consists of a single line with a single word NONE.
+<br>Otherwise the output consists of two lines. The first line consists of a single word YES. Each line of the next two lines describes a valid scheme for one part of the message by giving the list of contacts used to transport it, the second line for the encoded instruction and the third line for the way to decode it. If there is more than one solution, output any of them.
+<br>Output a blank line after each test case.
+<br></div><p class="pst">Sample Input</p><pre class="sio">4 6
+2 2 3
+3 3 4 4
+1 2
+0
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">YES
+1 3 4
+2 5 6
+</pre><p class="pst">

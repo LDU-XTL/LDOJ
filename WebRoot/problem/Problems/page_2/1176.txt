@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US">To brighten up the gala dinner of the IOI'98 we have a set of N coloured lamps numbered from
+<br>1 to N. The lamps are connected to four buttons:
+<br>button 1 -- when this button is pressed, all the lamps change their state: those that are ON are turned OFF and those that are OFF are turned ON.
+<br>button 2 -- changes the state of all the odd numbered lamps.
+<br>button 3 -- changes the state of all the even numbered lamps.
+<br>button 4 -- changes the state of the lamps whose number is of the form 3K+1 (with K >= 0), i.e., 1,4,7,...
+<br>There is a counter C which records the total number of button presses.
+<br>When the party starts, all the lamps are ON and the counter C is set to zero.
+<br>
+<br>You are given the value of counter C and information on the final state of some of the lamps. Write a program to determine all the possible final configurations of the N lamps that are consistent with the given information, without repetitions.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Your program is to read from standard input. The input contains four lines, describing the number N of lamps available, the number C of button presses, and the state of some of the lamps in the final configuration.
+<br>The first line contains the number N and the second line the final value of counter C. The third line lists the lamp numbers you are informed to be ON in the final configuration, separated by one space and terminated by the integer -1. The fourth line lists the lamp numbers you are informed to be OFF in the final configuration, separated by one space and terminated by the integer -1.
+<br>
+<br>The parameters N and C are constrained by:
+<br>10 <= N <= 100
+<br>1 <= C <= 10000
+<br>The number of lamps you are informed to be ON, in the final configuration, is less than or equal to 2.The number of lamps you are informed to be OFF, in the final configuration, is less than or equal to 2.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Your program is to write to standard output. The output must contain all the possible final configurations (without repetitions) of all the lamps. There is at least one possible final configuration. Each possible configuration must be written on a different line. Each line has N characters, where the first character represents the state of lamp 1 and the last character represents the state of lamp N. A 0 (zero) stands for a lamp that is OFF, and a 1 (one) stands for a lamp that is ON. Configurations should be listed in binary ascending order.</div><p class="pst">Sample Input</p><pre class="sio">10
+1
+-1
+7 -1</pre><p class="pst">Sample Output</p><pre class="sio">0000000000
+0101010101
+0110110110</pre><p class="pst">

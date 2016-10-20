@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The Little Prince, who lives in the B-615 planet, sometimes enjoys a game to pile up blocks. He has <i>N</i> identical blocks and a box with K rooms for <i>M</i> blocks at most. That is, he can pile up <i>M</i> blocks, at most, into one of the <i>K</i> rooms, but can't more than M blocks. For example, if <i>N</i> = 3, <i>K</i> = 3, <i>M</i> = 2, there are seven ways to pile up all blocks:
+<br>
+<br><center><img src=images/2860_1.png></center>
+<br><p>Given two states of blocks, He wants to know how many times he should move blocks one by one, to change the initial state into the final state. For instance, he can choose one block from any of 3 rooms (A, B, C), and then move it into another room. Of course, he cannot put more than <i>M</i> blocks at the room.</span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang=en-us><p>First line has three positives integers, <i>N</i> (1 &le; <i>N</i> &le; 30), <i>M</i> (1 &le; <i>M</i> &le; 4), and <i>K</i> (1 &le; <i>K</i> &le; 10). Each of next <i>K</i> lines contains the number of blocks piled at the room. This represents the initial state. Likely, another <i>K</i> lines are given, and this indicates the final state that the Little Prince want to make. Input is always valid.</span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output the minimal number of moves necessary to make the final state.</div><p class="pst">Sample Input</p><pre class="sio">3 2 3
+1
+1
+1
+2
+0
+1</pre><p class="pst">Sample Output</p><pre class="sio">1</pre><p class="pst">

@@ -1,0 +1,24 @@
+</p><div class="ptx" lang="en-US"><p>First exams cause many problems to Jenny. One problem is that Jenny needs the whole day to prepare for any exam (good news is she needs only one day for any preparation). Another problem: in a day of the exam Jenny is not able to study anything. And the main problem: Jenny must prepare for <i>i</i>-th exam not earlier then <i>t<sub>i</sub></i> days before it, in the other case she forgets absolutely everything by the time of the exam.</p><p>Jenny wants to start preparations as later as possible but she has to pass all exams. Help Jenny to choose a day when she must start.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The first line of the input file contains <i>n</i> (1 &le; <i>n</i> &le; 50 000) &mdash; the number of exams. The following lines describes exams.</p><p>Each description consists of three lines. The first line is the name of the subject (a string containing only Latin letters, maximal length is 10). The second line is the date of the exam in format <code>dd.mm.yyyy</code>. The third line contains <i>t<sub>i</sub></i> for this exam (1 &le; <i>t<sub>i</sub></i> &le; 100 000).</p><p>All exams take place in interval from 01.01.1900 to 31.12.2100.</p><p>Recall that if the year is divisible by 4 and is not divisible by 100, or is divisible by 400 &mdash; it is the leap one. Such year has 366 days, the additional day is on February 29.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Output the latest date when Jenny may start preparation and pass all exams. Write date in format <code>dd.mm.yyyy</code>. If it is impossible to pass all the exams, output the word &ldquo;<code>Impossible</code>&rdquo;.</p></span></div><p class="pst">Sample Input</p><pre class="sio"><b>sample input #1</b>
+3
+Philosophy
+01.01.1900
+1
+Algebra
+02.01.1900
+3
+Physics
+04.01.1900
+10
+
+<b>sample input #2</b>
+2
+Philosophy
+29.06.2005
+1
+Algebra
+30.06.2005
+2</pre><p class="pst">Sample Output</p><pre class="sio"><b>sample output #1</b>
+30.12.1899
+
+<b>sample output #2</b>
+Impossible</pre><p class="pst">

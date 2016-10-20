@@ -1,0 +1,24 @@
+</p><div class="ptx" lang="en-US">Dearboy, a goods victualer, now comes to a big problem, and he needs your help. In his sale area there are N shopkeepers (marked from 1 to N) which stocks goods from him.Dearboy has M supply places (marked from 1 to M), each provides K different kinds of goods (marked from 1 to K). Once shopkeepers order goods, Dearboy should arrange which supply place provide how much amount of goods to shopkeepers to cut down the total cost of transport.
+<br>
+<br>It's known that the cost to transport one unit goods for different kinds from different supply places to different shopkeepers may be different. Given each supply places' storage of K kinds of goods, N shopkeepers' order of K kinds of goods and the cost to transport goods for different kinds from different supply places to different shopkeepers, you should tell how to arrange the goods supply to minimize the total cost of transport.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of multiple test cases. The first line of each test case contains three integers N, M, K (0 < N, M, K < 50), which are described above. The next N lines give the shopkeepers' orders, with each line containing K integers (there integers are belong to [0, 3]), which represents the amount of goods each shopkeeper needs. The next M lines give the supply places' storage, with each line containing K integers (there integers are also belong to [0, 3]), which represents the amount of goods stored in that supply place.
+<br>
+<br>Then come K integer matrices (each with the size N * M), the integer (this integer is belong to (0, 100)) at the i-th row, j-th column in the k-th matrix represents the cost to transport one unit of k-th goods from the j-th supply place to the i-th shopkeeper.
+<br>
+<br>The input is terminated with three "0"s. This test case should not be processed. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, if Dearboy can satisfy all the needs of all the shopkeepers, print in one line an integer, which is the minimum cost; otherwise just output "-1".</div><p class="pst">Sample Input</p><pre class="sio">1 3 3   
+1 1 1
+0 1 1
+1 2 2
+1 0 1
+1 2 3
+1 1 1
+2 1 1
+
+1 1 1
+3
+2
+20
+
+0 0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">4
+-1
+</pre><p class="pst">

@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">Stan has n sticks of various length. He throws them one at a time on the floor in a random way. After finishing throwing, Stan tries to find the top sticks, that is these sticks such that there is no stick on top of them. Stan has noticed that the last thrown stick is always on top but he wants to know all the sticks that are on top. Stan sticks are very, very thin such that their thickness can be neglected. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of a number of cases. The data for each case start with 1 <= n <= 100000, the number of sticks for this case. The following n lines contain four numbers each, these numbers are the planar coordinates of the endpoints of one stick. The sticks are listed in the order in which Stan has thrown them. You may assume that there are no more than 1000 top sticks. The input is ended by the case with n=0. This case should not be processed. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each input case, print one line of output listing the top sticks in the format given in the sample. The top sticks should be listed in order in which they were thrown. 
+<br>
+<br>The picture to the right below illustrates the first case from input. <img src=images/2653_1.jpg align=right></div><p class="pst">Sample Input</p><pre class="sio">5
+1 1 4 2
+2 3 3 1
+1 -2.0 8 4
+1 4 8 2
+3 3 6 -2.0
+3
+0 0 1 1
+1 0 2 1
+2 0 3 1
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">Top sticks: 2, 4, 5.
+Top sticks: 1, 2, 3.
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Huge input,scanf is recommended.</div><p class="pst">

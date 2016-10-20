@@ -1,0 +1,39 @@
+</p><div class="ptx" lang="en-US">Space shuttle Endeavour (Endeavour is of British style, and Endeavor is of  American style. Why NASA uses the British style? You can find the answer by Baidu or Google) is in danger!
+<br>
+<br>Endeavour meets the same problem as Columbus had met in 2003. When it was sent into space, some material on the surface of the space shuttle is damaged. When it reenters the atmosphere, hot air may destroy the shuttle and make it fall into pieces. NASA says that the only method to save Endeavour is to send another shuttle into space to help repair the Endeavour. But considering the condition of other shuttles available, such as Atlantis and Discovery, scientists think they are not capable to complete the demanding task. NASA has to build another new space shuttle.
+<br>
+<br>There are N parts of this new shuttle need to be built. Because the shuttle will be assembled before all parts are ready. NASA wants to minimize the time to build all parts.
+<br>
+<br>There are two workshops S1 and S2. A part must be processed by these two workshops in order, which means that a part must be processed first in S1 and then in S2. It is known that a workshop cannot process more than one part simultaneously. You job is to calculate the minimum time to build all parts.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">For every test block in the input, the first line contains an integer N (1 <= N <= 10000), representing the number of parts. Next follow N lines. Each line contains two integers a and b (0 <= a, b <= 100), representing the time consumed in S1, S2 for the corresponding part.
+<br>
+<br>There is a single 0 after the last test block, and you should not process it. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">There is only one line for one test block, namely the earliest finishing time.</div><p class="pst">Sample Input</p><pre class="sio">4
+1 2
+3 4
+5 6
+7 8
+4
+10 1 
+10 1 
+1 10
+1 10
+5
+4 5
+4 1
+30 4
+6 30
+2 3
+6
+5 7
+1 2
+8 2
+5 4
+3 7
+4 4
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">24
+23
+47
+28
+</pre><p class="pst">

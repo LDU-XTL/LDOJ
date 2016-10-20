@@ -1,0 +1,25 @@
+</p><div class="ptx" lang="en-US">Oh those picky N (1 <= N <= 50,000) cows! They are so picky that each one will only be milked over some precise time interval A..B (1 <= A <= B <= 1,000,000), which includes both times A and B.  Obviously, FJ must create a reservation system to determine which stall each cow can be assigned for her milking time. Of course, no cow will share such a private moment with other cows.
+<br>
+<br>Help FJ by determining:<ul><li>The minimum number of stalls required in the barn so that each cow can have her private milking period</li><li>An assignment of cows to these stalls over time</li></ul>Many answers are correct for each test dataset; a program will grade your answer.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Line 1: A single integer, N
+<br>
+<br>Lines 2..N+1: Line i+1 describes cow i's milking interval with two space-separated integers.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Line 1: The minimum number of stalls the barn must have.
+<br>
+<br>Lines 2..N+1: Line i+1 describes the stall to which cow i will be assigned for her milking period.</div><p class="pst">Sample Input</p><pre class="sio">5
+1 10
+2 4
+3 6
+5 8
+4 7</pre><p class="pst">Sample Output</p><pre class="sio">4
+1
+2
+3
+2
+4</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Explanation of the sample:
+<br>
+<br>Here's a graphical schedule for this output:
+<br>
+<br><pre>Time     1  2  3  4  5  6  7  8  9 10
+<br>Stall 1 c1>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<br>Stall 2 .. c2>>>>>> c4>>>>>>>>> .. ..
+<br>Stall 3 .. .. c3>>>>>>>>> .. .. .. ..
+<br>Stall 4 .. .. .. c5>>>>>>>>> .. .. ..</pre>Other outputs using the same number of stalls are possible.</div><p class="pst">

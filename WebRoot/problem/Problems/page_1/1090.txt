@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">Byteland had not always been a democratic country. There were also black pages in its book of history. One lovely day general Bytel − commander of the junta which had power over Byteland −− decided to finish the long−lasting time of war and released imprisoned activists of the opposition. However, he had no intention to let the leader Bytesar free. He decided to chain him to the wall with the bytish chain. It consists of joined rings and the bar fixed to the wall. Although the rings are not joined with the bar, it is hard to take them off.
+<br>'General, why have you chained me to the prison walls and did not let rejoice at freedom!' cried Bytesar.
+<br>'But Bytesar, you are not chained at all, and I am certain you are able to take off the rings from the bar by yourself.' perfidiously answered general Bytel, and he added 'But deal with that before a clock strikes the cyber hour and do not make a noise at night, otherwise I will be forced to call Civil Cyber Police.'
+<br>Help Bytesar! Number the following rings of the chain with integers 1,2,...,n. We may put on and take off these rings according to the following rules:
+<br>.only one ring can be put on or taken off from the bar in one move, 
+<br>.the ring number 1 can be always put on or taken off from the bar, 
+<br>.if the rings with the numbers 1,...,k−1 (for 1<= k < n) are taken off from the bar and the ring number k is put on, we can put on or take off the ring number k+1.
+<br>Write a program which:
+<br>.reads from std input the description of the bytish chain, 
+<br>.computes minimal number of moves necessary to take off all rings of the bytish chain from the bar,
+<br>.writes the result to std output. </div><p class="pst">Input</p><div class="ptx" lang="en-US">In the first line of the input there is written one integer n, 1 <= n <= 1000. In the second line there are written n integers o1,o2,...,on (each of them is either 0 or 1) separated by single spaces. If oi=1, then the i−th ring is put on the bar, and if oi=0, then the i−th ring is taken off the bar.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output should contain exactly one integer equal to the minimal number of moves necessary to take off all the rings of the bytish chain from the bar.</div><p class="pst">Sample Input</p><pre class="sio">4
+1 0 1 0</pre><p class="pst">Sample Output</p><pre class="sio">6</pre><p class="pst">

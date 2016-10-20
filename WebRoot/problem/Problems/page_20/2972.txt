@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Mr. X and his friends are great funs of Laser-Ball Game. Basically, the main idea of the game is very simple. Each player of the game has a laser gun and it is necessary to hit an opponent with a laser beam. To make the game more interesting, Mr. X with friends created their own Laser-Ball playground. They rented an empty rectangular hall and set up a number of big mirrors. What makes the game more interesting is the additional ability to shoot into a mirror since that a reflected laser beam also can hit an opponent.</p><p>You need to write a program which determines if it is possible to hit an opponent standing in a point B from point A. If such a hit is possible the program needs to give a direction.</p><p>To clarify the problem the following rules are given.</p><ul><li>There are <b>N</b> mirrors in the hall.</li><li>Each mirror is a rectangle. It is standing vertically on one of its edges. Therefore, a mirror can be described by a pair of coordinates (<b>X<sub>1</sub></b>, <b>Y<sub>1</sub></b>) &ndash; (<b>X<sub>2</sub></b>, <b>Y<sub>2</sub></b>), where (<b>X<sub>1</sub></b>, <b>Y<sub>1</sub></b>) &ne; (<b>X<sub>2</sub></b>, <b>Y<sub>2</sub></b>) and <b>X<sub>i</sub></b>, <b>Y<sub>i</sub></b> are real numbers. The height of a mirror is not essential for this problem.</li><li>Mirrors neither touch nor cross each other.</li><li>Both sides of a mirror have a reflection layer. A mirror reflects a laser beam according to physical laws. Let’s assume that an edge reflects in the same way as the inner part of a mirror.</li><li>Let’s assume that a mirror is absolutely thin. Thus, a laser beam can pass parallel to the mirror as close as necessary, even at 0 distance (see example 2 below)</li><li>A laser beam hits an opponent if it passes the opponent not farther then <b>10<sup>&minus;4</sup></b> </li><li>A laser beam goes out of point <b>A(0, 0) </b></li><li>A opponent is in the point <b>B(X<sub>B</sub>, Y<sub>B</sub>)</b></li><li>A direction of a shoot, which your program needs to calculate, is a vector in a form <b>(dx, dy)</b></li><li>When a laser beam hits a mirror it loses some part of its energy. After the beam hit mirrors <b>(K+1)</b> times it can’t hit an opponent. Any mirror can be hit more than once.</li><li>0 &le; <b>N</b> &le; 100, 1 &le; <b>K</b> &le; 10, but <b>N<sup>K</sup></b> &le; 10<sup>6</sup></li></ul></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input contains one data set. A data set starts with a line containing two real numbers <b>X<sub>B</sub></b> and <b>Y<sub>B</sub></b> separated by one or more spaces. The next line contains two integer numbers, <b>N</b> and <b>K</b>, separated by one or more spaces. The next <b>N</b> lines contain four real numbers <b>X1<sub>i</sub></b>, <b>Y1<sub>i</sub></b>, <b>X2<sub>i</sub></b>, <b>Y2<sub>i</sub></b> each, separated by one or more spaces.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The output contains the word <b>&ldquo;impossible&rdquo;</b>, if the shoot is impossible. Otherwise it contains two real numbers <b>a</b>, <b>b</b>, (separated by one space), which give a direction of the shoot.</p></span></div><p class="pst">Sample Input</p><pre class="sio"><b>sample input #1</b>
+4.0 0.0
+2 1
+2 -1 2 1
+1 2 3 2
+
+<b>sample input #2</b>
+4 0
+1 1
+1 0 3 0
+
+<b>sample input #3</b>
+4 0
+1 1
+2 -1 2 1</pre><p class="pst">Sample Output</p><pre class="sio"><b>sample output #1</b>
+1 1
+
+<b>sample output #2</b>
+1 0
+
+<b>sample output #3</b>
+impossible</pre><p class="pst">

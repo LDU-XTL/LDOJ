@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">Over the years, the people of the great city of Pittsburgh have repeatedly demonstrated a collective expertise at football second to none. Recently a spy has discovered the true source of the city's football power-a wizard known only as "Myron," who is infallible at selecting the proper position at which each player will excel. 
+<br>
+<br>Now that you know the source of Pittsburgh's wisdom, you are determined to provide your school's football team with a computer program that matches the wisdom of "Myron." You have consulted with the best football minds you can find, and they have dispensed their wisdom on the slowest speed, minimum weight, and minimum strength required to play each position.
+<br><center><img src=images/2070_1.jpg></center>
+<br>Using this knowledge, you will develop a program that reads in several players physical attributes and outputs what position(s) they are able to play. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Each line of the input file will list the attributes for one player: 
+<br>< speed > < weight > < strength > 
+<br>Each number will be a real-valued number. The file will end with a line reading "0 0 0" </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each player, you will output one line listing the positions that player can play. A player can play a position if each of their attributes is greater or equal to the minimum for weight and strength, and less than or equal to the slowest speed. If a player can play multiple positions, output them in the order listed above, separated by whitespace. You may leave an extra space at the end of the line. If a player can play no positions, write "No positions" on the line. </div><p class="pst">Sample Input</p><pre class="sio">4.4 180 200
+5.5 350 700
+4.4 205 350
+5.2 210 500
+0 0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">Wide Receiver
+Lineman
+Wide Receiver Quarterback
+No positions
+</pre><p class="pst">

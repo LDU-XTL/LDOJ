@@ -1,0 +1,77 @@
+</p><div class="ptx" lang="en-US">Mr. Frugal bought a new house. He feels deeply in love with his new house because it has a comfortable living room in which he can put himself completely at ease. He thinks his new house is a really good buy. 
+<br>But, to his disappointment, the floor of its living room has some scratches on it. 
+<br>
+<br>The floor has a rectangle shape, covered with square panels. He wants to replace all the scratched panels with flawless panels, but he cannot afford to do so. Then, he decides to cover all the scratched panels with carpets. 
+<br>
+<br>The features of the carpets he can use are as follows. 
+<br>
+<br>> Carpets are square-shaped. 
+<br>> Carpets may overlap each other. 
+<br>> Carpets cannot be folded. 
+<br>> Different sizes of carpets are available. Lengths of sides of carpets are multiples of that of the panels. 
+<br>
+<br>The carpets must cover all the scratched panels, but must not cover any of the flawless ones. 
+<br>
+<br>For example, if the scratched panels are as shown in Figure 1, at least 6 carpets are needed.
+<br><center><img src=images/2032_1.jpg>
+<br>Figure 1: Example Covering </center>
+<br>As carpets cost the same irrespective of their sizes, Mr. Frugal would like to use as few number of carpets as possible. 
+<br>
+<br>Your job is to write a program which tells the minimum number of the carpets to cover all the scratched panels. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of multiple data sets. As in the following, the end of the input is indicated by a line containing two zeros. 
+<br>
+<br>DataSet1
+<br>DataSet2
+<br>...
+<br>DataSetn
+<br>0 0 
+<br>
+<br>Each data set (DataSeti) represents the state of a floor. The format of a data set is as follows. 
+<br>
+<br>W H
+<br>P11 P12 P13 ... P1W
+<br>P21 P22 P23 ... P2W
+<br>...
+<br>PH1 PH2 PH3 ... PHW
+<br>
+<br>The positive integers W and H are the numbers of panels on the living room in the x- and y- direction, respectively. The values of W and H are no more than 10. The integer Pyx represents the state of the panel. The value of Pyx means, 
+<br>
+<br>0: flawless panel (must not be covered),
+<br>1: scratched panel (must be covered). 
+<br>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, your program should output a line containing one integer which represents the minimum number of the carpets to cover all of the scratched panels. </div><p class="pst">Sample Input</p><pre class="sio">4 3
+0 1 1 1
+1 1 1 1
+1 1 1 1
+8 5
+0 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1
+1 1 1 0 1 1 1 1
+0 1 1 1 0 1 1 1
+8 8
+0 1 1 0 0 1 1 0
+1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1
+0 1 1 0 0 1 1 0
+0 1 1 0 0 1 1 0
+1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1
+0 1 1 0 0 1 1 0
+10 10
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 0 1 1 0 1 1 0 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 0 1 1 0 1 1 0 1
+1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 1 1 1 1
+1 1 0 1 1 0 1 1 0 1
+1 1 1 1 1 1 1 1 1 1
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">2
+6
+14
+29
+</pre><p class="pst">

@@ -1,0 +1,42 @@
+</p><div class="ptx" lang="en-US">The story is based on a real dream of mine. The description of rules is exactly what I dreamt. Do not start to code before you have understood it well.
+<br>
+<br>The little cat is preparing a bead necklace for his girlfriend - a DIY one to express his affection. N (4 <= N <= 400) different kinds of beads (wooden, plastic, glass, pearl, DIAMOND!?, etc) have been kept in his huge casket, which are the only source of heads to make his necklace.
+<br>
+<br>By the impulse of curiosity, the little cat made two strings of beads unthinkingly, one for him and one for his girlfriend – a pair of "lover-necklaces". Will his girlfriend like it? By the market research, how they look like depends on the similarity factor of two necklaces. A necklace can be considered as a linked list of M beads.
+<br>
+<br>The similarity of two beads forms an N * N table. For example:
+<br>
+<br><img src=images/2753_1.jpg>
+<br> 
+<br>The similarity factor of two necklaces can be determined by the sum of M corresponding pair of beads. For example:
+<br>
+<br>Necklace1: WPPWW
+<br>Necklace2: DPDDW
+<br>Similarly factor = Table[W,D] + Table[P,P] + Table[P,D] + Table[W,D] + Table[W,W] = -7 + 1 + 1 + (-7) + 6 = -6
+<br>
+<br>Since we do not much care about what the necklace exactly is, (what is more, the little cat wants to keep it secret until his girlfriend's birthday) we use another N * N table to record number of existences of different pairs:
+<br>
+<br><img src = images/2753_2.jpg>
+<br>
+<br>You are given the table Pairs, but to determine the table Table. The purpose is to make the similarity factor of two necklaces as large as possible. There's one more restriction holds for Table, Low[i, j] <= Table[i, j] <= Up[i, j] (an upper bound and an lower bound given to you). Obviously Low[i, j] = Low[j, i] and Up[i, j] = Up[j, i].
+<br>
+<br>Background in my dream: the little cat has special magic. At one time, he can turn all the pearls to diamonds, and all the diamonds to pearls. More precise speaking, he can swap two different kinds of beads at one time. That is why N * N Pairs is fixed, but we can modify Table ourselves!
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains a number of test cases. Each of the following blocks denotes a single test case.
+<br>A test case starts by an integer N (4 <= N <= 400) and N lines followed. The i-th line followed contains 3 * (N – i + 1) integers, in which the j-th triple denotes Pairs[i, j + i - 1], Low[i, j + i - 1] and Up[i, j + i - 1].
+<br>
+<br>Restrictions: -10000 <= Low[i, j] < Up[i, j] <= 10000, -100000 <= Pair[i, j] <= 100000. From the input given, you may assume that there is always a solution. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output a single line with a single number, which is the largest similarity that you can generate.</div><p class="pst">Sample Input</p><pre class="sio">4
+7 1 10  0 -10 10  2 -10 10  0 -10 10
+        0 1 10    0 -10 10  0 -10 10
+                  0 1 10    0 -10 10
+                            0 1 10
+
+4
+0 1 10  2 -10 10  2 -10 10  2 -10 10
+        0 1 10    2 -10 10  2 -10 10
+                  0 1 10    2 -10 10
+                            0 1 10
+</pre><p class="pst">Sample Output</p><pre class="sio">90
+-4
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">An optimum Table for the first sample case:
+<br><img src = images/2753_3.jpg></div><p class="pst">

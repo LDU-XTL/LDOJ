@@ -1,0 +1,19 @@
+</p><div class="ptx" lang="en-US"><img src=images/3227_1.jpg align=right hspace=10 vspace=10>Octopus and Penguin love sports, especially the climb. They step on the most top building of Changsha to view the Yuelu Mountain in weekend and are attracted by the imposing landscape. However, they can't see the whole mountain because the building is not high enough. Please help them to calculate the total length of surface for mountain they can see.<br>Suppose Octopus and Penguin's coordinate is (0，h) and the mountain is composed by n points which satisfy: <br>1． All points' coordinates are equal to or larger than zero.<br>2． The first point is 0, it's coordinate is (<i>w</i><sub>0</sub>, 0)(<i>w</i><sub>0</sub> &gt;= 0).<br>3． n points are listing in ascending sort by x-axis.<br>4． Odd points' y-axis is larger than the former one.<br>5． Even points' y-axis (except for 0 point) is small than the former one.<br>Condition 3,4 and 5 is means for three nearby points (<i>w</i><sub>2k</sub>, <i>h</i><sub>2k</sub>), (<i>w</i><sub>2k+1</sub>, <i>h</i><sub>2k+1</sub>) and (<i>w</i><sub>2k+2</sub>, <i>h</i><sub>2k+2</sub>)(<i>k </i>&#8712<i>N</i><sup>*</sup>,2<i>k</i>+2&lt;<i>n</i>), satisfied <i>w</i><sub>2k </sub>&lt;<i> w</i><sub>2k+1 </sub>&lt;<i> w</i><sub>2k+2</sub>, <i>h</i><sub>2k+1 </sub>&gt;<i> h</i><sub>2k</sub> and <i>h</i><sub>2k+2</sub> &lt;<i> h</i><sub>2k+1</sub>.<br>6． The last point is (<i>w</i><sub>n-1</sub>, 0).<br><br>The figure below corresponding sample input one: <br><img src='images/3227_2.gif'> </div><p class="pst">Input</p><div class="ptx" lang="en-US">There are several test cases. For each case, the first line is two integers n (0&lt;n&lt;=1000) and h. Then n lines follow and each line is two integers x and y(0&lt;=x,y&lt;=1000) describe the coordinates of mountains. n=h=0 means end of the input.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case, output the surface length of mountain they can see.</div><p class="pst">Sample Input</p><pre class="sio">3 5
+0 0
+1 1
+2 0
+5 5
+0 0
+2 2
+3 1
+5 3
+8 0
+5 4
+0 0
+2 2
+3 1
+5 3
+8 0
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">2.83
+7.07
+5.66</pre><p class="pst">

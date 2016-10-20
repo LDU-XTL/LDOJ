@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US">Two opposite vertices of the parallelepiped A with the edges parallel to the datume lines, have coordinates (0, 0, 0) and (u, v, w) correspondingly (0< u< 1000, 0< v< 1000, 0< w< 1000).
+<br>
+<br>Each of the n points of the set S is defined by its coordinates (x(i), y(i), z(i)), 1 <= i <= n <= 50. No pair of points of the set S lies on the straight line parallel to some side of the parallelepiped A. 
+<br>
+<br>You are to find a parallelepiped G of the maximal volume such that all its sides are parallel to the edges of A, G completely lies in A (G and A may have common boundary points) and no point of S lies in G (but may lie on its side).</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line consists of the numbers u, v, w separated with a space. The second line contains an integer n. The third, ..., (n+2)-nd line – the numbers x(i), y(i), z(i)separated with a space. 
+<br>
+<br>The number n is written without a decimal point. All other numbers are written with not more than two digits after a decimal point (if a number is integer a decimal point may be omitted). All the input numbers are non-negative not greater than 1000.</div><p class="pst">Output</p><div class="ptx" lang="en-US">One number – the volume of G with two digits after a decimal point. If the true volume has more than two digitrs after a decimal point you should round off the result to two digits after a decimal opint according to the common mathematical rules.</div><p class="pst">Sample Input</p><pre class="sio">1.0 1.0 1.0
+1
+0.5 0.5 0.5</pre><p class="pst">Sample Output</p><pre class="sio">0.50</pre><p class="pst">

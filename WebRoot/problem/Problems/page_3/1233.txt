@@ -1,0 +1,19 @@
+</p><div class="ptx" lang="en-US">In an amusement park, there is a street covered by hexagonal shaped ceramic bricks. The bricks are wired from underground, in a strange way such that each brick can become hot or cold during one second, and remain in the same hot/cold state or change in the next step depending on its adjacent bricks. A special technology is used in manufacturing these ceramics so that it can abruptly change state from cold to hot or visa versa.
+<br>
+<br>The initial pattern of hot/cold states of each brick is given. From this information and the following rules, one can find out whether a particular brick is cold or hot at any one-second duration in future. The bricks become hot or cold according to the following rules:
+<br><ul>
+<br><li>If a brick is hot at second t, it will become cold at second t + 1, if it has exactly 3 cold bricks among its adjacent bricks, otherwise it remains hot.
+<br><li>If a brick is cold at second t, it remains cold at second t + 1, if it has 2 or 3 cold bricks among its adjacent bricks, otherwise it will become hot in the second t + 1.
+<br></ul>
+<br>The game starts when one jumps to one of the bricks on the first row close to the border of the street, and the time is reset to zero. The participant can stay on the same brick during the next one-second time stamp, or jump to one of its adjacent bricks at the start of the next second. It is not allowed to jump over the bricks. Obviously, a participant can only step on the cold bricks. You are to write a program to help a participant cross this street in a minimum amount of time.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains a single integer t (1 <= t <= 10), the number of test cases, followed by the input data for each test case. The first line of each test case contains two integers: N (1 <= N <= 10), the number of rows of the bricks, and M (1 <= M <= 10), the number of bricks in the each row. The brick (i, j) is the jth brick on the ith row counting from left to right. The rows are counted from 1 to N starting from the side of the street that the participant starts from (Figure 1). Note that for boundary bricks, the adjacent bricks may be less than 6, which is the number of adjacent bricks for the interior bricks. Followed by the first line, there will be N lines, each containing a string of length M, consisting of upper-case letters 'H' and 'C'. A 'C' at position j in the ith string means that the brick (i, j) is cold at time 0, and an 'H' means the brick is hot at that time.
+<br><center><img src=images/1233_1.jpg></center>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">There should be one line in output per test case, containing either a number t which is the minimum time at which time a participant can steps on the other side of the street, or the word impossible, if it is not possible to reach to the other side, or the minimum required time is greater than 1000.
+<br></div><p class="pst">Sample Input</p><pre class="sio">2
+2 2
+CH
+CC
+2 2
+CH
+HC</pre><p class="pst">Sample Output</p><pre class="sio">2
+impossible</pre><p class="pst">

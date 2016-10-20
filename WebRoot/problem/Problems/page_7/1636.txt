@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US">In order to lower the risk of riots and escape attempts, the boards of two nearby prisons of equal prisoner capacity, have decided to rearrange their prisoners among themselves. They want to exchange half of the prisoners of one prison, for half of the prisoners of the other. However, from the archived information of the prisoners' crime history, they know that some pairs of prisoners are dangerous to keep in the same prison, and that is why they are separated today, i.e. for every such pair of prisoners, one prisoners serves time in the first prison, and the other in the second one. The boards agree on the importance of keeping these pairs split between the prisons, which makes their rearrangement task a bit tricky. In fact, they soon find out that sometimes it is impossible to fulfil their wish of swapping half of the prisoners. Whenever this is the case, they have to settle for exchanging as close to one half of the prisoners as possible.</div><p class="pst">Input</p><div class="ptx" lang="en-US">On the first line of the input is a single positive integer n, telling the number of test scenarios to follow. Each scenario begins with a line containing two non-negative integers m and r, 1 < m < 200 being the number of prisoners in each of the two prisons, and r the number of dangerous pairs among the prisoners. Then follow r lines each containing a pair xi yi of integers in the range 1 to m,which means that prisoner xi of the first prison must not be placed in the same prison as prisoner yi of the second prison.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test scenario, output one line containing the largest integer  k <= m/2 , such that it is possible to exchange k prisoners of the first prison for k prisoners of the second prison without getting two prisoners of any dangerous pair in the same prison.</div><p class="pst">Sample Input</p><pre class="sio">3
+101 0
+3 3
+1 2
+1 3
+1 1
+8 12
+1 1
+1 2
+1 3
+1 4
+2 5
+3 5
+4 5
+5 5
+6 6
+7 6
+8 7
+8 8</pre><p class="pst">Sample Output</p><pre class="sio">50
+0
+3</pre><p class="pst">

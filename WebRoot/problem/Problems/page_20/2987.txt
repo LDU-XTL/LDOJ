@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>You&rsquo;ve finally got mad at &ldquo;the world&rsquo;s most stupid&rdquo; employees of yours and decided to do some firings. You&rsquo;re now simply too mad to give response to questions like &ldquo;Don&rsquo;t you think it is an even more stupid decision to have signed them?&rdquo;, yet calm enough to consider the potential profit and loss from firing a good portion of them. While getting rid of an employee will save your wage and bonus expenditure on him, termination of a contract before expiration costs you funds for compensation. If you fire an employee, you also fire all his underlings and the underlings of his underlings and those underlings&rsquo; underlings&rsquo; underlings&hellip; An employee may serve in several departments and his (direct or indirect) underlings in one department may be his boss in another department. Is your firing plan ready now?</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input starts with two integers <i>n</i> (0 &lt; <i>n</i> &le; 5000) and <i>m</i> (0 &le; <i>m</i> &le; 60000) on the same line. Next follows <i>n</i> + <i>m</i> lines. The first <i>n</i> lines of these give the net profit/loss from firing the <i>i</i>-th employee individually <i>b<sub>i</sub></i> (|<i>b<sub>i</sub></i>| &le; 10<sup>7</sup>, 1 &le; <i>i</i> &le; <i>n</i>). The remaining <i>m</i> lines each contain two integers <i>i</i> and <i>j</i> (1 &le; <i>i</i>, <i>j</i> &le; <i>n</i>) meaning the <i>i</i>-th employee has the <i>j</i>-th employee as his direct underling.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output two integers separated by a single space: the minimum number of employees to fire to achieve the maximum profit, and the maximum profit.</p></div><p class="pst">Sample Input</p><pre class="sio">5 5
+8
+-9
+-20
+12
+-10
+1 2
+2 5
+1 4
+3 4
+4 5</pre><p class="pst">Sample Output</p><pre class="sio">2 2</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">As of the situation described by the sample input, firing employees 4 and 5 will produce a net profit of 2, which is maximum.</div><p class="pst">

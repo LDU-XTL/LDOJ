@@ -1,0 +1,26 @@
+</p><div class="ptx" lang="en-US">The DIY Furniture company specializes in assemble-it-yourself furniture kits. Typically, the pieces of wood are attached to one another using a wooden peg that fits into pre-cut holes in each piece to be attached. The pegs have a circular cross-section and so are intended to fit inside a round hole.
+<br>A recent factory run of computer desks were flawed when an automatic grinding machine was mis-programmed. The result is an irregularly shaped hole in one piece that, instead of the expected circular shape, is actually an irregular polygon. You need to figure out whether the desks need to be scrapped or if they can be salvaged by filling a part of the hole with a mixture of wood shavings and glue.
+<br>There are two concerns. First, if the hole contains any protrusions (i.e., if there exist any two interior points in the hole that, if connected by a line segment, that segment would cross one or more edges of the hole), then the filled-in-hole would not be structurally sound enough to support the peg under normal stress as the furniture is used. Second, assuming the hole is appropriately shaped, it must be big enough to allow insertion of the peg. Since the hole in this piece of wood must match up with a corresponding hole in other pieces, the precise location where the peg must fit is known.
+<br>Write a program to accept descriptions of pegs and polygonal holes and determine if the hole is ill-formed and, if not, whether the peg will fit at the desired location. Each hole is described as a polygon with vertices (x1, y1), (x2, y2), . . . , (xn, yn). The edges of the polygon are (xi, yi) to (x<sub>i+1</sub>, y<sub>i+1</sub>) for i = 1 . . . n − 1 and (xn, yn) to (x1, y1).</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of a series of piece descriptions. Each piece description consists of the following data:
+<br>Line 1 < nVertices > < pegRadius > < pegX > < pegY >
+<br>number of vertices in polygon, n (integer)
+<br>radius of peg (real)
+<br>X and Y position of peg (real)
+<br>n Lines < vertexX > < vertexY >
+<br>On a line for each vertex, listed in order, the X and Y position of vertex The end of input is indicated by a number of polygon vertices less than 3.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each piece description, print a single line containing the string:
+<br>HOLE IS ILL-FORMED if the hole contains protrusions
+<br>PEG WILL FIT if the hole contains no protrusions and the peg fits in the hole at the indicated position
+<br>PEG WILL NOT FIT if the hole contains no protrusions but the peg will not fit in the hole at the indicated position</div><p class="pst">Sample Input</p><pre class="sio">5 1.5 1.5 2.0
+1.0 1.0
+2.0 2.0
+1.75 2.0
+1.0 3.0
+0.0 2.0
+5 1.5 1.5 2.0
+1.0 1.0
+2.0 2.0
+1.75 2.5
+1.0 3.0
+0.0 2.0
+1</pre><p class="pst">Sample Output</p><pre class="sio">HOLE IS ILL-FORMED
+PEG WILL NOT FIT</pre><p class="pst">

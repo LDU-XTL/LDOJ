@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">There is a polygon A<SUB>1</SUB>A<SUB>2</SUB>...A<SUB>n</SUB> (the vertices A<SUB>i</SUB> are numbered in the clockwise order). On each side A<SUB>i</SUB>A<SUB>i+1 </SUB>an isosceles triangle A<SUB>i</SUB>M<SUB>i</SUB>A<SUB>i+1</SUB> is built on the outer side of the polygon, and angle A<SUB>i</SUB>M<SUB>i</SUB>A<SUB>i+1 </SUB>= &alpha;<SUB>i</SUB>. Here A<SUB>n+1</SUB>&nbsp;=&nbsp;A<SUB>1</SUB>.
+<br>The set of angles a<SUB>i</SUB> satisfies a condition that the sum of angles in any of its nonempty subsets is not aliquot to 360 degrees.
+<br>You are given n&nbsp;&lt;=&nbsp;50, co-ordinates of vertices M<SUB>i</SUB> and angles &alpha;<SUB>i</SUB> (measured in degrees). Write a program which restores co-ordinates of the polygon vertices.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of an input contains an integer n. The next n lines contain pairs of real numbers which are co-ordinates of points M<SUB>i</SUB>. And the last n lines of the file consist of degree values of angles &alpha;<SUB>i</SUB>. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output file should contain n lines of pairs of coordinates of the points </div><p class="pst">Sample Input</p><pre class="sio">3
+0 2
+3 3
+2 0
+90
+90
+90
+
+</pre><p class="pst">Sample Output</p><pre class="sio"></pre><p class="pst">Hint</p><div class="ptx" lang="en-US">1 1
+<br>1 3
+<br>3 1
+<br></div><p class="pst">

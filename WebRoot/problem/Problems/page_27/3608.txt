@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US"><p>Thousands of thousands years ago there was a small kingdom located in the middle of the Pacific Ocean. The territory of the kingdom consists two separated islands. Due to the impact of the ocean current, the shapes of both the islands became convex polygons. The king of the kingdom wanted to establish a bridge to connect the two islands. To minimize the cost, the king asked you, the bishop, to find the minimal distance between the boundaries of the two islands. </p><img src="images/3608_1.gif" /></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input consists of several test cases.<br>Each test case begins with two integers <i>N</i>, <i>M</i>. (3 &le; <i>N</i>, <i>M</i> &le; 10000)<br>Each of the next <i>N</i> lines contains a pair of coordinates, which describes the position of a vertex in one convex polygon.<br>Each of the next <i>M</i> lines contains a pair of coordinates, which describes the position of a vertex in the other convex polygon.<br>A line with <i>N</i> = <i>M</i> = 0 indicates the end of input.<br> The coordinates are within the range [-10000, 10000].</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case output the minimal distance. An error within 0.001 is acceptable.</p></div><p class="pst">Sample Input</p><pre class="sio">4 4
+0.00000 0.00000
+0.00000 1.00000
+1.00000 1.00000
+1.00000 0.00000
+2.00000 0.00000
+2.00000 1.00000
+3.00000 1.00000
+3.00000 0.00000
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">1.00000</pre><p class="pst">

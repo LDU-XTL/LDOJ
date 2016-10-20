@@ -1,0 +1,32 @@
+</p><div class="ptx" lang="en-US"><p>A plumber has been hired to build an air pipe through a mineshaft from the bottom to the surface. The mineshaft was built without modern technology, so it winds its way up through the earth. Because it is very time consuming to bring the tools necessary to bend the pipe below the surface, the plumber wants to minimize the number of bends in the pipeline.</p><p>For example, for the mineshaft in the first picture below, the minimal number of bends in a pipeline from the bottom to the surface is two. Different optimal solutions exist, one of which is shown in the second picture. The bullets indicate the bends in the pipeline.</p><div align="center"><img src="images/3457_1.png"></div><p>The two walls of the mineshaft are formed by sequences of straight segments. The numbers of segments in the two sequences may be different. Further, the horizontal distance between the walls of the mineshaft may vary, but is always positive. Both walls start at the same level and end at the same level.</p><p>On the way from the bottom of the mineshaft to the surface, the level (the <i>y</i>-coordinate) increases with every segment of a wall. Hence, the mineshaft does not have horizontal plateaus or &#8216;ceilings&#8217;, and at no point does it go back down again.</p><p>For the purpose of this task, you may assume the diameter of the pipeline to be 0. At no point may the pipeline cross the walls. In order to attach the pipeline firmly to the wall, each segment of the pipeline has to touch the walls at (at least) two different places. However, the bending points of the pipeline are weak. They cannot be used to attach the pipeline to the walls. The end points of the pipeline, though, at the bottom and the top of the mineshaft, may be used to attach a segment to the walls.</p><p>Hence, the solution in the third picture above (also having two bends) is not allowed, because the lowest segment of the pipeline can be attached to the walls at only one place: at the bottom of the right wall.</p><p>The pipeline must start anywhere at the bottom of the mineshaft, and must end anywhere on the imaginary line between the top of the left wall and the top of the right wall. Note, however, that the endpoints of the pipeline may only be used to attach the pipeline, if they touch a wall. In particular, the endpoint at the bottom cannot be attached to any position at the bottom which is not the bottom of a wall.</p><p>Finally, the angle that the pipeline makes at a bending point can take any value satisfying &#8722;180&deg; &lt; <i>&#945;</i> &lt; 180&deg; and (of course) <i>&#945;</i> &#8800; 0.</p><p>Note that sometimes it may be useful to have the pipeline intersect with itself. For example, in the mineshaft below, this is needed to get from the bottom to the top of the mineshaft with only three bends.</p><div align="center"><img src="images/3457_2.png"></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of the input file contains a single number: the number of test cases to follow. Each test case has the following format:</p><ul><li><p>One line with one integer <i>N</i><sub>1</sub> (2 &#8804; <i>N</i><sub>1</sub> &#8804; 25): the number of points describing the left wall of the mineshaft.</p></li><li><p><i>N</i><sub>1</sub> lines with the coordinates of the points describing the left wall of the mineshaft, from the bottom to the top. The <i>i</i><sup>th</sup> line contains two integers <i>x<sub>i</sub></i> and <i>y<sub>i</sub></i> (&#8722;1,000 &#8804; <i>x<sub>i</sub></i> &#8804; 1,000 and 0 &#8804; <i>y<sub>i</sub></i> &#8804; 1,000) separated by a single space: the <i>x</i>- and <i>y</i>-coordinate of the point, respectively.</p><p>The <i>y</i>-coordinates are monotonically increasing: <i>y</i><sub>1</sub> &lt; <i>y</i><sub>2</sub> &lt; &#8230; &lt; <i>y</i><sub><i>N</i><sub>1</sub></sub>.</p></li><li><p>One line with one integer <i>N</i><sub>2</sub> (2 &#8804; <i>N</i><sub>2</sub> &#8804; 25): the number of points describing the right wall of the mineshaft.</p></li><li><p><i>N</i><sub>2</sub> lines with the coordinates of the points describing the right wall of the mineshaft, from the bottom to the top. The <i>i</i><sup>th</sup> line contains two integers <i>x&#8242;<sub>i</sub></i> and <i>y&#8242;<sub>i</sub></i> (&#8722;1,000 &#8804; <i>x&#8242;<sub>i</sub></i> &#8804; 1,000 and 0 &#8804; <i>y&#8242;<sub>i</sub></i> &#8804; 1,000) separated by a single space: the <i>x</i>- and <i>y</i>-coordinate of the point, respectively.</p><p>The y-coordinates are monotonically increasing: <i>y&#8242;</i><sub>1</sub> &lt; <i>y&#8242;</i><sub>2</sub> &lt; &#8230; &lt; <i>y&#8242;</i><sub><i>N</i><sub>2</sub></sub>.</p></li></ul><p>We always have <i>x</i><sub>1</sub> &lt; <i>x&#8242;</i><sub>1</sub>, <i>y</i><sub>1</sub> = <i>y&#8242;</i><sub>1</sub>, <i>x<sub>N</i><sub>1</sub></sub> &lt; <i>x&#8242;</i><sub><i>N</i><sub>2</sub></sub>, and <i>y<sub>N</sub></i><sub><sub>1</sub></sub> = <i>y&#8242;</i><sub><i>N</i><sub>2</sub></sub>. The walls described by the sequences of points do not cross or even touch each other.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For every test case in the input file, the output should contain a single number, on a single line: the minimum number of bends in the pipeline to make it from the bottom of the mineshaft to the top, under the conditions from the problem description.</p></div><p class="pst">Sample Input</p><pre class="sio">2
+7
+4 0
+8 2
+3 7
+5 9
+3 12
+6 14
+4 16
+5
+7 0
+10 2
+6 6
+10 12
+8 16
+6
+-10 10
+-10 20
+10 22
+5 27
+0 37
+5 47
+8
+-8 10
+-8 16
+3 17
+9 19
+14 24
+18 32
+18 40
+11 47</pre><p class="pst">Sample Output</p><pre class="sio">2
+3</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">These testcases correspond to the pictures in the problem description.</div><p class="pst">

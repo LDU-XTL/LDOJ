@@ -1,0 +1,35 @@
+</p><div class="ptx" lang="en-US">Background
+<br>The NASA has secretly built a Time machine which allows them to travel into the past. Its first application is to explore the Mayan culture. They have been able to gather some important dates from Maya monuments which are suitable for further investigation. They are now faced with a problem - they need to convert those Mayan dates to the Gregorian format, which is the only kind of input their time machine understands.
+<br>Problem
+<br>Write a conversion program to calculate the Gregorian date, the Mayan longcount and the Mayan ritual date for a given Gregorian date or Mayan longcount.
+<br>
+<br>Mayan Longcount
+<br>The starting date, day zero, for the Mayan calendar is the 13th of August 3114 BC (before Christ). From this day zero onwards the days to a certain date are counted. One day is called K'in, 20 K'in are a Winal.18 Winal are a Tun, 20 Tun make a K'atun and 20 K'atun will form a Bak'tun. Example: 12.4.9.13.3 tells us that 12 Bak'tun, 4 K'atun, 9 Tun, 13 Winal and 3 K'in (days) have passed since August 13th 3114 BC.
+<br>
+<br>Mayan Ritual Dates
+<br>The Mayans had the solar year with 365 days, there were no leap days to correct the calendar. The year was split in 18 month with 20 days and one month with 5 days. The names of the months are the following:Pob,Wo, Sip, Sotz', Tzek, Xul, Yaxk'in, Mol, Ch'en, Yax, Sak, Keh, Mak, K'ank'in, Muwan, Pax, K'ayab,Kumk'u, Wayeb. The days of the month were numbered 1 to 19 (or 1 to 4), the last day of the month was noted as day zero of the following month (i.e. you would not write 20 Pop, but 0 Wo to note the last day of the first month, the same applies to the five day month called Wayeb, its last day 5 Wayeb is written 0 Pop).Additionally to the months and days notation there is a notation which could be compared to our weeks and weekdays. Every day is labelled by both a number in the range from 1 to 13 and one of the following 20 names: Imix, Ik', Ak'bal, K'an, Chikchan, Kimi, Manik', Lamat, Muluk, Ok, Chuwen, Eb, Ben, Ix, Men,Kib, Kaban, Etz'nab, Kawak, Ahaw. Both the numbers and the names are running in cycles, so the count will go: 1 Imix, 2 Ik', 3 Ak'bal, ... 13 Ben, 1 Ix, 2 Men. It will thus take a 260 day cycle (called the ritual year) until 1 Imix is counted again (compare Figure 1 on next page).
+<br>The weekday and month notation are used together as in the following example: 2 Kimi (weekday) 10 Yax (day and month). The 13th of August 3114 BC has the ritual date 4 Ahaw 8 Kumk'u.
+<br>
+<br>Gregorian Dates
+<br>In our calendar we use leap days. A leap day is inserted every 4 years, except every 100 years. Overruling this a leap day will be inserted every 400 years.
+<br>It is also important to know that there is no year 0. Accordingly, 31th of December 1 BC is followed by 1st of January AD 1. The last leap year before Christ is 1 BC (the 400 year rule applies here), the next leap year after that is AD 4.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains the number of scenarios.
+<br>For each scenario, there is one line containing either a Mayan longcount or a Gregorian date in the following formats:
+<br><ul><li>A Mayan longcount consists of 5 non-negative integers separated by dots.
+<br><li>A Gregorian date consists first of three integers d, m, and y, separated by slashes, and satisfying 1 <= d <= 31, 1 <= m <= 12, and 0 < y. The values may or may not be zero padded, but will never exceed two characters for d and m, and four for y. This representation is always followed by a single blank and either "BC" or "AD".</ul>
+<br>We will neither ask for dates preceding August 13th 3114 BC, nor for dates after 13.0.0.0.0 which is the last day in the Mayan longcount calendar. Also, you will never be given invalid dates in either calendar.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output for every scenario begins with a line containing "Scenario #i:", where i is the number of the scenario starting at 1. Then, regardless of the format given in the input, three lines have to be printed representing the given date in the following order:
+<br>1. the Gregorian date in the same format as specified in the input description, but without any padding zeros;
+<br>2. the Mayan longcount representation of the date, also as described before;
+<br>3. the Mayan ritual date consisting of four parts separated by single blanks: the weekday notation with its number and name, then the day of the month followed by the name of the month.
+<br>After these three lines, always a blank line must be printed.</div><p class="pst">Sample Input</p><pre class="sio">2
+13/08/3114 BC
+12.19.10.6.14
+</pre><p class="pst">Sample Output</p><pre class="sio">Scenario #1:
+13/8/3114 BC
+0.0.0.0.0
+4 Ahaw 8 Kumk'u
+
+Scenario #2:
+28/6/2003 AD
+12.19.10.6.14
+9 Ix 2 Tzek
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><img src=images/1807_1.jpg></div><p class="pst">

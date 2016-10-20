@@ -1,0 +1,36 @@
+</p><div class="ptx" lang="en-US">In the land of Kalii lived a civilization not unlike our own. They had government, business, and technology. The only major difference was how tax rates were decided. You see, the people of Kalii loved to haggle. They haggled over everything including what percentage of their income went to the government coffers.When a Kalii family's tax contract was up they had to travel to the capital to haggle with government officals and hammer out a new deal. The contract would have a start date, an end date (for bookkeeping purposes the end day was always the 15th of the end month), and a tax rate. It was also traditional for a Kalii family to enjoy a short time period of tax free living between the end of their last contract and the start of the new one. This time period was a point to haggle over as well.
+<br>The land of Kalii was prosperous and very populous and, as a consequence, government officials were often overwhelmed with work. When a deal was agreed upon with a family, the officials would quickly write it down in shorthand and send it off to be processed. These scribbled notes had to be converted to XML format to be entered into their computer system. Sometimes the scribble was inconclusive and the family would have to be recalled to the capital for another round of haggling. This entire process was very inefficient but it was the way the people of Kalii had always done it and they were not about to change anytime soon.
+<br>Your job is to convert the scribblings of the officials into XML format.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of multiple datasets, one per line. Each correct line contains three pieces of information:
+<br>1. Tax rate
+<br>- A tax rate always has a '%' after it if it is a whole number (i.e. 5%).
+<br>- A tax rate never has a decimal point in it.
+<br>- A tax rate may contain a fraction but its denominator must only be a 2, 4, or 8.
+<br>- A tax rate must have a numerator that is less than its denominator.
+<br>2. Contract End Date
+<br>- A contract end date is a numerical representation of the month (one or two digits) and the last two digits of the year. The month and year may be separated by a single hyphen (i.e. 12-05 or 1205 would refer to 15DEC05).
+<br>3. Contract Start Date
+<br>- A contract start date is a numerical representation of the month (one or two digits) and a two -digit day of the month. The month and day may be separated by a single hyphen (i.e. 12-05 or 1205 would refer to 05DEC03).
+<br>- A contract start date must start on or after the current date. For example, the cur rent year is 2003. If the start date is 305 it is assumed that the year the contract starts will be 2004.
+<br>Note: There may be 0 or more spaces between each of the three fields.
+<br>Note: The Kalii calendar consists of the twelve months familiar to you, but all months have 31 days.
+<br>Note: The maximum tax rate is 99.875%</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, print the correctly indented XML (4 spaces per indent level):
+<br><pre>&lt;Kalii Index=N>
+<br>    &lt;startdate>(start date)&lt;/startdate>
+<br>    &lt;rate>(tax rate)&lt;/rate>
+<br>    &lt;enddate>(end date)&lt;/enddate>
+<br>&lt;/Kalii></pre>
+<br>N should be replaced by the data set number, (start date) by the start date, (tax rate) by the tax rate, and (end date) by the end date. If no output could be computed because of either bad or ambiguous data, simply print &lt;Kalii Index=N >BAD INPUT&lt;/Kalii>, where N should be replaced by the data set number.
+<br>Note: The format for the start date is DDMMMYY. The format for the end date is 15MMMYY. Where DD is the zero-padded day of month (01-31), MMM is the month in upper-case letters (JAN, FEB, MAR, APR, MAY,JUN, JUL, AUG, SEP, OCT, NOV, DEC), and YY is the zero-padded last 2 digits of the year (00-99).
+<br>Note: The tax rate should be accurate to 3 decimal places.</div><p class="pst">Sample Input</p><pre class="sio">25/850812-31
+6% 02110122
+6.75% 2-11 4-23</pre><p class="pst">Sample Output</p><pre class="sio">&lt;Kalii Index=1>
+    &lt;startdate>31DEC03&lt;/startdate>
+    &lt;rate>2.625&lt;/rate>
+    &lt;enddate>15MAY08&lt;/enddate>
+&lt;/Kalii>
+&lt;Kalii Index=2>
+    &lt;startdate>22JAN04&lt;/startdate>
+    &lt;rate>6.000&lt;/rate>
+    &lt;enddate>15FEB11&lt;/enddate>
+&lt;/Kalii>
+&lt;Kalii Index=3>BAD DATA&lt;/Kalii></pre><p class="pst">

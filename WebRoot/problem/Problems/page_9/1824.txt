@@ -1,0 +1,27 @@
+</p><div class="ptx" lang="en-US">The members of the National Informatics Team are very proud of the new game they invented, that they called similarly to a problem from the International Olympiad in Informatics from the last year, which they liked very much. So, the game is called TwoFour.
+<br>
+<br>In this game, N piles are used, each one containing at least 0 and at most 4 beeds. The total number of beeds from all the piles is 2*N. Two players move alternatively, each player, in his turn, being forced to do a valid move.
+<br>
+<br>In a valid move the player chooses 2 piles, the first pile having more beeds than the second pile. The player takes a beed from the first pile and moves it into the second one. The move is considered valid only if the number of beeds resulted in the second pile after the move of the beed is not bigger than the number of beeds left in the first pile. 
+<br>
+<br>The game is over when there isn't any valid move (if you think a little, you will see that this thing happens when each pile has 2 beeds).
+<br>
+<br>The winner of the game is considered to be the one who has more piles at the end of the game. Of course, if both players own an equal number of piles the game is considered to be even. 
+<br>
+<br>A player owns a pile if the pile has 2 beeds, and this number (of two beeds) resulted after a move made by that player. For example, if a player chooses a pile with 4 beeds and a pile with one beed, after the move, he owns the second pile (which will have 2 beeds), but the first pile does not belong yet to anybody. If he chooses a pile with 3 beeds and a pile with 0 beeds, the player will become the owner of the first pile, because, after the move that he made, that pile will remain with 2 beeds. In case he chooses a pile with 3 beeds and a pile with one beed after he makes a move he will own the both piles (both have now two beeds).
+<br>
+<br>If a player is the owner of a pile at a certain moment during the game, it doesn't mean that this pile will remain in his possession until the end. For example, let's suppose that the player no. 1 owns a pile with two beeds and it is the second's player turn. If he chooses a pile with 4 beeds and the pile with 2 beeds that belongs to the player no. 1, after this move, the both piles will have 3 beeds, and the number of piles that are in the no. 1 player's possession will decrease with 1 (the pile formerly owned by him doesn't belong to any of the two players because it doesn't have 2 beeds).
+<br>
+<br>If the initial configuration of the game contains some piles having two beeds, these ones are equally distributed to the two players. If the number of piles with two beeds is odd, then player no. 2 will receive a pile more than the player no.1. The player no. 1 is the one who makes the first move.
+<br>
+<br>Write a program that for a given N and a set of initial configurations of the game with N piles, decides the result of each game configuration.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">On the first line of the input are two integers: N (3 <= N <= 30) and S (1 <= S <= 1000), representing the number of piles used in the game and the number of initial configurations of game, described in the following lines. Each of the next S lines contains N integer values from the interval [0, 4] which sum is 2*N, representing an initial configuration of the game.</div><p class="pst">Output</p><div class="ptx" lang="en-US">In the output, for each initial configuration of the game described in the input file, in the order they are described, write the final result of the game in the conditions that both players play optimal. If the first player wins, you should write the value 1; if the second player wins, you should write the value 2; else (even game) the value to be written is 0.</div><p class="pst">Sample Input</p><pre class="sio">5 4
+0 3 4 1 2
+2 2 2 2 2
+1 1 2 2 4
+4 3 2 1 0
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+2
+1
+1 
+</pre><p class="pst">

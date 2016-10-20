@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">In the FEN (Forsyth-Edwards Notation), a chessboard is described as follows: 
+<br><ul><li>The Board-Content is specified starting with the top row and ending with the bottom row. 
+<br><li>Character / is used to separate data of adjacent rows. 
+<br><li>Each row is specified from left to right. 
+<br><li>White pieces are identified by uppercase piece letters: PNBRQK. 
+<br><li>Black pieces are identified by lowercase piece letters: pnbrqk. 
+<br><li>Empty squares are represented by the numbers one through eight. 
+<br><li>A number used represents the count of contiguous empty squares along a row. 
+<br><li>Each row's sum of numbers and characters must equal 8. </ul>
+<br>For example: 
+<br><ul>5k1r/2q3p1/p3p2p/1B3p1Q/n4P2/6P1/bbP2N1P/1K1RR3</ul>
+<br>is the FEN notation description of the following chessboard:
+<br><center><img src=images/2512_1.jpg></center>
+<br>The chessboard of the beginning of a chess game is described in FEN as: 
+<br><ul>rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR</ul>
+<br>Your task is simple: given a chessboard description in a FEN notation you are asked to compute the number of unoccupied squares on the board which are not attacked by any piece.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input is a sequence of lines, each line containing a FEN description of a chessboard. Note that the description does not necessarily give a legal chess position. Input lines do not contain whitespace.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each line of input, output one line containing an integer which gives the number of unoccupied squares which are not attacked.</div><p class="pst">Sample Input</p><pre class="sio">5k1r/2q3p1/p3p2p/1B3p1Q/n4P2/6P1/bbP2N1P/1K1RR3
+rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+16
+</pre><p class="pst">

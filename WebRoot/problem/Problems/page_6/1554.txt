@@ -1,0 +1,105 @@
+</p><div class="ptx" lang="en-US">Programmer's University (PU) sponsors a number of intramural sports tournaments throughout the year. The brackets showing the competing teams and the winners are displayed on a metal board using magnetic signs containing the team names. One such bracket is shown below. Every so often though, a prankster takes all the team names off the board, carefully laying them on the floor in pairs in column-major order, starting at the top of Round 1 and then progressing down through Round 1, then back to the top of Round 2, down that column, and so on. This prankster always leaves a taunting note saying any programmer ought to be able to recreate the exact tournament bracket with just this information. Your task is to write a program that takes as input the names of teams from a tournament bracket and draws that bracket using simple ASCII characters. 
+<br>
+<br>One factor complicating your task is that there may not be enough teams in any tournament to completely fill a bracket. This means that some teams don't have to play a first round match. It is your job to deduce which teams actually played in the first round. 
+<br><pre>
+<br>Round    Round      Round       Winner
+<br>  1        2          3
+<br>
+<br>_BIG__
+<br>      \_BIG_____
+<br>_DIGS_/         \
+<br>                 \_FIGURES_
+<br>                 /         \
+<br>       _FIGURES_/           \
+<br>                             \
+<br>                              \_TIGGER_
+<br>                              /
+<br>       _TIGGER__             /
+<br>                \           /
+<br>                 \_TIGGER__/
+<br>_WIG__           /
+<br>      \_WIG_____/
+<br>_ZIG__/</pre>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains data for one or more touraments. Tournaments are implicitly numbered starting at 1. Each tournament begins with a line containing a positive odd integer n, 3 <= n <= 31, which is the total number of name signs in the tournament bracket. Following this are (n + 1)/2 lines of team pairings. All lines except the last one contain exactly two team names, separated by a single space. The first name is always immediately above the second name in the output. The last line contains a single team name, the winner of the tournament. All team names are between 3 and 7 upper case characters in the range (A-Z). A value of -1 for n signals the end of all the tournaments. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each tournament bracket, write a line indicating which bracket it is, "Tournament 1", "Tournament 2", etc., followed by the bracket itself. Team names are always printed left justified with one leading underscore '_' and one or more trailing underscores. The width of each round is the width of the longest team name in that round, plus a leading and trailing underscore. Teams that play in the first round are printed 2 lines apart. Those in the second, third and fourth rounds, if the bracket is so big, are 4, 8, and 16 lines apart, respectively. Contrary to our general guidelines, there will be spaces at the beginning of any line not containing a team playing in the first round. There will also be consecutive spaces in your output as necessary for formatting. However, there must never be trailing spaces at the end of any line, nor any lines with only spaces, nor any completely empty lines. The only special symbols you need to use to construct the bracket are the forward slash '/', the backward slash '\', and the underscore '_'. Note that the last example below shows the largest bracket possible for this problem. </div><p class="pst">Sample Input</p><pre class="sio">11
+BIG DIGS
+WIG ZIG
+BIG FIGURES
+TIGGER WIG
+FIGURES TIGGER
+TIGGER
+5
+LARGE RAGE
+ZEN RAGE
+RAGE
+31
+ANT BOA
+COW DUCK
+EEL FROG
+GOOSE HEN
+IGUANA JACKEL
+KITE LLAMA
+MOUSE NIT
+OCTOPUS PIG
+BOA COW
+FROG GOOSE
+IGUANA KITE
+MOUSE OCTOPUS
+COW GOOSE
+IGUANA OCTOPUS
+GOOSE OCTOPUS
+OCTOPUS
+-1</pre><p class="pst">Sample Output</p><pre class="sio">Tournament 1
+_BIG__
+      \_BIG_____
+_DIGS_/         \
+                 \_FIGURES_
+                 /         \
+       _FIGURES_/           \
+                             \
+                              \_TIGGER_
+                              /
+       _TIGGER__             /
+                \           /
+                 \_TIGGER__/
+_WIG__           /
+      \_WIG_____/
+_ZIG__/
+Tournament 2
+        _ZEN__
+              \
+               \_RAGE_
+_LARGE_        /
+       \_RAGE_/
+_RAGE__/
+Tournament 3
+_ANT_____
+         \_BOA_____
+_BOA_____/         \
+                    \_COW_____
+_COW_____           /         \
+         \_COW_____/           \
+_DUCK____/                      \
+                                 \_GOOSE___
+_EEL_____                        /         \
+         \_FROG____             /           \
+_FROG____/         \           /             \
+                    \_GOOSE___/               \
+_GOOSE___           /                          \
+         \_GOOSE___/                            \
+_HEN_____/                                       \
+                                                  \_OCTOPUS_
+_IGUANA__                                         /
+         \_IGUANA__                              /
+_JACKEL__/         \                            /
+                    \_IGUANA__                 /
+_KITE____           /         \               /
+         \_KITE____/           \             /
+_LLAMA___/                      \           /
+                                 \_OCTOPUS_/
+_MOUSE___                        /
+         \_MOUSE___             /
+_NIT_____/         \           /
+                    \_OCTOPUS_/
+_OCTOPUS_           /
+         \_OCTOPUS_/
+_PIG_____/</pre><p class="pst">

@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">Let us write down the infinite consecutive integers in a sequence in one line without any space and their squares in the second line. This will generate two different long numbers, now we want to find the sum of these two numbers. The calculation of the first 30 digits is just as below.
+<br><center><img src=images/2514_1.jpg></center>
+<br>The first digit of the result is 2, the second digit is 7, and the third is 2 and so on. Given an integer k, you should output the digit at position k in the resulting number.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input file will contain several test cases. In each of the test cases, there is an integer k (0 < k <= 2 ^ 31 - 1) in one line.
+<br>
+<br>A line containing a number "0" terminates input, and this line need not be processed.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case you should generate a line of output, which is the digit in the k-th place of the addition result.</div><p class="pst">Sample Input</p><pre class="sio">2
+5
+30
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">7
+1
+8
+</pre><p class="pst">

@@ -1,0 +1,37 @@
+</p><div class="ptx" lang="en-US">Let G be a weighted graph, i.e., every edge in G is associated with a nonnegative integer weight. The length of a path is the sum of edge weights in the path. A shortest path between vertices r and s in G, denoted by P<sub>G</sub>(r, s), is defined as a path with the shortest length from r to s. The distance between vertices r and s, denoted by d<sub>G</sub>(r, s), is the length of the shortest path P<sub>G</sub>(r, s). For two vertices in a connected graph, there exists at least one shortest path between them. Let e = (u, v) be an edge in P<sub>G</sub>(r, s) with v closer to s than u (v may be s). Let G - e denote the subgraph obtained by removing edge e from G. A detour from u is the shortest path from u to s in G - e, or P<sub>G-e</sub>(u, s). Edge e is a detour -critical edge in P<sub>G</sub>(r, s) if the removal of e results in the maximum distance increment from u to s. In other words, if e is a detour -critical edge in P<sub>G</sub>(r, s), then d<sub>G-e</sub>(u, s) - d<sub>G</sub>(u, s) is maximum among all edges in P<sub>G</sub>(r, s). The longest detour problem is to find the maximum distance increment of a shortest path.
+<br>
+<br>
+<br><center><img src=images/1340_1.jpg>
+<br>Figure 4: A weighted graph G.</center>
+<br>
+<br>For example, see Figure 4. P<sub>G</sub>(4, 1) =< 4, 3, 2, 1 > is the shortest path from vertex 4 to vertex 1. Path < 4, 6, 1 > is the detour from vertex 4 to vertex 1 if edge (4, 3) is removed. Path < 3, 5, 1 > is the detour from vertex 3 to vertex 1 if edge (3, 2) is removed. Path < 2, 5, 1 > is the detour from vertex 2 to vertex 1 if edge (2, 1) is removed. The detour -critical edge in P<sub>G</sub>(4, 1) is not edge (4, 3) or edge (2, 1) but edge (3, 2) since d<sub>G-(3,2)</sub>(3, 1) - d<sub>G</sub>(3, 1) = 600 - 200 = 400 is greater than d<sub>G-(4,3)</sub>(4, 1) - d<sub>G</sub>(4, 1) = 500 - 300 = 200 and d<sub>G-(2,1)</sub>(2, 1) - d<sub>G</sub>(2, 1) = 200 - 100 = 100.
+<br>
+<br>The algorithm for finding detours, as well as determining the detour-critical edges, is important from the viewpoint of network management. Due to a sudden edge failure
+<br>
+<br>from some vertex, the message must be retransmitted through a detour from the vertex adjacent to the faulty edge.
+<br>
+<br>Suppose that we have several networks. Each network is connected and contains at most n vertices, where 3 <= n <= 100. Assume now that you are hired to serve as a
+<br>
+<br>network administrator and have to determine the maximum distance increment caused by a detour-critical edge of a given shortest path for each network.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several test cases. The first line contains an integer indicating the number of test cases. Each test case starts with a positive integer n, where 3 <= n <= 100. The following n lines represent the adjacency matrix of a network. An adjacency matrix of a network G with n vertices, denoted by A(G) = [w<sub>u,v</sub>], is an n * n matrix such that w<sub>u,v</sub> > 0 if (u, v) is an edge of G, and w<sub>u,v</sub>= 0 otherwise, where w<sub>u,v</sub> in a nonnegative integer. Note that any two elements in each line of an adjacency matrix are separated by a space. The last line of each test case represents the sequence of vertices in a given shortest path in which there is also a space between two vertices. Note that the first and the last vertices denote the source and the destination vertices, respectively. For example, the adjacency matrix of the graph in Figure 4 is shown in test case 3 of the sample input.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output the maximum distance increment caused by the detour-critical edge of the given shortest path in one line.</div><p class="pst">Sample Input</p><pre class="sio">3
+3
+0 10 20
+10 0 10
+20 10 0
+3 2 1
+4
+0 10 10 30
+10 0 30 0
+10 30 0 10
+30 0 10 0
+4 3 1 2
+6
+0 100 0 0 100 200
+100 0 100 0 100 400
+0 100 0 100 500 0
+0 0 100 0 500 300
+100 100 500 500 0 0
+200 400 0 300 0 0
+4 3 2 1</pre><p class="pst">Sample Output</p><pre class="sio">20
+30
+400</pre><p class="pst">

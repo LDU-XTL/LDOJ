@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US"><p>Given a regular polygon, there are numerous ways to divide it into several triangles and/or quadrangles by adding some diagonals that do not properly intersect each other. For example, Figure 4 shows all ten different divisions of a regular pentagon into triangles and quadrangles.</p><p align="center"><img src="images/3597_1.png"></p><p align="center">Figure 4: Divisions of a regular pentagon into triangles and quadrangles</p><p>Given <i>n</i>, the number of sides of the polygon, compute the number of such divisions.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input contains multiple test cases. Each test case consists of a single integer <i>n</i> (3 ≤ <i>n</i> ≤ 5000) on a separate line. The input ends where EOF is met.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, print the answer modulo 2<sup>64</sup> on a separate line.</p></div><p class="pst">Sample Input</p><pre class="sio">3
+4
+5
+6
+7
+8
+9
+10</pre><p class="pst">Sample Output</p><pre class="sio">1
+3
+10
+38
+154
+654
+2871
+12925</pre><p class="pst">

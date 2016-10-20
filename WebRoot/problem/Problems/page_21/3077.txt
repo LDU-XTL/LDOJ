@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">For a given number, if greater than ten, round it to the nearest ten, then (if that result is greater than 100) take the result and round it to the nearest hundred, then (if that result is greater than 1000) take that number and round it to the nearest thousand, and so on ... </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input to this problem will begin with a line containing a single integer n indicating the number of integers to round. The next n lines each contain a single integer x (0 <= x <= 99999999). </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each integer in the input, display the rounded integer on its own line. 
+<br>
+<br>Note: Round up on fives. </div><p class="pst">Sample Input</p><pre class="sio">9
+15
+14
+4
+5
+99
+12345678
+44444445
+1445
+446</pre><p class="pst">Sample Output</p><pre class="sio">20
+10
+4
+5
+100
+10000000
+50000000
+2000
+500
+
+</pre><p class="pst">

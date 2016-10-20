@@ -1,0 +1,7 @@
+</p><div class="ptx" lang="en-US"><div><p>Sort the first <i>n</i> integers 1,2,3,...,<i>n</i>-1,<i>n</i> in lexicographical order, and the <i>k</i>-th integer is known as <i>m</i>. Can you tell me the smallest <i>n</i>? </p><p>For example,when n=11, the order is 1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9. And the 4-th integer is 2. </p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>The input contains many test cases ended with EOF. Each test case contains only one line of two integers, <i>k</i> and <i>m</i>. </p><p>1 &le; <i>k</i>, <i>m</i> &le; 10^9 </p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div><p>For each test case output the smallest <i>n</i> in a single line. If there is no such <i>n</i>, just output 0. </p></div></div><p class="pst">Sample Input</p><pre class="sio">4 2
+2 1
+1000 25
+</pre><p class="pst">Sample Output</p><pre class="sio">11
+0
+1831
+</pre><p class="pst">

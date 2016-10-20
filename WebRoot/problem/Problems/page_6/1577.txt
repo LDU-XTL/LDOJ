@@ -1,0 +1,57 @@
+</p><div class="ptx" lang="en-US"><center><img src=images/1577_1.jpg>
+<br>Figure 1</center>
+<br>Figure 1 shows a graphical representation of a binary tree of letters. People familiar with binary trees can skip over the definitions of a binary tree of letters, leaves of a binary tree, and a binary search tree of letters, and go right to The problem.
+<br>
+<br>A binary tree of letters may be one of two things:
+<br><ol><li>It may be empty.
+<br><li>It may have a root node. A node has a letter as data and refers to a left and a right subtree. The left and right subtrees are also binary trees of letters.</ol>
+<br>In the graphical representation of a binary tree of letters:
+<br><ol><li>Empty trees are omitted completely.
+<br><li>Each node is indicated by
+<br><ul><li> Its letter data,
+<br><li> A line segment down to the left to the left subtree, if the left subtree is nonempty,
+<br><li> A line segment down to the right to the right subtree, if the right subtree is nonempty.</ul></ol>
+<br>A leaf in a binary tree is a node whose subtrees are both empty. In the example in Figure 1, this would be the five nodes with data B, D, H, P, and Y.
+<br>
+<br>The preorder traversal of a tree of letters satisfies the defining properties:
+<br><ol><li>If the tree is empty, then the preorder traversal is empty. 
+<br><li>If the tree is not empty, then the preorder traversal consists of the following, in order
+<br><ul><li> The data from the root node,
+<br><li> The preorder traversal of the root's left subtree,
+<br><li> The preorder traversal of the root's right subtree.</ul></ol>
+<br>The preorder traversal of the tree in Figure 1 is KGCBDHQMPY.
+<br>
+<br>A tree like the one in Figure 1 is also a binary search tree of letters. A binary search tree of letters is a binary tree of letters in which each node satisfies:
+<br>
+<br>The root's data comes later in the alphabet than all the data in the nodes in the left subtree.
+<br>
+<br>The root's data comes earlier in the alphabet than all the data in the nodes in the right subtree.
+<br>
+<br>The problem:
+<br>
+<br>Consider the following sequence of operations on a binary search tree of letters
+<br>
+<br>Remove the leaves and list the data removed
+<br>Repeat this procedure until the tree is empty
+<br>Starting from the tree below on the left, we produce the sequence of trees shown, and then the empty tree 
+<br><center><img src=images/1577_2.jpg></center>
+<br>by removing the leaves with data
+<br>
+<br>BDHPY
+<br>CM
+<br>GQ
+<br>K
+<br>
+<br>Your problem is to start with such a sequence of lines of leaves from a binary search tree of letters and output the preorder traversal of the tree.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will contain one or more data sets. Each data set is a sequence of one or more lines of capital letters.
+<br>
+<br>The lines contain the leaves removed from a binary search tree in the stages described above. The letters on a line will be listed in increasing alphabetical order. Data sets are separated by a line containing only an asterisk ('*').
+<br>
+<br>The last data set is followed by a line containing only a dollar sign ('$'). There are no blanks or empty lines in the input.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each input data set, there is a unique binary search tree that would produce the sequence of leaves. The output is a line containing only the preorder traversal of that tree, with no blanks.</div><p class="pst">Sample Input</p><pre class="sio">BDHPY
+CM
+GQ
+K
+*
+AC
+B
+$</pre><p class="pst">Sample Output</p><pre class="sio">KGCBDHQMPY
+BAC</pre><p class="pst">

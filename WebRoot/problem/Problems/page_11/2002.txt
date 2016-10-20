@@ -1,0 +1,28 @@
+</p><div class="ptx" lang="en-US">A square is a 4-sided polygon whose sides have equal length and adjacent sides form 90-degree angles. It is also a polygon such that rotating about its centre by 90 degrees gives the same polygon. It is not the only polygon with the latter property, however, as a regular octagon also has this property. 
+<br>
+<br>So we all know what a square looks like, but can we find all possible squares that can be formed from a set of stars in a night sky? To make the problem easier, we will assume that the night sky is a 2-dimensional plane, and each star is specified by its x and y coordinates. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of a number of test cases. Each test case starts with the integer n (1 <= n <= 1000) indicating the number of points to follow. Each of the next n lines specify the x and y coordinates (two integers) of each point. You may assume that the points are distinct and the magnitudes of the coordinates are less than 20000. The input is terminated when n = 0. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print on a line the number of squares one can form from the given stars. </div><p class="pst">Sample Input</p><pre class="sio">4
+1 0
+0 1
+1 1
+0 0
+9
+0 0
+1 0
+2 0
+0 2
+1 2
+2 2
+0 1
+1 1
+2 1
+4
+-2 5
+3 7
+0 0
+5 2
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+6
+1
+</pre><p class="pst">

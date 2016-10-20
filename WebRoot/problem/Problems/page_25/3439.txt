@@ -1,0 +1,32 @@
+</p><div class="ptx" lang="en-US">Michael has a powerful computer server that has hundreds of parallel processors and terabytes of main memory and disk space. Many important computations run continuously on this server, and power must be supplied to the server without interruption.
+<br>
+<br>Michael's server must be moved to accommodate new servers that have been purchased recently. Fortunately, Michael's server has two redundant power supplies---as long as at least one of the two power supplies is connected to an electrical outlet, the server can continue to run. When the server is connected to an electrical outlet, it can be moved to any location which is not further away from the outlet than the length of the cord used to connect to the outlet.
+<br>
+<br>Given which outlet Michael's server is plugged into initially and finally, and the locations of outlets in the server room, you should determine the smallest number of times you need to plug a cord into an electrical outlet in order to move the server while keeping the server running at all times. Note that, in the initial and final configuration, only one cord is connected to the power outlet.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input is an integer giving the number of cases to follow. For each case, the first line is of the form
+<br>
+<br>OUTLETS OUTLET_INITIAL OUTLET_FINAL LENGTH1 LENGTH2
+<br>
+<br>where
+<br>
+<br>    * OUTLETS is the number of outlets in the server room (2 <= OUTLETS <= 1000).
+<br>    * OUTLET_INITIAL is the index (starting from 1) of the outlet the server is initially connected to.
+<br>    * OUTLET_FINAL is the index (starting from 1) of the outlet the server is finally connected to.
+<br>    * LENGTH1 and LENGTH2 are the positive lengths of the two power cords, with at most three digits of precision after the decimal point (0 < LENGTH1, LENGTH2 <= 30000).
+<br>
+<br>These are followed by OUTLETS lines giving the integer coordinates of the wall outlets, one per line, with the k-th line giving the location of the k-th outlet. All coordinates are specified as two integers (x- and y-coordinates) separated by a space, with absolute values at most 30000. You may assume that all coordinates are distinct, and that the initial outlet and the final outlet are different.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case, print the minimum number of times you need to plug a cord into an electrical outlet in order to move the server to the final location while keeping the server running at all times. If this is not possible, print "Impossible".</div><p class="pst">Sample Input</p><pre class="sio">2
+4 1 4 2.000 1.000
+0 0
+0 4
+4 0
+4 4
+9 1 4 2.000 3.000
+0 7
+-6 2
+-3 3
+6 2
+-6 -3
+3 -3
+6 -3
+-3 -7
+0 -7</pre><p class="pst">Sample Output</p><pre class="sio">Impossible
+8</pre><p class="pst">

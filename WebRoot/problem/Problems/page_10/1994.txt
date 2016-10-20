@@ -1,0 +1,56 @@
+</p><div class="ptx" lang="en-US">There is also the logical game "Of Liars and Honest Men" in our KOKODáKH collection. Almost any number of players can participate in the same game and no special items are needed. The rules are simple: every player tosses a coin to decide if he is Liar or Honest. All the other players know what he is. After all of the roles are determined, the play begins. Honest men must tell the truth under any circumstances, liars must always lie. Whoever should violate this simple rule, he (or she) loses that game. You would not believe how interesting this game can be! Good players can assemble (@@) even very complicated statement and it is very difficult to determine its meaning. Excellent players can play this game for several days without making a mistake. Their children and wives search them all over the town without any success. 
+<br>
+<br>The players consider for the best situation, when some other person enters the room and listens to them. Of course the players won't stop! They want to impress the new person and the statements become even more complicated. The witness (@@@) has the only possibility. He must to listen very carefully and determine who is who. The best for him is to prove someone's mistake because it should ended the game. Unfortunately, this is not easy. You are to write a computer program that will be able to listen the conversation and tries to determine who is liar. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of Z assignments. The number of them is given by the single positive integer Z appearing on the first line of input. 
+<br>
+<br>Each assignment begins with one empty line that separates it from the previous text. Then there is the single number P (1 <= P <= 10) stating the number of players. Then exactly P lines follow, each containg name of one player. The name consists of letters only, the first one is capital, all the others are lowercase. In the remaining input, the names are always given in the exactly same form as the first time. Every name has at least one and at most ten characters. No name can be "Lharu" or "Poctivcu". 
+<br>
+<br>Then there is a single number M (0 <= M <= 500) on the separate line. This is the number of formulas to follow. Then there are exactly M lines, each of them has the exact format: name of the player, colon, one space, the formula and period. No line can be longer than 1000 characters. The formula has one of the forms (X,Y,Z are non-negative integers; H,F are player names; V,W are formulas). Note that the formula of type 4 ends with a period, any other formula does not. 
+<br><pre>1. X + Y = Z 
+<br>2. H je poctivec    (H is Honest) 
+<br>3. H je lhar    (H is Liar) 
+<br>4. H rika "V".    (H says V) 
+<br>5. H rika "V" a je to opravdu tak    (H says V and it's really true) 
+<br>6. H rika "V", ale neni to pravda    (H says V but is lying) 
+<br>7. Poctivcu je mene nez X    (There are less than X Honests) 
+<br>8. Poctivcu je vice nez X    (There are more than X Honests) 
+<br>9. Poctivcu je alespon X    (There are ate least X Honests) 
+<br>10.Lharu je mene nez X    (There are less than X Liars) 
+<br>11.Lharu je vice nez X    (There are more than X Liars) 
+<br>12.Lharu je alespon X    (There are ate least X Liars) 
+<br>13.(V) a zaroven (W)    ((V) and (W)) 
+<br>14.(V) nebo (W)    ((V) or (W)) </pre>
+<br>The formula of type 4 is true if and only if the player H could say the formula V without breaking the rules (that means if V is not true and H is liar, or if V is true and H is honest). Formulas 5 a 6 consist of two independent formulas ("H says V" and "V is [not] true"). If the author of the formula is liar, both of these parts must be false. If he is honest, both parts must hold. The formula consisting of one true part and one false part is called non-satisfiable (@@@) and noone can say it without breaking the rules. The formulas 7 through 12 mean the total number of liars (or honests) so the author of the formula also counts. Formula 13 is true if the both parts are true, and false, if any of them is not true. The formula 14 is true if any of its parts is true. If any of the parts of the formula of type 13 or 14 is non-satisfiable, it is counted as if it was false. Even two non-satisfiable formulas connected with the and or or give false result (not non-satisfiable result). That means that liar can say such formula. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Print the line "Hra cislo X:" (The game number X) for each assignment. Replace X with the number of the assignment, starting with one. 
+<br>
+<br>As the first step, assume that no player violated the rules, that means liars say false formulas and honests say the truth. If there exists such arrangement of players that all the formulas could be said, the set of formulas is called satisfiable. If the input contains a satisfiable set, the program has to print all the roles that can be certainly determined. Every such role must be reported on the separate line of the form: "H je lhar." (H is liar) or "H je poctivec." (H is honest). If there are more roles to be reported, they should be printed in the same order as the player names on the beginning of input file. If it is not possible to determine any player's role, the program should print the line "Neda se nic zjistit." (Nothing could be deducted). 
+<br>
+<br>If the set of formulas is not satisfiable, it is obvious that someone has violated the rules and has lost the game. So we should try to determine who was that. Assume that only one player did the mistake. If the player F has violated the rules, we must not take all of his formulas into consideration. It means only the "main" formulas said by that player. All the "included" formulas of type "F says V" are still valid because their semantics are "F could say V following all the rules". 
+<br>
+<br>If there is exactly one player after removing whose "main" formulas we get the satisfiable set, the program should print the line "F prohral." (F has lost). If there are more such players, the output should be: "Prohral nektery z techto hracu: F1, F2, F3." (Some of the following players has lost: F1, F2, F3). 
+<br>
+<br>If there is no such player whose formulas we could remove to get the satisfiable set, the program is to print the line: "Pravidla porusilo vice hracu." (The rules were violated by more players). 
+<br>
+<br>Print one empty line after each assignment including the last one. Empty line contains one the special character newline. 
+<br>
+<br></div><p class="pst">Sample Input</p><pre class="sio">2
+
+3
+Petr
+Josef
+Marie
+1
+Petr: Petr je lhar.
+
+3
+Petr
+Josef
+Marie
+1
+Josef: Marie rika "Marie je lhar" a je to opravdu tak.
+</pre><p class="pst">Sample Output</p><pre class="sio">Hra cislo 1:
+Petr prohral.
+
+Hra cislo 2:
+Josef je lhar.
+Marie je poctivec.
+</pre><p class="pst">

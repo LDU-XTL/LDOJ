@@ -1,0 +1,26 @@
+</p><div class="ptx" lang="en-US">Christine and Matt are playing an exciting game they just invented: the Number Game. The rules of this game are as follows.
+<br>The players take turns choosing integers greater than 1. First, Christine chooses a number, then Matt chooses a number, then Christine again, and so on. The following rules restrict how new numbers may be chosen by the two players:
+<br><ul>
+<br><li> A number which has already been selected by Christine or Matt, or a multiple of such a number,cannot be chosen.
+<br><li> A sum of such multiples cannot be chosen, either.</ul>
+<br>If a player cannot choose any new number according to these rules, then that player loses the game.
+<br>Here is an example: Christine starts by choosing 4. This prevents Matt from choosing 4, 8, 12, etc.Let's assume that his move is 3. Now the numbers 3, 6, 9, etc. are excluded, too; furthermore, numbers like: 7 = 3+4;10 = 2*3+4;11 = 3+2*4;13 = 3*3+4;... are also not available. So, in fact, the only numbers left are 2 and 5. Christine now selects 2. Since 5=2+3 is now forbidden, she wins because there is no number left for Matt to choose.
+<br>Your task is to write a program which will help play (and win!) the Number Game. Of course, there might be an infinite number of choices for a player, so it may not be easy to find the best move among these possibilities. But after playing for some time, the number of remaining choices becomes finite, and that is the point where your program can help. Given a game position (a list of numbers which are not yet forbidden), your program should output all winning moves.
+<br>A winning move is a move by which the player who is about to move can force a win, no matter what the other player will do afterwards. More formally, a winning move can be defined as follows.
+<br><ul>
+<br><li> A winning move is a move after which the game position is a losing position.
+<br><li> A winning position is a position in which a winning move exists. A losing position is a position in which no winning move exists.
+<br><li> In particular, the position in which all numbers are forbidden is a losing position. (This makes sense since the player who would have to move in that case loses the game.)</ul></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several test cases. Each test case is given by exactly one line describing one position.
+<br>Each line will start with a number n (1 <= n <= 20), the number of integers which are still available. The remainder of this line contains the list of these numbers a1;...;an(2 <= ai <= 20).
+<br>The positions described in this way will always be positions which can really occur in the actual Number Game. For example, if 3 is not in the list of allowed numbers, 6 is not in the list, either.
+<br>At the end of the input, there will be a line containing only a zero (instead of n); this line should not be processed.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, your program should output "Test case #m", where m is the number of the test case (starting with 1). Follow this by either "There's no winning move." if this is true for the position described in the input file, or "The winning moves are: w1 w2 ... wk" where the wi are all winning moves in this position, satisfying wi < wi+1 for 1 <= i < k. After this line, output a blank line.</div><p class="pst">Sample Input</p><pre class="sio">2 2 5
+2 2 3
+5 2 3 4 5 6
+0</pre><p class="pst">Sample Output</p><pre class="sio">Test Case #1
+The winning moves are: 2
+
+Test Case #2
+There's no winning move.
+
+Test Case #3
+The winning moves are: 4 5 6</pre><p class="pst">

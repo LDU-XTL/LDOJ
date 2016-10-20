@@ -1,0 +1,7 @@
+</p><div class="ptx" lang="en-US">Eva has a balance with 20 poises. The weights of the poises are 1, 3, 9, 27,...,3^19. Eva asserts that she has a way to measure any object whose weight is an integer from 1 to (3^20-1)/2. Assuming that Eva has placed an object with the weight in this range on the left tray of the balance, your task is to place the proper poises on the proper trays so as to weigh the object out.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line is an integer T (1 <= T <= 20), which shows the number of the test cases. Each of the following T lines contains an integer W (1 <= W <= (3^20-1)/2), expressing the weight of an object.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case print a line, showing the weights of the poises on the left tray and the right tray. Use a space to separate the left tray and the right tray. The poises on the same tray are arranged in the increasing order, and a comma separates every two of them. If there is no poise on the tray, output "empty".</div><p class="pst">Sample Input</p><pre class="sio">3
+9
+5
+20
+</pre><p class="pst">Sample Output</p><pre class="sio">empty 9
+1,3 9
+1,9 3,27</pre><p class="pst">

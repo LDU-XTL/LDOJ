@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">Given a two-dimensional array of positive and negative integers, a sub-rectangle is any contiguous sub-array of size 1*1 or greater located within the whole array. The sum of a rectangle is the sum of all the elements in that rectangle. In this problem the sub-rectangle with the largest sum is referred to as the maximal sub-rectangle.
+<br>As an example, the maximal sub-rectangle of the array:
+<br>
+<br> 0 -2 -7  0
+<br> 9  2 -6  2
+<br>-4  1 -4  1
+<br>-1  8  0 -2
+<br>is in the lower left corner:
+<br>
+<br> 9  2
+<br>-4  1
+<br>-1  8
+<br>and has a sum of 15.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of an N * N array of integers. The input begins with a single positive integer N on a line by itself, indicating the size of the square two-dimensional array. This is followed by N^2 integers separated by whitespace (spaces and newlines). These are the N^2 integers of the array, presented in row-major order. That is, all numbers in the first row, left to right, then all numbers in the second row, left to right, etc. N may be as large as 100. The numbers in the array will be in the range [-127,127].</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output the sum of the maximal sub-rectangle.</div><p class="pst">Sample Input</p><pre class="sio">4
+0 -2 -7 0 9 2 -6 2
+-4 1 -4  1 -1
+
+8  0 -2</pre><p class="pst">Sample Output</p><pre class="sio">15</pre><p class="pst">

@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">It is a little known fact that cows love apples.  Farmer John has two apple trees (which are conveniently numbered 1 and 2) in his field, each full of apples.  Bessie cannot reach the apples when they are on the tree, so she must wait for them to fall.  However, she must catch them in the air since the apples bruise when they hit the ground (and no one wants to eat bruised apples).  Bessie is a quick eater, so an apple she does catch is eaten in just a few seconds.
+<br>
+<br>Each minute, one of the two apple trees drops an apple. Bessie, having much practice, can catch an apple if she is standing under a tree from which one falls. While Bessie can walk between the two trees quickly (in much less than a minute), she can stand under only one tree at any time. Moreover, cows do not get a lot of exercise, so she is not willing to walk back and forth between the trees endlessly (and thus misses some apples).
+<br>
+<br>Apples fall (one each minute) for T (1 <= T <= 1,000) minutes. Bessie is willing to walk back and forth at most W (1 <= W <= 30) times. Given which tree will drop an apple each minute, determine the maximum number of apples which Bessie can catch.  Bessie starts at tree 1.</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: Two space separated integers: T and W
+<br>
+<br>* Lines 2..T+1: 1 or 2: the tree that will drop an apple each minute.</div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: The maximum number of apples Bessie can catch without walking more than W times.</div><p class="pst">Sample Input</p><pre class="sio">7 2
+2
+1
+1
+2
+2
+1
+1</pre><p class="pst">Sample Output</p><pre class="sio">6</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">INPUT DETAILS:
+<br>
+<br>Seven apples fall - one from tree 2, then two in a row from tree 1, then two in a row from tree 2, then two in a row from tree 1. Bessie is  willing to walk from one tree to the other twice.
+<br>
+<br>OUTPUT DETAILS:
+<br>
+<br>Bessie can catch six apples by staying under tree 1 until the first two have dropped, then moving to tree 2 for the next two, then returning back to tree 1 for the final two.</div><p class="pst">

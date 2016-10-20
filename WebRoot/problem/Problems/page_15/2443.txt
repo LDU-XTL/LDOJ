@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">You are given N sets, the i-th set (represent by S(i)) have C(i) element (Here "set" isn't entirely the same as the "set" defined in mathematics, and a set may contain two same element). Every element in a set is represented by a positive number from 1 to 10000. Now there are some queries need to answer. A query is to determine whether two given elements i and j belong to at least one set at the same time. In another word, you should determine if there exist a number k (1 <= k <= N) such that element i belongs to S(k) and element j also belong to S(k). </div><p class="pst">Input</p><div class="ptx" lang="en-US">First line of input contains an integer N (1 <= N <= 1000), which represents the amount of sets. Then follow N lines. Each starts with a number C(i) (1 <= C(i) <= 10000), and then C(i) numbers, which are separated with a space, follow to give the element in the set (these C(i) numbers needn't be different from each other). The N + 2 line contains a number Q (1 <= Q <= 200000), representing the number of queries. Then follow Q lines. Each contains a pair of number i and j (1 <= i, j <= 10000, and i may equal to j), which describe the elements need to be answer.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each query, in a single line, if there exist such a number k, print "Yes"; otherwise print "No".</div><p class="pst">Sample Input</p><pre class="sio">3
+3 1 2 3
+3 1 2 5
+1 10
+4
+1 3
+1 5
+3 5
+1 10
+</pre><p class="pst">Sample Output</p><pre class="sio">Yes
+Yes
+No
+No
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">The input may be large, and the I/O functions (cin/cout) of C++ language may be a little too slow for this problem.</div><p class="pst">

@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US"><img src=images/2534_1.jpg align=right>It is hard to make the playing card stand on its edge, however, some patient person managed to put N of them upon the desk in such a way that each cards stands on its shorter edge. The top-down view of that desk with cards upon it can be represented with the set of line segments with coordinates (xi, yi) to (vi, wi). The segments do not intersect.
+<br>
+<br>The first card falls flat on its side, causing all the cards in touch to fall down also. The angle between vector (x1, y1)-(v1, w1) and the falling direction of the first card is equal to 90 degrees (measured counter-clockwise). If card A touches card B, the direction of B's fall is chosen so that the continuation of the direction vector does not cross the line containing segment A. Input data are guaranteed to never contain:
+<br><ul><li>a card falling exactly perpendicular to the other and 
+<br><li>a falling card that touches more than one of still standing cards. </ul>
+<br>Your program must determine which cards will fall, and which shall remain standing. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input file contains a numbers N H - the number of cards and the floating point height of a card. Each of the following N lines contains four floating-point numbers xi yi vi wi - coordinates of cards separated by spaces. 1 <= N <= 100, H > 0 </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output file must contain the list of fallen cards' numbers, sorted in increasing order and separated by spaces. </div><p class="pst">Sample Input</p><pre class="sio">3 100
+10 10 50 40
+10 0 50 30
+20 90 20 20
+</pre><p class="pst">Sample Output</p><pre class="sio">1 3
+</pre><p class="pst">

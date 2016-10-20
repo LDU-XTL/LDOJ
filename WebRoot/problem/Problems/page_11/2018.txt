@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">Farmer John's farm consists of a long row of N (1 <= N <= 100,000)fields.  Each field contains a certain number of cows, 1 <= ncows <= 2000.
+<br>
+<br>FJ wants to build a fence around a contiguous group of these fields in order to maximize the average number of cows per field within that block. The block must contain at least F (1 <= F <= N) fields, where F given as input.
+<br>
+<br>Calculate the fence placement that maximizes the average, given the constraint.  
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: Two space-separated integers, N and F.
+<br>
+<br>* Lines 2..N+1: Each line contains a single integer, the number of cows in a field. Line 2 gives the number of cows in field 1,line 3 gives the number in field 2, and so on.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: A single integer that is 1000 times the maximal average.Do not perform rounding, just print the integer that is 1000*ncows/nfields.
+<br></div><p class="pst">Sample Input</p><pre class="sio">10 6
+6 
+4
+2
+10
+3
+8
+5
+9
+4
+1
+</pre><p class="pst">Sample Output</p><pre class="sio">6500
+</pre><p class="pst">

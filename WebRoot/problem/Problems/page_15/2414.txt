@@ -1,0 +1,47 @@
+</p><div class="ptx" lang="en-US">Among other things, Computational Molecular Biology deals with processing genetic sequences. Considering the evolutionary relationship of two sequences, we can say that they are closely related if they do not differ very much. We might represent the relationship by a tree, putting sequences from ancestors above sequences from their descendants. Such trees are called phylogenetic trees. 
+<br>Whereas one task of phylogenetics is to infer a tree from given sequences, we'll simplify things a bit and provide a tree structure - this will be a complete binary tree. You'll be given the n leaves of the tree. Sure you know, n is always a power of 2. Each leaf is a sequence of amino acids (designated by the one-character-codes you can see in the figure). All sequences will be of equal length l. Your task is to derive the sequence of a common ancestor with minimal costs.
+<br><CENTER><TABLE><TBODY><TR><TD><TABLE border=1><TBODY><TR><TD>Amino Acid</TD><TD></TD><TD></TD></TR><TR><TD>Alanine</TD><TD>Ala</TD><TD>A</TD></TR><TR><TD>Arginine</TD><TD>Arg</TD><TD>R</TD></TR><TR><TD>Asparagine</TD><TD>Asn</TD><TD>N</TD></TR><TR><TD>Aspartic Acid</TD><TD>Asp</TD><TD>D</TD></TR><TR><TD>Cysteine</TD><TD>Cys</TD><TD>C</TD></TR><TR><TD>Glutamine</TD><TD>Gln</TD><TD>Q</TD></TR><TR><TD>Glutamic Acid</TD><TD>Glu</TD><TD>E</TD></TR><TR><TD>Glycine</TD><TD>Gly</TD><TD>G</TD></TR><TR><TD>Histidine</TD><TD>His</TD><TD>H</TD></TR><TR><TD>Isoleucine</TD><TD>Ile</TD><TD>I</TD></TR></TBODY></TABLE></TD><TD width="30%"></TD><TD><TABLE border=1><TBODY><TR><TD>Amino Acid</TD><TD></TD><TD></TD></TR><TR><TD>Leucine</TD><TD>Leu</TD><TD>L</TD></TR><TR><TD>Lysine</TD><TD>Lys</TD><TD>K</TD></TR><TR><TD>Methionine</TD><TD>Met</TD><TD>M</TD></TR><TR><TD>Phenylalanine</TD><TD>Phe</TD><TD>F</TD></TR><TR><TD>Proline</TD><TD>Pro</TD><TD>P</TD></TR><TR><TD>Serine</TD><TD>Ser</TD><TD>S</TD></TR><TR><TD>Threonine</TD><TD>Thr</TD><TD>T</TD></TR><TR><TD>Tryptophan</TD><TD>Trp</TD><TD>W</TD></TR><TR><TD>Tyrosine</TD><TD>Tyr</TD><TD>Y</TD></TR><TR><TD>Valine</TD><TD>Val</TD><TD>V</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></CENTER>
+<br>The costs are determined as follows: every inner node of the tree is marked with a sequence of length l, the cost of an edge of the tree is the number of positions at which the two sequences at the ends of the edge differ, the total cost is the sum of the costs at all edges. The sequence of a common ancestor of all sequences is then found at the root of the tree. An optimal common ancestor is a common ancestor with minimal total costs. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input file contains several test cases. Each test case starts with two integers n and l, denoting the number of sequences at the leaves and their length, respectively. Input is terminated by n=l=0. Otherwise, 1<=n<=1024 and 1<=l<=1000. Then follow n words of length l over the amino acid alphabet. They represent the leaves of a complete binary tree, from left to right.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output a line containing some optimal common ancestor and the minimal total costs.</div><p class="pst">Sample Input</p><pre class="sio">4 3
+AAG
+AAA
+GGA
+AGA
+
+4 3
+AAG
+AGA
+AAA
+GGA
+
+4 3
+AAG
+GGA
+AAA
+AGA
+
+4 1
+A
+R
+A
+R
+
+2 1
+W
+W
+
+2 1
+W
+Y
+
+1 1
+Q
+
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">AGA 3
+AGA 4
+AGA 4
+R 2
+W 0
+Y 1
+Q 0
+</pre><p class="pst">

@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">CPN (The Couch Potato Network) owns several cable channels. They would like to arrange the timing of programmes so viewers can switch channels without missing the end of one programme or the beginning of another. To do this they have identified certain times, called "alignment points," where ideally one programme should end and another should begin. Some of these alignment points are more important than others. For example, the time when the nightly news begins is an important alignment point. Since many viewers watch the news, they would be less likely to watch a CPN programme whose ending time causes them to miss the beginning of the news, or which starts before the news finishes. Your task is to write a solution which determines the best order in which programmes can be shown on one channel. 
+<br>A "miss" time is the absolute value of the difference between the time of an alignment point and the nearest time of the beginning or end of a programme. The "total miss time" at a particular level of importance is the sum of all the miss times for alignment points at that level of importance. One programme order is better than another if it has a lower total miss time at some level of importance and the same total miss time at all higher levels of importance (if any). 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Your solution must accept multiple input data sets. Each set will begin with an integer, p (0<= p <=8), specifying the number of programmes to be ordered. When a data set beginning with 0 is encountered, your solution should terminate. Following p on the same line will be p integers specifying the lengths of the programmes in minutes. There is no significance to the order in which these are given. 
+<br>The next line of input specifies the alignment points. The total number of such points, a (0<= a <=8), appears first followed by a pairs of integers. The first integer in each pair, i (1<= i <=5), gives the importance of the alignment point. Alignment points marked 1 are most important; those marked 2 are of secondary importance, etc. The second integer in each pair, t, specifies the time when the alignment point occurs. No two alignment points in the same data set will have the same value of t. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Your solution must output three lines for each data set. The first line identifies the data set being processed and should be in the form: 
+<br>Data set n 
+<br>where n is the number of the data set (1 for the first data set, 2 for the second, etc.). On the following line, your solution should output the lengths of the programmes in the order in which they should be shown to achieve the best synchronization with the alignment points. On the third line, output the total number of minutes by which the alignment points were missed (the sum of all total miss times). There may be more than one best programme order for an input data set. Any one of these best orders is acceptable. </div><p class="pst">Sample Input</p><pre class="sio">4  30 45 45 15
+3  1 60  2 90  3 15
+6  10 15 13 18 25 33
+4  1 30  2 15  2 45  1 60
+0</pre><p class="pst">Sample Output</p><pre class="sio">Data set 1
+Order: 15 45 30 45 
+Error: 0
+Data set 2
+Order: 15 13 33 25 18 10
+Error: 19
+</pre><p class="pst">

@@ -1,0 +1,26 @@
+</p><div class="ptx" lang="en-US">Let's design a new chess game. There are N positions to hold M chesses in this game. Multiple chesses can be located in the same position. The positions are constituted as a topological graph, i.e. there are directed edges connecting some positions, and no cycle exists. Two players you and I move chesses alternately. In each turn the player should move only one chess from the current position to one of its out-positions along an edge. The game does not end, until one of the players cannot move chess any more. If you cannot move any chess in your turn, you lose. Otherwise, if the misfortune falls on me... I will disturb the chesses and play it again.
+<br>
+<br>Do you want to challenge me? Just write your program to show your qualification!</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains multiple test cases. Each test case starts with a number N (1 <= N <= 1000) in one line. Then the following N lines describe the out-positions of each position. Each line starts with an integer Xi that is the number of out-positions for the position i. Then Xi integers following specify the out-positions. Positions are indexed from 0 to N-1. Then multiple queries follow. Each query occupies only one line. The line starts with a number M (1 <= M <= 10), and then come M integers, which are the initial positions of chesses. A line with number 0 ends the test case. </div><p class="pst">Output</p><div class="ptx" lang="en-US">There is one line for each query, which contains a string "WIN" or "LOSE". "WIN" means that the player taking the first turn can win the game according to a clever strategy; otherwise "LOSE" should be printed.</div><p class="pst">Sample Input</p><pre class="sio">4
+2 1 2
+0
+1 3
+0
+1 0
+2 0 2
+0
+
+4
+1 1
+1 2
+0
+0
+2 0 1
+2 1 1
+3 0 1 3
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">WIN
+WIN
+WIN
+LOSE
+WIN
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Huge input,scanf is recommended.</div><p class="pst">

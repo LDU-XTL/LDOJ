@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US"><p>The Utrecht Youth Hostel has a giant dorm which usually accommodates all customers easily. With <span style="font-variant: small-caps;">nwerc</span> in town, however, lots of people would like to stay there and all the space available in the dorm should be used as efficiently as possible. You are assigned to provide the dorm layout.</p><p>The size of the dorm is given and the layout should consist of a map of that particular size. The map should display one &lsquo;<tt>E</tt>&rsquo;, the point of entrance of the dorm, and furthermore &lsquo;<tt>B</tt>&rsquo;s and &lsquo;<tt>.</tt>&rsquo;s, indicating beds and empty spaces. The entrance should be located somewhere on the boundary of the dorm and every single bed should be reachable by starting at the entrance and walking through empty squares only. You can only walk in vertical and horizontal directions.</p><p>The provided layout should contain as many beds as possible.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>On the first line one positive number: the number of testcases, at most 100. After that per testcase:</p><ul><li>One line with two integers <i>l</i> and <i>w</i> with 1 &le; <i>l</i>, <i>w</i> &le; 8: the size of the dorm.</li></ul></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Per testcase:</p><ul><li><i>l</i> lines with <i>w</i> characters: the dorm layout. Any layout with the maximum number of beds is correct.</li></ul></div><p class="pst">Sample Input</p><pre class="sio">3
+1 1
+4 7
+3 8</pre><p class="pst">Sample Output</p><pre class="sio">E
+B.B.BEB
+B.BBB.B
+B.....B
+B.BBB.B
+BBBBBBBB
+.......E
+BBBBBBBB</pre><p class="pst">

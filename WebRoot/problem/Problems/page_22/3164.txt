@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>After a long lasting war on words, a war on arms finally breaks out between littleken&rsquo;s and KnuthOcean&rsquo;s kingdoms. A sudden and violent assault by KnuthOcean&rsquo;s force has rendered a total failure of littleken&rsquo;s command network. A provisional network must be built immediately. littleken orders snoopy to take charge of the project.</p><p>With the situation studied to every detail, snoopy believes that the most urgent point is to enable littenken&rsquo;s commands to reach every disconnected node in the destroyed network and decides on a plan to build a unidirectional communication network. The nodes are distributed on a plane. If littleken&rsquo;s commands are to be able to be delivered directly from a node A to another node B, a wire will have to be built along the straight line segment connecting the two nodes. Since it&rsquo;s in wartime, not between all pairs of nodes can wires be built. snoopy wants the plan to require the shortest total length of wires so that the construction can be done very soon.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input contains several test cases. Each test case starts with a line containing two integer <i>N</i> (<i>N</i> &le; 100), the number of nodes in the destroyed network, and <i>M</i> (<i>M</i> &le; 10<sup>4</sup>), the number of pairs of nodes between which a wire can be built. The next <i>N</i> lines each contain an ordered pair <i>x<sub>i</sub></i> and <i>y<sub>i</sub></i>, giving the Cartesian coordinates of the nodes. Then follow <i>M</i> lines each containing two integers <i>i</i> and <i>j</i> between 1 and <i>N</i> (inclusive) meaning a wire can be built between node <i>i</i> and node <i>j</i> for unidirectional command delivery from the former to the latter. littleken&rsquo;s headquarter is always located at node 1. Process to end of file.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>For each test case, output exactly one line containing the shortest total length of wires to two digits past the decimal point. In the cases that such a network does not exist, just output &lsquo;<code>poor snoopy</code>&rsquo;.</p></span></div><p class="pst">Sample Input</p><pre class="sio">4 6
+0 6
+4 6
+0 0
+7 20
+1 2
+1 3
+2 3
+3 4
+3 1
+3 2
+4 3
+0 0
+1 0
+0 1
+1 2
+1 3
+4 1
+2 3</pre><p class="pst">Sample Output</p><pre class="sio">31.19
+poor snoopy</pre><p class="pst">

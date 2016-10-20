@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Given <i>n</i> distinct integer numbers <i>A</i> = { <i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, &hellip;, <i>A<sub>n</sub></i> } and an integer <i>m</i>, then choose <i>m</i> distinct elements <i>B</i> = { <i>B</i><sub>1</sub>, <i>B</i><sub>2</sub>, &hellip;, <i>B<sub>m</sub></i> } randomly from <i>A</i>. You are to calculate the expected difference between the largest and smallest number of <i>B</i>.</p><p>For example, consider the case where <i>n</i> = 4, <i>m</i> = 2, and <i>A</i> = { 1, 2, 3, 4 }. It has <sup>1</sup>&frasl;<sub>2</sub> probability to obtain a difference of 1, <sup>1</sup>&frasl;<sub>3</sub> probability of 2 and <sup>1</sup>&frasl;<sub>6</sub> probability of 3. So the answer is <sup>1</sup>&frasl;<sub>2</sub> &times; 1 + <sup>1</sup>&frasl;<sub>3</sub> &times; 2 + <sup>1</sup>&frasl;<sub>6</sub> &times; 3, which is equal to <sup>5</sup>&frasl;<sub>3</sub> &asymp; 1.667.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input contains multiple test cases.</p><p>Each test case contains consists of two lines. The first line gives the integers <i>n</i> (2 &le; <i>n</i> &le; 50 000) and <i>m</i> (2 &le; <i>m</i> &le; <i>n</i>). The second line gives <i>n</i> distinct integers <i>A</i><sub>1</sub>, <i>A</i><sub>2</sub>, &hellip;, <i>A<sub>n</sub></i>. (0 &le; <i>A<sub>i</sub></i> &le; 65 536), which will be sorted in increasing order.</p><p>A pair of zeroes indicates the end of the input and should not be processed.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output the answer of each test case on a separate line with the fraction rounded to 3 decimal places.</p></div><p class="pst">Sample Input</p><pre class="sio">2 2
+1 2
+3 2
+1 2 3
+4 2
+1 2 3 4
+4 3
+2 3 8 9
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">1.000
+1.333
+1.667
+6.500</pre><p class="pst">

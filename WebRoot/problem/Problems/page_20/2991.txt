@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">ACM has bought a new crane (crane -- jeřáb) . The crane consists of n segments of various lengths, connected by flexible joints. The end of the i-th segment is joined to the beginning of the i + 1-th one, for 1 &le; i < n. The beginning of the first segment is fixed at point with coordinates (0, 0) and its end at point with coordinates (0, w), where w is the length of the first segment. All of the segments lie always in one plane, and the joints allow arbitrary rotation in that plane. After series of unpleasant accidents, it was decided that software that controls the crane must contain a piece of code that constantly checks the position of the end of crane, and stops the crane if a collision should happen. 
+<br>
+<br>Your task is to write a part of this software that determines the position of the end of the n-th segment after each command. The state of the crane is determined by the angles between consecutive segments. Initially, all of the angles are straight, i.e., 180<sup>o</sup>. The operator issues commands that change the angle in exactly one joint. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several instances, separated by single empty lines. 
+<br>
+<br>The first line of each instance consists of two integers 1 &le; n &le;10 000 and c  0 separated by a single space -- the number of segments of the crane and the number of commands. The second line consists of n integers l1,..., ln (1  li  100) separated by single spaces. The length of the i-th segment of the crane is li. The following c lines specify the commands of the operator. Each line describing the command consists of two integers s and a (1 &le; s < n, 0 &le; a &le; 359) separated by a single space -- the order to change the angle between the s-th and the s + 1-th segment to a degrees (the angle is measured counterclockwise from the s-th to the s + 1-th segment). </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output for each instance consists of c lines. The i-th of the lines consists of two rational numbers x and y separated by a single space -- the coordinates of the end of the n-th segment after the i-th command, rounded to two digits after the decimal point. 
+<br>
+<br>The outputs for each two consecutive instances must be separated by a single empty line. </div><p class="pst">Sample Input</p><pre class="sio">2 1
+10 5
+1 90
+
+3 2
+5 5 5
+1 270
+2 90</pre><p class="pst">Sample Output</p><pre class="sio">5.00 10.00
+
+-10.00 5.00
+-5.00 10.00</pre><p class="pst">

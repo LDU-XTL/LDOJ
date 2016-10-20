@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US">The pseudo-random number genegators (or RNGs for short) are widely used in statistical calculations. One of the simplest and ubiquitious is the linear congruence RNG, that calculates the n-th random number Rn as Rn = (aR<sub>n - 1</sub> + c) mod m, where a, c and m are constants. For example, the sequence for a = 15, c = 7, m = 100 and starting value R0 = 1 is 1, 22, 37, 62, 37, 62, ... 
+<br>
+<br>Linear RNG is very fast, and can yield surprisinly good sequence of random numbers, given the right choice of constants. There are various measures of RNG quality, and your task is to calculate one of them, namely the longest gap between members of the sequence. More precisely, given the values of a, c, m, and R0, find such two elements Ri < Rj that: 
+<br><ol><li>there are no other Rk that Ri ≤ Rk ≤ Rj, 
+<br><li>the difference Rj − Ri is maximal. </ol></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains integer numbers a c m R0.
+<br>0 ≤ a, c, R0 ≤ 10<sup>7</sup>, 1 ≤ m ≤ 16000000, am + c < 2<sup>32</sup>.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output should contain the single number -- the maximal difference found. </div><p class="pst">Sample Input</p><pre class="sio">15 7 100 1
+</pre><p class="pst">Sample Output</p><pre class="sio">25
+</pre><p class="pst">

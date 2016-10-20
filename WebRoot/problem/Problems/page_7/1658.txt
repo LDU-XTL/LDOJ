@@ -1,0 +1,4 @@
+</p><div class="ptx" lang="en-US">Eva的家庭作业里有很多数列填空练习。填空练习的要求是：已知数列的前四项，填出第五项。因为已经知道这些数列只可能是等差或等比数列，她决定写一个程序来完成这些练习。</div><p class="pst">Input</p><div class="ptx" lang="en-US">第一行是数列的数目t（0 <= t <= 20）。以下每行均包含四个整数，表示数列的前四项。约定数列的前五项均为不大于10^5的自然数，等比数列的比值也是自然数。</div><p class="pst">Output</p><div class="ptx" lang="en-US">对输入的每个数列，输出它的前五项。</div><p class="pst">Sample Input</p><pre class="sio">2
+1 2 3 4
+1 2 4 8</pre><p class="pst">Sample Output</p><pre class="sio">1 2 3 4 5
+1 2 4 8 16</pre><p class="pst">

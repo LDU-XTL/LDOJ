@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US">Inexperienced in the digital arts, the cows tried to build a calculating engine (yes, it's a cowmpouter) using binary numbers (base 2) but instead built one based on base negative 2!  They were quite pleased since numbers expressed in base &minus;2 do not have a sign bit.
+<br>
+<br>You know number bases have place values that start at 1 (base to the 0 power) and proceed right-to-left to base^1, base^2, and so on. In base &minus;2, the place values are 1, &minus;2, 4, &minus;8, 16, &minus;32, ... (reading from right to left). Thus, counting from 1 goes like this: 1, 110, 111, 100, 101, 11010, 11011, 11000, 11001, and so on.
+<br>
+<br>Eerily, negative numbers are also represented with 1's and 0's but no sign. Consider counting from &minus;1 downward: 11, 10, 1101, 1100, 1111, and so on.
+<br> 
+<br>Please help the cows convert ordinary decimal integers (range -2,000,000,000..2,000,000,000) to their counterpart representation in base &minus;2.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Line 1: A single integer to be converted to base &minus;2</div><p class="pst">Output</p><div class="ptx" lang="en-US">Line 1: A single integer with no leading zeroes that is the input integer converted to base &minus;2. The value 0 is expressed as 0, with exactly one 0.</div><p class="pst">Sample Input</p><pre class="sio">-13</pre><p class="pst">Sample Output</p><pre class="sio">110111</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Explanation of the sample:
+<br>
+<br>Reading from right-to-left:<pre>1*1 + 1*-2 + 1*4 + 0*-8 +1*16 + 1*-32 = -13</pre></div><p class="pst">

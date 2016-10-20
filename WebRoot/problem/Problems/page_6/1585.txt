@@ -1,0 +1,27 @@
+</p><div class="ptx" lang="en-US">While Florida's difficulties electing presidents are well known, a lesser known problem is electing committee chairs within the state's House of Delegates. The process used is a runoff election,where each committee member submits a ballot with a ranked list of other members for the position of chair. Unfortunately, those responsible for tabulating the votes keep losing track of which ballots still have countable votes, and so no one trusts the results.
+<br>Each committee member submits a ballot. Each ballot contains a ranked list of votes. Tabulating the votes proceeds in rounds. For the first round, the first vote on each ballot is counted. If any candidate has more than half of the votes, they win.
+<br>After each round, the candidate receiving the fewest votes (or candidates, in the case of a tie for fewest votes) is eliminated. Votes are then re-tabulated with each ballot's highest vote for a remaining candidate being counted. If all of the candidates voted for on a ballot are eliminated,then that ballot is considered "non-viable," and it is no longer counted toward the total number of ballots when calculating majority.
+<br>The process is repeated until you have a single winner, or a tie between the remaining candidates.The rules of the election guarantee you will have a tie or a winner.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">For each dataset:
+<br>Line 1 < candidates > < ballots >
+<br>The number of candidates receiving votes
+<br>The number of ballots, b
+<br>b Lines One line per ballot. For each ballot, the names of the candidates are listed in order of preference. A candidate name is a string with no whitespace in it. A ballot may not contain votes for all candidates. No candidate will be repeated on a single ballot.
+<br>After the last dataset, a line of
+<br>0 0
+<br>will indicate the end of the input.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each dataset a single line is output:
+<br>For a winner:
+<br>< candidate > won
+<br>For a tie:
+<br>it is a tie between < candidate > and < candidate > [ and < candidate > [...]]
+<br>Each candidate name is separated by "and". They may be printed in increasing order.</div><p class="pst">Sample Input</p><pre class="sio">3 9
+Buchanan Bush
+Buchanan Bush
+Buchanan Gore
+Gore Bush
+Gore Bush
+Gore Bush
+Gore Bush
+Bush Buchanan
+Bush Buchanan
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">Buchanan won</pre><p class="pst">

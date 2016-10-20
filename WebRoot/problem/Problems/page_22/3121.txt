@@ -1,0 +1,41 @@
+</p><div class="ptx" lang="en-US"><img src=images/3121_1.jpg align=right vspace=10 hspace=10>Background from Wikipedia: "Set theory is a branch of mathematics created principally by the German mathematician Georg Cantor at the end of the 19th century. Initially controversial, set theory has come to play the role of a foundational theory in modern mathematics, in the sense of a theory invoked to justify assumptions made inmathematics concerning the existence of mathematical objects (such as numbers or functions) and their properties. Formal versions of set theory also have a foundational role to play as specifying a theoretical ideal of mathematical rigor in proofs."
+<br>
+<br>Given this importance of sets, being the basis of mathematics, a set of eccentric theorist set off to construct a supercomputer operating on sets instead of numbers. The initial Set-Stack Alpha is under construction, and they need you to simulate it in order to verify the operation of the prototype.
+<br>
+<br>The computer operates on a single stack of sets, which is initially empty. After each operation, the cardinality of the topmost set on the stack is output. The cardinality of a set S is denoted |S| and is the number of elements in S. The instruction set of the SetStack Alpha is PUSH, DUP, UNION, INTERSECT, and ADD.<ul><li>PUSH will push the empty set {} on the stack.<li>DUP will duplicate the topmost set (pop the stack, and then push that set on the stack twice).<li>UNION will pop the stack twice and then push the union of the two sets on the stack.<li>INTERSECT will pop the stack twice and then push the intersection of the two sets on the stack.<li>ADD will pop the stack twice, add the first set to the second one, and then push the resulting set on the stack.</ul>For illustration purposes, assume that the topmost element of the stack is
+<br><div align=center>A = {{}, {{}}}</div>
+<br>and that the next one is
+<br><div align=center>B = {{}, {{{}}}}.</div>
+<br>For these sets, we have |A| = 2 and |B| = 2. Then:<ul><li>UNION would result in the set { {}, {{}}, {{{}}} }. The output is 3.<li>INTERSECT would result in the set { {} }. The output is 1.<li>ADD would result in the set { {}, {{{}}}, {{},{{}}} }. The output is 3.</ul>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">An integer 0 &le; T &le; 5 on the first line gives the cardinality of the set of test cases. The first line of each test case contains the number of operations 0 &le; N &le; 2 000. Then follow N lines each containing one of the five commands. It is guaranteed that the SetStack computer can execute all the commands in the sequence without ever popping an empty stack.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each operation specified in the input, there will be one line of output consisting of a single integer. This integer is the cardinality of the topmost element of the stack after the corresponding command has executed. After each test case there will be a line with *** (three asterisks).</div><p class="pst">Sample Input</p><pre class="sio">2
+9
+PUSH
+DUP
+ADD
+PUSH
+ADD
+DUP
+ADD
+DUP
+UNION
+5
+PUSH
+PUSH
+ADD
+PUSH
+INTERSECT</pre><p class="pst">Sample Output</p><pre class="sio">0
+0
+1
+0
+1
+1
+2
+2
+2
+***
+0
+0
+1
+0
+0
+***</pre><p class="pst">

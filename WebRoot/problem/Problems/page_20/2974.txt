@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US"><p>A 3-dimensional shape is said to be <i>convex</i> if the line segment joining any two points in the shape is entirely contained within the shape. Given a general set of points <i>X</i> in 3-dimensional space, the <i>convex hull</i> of <i>X</i> is the smallest convex shape containing all the points.</p><p>For example, consider <i>X</i> = {(0, 0, 0), (10, 0, 0), (0, 10, 0), (0, 0, 10)}. The convex hull of <i>X</i> is the tetrahedron with vertices given by <i>X</i>. Note that the tetrahedron contains the point (1, 1, 1), so even if this point were added to <i>X</i>, the convex hull would not change.</p><p>Given <i>X</i>, your task is to find the surface area of the convex hull of <i>X</i>, rounded to the nearest integer.</p><p>NOTE: The convex hull of any point set will have polygonal faces. For this problem, you may assume there will be at most 3 points in <i>X</i> on any face of the convex hull.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input test file will contain multiple test cases, each of which begins with an integer <i>n</i> (4 &le; <i>n</i> &le; 25) indicating the number of points in <i>X</i>. This is followed by <i>n</i> lines, each containing 3 integers giving the <i>x</i>, <i>y</i> and <i>z</i> coordinate of a single point. All coordinates are between &minus;100 and 100 inclusive. The end-of-file is marked by a test case with <i>n</i> = 0 and should not be processed.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, write a single line with the surface area of the convex hull of the given points. The answer should be rounded to the nearest integer (e.g., 2.499 rounds to 2, but 2.5 rounds to 3).</p></div><p class="pst">Sample Input</p><pre class="sio">5
+0 0 0
+10 0 0
+0 10 0
+0 0 10
+1 1 1
+9
+0 0 0
+2 0 0
+2 2 0
+0 2 0
+1 1 2
+1 1 -2
+1 1 -1
+1 1 0
+1 1 1
+0</pre><p class="pst">Sample Output</p><pre class="sio">237
+18</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><p>To avoid ambiguities due to rounding errors, the judge tests have been constructed so that all answers are at least 0.001 away from a decision boundary (i.e., you can assume that the area is never 2.4997).</p></div><p class="pst">

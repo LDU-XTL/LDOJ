@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US">Given a square at [0, 1] * [0, 1] that has N points ( P<sub>1</sub>, P<sub>2</sub>, ..., P<sub>N</sub> ) in the square (you may assume that different points can be at the same position), we can connect the N points and the four corners of the square with some line segments so that through these segments any two of the N+4 points can reach each other (directly or indirectly). The graph length is defined as the total length of the line segments. When N points' positions are fixed, there must exist a way of connecting them, such that it will make the shortest graph length. We can use LEN (P<sub>1</sub>, P<sub>2</sub>, ..., P<sub>N</sub>) to record the graph length using this way of connecting. 
+<br> 
+<br>In this situation, LEN (P<sub>1</sub>, P<sub>2</sub>, ..., P<sub>N</sub>) is a function of P<sub>1</sub>, P<sub>2</sub>, ..., P<sub>N</sub>. When P<sub>1</sub>, P<sub>2</sub>, ..., P<sub>N</sub> change their positions, LEN (P<sub>1</sub>, P<sub>2</sub>, ..., P<sub>N</sub>) also changes. It's easy to prove that there exist some P<sub>1</sub>', P<sub>2</sub>', ..., P<sub>N</sub>' in the square such that LEN (P<sub>1</sub>', P<sub>2</sub>', ..., P<sub>N</sub>') is at its minimum.
+<br>
+<br>Given the initial positions of N points, your task is to find out N points P<sub>1</sub>", P<sub>2</sub>", ..., P<sub>N</sub>" in the square such that |P<sub>1</sub>P<sub>1</sub>"| + |P<sub>2</sub>P<sub>2</sub>"| + ... + |P<sub>N</sub>P<sub>N</sub>"| is minimum and LEN (P<sub>1</sub>", P<sub>2</sub>", ..., P<sub>N</sub>") = LEN (P<sub>1</sub>', P<sub>2</sub>', ..., P<sub>N</sub>') . You are requested to output the value of |P<sub>1</sub>P<sub>1</sub>"| + |P<sub>2</sub>P<sub>2</sub>"| + ... + |P<sub>N</sub>P<sub>N</sub>"|, where |PiPi"| is the distance between Pi and Pi".
+<br><center><img src=images/2053_1.jpg></center>
+<br>For example, Figure-1 gives the initial position of P<sub>1</sub> and the way of connecting to obtain    LEN (P<sub>1</sub>). In Figure-2, it gives the position of P<sub>1</sub>", which is at the center of the square, and the way of connecting to obtain LEN (P<sub>1</sub>"). It can be proved that LEN (P<sub>1</sub>") = LEN (P<sub>1</sub>’); your job is to output the distance between P<sub>1</sub> and P<sub>1</sub>".</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several test cases. For each test case, the first line consists of one integer N (1 <= N <= 100), the number of points, and N lines follow to give the coordinates for every point in the following format:
+<br>x y
+<br>
+<br>Here, x and y are float numbers within the value [0, 1].
+<br>
+<br>A test case of N = 0 indicates the end of input, and should not be processed.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output the value of |P<sub>1</sub>P<sub>1</sub>"| + |P<sub>2</sub>P<sub>2</sub>"| + ... + |P<sub>N</sub>P<sub>N</sub>"|. The value should be rounded to three digits after the decimal point.</div><p class="pst">Sample Input</p><pre class="sio">1
+0.2 0.5
+2
+0 0.5
+0.5 0.5
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">0.300
+0.500
+</pre><p class="pst">

@@ -1,0 +1,46 @@
+</p><div class="ptx" lang="en-US">May is a lovely girl. Due to her filial piety, she wants to give a present on her mother's birthday. Because both her parents are the top programmer in the world, she decided to design a new program, a special program that is an Operating System! With the help of her excellent programming skill, May has already finished the kernel of the new OS. And the birthday is coming, she is afraid that time is not enough to finish the entire project in time. As her best net-pal, it's your duty to help her.
+<br>This is a multitask OS, processes run at the same time. There are following command in the OS:
+<br>
+<br>CreateProcess(PID,Memory,Priority)
+<br>A new process is created with the process identification PID and memory size, and a priority. The priority in this command is called outer priority of a process.
+<br>
+<br>AddMessage(PID,Priority)
+<br>That means, add a new message to the message queue of process PID, with the priority of Priority. The message with higher Priority will run earlier that lower ones. The Priority is called inner priority.
+<br>
+<br>Run
+<br>Find out the message with biggest HP. HP is defined as the product of the inner priority of a message and the corresponding process priority. If two or more messages have the same HP, the one with smallest PID will run first. Print the information "Run: HP" to the output file, HP will be replaced by the message HP you found, or print "Empty" instead if the message queue is empty. Finally remove this message if exist.
+<br>
+<br>ChangePriority(PID,NewValue)
+<br>Change the outer priority of process PID to NewValue.
+<br>
+<br>GetMemory(PID,Memory)
+<br>Process PID memory increases the amount of Memory.
+<br>
+<br>FreeMemory(PID,Memory)
+<br>Process PID memory decreases the amount of Memory.
+<br>
+<br>RunProcess(PID)
+<br>Similar with Run command. Find out the message in the process PID message queue, print the information "Run Process: Priority" to the output file, Priority will be replaced by the message priority you found, or print "Empty" instead if the message queue is empty. Finally remove this message if exist.
+<br>
+<br>CloseMaxMemory
+<br>Find out the process that used the largest number of memory and close it if exists (if tie, the one with smallest PID should be release first), or print "Empty" instead.
+<br>
+<br>CloseProcess(PID)
+<br>Close the process with the identification of PID.
+<br>
+<br>Whenever a process' memory is less than or equal to 0, it will be close automatically. In any of the above commands except the first one, if the PID doesn't exist, please print an "Error" to the output. For the first command, if the PID is already exist, print an "Error" and ignore this command. </div><p class="pst">Input</p><div class="ptx" lang="en-US">First line in the input is an integer number N (1 <= N <= 100000), which represents the number of commands. The next N lines, each gives a command described above. Any number given in the input file will be non-negative integer and will not be more than 1000000000. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output format has been described above.</div><p class="pst">Sample Input</p><pre class="sio">11
+CloseMaxMemory
+CreateProcess(1,100,1)
+CreateProcess(2,200,1)
+CreateProcess(3,300,1)
+AddMessage(1,9)
+AddMessage(2,19)
+AddMessage(1,10)
+GetMemory(2,999)
+CloseMaxMemory
+Run
+RunProcess(1)
+</pre><p class="pst">Sample Output</p><pre class="sio">Empty
+Run: 10
+Run Process: 9
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">The total size of the input files may be as large as 21.8MB.</div><p class="pst">

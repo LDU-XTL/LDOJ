@@ -1,0 +1,24 @@
+</p><div class="ptx" lang="en-US"><div><p>Baseball on the Mars is similar to that on the Earth, TOO. This game is played between two teams: the batting team and the fielding team. There are four bases on the ground: home base at (0,0), first base at (10,0), second base at (10,10) and third base at (0,10). They form a square called the baseball diamond. At every base, there stands a player of the fielding team. The players in the batting team bat the ball at home base one by one. Each of them bats exactly once. </p><p>If a player bats the ball and the ball falls out of the ground (the x coordinate or the y coordinate of the falling place are both negative), this batting is considered failed and he will get an "Out" and leave the ground.</p><p>If the ball falls inside the ground (the x coordinate and the y coordinate of the falling place are both nonnegative), this batting is considered successful. After the ball falls on the ground, the players of the batting team who are at bases will run to the next base. That is, the player at the home base will run to the first base, the player in the first base run to the second base, the player at the second base will run to the third base and the player at the third base will run back to the home base. At the same time, players of the fielding team catch the ball immediately after the ball falls on the ground and pass the ball to the other players of the fielding team at one of these bases. We assume that passing a ball has the speed of 5 and the players of the batting team have a running speed of 2.</p><p>If a player of the fielding team at a base gets the ball absolutely BEFORE (not including at the same time) a player of the batting team whose destination is this particular base arrived, this player of the batting team will be "killed" -- get an "Out" and leave the ground. The players of the fielding team can keep passing the ball form base to base and kill many players of the batting team.</p><p>The score is calculated as following. After the batting, there may be several players of batting team at some bases. If there is a player at the first base, he will get <i>K</i><sub>1</sub> points. If there is a player at the second base, he will get <i>K</i><sub>2</sub> points. If there is a player at the third base, he will get <i>K</i><sub>3</sub> points. If there is a player at the home base, he will get <i>K</i><sub>4</sub> points. And of course, after the batting, the player of batting team at the home base (if there is someone) will leave the ground, while other players remain on their position, waiting for next batting.</p><p>The player of the fielding team are all clever enough, so they will use the strategy to make the batting team get as less score as possible in a bat. It is guaranteed that their best strategy is UNIQUE.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>There are several cases in the input file, end by 0. For each case,<br />The first line is an integer <i>N</i> (<i>N</i><=1000), the number of batting team players.<br />The second line contains 4 integers <i>K</i><sub>1</sub>, <i>K</i><sub>2</sub>, <i>K</i><sub>3</sub> and <i>K</i><sub>4</sub>.<br />Then <i>N</i> lines followed, each line contains 2 integers, the coordinate of the ball's falling place after each player of batting team bats the ball.</p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div><p>For each case, the output contains <i>N</i> lines: the score earned by the fielding team after each player of batting team bats the ball (Even a failed bat can get some score). There is a blank line after each test case.</p></div></div><p class="pst">Sample Input</p><pre class="sio">10
+14136 26928 1102 21652
+4 7
+5598 24772
+-13213 -4683
+-27375 -28871
+23504 239
+4 7
+10335 20533
+16020 11574
+11 24
+29 20
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">0
+14136
+14136
+14136
+41064
+1102
+35788
+41064
+1102
+35788
+</pre><p class="pst">

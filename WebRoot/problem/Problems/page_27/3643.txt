@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US"><p>Luke has a bit of trouble telling the difference between star systems in the Rebel Alliance and those in the Empire. He has a list of the <i>x</i>, <i>y</i>, <i>z</i> coordinates of each system in the Empire and each in the Alliance, but at warp speed he simply has insufficient time to look up systems in his lists.</p><p>After destroying the friendly planet Endor, Luke has had to admit he needs the help of his targeting computer. His computer, being an early model, can only compute the truth value of the inequality </p><pre>   <i>ax</i> + <i>by</i> + <i>cz</i> + <i>d</i> &gt; 0</pre><p>Where <i>x</i>, <i>y</i>, <i>z</i> are the coordinates of the system, and <i>a</i>,<i>b</i>,<i>c</i>,<i>d</i> are real-valued coefficients. You are to compute <i>a</i>, <i>b</i>, <i>c</i>, <i>d</i> so that the inequality holds for all systems in the Empire, and for no systems in the Alliance.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input consists of several test cases followed by -1 -1. Each test case first gives the number of Alliance systems, followed by a line for each system giving the integer coordinates -100 &le; <i>x</i>, <i>y</i>, <i>z</i> &le; 100 of the system in 3-dimensional space. The number of Empire systems, and the coordinates of each, follow. The Empire and Alliance combined have at least one and no more than 200 systems. All systems have distinct coordinates.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output a single line containing <i>a</i>, <i>b</i>, <i>c</i>, <i>d</i> as real numbers separated by spaces. Use enough precision to ensure that your solution is correct. You may assume that a solution exists; if there is more than one solution, any one will do.</p></div><p class="pst">Sample Input</p><pre class="sio">2
+-93 48 -92
+-62 12 -32
+8
+51 98 -61
+-3 72 81
+95 25 22
+89 43 -99
+100 -2 -96
+-18 45 -63
+36 -21 -8
+71 -24 42
+-1 -1
+</pre><p class="pst">Sample Output</p><pre class="sio">83.000000 65.000000 -27.000000 -62.000000</pre><p class="pst">

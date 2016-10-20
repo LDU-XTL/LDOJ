@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">Suppose you are reading byte streams from any device, representing IP addresses. Your task is to convert a 32 characters long sequence of '1s' and '0s' (bits) to a dotted decimal format. A dotted decimal format for an IP address is form by grouping 8 bits at a time and converting the binary representation to decimal representation. Any 8 bits is a valid part of an IP address. To convert binary numbers to decimal numbers remember that both are positional numerical systems, where the first 8 positions of the binary systems are: 
+<br><pre>2<sup>7</sup>   2<sup>6</sup>  2<sup>5</sup>  2<sup>4</sup>  2<sup>3</sup>   2<sup>2</sup>  2<sup>1</sup>  2<sup>0</sup> 
+<br>128 64  32  16  8   4   2   1 </pre>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will have a number N (1<=N<=9) in its first line representing the number of streams to convert. N lines will follow.   </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output must have N lines with a doted decimal IP address. A dotted decimal IP address is formed by grouping 8 bit at the time and converting the binary representation to decimal representation. </div><p class="pst">Sample Input</p><pre class="sio">4
+00000000000000000000000000000000 
+00000011100000001111111111111111 
+11001011100001001110010110000000 
+01010000000100000000000000000001 </pre><p class="pst">Sample Output</p><pre class="sio">0.0.0.0
+3.128.255.255
+203.132.229.128
+80.16.0.1
+</pre><p class="pst">

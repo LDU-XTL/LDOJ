@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">A set of n 1-dimensional items have to be packed in identical bins. All bins have exactly the same length l and each item i has length li<=l . We look for a minimal number of bins q such that 
+<br><ul><li>each bin contains at most 2 items, 
+<br><li>each item is packed in one of the q bins, 
+<br><li>the sum of the lengths of the items packed in a bin does not exceed l . </ul>
+<br>You are requested, given the integer values n , l , l1 , ..., ln , to compute the optimal number of bins q . 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains the number of items n (1<=n<=10<sup>5</sup>) . The second line contains one integer that corresponds to the bin length l<=10000 . We then have n lines containing one integer value that represents the length of the items. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Your program has to write the minimal number of bins required to pack all items. </div><p class="pst">Sample Input</p><pre class="sio">10
+80
+70
+15
+30
+35
+10
+80
+20
+35
+10
+30
+</pre><p class="pst">Sample Output</p><pre class="sio">6
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">The sample instance and an optimal solution is shown in the figure below. Items are numbered from 1 to 10 according to the input order. 
+<br><img src=images/2782_1.jpg></div><p class="pst">

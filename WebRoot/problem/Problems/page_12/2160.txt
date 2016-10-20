@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US">Ivan works at a factory that produces heavy machinery. He has a simple job -- he knocks up wooden boxes of different sizes to pack machinery for delivery to the customers. Each box is a rectangular parallelepiped. Ivan uses six rectangular wooden pallets to make a box. Each pallet is used for one side of the box.
+<br><center><img src=images/2160_1.jpg></center>
+<br>Joe delivers pallets for Ivan. Joe is not very smart and often makes mistakes -- he brings Ivan pallets that do not fit together to make a box. But Joe does not trust Ivan. It always takes a lot of time to explain Joe that he has made a mistake.
+<br>Fortunately, Joe adores everything related to computers and sincerely believes that computers never make mistakes. Ivan has decided to use this for his own advantage. Ivan asks you to write a program that given sizes of six rectangular pallets tells whether it is possible to make a box out of them.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of six lines. Each line describes one pallet and contains two integer numbers w and h (1 <= w, h <= 10 000) -- width and height of the pallet in millimeters respectively.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Write a single word "POSSIBLE" to the output file if it is possible to make a box using six given pallets for its sides. Write a single word "IMPOSSIBLE" if it is not possible to do so.</div><p class="pst">Sample Input</p><pre class="sio">1345 2584
+2584 683
+2584 1345
+683 1345
+683 1345
+2584 683</pre><p class="pst">Sample Output</p><pre class="sio">POSSIBLE</pre><p class="pst">

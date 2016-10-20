@@ -1,0 +1,48 @@
+</p><div class="ptx" lang="en-US">In a modernized warehouse, robots are used to fetch the goods. Careful planning is needed to ensure that the robots reach their destinations without crashing into each other. Of course, all warehouses are rectangular, and all robots occupy a circular floor space with a diameter of 1 meter. Assume there are N robots, numbered from 1 through N. You will get to know the position and orientation of each robot, and all the instructions, which are carefully (and mindlessly) followed by the robots. Instructions are processed in the order they come. No two robots move simultaneously; a robot always completes its move before the next one starts moving.
+<br>A robot crashes with a wall if it attempts to move outside the area of the warehouse, and two robots crash with each other if they ever try to occupy the same spot.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input is K, the number of test cases. Each test case starts with one line consisting of two integers, 1 <= A, B <= 100, giving the size of the warehouse in meters. A is the length in the EW-direction, and B in the NS-direction.
+<br>The second line contains two integers, 1 <= N, M <= 100, denoting the numbers of robots and instructions respectively.
+<br>Then follow N lines with two integers, 1 <= Xi <= A, 1 <= Yi <= B and one letter (N, S, E or W), giving the starting position and direction of each robot, in order from 1 through N. No two robots start at the same position.
+<br><center><img src=images/2632_1.jpg>
+<br>Figure 1: The starting positions of the robots in the sample warehouse</center>
+<br>Finally there are M lines, giving the instructions in sequential order.
+<br>An instruction has the following format:
+<br>< robot #> < action> < repeat>
+<br>Where <action> is one of
+<br><ul><li>L: turn left 90 degrees,
+<br><li>R: turn right 90 degrees, or
+<br><li>F: move forward one meter,</ul>
+<br>and 1 <= < repeat> <= 100 is the number of times the robot should perform this single move.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output one line for each test case:
+<br><ul><li>Robot i crashes into the wall, if robot i crashes into a wall. (A robot crashes into a wall if Xi = 0, Xi = A + 1, Yi = 0 or Yi = B + 1.)
+<br><li>Robot i crashes into robot j, if robots i and j crash, and i is the moving robot.
+<br><li>OK, if no crashing occurs.</ul>
+<br>Only the first crash is to be reported.</div><p class="pst">Sample Input</p><pre class="sio">4
+5 4
+2 2
+1 1 E
+5 4 W
+1 F 7
+2 F 7
+5 4
+2 4
+1 1 E
+5 4 W
+1 F 3
+2 F 1
+1 L 1
+1 F 3
+5 4
+2 2
+1 1 E
+5 4 W
+1 L 96
+1 F 2
+5 4
+2 3
+1 1 E
+5 4 W
+1 F 4
+1 L 1
+1 F 20</pre><p class="pst">Sample Output</p><pre class="sio">Robot 1 crashes into the wall
+Robot 1 crashes into robot 2
+OK
+Robot 1 crashes into robot 2</pre><p class="pst">

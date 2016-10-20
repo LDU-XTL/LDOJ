@@ -1,0 +1,59 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>There is a rectangular area containing <i>n</i> &times; <i>m</i> cells. Two cells are marked with &ldquo;2&rdquo;, and another two with &ldquo;3&rdquo;. Some cells are occupied by obstacles. You should connect the two &ldquo;2&rdquo;s and also the two &ldquo;3&rdquo;s with non-intersecting lines. Lines can run only vertically or horizontally connecting centers of cells without obstacles.</p><p>Lines cannot run on a cell with an obstacle. Only one line can run on a cell at most once. Hence, a line cannot intersect with the other line, nor with itself. Under these constraints, the total length of the two lines should be minimized. The length of a line is defined as the number of cell borders it passes. In particular, a line connecting cells sharing their border has length 1.</p><p>Fig. 1(a) shows an example setting. Fig. 1(b) shows two lines satisfying the constraints above with minimum total length 18.</p><div align="center"><img src=images/3133_1.png></div><p align="center">Figure 1: An example of setting and its solution</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input consists of multiple datasets, each in the following format.</p><blockquote><table border="0" width="50"><tr><td width="50%"><i>n</i></td><td width="50%"><i>m</i></td></tr><tr><td colspan="2">row<sub>1</sub></td></tr><tr><td colspan="2">&hellip;</td></tr><tr><td colspan="2">row<i><sub>n</sub></i></td></tr></table></blockquote><p><i>n</i> is the number of rows which satisfies 2 &le; <i>n</i> &le; 9. m is the number of columns which satisfies 2 &le; <i>m</i> &le; 9. Each row<sub><i>i</i></sub> is a sequence of <i>m</i> digits separated by a space. The digits mean the following.</p><blockquote><p><code>0:</code> Empty</p><p><code>1:</code> Occupied by an obstacle</p><p><code>2:</code> Marked with &ldquo;2&rdquo;</p><p><code>3:</code> Marked with &ldquo;3&rdquo;</p></blockquote><p>The end of the input is indicated with a line containing two zeros separated by a space.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>For each dataset, one line containing the minimum total length of the two lines should be output. If there is no pair of lines satisfying the requirement, answer &ldquo;<code>0</code>&rdquo; instead. No other characters should be contained in the output.</p></span></div><p class="pst">Sample Input</p><pre class="sio">5 5
+0 0 0 0 0
+0 0 0 3 0
+2 0 2 0 0
+1 0 1 1 1
+0 0 0 0 3
+2 3
+2 2 0
+0 3 3
+6 5
+2 0 0 0 0
+0 3 0 0 0
+0 0 0 0 0
+1 1 1 0 0
+0 0 0 0 0
+0 0 2 3 0
+5 9
+0 0 0 0 0 0 0 0 0
+0 0 0 0 3 0 0 0 0
+0 2 0 0 0 0 0 2 0
+0 0 0 0 3 0 0 0 0
+0 0 0 0 0 0 0 0 0
+9 9
+3 0 0 0 0 0 0 0 2
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+2 0 0 0 0 0 0 0 3
+9 9
+0 0 0 1 0 0 0 0 0
+0 2 0 1 0 0 0 0 3
+0 0 0 1 0 0 0 0 2
+0 0 0 1 0 0 0 0 3
+0 0 0 1 1 1 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+9 9
+0 0 0 0 0 0 0 0 0
+0 3 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 2 3 2
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">18
+2
+17
+12
+0
+52
+43</pre><p class="pst">

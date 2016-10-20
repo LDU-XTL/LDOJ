@@ -1,0 +1,6 @@
+</p><div class="ptx" lang="en-US">数列A满足An = An-1 + An-2 + An-3, n >= 3
+<br>
+<br>编写程序，给定A0, A1 和 A2, 计算A99</div><p class="pst">Input</p><div class="ptx" lang="en-US">输入包含多行数据
+<br>
+<br>每行数据包含3个整数A0, A1, A2 (0 <= A0, A1, A2 <= 32767)
+<br>数据以EOF结束</div><p class="pst">Output</p><div class="ptx" lang="en-US">对于输入的每一行输出A99的值</div><p class="pst">Sample Input</p><pre class="sio">1 1 1</pre><p class="pst">Sample Output</p><pre class="sio">69087442470169316923566147</pre><p class="pst">

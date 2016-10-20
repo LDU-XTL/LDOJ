@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">FJ has a new rule about the cows lining up for dinner.  Not only must the N (3 <= N <= 15) cows line up for dinner in order, but they must place a napkin between each pair of cows with a "+", "-", or "." on it.  In order to earn their dessert, the cow numbers and the napkins must form a numerical expression that evaluates to 0.  The napkin with a "." enables the cows to build bigger numbers.  Consider this equation for seven cows:
+<br><pre>      1 - 2 . 3 - 4 . 5 + 6 . 7</pre>
+<br>This means 1-23-45+67, which evaluates to 0.  You job is to assist the cows in getting dessert. (Note: "... 10 . 11 ...") will use the number 1011 in its calculation.)
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">One line with a single integer, N
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">One line of output for each of the first 20 possible expressions -- then a line with a single integer that is the total number of possible answers. Each expression line has the general format of number, space, napkin, space, number, space, napkin, etc. etc.  The output order is lexicographic, with "+" coming before "-" coming before ".".  If fewer than 20 expressions can be formed, print all of the expressions.
+<br></div><p class="pst">Sample Input</p><pre class="sio">7</pre><p class="pst">Sample Output</p><pre class="sio">1 + 2 - 3 + 4 - 5 - 6 + 7
+1 + 2 - 3 - 4 + 5 + 6 - 7
+1 - 2 + 3 + 4 - 5 + 6 - 7
+1 - 2 - 3 - 4 - 5 + 6 + 7
+1 - 2 . 3 + 4 + 5 + 6 + 7
+1 - 2 . 3 - 4 . 5 + 6 . 7
+6
+</pre><p class="pst">

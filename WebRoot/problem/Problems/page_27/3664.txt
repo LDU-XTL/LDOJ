@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US"><div><p>The cows are having their first election after overthrowing the tyrannical Farmer John, and Bessie is one of <i>N</i> cows (1 &le; <i>N</i> &le; 50,000) running for President. Before the election actually happens, however, Bessie wants to determine who has the best chance of winning.</p><p>The election consists of two rounds. In the first round, the <i>K</i> cows (1 &le; <i>K</i> &le; <i>N</i>) cows with the most votes advance to the second round. In the second round, the cow with the most votes becomes President.</p><p>Given that cow <i>i</i> expects to get <i>A<sub>i</sub></i> votes (1 &le; <i>A<sub>i</sub></i> &le; 1,000,000,000) in the first round and <i>B<sub>i</sub></i> votes (1 &le; <i>B<sub>i</sub></i> &le; 1,000,000,000) in the second round (if he or she makes it), determine which cow is expected to win the election. Happily for you, no vote count appears twice in the <i>A<sub>i</sub></i> list; likewise, no vote count appears twice in the <i>B<sub>i</sub></i> list.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>* Line 1: Two space-separated integers: <i>N</i> and <i>K</i> <br>* Lines 2..<i>N</i>+1: Line i+1 contains two space-separated integers: <i>A<sub>i</sub></i> and <i>B<sub>i</sub></i> </p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>* Line 1: The index of the cow that is expected to win the election.</p></div><p class="pst">Sample Input</p><pre class="sio">5 3
+3 10
+9 2
+5 6
+8 4
+6 5
+</pre><p class="pst">Sample Output</p><pre class="sio">5
+</pre><p class="pst">

@@ -1,0 +1,24 @@
+</p><div class="ptx" lang="en-US"><p>There is a set of jobs, say <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, &#8230;, <i>x<sub>n</sub></i>, to be scheduled. Each job needs one day to complete. Your task is to schedule the jobs so that they can be finished in a minimum number of days. There are two types of constraints: <i>Conflict constraints</i> and <i>Precedence constraints</i>.</p><p><b>Conflict constraints:</b> Some pairs of jobs cannot be done on the same day. (Maybe job <i>x<sub>i</sub></i> and job <i>x<sub>j</sub></i> need to use the same machine. So they must be done in different dates).</p><p><b>Precedence constraints:</b> For some pairs of jobs, one needs to be completed before the other can start. For example, maybe job <i>x<sub>i</sub></i> cannot be started before job <i>x<sub>j</sub></i> is completed.</p><p>The scheduling needs to satisfy all the constraints.</p><p>To record the constraints, we build a graph <i>G</i> whose vertices are the jobs: <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, &#8230;, <i>x<sub>n</sub></i>. Connect <i>x<sub>i</sub></i> and <i>x<sub>j</sub></i> by an undirected edge if <i>x<sub>i</sub></i> and <i>x<sub>j</sub></i> cannot be done on the same day. Connect <i>x<sub>i</sub></i> and <i>x<sub>j</sub></i> by a directed edge from <i>x<sub>i</sub></i> to <i>x<sub>j</sub></i> if <i>x<sub>i</sub></i> needs to be completed before <i>x<sub>j</sub></i> starts.</p><p>If the graph is complicated, the scheduling problem is very hard. Now we assume that for our problems, the constraints are not very complicated: The graph <i>G</i> we need to consider are always trees (after omitting the directions of the edges). Your task is to find out the number of days needed in an optimal scheduling for such inputs. You can use the following result:</p><p><i>If G is a tree, then the number of days needed is either k or k</i> + 1<i>, where k is the maximum number of vertices contained in a directed path of G, i.e., a path P</i> = (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, &#8230;, <i>x<sub>k</sub></i>)<i>, where for each i</i> = 1, 2, &#8230;, <i>k</i> &#8722; 1<i>, there is a directed edge from x<sub>i</sub> to x<sub>i</sub></i><sub> + 1</sub><i>.</i></p><p>Figure 1 below is such an example. There are six jobs: 1, 2, 3, 4, 5, 6. From this figure, we know that job 1 and job 2 must be done in different dates. Job 1 needs to be done before job 3, job 3 before job 5, job 2 before job 4 and job 4 before job 6. It is easy to verify that the minimum days to finish all the jobs is 4 days. In this example, the maximum number k of vertices contained in a directed path is 3.</p><div align="center"><img src="images/3396_1.png"></div><p align="center">Figure 1: Example</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input consists of a number of trees (whose edges may be directed or undirected), say <i>T</i><sub>1</sub>, <i>T</i><sub>2</sub>, &#8230;, <i>T<sub>m</sub></i>, where <i>m</i> &#8804; 20. Each tree has at most 200 vertices. We represent each tree as a rooted tree (just for convenience of presentation, the root is an arbitrarily chosen vertex). Information of each of the trees are contained in a number of lines. Each line starts with a vertex (which is a positive integer) followed by all its sons (which are also positive integers), then followed by a 0. Note that 0 is not a vertex and it indicates the end of that line. Now some of the edges are directed. The direction of an edge can be from father to son, and can also be from son to father. If the edge is from father to son, then we put a letter &#8220;d&#8221; after that son (meaning that it is a downward edge). If the edge is from son to father, then we put a letter &#8220;u&#8221; after that son (meaning that it is an upward edge). If the edge is undirected then we do not put any letter after the son.</p><p>The first case of the sample input below is the example in Figure 1.</p><p>Consecutive vertices (numbers or numbers with a letter after it) in a line are separated by a single space. A line containing a single 0 means the end of that tree. The next tree starts in the next line. Two consecutive lines of single 0 means the end of the input.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>The output contains one line for each test case. Each line contains a number, which is the minimum number of days to finish all the jobs in that test case.</p></div><p class="pst">Sample Input</p><pre class="sio">1 2 3d 0
+2 4d 0
+3 5d 0
+4 6d 0
+0
+1 2d 3u 4 0
+0
+1 2d 3 0
+2 4d 5d 10 0
+3 6d 7d 11 0
+6 8d 9 12 0
+0
+1 2 3 4 0
+2 5d 0
+3 6d 0
+4 7d 0
+5 8d 0
+6 9d 0
+7 10d 0
+0
+0</pre><p class="pst">Sample Output</p><pre class="sio">4
+3
+4
+3</pre><p class="pst">

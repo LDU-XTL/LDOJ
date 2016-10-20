@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">Many databases store the data in the character fields (and especially indices) using prefix compression. This technique compresses a sequence of strings A1, ..., A<sub>N</sub> by the following method: if there are strings Ai = a<sub>i,1</sub>a<sub>i,2</sub>...a<sub>i,p</sub> and A<sub>i + 1</sub> = a<sub>i+1,1</sub>a<sub>i+1,2</sub>...a<sub>i+1,q</sub> 
+<br>such that for some j ≤ min(p, q) a<sub>i,1</sub> = a<sub>i+1,1</sub>, a<sub>i,2</sub> = a<sub>i+1,2</sub>, ... a<sub>i,j</sub> = a<sub>i+1,j</sub>, then the second string is stored as [j]a<sub>i+1,j+1</sub>a<sub>i+1,j+2</sub>... a<sub>i+1,q</sub>, where [j] is a single character with code j. 
+<br>
+<br>If j = 0, that is, strings do not have any common prefix, then the second string is prefixed with zero byte, and so the total length actually increases.
+<br>
+<br>
+<br><b>Constraints</b>
+<br>1 ≤ N ≤ 10000, 1 ≤ length(Ai) ≤ 255. </div><p class="pst">Input</p><div class="ptx" lang="en-US">First line of input contains integer number N, with following N lines containing strings A1 ... A<sub>N</sub></div><p class="pst">Output</p><div class="ptx" lang="en-US">Output must contain a single integer -- minimal total length of compressed strings. </div><p class="pst">Sample Input</p><pre class="sio">3
+abc
+atest
+atext
+</pre><p class="pst">Sample Output</p><pre class="sio">11
+</pre><p class="pst">

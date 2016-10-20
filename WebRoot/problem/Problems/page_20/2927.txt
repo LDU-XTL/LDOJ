@@ -1,0 +1,27 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>In the days of yore, Han was a prosperous kingdom. But at the turn of the century, hard times fell upon the kingdom. A plague swept through the land, and barbarians galloped in from the north, burning farms, destroying roads, and pillaging villages. All that remained were a few isolated strongholds scattered throughout the land. It has now been nearly a decade since the last wave of barbarians stormed through, and the land breathes a sigh of relief. People are becoming revitalized with the hope that they can once again transform the kingdom back into its former glory.</p><p>Since all the roads were destroyed, the strongholds were left in isolation, so the first order of business was to build a network of roads connecting all the strongholds. Each stronghold thought it would be a reasonable plan to start by building a road to the closest stronghold near it. If there were two strongholds of equal distance, the stronghold whose name comes before the other in the dictionary would be chosen. Each stronghold builds at its own rate, measured in feet/hour. Because they wished to finish as soon as possible, construction happened 24 hours a day, continuously advancing the construction site (the end of the road) towards the destination. Of course, construction on a road would stop if the road ran into another road or a city. At the beginning of the New Year, there was a big celebration, and all the strongholds began construction at the same time.</p><p>Little did the people of Han know that the barbarians had again infiltrated their kingdom and were carefully observing the progress of the roads. The barbarians were curious about the progress of the roads. In particular, they wanted answers to two type of questions.</p><ol><li>After exactly <i>t</i> hours since construction began on the New Year, what is the absolute minimum length of additional roads that still need to be built in order to connect all cities? These additional roads are allowed to join two cities, two construction sites, or a city and a construction site. </li><li>What is the fewest number of hours that must elapse since the New Year before the minimum length of additional roads that still need to be built is at most <i>l</i>? </li></ol><p>Write a program to answer these questions given Han&rsquo;s construction plan.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>There will be several test cases, each representing a possible scenario for Han. The first line of each test case will contain a positive integer number <i>N</i>, the number of strongholds (1 &le; <i>N</i> &le; 2 000). Each of the subsequent <i>N</i> lines will contain a description of a stronghold: a name consisting of letters &lsquo; a&rsquo; &hellip; &lsquo;z&rsquo;, the <i>x</i> and <i>y</i> coordinates of the position of the stronghold (in feet), and the construction rate (in feet/hour). The next lines will contain questions. The first integer on the line is either 1 or 2, representing the type of question. For type 1 questions, the next number is <i>t</i>, the time (in hours) in question. For type 2 questions, the next number is <i>l</i>, the length (in feet) in question. The questions will be terminated by a line with 0.</p><p>The input data is terminated by a line that contains one zero, and should not be processed.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>For each test case, output the answers to each question, formatted as in the sample output. If for question 2, at no point in time will there be only <i>l</i> feet of construction left, then print <tt>NEVER</tt>. All numeric answers should be printed to as many decimal places as you feel necessary. To get credit for the problem, however, your answer must be within 0.01 of our answer.</p></span></div><p class="pst">Sample Input</p><pre class="sio">4
+portland 0 0 3
+seattle 0 10 2
+newyork 20 6 1
+boston 20 0 1
+1 0
+1 2.0
+1 3.0
+2 29
+2 1.0
+0
+2
+bree -10 -10 1
+buckland 10 10 2
+1 5
+0
+0</pre><p class="pst">Sample Output</p><pre class="sio">Kingdom 1
+36.000 feet left at time 0.000
+22.000 feet left at time 2.000
+20.000 feet left at time 3.000
+1.000 hours before 29.000 feet left
+NEVER
+
+Kingdom 2
+13.284 feet left at time 5.000
+
+End</pre><p class="pst">

@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US">We are given N squares in the coordinate plane whose sides are parallel to the coordinate axes. All the corners have integer coordinates and the squares do not touch or overlap.
+<br>You are required to count the number of squares visible from the origin point O, O = (0, 0).
+<br>A square is visible from the origin point O if there are two distinct points A and B on one of its sides such that the interior of the triangle OAB has no common points with any of the remaining squares.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains the integer N, 1 <= N <= 1000, the number of squares.
+<br>Each of the following N lines describes a square by specifying integers X, Y and L separated by single blank characters, 1 <= X, Y, L <= 10000. X and Y are coordinates of the lower left corner (the corner with the least X and Y coordinates) and L is the side length.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The first and the only line of the output should contain the number of squares that are visible from the origin.</div><p class="pst">Sample Input</p><pre class="sio">3
+2 6 3
+1 4 1
+3 4 1
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+</pre><p class="pst">

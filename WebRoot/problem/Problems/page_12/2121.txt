@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">In this problem, you will be given one or more integers in English. Your task is to translate these numbers into their integer representation. The numbers can range from negative 999,999,999 to positive 999,999,999. The following is an exhaustive list of English words that your program must account for: 
+<br><tt>negative, zero, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, thirty, forty, fifty, sixty, seventy, eighty, ninety, hundred, thousand, million </tt>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several instances. Notes on input: 
+<br><ol><li>Negative numbers will be preceded by the word negative. 
+<br><li>The word "hundred" is not used when "thousand" could be. For example, 1500 is written "one thousand five hundred", not "fifteen hundred". </ol>
+<br>The input is terminated by an empty line. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The answers are expected to be on separate lines with a newline after each.</div><p class="pst">Sample Input</p><pre class="sio">six
+negative seven hundred twenty nine
+one million one hundred one
+eight hundred fourteen thousand twenty two
+
+</pre><p class="pst">Sample Output</p><pre class="sio">6
+-729
+1000101
+814022
+</pre><p class="pst">

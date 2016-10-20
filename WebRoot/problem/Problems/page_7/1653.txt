@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">The text on a sticker consists of words formed from small and capital Latin letters. Words are separated by spaces, line breaks, and/or the following punctuation marks: ",", ".", "!", "?".
+<br>
+<br>There may be any number of spaces and empty lines before and after the words, but there is no more than one punctuation mark after each word. Sticker is printed with monospace font, so every character occupies on the paper a rectangular area of fixed size. Sticker itself is a minimal rectangle enclosing the text plus a margin of one character in width.
+<br>
+<br>Many copies of the sticker are to be printed, and to minimize paper consumption the sticker should be made as small in area as possible. Consider, for example, the sticker with the following text:
+<br>Our pink elephants have great size and a small price. Buy our elephants!
+<br>
+<br>Printed in one line, this sticker will have an area of (72 + 2) * (1 + 2) = 222 characters. On the other hand, if printed in four lines, like this:
+<br><pre>....................
+<br>.Our.pink.elephants.
+<br>.have.great.size....
+<br>.and.a.small.price..
+<br>.Buy.our.elephants!.
+<br>....................</pre>
+<br>the sticker will only require (18 + 2) * (4 + 2) = 120 characters.
+<br>
+<br>You objective is, given the text of a sticker, to break it into lines so as to achieve the smallest possible area for it. Line break may be inserted after any word or punctuation mark, but not before a punctuation mark. One space must separate each word from the preceding word or punctuation on the same line. You do not have to preserve other spaces or line breaks in the input.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains one or more lines of the sticker text. The first line is an integer indicating the lines to follow. Text contains only the following characters: "A" to "Z", "a" to "z", ",", ".", "!", "?", spaces and line ends. The text length is less or equal than 10000 characters. The text always contains some non-space characters, and the first of them is always a letter.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output must contain a single integer number - the area of the smallest sticker.</div><p class="pst">Sample Input</p><pre class="sio">Our     pink
+Elephants
+have great size and a
+   small  price    .
+      Buy our elephants !
+</pre><p class="pst">Sample Output</p><pre class="sio">120</pre><p class="pst">

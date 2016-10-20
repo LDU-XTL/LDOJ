@@ -1,0 +1,28 @@
+</p><div class="ptx" lang="en-US">TN had never given up the thought that rebellion was always a possibility since that was how he came to de throne. He was worried about that Dzx might someday pay him back in his own coin. Therefore he elaborated a plot of sending killers to assassinate Dzx. In order to keep everything secret and guard against his enemies' spying, TN used a special scheme to encrypt the order of assassination before having it sent to the killers. The encryption scheme was as follows:
+<br><OL><LI>Encode the plot as a real sequence <i>&alpha;</i> of length <i>n</i> where <i>n</i> perfectly factors over the first eight prime numbers;
+<br><LI>Choose another real sequence <i>&beta;</i> of the same length;
+<br><LI>Calculate a real sequence <i>&gamma;</i> as the result of encryption according to the steps below:
+<br><OL TYPE=i><LI>Let <i>&gamma;</i> be an empty sequence;
+<br><LI>Write <i>&beta;</i> in reversed order;
+<br><LI>Rotate <i>&beta;</i> to the right by one place;
+<br><LI>Append the sum of element-wise products of <i>&alpha;</i> and <i>&beta;</i> to the end of <i>&gamma;</i>;
+<br><LI>Repeat the steps iii. and iv. until <i>&gamma;</i> has length <i>n</i>.</OL></OL>Though his most intimate advisor had warned that this scheme was unsafe and might cause the plot to be leaked, but TN obstinately stuck to it.
+<br><P>However, in the killers' eyes, the scheme was simply too safe rather than unsafe that they failed to decrypt the plot. They looked for help with little care about secrecy. Dzx was just lucky to come across them. He got and decrypted the plot and eventually survived the assassination. Nevertheless, the result was satisfactory to TN for Dzx had never been heard of since then.
+<br><P>From some rare records found in written history only the fact that what Dzx got was the sequences <i>&beta;</i> and <i>&gamma;</i> along with the encryption scheme was known. The sequences and the scheme were once lost. But through archaeologists' great effort they are rediscovered. From them the sequence <i>&alpha;</i> can be calculated, which will enable the historians to know more about TN.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of a single test case. On the first line of input there is a positive integer <i>n</i> not greater than 2<sup>17</sup> that perfectly factors over the first eight prime numbers. It is the length of the sequences. Then follow 2<i>n</i> lines each containing a real number. The first <i>n</i> lines give the sequence <i>&beta;</i> and the next <i>n</i> lines the sequence <i>&gamma;</i>.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Your solution should output <i>n</i> lines. These <i>n</i> lines should give the sequence <i>&alpha;</i> in the same format as sequences <i>&beta;</i> and <i>&gamma;</i> are given. All real numbers should be rounded to four decimal places.
+<br></div><p class="pst">Sample Input</p><pre class="sio">4
+1
+2
+3
+4
+26
+28
+26
+20
+</pre><p class="pst">Sample Output</p><pre class="sio">1.0000
+2.0000
+3.0000
+4.0000
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">It is recommended that your solution uses standard C I/O interface to achieve better efficiency and avoid unpredictable behaviours.
+<br>That an integer <i>n</i> perfectly factors over the first eight prime numbers means that <i>n</i> = 2<sup><i>a</i></sup> * 3<sup><i>b</i></sup> * 5<sup><i>c</i></sup> * 7<sup><i>d</i></sup> * 11<sup><i>e</i></sup> * 13<sup><i>f</i></sup> * 17<sup><i>g</i></sup> * 19<sup><i>h</i></sup> where <i>a</i>, <i>b</i>, <i>c</i>, <i>d</i>, <i>e</i>, <i>f</i>, <i>g</i> and <i>h</i> are all non-negative integers.</div><p class="pst">

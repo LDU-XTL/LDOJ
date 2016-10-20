@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">You are given N light sources on the plane, each of which illuminates the angle of 2π/N with the vertex in the source point (including its sides).
+<br><center><img src=images/1902_1.jpg></center>
+<br>You must choose the direction of the illuminated angle for each of these sources, so that the whole plane is illuminated. It can be proved that this is always possible.
+<br>A light source itself casts no shadow and does not interfere with light beams from the other sources.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains N -- the number of light sources (3 <= N <= 30). Next N lines contain two integer numbers each -- the coordinates of the light sources. All coordinates do not exceed 100 by their absolute value. No two sources coincide.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Print N real numbers - for each light source specify an angle that the bisector of the illuminated angle makes with OX axis, counterclockwise. Print at least six digits after the decimal point. No angle must exceed 100π by its absolute value.
+<br><center><img src=images/1902_2.jpg></center></div><p class="pst">Sample Input</p><pre class="sio">3
+0 0
+2 0
+1 1
+</pre><p class="pst">Sample Output</p><pre class="sio">0.52359877559829887
+2.61799387799149437
+4.71238898038468986</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><center><img src=images/1902_3.jpg></center></div><p class="pst">

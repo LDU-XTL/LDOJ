@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US"><div><p>Recall that at the Canadian Carnival Competition (CCC), a popular game was Bowling for Numbers. A large number of bowling pins were lined up in a row. Each bowling pin had a number printed on it, which was the score obtained from knocking over that pin. The player was given a number of bowling balls; each bowling ball was wide enough to knock over a few consecutive and adjacent pins.</p><p>For example, one possible sequence of pins was:</p><p>2 8 5 1 9 6 9 3 2</p><p>If Alice was given two balls, each able to knock over three adjacent pins, the maximum score Alice could achieve would be 39, the sum of two throws: 2+8+5 = 15, and 9+6+9 = 24.</p><p>Since many, including you, have mastered the art of throwing balls at pins, the old and wise members of the Canadian Carnival Competition Committee have decided to make the game slightly more difficult by introducing the concept of <i>penalty pins</i>.</p><p>Penalty pins are pins with a <i>negative score</i>, such that a player's score decreases when they are knocked over. This can change the player's strategy, as the player can use the empty spaces to the left and right of the pins, as well as spaces created by previous throws, to avoid hitting penalty pins. Consider the following example:</p><p>2 8 -5 3 5 8 4 8 -6</p><p>If Alice was given three balls, each able to knock over three adjacent pins, the maximum score Alice could achieve would be 38, the sum of three throws: 2 + 8, 3 + 5 + 8, and 4 + 8. Alice's first throw is deliberately to the left and catches only the leftmost two pins, avoiding the -5. Alice's second throw hits 3 5 8, and her third throw catches the remaining 4 8, going through the space created by her second throw to avoid the -6.</p><p>Bob has a strategy where he picks the shot that gives him the most score, then repeatedly picks the shot that gives him the most score from the remaining pins. This strategy doesn't always yield the maximum score, but is close. On the test data, such a strategy would get a score of 20%.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>Input consists of a series of test cases. The first line of input is <i>t</i>, 1 &le; <i>t</i> &le; 10, indicating the number of test cases in the file.</p><p>The first line of each test case contains three integers. First is the integer <i>n</i>, 1 &le; <i>n</i> &le; 10000, indicating the number of bowling pins. The second integer, <i>k</i>, 1 &le; <i>k</i> &le; 500, giving the number of bowling balls available to each player. The third and final integer is <i>w</i>, 1 &le; <i>w</i> &le; 100, the width of the bowling ball (the number of adjacent pins it can knock over).</p><p>The next <i>n</i> lines of each test case each contain a single integer giving the score of the pins, in order. The scores are in the range -10000...10000 inclusive.</p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output the maximum achievable score by the player. This score is guaranteed to be less than one billion.</p></div><p class="pst">Sample Input</p><pre class="sio">2
+9 2 3
+2
+8
+5
+1
+9
+6
+9
+3
+2
+9 3 3
+2
+8
+-5
+3
+5
+8
+4
+8
+-6</pre><p class="pst">Sample Output</p><pre class="sio">39
+38</pre><p class="pst">

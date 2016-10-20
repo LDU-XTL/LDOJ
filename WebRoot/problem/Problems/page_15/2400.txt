@@ -1,0 +1,43 @@
+</p><div class="ptx" lang="en-US">Suppose some supervisors each get to hire a new person for their department. There are N people to be placed in these N departments. Each supervisor interviews all N people, and ranks them according to how much she wants each of them in her department (1 being "really want" and N being "really don't want"). In turn, each of the N candidates ranks each of the supervisors as to how much that person would like to work for that supervisor (again, 1 is "really want to work for him/her" and N is "really don't want to work for him/her"). Given the scores that each supervisor has for each candidate, and the scores each candidate has for each manager, write a computer program to determine the "best match" of candidates to supervisors. The "best match" is determined by finding the distribution that leads to the highest overall (i.e. sum of) satisfaction for all people. The closer a person is to her number one choice, the better. If everyone gets their number one choice, the average difference will be 0. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input will contain a single integer greater than 0 specifying the number of test cases.
+<br>
+<br>The next line will contain a single integer value N, 0 < N < 15, representing the number of supervisors (and the number of employees - there are N supervisors and N employees). The next N lines will be the preferences of each of the N supervisors. Each line will contain N integer entries (1 through N for employees 1 through N), each separated by a space character, that represents the preferences of that supervisor from most preferred to least preferred. More specifically, the first entry on the line will represent that supervisor's first choice, the second entry her second, and so on. The next N lines will be the preferences of the N employees, in the same format as the supervisors.
+<br>
+<br>All lines of data in the input file will end with an empty line. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, write the test case number (starting with 1) followed by the best average difference written to six digits of precision to the right of the decimal point. On the next line, show which best match it was (starting with 1). On the next N lines, show each supervisor (starting with 1) followed by the employee with which she was matched (1 per line). NOTE: if there is more than one best match, matches should be listed in ascending permuted order (see sample output).
+<br>
+<br>Separate each data set with an empty line.</div><p class="pst">Sample Input</p><pre class="sio">2
+7
+1 2 3 4 5 6 7
+2 1 3 4 5 6 7
+3 1 2 4 5 6 7
+4 1 2 3 5 6 7
+5 1 2 3 4 6 7
+6 1 2 3 4 5 7
+7 1 2 3 4 5 6
+1 2 3 4 5 6 7
+2 1 3 4 5 6 7
+3 1 2 4 5 6 7
+4 1 2 3 5 6 7
+5 1 2 3 4 6 7
+6 1 2 3 4 5 7
+7 1 2 3 4 5 6
+
+2
+1 2
+2 1
+1 2
+1 2
+</pre><p class="pst">Sample Output</p><pre class="sio">Data Set 1, Best average difference: 0.000000
+Best Pairing 1
+Supervisor 1 with Employee 1
+Supervisor 2 with Employee 2
+Supervisor 3 with Employee 3
+Supervisor 4 with Employee 4
+Supervisor 5 with Employee 5
+Supervisor 6 with Employee 6
+Supervisor 7 with Employee 7
+
+Data Set 2, Best average difference: 0.250000
+Best Pairing 1
+Supervisor 1 with Employee 1
+Supervisor 2 with Employee 2
+</pre><p class="pst">

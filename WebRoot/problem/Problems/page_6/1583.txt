@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">Let's face it, most students who do a good job on programming contest problems aren't the best writers. However, there is no artistic process that a good programmer can't improve with a little program to automate the process.
+<br>In this case, your writing problem is a tendency to use words too often. To help check for this,you are going to write a program that will search your papers for the word or words you use most often.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists entirely of your paper. Each line will be under 80 characters and will contain words, punctuation, and numbers. Words consist of the characters {a-z,A-Z,0-9}. Words are separated by whitespace, end-of-line, and punctuation. The punctuation that may be found includes the characters <pre>,.;\'`\"()/:-</pre>.No other characters will be found in the input.
+<br>The input ends at end-of-file.
+<br>Word comparisons are case-insensitive.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Your output begins with the line:
+<br>< n > occurrences
+<br>where n is the number of times the most frequently appearing word occurs.
+<br>Following that line will be the words that occurred n times, one per line. The words must be listed in alphabetic order.</div><p class="pst">Sample Input</p><pre class="sio">Fourscore and seven years ago our fathers brought forth on this
+continent a new nation, conceived in liberty and dedicated to the
+proposition that all men are created equal. Now we are engaged in
+a great civil war, testing whether that nation or any nation so
+conceived and so dedicated can long endure.</pre><p class="pst">Sample Output</p><pre class="sio">3 occurrences
+and
+nation</pre><p class="pst">

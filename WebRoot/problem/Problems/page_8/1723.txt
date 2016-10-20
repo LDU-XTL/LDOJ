@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">N soldiers of the land Gridland are randomly scattered around the country. 
+<br>A position in Gridland is given by a pair (x,y) of integer coordinates. Soldiers can move - in one move, one soldier can go one unit up, down, left or right (hence, he can change either his x or his y coordinate by 1 or -1). 
+<br>
+<br>The soldiers want to get into a horizontal line next to each other (so that their final positions are (x,y), (x+1,y), ..., (x+N-1,y), for some x and y). Integers x and y, as well as the final order of soldiers along the horizontal line is arbitrary. 
+<br>
+<br>The goal is to minimise the total number of moves of all the soldiers that takes them into such configuration. 
+<br>
+<br>Two or more soldiers must never occupy the same position at the same time. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains the integer N, 1 <= N <= 10000, the number of soldiers. 
+<br>The following N lines of the input contain initial positions of the soldiers : for each i, 1 <= i <= N, the (i+1)<sup>st</sup> line of the input file contains a pair of integers x[i] and y[i] separated by a single blank character, representing the coordinates of the ith soldier, -10000 <= x[i],y[i] <= 10000. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The first and the only line of the output should contain the minimum total number of moves that takes the soldiers into a horizontal line next to each other. </div><p class="pst">Sample Input</p><pre class="sio">5
+1 2
+2 2
+1 3
+3 -2
+3 3
+</pre><p class="pst">Sample Output</p><pre class="sio">8</pre><p class="pst">

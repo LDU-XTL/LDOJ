@@ -1,0 +1,26 @@
+</p><div class="ptx" lang="en-US">After their royal wedding, Jiajia and Wind hid away in XX Village, to enjoy their ordinary happy life. People in XX Village lived in beautiful huts. There are some pairs of huts connected by bidirectional roads. We say that huts in the same pair directly connected. XX Village is so special that we can reach any other huts starting from an arbitrary hut. If each road cannot be walked along twice, then the route between every pair is unique.
+<br>
+<br>Since Jiajia earned enough money, Wind became a housewife. Their children loved to go to other kids, then make a simple call to Wind: 'Mummy, take me home!'
+<br>
+<br>At different times, the time needed to walk along a road may be different. For example, Wind takes 5 minutes on a road normally, but may take 10 minutes if there is a lovely little dog to play with, or take 3 minutes if there is some unknown strange smell surrounding the road.
+<br>
+<br>Wind loves her children, so she would like to tell her children the exact time she will spend on the roads. Can you help her?
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains three integers n, q, s. There are n huts in XX Village, q messages to process, and Wind is currently in hut s. n < 100001 , q < 100001. 
+<br>
+<br>The following n-1 lines each contains three integers a, b and w. That means there is a road directly connecting hut a and b, time required is w. 1<=w<= 10000. 
+<br>
+<br>The following q lines each is one of the following two types:
+<br>
+<br>Message A: 0 u
+<br>    A kid in hut u calls Wind. She should go to hut u from her current position.
+<br>Message B: 1 i w 
+<br>    The time required for i-th road is changed to w. Note that the time change will not happen when Wind is on her way. The changed can only happen when Wind is staying somewhere, waiting to take the next kid.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each message A, print an integer X, the time required to take the next child.</div><p class="pst">Sample Input</p><pre class="sio">3 3 1
+1 2 1
+2 3 2
+0 2
+1 2 3
+0 3
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+3
+</pre><p class="pst">

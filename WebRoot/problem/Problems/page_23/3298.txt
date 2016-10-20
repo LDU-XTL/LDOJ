@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US"><p>I have a sequence <i>Fred</i> of length <i>n</i> comprised of integers between 1 and <i>n</i> inclusive. The elements of <i>Fred</i> are pairwise distinct. I want to find a subsequence <i>Mary</i> of <i>Fred</i> that is as long as possible and has the property that: </p><p><i>Mary</i><sub>0</sub> &gt; <i>Mary</i><sub>1</sub> &lt; <i>Mary</i><sub>2</sub> &gt; <i>Mary</i><sub>3</sub> &lt; ... </p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of input will contain a single integer <i>T</i> expressed in decimal with no leading zeroes. <i>T</i> will be at most 50. <i>T</i> test cases will follow.</p><p>Each test case is contained on a single line. A line describing a test case is formatted as follows: </p><p><i>n</i> <i>Fred</i><sub>0</sub> <i>Fred</i><sub>1</sub> <i>Fred</i><sub>2</sub> ... <i>Fred</i><sub><i>n</i>-1</sub>. </p><p>where <i>n</i> and each element of <i>Fred</i> is an integer expressed in decimal with no leading zeroes. No line will have leading or trailing whitespace, and two adjacent integers on the same line will be separated by a single space. n will be at most 30000. </p></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output a single integer followed by a newline --- the length of the longest subsequence <i>Mary</i> of <i>Fred</i> with the desired properties. </div><p class="pst">Sample Input</p><pre class="sio">4
+5 1 2 3 4 5
+5 5 4 3 2 1
+5 5 1 4 2 3
+5 2 4 1 3 5</pre><p class="pst">Sample Output</p><pre class="sio">1
+2
+5
+3</pre><p class="pst">

@@ -1,0 +1,29 @@
+</p><div class="ptx" lang="en-US">Double Patience is a single player game played with a standard 36-card deck. The cards are shuffled and laid down on a table in 9 piles of 4 cards each, faces up. 
+<br>
+<br>After the cards are laid down, the player makes turns. In a turn he can take top cards of the same rank from any two piles and remove them. If there are several possibilities, the player can choose any one. If all the cards are removed from the table, the player wins the game, if some cards are still on the table and there are no valid moves, the player loses. 
+<br>
+<br>George enjoys playing this patience. But when there are several possibilities to remove two cards, he doesn't know which one to choose. George doesn't want to think much, so in such case he just chooses a random pair from among the possible variants and removes it. George chooses among all possible pairswith equal probability. 
+<br>
+<br>For example, if the top cards are KS, KH, KD, 9H, 8S, 8D, 7C, 7D, and 6H, he removes any particular pair of (KS, KH), (KS, KD), (KH, KD), (8S, 8D), and (7C, 7D) with the equal probability of 1/5. 
+<br>
+<br>Once George's friend Andrew came to see him and noticed that he sometimes doesn't act optimally. George argued, that it is not important - the probability of winning any given patience with his strategyis large enough. 
+<br>
+<br>Help George to prove his statement - given the cards on the table in the beginning of the game, find out what is the probability of George winning the game if he acts as described. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains nine lines. Each line contains the description of four cards that form a pile in the beginning of the game, from the bottom card to the top one. 
+<br>
+<br>Each card is described with two characters: one for rank, one for suit. Ranks are denoted as '6' for six, '7' for seven, '8' for eight, '9' for nine, 'T' for ten, 'J' for jack, 'Q' for queen, 'K' for king, and 'A' for ace. 
+<br>
+<br>Suits are denoted as 'S' for spades, 'C' for clubs, 'D' for diamonds, and 'H' for hearts. For example, "KS" denotes the king of spades. 
+<br>
+<br>Card descriptions are separated from each other by one space. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Output one real number - the probability that George wins the game if he plays randomly. Your answer must be accurate up to 10<sup>-6</sup>. </div><p class="pst">Sample Input</p><pre class="sio">AS 9S 6C KS
+JC QH AC KH
+7S QD JD KD
+QS TS JS 9H
+6D TD AD 8S
+QC TH KC 8D
+8C 9D TC 7C
+9C 7H JH 7D
+8H 6S AH 6H
+</pre><p class="pst">Sample Output</p><pre class="sio">0.589314
+</pre><p class="pst">

@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US"><IMG hspace=10 src=images/2405_1.jpg align=right vspace=10> <IMG hspace=10 src=images/2405_2.jpg align=left vspace=10>When chomping a tree the beaver cuts a very specific shape out of the tree trunk. What is left in the tree trunk looks like two frustums of a cone joined by a cylinder with the diameter the same as its height. A very curious beaver tries not to demolish a tree but rather sort out what should be the diameter of the cylinder joining the frustums such that he chomped out certain amount of wood. You are to help him to do the calculations. 
+<br>We will consider an idealized beaver chomping an idealized tree. Let us assume that the tree trunk is a cylinder of diameter D and that the beaver chomps on a segment of the trunk also of height D. What should be the diameter d of the inner cylinder such that the beaver chmped out V cubic units of wood? </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains multiple cases each presented on a separate line. Each line contains two integer numbers D and V separated by whitespace. D is the linear units and V is in cubic units. V will not exceed the maximum volume of wood that the beaver can chomp. A line with D=0 and V=0 follows the last case. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case, one line of output should be produced containing one number rounded to three fractional digits giving the value of d measured in linear units. </div><p class="pst">Sample Input</p><pre class="sio">10 250
+20 2500
+25 7000
+50 50000
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">8.054
+14.775
+13.115
+30.901
+</pre><p class="pst">

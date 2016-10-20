@@ -1,0 +1,5 @@
+</p><div class="ptx" lang="en-US">For each three prime numbers p1, p2 and p3, let's define Hamming sequence Hi(p1, p2, p3), i=1, ... as containing in increasing order all the natural numbers whose only prime divisors are p1, p2 or p3.
+<br>
+<br>For example, H(2, 3, 5) = 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 16, 18, 20, 24, 25, 27, ...
+<br>
+<br>So H5(2, 3, 5)=6.</div><p class="pst">Input</p><div class="ptx" lang="en-US">In the single line of input file there are space-separated integers p1 p2 p3 i.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output file must contain the single integer - Hi(p1, p2, p3). All numbers in input and output are less than 10^18.</div><p class="pst">Sample Input</p><pre class="sio">7 13 19 100</pre><p class="pst">Sample Output</p><pre class="sio">26590291</pre><p class="pst">

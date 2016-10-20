@@ -1,0 +1,28 @@
+</p><div class="ptx" lang="en-US">Dave Johnson is a book collector. Over the years, he collected so many books that he decided he needed to buy some new bookcases. He bought enough cases, of different quality, to fit all of his books. One problem remained, however. He wanted to put his favorite books in a special display on the top shelf of his best bookcase. This shelf is wide enough to fit at most 10 books. 
+<br>  
+<br>This would normally be an easy task, but Dave is particular about the way he displays his favorite books. Not only must they be sorted alphabetically by title, but also there must never be two books next to each other that have the same letter in the same position in the title. Note that Dave looks only at alphabetical characters in the titles of his books, skipping spaces, apostrophes, etc., and he ignores the case of the letters. Thus, in the title "Portnoy's Complaint", 's' is the 8th character, and 'c' is the 9th character. As an example, "The Grapes Of Wrath" and "One Flew Over The Cuckoo's Nest" cannot be next to each other since the third letter of each title is the letter 'e'. 
+<br>  
+<br>In order to help make this decision, Dave has assigned an emotional value to each of his books. Given a list of titles and the emotional value of each book, your job is to help Dave decide which books should go on his top shelf so as to maximize the total emotional value of all of the books. </div><p class="pst">Input</p><div class="ptx" lang="en-US">There will be one test case in each input file. The first line will contain an integer N (10 <= N <= 2500), specifying the number of books that are candidates for Dave's top shelf. The next N lines will each contain an integer E and a string S, separated by a single space. E is an integer no larger than 200 that represents the emotional value for Dave of the book with title S. Note that S can have an arbitrary number of spaces, but will not exceed 30 characters. S is guaranteed to contain at least one alphabetical character. Input should be read from stdin. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The first line of the output should contain an integer M giving the number of books on Dave's top shelf. The second line should give the total emotional value of all of the books on the shelf. The next M lines should give the titles of the books on the shelf, in lexicographic order. If there is more than one solution, any one will do. Output should be written to stdout. </div><p class="pst">Sample Input</p><pre class="sio">12
+117 The Pearl
+42 L'Etranger
+135 Hamlet
+100 War And Peace
+55 The Prince
+175 Of Mice And Men
+200 The Grapes Of Wrath
+120 Ulysses
+87 For Whom The Bell Tolls
+10 Oliver Twist
+50 Snow Crash
+110 Great Expectations
+</pre><p class="pst">Sample Output</p><pre class="sio">8
+969
+For Whom The Bell Tolls
+Great Expectations
+Hamlet
+L'Etranger
+Of Mice And Men
+The Grapes Of Wrath
+Ulysses
+War And Peace
+</pre><p class="pst">

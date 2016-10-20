@@ -1,0 +1,28 @@
+</p><div class="ptx" lang="en-US">Given is a simple but not necessarily convex polygon. Given is also a line in the plane. If the polygon is cut along the line then we may get several smaller polygons. Your task is to find the length of the cut, that is the total length of the segments in the intersection of the line and the polygon. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of a number of cases. The data of each case appears on a number of input lines, the first of which contains two non negative integers n and m giving the number of the vertices of the polygon and the number of cutting lines to consider, 3 <= n <= 1000. The following n lines contain coordinates of the vertices of the polygon; each line contains the x and y coordinates of a vertex. The vertices are given either in clockwise or counterclockwise order. Each of the following m lines of input contains four numbers; these are x and y coordinates of the two points defining the cutting line. If a vertex of the polygon is closer than 1e-8 to the cutting line then we consider that the vertex lies on the cutting line. 
+<br>
+<br>Input is terminated by a line with n and m equal to 0. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US"><center><img src=images/2462_1.jpg></center>
+<br>For each cutting line, print the total length of the segments in the intersection of the line and the polygon defined for this test case, with 3 digits after the decimal point. Note: the perimiter of a polygon belongs to the polygon. 
+<br>
+<br>The picture above illustrates the first cutting line for the polygon from the sample. </div><p class="pst">Sample Input</p><pre class="sio">9 5
+0 0
+0 2
+1 1
+2 2
+3 1
+4 2
+5 1
+6 2
+6 0
+-1 2 7.5 1
+0 1 6 1
+0 1.5 6 1.5
+0 2 6 1
+0 0 0 2
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">2.798
+6.000
+3.000
+2.954
+2.000
+</pre><p class="pst">

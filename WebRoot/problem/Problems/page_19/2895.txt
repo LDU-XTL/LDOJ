@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">Using SMS today is more than a pleasing hobby. As the number of messages one sends through this service grows, the need to type them fast is better felt. Sometimes, one wonders how fast a message can be typed. Changing some words to their synonyms, might help type the whole message faster, if we were able to quickly calculate the time needed for a specific message.
+<br>
+<br>In the following, we assume that each message is a string of capital English letters and space character. The letters 'A' through 'Z' are assigned to keys '2' to '9', as in the following figure. To type a letter, one should press its key 1, 2, 3, or 4 times, depending on the position of the letter from left to right.
+<br>
+<br>If two consecutive letters of the message are mapped to one key, one should wait for the first letter to be fixed on the screen and then use the key again to type the second one. For instance, to type the letter 'X', one should press '9' twice. If the next letter of the message is not on the same key, one can continue to type the rest of the message. Otherwise, one has to wait for some time, so that the typed 'X' is fixed, and then the next letter ('W', 'X', 'Y', or 'Z') can be typed. To type whitespace, we use the key '1'.As there is no letter mapped to the key '1', the whitespace needs no time to be fixed. 
+<br><img src=images/2895_1.jpg>
+<br>You are given the time needed to press any key, and the time one should wait for a letter to be fixed. Your program should find the minimum time needed to type a nonempty string, given the above rules.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input file contains multiple test cases. The first line of the input, contains t, the number of test cases that follow. Each of the following t blocks, describes a test case.
+<br>
+<br>The first line of each block contains p and w (1 <= p,w <= 1000), which show the amount of time in milliseconds for pressing a letter and waiting for it to be fixed, respectively. The second line contains a non-empty string of length at most 1000, consisting of spaces or capital English letters. There is no leading or trailing spaces in a line.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output one line showing the time needed to type the message in milliseconds.
+<br></div><p class="pst">Sample Input</p><pre class="sio">1
+2 10
+ABBAS SALAM
+</pre><p class="pst">Sample Output</p><pre class="sio">72</pre><p class="pst">

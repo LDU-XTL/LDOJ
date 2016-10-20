@@ -1,0 +1,25 @@
+</p><div class="ptx" lang="en-US">Dr. Tuple is working on the new data-mining application for Advanced Commercial Merchandise Inc. One of the subroutines for this application works with two arrays P and Q containing N records of data each (records are numbered from 0 to N - 1). Array P contains hash-like structure with keys. Array P is used to locate records for processing and the data for the corresponding record is later retrieved from the array Q. 
+<br>
+<br>All records in array P have a size of S<sub>P</sub> bytes and records in array Q have size of S<sub>Q</sub> bytes. Dr. Tuple needs to implement this subroutine with the highest possible performance because it is a hot-spot of the whole data-mining application. However, S<sub>P</sub> and S<sub>Q</sub> are only known at run-time of application which complicates or makes impossible to make certain well-known compile-time optimizations. 
+<br>
+<br>The straightforward way to find byte-offset of i-th record in array P is to use the following formula: 
+<br><center>Pofs(i) = S<sub>P</sub> * i,       (1)</center>
+<br>and the following formula for array Q: 
+<br><center>Qofs(i) = S<sub>Q</sub> * i.       (2)</center>
+<br>However, multiplication computes much slower than addition or subtraction in modern processors. Dr. Tuple avoids usage of multiplication while scanning array P by keeping computed byte-offset Pofs(i) of i-th record instead of its index i in all other data-structures of data-mining application. He uses the following simple formulae when he needs to compute byte-offset of the record that precedes or follows i-th record in array P: 
+<br><center>Pofs(i + 1) = Pofs(i) + S<sub>P</sub>
+<br>Pofs(i - 1) = Pofs(i) - S<sub>P</sub></center>
+<br>Whenever a record from array P is located by either scanning of the array or by taking Pofs(i) from other data structures, Dr. Tuple needs to retrieve information from the corresponding record in array Q. To access record in array Q its byte-offset Qofs(i) needs to be computed. One can immediately derive formula to compute Qofs(i) with known Pofs(i) from formulae (1) and (2): 
+<br><center>Qofs(i) = Pofs(i) / S<sub>P</sub> * S<sub>Q</sub>       (3)</center>
+<br>Unfortunately, this formula not only contains multiplication, but also contains division. Even though only integer division is required here, it is still an order of magnitude slower than multiplication on modern processors. If coded this way, its computation is going to consume the most of CPU time in data-mining application for ACM Inc. 
+<br>
+<br>After some research Dr. Tuple has discovered that he can replace formula (3) with the following fast formula: 
+<br><center>Qofs'(i) = (Pofs(i) + Pofs(i) << A) >> B       (4)</center>
+<br>where A and B are non-negative integer numbers, "<< A" is left shift by A bits (equivalent to integer multiplication by 2<sup>A</sup> ), " >> B" is right shift by B bits (equivalent to integer division by 2<sup>B</sup> ). 
+<br>This formula is an order of magnitude faster than (3) to compute, but it generally cannot always produce the same result as (3) regardless of the choice for values of A and B. It still can be used if one is willing to sacrifice some extra memory. 
+<br>
+<br>Conventional layout of array Q in memory (using formula (2)) requires N * S<sub>Q</sub> bytes to store the entire array. Dr. Tuple has found that one can always choose such K that if he allocates K bytes of memory for the array Q (where K >= N * S<sub>Q</sub> ) and carefully selects values for A and B, the fast formula (4) will give non-overlapping storage locations for each of the N records of array Q. 
+<br>
+<br>Your task is to write a program that finds minimal possible amount of memory K that needs to be allocated for array Q when formula (4) is used. Corresponding values for A and B are also to be found. If multiple pairs of values for A and B give the same minimal amount of memory K, then the pair where A is minimal have to be found, and if there is still several possibilities, the one where B is minimal. You shall assume that integer registers that will be used to compute formula (4) are wide enough so that overflow will never occur. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of three integer numbers N , S<sub>P</sub>, and S<sub>Q</sub> separated by spaces (1 <= N <= 2<sup>20</sup>, 1 <= S<sub>P</sub> <= 2<sup>10</sup>, 1 <= SQ <= 2<sup>10</sup>). </div><p class="pst">Output</p><div class="ptx" lang="en-US">Write to the output file a single line with three integer numbers K, A, and B separated by spaces.</div><p class="pst">Sample Input</p><pre class="sio">1024 7 1</pre><p class="pst">Sample Output</p><pre class="sio">1119 2 5
+</pre><p class="pst">

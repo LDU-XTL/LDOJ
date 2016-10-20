@@ -1,0 +1,40 @@
+</p><div class="ptx" lang="en-US">The Cybersoft Computer Company (a leader in programming languages) has hired you to work on a new programming language named A--. Your task is to work on the array mapping tasks of the language. You will take an array reference such as x[5,6] and map it to an actual physical address. In preparation for doing this, you will write a program that will read in several array declarations and references and give the physical address of each reference. The physical address output by the program should be an integer number in base 10. 
+<br>The physical address of an array reference A[i1 , i2 , . . ., iD ] is calculated from the formula C0 + C1i1 + C2i2 + . . . + CDiD, where the constants C0 . . . CD are calculated as specified below.
+<br>
+<br>B = Base address of the array
+<br>D = Number of dimensions in the array
+<br>Ld = Lower bound of dimension d
+<br>Ud = Upper bound of dimension d
+<br>CD = Array element size in bytes 
+<br>Cd = Cd+1 (Ud+1 - Ld+1 + 1) for 1 <= d < D
+<br>C0 = B - C1L1 - C2L2 - . . . - CDLD
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains two positive integers. The first integer specifies N, the number of arrays defined in the data file, and the second integer specifies R, the number of array references for which addresses should be calculated. The next N lines each define an array, one per line, and the following R lines contain one array reference per line for which an address should be calculated.
+<br>
+<br>Each line which defines an array contains, in the following order, the name of the array (which is limited to 10 characters), a positive integer which specifies the base address of the array, a positive integer which specifies the size in bytes of each array element, and D, the number of dimensions in the array (no array will have fewer than 1 or more than 10 dimensions). This is followed on the same line by D pairs of integers which represent the lower and upper bounds, respectively, of dimensions 1 . . . D of the array.
+<br>
+<br>Each line which specifies an array reference contains the name of the array followed by the integer indexes i1, i2, . . ., iD where D is the dimension of the array.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output should contain the array references and the physical addresses. There should be one array reference and physical address per line. The formatting guidelines below must be adhered to.
+<br>
+<br>For each line of output:
+<br>
+<br>1. Output the name of the array
+<br>
+<br>2. Output a left square bracket
+<br>
+<br>3. Output each index value (each pair of indexes should have a single comma and space between them)
+<br>
+<br>4. Output a right square bracket, a space, an equal sign, and another space
+<br>
+<br>5. Output the physical address
+<br>
+<br></div><p class="pst">Sample Input</p><pre class="sio">3 4
+ONE 1500 2 2 0 3 1 5
+TWO 2000 4 3 1 4 0 5 5 10
+THREE 3000 1 1 1 9
+ONE 2 4
+THREE 7
+TWO 2 0 6
+TWO 3 3 9</pre><p class="pst">Sample Output</p><pre class="sio">ONE[2, 4] = 1526
+THREE[7] = 3006
+TWO[2, 0, 6] = 2148
+TWO[3, 3, 9] = 2376</pre><p class="pst">

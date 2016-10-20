@@ -1,0 +1,5 @@
+</p><div class="ptx" lang="en-US"><div><p><i>N</i> children standing in circle who are numbered 1 through <i>N</i> clockwise are waiting their candies. Their teacher distributes the candies by in the following way:</p><p>First the teacher gives child No.1 and No.2 a candy each. Then he walks clockwise along the circle, skipping one child (child No.3) and giving the next one (child No.4) a candy. And then he goes on his walk, skipping two children (child No.5 and No.6) and giving the next one (child No.7) a candy. And so on.</p><p>Now you have to tell the teacher whether all the children will get at least one candy?</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input consists of several data sets, each containing a positive integer <i>N</i> (2 &le; <i>N</i> &le; 1,000,000,000).</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each data set the output should be either &quot;YES&quot; or &quot;NO&quot;.</p></div><p class="pst">Sample Input</p><pre class="sio">2
+3 
+4</pre><p class="pst">Sample Output</p><pre class="sio">YES
+NO
+YES</pre><p class="pst">

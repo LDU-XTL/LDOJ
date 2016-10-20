@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">Is this crazy weather the result of mankind's continuous interference in the environment? Or is it simply the normal cycle of climate changes through the ages? No one seems to know for sure, but the fact is that natural phenomena such as tornadoes and hurricanes have been hitting our country with more force and frequence than in past decades. 
+<br>
+<br>One tornado has just hit Silverado Farm, a cattle and milk producer, and made havoc. The barn roof was torn, several trees were uprooted, the farm truck was overturned... But the worst thing is that the tornado destroyed several sections of the fence that surrounded the property. The fence was very well built, with concrete posts every two meters, and barbed wire enclosing the whole farm perimeter (the perimeter, in meters, is an even number, making the fence perfectly regular). 
+<br>
+<br>Now several posts are broken or missing, and there are gaps in the fence. To prevent the cattle from getting out of the property, the fence must be restored as quickly as possible. Reconstructing the fence to its original form, with concrete posts, will take a long time. In the meantime, the farm owners decided to close the gaps with a temporary fence, made with wooden posts. Wooden posts will be placed in exactly the same spots where missing/broken concrete posts were/are. However, in order to make the temporary reconstruction faster and less expensive, the owners decided to use fewer posts: a wooden post will be used to replace a missing/broken concrete post only if the length of the barbed wired needed to close the distance to the next post (wooden or concrete) exceeds four meters.
+<br>
+<br><center><img src="images/2862_1.gif"></center>
+<br>
+<br>Given the description of which posts are missing/broken, you must write a program to determine the smallest number of wooden posts needed to close all the gaps in the fence, according to the owners' decision.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several test cases. The first line of a test case contains one integer N indicating the number of original concrete posts in the fence (5 <= N <= 5000). The second line of a test case contains N integers Xi indicating the state of each concrete post after the tornado (0 <= Xi <= 1 for 1 <= i <= N). If Xi = 1 post i is in good condition, if Xi = 0 post i is broken or missing. Note that post N is next to post 1. The end of input is indicated by N = 0.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case in the input your program must produce one line of output, containing an integer indicating the smallest number of wooden posts that are needed to restore the fence, according to the owners' decision.</div><p class="pst">Sample Input</p><pre class="sio">10
+1 0 0 1 0 0 1 0 1 1
+11
+1 0 0 1 0 0 0 1 1 0 1
+12
+0 0 0 0 0 1 1 0 0 0 1 1
+0</pre><p class="pst">Sample Output</p><pre class="sio">2
+2
+3</pre><p class="pst">

@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US"><p>Farmer John has noticed that the quality of milk given by his cows varies from day to day. On further investigation, he discovered that although he can't predict the quality of milk from one day to the next, there are some regular patterns in the daily milk quality.</p><p>To perform a rigorous study, he has invented a complex classification scheme by which each milk sample is recorded as an integer between 0 and 1,000,000 inclusive, and has recorded data from a single cow over <i>N</i> (1 &le; <i>N</i> &le; 20,000) days. He wishes to find the longest pattern of samples which repeats identically at least K (2 &le; <i>K</i> &le; <i>N</i>) times. This may include overlapping patterns -- 1 2 3 2 3 2 3 1 repeats 2 3 2 3 twice, for example.</p><p>Help Farmer John by finding the longest repeating subsequence in the sequence of samples. It is guaranteed that at least one subsequence is repeated at least <i>K</i> times.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US">Line 1: Two space-separated integers: <i>N</i> and <i>K</i>
+<br>Lines 2..<i>N</i>+1: <i>N</i> integers, one per line, the quality of the milk on day <i>i</i> appears on the <i>i</i>th line.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Line 1: One integer, the length of the longest pattern which occurs at least <i>K</i> times</div><p class="pst">Sample Input</p><pre class="sio">8 2
+1
+2
+3
+2
+3
+2
+3
+1</pre><p class="pst">Sample Output</p><pre class="sio">4</pre><p class="pst">

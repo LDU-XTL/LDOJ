@@ -1,0 +1,30 @@
+</p><div class="ptx" lang="en-US">Last saturday, Paul, Ivo and Nick went to a bowling alley. The hired a lane for one hour, and played three games. In this casual game play, the guys were simply counting the number of games they won: the overall winner would be the one who won the most games. (In case of a tie, they would have had to figure out another way to pronounce the winner.)
+<br>
+<br>This time, Paul won two games and Nick one, so Paul was pronounced the winner. Ivo wondered how it was possible he lost all three games even though he felt his scores were not too bad. So he looked again at the scoreboard and saw this: <table border=1><tr><td>Game</td><td>1</td><td>2</td><td>3</td></tr><tr><td>Paul</td><td>102</td><td>86</td><td>94</td></tr><tr><td>Ivo</td><td>98</td><td>73</td><td>112</td></tr><tr><td>Nick</td><td>95</td><td>84</td><td>125</td></tr></table>
+<br>Paul indeed won two games, and Nick one, but Ivo noted that if he would have played his games in another order, namely 112-98-73, he would have won the two games, and Paul none!
+<br>
+<br>Ivo's remark is not as unreasonable as one might think at first glance: in bowling, each game is played independent of the other players, except perhaps for some psychological side effects. The successive scores of an individual player can also be assumed to be more or less independent and identically distributed.
+<br>
+<br>Ivo wisely kept his remarks to himself last Saturday, but later he started to think about using his idea of 'potential number of wins' as a measure of performance. He concluded that it would also be interesting to know the minimum number of wins for each player. Also, it would be nice not only to allow permutation of the games of the player whose number of wins is being maximized or minimized, but also permutation of the games of the other players. Finally, Ivo has to define when exactly a player 'wins' a game: a player wins a game if and only if his score is strictly greater than the score of each of the other players.
+<br>
+<br>Ivo asks you to write a program that calculates fro each player i:
+<br><ul><li>mi, the minimal number of games player i would have won, regardless of the permutation of the scores of each individual player and <li>Mi, the maximal number of games player i could have won if the scores of each individual player were permuted optimally to that purpose</ul>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains a single number: the number of test cases to follow. Each test case has the following format:
+<br><ul><li>One line with two integers P and G, separated by a single space, that indicate the number of players and the number of games respectively(2 <= P <= 100, 2 <= G <= 1000).<li>P lines, one for each player, each with G integers, separated by single spaces: the successive scores for that player.</ul> Each score is between 0 and 300 (both inclusive).
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For every test case in the input, the output should contain P lines, one for each player in the input. On the i<sup>th</sup> line should be two integers, separated by a single space: mi, followd by Mi.
+<br></div><p class="pst">Sample Input</p><pre class="sio">2
+3 3
+102 86 94
+98 73 112
+95 84 125
+3 4
+100 110 112 116
+98 112 110 112
+90 98 113 113
+</pre><p class="pst">Sample Output</p><pre class="sio">0 2
+0 2
+1 2
+1 3
+0 2
+1 2
+</pre><p class="pst">

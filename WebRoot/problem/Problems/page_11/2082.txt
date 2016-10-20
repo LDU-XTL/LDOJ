@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Let N be the set of all natural numbers {0 , 1 , 2 , . . . }, and R be the set of all real numbers. wi, hi for i = 1 . . . n are some elements in N, and w0 = 0.
+<br>Define set B = {< x, y > | x, y ∈ R and there exists an index i > 0 such that 0 <= y <= hi ,&sum;<sub>0<=j<=i-1</sub>wj <= x <= &sum;<sub>0<=j<=i</sub>wj}
+<br>Again, define set S = {A| A = WH for some W , H ∈ R<sup>+</sup> and there exists x0, y0 in N such that the set T = { < x , y > | x, y ∈ R and x0 <= x <= x0 +W and y0 <= y <= y0 + H} is contained in set B}.
+<br>Your mission now. What is Max(S)?
+<br>Wow, it looks like a terrible problem. Problems that appear to be terrible are sometimes actually easy.
+<br>But for this one, believe me, it's difficult.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several test cases. For each case, n is given in a single line, and then followed by n lines, each containing wi and hi separated by a single space. The last line of the input is an single integer -1, indicating the end of input. You may assume that 1 <= n <= 50000 and w<sub>1</sub>h<sub>1</sub>+w<sub>2</sub>h<sub>2</sub>+...+w<sub>n</sub>h<sub>n</sub> < 10<sup>9</sup>.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Simply output Max(S) in a single line for each case.</div><p class="pst">Sample Input</p><pre class="sio">3
+1 2
+3 4
+1 2
+3
+3 4
+1 2
+3 4
+-1</pre><p class="pst">Sample Output</p><pre class="sio">12
+14</pre><p class="pst">

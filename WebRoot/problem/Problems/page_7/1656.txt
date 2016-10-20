@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">There is a board with 100 * 100 grids as shown below. The left-top gird is denoted as (1, 1) and the right-bottom grid is (100, 100). 
+<br><center><img src=images/1656_1.jpg></center>
+<br>We may apply three commands to the board:
+<br><pre>
+<br>1.	WHITE  x, y, L     // Paint a white square on the board, 
+<br>                           // the square is defined by left-top grid (x, y)
+<br>                           // and right-bottom grid (x+L-1, y+L-1)
+<br>
+<br>2.	BLACK  x, y, L     // Paint a black square on the board, 
+<br>                           // the square is defined by left-top grid (x, y)
+<br>                           // and right-bottom grid (x+L-1, y+L-1)
+<br>
+<br>3.	TEST     x, y, L    // Ask for the number of black grids 
+<br>                            // in the square (x, y)- (x+L-1, y+L-1) </pre>
+<br>In the beginning, all the grids on the board are white. We apply a series of commands to the board. Your task is to write a program to give the numbers of black grids within a required region when a TEST command is applied.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input is an integer t (1 <= t <= 100), representing the number of commands. In each of the following lines, there is a command. Assume all the commands are legal which means that they won't try to paint/test the grids outside the board.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each TEST command, print a line with the number of black grids in the required region.</div><p class="pst">Sample Input</p><pre class="sio">5
+BLACK 1 1 2
+BLACK 2 2 2
+TEST 1 1 3
+WHITE 2 1 1
+TEST 1 1 3
+</pre><p class="pst">Sample Output</p><pre class="sio">7
+6</pre><p class="pst">

@@ -1,0 +1,35 @@
+</p><div class="ptx" lang="en-US">The "Sorcerer's Stone" is a legendary substance with amazing powers. The stone can transform any metal into pure gold. It also can produce the Elixir of Life, which will make the drinker immortal. Quirrell, a sorcerer with the ambition to be rich and immortal, was searching for this stone urgently and secretly.
+<br>
+<br>Finally Quirrell came to the hiding place of the "Sorcerer's Stone" in a secret cave. It was a large room full of chests. Each chest had a magic stone lying inside, and was marked with the name of the magic stone on the surface. The chest in the center made Quirrell jump out of his skin -- it was just marked with "Sorcerer's Stone".
+<br>
+<br>Quirrell watched this chest carefully, and he found that there are some different concaves on the surface of the chest, which means several specific magic stones are needed to unlock the chest. If he put the correct magic stone in each concave, one stone for one concave, he can open the chest with his mana and get the magic stone in the chest.
+<br>
+<br>Quirrell already has some different magic stones along with him, but he does not have all the stones which he needs to open the chest with the "Sorcerer's Stone", so he should get the stones he needs from other chests, which have similar machinery and can be opened with the stones he already has. Since Quirrel has limited mana, he wants to open minimum number of chests to get the "Sorcerer's Stone".
+<br>
+<br>You can assume that Quirell's magic stones are different, and magic stones lying in different chests are also different. All the magic stones, which are put into the concaves, can be reused.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">There will be several test cases. The first line of each test case contains two integers N and M (1 <= N <= 1000, 1 <= M <= 100), which represent the number of magic stones the sorcerer has and the number of chests in the room. Each of the following N lines contains a string, which is the name of one magic stone the sorcerer has. After that, each of the following M lines describes one chest (of course, including the chest with "Sorcerer's Stone" in) is like this:
+<br><blockquote>Magic Stone 1, Magic Stone 2, ... Magic Stone T: Magic Stone R</blockquote>
+<br>which means Magic Stone R is lying in this chest, and Magic Stone 1, Magic Stone 2, ..., Magic Stone T are needed to open the chest (1 <= T <= 9). You should notice that Magic Stone 1 to T - 1 is followed by a comma and a blank, while Magic Stone T is followed by a colon and a blank. All the names of magic stones are strings excluding commas or colons, and no longer than 20 characters.
+<br>
+<br>A test case with N = M = 0 ends the input and should not be processed.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, if the sorcerer can get the "Sorcerer's Stone", output the minimum number of chests he need open; otherwise output "-1".</div><p class="pst">Sample Input</p><pre class="sio">5 3
+Amethyst
+Moonstoon
+Cat's eye
+Diamond
+Emerald
+Topaz, Cat's eye, Diamond: Zircon
+Zircon, Emerald: Sorcerer's Stone
+Amethyst: Topaz
+5 3
+Amethyst
+Moonstoon
+Cat's eye
+Diamond
+Emerald
+Amethyst: Topaz
+Emerald: Zircon
+Zircon, Emerald: Sorcerer's Stone
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+2
+</pre><p class="pst">

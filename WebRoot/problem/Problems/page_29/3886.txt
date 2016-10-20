@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US">Mikey is playing with his favorite toy blocks, each depicting one letter of the alphabet. He is trying to make words using all his blocks, but as he does not know valid words from invalid ones, he goes by all possible orderings of the letters in alphabetical order and asks Albert, his genius brother, if the word he made is a valid one. Mikey can make one word (including asking a question and getting an answer) every sixty seconds, and he never makes the same word twice.
+<br>Albert is delighted about Mikey's activity, but would rather not teach Mikey certain words. Help Albert by predicting when Mikey will start making a certain forbidden word, so he can set the alarm clock indicating Mikey's bedtime to just before this moment.</div><p class="pst">Input</p><div class="ptx" lang="en-US">On the first line of the input is a positive integer, the number of test cases. Then for each test case:
+<br>A line containing the forbidden word to look for, consisting of at most 20 upper case characters. This word can be formed exactly using all of Mikey's blocks.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case:
+<br>One line containing the number of minutes it will take until the forbidden word is reached, assuming Mikey has just started making the first possible word.</div><p class="pst">Sample Input</p><pre class="sio">4
+ABC
+FSCK
+OMGWFTBBQ
+BANANA</pre><p class="pst">Sample Output</p><pre class="sio">0
+10
+112293
+34</pre><p class="pst">

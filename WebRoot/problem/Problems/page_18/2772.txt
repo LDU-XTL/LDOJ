@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US"><img src=images/2772_1.jpg align=right>John is moving to the penthouse of a tall sky-scraper. He packed all his stuff in boxes and drove them to the entrance of the building on the ground floor. Unfortunately the elevator is out of order, so the boxes have to be moved up the stairs. 
+<br>Luckily John has a lot of friends that want to help carrying his boxes up. They all walk the stairway at the same speed of 1 floor per minute, regardless of whether they carry a box or not. The stairway however is so narrow that two persons can't pass each other on it. Therefore they deciced to do the following: someone with a box in his hands is always moving up and someone empty-handed is always moving down. When two persons meet each other somewhere on the stairway, the lower one (with a box) hands it over to the higher one (without a box). (And then the lower one walks down again and the higher one walks up.) The box exchange is instantaneous. When someone is back on the ground floor, he picks up a box and starts walking up. When someone is at the penthouse, he drops the box and walks down again. 
+<br>
+<br>After a while the persons are scattered across the stairway, some of them with boxes in their hands and some without. There are still a number of boxes on the ground floor and John is wondering how much more time it will take before all the boxes are up. Help him to find out! </div><p class="pst">Input</p><div class="ptx" lang="en-US">One line with a positive number: the number of test cases. Then for each test case:
+<br><ul><li> One line with three numbers N, F, B with 1 &le; N,F &le; 1000 and 1 &le; B &le; 1000000: the number of persons, the number of floors (0=ground floor, F=penthouse) and the number of boxes that are still on the ground floor.
+<br><li> N lines with two numbers f<sub>i</sub> and b<sub>i</sub> with 0 &le; f<sub>i</sub> &le; F and b<sub>i</sub> = 0 or b<sub>i</sub> = 1: the floors where the persons are initially and whether or not they have a box in their hands (1=box, 0=no box).</ul></div><p class="pst">Output</p><div class="ptx" lang="en-US">One line with the amount of time (in minutes) it will take to get all the remaining boxes to the penthouse. </div><p class="pst">Sample Input</p><pre class="sio">2
+3 10 5
+0 0
+0 0
+0 0
+2 5 1
+2 1
+3 0
+</pre><p class="pst">Sample Output</p><pre class="sio">30
+8
+</pre><p class="pst">

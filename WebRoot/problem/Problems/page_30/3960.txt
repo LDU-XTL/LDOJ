@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">Consider a binary operation <img src="formula?tex=%5Codot" alt="\odot" align="absmiddle"> defined on digits 0 to 9. <img src="formula?tex=%5Codot" alt="\odot" align="absmiddle">: {0, 1, ..., 9} × {0, 1, ..., 9} <img src="formula?tex=%5Cto" alt="\to" align="absmiddle"> {0, 1, ..., 9}, such that 0 <img src="formula?tex=%5Codot" alt="\odot" align="absmiddle"> 0 = 0.
+<br>A binary operation <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle"> is a generalization of <img src="formula?tex=%5Codot" alt="\odot" align="absmiddle"> to the set of non-negative integers, <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle">: <img src="formula?tex=%5Cmathbb%7BZ%7D" alt="\mathbb{Z}" align="absmiddle"><sub>0+</sub> × <img src="formula?tex=%5Cmathbb%7BZ%7D" alt="\mathbb{Z}" align="absmiddle"><sub>0+</sub> <img src="formula?tex=%5Cto" alt="\to" align="absmiddle"> <img src="formula?tex=%5Cmathbb%7BZ%7D" alt="\mathbb{Z}" align="absmiddle"><sub>0+</sub>. The result of a <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle"> b is defined in the following way: if one of the numbers a and b has fewer digits than the other in decimal notation, then append leading zeroes to it, so that the numbers are of the same length;
+<br>then apply the operation <img src="formula?tex=%5Codot" alt="\odot" align="absmiddle"> digit-wise to the corresponding digits of a and b.
+<br>
+<br><center><img src="images/3960_1.png"></center>
+<br>
+<br>Let us define <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle"> to be left-associative, that is, a <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle"> b <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle"> c is to be interpreted as (a <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle"> b) <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle"> c.
+<br>Given a binary operation <img src="formula?tex=%5Codot" alt="\odot" align="absmiddle"> and two non-negative integers a and b, calculate the value of a <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle"> (a + 1) <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle"> (a + 2) <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle"> ... <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle"> (b - 1) <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle"> b.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first ten lines of the input file contain the description of the binary operation <img src="formula?tex=%5Codot" alt="\odot" align="absmiddle">. The i-th line of the input file contains a space-separated list of ten digits - the j-th digit in this list is equal to (i - 1) <img src="formula?tex=%5Codot" alt="\odot" align="absmiddle"> (j - 1).
+<br>The first digit in the first line is always 0.
+<br>The eleventh line of the input file contains two non-negative integers a and b (0 &lt;= a &lt;= b &lt;= 10<sup>18</sup>).</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output a single number – the value of a <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle"> (a + 1) <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle"> (a + 2) <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle"> ... <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle"> (b - 1) <img src="formula?tex=%5Cotimes" alt="\otimes" align="absmiddle"> b without extra leading zeroes.</div><p class="pst">Sample Input</p><pre class="sio">0 1 2 3 4 5 6 7 8 9
+1 2 3 4 5 6 7 8 9 0
+2 3 4 5 6 7 8 9 0 1
+3 4 5 6 7 8 9 0 1 2
+4 5 6 7 8 9 0 1 2 3
+5 6 7 8 9 0 1 2 3 4
+6 7 8 9 0 1 2 3 4 5
+7 8 9 0 1 2 3 4 5 6
+8 9 0 1 2 3 4 5 6 7
+9 0 1 2 3 4 5 6 7 8
+0 10</pre><p class="pst">Sample Output</p><pre class="sio">15</pre><p class="pst">

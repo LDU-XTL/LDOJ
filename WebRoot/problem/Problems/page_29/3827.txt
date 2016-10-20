@@ -1,0 +1,38 @@
+</p><div class="ptx" lang="en-US">Facer is addicted to a game called "Tidy is learning to swim". But he finds it too easy. So he develops a new game called "Facer is learning to swim" which is more difficult and more interesting.
+<br>
+<br>In the new game, a robot named "Facer" is swimming in a pool. The pool can be considered as a vertical N x M grid. The coordinates of the top-left cell is (1,1), and the coordinates of the bottom-right cell is (N, M). Cells in the top rows are called "surface cells", and all other cells are called "under water cells".
+<br>
+<br><center><img src="images/3827_1.png"></center>
+<br><center>Figure 1. The swimming pool. Shadowed cells are poisonous.</center>
+<br>
+<br>Facer starts swimming from the top-left cell (1,1) and must arrive at the top-right cell (1, M). He has a constant horizontal speed of 1 per second, and a vertical speed of v per second. v is always integer and can be changed. If v is positive, it means Facer is moving down; and if v is negative, it means Facer is moving up. So if Facer is at cell (x, y) now, he will arrive at cell (x + v, y + 1) after a second. Be careful that if x + v > N, Facer will get to cell (N, y + 1) because he cannot move down anymore and of course if x + v &lt; 1, Facer will get to cell (1, y + 1) because he cannot fly. Please remember that all the ``under water cells" in the right-most column are poisonous. If Facer goes into those cells, he will die.
+<br>
+<br>The capacity of Facer's oxygen bottle is limited, and when Facer gets into a surface cell, the oxygen bottle is refilled automatically. Facer has to refill his oxygen bottle every K seconds, which means that during the time between two refillings, Facer can only pass at most K - 1 under water cells in the horizontal direction.
+<br>
+<br>In every cell, there is either a "speed changing machine" or a "money box" (can't be both). Every speed changing machine has a value T and every money box has a value P.
+<br>
+<br>You have got enough number of devices called "speedo". Every speedo has a value Q which is 1 or -1. You can put your speedos in any cells, but you can put at most one speedo in a cell.
+<br>
+<br>When Facer reaches a cell, the speed changing machine of value T in that cell (if there is one) will change his vertical speed by T, and the speedo of value Q in that cell (if there is one) will change his vertical speed by Q. For example, if Facer's vertical speed is v when he arrives at a cell with a speed changing machine of value T and a speedo of value Q, his vertical speed will be changed to v + T + Q immediately. There are three more things you need to know about speed changing:
+<br><ol>
+<br><li>All speed changing machines in the surface cells can't work.</li>
+<br><li>When reaching a surface cell without a speedo, Facer's vertical speed becomes zero immediately; and when reaching a surface cell with a speedo of value Q, Facer's vertical speed becomes Q immediately.</li>
+<br><li>When reaching a bottom cell, though Facer can't go down any more, his vertical speed will NOT be changed unless there is a speedo or a speed changing machine in that cell. It's maybe sound a little bit weird but Facer really is such a weird guy.</li>
+<br></ol>
+<br>When arriving at a cell with a money box of value P, Facer gets P dollars (In fact, if P is negative, Facer loses |P| dollars). Facer's total amount of money can be negative -- that means Facer owes some money to the pool's owner.
+<br>
+<br>You task is deploying your speedos in a smart way before Facer starts swimming, so Facer can get money as much as possible when he arrives at cell (1, M). Facer's initial vertical speed is zero and if you put a speedo in the cell (1,1), it will change Facer's initial vertical speed.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Multiple test cases, ended by a line of "0 0 0". For each test case:
+<br>
+<br>The first line contains three integers N,M and K ( 1 &lt;= N &lt;= 100, 1 &lt;= M &lt;= 1000, 1 &lt;= K &lt;= 10), tells the size of the pool and Facer must refill the oxygen bottle every K seconds.
+<br>
+<br>Following are N lines describing the cells by top to bottom order. Each line contains M elements, separated by blanks, telling the information about the cells of a row, by left to right order. There are only two kinds of elements:
+<br><ol>
+<br><li>a char "v" followed by an integer T, meaning that there is a "speed changing machine" of value T (-20 &lt;= T &lt;= 20) in the correspondent cell.</li>
+<br><li>a char "$" followed by an integer P, meaning that there is a "money box" of value P (-1000000 &lt;= P &lt;= 1000000) in the correspondent cell.</li>
+<br></ol></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output one line containing an integer representing the maximum amount of money Facer can get when he reaches cell (1, M).</div><p class="pst">Sample Input</p><pre class="sio">5 10 3
+$81 $47 $3 $0 $82 $31 $89 v0 $97 v-1
+$14 $94 v1 v-1 v1 $106 v1 v0 v-1 v0
+$93 $105 v-1 $219 v0 v0 v-1 v1 $225 v1
+v0 $160 v1 v1 $348 $120 $240 $392 $280 $172
+$305 $455 $140 v-1 $455 v0 v-1 v0 v1 $410
+0 0 0</pre><p class="pst">Sample Output</p><pre class="sio">430</pre><p class="pst">

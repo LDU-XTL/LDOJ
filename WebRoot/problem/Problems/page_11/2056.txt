@@ -1,0 +1,28 @@
+</p><div class="ptx" lang="en-US">Given a connected, undirected graph G = (V, E), where V is the vertex set consisting a collection of nodes, and E is the set of edges, each of which connects two nodes from V. A vertex subset S is a separator if the subgraph induced by the vertices in V, but not in S, has two connected components. We shall use the notation [S, W, B] to represent the partition, where the removal of the separator S will give two connected components W and B.
+<br>
+<br>In this problem, we consider the separators in grids. Each node in a grid is connected to its eight neighbors (if they exist). In Figure-1, we illustrate a partition of a 6*6 grid with a 9-point separator (gray nodes in the figure). The nodes on the left of the separator are in set W (white nodes), and the nodes on the right of the separator are in set B (black nodes).
+<br><center><img src=images/2056_1.jpg></center>
+<br>To simplify the problem, you can assume that all the separators referred in this problem satisfy the following restrictions:
+<br>1)	It’s a minimal separator. A separator is minimal if no subset of it forms a separator.
+<br>2)	It begins from a node on the top line of the grid, except the corner (i.e. 30 and 35 in the figures), and ends with a node on the bottom line of the grid, also except the corner (i.e. 0 and 5 in the figures).
+<br>3)	On its way from top to bottom, it can go left, right or down, but never go up.
+<br>
+<br>Now we describe a method to improve a given partition on a grid, through which we can reduce the number of nodes in the separator. This method contains two steps:
+<br>1)	Select several nodes from B and add them into S. Any of the selected nodes must have a left neighbor which is in S.
+<br>2)	Remove several nodes from S (excluding the nodes added in the former step), and add them into W.
+<br>
+<br>After the improvement, we should ensure S is still a separator, and make the number of nodes in S as small as possible. As for Figure-1, we should add 14 and 20 into S, and remove 7, 13, 19 and 25 from S. After that, we obtain a new partition with a 7-point separator shown in Figure-2.
+<br>
+<br>Your task is, given a partition on a grid, to determine the least number of nodes in the separator after the improvement. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">There are several test cases. Each case begins with a line containing two integers, N and M (3 <= M, N <= 200). In each of the following N lines, there are M characters, describing the initial partition of the M*N grid. Every character is 'S', 'W' or 'B'. It is confirmed that each of these three characters appears at least once in each line, and 'W's are always on the left of 'S's. 
+<br>
+<br>A test case of N = 0 and M = 0 indicates the end of input, and should not be processed.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, you should output one line containing one integer, which is the least number of nodes in the separator after the improvement.</div><p class="pst">Sample Input</p><pre class="sio">6 6
+WWSBBB
+WSSBBB
+WSBBBB
+WSBBBB
+WSSSBB
+WWWSBB
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">7</pre><p class="pst">

@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US">Background
+<br>The world famous artist A.A. Blox, well known for his cubic sculptures, has developed a totally new way to create impressive artwork from a rectangular solid of transparent acrylic glass. With the patented laser device of his friend T.D. Resal, he is able to change the colour of parts of the originally colourless box. Due to the prototype stadium of the laser device, he can only change the colour of a rectangular solid whose sides are parallel to the sides of the large box ("axis aligned").
+<br>The value of the resulting object is measured by the volume of coloured acrylic glass. Since A.A. Blox is not good at mathematics, he has hired you to help him out and compute the price of his artwork for him.
+<br><center><img src=images/1802_1.jpg></center>
+<br>
+<br>Problem
+<br>For a given three-dimensional axis aligned initial box b and a set S of three-dimensional axis aligned boxes,you have to compute the volume of the union of all parts of the boxes of S that lie within b. Make sure that you count the volume of overlapping parts of the boxes only once!</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains the number of scenarios.
+<br>For each scenario you are given a line containing x1 y1 z1 x2 y2 z2, defining the two corners (x1, y1, z1), (x2, y2, z2) of the initial axis aligned box b. All numbers are separated by single blanks.
+<br>The following line contains the numberm(m <= 2000) of boxes in S whose colour was changed by the laser device, followed bymlines each containing x1 y1 z1 x2 y2 z2, defining the two corners (x1, y1, z1),(x2, y2, z2) of one of the axis aligned boxes in S. All numbers are separated by single blanks.
+<br>All coordinates are in the range from 0 to 1000, and the coordinates in each line satisfy x1 <= x2, y1 <= y2 and z1 <= z2.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Start the output for every scenario with a line containing "Scenario #i:", where i is the number of the scenario starting at 1. Then print a line containing the total volume of coloured acrylic glass. Terminate the output for the scenario with a blank line.</div><p class="pst">Sample Input</p><pre class="sio">2
+0 0 0 10 10 10
+1
+2 2 2 4 4 4
+0 0 0 10 10 10
+2
+0 0 0 6 10 10
+4 0 0 10 10 10</pre><p class="pst">Sample Output</p><pre class="sio">Scenario #1:
+8
+
+Scenario #2:
+1000</pre><p class="pst">

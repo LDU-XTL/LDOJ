@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US">N (1 <= N <= 1,000) calves try out for the Moo U gymnastics team this year, each with a positive integer height and a weight less than 100,000.  Your goal is to select a team of as many calves as possible from this group. There is only one constraint the team must satisfy: the height H and weight W of each calf on the team must obey the following inequality:
+<br><center>A*(H-h) + B*(W-w) <= C</center>
+<br>where h and w are the minimum height and weight values over all calves on the team, and A, B and C are supplied positive integral constants less than 10,000.   Compute the maximum number of calves on the team.</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: A single integer, N
+<br>
+<br>* Line 2: Three space-separated integers, A, B and C
+<br>
+<br>* Lines 3..N+2: Two space-separated integers: respectively the height and weight of a calf
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: One integer, the maximum number of calves on the team.
+<br></div><p class="pst">Sample Input</p><pre class="sio">8
+1 2 4
+5 1
+3 2
+2 3
+2 1
+7 2
+6 4
+5 1
+4 3
+</pre><p class="pst">Sample Output</p><pre class="sio">5
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Calves 1, 2, 3, 4 and 7, for example, form a legal team. A larger team is impossible.
+<br></div><p class="pst">

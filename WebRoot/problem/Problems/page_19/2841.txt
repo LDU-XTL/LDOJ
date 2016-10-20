@@ -1,0 +1,25 @@
+</p><div class="ptx" lang="en-US">It's a game played on a specific board about navigation.
+<br><center><img src=images/2841_1.png></center>
+<br>Here are the rules:
+<br>You can start voyage from any harbor chosen by yourself in the south (the bottom row), and the goal is to reach any harbor in the north (the top row) in shortest time. 
+<br>
+<br>Your boat may go north (upward), west (leftward) or east (rightward), just one grid each time, but it cannot navigate to rush to the grid of land or obstacles. In addition, it is considered useless (although sometimes not really) to go backward. So once you leave a grid, you cannot return to it.
+<br>
+<br>It takes only one unit of time to go north, while the time spent on a horizontal (going west/east) movement depends on the number of continuous horizontal movements before this movement. It means that if X continuous horizontal movements have been done just before this movement, the amount of the units of time spent by the next horizontal movement is X + 1.
+<br>
+<br>In the sea, there are some kinds of special objects.
+<br>- Obstacles. You cannot move into these grids.
+<br>- Fortune's wheels. In this game, Fortune's wheels really look like a weird wheel. You must meet Fortune's wheel ODD TIMES.
+<br>- Blessing stones. It costs NO time to go to this kind of grids.
+<br>- Invocations of storm. It costs DOUBLE time as normal to go to this kind of grids.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">There are two integers N and M in the first line. It is guaranteed that both N and M do not exceed 1000. N lines follows, and each line contains M characters describing the grid:
+<br>
+<br>- In first and N-th of there N lines, 'H' stands for harbor, '.' stands for land.
+<br>- In other lines, '.', 'O','F','B' and 'S' stand for Empty grids, Obstacles, Fortune's wheels, Blessing stones and Invocations of storm respectively.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">If a solution exists, output an integer, which is the minimum time required; otherwise, output "No solution".</div><p class="pst">Sample Input</p><pre class="sio">5 11
+...H...H...
+.O.BF.FS.O.
+O.O.OOO.O.O
+.O...F...O.
+.....H.....
+</pre><p class="pst">Sample Output</p><pre class="sio">6</pre><p class="pst">

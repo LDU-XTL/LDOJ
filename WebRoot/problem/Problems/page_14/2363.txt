@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">Donald wishes to send a gift to his new nephew, Fooey. Donald is a bit of a traditionalist, so he has chosen to send a set of N classic baby blocks. Each block is a cube, 1 inch by 1 inch by 1 inch. Donald wants to stack the blocks together into a rectangular solid and wrap them all up in brown paper for shipping. How much brown paper does Donald need? </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains C, the number of test cases. For each case there is an additional line containing N, the number of blocks to be shipped. N does not exceed 1000.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Your program should produce one line of output per case, giving the minimal area of paper (in square inches) needed to wrap the blocks when they are stacked together.</div><p class="pst">Sample Input</p><pre class="sio">5
+9
+10
+26
+27
+100
+</pre><p class="pst">Sample Output</p><pre class="sio">30
+34
+82
+54
+130
+</pre><p class="pst">

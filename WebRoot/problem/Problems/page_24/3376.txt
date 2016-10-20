@@ -1,0 +1,7 @@
+</p><div class="ptx" lang="en-US"><p>A word is called a palindrome if we read from right to left is as same as we read from left to right. For example, &quot;dad&quot;, &quot;eye&quot; and &quot;racecar&quot; are all palindromes, but &quot;odd&quot;, &quot;see&quot; and &quot;orange&quot; are not palindromes.</p><p>Given <i>n</i> strings, you can generate <i>n</i> &times; <i>n</i> pairs of them and concatenate the pairs into single words. The task is to count how many of the so generated words are palindromes.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>The first line of input file contains the number of strings <i>n</i>. The following <i>n</i> lines describe each string: </p><p>The <i>i</i>+1-th line contains the length of the <i>i</i>-th string <i>l<sub>i</sub></i>, then a single space and a string of <i>l<sub>i</sub></i> small letters of English alphabet.</p><p>You can assume that the total length of all strings will not exceed 2,000,000. Two strings in different line may be the same. </p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Print out only one integer, the number of palindromes. </p></div><p class="pst">Sample Input</p><pre class="sio">3
+1 a
+2 ab
+2 ba
+</pre><p class="pst">Sample Output</p><pre class="sio">5</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">The 5 palindromes are:
+<br>a<b>a</b> a<b>ba</b> ab<b>a</b> ab<b>ba</b> ba<b>ab</b>
+<br></div><p class="pst">

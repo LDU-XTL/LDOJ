@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">To keep the word "card" in its name, KOKODáKH also contains one less known card game called Quorf. You need three idetical card packets. The kind of card is not important you can use for example only numbered cards. Each card can appeare only once in each packet. During the game, two players prepare the task for the third player and he tries to solve it. The game, under some conditions, can be played also as a solitaire, i.e. the game for one player. KOKODáKH contains this modification of the game. The program you are to write will be at the place of the two players preparing the task. 
+<br>
+<br>The principle of the game is very easy. Each of two preparing players chooses for one packet arbitrary cards and shuffle them in the order which cannot be changed later. The "main" player can then look at both packets and orders his third pakcet in arbitrary order. Of course he tries to choose the order in the way which enables him to win in the following game. 
+<br>
+<br>During the game both players (in our case represented by the program) turn the upper card from their packets and put it at the table. Main player then turns the cards from his packet and puts them at the table. If he turns a card that already appears on the table by one of the other players, that player's card is put out of game. If both players has the same card and the main player turns it, both their cards are put out of game. Games continues until the main player has cards in his packet. Then, if any of two players has any card, the main player losts. If neither of the two players has any card, third player won. 
+<br>
+<br>The program plays the role of the two players. Generating the contents of both packets is not difficult problem. More difficult is to find out whether the third player can win. Your task is to write program that will be able to determine this. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of Z assignments. The number of them is given by the single positive integer Z appearing on the first line of input. The assignements follow. Each assignement begins with line containing two numbers N and M (1 <= M,N <= 100000) separated by space. Two lines follow. At the first line, there are N numbers ai separated by space. At the second line there are M numbers bi. These numbers give the order of the cards in the packets of both preparing players. No number can appear twice in the same succession. Thus, for each i,j if ai = aj or bi = bj then i = j. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The goal of the program is to determine for each assignment whether there is a succession c1, c2, ..., cx such that no number appeares twice in this succession and the order of the cards leads to the victory. If such succession exists, the program prints out the only line containing the sentence "Hrac ma sanci vyhrat." (The player can win). If there is no such succession, the input is the sentece "Spatne usporadani." (Wrong order). </div><p class="pst">Sample Input</p><pre class="sio">2
+4 4
+1 2 3 4
+4 3 2 1
+4 4
+1 3 5 7
+2 4 6 8
+</pre><p class="pst">Sample Output</p><pre class="sio">Spatne usporadani.
+Hrac ma sanci vyhrat.
+</pre><p class="pst">

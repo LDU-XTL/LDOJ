@@ -1,0 +1,27 @@
+</p><div class="ptx" lang="en-US">In the year 3133 space travel has become a common sight for humanity. With the invention of the Dimensional Warp Drive it has become possible to travel between distant planets almost instantaneously.
+<br>The Dimensional Warp Drive functions according to the laws of Relativistic Curved Quantized Space theory. In RCQS theory space has 11 dimensions, each of which is curved in on itself. That means that if you travel far enough in one direction you end where you began. Space is also quantized in this theory, in each dimension there are only 11 possible positions, 0 up to 10. Position 11 would be equivalent to position 0.
+<br>In 3075 the first warp trajectory was discovered. The effect of following such a trajectory is that a spacecraft jumps to the position that is the sum of its current position and the coordinates of the warp trajectory (in each dimension). After being discovered, a warp trajectory can be used multiple times.
+<br>In the following years many more warp trajectories were discovered, allowing humanity to colonize space at an exponential rate. By 3106 integrated navigation computers were commonplace. These machines determine how to reach a destination using a combination of the known warp trajectories.</div><p class="pst">Input</p><div class="ptx" lang="en-US">On the first line of the input is a positive integer, the number of test cases. Then for each test case:
+<br>A line with a single integer n < 1000, the number of warp trajectories.
+<br>A line containing 11 integers (between 0 and 10), the coordinates of the starting point of a journey.
+<br>A line containing 11 integers, the coordinates of the destination, which is different from the starting point.
+<br>n lines, each containing 12 integers, the coordinates of each warp trajectory followed by the year in which that trajectory was discovered. The year will be between 3075 and 100000.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case:
+<br>One line containing a single integer, the year in which it became possible to reach the destination from the starting point, or "unreachable" if it cannot be reached.</div><p class="pst">Sample Input</p><pre class="sio">3
+2
+0 0 0 0 0 0 0 0 0 0 0
+0 0 3 0 0 3 0 0 3 0 0
+0 0 1 0 0 1 0 0 1 0 0 3075
+0 0 1 0 0 2 0 1 0 0 0 3082
+2
+0 0 0 0 0 0 0 9 0 0 0
+0 0 4 0 0 6 0 0 2 0 0
+0 0 1 0 0 1 0 0 1 0 0 3075
+0 0 1 0 0 2 0 1 0 0 0 3082
+3
+0 0 0 0 0 0 0 0 0 0 0
+0 0 4 0 0 6 0 0 3 0 0
+0 0 1 0 0 1 0 0 1 0 0 3075
+0 0 1 0 0 2 0 1 0 0 0 3082
+1 2 3 4 5 6 7 5 4 3 2 3093</pre><p class="pst">Sample Output</p><pre class="sio">3075
+3082
+unreachable</pre><p class="pst">

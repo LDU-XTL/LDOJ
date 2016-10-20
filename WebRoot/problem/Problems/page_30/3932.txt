@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">Zidane is a weird arithmetic expert. Unlike other mathematician, he loves using matches to represent numbers as illustrated in Fig.1.
+<br>
+<br><center><img src="images/3932_1.png"></center> 
+<br> 
+<br><center>Fig.1</center>
+<br>
+<br>One day Zidane “wrote”an equation on his desk and then went out. The equation was in “A + B = C” format. A, B, and C were numbers made up by matches. “+” and “=” were wrote in ink. 
+<br>
+<br>When Zidane came back after a lecture, he found out that somebody must have touched the equation and the equation became wrong! After promised a new toy, Zidane's son confessed that he had broken in the room and moved ONE match (not removed, that match was still in the equation). Given the wrong equation on his desk, can you help Zidane find the original one?
+<br>
+<br>Note: Both the wrong and original equations may have numbers with leading zeros. And it is guaranteed that only ONE possible original equation exists.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several test cases. Each test case is a single line representing a wrong equation. Each wrong equation is in the format of “A + B = C” (A, B and C are all numbers), and consists of no more than 100000 characters.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Output the original equation in a single line followed by 17 “*” for each test case.
+<br></div><p class="pst">Sample Input</p><pre class="sio">0 + 7 = 9
+9 + 80 = 8</pre><p class="pst">Sample Output</p><pre class="sio">8 + 1 = 9
+*****************
+8 + 00 = 8
+*****************</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Note: Numbers and operators(“+”, “=”) must be separated by a blank, no mater in the input or in the output.
+<br></div><p class="pst">

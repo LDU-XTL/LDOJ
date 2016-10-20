@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US"><p>In many graphic drawing applications, you can click on a line object. A well-known approach to detect if a line is clicked by a mouse is to compute the distance between the click position and the line. For example, in Figure 1, the line is said to be <i>selected</i> if the distance d is less than a threshold <i>D</i> (<i>d</i> &#8804; <i>D</i>).</p><div align="center"><img src="images/3397_1.png"></div><p>Give you a set of lines (with equation of the form <i>ax</i> + <i>by</i> + <i>c</i> = 0), please compute the minimum clicks to select all the lines. For example, to select two lines, the minimum number of clicks is one, that is, you can make a click near the cross point of the two lines.</p><p>Note: In the test data, each line at least intersects with another line.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of input data begins with a number <i>N</i> the number of test cases. Each test case begins with two integers <i>L</i> and <i>D</i>, where <i>L</i> (<i>L</i> &#8804; 200) is the number of lines and <i>D</i> (<i>D</i> &gt; 0) is the threshold for testing if a line is selected. The data of lines listed one by one. Each line is represented by (<i>ax</i> + <i>by</i> + <i>c</i> = 0). The three <i>floating</i> numbers <i>a</i>, <i>b</i>, <i>c</i>, separated by space are given to represent the line.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Please output the minimum number of clicks in a new line for each test case.</p></div><p class="pst">Sample Input</p><pre class="sio">2
+2 5
+0 1 0
+1 0 0
+3 1
+0 1 0
+1 0 0
+1 1 2</pre><p class="pst">Sample Output</p><pre class="sio">1
+2</pre><p class="pst">

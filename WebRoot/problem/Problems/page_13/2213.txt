@@ -1,0 +1,29 @@
+</p><div class="ptx" lang="en-US">The important thing is also the fact, where the representatives sit in the Parliament. Some of them prefer front rows because of more light, some prefer back rows because of less light and more silence. The others want to sit by the window. Moreover, the sitting order must be kept absolutely secret, because the neighbouring representatives may influence each other. Since we do not want to have corruption in the Parliament, it was decided to use Hyper-secret Code to encrypt the numbers of seats. The Hyper-secret Code of length n is designated SK(n) and consists of all possible binary strings of length n. That means it always has 2<sup>n</sup> elements. The Code is generated using the following recursive algorithm: 
+<br><ul><li>SK(1) = [0, 1] 
+<br>SK(n) = 0.SK(n-1) + 1.REV{SK(n-1)} </ul>
+<br>in which 
+<br><ul><li>[0, 1] is succession of two binary strings of length one. The first of them is "0" and the second is "1". 
+<br><li>b.SK(x) is the code created from SK(x) such that the binary digit b is prepended to the beginning of each string in succession SK(x). 
+<br><li>REV{SK(x)} is the reverse succession to SK(x), it means the first string becomes the last one. 
+<br>Note that the ordering of whole strings is reversed, not the ordering of digits inside the string. 
+<br><li>X + Y is the concatenation of successions X and Y. </ul>
+<br>Every seat in the Parliament has its own number. The numbers make a continuos succession beginning with one. The Hyper-secret Code SK(n) is generated (using the above algorithm) for greater and greater n, until the length of the Code (the number of binary strings that form the succession) is greater or equal to the highest number of seat. Every seat s is then given the binary string that appears at the s-th possition in the succession SK(n). Every representative then gets the Code of his seat and nobody can determine who is going to be his neighbour. 
+<br>
+<br>But the problem appears when the representative enters the Parliament, takes the paper with his Code and finds his seat. To solve this, the Chairman of the Parliament wants the computer program that will be able to convert any Hyper-secret Code to the appropriate number of a seat. You propably guess that you are to write this program. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">At the first line there is a positive integer N stating the number of assignments to follow. Each assignment consists of two lines. The first line contains an integer number k, 1 <= k <= 30. At the second line, there is the Hyper-secret Code consisting of exactly k characters. Each of the characters is either 0 or 1. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The program should print the line for each assignment. The line must contain the sentence "Poslanec P se posadi na sedadlo cislo S." (The representative #P sits down at the seat S). Fill the number of the assignment (starting with one) instead of P, and the right number of a seat instead of S - it means the possition of the given string in the Code SK(k). </div><p class="pst">Sample Input</p><pre class="sio">5
+1
+0
+4
+0000
+4
+1000
+4
+1111
+8
+10101010
+</pre><p class="pst">Sample Output</p><pre class="sio">Poslanec 1 se posadi na sedadlo cislo 1.
+Poslanec 2 se posadi na sedadlo cislo 1.
+Poslanec 3 se posadi na sedadlo cislo 16.
+Poslanec 4 se posadi na sedadlo cislo 11.
+Poslanec 5 se posadi na sedadlo cislo 205.</pre><p class="pst">

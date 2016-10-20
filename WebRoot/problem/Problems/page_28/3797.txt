@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">We wish to tile a grid 4 units high and N units long with rectangles (dominoes) 2 units by one unit (in either orientation).  For example, the figure shows the five different ways that a grid 4 units high and 2 units wide may be tiled.
+<br>
+<br><center><img src=images/3797_1.png></center>
+<br>
+<br>Write a program that takes as input the width, W, of the grid and outputs the number of different ways to tile a 4-by-W grid.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains a single integer N, (1 ≤ N ≤ 1000) which is the number of datasets that follow. 
+<br> 
+<br>Each dataset contains a single decimal integer, the width, W, of the grid for this problem instance.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each problem instance, there is one line of output:  The problem instance number as a decimal integer (start counting at one), a single space and the number of tilings of a 4-by-W grid.  The values of W will be chosen so the count will fit in a 32-bit integer.</div><p class="pst">Sample Input</p><pre class="sio">3 
+2 
+3 
+7</pre><p class="pst">Sample Output</p><pre class="sio">1 5 
+2 11 
+3 781</pre><p class="pst">

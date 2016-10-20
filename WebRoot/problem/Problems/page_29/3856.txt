@@ -1,0 +1,94 @@
+</p><div class="ptx" lang="en-US">You have just run out of disk space and decided to delete some of your directories. Rationally, you will first have an exploration of what you have in your file system. And more rationally, you will do this exploration through a command line interface. The interface used in this problem is called “MSDOS--”, since it is something like MSDOS with fewer features. The commands of MSDOS-- are as follows:
+<br>
+<br>1. cd &ltdirectory&gt
+<br>Assuming &ltdirectory&gt to be the name of a relative descendant of current directory, this command changes the current directory to &ltdirectory&gt. For example, when the current directory is “\A\B\” and one of its descendants is “C\D”, the execution of “cd C\D” will change the current directory to “\A\B\C\D\”.
+<br>
+<br>2. cd \
+<br>This command changes the current directory to “\” (the root of the file system). For example, when the current directory is “\A\B\”, the execution of “cd \” will change the current directory to “\”.
+<br>
+<br>3. cd ..
+<br>Assuming the current directory to be anything except “\”, this command changes the current directory to its parent directory. For example, when the current directory is “\A\B\”, the execution of “cd ..” will change the current directory to “\A\”.
+<br>
+<br>4. cd \&ltdirectory&gt
+<br>This command is equivalent to the execution of the following two commands:
+<br>cd \
+<br>cd &ltdirectory&gt
+<br>
+<br>5. dir
+<br>This command lists the name of files and directories directly in the current directory, each on a separate line.
+<br>These file/directory names are made up of (lowercase and uppercase) letters, digits, and dots (“.”). Directory names precede the file names in the list, and each one, comes alone in a single line. On the contrary, each file name is accompanied by its size separated by a space. A sample output of “dir” is as follows:
+<br>HW1
+<br>HW1.old
+<br>Syllab.pdf 10000
+<br>notes.txt 3241
+<br>
+<br>6. deltree &ltdirectory&gt
+<br>Assuming &ltdirectory&gt to be the name of a relative descendant of current directory, this command tries to delete &ltdirectory&gt and all its descendant files and subdirectories (and thus, freeing that much of space). For example, when the current directory is “\A\B\” and one of its descendants is “C\D”, the execution of “deltree C\D” will try to delete directory “\A\B\C\D\” and all of its descendant files and directories.
+<br>
+<br>7. deltree \&ltdirectory&gt
+<br>This command is equivalent to the execution of the following two commands:
+<br>cd \
+<br>deltree &ltdirectory&gt
+<br>
+<br>8. exit
+<br>This command terminates the command line interface.
+<br>
+<br>A “scenario” is an exploration (a consistent series of “cd” and “dir” commands and their results, starting from root) followed by exactly one “deltree” command. Given a scenario, you are to find the maximum space guaranteed to be freed by executing its “deltree” command.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains multiple independent scenarios. There is an empty line after each scenario. The input ends with an “exit” command. There is a “&gt” sign before each command in the input (with no spaces in between). The length of each file name does not exceed 50. You may assume that the input is correct.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Write the result of the ith scenario as a single integer on the ith line of output.</div><p class="pst">Sample Input</p><pre class="sio">&gtcd A
+&gtdir
+B
+C
+d 12
+e 62
+&gtcd B
+&gtcd ..
+&gtcd ..
+&gtdeltree A
+
+&gtdir
+G
+s 2
+&gtcd G
+&gtdir
+&gtcd \
+&gtdeltree G
+
+&gtdir
+A
+B
+x 3
+&gtcd A
+&gtdir
+AA
+AB
+ax 10
+ay 12
+&gtcd AA
+&gtdir
+d 32
+a 28
+&gtcd ..
+&gtcd AB
+&gtdir
+F
+x 100
+&gtcd F
+&gtdir
+G
+&gtcd \
+&gtdeltree A
+&gtcd D1\D2
+&gtdir
+D3
+a 32
+&gtcd D3
+&gtdir
+b 31
+&gtcd \D1\D3
+&gtdir
+d 7
+&gtdeltree \D1
+
+&gtexit</pre><p class="pst">Sample Output</p><pre class="sio">74
+0
+182
+70</pre><p class="pst">

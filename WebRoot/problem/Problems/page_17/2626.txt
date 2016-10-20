@@ -1,0 +1,32 @@
+</p><div class="ptx" lang="en-US">The Association of Chess Monsters (ACM) is planning their annual team match up against the rest of the world. The match will be on 30 boards, with 15 players playing white and 15 players playing black. ACM has many players to choose from, and they try to pick the best team they can. The ability of each player for playing white is measured on a scale from 1 to 100 and the same for playing black. During the match a player can play white or black but not both. The value of a team is the total of players' abilities to play white for players designated to play white and players' abilities to play black for players designated to play black. ACM wants to pick up a team with the highest total value. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of a sequence of lines giving players' abilities. Each line gives the abilities of a single player by two integer numbers separated by a single space. The first number is the player's ability to play white and the second is the player's ability to play black. There will be no less than 30 and no more than 1000 lines on input. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Output a single line containing an integer number giving the value of the best chess team that ACM can assemble. </div><p class="pst">Sample Input</p><pre class="sio">87 84
+66 78
+86 94
+93 87
+72 100
+78 63
+60 91
+77 64
+77 91
+87 73
+69 62
+80 68
+81 83
+74 63
+86 68
+53 80
+59 73
+68 70
+57 94
+93 62
+74 80
+70 72
+88 85
+75 99
+71 66
+77 64
+81 92
+74 57
+71 63
+82 97
+76 56
+</pre><p class="pst">Sample Output</p><pre class="sio">2506</pre><p class="pst">

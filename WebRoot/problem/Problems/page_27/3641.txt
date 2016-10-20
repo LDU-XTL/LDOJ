@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US"><p>Fermat's theorem states that for any prime number <i>p</i> and for any integer <i>a</i> &gt; 1, <i>a<sup>p</sup></i> = <i>a</i> (mod <i>p</i>). That is, if we raise <i>a</i> to the <i>p</i><sup>th</sup> power and divide by <i>p</i>, the remainder is <i>a</i>. Some (but not very many) non-prime values of <i>p</i>, known as base-<i>a </i>pseudoprimes, have this property for some <i>a</i>. (And some, known as Carmichael Numbers, are base-<i>a</i> pseudoprimes for all <i>a</i>.)</p><p>Given 2 &lt; <i>p</i> &le; 1000000000 and 1 &lt; <i>a</i> &lt; <i>p</i>, determine whether or not <i>p</i> is a base-<i>a</i> pseudoprime.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input contains several test cases followed by a line containing &quot;0 0&quot;. Each test case consists of a line containing <i>p</i> and <i>a</i>. </p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output &quot;yes&quot; if p is a base-<i>a</i> pseudoprime; otherwise output &quot;no&quot;.</p></div><p class="pst">Sample Input</p><pre class="sio">3 2
+10 3
+341 2
+341 3
+1105 2
+1105 3
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">no
+no
+yes
+no
+yes
+yes
+</pre><p class="pst">

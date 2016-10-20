@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">You are to write a program that has to decide whether a given line segment intersects a given rectangle. 
+<br>
+<br>An example:
+<br>line: start point: (4,9)
+<br>end point: (11,2)
+<br>rectangle: left-top: (1,5)
+<br>right-bottom: (7,1)
+<br>
+<br><img src=images/1410_1.jpg>
+<br>Figure 1: Line segment does not intersect rectangle
+<br>
+<br>The line is said to intersect the rectangle if the line and the rectangle have at least one point in common. The rectangle consists of four straight lines and the area in between. Although all input values are integer numbers, valid intersection points do not have to lay on the integer grid. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of n test cases. The first line of the input file contains the number n. Each following line contains one test case of the format: 
+<br>xstart ystart xend yend xleft ytop xright ybottom 
+<br>
+<br>where (xstart, ystart) is the start and (xend, yend) the end point of the line and (xleft, ytop) the top left and (xright, ybottom) the bottom right corner of the rectangle. The eight numbers are separated by a blank. The terms top left and bottom right do not imply any ordering of coordinates. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case in the input file, the output file should contain a line consisting either of the letter "T" if the line segment intersects the rectangle or the letter "F" if the line segment does not intersect the rectangle. </div><p class="pst">Sample Input</p><pre class="sio">1
+4 9 11 2 1 5 7 1</pre><p class="pst">Sample Output</p><pre class="sio">F</pre><p class="pst">

@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">A mole is a strange mammal adapted to a subterranean lifestyle. It has invisible eyes and short, powerful limbs with large paws oriented for digging.
+<br>
+<br>Before the catastrophic earthquake, a group of moles have perceived the disaster. They move to a safe place and want to dig holes under the ground. There are n moles, numbered from 1 to n. They stand in a line and dig holes one by one. The mole line is not necessary sorted by the mole number. Every mole should live in a hole dug by itself and every mole just digs one hole. The first mole in the line digs the first hole with a channel to the ground. Then other moles go down through that channel and dig more holes and channels. A hole may have at most three neighbors connected by channels, one is on the upper level, and the other two holes are on the lower level lying on the left side and the right side. When a mole reaches a hole, if its number is smaller than the hole owner's, it will go to the left-lower hole(or digs a left-lower hole and stays there when there is no left-lower hole), otherwise it will go to the right-lower hole(or digs a right-lower hole and stays there when there is no right-lower hole). Due to the excellent ability and well-designed layout, these holes and channels will not cross with each other.
+<br>
+<br>Mouse Jerry is a friend of those moles. He comes to visit them and prepares gifts for every mole. There is a rule that the mole whose number is smaller must get the gift earlier than the mole whose number is larger. Jerry starts from the ground. He travels through the holes and channels to deliver his gifts. After giving out all his gifts, he comes back to the ground. In the mole world, it is interesting that the moles with odd numbers are males and others are females. When reaching a hole, Jerry takes a note about the gender of the hole owner(0 represents female and 1 represents male). When he gets back to the ground, he will get a 0-1 sequence. Now he wants to calculate the “harmony value”. The harmony value represents the number of occurrences of a given “harmony string” in the above mentioned sequence. Occurrences may overlap.
+<br>
+<br>Please note that Jerry is very smart so his travel distance is as small as possible.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains an integer t meaning that there are t test cases(t &lt;= 10).
+<br>For each test case :
+<br>The first line is an integer n meaning that there are n moles. (n &lt;= 600000).
+<br>The second line contains n integers representing the mole line. Each integer is a mole’s number and the first integer is the number of the first mole in the line.
+<br>The third line is the harmony string. The string length is not large than 7000.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, please output the case number and the harmony value.</div><p class="pst">Sample Input</p><pre class="sio">2
+8
+5 1 3 2 7 8 4 6
+01
+10
+1 2 3 4 5 6 7 8 9 10
+1010
+</pre><p class="pst">Sample Output</p><pre class="sio">Case #1: 4
+Case #2: 8
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">In the first test case, the 0-1 sequence of the first case is “111010111101011”, and the number of occurrences of harmony string “01” is 4.</div><p class="pst">

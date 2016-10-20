@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">Background
+<br>There are a lot of monkeys in a mountain. Every one wants to be the monkey king. They keep arguing with each other about that for many years. It is your task to help them solve this problem.
+<br>
+<br>Problem
+<br>Monkeys live in different places of the mountain. Let a point (x, y) in the X-Y plane denote the location where a monkey lives. There are no two monkeys living at the same point. If a monkey lives at the point (x0, y0), he can be the king only if there is no monkey living at such point (x, y) that x>=x0 and y>=y0. For example, there are three monkeys in the mountain: (2, 1), (1, 2), (3, 3). Only the monkey that lives at the point (3,3) can be the king. In most cases, there are a lot of possible kings. Your task is to find out all of them.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several test cases. In the first line of each test case, there are one positive integers N (1<=N<=50000), indicating the number of monkeys in the mountain. Then there are N pairs of integers in the following N lines indicating the locations of N monkeys, one pair per line. Two integers are separated by one blank. In a point (x, y), the values of x and y both lie in the range of signed 32-bit integer. The test case starting with one zero is the final test case and has no output.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print your answer, the total number of the monkeys that can be possible the king, in one line without any redundant spaces.</div><p class="pst">Sample Input</p><pre class="sio">3
+2 1
+1 2
+3 3
+3
+0 1
+1 0
+0 0
+4
+0 0
+1 0
+0 1
+1 1
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+2
+1
+</pre><p class="pst">

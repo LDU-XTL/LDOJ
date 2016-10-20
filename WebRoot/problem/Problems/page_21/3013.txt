@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p><img src=images/3013_1.gif align="right" hspace=10>Christmas is coming to KCM city. Suby the loyal civilian in KCM city is preparing a big neat Christmas tree. The simple structure of the tree is shown in right picture.</p><p>The tree can be represented as a collection of numbered nodes and some edges. The nodes are numbered 1 through <i>n</i>. The root is always numbered 1. Every node in the tree has its weight. The weights can be different from each other. Also the shape of every available edge between two nodes is different, so the unit price of each edge is different. Because of a technical difficulty, price of an edge will be (sum of weights of all descendant nodes) &times; (unit price of the edge).</p><p>Suby wants to minimize the cost of whole tree among all possible choices. Also he wants to use all nodes because he wants a large tree. So he decided to ask you for helping solve this task by find the minimum cost.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input consists of <i>T</i> test cases. The number of test cases <i>T</i> is given in the first line of the input file. Each test case consists of several lines. Two numbers <i>v</i>, <i>e</i> (0 &le; <i>v</i>, <i>e</i> &le; 50000) are given in the first line of each test case. On the next line, <i>v</i> positive integers <i>w<sub>i</sub></i> indicating the weights of <i>v</i> nodes are given in one line. On the following <i>e</i> lines, each line contain three positive integers <i>a</i>, <i>b</i>, <i>c</i> indicating the edge which is able to connect two nodes <i>a</i> and <i>b</i>, and unit price <i>c</i>.</p><p>All numbers in input are less than 2<sup>16</sup>.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>For each test case, output an integer indicating the minimum possible cost for the tree in one line. If there is no way to build a Christmas tree, print &ldquo;No Answer&rdquo; in one line.</p></span></div><p class="pst">Sample Input</p><pre class="sio">2
+2 1
+1 1
+1 2 15
+7 7
+200 10 20 30 40 50 60
+1 2 1
+2 3 3
+2 4 2
+3 5 4
+3 7 2
+3 6 3
+1 5 9</pre><p class="pst">Sample Output</p><pre class="sio">15
+1210</pre><p class="pst">

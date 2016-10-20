@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US">For this problem, you will write a program that takes a (possibly long) string of decimal digits, and outputs the permutation of those decimal digits that has the next larger value (as a decimal number) than the input number.  For example: 
+<br> 
+<br>123 -> 132 
+<br>279134399742 -> 279134423799 
+<br> 
+<br>It is possible that no permutation of the input digits has a larger value.  For example, 987. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains a single integer P, (1 ≤ P ≤ 1000), which is the number of data sets that follow.  Each data set is a single line that contains the data set number, followed by a space, followed by up to 80 decimal digits which is the input value.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set there is one line of output.  If there is no larger permutation of the input digits, the output should be the data set number followed by a single space, followed by the string BIGGEST.  If there is a solution, the output should be the data set number, a single space and the next larger permutation of the input digits.</div><p class="pst">Sample Input</p><pre class="sio">3 
+1 123 
+2 279134399742 
+3 987</pre><p class="pst">Sample Output</p><pre class="sio">1 132
+2 279134423799
+3 BIGGEST</pre><p class="pst">

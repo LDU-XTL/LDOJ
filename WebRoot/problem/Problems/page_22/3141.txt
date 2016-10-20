@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US"><p>You are observing a distant galaxy using a telescope above the Astronomy Tower, and you think that a rectangle drawn in that galaxy whose edges are parallel to coordinate axes and contain maximum star systems on its edges has a great deal to do with the mysteries of universe. However you do not have the laptop with you, thus you have written the coordinates of all star systems down on a piece of paper and decide to work out the result later. Can you finish this task?</p><div align="center"><img src="images/3141_1.png"></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>There are multiple test cases in the input file. Each test case starts with one integer <i>N</i>, (1 &le; <i>N</i> &le; 100), the number of star systems on the telescope. <i>N</i> lines follow, each line consists of two integers: the <i>X</i> and <i>Y</i> coordinates of the <i>K</i><sup>th</sup> planet system. The absolute value of any coordinate is no more than 10<sup>9</sup>, and you can assume that the planets are arbitrarily distributed in the universe.</p><p><i>N</i> = 0 indicates the end of input file and should not be processed by your program.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output the maximum value you have found on a single line in the format as indicated in the sample output.</p></div><p class="pst">Sample Input</p><pre class="sio">10
+2 3
+9 2
+7 4
+3 4
+5 7
+1 5
+10 4
+10 6
+11 4
+4 6
+0</pre><p class="pst">Sample Output</p><pre class="sio">Case 1: 7</pre><p class="pst">

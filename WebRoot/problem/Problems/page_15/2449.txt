@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">"Good man never makes girls wait or breaks an appointment!" said the mandarin duck father. Softly touching his little ducks' head, he told them a story.
+<br>
+<br>"Prince Remmarguts lives in his kingdom UDF – United Delta of Freedom. One day their neighboring country sent them Princess Uyuw on a diplomatic mission."
+<br>
+<br>"Erenow, the princess sent Remmarguts a letter, informing him that she would come to the hall and hold commercial talks with UDF if and only if the prince go and meet her via the K-th shortest path. (in fact, Uyuw does not want to come at all)"
+<br>
+<br>Being interested in the trade development and such a lovely girl, Prince Remmarguts really became enamored. He needs you - the prime minister's help!
+<br>
+<br>DETAILS: UDF's capital consists of N stations. The hall is numbered S, while the station numbered T denotes prince' current place. M muddy directed sideways connect some of the stations. Remmarguts' path to welcome the princess might include the same station twice or more than twice, even it is the station with number S or T. Different paths with same length will be considered disparate.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains two integer numbers N and M (1 <= N <= 1000, 0 <= M <= 100000). Stations are numbered from 1 to N. Each of the following M lines contains three integer numbers A, B and T (1 <= A, B <= N, 1 <= T <= 100). It shows that there is a directed sideway from A-th station to B-th station with time T.
+<br>
+<br>The last line consists of three integer numbers S, T and K (1 <= S, T <= N, 1 <= K <= 1000).</div><p class="pst">Output</p><div class="ptx" lang="en-US">A single line consisting of a single integer number: the length (time required) to welcome Princess Uyuw using the K-th shortest path. If K-th shortest path does not exist, you should output "-1" (without quotes) instead.</div><p class="pst">Sample Input</p><pre class="sio">2 2
+1 2 5
+2 1 4
+1 2 2
+</pre><p class="pst">Sample Output</p><pre class="sio">14</pre><p class="pst">

@@ -1,0 +1,29 @@
+</p><div class="ptx" lang="en-US"><p>In the country of Byterland, cities are laid out along the shore of a beautiful river that flows from north to south. The northernmost city is labeled number 1, the city directly to its south is labeled number 2, etc. During the summer, ships are only allowed to travel south, or stay where they are, due to the huge number of tourists. There is always a route from each city <i>i</i> to city <i>i</i> + 1. Additional routes between cities may also exist, including possibly routes between a city and itself.</p><p>Three people are planning to take journeys down the river, and they would like to coordinate their travel plans in order to minimize their total cost. Each person has their own individual starting and ending cities. The cost of traveling on any single ship route is always 1 dollar. If two or three people take the same route together as a group, the total ticket price is 1 dollar for the whole group. Please calculate the minimum total cost paid by the trio of travelers.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>On the first line of the input you will be given an integer <i>N</i> (1 &le; <i>N</i> &le; 1000) representing the number of cities, and an integer <i>M</i> (<i>M</i> &le; 10000) representing the number of routes to be given below (excluding the mandatory routes from each city <i>i</i> to city <i>i</i> + 1).</p><p>The following <i>M</i> pairs of integers each contain a piece of information for a single route, in the form of &ldquo;<i>A</i> <i>B</i>&rdquo; where <i>A</i> indicates the starting city of this route and <i>B</i> shows the ending city. (1 &le; <i>A</i> &le; <i>B</i> &le; <i>N</i>) These pairs will be separated by spaces or empty lines.</p><p>The next line contains three integers <i>S</i><sub>1</sub>, <i>S</i><sub>2</sub>, <i>S</i><sub>3</sub> &ndash; the starting cities of the three travelers. Similarly, the last line contains three integers <i>E</i><sub>1</sub>, <i>E</i><sub>2</sub>, <i>E</i><sub>3</sub> &ndash; the ending cities of the three travelers. (1 &le; <i>S</i><sub>1</sub>, <i>S</i><sub>2</sub>, <i>S</i><sub>3</sub>, <i>E</i><sub>1</sub>, <i>E</i><sub>2</sub>, <i>E</i><sub>3</sub> &le; <i>N</i>, <i>S<sub>i</sub></i> &le; <i>E<sub>i</sub></i>, <i>i</i> = 1, 2, 3).</p><p>This is a multiple test cases problem. Test cases are followed by blank lines. Please process to the end of the file.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output a single line with an integer representing the minimum total cost paid by the trio of travellers.</p></div><p class="pst">Sample Input</p><pre class="sio">3 1
+1 3
+1 1 2
+2 3 3
+
+3 5
+1 3  1 2  1 3  1 3
+1 1
+1 1 2
+2 3 3
+
+1 0
+1 1 1
+1 1 1
+
+6 4
+1 4  1 3  2 2  3 4
+2 5 2
+6 6 2
+
+12 16
+3 8  1 1  5 8  1 4  4 7  9 12  2 7  5 5  2 8  2 10
+1 3  7 11  7 12  1 8  2 6  4 11
+1 3 5
+4 7 5</pre><p class="pst">Sample Output</p><pre class="sio">2
+2
+0
+4
+3</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Explanations of the sample test cases:</p><p>For the first case:</p><ul><li>1st person: 1&rarr;2</li><li>2nd person: 1&rarr;2&rarr;3</li><li>3rd person: 2&rarr;3</li></ul><p>The first and second person can share the ship going from city 1 to city 2. The second and third person can then share the ship going from city 2 to city 3. Only two ship routes are used, so the total cost is two dollars.</p><p>For the second case:</p><p>Exactly the same as the first test case. Duplicate routes and self-cycles can sometimes exist. Please remember that the 1&rarr;2 route is also a duplicate since the mandatory <i>i</i>&rarr;(<i>i</i> + 1) routes are not in our list.</p></span></div><p class="pst">

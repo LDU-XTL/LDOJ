@@ -1,0 +1,52 @@
+</p><div class="ptx" lang="en-US">As you maybe know, the qualification for the European Soccer Championship 2000 is a tournament where in each group each team plays against each other team twice. Germany is in group 3 together with Turkey, Finland, Moldova and Northern Ireland. 14 games have been played and 6 are still to come.
+<br>A quick look at the current standings might make you think that Northern Ireland is already out of the race. But that's wrong! Imagine Northern Ireland wins their three remaining games, Germany plays remis against Turkey and loses against Finland, and Moldova defeats Turkey. Then Northern Ireland is number one! 
+<br>
+<br>For those who are not familiar with the scoring model: In each game a team gains 3 points for a victory, 1 point for a remis or 0 points for a loss. After all games have been played, teams are ranked according to points. In case of a tie, the additional tie breakers are: goal difference (i.e. goals scored - goals against), goals scored, and random choice, in that order. 
+<br>
+<br>The question your program should answer is:
+<br>Regarding all possibilities of how the remaining games could end, what is the highest and lowest possible rank of each team in the group after the tournament is over? </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will consist of one or more test cases. Each test case adheres to the following format: 
+<br><ul><li>On the first line there will be one integer n (1 <= n <= 20), representing the number of teams in the group.
+<br><li>On the next n lines, the names of the teams will follow. Names are always shorter than 30 characters and do not contain whitespace.
+<br><li>On the next line, there will be an integer g, representing the number of completed games.
+<br><li>Finally, g lines will follow, each one describing one completed game in the form team1 team2 goals1 goals2.
+<br><li>You may further assume that at most 10 games will be remaining and each team has at least one remaining game to play. (This simplifies the problem a little.) </ul>
+<br>Input will be terminated by a value of zero (0) for n. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, first print a line saying "Group #x" where x is the number of the test case (counting from 1).
+<br>Then, print one line per team in the order they appear in the input. On each line, print the team's name, a blank character, its best possible rank, a minus sign and its worst possible rank. 
+<br>Print a blank line after each test case, even after the last one.</div><p class="pst">Sample Input</p><pre class="sio">2
+A
+B
+1
+A B 1 0
+5
+Ger
+Tur
+Fin
+Nor
+Mol
+14
+Fin Mol 3 2
+Tur Nor 3 0
+Tur Ger 1 0
+Nor Fin 1 0
+Mol Ger 1 3
+Tur Fin 1 3
+Nor Mol 2 2
+Nor Ger 0 3
+Tur Mol 2 0
+Ger Fin 2 0
+Mol Fin 0 0
+Ger Mol 6 1
+Fin Tur 2 4
+Mol Nor 0 0
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">Group #1
+A 1-2
+B 1-2
+
+Group #2
+Ger 1-3
+Tur 1-3
+Fin 1-4
+Nor 1-5
+Mol 4-5
+</pre><p class="pst">

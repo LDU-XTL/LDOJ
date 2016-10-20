@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US"><div>"It is so sweet to have chocolates on St. Valentine's Day!" Little Facer was so excited when he receives a box of self-made chocolates from his girlfriend, and he decided to eat these chocolates in a special way to commemorate this important day. Suppose that there are <i>N</i> types of chocolates in the box, it can be easily calculated that there are totally <img src="formula?tex=%7B%7Bn%7D%5Cchoose%7B3%7D%7D" alt="{{n}\choose{3}}" align="absmiddle"> different combinations if we choose 3 chocolates of different types to make a dish. Facer will first make one dish for every of these combination, so there will be <img src="formula?tex=%7B%7Bn%7D%5Cchoose%7B3%7D%7D" alt="{{n}\choose{3}}" align="absmiddle"> dishes in all with 3&times;<img src="formula?tex=%7B%7Bn%7D%5Cchoose%7B3%7D%7D" alt="{{n}\choose{3}}" align="absmiddle"> chocolates totally. Then both Facer and his girlfriend choose some chocolates of different types as their original chocolates set. After that, Facer choose exactly <i>M</i> dishes of three-type-mixed-chocolates which he made in the first step and add them into his original chocolates set. Finally, Facer continues eatting two chocolates of the same type until he cannot find any pair of chocolates of the same type (which means for each type of chocolates, there remains at most one chocolate). Facer wishes that his remaining chocolates set could be identical with his girlfriend's original chocolates set after the steps mentioned above, but he does not know the number of ways to choose dishes. Could please tell him the answer? </div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div>The input consists of multiple test cases. Each test case starts with two integers, <i>N</i> and <i>M</i>, which are the number of different types of chocolates and the number of three-type-mixed-chocolates dishes Facer will choose, it is guaranteed that 1&le;<i>N</i>&le;1000, 0&le;<i>M</i>&le;1000. The following two lines contain one <i>N</i>-bit binary integer each, which represents Facer's and his girlfriend's original chocolates set. A case with <i>N</i>=0 and <i>M</i>=0 indicates the end of the input file, which should not be processed. </div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div>For each test case, print one line containing one single integer, which represents the total number of ways to choose dishes. Since the number can be extremely big, you are only required to output the answer % 10007. </div></div><p class="pst">Sample Input</p><pre class="sio">4 3
+1101
+1001
+3 1
+101
+010
+5 3
+11010
+10111
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">1
+1
+6
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">This problem is inspired from 2008 Regional Hangzhou but is more difficult.
+<br>A naive print-table-algorithm will not pass.  </div><p class="pst">

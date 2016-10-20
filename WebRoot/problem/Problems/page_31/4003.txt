@@ -1,0 +1,25 @@
+</p><div class="ptx" lang="en-US">Bob wants to hold a race to encourage people to do sports. He has got trouble in choosing the route. There are N houses and N - 1 roads in his village. Each road connects two houses, and all houses are connected together. To make the race more interesting, he requires that every participant must start from a different house and run AS FAR AS POSSIBLE without passing a road more than once. The distance difference between the one who runs the longest distance and the one who runs the shortest distance is called “race difference” by Bob. Bob does not want the “race difference”to be more than Q. The houses are numbered from 1 to N. Bob wants that the No. of all starting house must be consecutive. He is now asking you for help. He wants to know the maximum number of starting houses he can choose, by other words, the maximum number of people who can take part in his race.</div><p class="pst">Input</p><div class="ptx" lang="en-US">There are several test cases.
+<br>The first line of each test case contains two integers N and M. N is the number of houses, M is the number of queries.
+<br>The following N-1 lines, each contains three integers, x, y and z, indicating that there is a road of length z connecting house x and house y.
+<br>The following M lines are the queries. Each line contains an integer Q, asking that at most how many people can take part in Bob’s race according to the above mentioned rules and under the condition that the“race difference”is no more than Q. 
+<br>
+<br>The input ends with N = 0 and M = 0.
+<br>
+<br>(N&lt;=50000 M&lt;=500 1&lt;=x,y&lt;=N 0&lt;=z&lt;=5000 Q&lt;=10000000)
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, you should output the answer in a line for each query.</div><p class="pst">Sample Input</p><pre class="sio">5 5
+1 2 3
+2 3 4
+4 5 3
+3 4 2
+1
+2
+3
+4
+5
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+3
+3
+3
+5
+</pre><p class="pst">

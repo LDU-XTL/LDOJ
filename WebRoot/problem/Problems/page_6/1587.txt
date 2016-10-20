@@ -1,0 +1,39 @@
+</p><div class="ptx" lang="en-US">You are planning a canoe trip through a tidal estuary (a network of waterways subject to tides).You can paddle only by day (sunrise to sunset). A particular difficulty is that many of the places you can consider stopping will only have enough water to float your canoe when the tide is sufficiently high, and getting stuck offshore in the mud for several hours is not your idea of a good time!
+<br>You have a list of the available docks, in the order you will encounter them. For each dock you know how many miles it is from your starting point and for how many hours before and after low tide it cannot be reached. You need not stop at each dock, and the main channel of the waterway will always have enough water for you to make progress if you wish to bypass one or more docks.You want to be sure, however, that you put in to an accessible dock by sunset on each day. You also cannot depart from a dock in the morning until enough water is available.
+<br>The time of sunrise, sunset, and low tides for each day will change slightly. So successive sunrises will not be exactly 24 hours apart nor sunsets, nor will successive low tides occur exactly 12 hours apart. Over the limited number of days for your trip, we can approximate these changes as a fixed number of minutes per day away from the ideal.
+<br>Write a program to prepare itineraries for such trips, indicating at which docks you will stop at end of each day's paddling. Each itinerary should require as few days as possible. Given a choice of itineraries with the same number of days, choose the one in which you make the most progress in the earlier days.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of a series of trip descriptions. All time inputs will be presented in the form HH:MM:SS, where HH is a two digit integer indicating hours from 00-23, MM is a two-digit integer indicating minutes from 00-59, and SS is a two-digit integer indicating seconds from 00-59.
+<br>For each trip description:
+<br>Line 1 Maximum number of days for the trip (integer 1-10)
+<br>Line 2 Average paddling speed in miles per hour (positive real number)
+<br>Line 3 < sunrise > < interval >
+<br>Time of sunrise on day 1 of the trip (05:00:00-08:00:00)
+<br>Time between successive sunrises (23:45:00-24:15:00)
+<br>Line 4 < sunset > < interval >
+<br>Time of sunset on day 1 (17:00:00-20:00:00)
+<br>Time between successive sunsets (23:45:00-24:15:00)
+<br>Line 5 < lowtide > < interval >
+<br>Time of 1st low tide on day 1 (any time)
+<br>Time between successive low tides (11:00:00-13:00:00)
+<br>Line 6 Number of docks available along the way, not counting your trip starting point but including your final destination (positive integer)
+<br>7-end < distance > < inaccessible >
+<br>One line for each dock (including the starting dock at distance 0.0), containing:
+<br>Distance of that dock, in miles, from your trip starting point (real)
+<br>Number of hours before and after low tide when dock is inaccessible(integer 0-12) The final dataset is followed by a 0.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each trip description, print a single line:
+<br>NO ITINERARY POSSIBLE
+<br>if the trip cannot be completed in the indicated number of days. If the trip can be completed, print a single line containing the numbers of the docks at which you would stop on each day, each number separated from the others by a single space.</div><p class="pst">Sample Input</p><pre class="sio">4
+5.0
+07:22:00 23:54:00
+18:16:00 23:58:30
+05:21:00 12:24:00
+9
+0.0 0
+15.0 1
+30.0 2
+45.0 3
+60.0 2
+75.0 1
+90.0 1
+105.0 2
+125.0 3
+140.0 2
+0</pre><p class="pst">Sample Output</p><pre class="sio">2 5 7 9</pre><p class="pst">

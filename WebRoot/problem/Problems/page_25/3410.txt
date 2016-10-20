@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US"><p>Two polygons on a plane are described by the coordinates of their vertices in anticlockwise order. The polygons are otherwise arbitrary but it is known that no three sequential vertices lie on the same line. It is suspected that the two polygons are parts of one bigger <b>convex</b> polygon that was split in two.</p>Write a program to check the guess on the condition that it is allowed to move and rotate, but not to invert the parts to match them together. All computations should be made with the precision of 0.001. </div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line contains an integer <b>N<sub>1</sub></b> (3&#8804;<b>N<sub>1</sub></b>&#8804;100) &#8211; the number of vertices of the first polygon. Each of the following <b>N<sub>1</sub></b> lines contains two real numbers <b>X</b>, <b>Y</b> separated by one space &#8211; the coordinates of one vertex. The rest of the file describes the second polygon in similar manner.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>The first and only line of the output must contain the number 1 if the guess is correct, and 0 otherwise.</p></div><p class="pst">Sample Input</p><pre class="sio">7
+0 0
+4 0
+4 1
+3 3.5
+4 4
+4 5
+0 5
+7
+6 0
+11 0
+11 4
+10 4
+9.5 5
+7 4
+6 4</pre><p class="pst">Sample Output</p><pre class="sio">1</pre><p class="pst">

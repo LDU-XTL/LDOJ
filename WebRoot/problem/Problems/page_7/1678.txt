@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US">A traditional game is played between two players on a pool of n numbers (not necessarily distinguishing ones).
+<br>
+<br>The first player will choose from the pool a number x1 lying in [a, b] (0 < a < b), which means a <= x1 <= b. Next the second player should choose a number y1 such that y1 - x1 lies in [a, b] (Attention! This implies y1 > x1 since a > 0). Then the first player should choose a number x2 such that x2 - y1 lies in [a, b]... The game ends when one of them cannot make a choice. Note that a player MUST NOT skip his turn.
+<br>
+<br>A player's score is determined by the numbers he has chose, by the way: 
+<br>
+<br>player1score = x1 + x2 + ...
+<br>player2score = y1 + y2 + ...
+<br>
+<br>If you are player1, what is the maximum score difference (player1score - player2score) you can get? It is assumed that player2 plays perfectly.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains a single integer t (1 <= t <= 20) indicating the number of test cases. Then follow the t cases. Each case contains exactly two lines. The first line contains three integers, n, a, b (2 <= n <= 10000, 0 < a < b <= 100); the second line contains n integers, the numbers in the pool, any of which lies in [-9999, 9999].</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case, print the maximum score difference player1 can get. Note that it can be a negative, which means player1 cannot win if player2 plays perfectly.</div><p class="pst">Sample Input</p><pre class="sio">3
+6 1 2
+1 3 -2 5 -3 6
+2 1 2
+-2 -1
+2 1 2
+1 0
+</pre><p class="pst">Sample Output</p><pre class="sio">-3
+0
+1
+</pre><p class="pst">

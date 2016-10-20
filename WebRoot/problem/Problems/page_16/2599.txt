@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">There are several airports in one country, and there are flights between some of them. One can fly from any airport to any other, probably with some changes. For any pair of airports there exists only one sequence of flights that connects them.
+<br>
+<br>Two terrorists play a game. They make moves in turn. Each move consists of the following operations. A player mines an airport, chooses a flight and flies away together with his colleague. After the take-off he actuates a radio-controlled fuse. As a result the airport that the terrorists have just left is destroyed, and all the flights to and from this airport are no longer possible. After the aircraft lands the other player makes his move, and so forth. One loses if one cannot make a move.
+<br>
+<br>Given an initial list of flights and the number of an airport where the terrorists are at the start of the game, write a program which would determine who wins if the terrorists play a perfect game (each chooses the best move).</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of an input contains two integers: N and K separated with a space. Here N is the number of airports (N <= 1000) and K is the number of an airport, which is the starting point of the game (1 <= K<= N). The next n-1 lines of the file contain pairs of integers separated with a space. These integers are numbers of airports, connected with a flight (all the flights are symmetric and are mentioned only once). There are at most 20 flights to each airport. Input data are always correct.</div><p class="pst">Output</p><div class="ptx" lang="en-US">If the player who starts the game wins, the program should write: "First player wins flying to airport L" where L is the number of an airport to which the players should fly first. If there are more than one such airports, the program should find one of them that has the minimal number. Otherwise the program should write "First player loses".</div><p class="pst">Sample Input</p><pre class="sio">4 3
+3 2
+3 1
+1 4
+</pre><p class="pst">Sample Output</p><pre class="sio">First player wins flying to airport 2
+</pre><p class="pst">

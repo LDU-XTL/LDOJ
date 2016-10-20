@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>A simple continuous fraction has the form:</p><div align="center"><img src="images/3197_1.gif"></div><p>where the <i>a<sub>i</sub></i>&rsquo;s are integer numbers.</p><p>The previous continuous fraction could be noted as [<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, &hellip;, <i>a<sub>n</sub></i>]. It is not difficult to show that any rational number <i><sup>p</sup></i>&frasl;<i><sub>q</sub></i>, with integers <i>p</i> &gt; <i>q</i> &gt; 0, can be represented in a unique way by a simple continuous fraction with <i>n</i> terms, such that <i><sup>p</sup></i>&frasl;<i><sub>q</sub></i> = [<i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>, &hellip;, <i>a<sub>n</sub></i><sub>&minus;1</sub>, 1], where <i> n</i> and the <i>a<sub>i</sub></i>&rsquo;s are positive natural numbers.</p><p>Your task is to find and print the simple continuous fraction that corresponds to a given rational number.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input will consist of a series of cases, each one in a line. A line describing a case contains <i>p</i> and <i>q</i>, two integer numbers separated by a space, with 10<sup>20</sup> &gt; <i>p</i> &gt; <i>q</i> &gt; 0.</p><p>The end of the input is indicated by a line containing <code>0 0</code>.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Cases must be analyzed in the order that are read from the input. Output for each case will consist of several lines. The first line indicates the case number, starting at 1, using the format:</p><p><code>Case i:</code></p><p>replacing <code>i</code> by the corresponding case number. The second line displays the input data in the form <code>p / q</code>.</p><p>The remaining lines must contain the continuous fraction corresponding to the rational number, <sup><i>p</i></sup>&frasl;<sub><i>q</i></sub>, specified in the given input line. The continuous fraction must be printed accordingly to the following rules:</p><ul><li>Horizontal bars are formed by sequences of dashes &lsquo;<code>-</code>&rsquo;.</li><li>The width of each horizontal bar is exactly equal to the width of the denominator under it.</li><li>Blank characters should be printed using periods &lsquo;<code>.</code>&rsquo;.</li><li>The number on a fraction numerator must be printed center justified. That is, the number of spaces at either side must be same, if possible; in other case, one more space must be added at the right side.</li></ul></span></div><p class="pst">Sample Input</p><pre class="sio">75 34
+65 60
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">Case 1:
+75 / 34
+..........1......
+2.+.-------------
+............1....
+....4.+.---------
+..............1..
+........1.+.-----
+................1
+............5.+.-
+................1
+Case 2:
+65 / 60
+......1...
+1.+.------
+.........1
+....11.+.-
+.........1</pre><p class="pst">

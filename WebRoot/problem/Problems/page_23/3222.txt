@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US"><p>Given a simple connected undirected graph with <i>n</i> vertices and <i>m</i> edges, where <i>m</i> is even, your task is to find a pairing of the edges such that each pair of edges shares a vertex.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input contains exactly one test cases. On the first line of the test case there are two integers <i>n</i> and <i>m</i> (3 ≤ <i>n</i> ≤ 20,000, 2 ≤ <i>m</i> ≤ 100,000, <i>m</i> is even) which indicate the size of the graph. Next come <i>m</i> lines each with a pair of integers <i>a</i> and <i>b</i> representing an edge (<i>a</i>, <i>b</i>). The vertices are numbered 1 through <i>n</i>.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>If a pairing exists, output it in <sup><i>m</i></sup>⁄<sub>2</sub> lines. Each line contains three integers <i>a</i>, <i>b</i> and <i>c</i> in this order, indicating that the edges (<i>a</i>, <i>b</i>) and (<i>b</i>, <i>c</i>) are paired together. If no pairing exists, just output “<code>NO</code>” and nothing else.</p></span></div><p class="pst">Sample Input</p><pre class="sio">7 10
+1 2
+1 3
+2 4
+3 4
+4 5
+4 6
+5 7
+6 7
+2 5
+3 6</pre><p class="pst">Sample Output</p><pre class="sio">1 2 4
+1 3 4
+4 5 2
+4 6 3
+5 7 6</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><p>Illustration of the sample test case:</p><div align="center"><img src="images/3222_1.png"></div></div><p class="pst">

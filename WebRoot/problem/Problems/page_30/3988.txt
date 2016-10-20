@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">A new Semester is coming and students are troubling for selecting courses. Students select their course on the web course system. There are n courses, the i<sup>th</sup> course is available during the time interval (A<sub>i</sub>,B<sub>i</sub>). That means, if you want to select the i<sup>th</sup> course, you must select it after time A<sub>i</sub> and before time B<sub>i</sub>. A<sub>i</sub> and B<sub>i</sub> are all in minutes. A student can only try to select a course every 5 minutes, but he can start trying at any time, and try as many times as he wants. For example, if you start trying to select courses at 5 minutes 21 seconds, then you can make other tries at 10 minutes 21 seconds, 15 minutes 21 seconds,20 minutes 21 seconds… and so on. A student can’t select more than one course at the same time. It may happen that no course is available when a student is making a try to select a course 
+<br>You are to find the maximum number of courses that a student can select.</div><p class="pst">Input</p><div class="ptx" lang="en-US">There are no more than 100 test cases.
+<br>The first line of each test case contains an integer N. N is the number of courses (0 < N <= 300)
+<br>Then N lines follows. Each line contains two integers A<sub>i</sub> and B<sub>i</sub> (0 <= A <sub>i</sub> < B<sub>i</sub> <=1000), meaning that the i<sup>th</sup> course is available during the time interval (A<sub>i</sub>,B<sub>i</sub>).
+<br>The input ends by N = 0.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case output a line containing an integer indicating the maximum number of courses that a student can select.</div><p class="pst">Sample Input</p><pre class="sio">2
+1 10
+4 5
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">2
+</pre><p class="pst">

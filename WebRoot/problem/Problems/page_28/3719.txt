@@ -1,0 +1,35 @@
+</p><div class="ptx" lang="en-US"><div><p>In the recent years, sculptor Clark's works rank highly by more and more connoisseurs. Among Clark's works, "Art of balance" is the most famous one. The skeleton of the work is a combination of scales, as shown in the figure below. Being reputed as the masterpiece of contemporary sculptor, “Art of balance” shows the weight and value of human behaviors and potential views on the spiritual level and display a magic balance of their relationships. </p><p>Unfortunately, due to some unexpected reasons, "Art of balance" was damaged in a fire disaster - the weights of these scales are all destroyed. In order to repair this treasure of art, some artists re-make these weights according to some existed records, but the scales cannot remain balance for some technical reasons and it needs some adjusting. Now you are asked to complete the job. </p><p>To simplify the problem, we consider the skeleton as a binary tree. The leaves of the tree are where we should add weights. It is guaranteed that number of leaves equals the number of weights, and only one weight can be added to a leaf node. The weights of these weights are already known and all weights have the same appearance. At the beginning, the fulcrum of each scale is always at the middle of the rod, and each rod has a fixed length of 1000. When these weights were arranged to leaf nodes, the fulcrum should be adjusted according to the rule of torque balance so that the scale can remain stable. For each scale, let adjusted distance be the length of the line segment between the original fulcrum (i.e. the middle point) and the adjusted fulcrum. Your job is to find such an arrangement that minimize the sum of each scale's adjusted distance. </p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div>The first line contains an integer representing the number of test cases.<br>For each test case, the first line contains an integer representing the number of nodes N (3&le;<i>N</i>&le;100). Next <i>N</i> lines describe a tree. The nodes are numbered from 1 to <i>N</i>. If the <i>i</i><sup>th</sup> node is not a leaf node, the <i>i</i><sup>th</sup> line should contain two positive integers, which stand for the ID of <i>i</i><sup>th</sup> node’s left child and the ID of <i>i</i><sup>th</sup> node’s right child. Otherwise the <i>i</i><sup>th</sup> node is a leaf node and the <i>i</i><sup>th</sup> line should be "-1 -1". It is guaranteed that Node 1 will be the root of the tree. The following line contains an integer <i>M</i> representing the number of weights (2&le;<i>M</i>&le;16). Next line contains <i>M</i> positive integers standing for the value of these weights. The value of a single weight will not exceed 100. </div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div>For each test case, output a real number representing the minimum value of the sum of the adjusted distance, rounded to 0.001. </div></div><p class="pst">Sample Input</p><pre class="sio">3
+3
+2 3
+-1 -1
+-1 -1
+2
+1 2
+7
+2 3
+4 5
+6 7
+-1 -1
+-1 -1
+-1 -1
+-1 -1
+4
+2 2 3 3
+9
+2 3
+4 5
+-1 -1
+6 7
+-1 -1
+8 9
+-1 -1
+-1 -1
+-1 -1
+5
+8 4 2 1 1</pre><p class="pst">Sample Output</p><pre class="sio">166.667
+100.000
+0.000</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><img src="images/3719.bmp" />
+<br>In sample 1, the adjusted distance is (2/3-1/2)*1000.
+<br>In sample 2, only the top scale is adjusted and the total adjusted distance is (6/10-1/2)*1000+0+0=100.
+<br>In sample 3, we have an arrangement that every scale can remain balance without any adjusting. So the sum of adjusted distance is 0.
+<br>Note that adjusting the fulcrum of a certain scale will not affect the other scales' balance and each rod has a fixed length of 1000. </div><p class="pst">

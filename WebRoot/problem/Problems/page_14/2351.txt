@@ -1,0 +1,55 @@
+</p><div class="ptx" lang="en-US">Prior to the late nineteenth century, time keeping was a purely local phenomenon. Each town would set their clocks to noon when the sun reached its zenith each day. A clockmaker or town clock would be the "official" time and the citizens would set their pocket watches and clocks to the time of the town - enterprising citizens would offer their services as mobile clock setters, carrying a watch with the accurate time to adjust the clocks in customer's homes on a weekly basis. Travel between cities meant having to change one's pocket watch upon arrival. 
+<br>However, once railroads began to operate and move people rapidly across great distances, time became much more critical. In the early years of the railroads, the schedules were very confusing because each stop was based on a different local time. The standardization of time was essential to efficient operation of railroads. 
+<br>
+<br>In 1878, Canadian Sir Sanford Fleming proposed the system of worldwide time zones that we use today. He recommended that the world be divided into twenty-four time zones, each spaced 15 degrees of longitude apart. Since the earth rotates once every 24 hours and there are 360 degrees of longitude, each hour the earth rotates one-twenty-fourth of a circle or 15° of longitude. Sir Fleming's time zones were heralded as a brilliant solution to a chaotic problem worldwide. 
+<br>
+<br>United States railroad companies began utilizing Fleming's standard time zones on November 18, 1883. In 1884 an International Prime Meridian Conference was held in Washington D.C. to standardize time and select the Prime Meridian. The conference selected the longitude of Greenwich, England as zero degrees longitude and established the 24 time zones based on the Prime Meridian. Although the time zones had been established, not all countries switched immediately. Though most U.S. states began to adhere to the Pacific, Mountain, Central, and Eastern time zones by 1895, Congress didn't make the use of these time zones mandatory until the Standard Time Act of 1918. 
+<br>
+<br>Today, many countries operate on variations of the time zones proposed by Sir Fleming. All of China (which should span five time zones) uses a single time zone - eight hours ahead of Coordinated Universal Time (known by the abbreviation UTC - based on the time zone running through Greenwich at 0° longitude). Russia adheres to its designated time zones although the entire country is on permanent Daylight Saving Time and is an hour ahead of their actual zones. Australia uses three time zones - its central time zone is a half-hour ahead of its designated time zone. Several countries in the Middle East and South Asia also utilize half-hour time zones. 
+<br>
+<br>Since time zones are based on segments of longitude and lines of longitude narrow at the poles, scientists working at the North and South Poles simply use UTC time. Otherwise, Antarctica would be divided into 24 very thin time zones! 
+<br>
+<br>Time zones have recently been given standard capital-letter abbreviations as follows: 
+<br>
+<br>UTC Coordinated Universal Time
+<br>GMT Greenwich Mean Time, defined as UTC
+<br>BST British Summer Time, defined as UTC+1 hour
+<br>IST Irish Summer Time, defined as UTC+1 hour
+<br>WET Western Europe Time, defined as UTC
+<br>WEST Western Europe Summer Time, defined as UTC+1 hour
+<br>CET Central Europe Time, defined as UTC+1
+<br>CEST Central Europe Summer Time, defined as UTC+2
+<br>EET Eastern Europe Time, defined as UTC+2
+<br>EEST Eastern Europe Summer Time, defined as UTC+3
+<br>MSK Moscow Time, defined as UTC+3
+<br>MSD Moscow Summer Time, defined as UTC+4
+<br>AST Atlantic Standard Time, defined as UTC-4 hours
+<br>ADT Atlantic Daylight Time, defined as UTC-3 hours
+<br>NST Newfoundland Standard Time, defined as UTC-3.5 hours
+<br>NDT Newfoundland Daylight Time, defined as UTC-2.5 hours
+<br>EST Eastern Standard Time, defined as UTC-5 hours
+<br>EDT Eastern Daylight Saving Time, defined as UTC-4 hours
+<br>CST Central Standard Time, defined as UTC-6 hours
+<br>CDT Central Daylight Saving Time, defined as UTC-5 hours
+<br>MST Mountain Standard Time, defined as UTC-7 hours
+<br>MDT Mountain Daylight Saving Time, defined as UTC-6 hours
+<br>PST Pacific Standard Time, defined as UTC-8 hours
+<br>PDT Pacific Daylight Saving Time, defined as UTC-7 hours
+<br>HST Hawaiian Standard Time, defined as UTC-10 hours
+<br>AKST Alaska Standard Time, defined as UTC-9 hours
+<br>AKDT Alaska Standard Daylight Saving Time, defined as UTC-8 hours
+<br>AEST Australian Eastern Standard Time, defined as UTC+10 hours 
+<br>AEDT Australian Eastern Daylight Time, defined as UTC+11 hours 
+<br>ACST Australian Central Standard Time, defined as UTC+9.5 hours 
+<br>ACDT Australian Central Daylight Time, defined as UTC+10.5 hours 
+<br>AWST Australian Western Standard Time, defined as UTC+8 hours 
+<br>
+<br>Given the current time in one time zone, you are to compute what time it is in another time zone.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains N, the number of test cases. For each case a line is given with a time, and 2 time zone abbreviations. Time is given in standard a.m./p.m. format with midnight denoted "midnight" and noon denoted "noon" (12:00 a.m. and 12:00 p.m. are oxymorons).</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case, assuming the given time is the current time in the first time zone, give the current time in the second time zone. </div><p class="pst">Sample Input</p><pre class="sio">4
+noon HST CEST 
+11:29 a.m. EST GMT
+6:01 p.m. CST UTC
+12:40 p.m. ADT MSK
+</pre><p class="pst">Sample Output</p><pre class="sio">midnight
+4:29 p.m.
+12:01 a.m.
+6:40 p.m.</pre><p class="pst">

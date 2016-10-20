@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">What a game collection it would be without famous and well known word puzzle. Also KOKODáKH contains this game. Typical word puzzle is a rectangular array filled with letters, and the list of words. The goal is to find the words form the list in the array and to score out all their letters. After scoring out the letter can still be part of any other word (words can cross and overlap). When all words from list are found and scored out there are several remaining letters. These letters, read in rows, create the secret word. The words can be found in all eight directions, including diagonal directions. 
+<br>
+<br>It is clear that KOKODáKH has to bring some innovation into this game. The new rule says that the word can "jump over" the array boundary and continue on the opposite side. Upper row is thus next to the bottom row and the left collum is next to the right one. If we number the rows with numbers 0 till R-1 and collums with numbers 0 till S-1, we can describe each field in the array by the coordinates. For example (0,0) is the upper left corner. Word beginning on the position (x,y) can be created by succesion of characters with coordinates (x,y), ((x+i+R) mod R, (y+j+S) mod S), ((x+2i+R) mod R, (y+2j+S) mod S) and so on. The i and j can be substitued by numbers -1, 0 and +1, but they cannot be both zero at the same time. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of Z assignments. The number of them is given by the single positive integer Z appearing on the first line of input. The assignements follow. Each assignement consists of array filled with letters, and the list of words which should be found in the array. The description of the array begins with the line containing two integers R and S separated by space 1 <= R,S <= 200. R is the number of rows in the array, S is the number of collumns. The R lines follows, each line constist of exactly S lowercase letters (a trough z). The next line is the integer K (0 <= K <= 1000) determining the number of words to be found out in the puzzle. The K lines follow. On each line, there is one word. The maximum length of the word is 20 characters. The word may not appear in the array and it can appear there several times. In this case all appearences are scored out. Words in the list can repeat. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The program prints one line for each assignement. On this line there will be all letters from word puzzle which remained in the array after scoring out all the words that appeared on the list. The letters are not separated and they are lined up in order in which they appeared in the array in row major order. At the end of the string, there is the newline character. If there are no remaining letters after scoring out all words, the program prints out empty line. </div><p class="pst">Sample Input</p><pre class="sio">1
+3 7
+kroksun
+pranyra
+cmakrom
+7
+syr
+kra
+kroksunkrok
+pranyr
+rak
+mak
+makro
+</pre><p class="pst">Sample Output</p><pre class="sio">acm</pre><p class="pst">

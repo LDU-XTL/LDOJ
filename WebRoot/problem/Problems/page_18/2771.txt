@@ -1,0 +1,30 @@
+</p><div class="ptx" lang="en-US">Frank N. Stein is a very conservative high-school teacher. He wants to take some of his students on an excursion, but he is afraid that some of them might become couples. While you can never exclude this possibility, he has made some rules that he thinks indicates a low probability two persons will become a couple: 
+<br><ul><li>Their height differs by more than 40 cm. 
+<br><li>They are of the same sex. 
+<br><li>Their preferred music style is different. 
+<br><li>Their favourite sport is the same (they are likely to be fans of different teams and that would result in fighting). </ul>
+<br>So, for any two persons that he brings on the excursion, they must satisfy at least one of the requirements above. Help him find the maximum number of persons he can take, given their vital information. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input consists of an integer T &le; 100 giving the number of test cases. The first line of each test case consists of an integer N &le; 500 giving the number of pupils. Next there will be one line for each pupil consisting of four space-separated data items: 
+<br><ul><li>an integer h giving the height in cm; 
+<br><li>a character 'F' for female or 'M' for male; 
+<br><li>a string describing the preferred music style; 
+<br><li>a string with the name of the favourite sport. </ul>
+<br>No string in the input will contain more than 100 characters, nor will any string contain any whitespace. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case in the input there should be one line with an integer giving the maximum number of eligible pupils. </div><p class="pst">Sample Input</p><pre class="sio">2
+4
+35 M classicism programming
+0 M baroque skiing
+43 M baroque chess
+30 F baroque soccer
+8
+27 M romance programming
+194 F baroque programming
+67 M baroque ping-pong
+51 M classicism programming
+80 M classicism Paintball
+35 M baroque ping-pong
+39 F romance ping-pong
+110 M romance Paintball
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+7
+</pre><p class="pst">

@@ -1,0 +1,30 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><blockquote><p style="text-indent: 4ex; margin-top: 0; margin-bottom: 0"><i>&ldquo;There is no denying the clues. They are clearly there; you can&rsquo;t miss them. But are we interpreting the clues correctly? That is where the author tricks us. There are most definitely more than one way to look at a clue and what it signifies, but the way the author has laid them out, (like a breadcrumb trail) we are inclined to believe they lead us to the end conclusion&hellip;&rdquo;</i></p></blockquote><p>You have been reading Harry Potter series for some time. Since the final book will not be out in the store until 2007, and you are curious about what could happen in the final book of the series, you have decided to do some guessing by yourself. After rereading the series for some days, you have divided every piece of information you currently have into three categories:</p><ol type="A"><li><i>Extracts</i>. Extracts are taken from the previous published books in the series, and you don&rsquo;t need to check for their validities;</li><li><i>Assumptions</i>. Assumptions are based on different interpretations of other assumptions/extracts from the books. An assumption is plausible if and only if some of the assumptions (or extracts from the book) this assumption relies on are interpreted in ways that support this assumption. No assumption requires itself to be plausible, whether directly or indirectly.</li><li><i>Theories</i>. Theories are based on extracts and assumptions. If all the extracts and assumptions one theory depends on are believable and interpreted to support this theory, then we say this theory can be argued as believable.</li></ol><p>Note that extracts and assumptions may have many different exclusive explanations leading to other theories and/or assumptions.</p><p>Because of personal preferences, you want to see some scenes in the next book come true much more than the others, thus you have assigned different values to different theories, each being an exponent of 2, less or equal to 2<sup>(number of theories &minus; 1)</sup>. You want to know what the maximal possible value of theories that can be argued as believable at the same time is; furthermore, since the less guesswork you do, the more reliable your theories are, you are interested in the minimum number of explanations you must make to make all those theories acceptable. Can you accomplish this seemingly impossible task?</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input consists of several cases, each followed by a blank line.</p><p>Each test case starts with three integers <i>N</i>, <i>M</i> and <i>K</i> (1 &le; <i>N</i> &le; 1000, 1 &le; <i>M</i> &le; 5000, 1 &le; <i>K</i> &le; 100), the number of extracts from the book, the number of assumptions and the number of theories, respectively.</p><p>The following part describes extracts and assumptions. Extracts are always described before assumptions. Each description starts with one string <i>S</i>, the name of the <i>extract</i>/<i>assumption</i>, and an integer <i>T</i> in the next line, the number of different explanations you have come up with; <i>T</i> lines follow, on each line there is a string <i>X</i>, the explanation which leads to another <i>assumption</i>/<i>theory</i>.</p><p>The next part of test case consists of <i>K</i> descriptions of theories. Each description starts with one string <i>S</i>, the name of the <i>theory</i>, followed by one integer <i>P</i>, the value which you have assigned to this <i>theory</i>.</p><p>Two successive descriptions are separated by a line with one single character &lsquo;<code>-</code>&rsquo;. It is guaranteed that the total numbers of explanations which extracts and assumptions have does not exceed 50000, and you may assume every string&rsquo;s length is less or equal to 20, and only consists of letters from alphabet and numbers 0&hellip;9.</p><p><i>N</i> = 0, <i>M</i> = 0, <i>K</i> = 0 indicates the end of input file and should not be processed by your program.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For every test case, output the maximum value followed by the minimum number of explanations you have to make in the format as indicated in the sample output. Print all the plausible theories (with the maximum total value) on the following lines. Separate the result of two successive inputs with one blank line.</p></div><p class="pst">Sample Input</p><pre class="sio">2 3 1
+Extract1
+2
+Assumption1
+Assumption2
+-
+Extract2
+2
+Assumption2
+Assumption3
+-
+Assumption1
+2
+Assumption2
+Theory1
+-
+Assumption2
+0
+-
+Assumption3
+1
+Theory1
+-
+Theory1
+1
+
+0 0 0</pre><p class="pst">Sample Output</p><pre class="sio">Case 1:
+1
+4
+Theory1</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><span lang="en-us"><p>In order to make <code>Theory1</code> believable, <code>Extract1</code>, <code>Extract2</code>, <code>Assumption1</code>, and <code>Assumption3</code>&rsquo;s explanations must be <code>Assumption1</code>, <code>Assumption3</code>, <code>Theory1</code> and <code>Theory1</code>, respectively. Thus the total number of explanations we must make is 4.</p></span></div><p class="pst">

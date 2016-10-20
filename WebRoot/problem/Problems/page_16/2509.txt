@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US">Peter has n cigarettes. He smokes them one by one keeping all the butts. Out of k > 1 butts he can roll a new cigarette. 
+<br>How many cigarettes can Peter have? 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input is a sequence of lines. Each line contains two integer numbers giving the values of n and k. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each line of input, output one integer number on a separate line giving the maximum number of cigarettes that Peter can have.</div><p class="pst">Sample Input</p><pre class="sio">4 3
+10 3
+100 5
+</pre><p class="pst">Sample Output</p><pre class="sio">5
+14
+124
+</pre><p class="pst">

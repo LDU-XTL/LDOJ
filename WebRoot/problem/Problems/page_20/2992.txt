@@ -1,0 +1,5 @@
+</p><div class="ptx" lang="en-US">Your task in this problem is to determine the number of divisors of <i>C<sub>n</sub><span style="margin-left: -0.7ex"><sup>k</sup></span></i>. Just for fun -- or do you need any special reason for such a useful computation? </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several instances. Each instance consists of a single line containing two integers n and k (0 &le; k &le; n &le; 431), separated by a single space. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each instance, output a line containing exactly one integer -- the number of distinct divisors of <i>C<sub>n</sub><span style="margin-left: -0.7ex"><sup>k</sup></span></i>. For the input instances, this number does not exceed 2<sup>63</sup> - 1. </div><p class="pst">Sample Input</p><pre class="sio">5 1
+6 3
+10 4</pre><p class="pst">Sample Output</p><pre class="sio">2
+6
+16</pre><p class="pst">

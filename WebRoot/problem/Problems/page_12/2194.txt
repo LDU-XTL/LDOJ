@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Cylinders (e.g. oil drums) (of radius 1 foot) are stacked in a rectangular bin. Each cylinder on an upper row rests on two cylinders in the row below. The cylinders in the bottom row rest on the floor. Each row has one less cylinder than the row below.
+<br><center><img src=images/2194_1.jpg></center>
+<br>This problem is to write a program to compute the location of the center of the top cylinder from the centers of the cylinders on the bottom row. Computations of intermediate values should use double precision.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Each data set will appear in one line of the input. An input line consists of the number, n, of cylinders on the bottom row followed by n floating point values giving the x coordinates of the centers of the cylinders (the y coordinates are all 1.0 since the cylinders are resting on the floor (y = 0.0)). The value of n will be between 1 and 10 (inclusive). The end of input is signaled by a value of n = 0. The distance between adjacent centers will be at least 2.0 (so the cylinders do not overlap) but no more than 3.4 (cylinders at level k will never touch cylinders at level k – 2).</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output for each data set is a line containing the x coordinate of the topmost cylinder rounded to 4 decimal places, a space and the y coordinate of the topmost cylinder to 4 decimal places. Note: To help you check your work, the x-coordinate of the center of the top cylinder should be the average of the x-coordinates of the leftmost and rightmost bottom cylinders.</div><p class="pst">Sample Input</p><pre class="sio">4 1.0 4.4 7.8 11.2
+1 1.0
+6 1.0 3.0 5.0 7.0 9.0 11.0
+10 1.0 3.0 5.0 7.0 9.0 11.0 13.0 15.0 17.0 20.4
+5 1.0 4.4 7.8 14.6 11.2
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">6.1000 4.1607
+1.0000 1.0000
+6.0000 9.6603
+10.7000 15.9100
+7.8000 5.2143
+</pre><p class="pst">

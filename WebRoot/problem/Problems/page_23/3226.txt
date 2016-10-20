@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US"><img src=images/3226_1.jpg align=right hspace=10 vspace=10>Zhu Ming and Small Li find a strange stone tablet, which has some capitals printed on it. Capitals in every string are different with each other, and every capital string is followed by a number. Because of their supernormal intelligence, Zhu Ming and Small Li find the number following the string is numbered in the order of dictionary sequence from little to big (the original number is 0).For example, when the length of capital string is 3, number following the string will be: <br>　<table border="0" width="250" id="table1" align=center><tr><td width="50%">ABC</td><td>0</td></tr><tr><td>ABD</td><td>1</td></tr><tr><td>……</td><td>　</td></tr><tr><td>ZYX</td><td>15599</td></tr></table><p>To better study this puzzle, please make a program to given a n-length string (1<=n<=26), output the number of the string. </p></div><p class="pst">Input</p><div class="ptx" lang="en-US">There are several test cases.<br>Each data is made up of two lines.<br>The first line is number n (1&lt;=n&lt;=26)<br>The second line is a string with its length of n.<br>n=0 means end of the input.<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Output the string number for each group of data tested.</div><p class="pst">Sample Input</p><pre class="sio">3
+ABC
+3
+ZYX 
+3
+ABD
+4
+ABCD
+0</pre><p class="pst">Sample Output</p><pre class="sio">0
+15599
+1
+0</pre><p class="pst">

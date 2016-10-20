@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">For any integers p and q with q > 0, define p mod q to be the integer r with 0 <= r <= q −1 such that p−r is divisible by q. For example, we have
+<br><ul>109 mod 10 = 9
+<br>−7 mod 3 = 2
+<br>−56 mod 7 = 0</ul>
+<br>Let &Phi; be a function defined recursively as follows.
+<br><img src=images/2696_1.jpg>
+<br>where a, b, c, d, e, f, g, h are integers with 0 < a, b, c, d, e, f, g, h <= 1000. One can easily see that 0 <= &Phi;(i) <= 1000 holds for any integer i >= 0. Now for any given integers a, b, c, d, e, f, g, h, i with 0 < a, b, c, d, e, f, g, h, i <= 1000, you are asked to write a program to output
+<br>
+<br>&Phi;(i). (Hint: a direct recursive implementation of the above recurrence
+<br>
+<br>relation is likely to run forever for large i.)
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains the number n of test cases. Each of the following n lines contains the sequence a, b, c, d, e, f, g, h, i of integers.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, your program has to output the correct value of &Phi;(i).</div><p class="pst">Sample Input</p><pre class="sio">3
+1 2 3 4 5 6 7 8 9
+11 12 13 14 15 16 17 18 19
+321 322 323 324 325 326 327 328 329</pre><p class="pst">Sample Output</p><pre class="sio">4
+0
+90</pre><p class="pst">

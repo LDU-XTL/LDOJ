@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US"><p>For the daily milking, Farmer John's <i>N</i> cows (1 &le; <i>N</i> &le; 50,000) always line up in the same order. One day Farmer John decides to organize a game of Ultimate Frisbee with some of the cows. To keep things simple, he will take a contiguous range of cows from the milking lineup to play the game. However, for all the cows to have fun they should not differ too much in height.</p><p>Farmer John has made a list of <i>Q</i> (1 &le; <i>Q</i> &le; 200,000) potential groups of cows and their heights (1 &le; <i>height</i> &le; 1,000,000). For each group, he wants your help to determine the difference in height between the shortest and the tallest cow in the group.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US">Line 1: Two space-separated integers, <i>N</i> and <i>Q</i>.
+<br>Lines 2..<i>N</i>+1: Line <i>i</i>+1 contains a single integer that is the height of cow <i>i</i>
+<br>Lines <i>N</i>+2..<i>N</i>+<i>Q</i>+1: Two integers <i>A</i> and <i>B</i> (1 &le; <i>A</i> &le; <i>B</i> &le; <i>N</i>), representing the range of cows from <i>A</i> to <i>B</i> inclusive.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Lines 1..<i>Q</i>: Each line contains a single integer that is a response to a reply and indicates the difference in height between the tallest and shortest cow in the range.</div><p class="pst">Sample Input</p><pre class="sio">6 3
+1
+7
+3
+4
+2
+5
+1 5
+4 6
+2 2</pre><p class="pst">Sample Output</p><pre class="sio">6
+3
+0</pre><p class="pst">

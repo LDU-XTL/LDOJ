@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US"><DIV ALIGN=CENTER><I><B>Is this the real life?
+<br>Or is this just fantasy?
+<br>Caught in a landslide
+<br>No escape from reality
+<br>Open your eyes
+<br>Look up to the skies and see
+<br>I'm just a poor boy, I need no sympathy
+<br>Because I'm easy come, easy go
+<br>A little high, little low
+<br>Anyway the wind blows, doesn't really matter to me&hellip;</B></I></DIV><P>There used to be a gambling called Bohemian Gambling. At the beginning of the game, a unit circle was drawn on a piece of paper. Then a point (<I>x</I><SUB>0</SUB>, <I>y</I><SUB>0</SUB>) in the circle and <I>N</I> (1 &le; <I>N</I> &le; 1000) vectors (&Delta;<I>x<SUB>i</SUB></I>, &Delta;<I>y<SUB>i</SUB></I>) were randomly chosen. At the <I>i</I>-th step of the gambling, a player draw a segment from the point (<I>x</I><SUB><I>i</I> &minus; 1</SUB>, <I>y</I><SUB><I>i</I> &minus; 1</SUB>) to (<I>x<SUB>i</SUB></I>, <I>y<SUB>i</SUB></I>), where <I>x<SUB>i</SUB></I> = <I>x</I><SUB><I>i</I> &minus; 1</SUB> + &Delta;<I>x<SUB>i</SUB></I> and <I>y<SUB>i</SUB></I> = <I>y</I><SUB><I>i</I> &minus; 1</SUB> + &Delta;<I>y<SUB>i</SUB></I>. If (<I>x<SUB>i</SUB></I>, <I>y<SUB>i</SUB></I>) was outside the circle or on its boundary, the game ended; otherwise the player would win some money and go on to the next step of the gambling until all <I>N</I> lines had been drawn.
+<br><P>As a predictor, Mercury had known all the vectors chosen for the gambling in advance, but he didn't know what the starting point would be. His clients asked him to find how much money they could win under average conditions, which meant the point would be chosen within the circle with uniformly distributed probability. They also wondered how much they could win if everything went the luckiest way. What would Mercury's reply to his clients be?</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of one or more data sets, followed by a last line containing a single zero. Each data set begins with a line containing an integer <I>N</I>, 1 &le; <I>N</I> &le; 500, which is the number of line segments that would be drawn. Then follow <I>N</I> lines, each containing two real numbers and an integer referring to &Delta;<I>x<SUB>i</SUB></I>, &Delta;<I>y<SUB>i</SUB></I> and the money that a player could win after the <I>i</I>-th step.</div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case your program should output two lines. The first line gives a real number which indicates the money a player can win under average conditions and the second line an integer number which indicates the maximum amount of money he could win. Refer to the sample output for details.</p><p>The real numbers should be rounded to three digits after the decimal point.</p></div><p class="pst">Sample Input</p><pre class="sio">2 
+1.0 1.0 100
+-1.0 -1.0 50
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">Case 1:
+The expected amount of money: 27.254
+The maximum amount of money: 150
+</pre><p class="pst">

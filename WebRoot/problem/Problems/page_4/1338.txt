@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">Ugly numbers are numbers whose only prime factors are 2, 3 or 5. The sequence 
+<br>1, 2, 3, 4, 5, 6, 8, 9, 10, 12, ... 
+<br>shows the first 10 ugly numbers. By convention, 1 is included. 
+<br>Given the integer n,write a program to find and print the n'th ugly number.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Each line of the input contains a postisive integer n (n <= 1500).Input is terminated by a line with n=0.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each line, output the n’th ugly number .:Don’t deal with the line with n=0.</div><p class="pst">Sample Input</p><pre class="sio">1
+2
+9
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+2
+10
+</pre><p class="pst">

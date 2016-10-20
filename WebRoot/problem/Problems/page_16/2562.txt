@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US">Children are taught to add multi-digit numbers from right-to-left one digit at a time. Many find the "carry" operation - in which a 1 is carried from one digit position to be added to the next - to be a significant challenge. Your job is to count the number of carry operations for each of a set of addition problems so that educators may assess their difficulty.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Each line of input contains two unsigned integers less than 10 digits. The last line of input contains 0 0.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each line of input except the last you should compute and print the number of carry operations that would result from adding the two numbers, in the format shown below. </div><p class="pst">Sample Input</p><pre class="sio">123 456
+555 555
+123 594
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">No carry operation.
+3 carry operations.
+1 carry operation.
+</pre><p class="pst">

@@ -1,0 +1,31 @@
+</p><div class="ptx" lang="en-US">What a sunny day! Let’s go picnic and have barbecue! Today, all kids in “Sun Flower” kindergarten are prepared to have an excursion. Before kicking off, teacher Liu tells them to stand in a row. Teacher Liu has an important message to announce, but she doesn’t want to tell them directly. She just wants the message to spread among the kids by one telling another. As you know, kids may not retell the message exactly the same as what they was told, so teacher Liu wants to see how many versions of message will come out at last. With the result, she can evaluate the communication skills of those kids.
+<br>Because all kids have different height, Teacher Liu set some message passing rules as below:
+<br><ol>
+<br><li>She tells the message to the tallest kid.</li>
+<br><li>Every kid who gets the message must retell the message to his “left messenger” and “right messenger”.</li>
+<br><li>A kid’s “left messenger” is the kid’s tallest “left follower”.</li>
+<br><li>A kid’s “left follower” is another kid who is on his left, shorter than him, and can be seen by him. Of course, a kid may have more than one “left follower”.</li>
+<br><li>When a kid looks left, he can only see as far as the nearest kid who is taller than him.</li>
+<br></ol>
+<br>The definition of “right messenger” is similar to the definition of “left messenger” except all words “left” should be replaced by words “right”.
+<br>
+<br>For example, suppose the height of all kids in the row is 4, 1, 6, 3, 5, 2 (in left to right order). In this situation , teacher Liu tells the message to the 3rd kid, then the 3rd kid passes the message to the 1st kid who is his “left messenger” and the 5th kid who is his “right messenger”, and then the 1st kid tells the 2nd kid as well as the 5th kid tells the 4th kid and the 6th kid.
+<br>Your task is just to figure out the message passing route.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains an integer T indicating the number of test cases, and then T test cases follows.
+<br>Each test case consists of two lines. The first line is an integer N (0 &lt; N &lt;= 50000) which represents the number of kids. The second line lists the height of all kids, in left to right order. It is guaranteed that every kid’s height is unique and less than 2<sup>31</sup> – 1 .
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print “Case t:” at first ( t is the case No. starting from 1 ). Then print N lines. The ith line contains two integers which indicate the position of the ith (i starts form 1 ) kid’s “left messenger” and “right messenger”. If a kid has no “left messenger” or “right messenger”, print ‘0’ instead. (The position of the leftmost kid is 1, and the position of the rightmost kid is N)
+<br></div><p class="pst">Sample Input</p><pre class="sio">2
+5
+5 2 4 3 1
+5
+2 1 4 3 5</pre><p class="pst">Sample Output</p><pre class="sio">Case 1:
+0 3
+0 0
+2 4
+0 5
+0 0
+Case 2:
+0 2
+0 0
+1 4
+0 0
+3 0</pre><p class="pst">

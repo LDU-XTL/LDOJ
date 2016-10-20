@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">In how many ways can you tile a 3xn rectangle with 2x1 dominoes? 
+<br>Here is a sample tiling of a 3x12 rectangle. 
+<br><center><img src=images/2663_1.jpg></center></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of several test cases followed by a line containing -1. Each test case is a line containing an integer 0 <= n <= 30.  </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output one integer number giving the number of possible tilings.</div><p class="pst">Sample Input</p><pre class="sio">2
+8
+12
+-1
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+153
+2131
+</pre><p class="pst">

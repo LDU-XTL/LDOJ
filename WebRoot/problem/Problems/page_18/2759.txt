@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">One day, Jiajia and Wind went out to plant trees with their m-2 children. They believe that trees should be in couples, just like human beings, so they decided to plant an even number of trees, say, 2n trees, in two rows, with n trees in each row. Planting some trees are more difficult than planting some others, so Jiajia carefully measured the difficulty value of each tree and wants to divide the trees into m sets, one for each of the m people to work with.
+<br>
+<br>Each of the m people should plant all the trees in a rectangular with sides parallel to the axis. The difficulty value of a person is the sum of difficulty values of all trees he plants. Since Jiajia should always take the heaviest job (no, he can't leave the most difficult task to his honey, Wind, or their lovely children), Jiajia would like to make his own life easier by minimizing the maximal difficulty value over all the m tasks.
+<br>
+<br>The figure of sample input is below. Different colors represent different jobs. There are only 3 people (Jiajia, Wind and Autumn) in this sample, but your program should be able to handle more complex situations, in which Jiajia and Wind have a loooooot of chilren :)
+<br><center><img src = images/2761_1.jpg></center>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains two integers n and m, the following two lines contain n integers each, representing the difficulty values of each tree, from left to right. You may assume that n<10001, m<=min{2*n,1000}. The sum of all difficulty values would not exceed 2<sup>30</sup>.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output should contain a single integer, the minimized difficulty value of Jiajia's task.</div><p class="pst">Sample Input</p><pre class="sio">3 3
+1 2 6
+2 1 6
+</pre><p class="pst">Sample Output</p><pre class="sio">6</pre><p class="pst">

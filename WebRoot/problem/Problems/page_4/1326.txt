@@ -1,0 +1,32 @@
+</p><div class="ptx" lang="en-US">Mileage program of ACM (Airline of Charming Merlion) is really nice for the travelers flying frequently. Once you complete a flight with ACM, you can earn ACMPerk miles in your ACM Mileage Bank depended on mileage you actual fly. In addition, you can use the ACMPerk mileage in your Mileage Bank to exchange free flight ticket of ACM in future. 
+<br>
+<br> 
+<br>
+<br>The following table helps you calculate how many ACMPerk miles you can earn when you fly on ACM.
+<br><pre>
+<br>When you fly ACM		 Class Code	          You'll earn
+<br> 
+<br>First Class			 F		 Actual mileage + 100% mileage Bonus
+<br> 
+<br>Business Class		   	 B		 Actual mileage + 50% mileage Bonus
+<br> 
+<br>Economy Class			 Y
+<br>1-500 miles					 500 miles
+<br>500+ miles					 Actual mileage</pre>
+<br>It's shown that your ACMPerk mileage consists of two parts. One is your actual flight mileage (the minimum ACMPerk mileage for Economy Class for one flight is 500 miles), the other is the mileage bonus (its accuracy is up to 1 mile) when you fly in Business Class and First Class. For example, you can earn 1329 ACMPerk miles, 1994 ACMPerk miles and 2658 ACMPerk miles for Y, B or F class respectively for the fly from Beijing to Tokyo (the actual mileage between Beijing and Tokyo is 1329 miles). When you fly from Shanghai to Wuhan, you can earn ACMPerk 500 miles for economy class and ACMPerk 650 miles for business class (the actual mileage between Shanghai and Wuhan is 433 miles).
+<br>
+<br> 
+<br>
+<br>       Your task is to help ACM build a program for automatic calculation of ACMPerk mileage.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input file contains several data cases. Each case has many flight records, each per line. The flight record is in the following format: 
+<br>
+<br>OriginalCity DistanceCity ActualMiles ClassCode
+<br>
+<br>Each case ends with a line of one zero. 
+<br>
+<br>A line of one # presents the end of the input file.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Output the summary of ACMPerk mileages for each test case, one per line.</div><p class="pst">Sample Input</p><pre class="sio">Beijing Tokyo 1329 F
+Shanghai Wuhan 433 Y
+0
+#
+</pre><p class="pst">Sample Output</p><pre class="sio">3158</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">When calculate bonus ,be sure you rounded x.5 up to x+1</div><p class="pst">

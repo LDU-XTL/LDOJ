@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US">Given a sequence of positive integers, count all contiguous subsequences (sometimes called substrings, in contrast to subsequences, which may leave out elements) the sum of which is divisible by a given number. These subsequences may overlap. For example, the sequence (see sample input)
+<br><center>2, 1, 2, 1, 1, 2, 1, 2</center>
+<br>contains six contiguous subsequences the sum of which is divisible by four: the first to eighth number, the second to fourth number, the second to seventh number, the third to fifth number, the fourth to sixth number, and the fifth to seventh number.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input consists of an integer c (1 <= c <= 200), the number of test cases. Then follow two lines per test case.
+<br>Each test case starts with a line consisting of two integers d (1 <= d <= 1 000 000) and n (1 <= n <= 50 000), the divisor of the sum of the subsequences and the length of the sequence, respectively. The second line of a test case contains the elements of the sequence, which are integers between 1 and 1 000 000 000, inclusively.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print a single line consisting of a single integer, the number of contiguous subsequences the sum of which is divisible by d.</div><p class="pst">Sample Input</p><pre class="sio">2
+7 3
+1 2 3
+4 8
+2 1 2 1 1 2 1 2</pre><p class="pst">Sample Output</p><pre class="sio">0
+6</pre><p class="pst">

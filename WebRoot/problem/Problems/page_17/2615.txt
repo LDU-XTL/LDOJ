@@ -1,0 +1,7 @@
+</p><div class="ptx" lang="en-US">Given two strings of lowercase letters, a and b, print the shortest string x of lowercase letters such that exactly one (but not both) of ax or bx is a palindrome; that is, equal to itself when reversed.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Standard input contains several pairs of a and b. Each string is on a separate line and consists of between 0 and 1,000 lowercase letters.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each pair, output a line containing x. If several x satisfy the criteria above, choose the first one in alphabetical order.If there no such string x, output "No Solution."</div><p class="pst">Sample Input</p><pre class="sio">abab
+ababab
+abc
+def
+</pre><p class="pst">Sample Output</p><pre class="sio">baba
+ba
+</pre><p class="pst">

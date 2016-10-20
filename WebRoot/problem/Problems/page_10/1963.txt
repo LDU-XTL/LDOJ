@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">Long time ago one man said, that he had explored the corridors of one cave. It means, that he was in all corridors of the cave.Corridors are really horizontal or vertical segments. Corridor counted visited if he was in at least one point of corridor. Now you want to know, is it true. You have a map of the cave, and you know that explorer used the following algorithm: he turns left if he can, if he can't he goes straight, if he can't he turns right, if he can't he turns back.Exploration ends when the man reaches entry point second time. You task to count how many corridors wasn't visited by explorer.</div><p class="pst">Input</p><div class="ptx" lang="en-US">In the first line there is an integer T (T<=20) – the number of different maps. For each map in first line there is an integer N (N<=1000) – the number of corridors. It is known that no two vertical corridors have common point and no two horizontal corridors have common point.So the next N lines contain such information: the line starts with one of the characters V or H –vertical or horizontal corridor. Then one Y-coordinate and two X-coordinates are given for a horizontal corridor or one X-coordinate and two Y-coordinates for a vertical corridor. The last line for each map contains X and Y coordinates of the entry point (start and end point of travel) and the direction (W – left, E – right, N – up and S – down). You may assume that: entry point is not located in the cross-point of two corridors, and explorer can always moves forward by the direction given in the input. All coordinates are integers and do not exceed 32767 by absolute value and there is no more than 500 vertical corridors and no more than 500 horizontal corridors.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each map the program has to print the number of unvisited corridors in separate line.</div><p class="pst">Sample Input</p><pre class="sio">2
+6
+H 0 6 0
+H 2 1 6
+V 1 0 4
+V 5 3 0
+V 3 0 2
+H 1 2 4
+6 0 W
+1
+V 0 -5 5
+0 0 S</pre><p class="pst">Sample Output</p><pre class="sio">1
+0</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><img src=images/1963_1.jpg></div><p class="pst">

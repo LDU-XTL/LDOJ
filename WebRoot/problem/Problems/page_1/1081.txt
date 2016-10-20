@@ -1,0 +1,28 @@
+</p><div class="ptx" lang="en-US">On the first day of first grade at Friendly Elementrary School, it is customary for each student to spend one minute talking to every classmate that he or she does not already know.  When student Bob sees an unfamilar face, he says ``You who?''  A typical response is ``Me Charlie, you who?''  Then Bob says, ``Me Bob!'' and they talk for a minute.  It's very cute.  Then, after a minute, they part and each looks for another stranger to greet. This takes time.  In class of twenty-nine or thirty mutual strangers, it takes 29 minutes; time that, according to teachers, could be better spent learning the alphabet.  Of course, it is rare to have a first grade class where nobody knows anyone else; there are neighbors and playmates who already know each other, so they don't have to go through the get-to-know-you minutes with each other. 
+<br>The two first grade teachers have requested that, to save time, students be allocated to their two classes so that the difference in the sizes of the classes is at most one, and the time it takes to complete these introductions is as small as possible.  There are no more than 60 students in the incoming first grade class. 
+<br>
+<br>How can the assignment of students to classes be made?  Your job is to write the software that answers the question. 
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The school records include information about these student friendships, represented as lists of numbers.  If there are 29 students, then they are represented by the numbers 1 to 29.  The record for a single student includes, first, his/her student identification number (1 to 29, in this example), then the number of his/her acquaintances, then a list of them in no particular order. So, for example, this record 
+<br>17 4 5 2 14 22 
+<br>
+<br>indicates that student 17 knows 4 students: 5, 2, and so on.  The records for all the students in the incoming class are represented as the list of numbers that results from concatenating all the student records together.  Spaces and line breaks are irrelevent in this format.  Thus, this 
+<br>
+<br>1 1 2 2 1 1 
+<br>
+<br>is a whole database, indicating that there are only two students in the incoming class, and they know each other; and this 
+<br>
+<br>1 2 3 4 
+<br>2 2 3 4 
+<br>3 2 1 2 
+<br>4 2 1 2 
+<br>
+<br>indicates that 1 doesn't know 2, and 3 doesn't know 4, but all other pairs know each other. 
+<br>
+<br>The database has been checked for consistency, so that if A knows B, then B knows A.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Your output should begin with a number that tells how long it will take to complete the introductions in the best possible legal class assignment.  For the simple two student problem above, the only legal answer is 
+<br>
+<br>0</div><p class="pst">Sample Input</p><pre class="sio">1 2 3 4 
+2 2 3 4 
+3 2 1 2 
+4 2 1 2 </pre><p class="pst">Sample Output</p><pre class="sio">0</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">To make this problem more tractable, the following changes are being made.  There will be exactly two classes.  There will be no more that 30 students.  The students will be divided as evenly as possible between the classes.  The loneliness of a student is the number of students in his class whom he does not know.  You are to arrange the classes to minimize the loneliness of the loneliest student. for the sample data ,you can arrange 1 and 3 to the first class,and 2 and 4 to the second class,then they need no time to know each other.</div><p class="pst">

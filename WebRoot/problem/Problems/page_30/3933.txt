@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">Professor W invents a new kind of liquid. The damping of that liquid is high and the density of it is low. To test whether the liquid is qualified, Professor W wants to do an experiment. He pours the liquid into a container, of which the bottom slopes up in an angle of α。Prof. W places a ball at the lower end of the bottom, and launches it at a speed of V cm per second. Once the ball touches the bottom, it stops immediately. Fig.1 shows the experiment in the container. When the ball is moving in the liquid, the liquid applies an acceleration of - fV to the ball(f is a constant). Because the density of the liquid is very low, you can ignore the buoyancy(The upward force of a liquid is called buoyancy). Now it is the problem: how to choose the launch angle θ (with horizon), to make the ball go as far as possible (ie. the distance between the start point and the stop point as large as possible)? You should help Professor W solve this problem. 
+<br>
+<br><center><img src="images/3933_1.png"></center> 
+<br>
+<br><center>Fig. 1</center>
+<br>
+<br>The container is large and deep enough, so the ball will never hit the side of the container or get out of the liquid.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of T (1 &lt;= T &lt;= 20) test cases. Each test case is one line including three integers: α for slope angle, V for ball speed and f for the constant. (0 &lt;= α &lt; 90, 0 &lt; V &lt; 50, 0 &lt; f &lt; 1000).
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output a single line containing an integer θ: the best angle. Don’t make the answers too accurate, integers are good enough.
+<br></div><p class="pst">Sample Input</p><pre class="sio">34 44 41
+64 11 500
+52 8 478
+65 22 464</pre><p class="pst">Sample Output</p><pre class="sio">53
+70
+62
+69</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Note: Angle is measured in degrees, and speed is measured in cm/s. Gravity constant g is 9.8m/s<sup>2</sup>.</div><p class="pst">

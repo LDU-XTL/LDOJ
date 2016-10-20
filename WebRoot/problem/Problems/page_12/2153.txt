@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">Li Ming is a good student. He always asks the teacher about his rank in his class after every exam, which makes the teacher very tired. So the teacher gives him the scores of all the student in his class and asked him to get his rank by himself. However, he has so many classmates, and he can’t know his rank easily. So he tends to you for help, can you help him?</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains an integer N (1 <= N <= 10000), which represents the number of student in Li Ming’s class. Then come N lines. Each line contains a name, which has no more than 30 letters. These names represent all the students in Li Ming’s class and you can assume that the names are different from each other.
+<br> 
+<br>In (N+2)-th line, you'll get an integer M (1 <= M <= 50), which represents the number of exams. The following M parts each represent an exam. Each exam has N lines. In each line, there is a positive integer S, which is no more then 100, and a name P, which must occur in the name list described above. It means that in this exam student P gains S scores. It’s confirmed that all the names in the name list will appear in an exam.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output contains M lines. In the i-th line, you should give the rank of Li Ming after the i-th exam. The rank is decided by the total scores. If Li Ming has the same score with others, he will always in front of others in the rank list.</div><p class="pst">Sample Input</p><pre class="sio">3
+Li Ming
+A
+B
+2
+49 Li Ming
+49 A
+48 B
+80 A
+85 B
+83 Li Ming
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+2
+</pre><p class="pst">

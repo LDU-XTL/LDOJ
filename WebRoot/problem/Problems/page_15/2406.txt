@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US">Given two strings a and b we define a*b to be their concatenation. For example, if a = "abc" and b = "def" then a*b = "abcdef". If we think of concatenation as multiplication, exponentiation by a non-negative integer is defined in the normal way: a^0 = "" (the empty string) and a^(n+1) = a*(a^n).</div><p class="pst">Input</p><div class="ptx" lang="en-US">Each test case is a line of input representing s, a string of printable characters. The length of s will be at least 1 and will not exceed 1 million characters. A line containing a period follows the last test case.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each s you should print the largest n such that s = a^n for some string a. </div><p class="pst">Sample Input</p><pre class="sio">abcd
+aaaa
+ababab
+.
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+4
+3
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">This problem has huge input, use scanf instead of cin to avoid time limit exceed.</div><p class="pst">

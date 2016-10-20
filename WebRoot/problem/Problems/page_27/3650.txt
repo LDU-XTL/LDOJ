@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US"><div><p>Uniform Resource Identifiers (or URIs) are strings like <i>http://icpc.baylor.edu/icpc/</i>, <i>mailto:foo@bar.org</i>, <i>ftp://127.0.0.1/pub/linux</i>, or even just <i>readme.txt</i> that are used to identify a resource, usually on the Internet or a local computer. Certain characters are reserved within URIs, and if a reserved character is part of an identifier then it must be <dfn>percent-encoded</dfn> by replacing it with a percent sign followed by two hexadecimal digits representing the ASCII code of the character. A table of seven reserved characters and their encodings is shown below. Your job is to write a program that can percent-encode a string of characters.</p><table align="center"><thead><tr><td><b>Character</b></td><td><b>Encoding</b></td></tr></thead><tbody><tr><td>" " (space)</td><td align="right">%20</td></tr><tr><td>"<tt>!</tt>" (exclamation point)</td><td align="right">%21</td></tr><tr><td>"<tt>$</tt>" (dollar sign)</td><td align="right">%24</td></tr><tr><td>"<tt>%</tt>" (percent sign)</td><td align="right">%25</td></tr><tr><td>"<tt>(</tt>" (left parenthesis)</td><td align="right">%28</td></tr><tr><td>"<tt>)</tt>" (right parenthesis)</td><td align="right">%29</td></tr><tr><td>"<tt>*</tt>" (asterisk)</td><td align="right">%2a</td></tr></tbody></table></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input consists of one or more strings, each 1&#8211;79 characters long and on a line by itself, followed by a line containing only "#" that signals the end of the input. The character "#" is used only as an end-of-input marker and will not appear anywhere else in the input. A string may contain spaces, but not at the beginning or end of the string, and there will never be two or more consecutive spaces.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each input string, replace every occurrence of a reserved character in the table above by its percent-encoding, exactly as shown, and output the resulting string on a line by itself. Note that the percent-encoding for an asterisk is %2a (with a lowercase "a") rather than %2A (with an uppercase "A").</p></div><p class="pst">Sample Input</p><pre class="sio">Happy Joy Joy!
+http://icpc.baylor.edu/icpc/
+plain_vanilla
+(**)
+?
+the 7% solution
+#</pre><p class="pst">Sample Output</p><pre class="sio">Happy%20Joy%20Joy%21
+http://icpc.baylor.edu/icpc/
+plain_vanilla
+%28%2a%2a%29
+?
+the%207%25%20solution</pre><p class="pst">

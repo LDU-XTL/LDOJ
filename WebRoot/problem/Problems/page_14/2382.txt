@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US"><img src=images/2382_1.jpg align=right>Radio station 'ACM Rock' is broadcasting over the circular area with center in point (x0, y0) and radius R. In order to increase the auditorium, it were suggested to build several relay stations. N locations were selected as candidate sites for relay stations. Relay station placed in i-th location will cover a circular area with center in point (xi, yi) and radius ri, where center lies inside the area covered by the base station, (x0 - xi)<sup>2</sup> + (y0 - yi)<sup>2</sup> ≤ R<sup>2</sup>. 
+<br>
+<br>Your task is to select a subset of sites for relay stations so that: 
+<br><ol><li>the covered areas for relays do not intersect (but may touch) one another, 
+<br><li>the total area covered by base station and all relays is maximum possible. </ol></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains integer number N followed by real numbers x0 y0 R, followed by N triples of real numbers xi yi ri.
+<br>1 ≤ N ≤ 10, 0 ≤ xi, yi, x0, y0 ≤ 1000, 1 ≤ ri ≤ R ≤ 1000. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Output should contain a single real number -- the maximal coverage area with the absolute error less than 10<sup>−2</sup>.</div><p class="pst">Sample Input</p><pre class="sio">1 0 0 10
+10 0 10
+</pre><p class="pst">Sample Output</p><pre class="sio">505.4816</pre><p class="pst">

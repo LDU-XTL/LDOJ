@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US">A binary string is a string of characters from the set {0, 1}. A code is a multiset of binary strings (i.e., a string can be repeated arbitrary number of times). A fixed code is a code that none of its strings is a prefix of another string. We say that a code A = {a1, a2, . . . , an} is extended to code B = {b1, b2, . . . , bn} if and only if for 1 <= i <= n, ai be a prefix of bi. The cost of this extension is <img align=absmiddle src='formula?tex=%5Csum_%7Bi%3D1%7D%5En%7Cb_i%7C-%7Ca_i%7C'/> where |ai| is the number of characters in ai.
+<br>
+<br>For this problem you are given a fixed code C, and a new binary string s. You have to find the minimum needed cost to extend the code C &cup; {s} into a fixed code. In other words, you are to append the minimum number of bits to zero or more codes in C &cup; {s} to make it a fixed code.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains a single integer t (1 &le; t &le; 20) which is the number of test cases in the input. For 1 &le; i &le; t the line i+1 consists a nonzero number of binary strings. The number of binary strings in each line is at most 41, and the length of each binary string is no more than 40 characters. The last string in each line stands for the new incoming string s and the other strings in that line make the fixed code of the relevant test case. 
+<br>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output consists m lines. The solution to ith test case should be written in the line i of the output.</div><p class="pst">Sample Input</p><pre class="sio">2
+001 01 00
+000 001 010 011 100 101 110 1</pre><p class="pst">Sample Output</p><pre class="sio">1
+2</pre><p class="pst">

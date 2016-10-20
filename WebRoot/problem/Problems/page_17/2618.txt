@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">There is a cube on the rectangle X * Y board. The cube side with the side equal to the side of a cell on the board. During one turn the cube may roll over its edge movnig to the vertically or horizontally neighboring cell. There may be walls between some cells that are obstacles. The cube may not roll over the obstacles. The cube may not leave the board.
+<br>
+<br>You are to deturmine the minimal number of turns necessary to move the cube from the initial point with coordinates A and B to the given final point with coordinates C and D. Moreover, in the final position the upper side must be the same as it was in the initial position.
+<br>
+<br>All the numbers are positive integers; 2<= X,Y <= 10.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first input line contains two numbers X and Y separated with one or several spaces. Analogously, the second line consists of the numbers A and B, the third line – of the numbers C and D. Then there amy be an informtaion about the walls.
+<br>
+<br>After a symbol 'v', situated in a separate line, there are pairs of integers describing the walls. Here the pair of numbers M and N define a wall between the cells N, M and N+1, M. Each pair of numbers is located in a separate line.
+<br>
+<br>After a symbol 'h, located in a separat line, there are pairs of integers (analogously to the previous paragraph) describing the horizontal walls. The pair M, N define a wall between the cells N, M and N, M+1.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The only line containing the minimal number of moves. If such a displacement is impossible, you should output "no".</div><p class="pst">Sample Input</p><pre class="sio">10 2
+1 1
+10 1
+v
+2 1
+6 2
+h
+4 1</pre><p class="pst">Sample Output</p><pre class="sio">11</pre><p class="pst">

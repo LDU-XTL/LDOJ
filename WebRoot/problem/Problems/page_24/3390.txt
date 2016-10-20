@@ -1,0 +1,34 @@
+</p><div class="ptx" lang="en-US"><p>We have a paragraph of text to print. A text is a sequence of words and each word consists of characters. When we print a text, we print the words from the text one at a time, according to the order the words appear in the text. The words are printed in lines, and we can print at most <i>M</i> characters in a line. If there is space available, we could print more than one word in a line. However, when we print more than one word in a line, we need to place exactly one space character between two adjacent words in a line. For example, when we are given a text like the following:</p><blockquote><tt>This is a text of fourteen words and the longest word has ten characters</tt></blockquote><p>Now we can print this text into lines of no more than 20 characters as the following.</p><blockquote><tt>This is<br>a text of<br>fourteen words<br>and the longest<br>word<br>has ten characters</tt></blockquote><p>However, when you print less than 20 characters in a line, you need to pay a penalty, which is equal to the square of the difference between 20 and the actual number of characters you printed in that line. For example in the first line we actually printed seven characters so the penalty is (20 &#8722; 7)<sup>2</sup> = 169. The total penalty is the sum of all penalties from all lines. Given the text and the number of maximum number of characters allowed in a line, compute the minimum penalty to print the text.<br>&nbsp;</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of the input is the number of test cases (<i>C</i>). The first line of a test case is the maximum number of characters allowed in a line (<i>M</i>). The second line of a test case is the number of words in the text (<i>N</i>). The following <i>N</i> lines are the length (in character) of each word in the text. It is guaranteed that no word will have more than <i>M</i> characters, <i>N</i> is at most 10000, and <i>M</i> is at most 100.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>The output has <i>C</i> lines. Each line has the minimum penalty one needs to pay in order to print the text in that test case.</p></div><p class="pst">Sample Input</p><pre class="sio">2
+20
+14
+4
+2
+1
+4
+2
+8
+5
+3
+3
+7
+4
+3
+3
+10
+30
+14
+4
+2
+1
+4
+2
+8
+5
+3
+3
+7
+4
+3
+3
+10</pre><p class="pst">Sample Output</p><pre class="sio">33
+146</pre><p class="pst">

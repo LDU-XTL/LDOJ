@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">Ten mathematicians are flying on a balloon over the Pacific ocean. When they are crossing the equator they decide to celebrate this event and open a bottle of champagne. Unfortunately, the cork makes a hole in the balloon. Hydrogen is leaking out and the balloon is descending now. Soon it will fall into the ocean and all the balloonists will be eaten by hungry sharks.
+<br>But not everything is lost yet. One of the balloonists can sacrifice himself jumping out, so that his friends would live a little longer. Only one problem still exists <FONT face=Symbol>&frac34;</FONT> who is the one to get out. There is a fair way to solve this problem. First, each of them writes an integer a<SUB>i</SUB> not less than 1 and not more than 10000. Then they calculate the magic number N that is the number of positive integer divisors of the product a<SUB>1</SUB>*a<SUB>2</SUB>*...*a<SUB>10</SUB>. For example, the number of positive integer divisors of 6 is 4 (they are 1,2,3,6). The hero (a mathematician who will be thrown out) is determined according to the last digit of N. Your task is to find this digit.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input file contains ten numbers separated by a space. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Output file should consist of a single digit from 0 to 9 - the last digit of N.</div><p class="pst">Sample Input</p><pre class="sio">1
+2
+6
+1
+3
+1
+1
+1
+1
+1
+</pre><p class="pst">Sample Output</p><pre class="sio">9</pre><p class="pst">

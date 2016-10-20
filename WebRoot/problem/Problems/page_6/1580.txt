@@ -1,0 +1,33 @@
+</p><div class="ptx" lang="en-US">It's easy to tell if two words are identical - just check the letters. But how do you tell if two words are almost identical? And how close is "almost"?
+<br>
+<br>There are lots of techniques for approximate word matching. One is to determine the best substring match, which is the number of common letters when the words are compared letter-byletter.
+<br>
+<br>The key to this approach is that the words can overlap in any way. For example, consider the words CAPILLARY and MARSUPIAL. One way to compare them is to overlay them: 
+<br>
+<br>CAPILLARY
+<br>MARSUPIAL
+<br>
+<br>There is only one common letter (A). Better is the following overlay:
+<br><pre>CAPILLARY
+<br>     MARSUPIAL</pre>
+<br>with two common letters (A and R), but the best is:
+<br><pre>   CAPILLARY
+<br>MARSUPIAL</pre>
+<br>Which has three common letters (P, I and L).
+<br>
+<br>The approximation measure appx(word1, word2) for two words is given by:
+<br><center>     common letters * 2      
+<br>-----------------------------
+<br>length(word1) + length(word2)</center>
+<br>Thus, for this example, appx(CAPILLARY, MARSUPIAL) = 6 / (9 + 9) = 1/3. Obviously, for any word W appx(W, W) = 1, which is a nice property, while words with no common letters have an appx value of 0.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input for your program will be a series of words, two per line, until the end-of-file flag of -1.
+<br>Using the above technique, you are to calculate appx() for the pair of words on the line and print the result. 
+<br>The words will all be uppercase.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Print the value for appx() for each pair as a reduced fraction,Fractions reducing to zero or one should have no denominator.</div><p class="pst">Sample Input</p><pre class="sio">CAR CART
+TURKEY CHICKEN
+MONEY POVERTY
+ROUGH PESKY
+A A
+-1</pre><p class="pst">Sample Output</p><pre class="sio">appx(CAR,CART) = 6/7
+appx(TURKEY,CHICKEN) = 4/13
+appx(MONEY,POVERTY) = 1/3
+appx(ROUGH,PESKY) = 0
+appx(A,A) = 1</pre><p class="pst">

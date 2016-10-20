@@ -1,0 +1,29 @@
+</p><div class="ptx" lang="en-US">There is a taxation system based on the known parameters N1...Nm, S1...S<sub>m+1</sub> in some country.
+<br>
+<br>Let the total annual income of a citizen is equal to K bibriks (bibrik is a local currency). A citizen pays S1 percents from the sum N1 bibriks and less, he pays S1 percents of N1 plus S2 percents of (K-N1) from the sum from N1 to N2. If the income is N2 <= K <= N3 then the citizen must pay S1 percents of N1 plus S2 percents of (N2 - N1) plus S3 percents of (K - N2) and so on.
+<br>
+<br>If the total annual income exceeds Nm then he is to pay S1 percents of N1 plus S2 percents of (N2 - N1) plus … plus Sm+1 percents of (K - Nm)
+<br>
+<br>Let the function T(K) be the total tax from the annual income K. Moreover, in the assumed country the government pays to the citizens additional L percents as the regional coefficient. This coeficient is taxed independently from the salary.
+<br>
+<br>I.e. if the salary of a citizen is R bibriks he may legally spend R – T(R) + L%*R – T(L%*R). The taxes to pay are T(R) + T(L%*R).
+<br>
+<br>The calculation of the regional coefficient and all kinds the taxes is made with rounding off to two digits after a decimal point. The initial income is given within two digits after a decimal point too.
+<br>
+<br>Each employer automatically retains the taxes in favor of the government from the annual income of his employee taking into account the regional coefficient.
+<br>
+<br>If a citizen works at several places, in the end of a year he is to make a recalculation of the payed taxes because the sum of retained taxes in different places may be not equal to the tax from the total income.
+<br>
+<br>You are to write a program that calculates and outputs the difference between the tax from the total income and the sum that is retained by all his employers.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains the regional coefficient L. Then there are pairs N1 S1, N2 S2, ..., Nm Sm, 0 S<sub>m+1</sub>. Each pair is located in a separate line. The number in pairs are separated by one or several spaces. The values of L and coefficients Si are given in percents (i.e. they are integers from 0 to 99).
+<br>
+<br>Each of the next lines contains the total annual net profit of the citizen on some enterprise, where he worked, taking into account the regional coefficient and taxes.
+<br>
+<br>The input is ended by &minus;1. All the parameters are integer not greater than 10<sup>9</sup> within two digits after a decimal point. The number of different workplaces of the citizen doesn't exceed 30. An amount of taxation coefficients (m) is not greater than 20.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The difference between the tax from the total income and the sum that is retained by all his employers with exactly two digits after a decimal point.</div><p class="pst">Sample Input</p><pre class="sio">15         
+12000000 12
+24000000 20
+36000000 25
+48000000 30
+0        35
+12000000   
+12000000   
+-1</pre><p class="pst">Sample Output</p><pre class="sio">937233.19</pre><p class="pst">

@@ -1,0 +1,29 @@
+</p><div class="ptx" lang="en-US">On Girls' Day (Haven't heard about it? Well, you may ask the author for details...), we boys get together with girls in the class. On the occasion, every boy will make a wish for girls. Boys want to know about girls' responses to their wishes. 
+<br>
+<br>If a wish contains one or more girls' names, it is considered to be talking to them specifically. Otherwise it is talking to all the girls. A wish can simultaneously talk to several girls of course.
+<br>
+<br>A girl would say 'oh' if the wish contains at most 9 words.
+<br>A girl would say 'xixi' if the wish contains at least 10 words and she hears the word 'beautiful', 'pretty' or 'lovely'.
+<br>A girl would say 'hehe' if the wish contains at least 10 words and she doesn't hear such words mentioned above.
+<br>
+<br>It is confirmed that a wish will not contain all the girls? name.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains two integers g and w (1 <= g <= 5, 1 <= w <= 30), the number of girls and the number of wishes respectively. The next g lines each contain a word in lowercase, representing the name of a girl. Then the next w lines each contain a string of letters and punctuations, namely the wish, which will contain at most 200 characters.
+<br>
+<br>Each wish contains one or more sentences, and each sentence is terminated by a '!'. The first letter of each sentence is in uppercase, and other letters will be always in lowercase. No other characters apart from '!', spaces and letters will appear in the sentence. You may assume that each wish is correct in grammar.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">You are required to give girls' response according to the input. For each wish, if it is talking to all the girls, print 'All', or otherwise print the list of girls that it is talking to (names are separated by a single space) in the order that they appear in the name list. Then print a semicolon followed by a space, and the response such as 'hehe' and 'xixi'.</div><p class="pst">Sample Input</p><pre class="sio">5 5
+answer
+baiqingr
+cedar
+juleo
+seven
+Happy girls day to all of you!
+Happy girls day to all of you!Wish you happy forever!
+Happy girls day for answer mm!
+Congratulations for cedar mm and seven mm!Wish you more and more beautiful hehe! 
+Hello answer hello baiqingr hello juleo would you mind having dinner together!
+</pre><p class="pst">Sample Output</p><pre class="sio">All: oh
+All: hehe
+answer: oh
+cedar seven: xixi
+answer baiqingr juleo: hehe
+</pre><p class="pst">

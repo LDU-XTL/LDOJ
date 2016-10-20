@@ -1,0 +1,19 @@
+</p><div class="ptx" lang="en-US"><div><p>ACM is a town with a very special underground metro system which consists of a set of railway segments, each is called a line. There are trains in both directions of each line. Two lines may intersect which allows a passenger to switch from one train in the first line to another train in the second line on that intersection. The source and destination of your travel lie somewhere on the metro lines. You start using the metro line where the source is located on and may change your line only at the intersection points between two metro lines, and continue until your reach the destination. Your goal is to make your travel free of charge; i.e., without the need to buy any tickets. The problem is that there are a number of policemen who check your tickets. Obviously, you do not want to confront with any of these policemen during your travel. You may confront policemen in two situations: either on an intersection, but only when you are changing your line, or when you are traveling along a line in which a policeman indiscriminately asks for everyone's tickets that are inside that wagon, including you. You know the locations of all policemen in advance. Note that if a police is located on an intersection, he asks for your ticket only if you want to change your line on that intersection, and if a police is located on a line (but not on an intersection), he will ask for your ticket if you are passing that location. In your map, there are some policemen in other locations, not on any metro lines, which you must ignore. </p><p>For example, in the following figure, there are five metro lines, with three policemen located at black circles. You may travel from <i>s</i> to <i>d</i> without meeting any police along the path <i>l</i><sub>1</sub> -- <i>l</i><sub>4</sub>, but it is not possible to travel from <i>s</i> to <i>d'</i> without confronting any policemen.</p><p><center><img src="images/3336_1.GIF"></img></center></p><p>In this problem, you must write a program that reads the metro line specifications, the police locations, and your source and destination, and determine whether it is possible to travel from the given source to the given destination without meeting any policeman.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first number in the input line, <i>T</i> is the number of test cases. The first line of each test case contains two integers <i>n</i> and <i>m</i> (1 &le; <i>m</i> &le; 100, 1 &le; <i>n</i> &le; 3000) which are the number of lines and the number of policemen. The second line contains four integers <i>x<sub>s</sub></i> <i>y<sub>s</sub></i> <i>x<sub>d</sub></i> <i>y<sub>d</sub></i> which are the coordinates of the source and the destination points respectively. You may assume these two points lie on metro lines. Following the second line, there are <i>n</i> lines of the form <i>x<sub>1</sub></i> <i>y</i><sub>1</sub> <i>x</i><sub>2</sub> <i>y</i><sub>2</sub> describing the metro lines where (<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>) and (<i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>) specify the endpoints of the metro line. After this, there are <i>m</i> lines each containing a pair of integers <i>x</i> <i>y</i> that specify the location of a policeman. All coordinates are arbitrary integer numbers.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>The output contains <i>T</i> lines, each corresponding to an input test case in that order. The output line contains a single word YES or NO depending on whether there is a safe way to travel from source to destination or not.</p></div><p class="pst">Sample Input</p><pre class="sio">2
+4 2
+3 2 5 8
+3 2 3 6
+8 1 5 8
+7 7 2 2
+9 2 1 6
+3 4
+6 6
+3 2
+2 3 6 3
+1 3 7 3
+3 2 3 6
+1 5 7 2
+3 4
+4 3
+</pre><p class="pst">Sample Output</p><pre class="sio">YES
+NO
+</pre><p class="pst">

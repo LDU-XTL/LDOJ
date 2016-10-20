@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">This problem is a reverse case of the <a href=http://acm.pku.edu.cn/JudgeOnline/problem?id=2996>problem 2996</a>. You are given the output of the problem H and your task is to find the corresponding input. </div><p class="pst">Input</p><div class="ptx" lang="en-US">according to output of <a href=http://acm.pku.edu.cn/JudgeOnline/problem?id=2996>problem 2996</a>. </div><p class="pst">Output</p><div class="ptx" lang="en-US">according to input of <a href=http://acm.pku.edu.cn/JudgeOnline/problem?id=2996>problem 2996</a>. </div><p class="pst">Sample Input</p><pre class="sio">White: Ke1,Qd1,Ra1,Rh1,Bc1,Bf1,Nb1,a2,c2,d2,f2,g2,h2,a3,e4
+Black: Ke8,Qd8,Ra8,Rh8,Bc8,Ng8,Nc6,a7,b7,c7,d7,e7,f7,h7,h6</pre><p class="pst">Sample Output</p><pre class="sio">+---+---+---+---+---+---+---+---+
+|.r.|:::|.b.|:q:|.k.|:::|.n.|:r:|
++---+---+---+---+---+---+---+---+
+|:p:|.p.|:p:|.p.|:p:|.p.|:::|.p.|
++---+---+---+---+---+---+---+---+
+|...|:::|.n.|:::|...|:::|...|:p:|
++---+---+---+---+---+---+---+---+
+|:::|...|:::|...|:::|...|:::|...|
++---+---+---+---+---+---+---+---+
+|...|:::|...|:::|.P.|:::|...|:::|
++---+---+---+---+---+---+---+---+
+|:P:|...|:::|...|:::|...|:::|...|
++---+---+---+---+---+---+---+---+
+|.P.|:::|.P.|:P:|...|:P:|.P.|:P:|
++---+---+---+---+---+---+---+---+
+|:R:|.N.|:B:|.Q.|:K:|.B.|:::|.R.|
++---+---+---+---+---+---+---+---+</pre><p class="pst">

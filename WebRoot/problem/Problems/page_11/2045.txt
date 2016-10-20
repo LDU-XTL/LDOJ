@@ -1,0 +1,44 @@
+</p><div class="ptx" lang="en-US">Your mission in this problem is to write a computer program that manipulates molecular formulae in virtual chemistry. As in real chemistry, each molecular formula represents a molecule consisting of one or more atoms. However, it may not have chemical reality. 
+<br>The following are the definitions of atomic symbols and molecular formulae you should consider.
+<br>
+<br>An atom in a molecule is represented by an atomic symbol, which is either a single capital letter or a capital letter followed by a small letter. For instance H and He are atomic symbols.
+<br>
+<br>A molecular formula is a non-empty sequence of atomic symbols. For instance, HHHeHHHe is a molecular formula, and represents a molecule consisting of four H's and two He's.
+<br>
+<br>For convenience, a repetition of the same sub-formula X...X, where n is an integer between 2 and 99 inclusive, can be abbreviated to (X)n. Parentheses can be omitted if X is an atomic symbol. For instance, HHHeHHHe is also written as H2HeH2He, (HHHe)2, (H2He)2, or even ((H)2He)2.
+<br>
+<br>The set of all molecular formulae can be viewed as a formal language. Summarizing the above description, the syntax of molecular formulae is defined as follows.
+<br>
+<br>Molecule -> Atom | Atom Number | ( Molecule ) Number | Molecule Molecule
+<br>Atom -> CapitalLetter | CapitalLetter SmallLetter
+<br>Number -> 2 | 3 | 4 | . . . | 97 | 98 | 99
+<br>CapitalLetter -> A | B | C | . . . | X | Y | Z
+<br>SmallLetter -> a | b | c | . . . | x | y | z
+<br>
+<br>Each atom in our virtual chemistry has its own atomic weight. Given the weights of atoms, your program should calculate the weight of a molecule represented by a molecular formula. The molecular weight is defined by the sum of the weights of the constituent atoms. For instance, assuming that the atomic weights of the atoms whose symbols are H and He are 1 and 4, respectively, the total weight of a molecule represented by (H2He)2 is 12.
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of two parts. The first part, the Atomic Table, is composed of a number of lines, each line including an atomic symbol, one or more spaces, and its atomic weight which is a positive integer no more than 1000. No two lines include the same atomic symbol.
+<br>
+<br>The first part ends with a line containing only the string END_OF_FIRST_PART.
+<br>
+<br>The second part of the input is a sequence of lines. Each line is a molecular formula, not exceeding 80 characters, and contains no spaces. A molecule contains at most 10^5 atoms. Some atomic symbols in a molecular formula may not appear in the Atomic Table.
+<br>
+<br>The sequence is followed by a line containing a single zero, indicating the end of the input.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output is a sequence of lines, one for each line of the second part of the input. Each line contains either an integer, the molecular weight for a given molecular formula in the corresponding input line if all its atomic symbols appear in the Atomic Table, or UNKNOWN otherwise. No extra characters are allowed.</div><p class="pst">Sample Input</p><pre class="sio">H 1
+He 4
+C 12
+O 16
+F 19
+Ne 20
+Cu 64
+Cc 333
+END_OF_FIRST_PART
+H2C
+(MgF)2As
+Cu(OH)2
+H((CO)2F)99
+0</pre><p class="pst">Sample Output</p><pre class="sio">14
+UNKNOWN
+98
+7426
+</pre><p class="pst">

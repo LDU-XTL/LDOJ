@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">Wind's birthday is approaching. In order to buy a really really fantastic gift for her, Jiajia has to take a boring yet money-making job - a text checker. 
+<br>
+<br>This job is very humdrum. Jiajia will be given a string of text what is English letters and he must count the maximum number of letters that can be matched, starting from two position of the current text simultanously. The matching proceeds from left to right, one character by one. 
+<br>
+<br>Even worse, sometimes the boss will insert some characters before, after or within the text. Jiajia wants to write a program to do his job automatically, this program should be fast enough, because there are only few days to Wind's birthday.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input file contains initial text. 
+<br>
+<br>The second line contains then number of commands n. And the following n lines describe each command. There are two formats of commands: 
+<br>
+<br>I ch p: Insert a character ch before the p-th. if p is larger than the current length of text, then insert at end of the text. 
+<br>
+<br>Q i j: Ask the length of matching started from the i-th and j-th character of the initial text, which doesn't include the inserted characters. 
+<br>
+<br>You can assume that the length of initial text will not exceed 50000, the number of I command will not exceed 200, the number of Q command will not exceed 20000.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Print one line for each Q command, contain the max length of matching. </div><p class="pst">Sample Input</p><pre class="sio">abaab
+5
+Q 1 2
+Q 1 3
+I a 2
+Q 1 2
+Q 1 3
+</pre><p class="pst">Sample Output</p><pre class="sio">0
+1
+0
+3</pre><p class="pst">

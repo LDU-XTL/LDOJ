@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">Farmer John has a problem: the dirt road from his farm to town has suffered in the recent rainstorms and now contains (1 <= N <= 10,000) mud pools.
+<br>
+<br>Farmer John has a collection of wooden planks of length L that he can use to bridge these mud pools. He can overlap planks and the ends do not need to be anchored on the ground. However, he must cover each pool completely.
+<br>
+<br>Given the mud pools, help FJ figure out the minimum number of planks he needs in order to completely cover all the mud pools.</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: Two space-separated integers: N and L
+<br>
+<br>* Lines 2..N+1: Line i+1 contains two space-separated integers: s_i and e_i (0 <= s_i < e_i <= 1,000,000,000) that specify the start and end points of a mud pool along the road. The mud pools will not overlap.  These numbers specify points, so a mud pool from 35 to 39 can be covered by a single board of length 4. Mud pools at (3,6) and (6,9) are not considered to overlap.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: The miminum number of planks FJ needs to use.</div><p class="pst">Sample Input</p><pre class="sio">3 3
+1 6
+13 17
+8 12
+</pre><p class="pst">Sample Output</p><pre class="sio">5
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">INPUT DETAILS:
+<br>
+<br>FJ needs to use planks of length 3 to cover 3 mud pools.  The mud pools cover regions 1 to 6, 8 to 12, and 13 to 17.
+<br>
+<br>OUTPUT DETAILS:
+<br>
+<br>FJ can cover the mud pools with five planks of length 3 in the following way:
+<br><pre>                   111222..333444555....
+<br>                   .MMMMM..MMMM.MMMM....
+<br>                   012345678901234567890</pre></div><p class="pst">

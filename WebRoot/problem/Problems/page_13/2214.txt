@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">The new election system was introduced in our republic. The system is based on a majority of votes in regions. The republic is divided into M regions, each of them means exactly one seat in the Parliament. 
+<br>
+<br>The Chairman of PSOS would like to know how many voters makes the certainty that PSOS win the election. To win the election means to get more than one half of Parliament seats. We do not know the exact number of political Parties participating in election but we can determine the number of voters in every region. We can assume that all voters will participate in election and each of them will give his/her vote to one of the candidates. PSOS have their candidates in all regions. At least one another party has its candidate in each of the regions. You are to determine the minimum number of votes which ensures the landslide of PSOS, even in the worst possible case. </div><p class="pst">Input</p><div class="ptx" lang="en-US">At the first line there is a positive integer N stating the number of assignments to follow. Each assignment consists of two lines. The first line contains an integer number M stating the number of regions. At the second line, there are exactly M numbers separated by spaces. These numbers state the number of voters in each of the regions. All the number are possitive and less or equal to 100000. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Print a single line for each assignment. The line must contain the sentence "H hlasu zajisti strane vitezstvi." (H votes ensures the win of Party). Instead of H, fill the minimum number of votes which ensures the win. </div><p class="pst">Sample Input</p><pre class="sio">3
+10
+340 260 180 15 1 20 40 90 78 34
+2
+12 1
+6
+1 2 3 4 5 6
+</pre><p class="pst">Sample Output</p><pre class="sio">1003 hlasu zajisti strane vitezstvi.
+13 hlasu zajisti strane vitezstvi.
+18 hlasu zajisti strane vitezstvi.
+</pre><p class="pst">

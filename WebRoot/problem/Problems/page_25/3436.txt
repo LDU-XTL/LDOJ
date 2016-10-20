@@ -1,0 +1,29 @@
+</p><div class="ptx" lang="en-US"><p>As you know, all the computers used for ACM contests must be identical, so the participants compete on equal terms. That is why all these computers are historically produced at the same factory.</p><p>Every ACM computer consists of P parts. When all these parts are present, the computer is ready and can be shipped to one of the numerous ACM contests.</p><p>Computer manufacturing is fully automated by using <i>N</i> various machines. Each machine removes some parts from a half-finished computer and adds some new parts (removing of parts is sometimes necessary as the parts cannot be added to a computer in arbitrary order). Each machine is described by its performance (measured in computers per hour), input and output specification.</p><p>Input specification describes which parts must be present in a half-finished computer for the machine to be able to operate on it. The specification is a set of <i>P</i> numbers 0, 1 or 2 (one number for each part), where 0 means that corresponding part must not be present, 1 — the part is required, 2 — presence of the part doesn't matter.</p><p>Output specification describes the result of the operation, and is a set of <i>P</i> numbers 0 or 1, where 0 means that the part is absent, 1 — the part is present.</p><p>The machines are connected by very fast production lines so that delivery time is negligibly small compared to production time.</p><p>After many years of operation the overall performance of the ACM Computer Factory became insufficient for satisfying the growing contest needs. That is why ACM directorate decided to upgrade the factory.</p><p>As different machines were installed in different time periods, they were often not optimally connected to the existing factory machines. It was noted that the easiest way to upgrade the factory is to rearrange production lines. ACM directorate decided to entrust you with solving this problem.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input file contains integers <i>P</i> <i>N</i>, then <i>N</i> descriptions of the machines. The description of <i>i</i>th machine is represented as by 2 <i>P</i> + 1 integers <i>Q<sub>i</sub></i> <i>S<sub>i</sub></i><sub>,1</sub> <i>Si</i><sub>,2</sub>...<i>S<sub>i</sub></i><sub>,<i>P</i></sub> <i>D<sub>i</sub></i><sub>,1</sub> <i>D<sub>i</sub></i><sub>,2</sub>...<i>D<sub>i</sub></i><sub>,<i>P</i></sub>, where <i>Q<sub>i</sub></i> specifies performance, <i>S<sub>i</sub></i><sub>,<i>j</i></sub> — input specification for part <i>j</i>, <i>D<sub>i</sub></i><sub>,<i>k</i></sub> — output specification for part <i>k</i>.</p><p><b>Constraints</b></p><p>1 ≤ <i>P</i> ≤ 10, 1 ≤ <i>N </i>≤ 50, 1 ≤ <i>Q<sub>i</sub></i> ≤ 10000 </p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output the maximum possible overall performance, then <i>M</i> — number of connections that must be made, then <i>M</i> descriptions of the connections. Each connection between machines <i>A</i> and <i>B</i> must be described by three positive numbers <i>A</i> <i>B</i> <i>W</i>, where <i>W</i> is the number of computers delivered from <i>A</i> to <i>B</i> per hour.</p><p>If several solutions exist, output any of them.</p></div><p class="pst">Sample Input</p><pre class="sio"><b>Sample input 1</b>
+3 4
+15  0 0 0  0 1 0
+10  0 0 0  0 1 1
+30  0 1 2  1 1 1
+3   0 2 1  1 1 1
+<b>Sample input 2</b>
+3 5
+5   0 0 0  0 1 0
+100 0 1 0  1 0 1
+3   0 1 0  1 1 0
+1   1 0 1  1 1 0
+300 1 1 2  1 1 1
+<b>Sample input 3</b>
+2 2
+100  0 0  1 0
+200  0 1  1 1</pre><p class="pst">Sample Output</p><pre class="sio"><b>Sample output 1</b>
+25 2
+1 3 15
+2 3 10
+<b>Sample output 2</b>
+4 5
+1 3 3
+3 5 3
+1 2 1
+2 4 1
+4 5 1
+<b>Sample output 3</b>
+0 0</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Bold texts appearing in the sample sections are informative and do not form part of the actual data.</div><p class="pst">

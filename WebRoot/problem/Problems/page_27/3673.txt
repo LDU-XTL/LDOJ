@@ -1,0 +1,4 @@
+</p><div class="ptx" lang="en-US"><p>Bessie is tired of multiplying pairs of numbers the usual way, so she invented her own style of multiplication. In her style, <i>A</i>*<i>B</i> is equal to the sum of all possible pairwise products between the digits of <i>A</i> and <i>B</i>. For example, the product 123*45 is equal to 1*4 + 1*5 + 2*4 + 2*5 + 3*4 + 3*5 = 54. Given two integers A and B (1 &le; A, B &le; 1,000,000,000), determine A*B in Bessie's style of multiplication.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>* Line 1: Two space-separated integers: <i>A</i> and <i>B</i>.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>* Line 1: A single line that is the A*B in Bessie's style of multiplication.</p></div><p class="pst">Sample Input</p><pre class="sio">123 45
+
+</pre><p class="pst">Sample Output</p><pre class="sio">54
+</pre><p class="pst">

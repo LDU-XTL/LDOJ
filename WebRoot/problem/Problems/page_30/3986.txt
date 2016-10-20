@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Mr. Furion is a math teacher. His students are very lazy and they do not like to do their homework. One day, Mr. Furion decides to give them a special problem in order to see whether his students are talents in math or they are just too lazy to do their homework. The problem is:
+<br>
+<br>Given an integer k, n integers m<sub>1</sub>,m<sub>2</sub>…m<sub>n</sub>, and a formula below: 
+<br>X<sub>1</sub> xor X<sub>2</sub> xor X<sub>3</sub>… xor X<sub>n</sub> = k 
+<br>Please figure out that how many integral solutions of the formula can satisfy:
+<br> 0<=X<sub>i</sub><=m<sub>i</sub> (i=1…n)</div><p class="pst">Input</p><div class="ptx" lang="en-US">There are at most 100 test cases.
+<br>The first line of each test case contains two integers, n and k. The second line of each test case contains n integers: m<sub>1</sub>,m<sub>2</sub>…m<sub>n</sub>. The meaning of n,k, m<sub>1</sub>,m<sub>2</sub>…m<sub>n</sub> are described above. (1<=n<=50,0<=k,m<sub>1</sub>,m<sub>2</sub>…m<sub>n</sub><=2<sup>31</sup>-1 )
+<br>The input is ended by “0 0”</div><p class="pst">Output</p><div class="ptx" lang="en-US">You should output an integer for each test case, which is the number of solutions. As the number might be very large, you should only output the number modulo 1000000003.</div><p class="pst">Sample Input</p><pre class="sio">11 2047
+1024 512 256 128 64 32 16 8 4 2 1
+10 2047
+1024 512 256 128 64 32 16 8 4 2 
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+0
+</pre><p class="pst">

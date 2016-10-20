@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">Little Dara has recently learned how to write a few letters of the English alphabet (say k letters). He plays a game with his little sister Sara. He draws a grid on a piece of paper and writes p instances of each of the k letters in the grid cells. He then asks Sara to draw as many side-to-side horizontal and/or vertical bold lines over the grid lines as she wishes, such that in each rectangle containing no bold line, there would be p instances of one letter or nothing. For example, consider the sheet given in Figure 1, where Sara has drawn two bold lines creating four rectangles meeting the condition above. Sara wins if she succeeds in drawing the required lines. Dara being quite fair to Sara, wants to make sure that there would be at least one solution to each case he offers Sara. You are to write a program to help Dara decide on the possibility of drawing the right lines.
+<br><center><img src=images/1231_1.jpg></center></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains a single integer t (1 <= t <= 10), the number of test cases, followed by the input data for each test case. The first line of each test case consists of two integers k (1 <= k <= 26), the number of different letters, and p (1 <= p <= 10), the number of instances of each letter. Followed by the first line, there are k lines, one for each letter, each containing p pairs of integers (xi, yi) for 1 <= i <= p. A pair indicates coordinates of the cell on the paper where one instance of the letter is written. The coordinates of the upper left cell of the paper is assumed to be (1,1). Coordinates are positive integers less than or equal to 1,000,000. You may assume that no cell contains more than one letter.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">There should be one line per test case containing a single word YES or NO depending on whether the input paper can be divided successfully according to the constraints stated in the problem.
+<br></div><p class="pst">Sample Input</p><pre class="sio">2
+3 2
+6 4 8 4
+4 2 2 1
+2 3 2 4
+3 3
+1 1 3 1 5 1
+2 1 4 1 6 1
+2 2 4 2 8 1</pre><p class="pst">Sample Output</p><pre class="sio">YES
+NO</pre><p class="pst">

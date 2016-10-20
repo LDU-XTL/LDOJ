@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US">Write a program that constructs a polygon from a given set of points in the plane. Each point of the set has to be a vertex of the polygon, and the polygon must not have any other vertices. No two line segments of the polygon may have any point in common, except for the middle vertex of two consecutive line segments. For example, given the points on the left-hand side, a valid polygon is shown on the right-hand side:
+<br><center><img src=images/3850_1.png></center>
+<br>A valid polygon is guaranteed to exist, and any valid polygon will be accepted as a correct answer. Moreover, no two points will share the same location, and not all points will be collinear.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input consists of an integer c (1 <= c <= 200), the number of test cases. Then follow the test cases, one per line.
+<br>Each test case starts with an integer n (3 <= n <= 2 000), the number of given points. Then follow, on the same line, the coordinates of the points. Each point is specified by two integers x and y in the range -10 000 to 10 000, inclusively.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print a single line containing a permutation of the numbers 0 to n-1. Each of these numbers represents the index of a point, in the same order as given in the input. When drawing line segments between consecutive points in the order given by this permutation, the result must be a valid polygon.
+<br></div><p class="pst">Sample Input</p><pre class="sio">2
+4 0 0 2 0 0 1 1 0
+5 0 0 10 0 10 5 5 -1 0 5</pre><p class="pst">Sample Output</p><pre class="sio">0 3 1 2
+3 1 2 4 0</pre><p class="pst">

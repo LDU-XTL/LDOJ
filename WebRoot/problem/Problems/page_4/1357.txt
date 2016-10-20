@@ -1,0 +1,32 @@
+</p><div class="ptx" lang="en-US">Afshung-Pizza chain, a door-to-door pizza delivery service for Hamedung, a Sildavya district, needs your help for fastest possible pizza delivery plan. With a GIS device that shows all streets of the Hamedung, each delivery boy can find a fast route to deliver the pizza to the place of order. The Elyasung Company that sells and supports this GIS device needs your help to reprogram the device to provide even a faster route plan.
+<br>
+<br>Hamedung is a rectangular shape district with many two-way streets that are all rectilinear.  To show the map, the GIS device uses text characters as shown in the sample test data. In this format, each one kilometer of a street is shown by a dash (-) or a pipe (|) showing that the street is either in west-east or in north-south direction.  A plus (+) on the map indicates a sharp 90 degree turn (with length zero) on that position without any traffic light. All such turns are marked with +. An intersection is shown by an integer τ on that position. τ is the timing of the traffic light at that intersection which can be either three or four way. To have a smooth and accident-free district, the municipality of Hamedung has forced that every traffic light has only one green light and two or three red lights for three or four intersections respectively. One of the lights in that intersection remains green for τ minutes (i.e., during [x, x + τ) time for some x) and others are red. In the next τ minutes, one other direction turns green as if the green light turns counter clockwise. This rule is observed in all intersections.
+<br>
+<br>The time is set to zero at the beginning when the delivery boy starts moving. At this time, all traffic signals are set such that only the southern light (or the northern light if no southern light exists) of each intersection is set to green, and other lights at this intersection are set to red.
+<br>
+<br>Note that the only positions that the driver can change his direction are: a turn (+), or an intersection (represented by a digit). As an example, if we have a pattern like -|- in the map, the driver cannot cross the pipe if he is moving from left to right or right to left, neither can he turn left or right, since there is no intersection at this location.
+<br>
+<br>Given the complete map described above, the location of an Afshung-Pizza branch, marked by S, and the location of the final delivery place, marked by D, you are to write a program for GIS device to automatically find the fastest possible route to deliver pizza from S to D. Note the following assumptions:   
+<br><ul>
+<br><li>         S and D are parts of a street (replacing either a - or |)
+<br><li>         S and D are not adjacent to any intersection or turn.
+<br><li>         S and D are not adjacent to each other.
+<br><li>         Intersections and/or turns are at least one kilometer apart.
+<br><li>         'S', 'D', '+', and each digit have zero kilometer length.
+<br><li>         Speed of delivery boy is one kilometer per minute.
+<br><li>         Traffic that faces a green light can move in all directions. No straight move or turns are allowed at red light.
+<br><li>         There is no traffic jam or other obstacles on the way.
+<br><li>         Asterisk characters (*) show the border of the district.
+<br></ul></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains a single integer t (1 <= t <= 10), the number of test cases, followed by the input data for each test case. The first line of each test case contains two integer numbers: N (1<= N <= 100) the number of rows of the map, and M (2 <= M <= 100) the number of columns of the map. Followed by the first line, there will be N lines, each containing a string of length M, consisting of '-', '|', '+', ' ', '*', 'S', 'D' or digits from '1' to '9'. Also, assume that the total number of intersections and turns (+) is at most 100. </div><p class="pst">Output</p><div class="ptx" lang="en-US">There should be one line in the output per test case containing a single number, the minimum time to drive from S to D, if there exists, otherwise the word impossible (with lower-case letters).</div><p class="pst">Sample Input</p><pre class="sio">1 
+10 10 
+********** 
+*-D-3---+* 
+*   |   |* 
+*   | +-+* 
+*   |-|  * 
+*---4-1- * 
+*   | |  * 
+*   | |  * 
+*S--2-+  * 
+********** </pre><p class="pst">Sample Output</p><pre class="sio">15
+</pre><p class="pst">

@@ -1,0 +1,34 @@
+</p><div class="ptx" lang="en-US">Julius Caesar lived in a time of danger and intrigue. The hardest situation Caesar ever faced was keeping himself alive. In order for him to survive, he decided to create one of the first ciphers. This cipher was so incredibly sound, that no one could figure it out without knowing how it worked. 
+<br>
+<br>You are a sub captain of Caesar's army. It is your job to decipher the messages sent by Caesar and provide to your general. The code is simple. For each letter in a plaintext message, you shift it five places to the right to create the secure message (i.e., if the letter is 'A', the cipher text would be 'F'). Since you are creating plain text out of Caesar's messages, you will do the opposite: 
+<br>
+<br>
+<br>Cipher text
+<br>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+<br>
+<br>Plain text
+<br>V W X Y Z A B C D E F G H I J K L M N O P Q R S T U 
+<br>
+<br>Only letters are shifted in this cipher. Any non-alphabetical character should remain the same, and all alphabetical characters will be upper case. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input to this problem will consist of a (non-empty) series of up to 100 data sets. Each data set will be formatted according to the following description, and there will be no blank lines separating data sets. All characters will be uppercase. 
+<br>
+<br>
+<br>A single data set has 3 components: 
+<br><ol>
+<br><li>Start line - A single line, "START" 
+<br><li>Cipher message - A single line containing from one to two hundred characters, inclusive, comprising a single message from Caesar 
+<br><li>End line - A single line, "END" 
+<br></ol>
+<br>Following the final data set will be a single line, "ENDOFINPUT". 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, there will be exactly one line of output. This is the original message by Caesar. </div><p class="pst">Sample Input</p><pre class="sio">START
+NS BFW, JAJSYX TK NRUTWYFSHJ FWJ YMJ WJXZQY TK YWNANFQ HFZXJX
+END
+START
+N BTZQI WFYMJW GJ KNWXY NS F QNYYQJ NGJWNFS ANQQFLJ YMFS XJHTSI NS WTRJ
+END
+START
+IFSLJW PSTBX KZQQ BJQQ YMFY HFJXFW NX RTWJ IFSLJWTZX YMFS MJ
+END
+ENDOFINPUT</pre><p class="pst">Sample Output</p><pre class="sio">IN WAR, EVENTS OF IMPORTANCE ARE THE RESULT OF TRIVIAL CAUSES
+I WOULD RATHER BE FIRST IN A LITTLE IBERIAN VILLAGE THAN SECOND IN ROME
+DANGER KNOWS FULL WELL THAT CAESAR IS MORE DANGEROUS THAN HE
+</pre><p class="pst">

@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">It is required to find out whether it is possible to delete given files from MS-DOS directory executing the DEL command of MS-DOS operation system only once. There are no nested subdirectories.
+<br>
+<br>
+<br>A note 
+<br>
+<br>DEL command has the following format: DEL wildcard
+<br>
+<br>
+<br>The actual wildcard as well as a full file name can be made up either of a name containing 1 up to 8 characters or of a name and extension, containing up to 3 characters. The point character "." separates the extension from the file name. The extension can be empty and this is equivalent to a name without any extension (in this case a wildcard ends with a point). In a wildcard the characters "?" and "*" can be used. A question mark substitutes exactly one character of the full file name excluding a point, an asterisk - any sequence of characters (containing no points) even empty one. An asterisk can appear only at the last position of the name and the extension.
+<br>
+<br>
+<br>MS-DOS system can permit maybe other wildcards but they can not be used in this task. File names and extensions consist only of Latin capitals and digits.
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains a list of full file names without empty lines and spaces. Each name is written in a separate line of input data file and preceded with a control sign: "-" for delete or "+" for keep. Full file names are not repeated. The list comprises at least one file, and at least one file is marked to be deleted. There are no more than 1000 files.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Write to the first line of output the required DEL command (only one proposal) or IMPOSSIBLE if there is no solution. A space should separate "DEL" from wildcard.</div><p class="pst">Sample Input</p><pre class="sio">-BP.EXE
+-BPC.EXE
++TURBO.EXE</pre><p class="pst">Sample Output</p><pre class="sio">DEL ?P*.*</pre><p class="pst">

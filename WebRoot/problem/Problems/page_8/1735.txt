@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">On the chessboard of size 4x4 there are 8 white and 8 black stones, i.e. one stone on each field. Such a configuration of stones is called a game position. Two stones are adjacent if they are on fields with a common side (i.e. they are adjacent in either horizontal or vertical direction but not diagonal). It means that each stone has at most 4 neighbours. The only legal move in our game is exchanging any two adjacent stones. Your task is to find the shortest sequence of moves transforming a given starting game position into a given final game position.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The starting game position is described in the first 4 lines of input. There are 4 symbols in each line, which define the colour of each stone in the row from the left to the right.  The lines describe the rows of the chessboard from the top to the bottom. Symbol `0' means a white stone and symbol `1' a black one. There is no space symbol separating the symbols in the line. The fifth line is empty. The next 4 following lines describe the final game position in the same way.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The first line of output contains the number of the moves. The following lines describe the sequence of moves during the game. One line describes one move and it contains 4 positive integers R_1 C_1 R_2 C_2 separated by single spaces. These are the coordinates of the adjacent fields for the move, i.e. fields [R_1,C_1] and [R_2,C_2], where R_1 (or R_2) is the number of the row and C_1 (or C_2) is the number of the column. The rows on the chessboard are numbered from 1 (top row) to 4 (bottom row) and the columns are numbered from 1 (the leftmost column) to 4 (the rightmost one) as well (i.e. the coordinates of the left upper field are [1,1]).  If there are multiple shortest sequences of moves transforming the starting position to the final position, you can output any one of them.</div><p class="pst">Sample Input</p><pre class="sio">1111
+0000
+1110
+0010
+
+1010
+0101
+1010
+0101</pre><p class="pst">Sample Output</p><pre class="sio">4
+1 2 2 2
+1 4 2 4
+3 2 4 2
+4 3 4 4</pre><p class="pst">

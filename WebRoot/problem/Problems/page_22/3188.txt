@@ -1,0 +1,28 @@
+</p><div class="ptx" lang="en-US">The cows have started using cellphones to cowmunicate with each other, but have found that the button layout doesn't suit their hooves very well. They are designing a special cellphone with fewer but larger buttons.
+<br>
+<br>One feature they liked on the standard cellphones was predictive text. Each button has a few letters associated with it, and one types a word by pushing the associated buttons. Because there is more than one letter for each button, this can be ambiguous for some words.  However, most of the time the ambiguity can be resolved by using a dictionary to determine what word the user wanted.
+<br>
+<br>Since the cows are designing a custom cellphone, they are also going to replace the English alphabet with the Cow alphabet. By an amazing coincidence, the cow alphabet is simply the first L (1 <= L <= 26) letters of the English alphabet, in the same order. They want to find out how to assign the letters of the Cow alphabet to the B buttons (1 <= B <= L) in such a way that the maximum number of words in their dictionary are unambiguous when entered with predictive text. Like normal cellphones, they want the letters on each button to be a contiguous section (one or more consecutive letters) of the alphabet.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Line 1: Two space-separated integers: B and L
+<br>
+<br>Line 2: D, the number of words in the dictionary (1 <= D <= 1000)
+<br>
+<br>Lines 3..D+2: Each line contains one word from the dictionary in upper case and of length 1..10 characters. The words are presented in alphabetical order and with no duplicates.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Line 1: The number of words in the Cow dictionary that have unique button sequences.
+<br>
+<br>Lines 2..B+1: The nth line contains the letters that appear on button n, in upper case and alphabetical order. The lines must be listed in alphabetical order, and every Cow letter must appear exactly once. If there is more than one optimal solution, use the one that places the most letters on button 1. Ties are broken by placing the most letters on button 2, etc.</div><p class="pst">Sample Input</p><pre class="sio">3 13
+11
+ALL
+BALL
+BELL
+CALK
+CALL
+CELL
+DILL
+FILL
+FILM
+ILL
+MILK</pre><p class="pst">Sample Output</p><pre class="sio">7
+AB
+CDEFGHIJK
+LM</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Explanation of the sample:
+<br>
+<br>Button 1 contains AB, button two contains C-K, and button 3 contains LM. The words CELL, DILL, FILL and FILM are all entered as 2233, while the remaining 7 words are all entered uniquely.</div><p class="pst">

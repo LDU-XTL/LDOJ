@@ -1,0 +1,87 @@
+</p><div class="ptx" lang="en-US">Today the first round of the Soccer World Championship in France is coming to an end. 16 countries are remaining now, among which the winner is determined by the following tournament: 
+<br><pre>
+<br> 1 Brazil -----+	
+<br>   	       +-- ? --+
+<br> 2 Chile ------+       |
+<br>		       +-- ? --+
+<br> 3 Nigeria ----+       |       |
+<br>	       +-- ? --+       |
+<br> 4 Denmark ----+	       |
+<br>	                       +-- ? --+
+<br> 5 Holland ----+	       |       |
+<br>	       +-- ? --+       |       |
+<br> 6 Yugoslavia -+       |       |       |
+<br>		       +-- ? --+       |
+<br> 7 Argentina --+       |	       |
+<br>	       +-- ? --+	       |
+<br> 8 England ----+		       |
+<br>				       +-- World Champion
+<br> 9 Italy ------+		       |
+<br>	       +-- ? --+	       |
+<br>10 Norway -----+       |               |
+<br>		       +-- ? --+       |
+<br>11 France -----+       |       |       |
+<br>	       +-- ? --+       |       |
+<br>12 Paraguay ---+	       |       |
+<br>			       +-- ? --+
+<br>13 Germany ----+	       |
+<br>	       +-- ? --+       |
+<br>14 Mexico -----+       |       |
+<br>		       +-- ? --+
+<br>15 Romania ----+       |
+<br>	       +-- ? --+
+<br>16 Croatia ----+</pre>
+<br>For each possible match A vs. B between these 16 nations, you are given the probability that team A wins against B. This (together with the tournament mode displayed above) is sufficient to compute the probability that a given nation wins the World Cup. For example, if Germany wins against Mexico with 80%, Romania against Croatia with 60%, Germany against Romania with 70% and Germany against Croatia with 90%, then the probability that Germany reaches the semi-finals is 80% * (70% * 60% + 90% * 40%) = 62.4%. 
+<br>Your task is to write a program that computes the chances of the 16 nations to become the World Champion '98. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will contain just one test case.
+<br>The first 16 lines of the input file give the names of the 16 countries, from top to bottom according to the picture given above. 
+<br>Next, there will follow a 16 x 16 integer matrix P where element pijgives the probability in percent that country #i defeats country #j in a direct match. Country #i means the i-th country from top to bottom given in the list of countries. In the picture above Brazil is #1 and Germany is #13, so p1,13=55 would mean that in a match between Brazil and Germany, Brazil wins with a probability of 55%. 
+<br>Note that matches may not end with a draw, i.e. pij + pji = 100 for all i,j.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output 16 lines of the form "XXXXXXXXXX p=Y.YY%", where XXXXXXXXXX is the country's name, left-justified in a field of 10 characters, and Y.YY is their chance in percent to win the cup, written to two decimal places. Use the same order of countries like in the input file. </div><p class="pst">Sample Input</p><pre class="sio">Brazil
+Chile
+Nigeria
+Denmark
+Holland
+Yugoslavia
+Argentina
+England
+Italy
+Norway
+France
+Paraguay
+Germany
+Mexico
+Romania
+Croatia
+50 65 50 60 55 50 50 65 45 55 40 55 40 55 50 50 
+35 50 35 45 40 35 35 50 30 40 25 40 25 40 35 35 
+50 65 50 60 55 50 50 65 45 55 40 55 40 55 50 50 
+40 55 40 50 45 40 40 55 35 45 30 45 30 45 40 40 
+45 60 45 55 50 45 45 60 40 50 35 50 35 50 45 45 
+50 65 50 60 55 50 50 65 45 55 40 55 40 55 50 50 
+50 65 50 60 55 50 50 65 45 55 40 55 40 55 50 50 
+35 50 35 45 40 35 35 50 30 40 25 40 25 40 35 35 
+55 70 55 65 60 55 55 70 50 60 45 60 45 60 55 55 
+45 60 45 55 50 45 45 60 40 50 35 50 35 50 45 45 
+60 75 60 70 65 60 60 75 55 65 50 65 50 65 60 60 
+45 60 45 55 50 45 45 60 40 50 35 50 35 50 45 45 
+60 75 60 70 65 60 60 75 55 65 50 65 50 65 60 60 
+45 60 45 55 50 45 45 60 40 50 35 50 35 50 45 45 
+50 65 50 60 55 50 50 65 45 55 40 55 40 55 50 50 
+50 65 50 60 55 50 50 65 45 55 40 55 40 55 50 50 
+</pre><p class="pst">Sample Output</p><pre class="sio">Brazil     p=8.54%
+Chile      p=1.60%
+Nigeria    p=8.06%
+Denmark    p=2.79%
+Holland    p=4.51%
+Yugoslavia p=7.50%
+Argentina  p=8.38%
+England    p=1.56%
+Italy      p=9.05%
+Norway     p=3.23%
+France     p=13.72%
+Paraguay   p=3.09%
+Germany    p=13.79%
+Mexico     p=3.11%
+Romania    p=5.53%
+Croatia    p=5.53%
+</pre><p class="pst">

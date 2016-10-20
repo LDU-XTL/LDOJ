@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">Farmer John's cows have discovered that the clover growing along the ridge of the hill (which we can think of as a one-dimensional number line) in his field is particularly good. 
+<br>
+<br>Farmer John has N cows (we number the cows from 1 to N). Each of Farmer John's N cows has a range of clover that she particularly likes (these ranges might overlap). The ranges are defined by a closed interval [S,E]. 
+<br>
+<br>But some cows are strong and some are weak. Given two cows: cow<sub>i</sub> and cow<sub>j</sub>, their favourite clover range is [Si, Ei] and [Sj, Ej]. If Si <= Sj and Ej <= Ei and Ei - Si > Ej - Sj, we say that cow<sub>i</sub> is stronger than cow<sub>j</sub>.
+<br>
+<br>For each cow, how many cows are stronger than her? Farmer John needs your help!</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains multiple test cases.
+<br>For each test case, the first line is an integer N (1 <= N <= 10<sup>5</sup>), which is the number of cows. Then come N lines, the i-th of which contains two integers: S and E(0 <= S < E <= 10<sup>5</sup>) specifying the start end location respectively of a range preferred by some cow. Locations are given as distance from the start of the ridge.
+<br>
+<br>The end of the input contains a single 0.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output one line containing n space-separated integers, the i-th of which specifying the number of cows that are stronger than cow<sub>i</sub>.
+<br></div><p class="pst">Sample Input</p><pre class="sio">3
+1 2
+0 3
+3 4
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">1 0 0
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Huge input and output,scanf and printf is recommended.</div><p class="pst">

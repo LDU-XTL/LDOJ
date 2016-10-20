@@ -1,0 +1,45 @@
+</p><div class="ptx" lang="en-US">City transportation planners are developing a light rail transit system to carry commuters between the suburbs and the downtown area. Part of their task includes scheduling trains on different routes between the outermost stations and the metro center hub. 
+<br>
+<br>
+<br>Part of the planning process consists of a simple simulation of train travel. A simulation consists of a series of scenarios in which two trains, one starting at the metro center and one starting at the outermost station of the same route, travel toward each other along the route. The transportation planners want to find out where and when the two trains meet. You are to write a program to determine those results. 
+<br>
+<br>
+<br>This model of train travel is necessarily simplified. All scenarios are based on the following assumptions. 
+<br>
+<br>All trains spend a fixed amount of time at each station.
+<br>All trains accelerate and decelerate at the same constant rate. All trains have the same maximum possible velocity.
+<br>When a train leaves a station, it accelerates (at a constant rate) until it reaches its maximum velocity. It remains at that maximum velocity until it begins to decelerate (at the same constant rate) as it approaches the next station. Trains leave stations with an initial velocity of zero (0.0) and they arrive at stations with terminal velocity zero. Adjacent stations on each route are far enough apart to allow a train to accelerate to its maximum velocity before beginning to decelerate.
+<br>Both trains in each scenario make their initial departure at the same time.
+<br>There are at most 30 stations along any route. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">All input values are real numbers. Data for each scenario are in the following format. 
+<br><blockquote><dl><dt><code>d<sub>1</sub> d<sub>2</sub> ... d<sub>n</sub> 0.0</code><dd>For a single route, the list of distances (in miles--there are 5,280 feet in a mile) from each station to the metro center hub,separated by one or more spaces.  Stations are listed in ascending order, starting with the station closest to the metro center hub (station 1) and continuing to the outermost station. All distances are greater than zero. The list is terminated by the sentinel value 0.0.<dt><code>v</code><dd>The maximum train velocity, in feet/minute.<dt><code>s</code><dd>The constant train acceleration rate in feet/minute&sup2;.<dt><code>m</code><dd>The number of minutes a train stays in a station.</dl></blockquote>
+<br>The series of runs is terminated by a data set which begins with the number -1.0. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each scenario, output consists of the following labeled data. 
+<br>
+<br>
+<br>The number of the scenario (numbered consecutively, starting with Scenario #1).
+<br>The time when the two trains meet in terms of minutes from starting time. All times must be displayed to one decimal place. 
+<br>The distance in miles between the metro center hub and the place where the two trains meet. Distances must be displayed to three decimal places. Also, if the trains meet in a station, output the number of the station where they meet. 
+<br>Print a blank line after each scenario. </div><p class="pst">Sample Input</p><pre class="sio">15.0 0.0
+5280.0
+10560.0
+5.0
+3.5 7.0 0.0
+5280.0
+10560.0
+2.0
+3.4 7.0 0.0
+5280.0
+10560.0
+2.0
+-1.0</pre><p class="pst">Sample Output</p><pre class="sio">Scenario #1
+   Meeting time: 7.8 minutes
+   Meeting distance: 7.500 miles from metro center hub
+
+Scenario #2
+   Meeting time: 4.0 minutes
+   Meeting distance: 3.500 miles from metro center hub, in station 1
+
+Scenario #3
+   Meeting time: 4.1 minutes
+   Meeting distance: 3.400 miles from metro center hub, in station 1
+</pre><p class="pst">

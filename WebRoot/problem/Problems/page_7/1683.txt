@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">His Excellency the ambassador of Puzzlestan to Tehran is giving a reception (party) on the occasion of Puzzlestan national day on the second of November. Ambassadors of all missions to Tehran are invited. At the entrance to reception hall each guest leaves his belongings (overcoat, hat, ..., which we will call items afterwards) with the attendant who knows the host ambassador loves puzzle games. While waiting for the reception to end, the attendant prepares a program on his laptop that helps him find what belongs to whom. He asks each guest to give some statements that:
+<br><ul>
+<br><li>Relates two items belonging to the same guest.
+<br><li>Indicates two items that do not belong to the same guest.
+<br></ul>
+<br>Suppose there are N kinds of items and M guests, and assume each guest has exactly one item from each kind (i.e. each guest has one overcoat, one hat, ...). Each of N * M items is given a unique name, which is a single letter (case-sensitive). We can then represent all items of kind i (1 <= i <= N) by a string of length M. We call this, ith group. For example, ith group can be ABCD. In this case, its first item is A, its second item is B, and so on.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line includes the number of test cases (at most 20). First line of each test case includes two positive integers; the first one being N (1 <= N <= 7), the number of item kinds, and the second is M (1 <= M <= 7), the number of guests. In each of the next N lines, there is one string of length M, representing one group (different items of the same kind). The rest of the input includes several lines of statements. Each statement is of form i j X k r, which means that the jth item of the ith group and the rth item of the kth group belong to the same guest (if X is R) or do not belong to the same guest (if X is N). The last line of each test case is a dummy statement 0 0 R 0 0.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, the program should produce M lines, line i (1 <= i <= M) starts with the letter indicating the ith member of the first group in the input test case, then the related member of the second set and so on until that of the last set.  (So the letters in the first column are the same as the letters in the first group, preserving order). Output for consecutive test cases must be separated by exactly one blank line.</div><p class="pst">Sample Input</p><pre class="sio">1
+3 4
+ABCD
+EFGH
+IJKL
+1 1 R 3 2
+1 2 N 2 2
+2 2 R 3 4
+1 3 R 2 3
+1 1 N 2 4
+3 1 R 1 3
+0 0 R 0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">AEJ
+BHK
+CGI
+DFL</pre><p class="pst">

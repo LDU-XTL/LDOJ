@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US"><p>Lambert has two scanned images of a sky chart. These two images look identical except that they are rotated and scaled with different parameters with respect to the same center. Lambert wants to know the smallest angle one of the images has to be rotated so that the two images coincide if appropriately scaled.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input contains multiple test cases. Each test case begins with a line containing a positive integer <i>n</i> (1 &le; <i>n</i> &le; <nobr>1 000 000</nobr>), the number of stars shown in each image. Then comes 2<i>n</i> lines each containing a pair of real numbers (<i>x</i>, <i>y</i>), the position of a star in an image. The first <i>n</i> lines describe the first image; the rest describe the second image. The input ends once EOF is met.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output one line containing the smallest angle the first image has to be rotated counterclockwise so that the two images coincide if appropriately scaled. Output your result in degrees and round it to two digits beyond decimal point.</p></div><p class="pst">Sample Input</p><pre class="sio">1
+1 0
+0 100
+2
+1 1
+-1 1
+1 -1
+-1 -1
+5
+-19830.82380 -18786.25720
+2148.03095 -18081.71419
+875.00326 -22561.64828
+7119.42127 8980.47085
+-8967.62588 37.09588
+24112.04526 12837.22343
+2737.01862 18001.97639
+5155.38703 21982.16524
+-9250.95629 -6764.23120
+8634.96079 -2420.15335</pre><p class="pst">Sample Output</p><pre class="sio">90.0
+180.00
+164.58</pre><p class="pst">

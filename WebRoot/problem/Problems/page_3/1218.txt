@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US">A certain prison contains a long hall of n cells, each right next to each other. Each cell has a prisoner in it, and each cell is locked.
+<br>One night, the jailer gets bored and decides to play a game. For round 1 of the game, he takes a drink of whiskey,and then runs down the hall unlocking each cell. For round 2, he takes a drink of whiskey, and then runs down the
+<br>hall locking every other cell (cells 2, 4, 6, ?). For round 3, he takes a drink of whiskey, and then runs down the hall. He visits every third cell (cells 3, 6, 9, ?). If the cell is locked, he unlocks it; if it is unlocked, he locks it. He
+<br>repeats this for n rounds, takes a final drink, and passes out.
+<br>Some number of prisoners, possibly zero, realizes that their cells are unlocked and the jailer is incapacitated. They immediately escape.
+<br>Given the number of cells, determine how many prisoners escape jail.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains a single positive integer. This is the number of lines that follow. Each of the following lines contains a single integer between 5 and 100, inclusive, which is the number of cells n.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each line, you must print out the number of prisoners that escape when the prison has n cells.
+<br></div><p class="pst">Sample Input</p><pre class="sio">2
+5
+100</pre><p class="pst">Sample Output</p><pre class="sio">2
+10</pre><p class="pst">

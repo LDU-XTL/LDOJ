@@ -1,0 +1,43 @@
+</p><div class="ptx" lang="en-US">Background
+<br>The brand new formula racing team Irarref needs your help! Irarref doesn't have any real good drivers but they want to dominate formula racing. Since fairness doesn't mean anything to them they are trying to build a fully automatic driving control which needs almost no driver interaction.
+<br>Before actually trying the automatic driving control on track and risking to crash their precious cars (they don't care much about their drivers), they want to test it in a computer simulation.
+<br>Problem
+<br>You have to simulate the movement of a car on a given track. To simplify the problem, cars can only move in 8 directions (horizontal, vertical, and diagonal) on cells of a regular 2-dimensional grid, where directions are encoded as follows:
+<br><center>701
+<br>6 2
+<br>543</center>
+<br>Every turn the car executes exactly one of the following commands:
+<br><center><table border=1><tr><td>command</td><td>description</td></tr><tr><td>move-on</td><td>keep moving with the current speed and direction</td></tr><tr><td>accelerate</td><td>increase the speed by 1</td></tr><tr><td>brake</td><td>decrease the speed by 1 (does not go below 0!)</td></tr><tr><td>left</td><td>turn 45 degrees left (decrease direction by 1)</td></tr><tr><td>right</td><td>turn 45 degrees right (increase direction by 1)</td></tr></table></center>
+<br>In any case, a car moves its speed value in cells in its current direction and crosses all cells in-between its old and new position. When a car accelerates or brakes, its speed is adjusted before the movement of the current turn. When a car turns, its direction is changed before the movement.
+<br>The racing track is a 2-dimensional regular grid, where every cell can be: road, non-road space (but still drivable), start/goal line (also road and drivable), or wall.
+<br>Every car starts with an initial speed of 0 and has a maximum speed which it cannot exceed. When a car hits non-road space its speed is reduced to 1 in the next turn but it completes the move of this turn with its current speed. When a car hits a wall it crashes, the simulation stops immediately and there will be no next turn.
+<br>Every car is alone on the track, so you do not have to check for car/car collisions.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains the number of scenarios.
+<br>For each scenario, the first line contains width w and height h of the racing track (1 <= w, h <= 1000).The following h lines contain the layout of the racing track where road, non-road-space, start/goal line, and wall are represented by "x", ".", "s", and "W", respectively. The upper left corner of the racing area is (0, 0), the lower right corner (w-1, h-1), where coordinates are given as pairs (x, y) where x-direction is horizontal and y-direction is vertical.
+<br>A line containing the number n of cars to simulate follows the track description. For every car there are two lines:
+<br><ul><li>a line containing the initial x- and y-coordinate x and y, direction d, and maximum speed m of the car, as integers separated by single blanks, where 0 <= x <= w-1, 0 <= y <= h-1, 0 <= d <= 7, 1 <= m
+<br><li>a line containing a string whose single characters each encode one command for this car, where "m","a", "b", "l", and "r" represent move-on, accelerate, brake, left, and right, respectively; the number of commands for a car is at least 1 and at most 10000.</ul>
+<br>It is guaranteed that the initial car position is not on a wall. It is also guaranteed that the car does not leave the track area without crashing.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output for every scenario begins with a line containing "Scenario #i:", where i is the number of the scenario starting at 1. For every scenario print for ever car the following information:
+<br><ul><li>If the car did not crash print a line containing the final position (x- and y-coordinate), direction and speed of the car, all separated by single spaces.If the car did crash print a line containing the crash-point (x- and y-coordinate), direction and speed of the car at the moment of the crash and the word "crashed", all separated by single spaces.
+<br><li>For every hit of a start/goal field (a hit is counted when moving onto a start/goal field) print a line beginning with "crossing startline:", followed by a single space, the x- and y-coordinates,direction, speed and the number of the simulation turn the line was crossed or hit. The lines must be printed in the same order the start/goal fields were hit.</ul>
+<br>Print a blank line after each scenario.</div><p class="pst">Sample Input</p><pre class="sio">1
+12 12
+WWWWWWWWWWWW
+W...xxxx...W
+W..xxxxxx..W
+W.xxWWWWxx.W
+WxxWW..WWxxW
+WxxW....WxxW
+WssW....WxxW
+WxxWW..WWxxW
+W.xxWWWWxx.W
+W..xxxxxx..W
+W...xxxx...W
+WWWWWWWWWWWW
+2
+1 6 0 3
+armmrarrmrrrbrmmb
+1 5 0 4
+ararmrramrmar</pre><p class="pst">Sample Output</p><pre class="sio">Scenario #1:
+2 4 0 0
+crossing startline: 2 6 0 1 13
+5 11 5 2 crashed</pre><p class="pst">

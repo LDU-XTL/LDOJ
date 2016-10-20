@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Most bicycle speedometers work by using a Hall Effect sensor fastened to the front fork of the bicycle. A magnet is attached to one of the spokes on the front wheel so that it will line up with the Hall Effect switch once per revolution of the wheel. The speedometer monitors the sensor to count wheel revolutions. If the diameter of the wheel is known, the distance traveled can be easily be calculated if you know how many revolutions the wheel has made. In addition, if the time it takes to complete the revolutions is known, the average speed can also be calculated.
+<br>For this problem, you will write a program to determine the total distance traveled (in miles) and the average speed (in Miles Per Hour) given the wheel diameter, the number of revolutions and the total time of the trip. You can assume that the front wheel never leaves the ground, and there is no slipping or skidding.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of multiple datasets, one per line, of the form:
+<br>diameter revolutions time
+<br>The diameter is expressed in inches as a floating point value. The revolutions is an integer value. The time is expressed in seconds as a floating point value. Input ends when the value of revolutions is 0 (zero).</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, print:
+<br>Trip #N: distance MPH
+<br>Of course N should be replaced by the data set number, distance by the total distance in miles (accurate to 2 decimal places) and MPH by the speed in miles per hour (accurate to 2 decimal places). Your program should not generate any output for the ending case when revolutions is 0.</div><p class="pst">Sample Input</p><pre class="sio">26 1000 5
+27.25 873234 3000
+26 0 1000</pre><p class="pst">Sample Output</p><pre class="sio">Trip #1: 1.29 928.20
+Trip #2: 1179.86 1415.84</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Constants
+<br>For p use the value: 3.1415927.
+<br>There are 5280 feet in a mile.
+<br>There are 12 inches in a foot.
+<br>There are 60 minutes in an hour.
+<br>There are 60 seconds in a minute.
+<br>There are 201.168 meters in a furlong.</div><p class="pst">

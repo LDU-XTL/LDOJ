@@ -1,0 +1,81 @@
+</p><div class="ptx" lang="en-US">You were lucky enough to get a map just before entering the legendary magical mystery world. The map shows the whole area of your planned exploration, including several countries with complicated borders. The map is clearly drawn, but in sepia ink only; it is hard to recognize at a glance which region belongs to which country, and this might bring you into severe danger. You have decided to color the map before entering the area. "A good deal depends on preparation,"
+<br>you talked to yourself.
+<br>Each country has one or more territories, each of which has a polygonal shape. Territories belonging to one country may or may not "touch" each other, i.e. there may be disconnected territories. All the territories belonging to the same country must be assigned the same color. You can assign the same color to more than one country, but, to avoid confusion, two countries "adjacent" to each other should be assigned different colors. Two countries are considered to be "adjacent" if any of their territories share a border of non-zero length. 
+<br>Write a program that finds the least number of colors required to color the map.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of multiple map data. Each map data starts with a line containing the total number of territories n, followed by the data for those territories. n is a positive integer not more than 100. The data for a territory with m vertices has the following format:
+<br><blockquote>String
+<br>x1 y1
+<br>x2 y2
+<br>...
+<br>xm ym
+<br>-1</blockquote>
+<br>"String" (a sequence of alphanumerical characters) gives the name of the country it belongs to. A country name has at least one character and never has more than twenty. When a country has multiple territories, its name appears in each of them.
+<br>Remaining lines represent the vertices of the territory. A vertex data line has a pair of nonnegative integers which represent the x- and y-coordinates of a vertex. x- and y-coordinates are separated by a single space, and y-coordinate is immediately followed by a newline. Edges of the territory are obtained by connecting vertices given in two adjacent vertex data lines, and by connecting vertices given in the last and the first vertex data lines. None of x- and y-coordinates exceeds 1000. Finally, -1 in a line marks the end of vertex data lines. The number of vertices m does not exceed 100.
+<br>You may assume that the contours of polygons are simple, i.e. they do not cross nor touch themselves. No two polygons share a region of non-zero area. The number of countries in a map does not exceed 10.
+<br>The last map data is followed by a line containing only a zero, marking the end of the input data.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each map data, output one line containing the least possible number of colors required to color the map satisfying the specified conditions.</div><p class="pst">Sample Input</p><pre class="sio">6
+Blizid
+0 0
+60 0
+60 60
+0 60
+0 50
+50 50
+50 10
+0 10
+-1
+Blizid
+0 10
+10 10
+10 50
+0 50
+-1
+Windom
+10 10
+50 10
+40 20
+20 20
+20 40
+10 50
+-1
+Accent
+50 10
+50 50
+35 50
+35 25
+-1
+Pilot
+35 25
+35 50
+10 50
+-1
+Blizid
+20 20
+40 20
+20 40
+-1
+4
+A1234567890123456789
+0 0
+0 100
+100 100
+100 0
+-1
+B1234567890123456789
+100 100
+100 200
+200 200
+200 100
+-1
+C1234567890123456789
+0 100
+100 100
+100 200
+0 200
+-1
+D123456789012345678
+100 0
+100 100
+200 100
+200 0
+-1
+0</pre><p class="pst">Sample Output</p><pre class="sio">4
+2</pre><p class="pst">

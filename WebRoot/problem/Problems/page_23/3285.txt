@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US"><p>Everything is flat in Flatland. The planets are round but they are flat, that is, they are discs in a plane.</p><p>The centers of three planets in Flatland are given and their radii. Find the point in Flatland from which all three planets are visible at the same angle, that is, they appear to have the same size measured as angular diameter. Let's call such a point an <em>isoobservation</em> point. There can be at most two such points and we are interested in finding the one that gives the largest angular diameter of the planets. </p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input consists of several cases, each case is presented at a single line. Each line has nine numbers, three for each disc. Each triple has <i>x</i> and <i>y</i> coordinates of the disc center and the radius <i>r</i> of that disc. The input is terminated by a line with nine zeros and this line should not be processed. </p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each case of input, print the <i>x</i> and <i>y</i> coordinates of the isoobservation point as described above in the format shown in the sample; but if there is no such point, print&nbsp;&nbsp; <tt>No solution</tt> </p></div><p class="pst">Sample Input</p><pre class="sio">10 10 1 30 30 1 50 10 1
+0 30 1.0 30 0 1.0 40 40 1.0
+10 30 1.0 31 0 1.0 42 43 1.0
+10 42 1 62.8 62.8 1 52.5 -25.3 1
+10 42 1.1 62.8 62.8 1.2 52.5 25.3 25
+0 0 0 0 0 0 0 0 0</pre><p class="pst">Sample Output</p><pre class="sio">30.00 10.00
+23.00 23.00
+31.58 22.76
+49.27 19.73
+No solution</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><p>To simplify the problem you may assume that: </p><ul><li>The discs centers are not all collinear. </li><li>The discs are totally disjoint. </li><li>The discs are transparent and non-refractive. That is, a disc is visible and has the same apparent shape and size, whether or not there's another disc in front of it. </li><li>The input data are such that the existence or non-existence of such a point is computable, even with slight rounding error. But use double-precision, eh? </li></ul></div><p class="pst">

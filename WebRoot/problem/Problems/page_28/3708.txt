@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US"><div><p>Dr. Yao is involved in a secret research on the topic of the properties of recurrent function. Some of the functions in this research are in the following pattern:</p><img src="formula?tex=%5Cbegin%7Btabular%7D+%7Bll%7D+%5Ctextit%7Bf%7D%28%5Ctextit%7Bj%7D%29+%3D+%5Ctextit%7Ba%7D%24_j%24+%26+for+1%24%5Cle%24%5Ctextit%7Bj%7D%24%3C%24%5Ctextit%7Bd%7D%2C+%5C%5C+%5Cemph%7Bf%7D%28%5Cemph%7Bd%7D%24%5Ctimes%24%5Cemph%7Bn%7D%2B%5Cemph%7Bj%7D%29+%3D+d%24%5Ctimes%24f%28%5Ctextit%7Bn%7D%29%2B%5Ctextit%7Bb%7D%24_j%24+%26+for+0%24%5Cle%24%5Ctextit%7Bj%7D%24%3C%24%5Ctextit%7Bd%7D+and+%5Ctextit%7Bn%7D%24%5Cge%241%2C+%5C%5C+%5Cend%7Btabular%7D+" alt="\begin{tabular} {ll} \textit{f}(\textit{j}) = \textit{a}$_j$ &#38; for 1$\le$\textit{j}$&lt;$\textit{d}, \\ \emph{f}(\emph{d}$\times$\emph{n}+\emph{j}) = d$\times$f(\textit{n})+\textit{b}$_j$ &#38; for 0$\le$\textit{j}$&lt;$\textit{d} and \textit{n}$\ge$1, \\ \end{tabular} " align="absmiddle"><p>in which set {<i>a<sub>i</sub></i>} = {1, 2, …, <i>d</i>-1} and {<i>b<sub>i</sub></i>} = {0, 1, …, <i>d</i>-1}.<br>We denote:</p><img src="formula?tex=%5Cbegin%7Btabular%7D%7Bl%7D%5Cemph%7Bf%7D%24_x%24%28%5Cemph%7Bm%7D%29+%3D+%5Cemph%7Bf%7D%28%5Cemph%7Bf%7D%28%5Cemph%7Bf%7D%28%24%5Ccdots%24%5Cemph%7Bf%7D%28%5Cemph%7Bm%7D%29%29%29%29+%5Cquad%5Cemph%7Bx%7D+times+%5C%5C+%5Cend%7Btabular%7D+" alt="\begin{tabular}{l}\emph{f}$_x$(\emph{m}) = \emph{f}(\emph{f}(\emph{f}($\cdots$\emph{f}(\emph{m})))) \quad\emph{x} times \\ \end{tabular} " align="absmiddle"><p>Yao's question is that, given two positive integer <i>m</i> and <i>k</i>, could you find a minimal non-negative integer <i>x</i> that </p><img src="formula?tex=%5Cbegin%7Btabular%7D%7Bl%7D%5Cemph%7Bf%7D%24_x%24%28%5Cemph%7Bm%7D%29+%3D+%5Cemph%7Bk%7D%5C%5C+%5Cend%7Btabular%7D" alt="\begin{tabular}{l}\emph{f}$_x$(\emph{m}) = \emph{k}\\ \end{tabular}" align="absmiddle"></div></div><p class="pst">Input</p><div class="ptx" lang="en-US">There are several test cases. The first line of each test case contains an integer <i>d</i> (2&le;<i>d</i>&le;100). The second line contains 2<i>d</i>-1 integers: <i>a</i><sub>1</sub>, …, <i>a<sub>d</sub></i><sub>-1</sub>, followed by <i>b</i><sub>0</sub>, ..., <i>b<sub>d</sub></i><sub>-1</sub>. The third line contains integer <i>m</i> (0&lt;<i>m</i>&le;10<sup>100</sup>), and the forth line contains integer <i>k</i> (0&lt;<i>k</i>&le;10<sup>100</sup>). The input file ends with integer -1.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case if it exists such an integer x, output the minimal one. We guarantee the answer is less than 2<sup>63</sup>. Otherwise output a word "NO".
+<br></div><p class="pst">Sample Input</p><pre class="sio">2
+1
+1 0
+4
+7
+2
+1
+0 1
+100
+200
+-1
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+NO
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">For the first sample case, we can see that <i>f</i>(4)=7. And for the second one, the function is <i>f</i>(<i>i</i>)=<i>i</i>.
+<br></div><p class="pst">

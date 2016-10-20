@@ -1,0 +1,26 @@
+</p><div class="ptx" lang="en-US">A table with four legs may rock, even on a flat surface, if its legs are not all the same length. Interestingly, regardless of how many legs have differing lengths, it is always possible to saw an amount from some legs so as to make the table sit level on a flat surface without rocking. 
+<br>Your job is to generalize this approach to a table with many legs equally spaced around the perimeter of a round table. You are to determine the total length of legs to cut so as to have the table sit level without rocking on a flat surface with not necessarily every leg touching the ground. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of data for a number of tables. For each table, a line will give an integer t, between 3 and 50, indicating the number of legs on the table. t subsequent lines will give, in order around the table's circumference, the lengths of the legs in millimetres. Each leg is perpendicular to the table top. A line containing 0 follows the data for the last table. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Pick a strategy that cuts the least total length from all legs and print this amount as an integer number. Print a blank line between tables. </div><p class="pst">Sample Input</p><pre class="sio">3
+2000
+3000
+4000
+4
+2000
+2000
+1999
+2001
+5
+2000
+2000
+1999
+2001
+1999
+0
+
+</pre><p class="pst">Sample Output</p><pre class="sio">3000
+
+4
+
+1
+
+</pre><p class="pst">

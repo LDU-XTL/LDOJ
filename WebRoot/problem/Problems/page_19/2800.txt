@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">Joseph likes taking part in programming contests. His favorite problem is, of course, Joseph's problem. 
+<br>
+<br>It is stated as follows. 
+<br><ul>There are n persons numbered from 0 to n - 1 standing in a circle. The person numberk, counting from the person number 0, is executed. After that the person number k of the remaining persons is executed, counting from the person after the last executed one. The process continues until only one person is left. This person is a survivor. The problem is, given n and k detect the survivor's number in the original circle. </ul>
+<br>Of course, all of you know the way to solve this problem. The solution is very short, all you need is one cycle: 
+<br><pre>	r := 0;
+<br>	for i from 1 to n do
+<br>		r := (r + k) mod i;
+<br>	return r;</pre>
+<br>Here "x mod y" is the remainder of the division of x by y, But Joseph is not very smart. He learned the algorithm, but did not learn the reasoning behind it. Thus he has forgotten the details of the algorithm and remembers the solution just approximately. 
+<br>
+<br>He told his friend Andrew about the problem, but claimed that the solution can be found using the following algorithm: 
+<br><pre>	r := 0;
+<br>	for i from 1 to n do
+<br>		r := r + (k mod i);
+<br>	return r;</pre>
+<br>Of course, Andrew pointed out that Joseph was wrong. But calculating the function Joseph described is also very interesting. 
+<br>
+<br>Given n and k, find  <font size=5>&sum;</font><sub>1<=i<=n</sub>(k mod i). 
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input file contains n and k (1<= n, k <= 10<sup>9</sup>).</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output the sum requested.</div><p class="pst">Sample Input</p><pre class="sio">5 3</pre><p class="pst">Sample Output</p><pre class="sio">7
+</pre><p class="pst">

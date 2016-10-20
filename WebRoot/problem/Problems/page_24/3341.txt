@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US"><div><p>The rules for calculating the taxi fares are quite complex. Many factors are to be considered in computing the taxi fares, including the length of the trip, the time of the day, the speed, etc. Every morning Bianca Bennett uses taxi to get to her office, she thinks if taximeters are programmed correctly. One day, she decided to write a program to calculate the taxi fares to check this.</p><p>Imagine a taxi passes through a sequence of streets <i>S</i><sub>1</sub>, <i>S</i><sub>2</sub>, ..., <i>S<sub>n</sub></i> in order. The length of <i>S<sub>i</sub></i> is <i>L<sub>i</sub></i> and it is assumed that the taxi travels in a constant speed and it takes <i>M<sub>i</sub></i> minutes to travel one kilometer in <i>S<sub>i</sub></i>. To make it simple, assume the passenger gets in at the start of a street <i>S<sub>i</sub></i> and gets out at the end of the destination street <i>S<sub>j</sub></i> (i.e., he does not get in or out in the middle of a street). The passenger is charged for each kilometer of the trip. The first ten kilometers of the trip cost 1000 Rials each. The next 20 kilometers (from 11 to 30) cost 250 Rials each. After that, each kilometer costs 100 Rials.</p><p>During the night, the fare is increased by 20%. The rule is that for each kilometer, if the taxi travels at least one minute during the time interval [12 AM, 6 AM], that kilometer will cost 20% more. Since driving in a heavy traffic costs more, if the average speed of the taxi is less than 30 km/h during the whole trip, the fare is increased by 10%.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input consists of multiple test cases. The first part of each test case is the sequence of streets the taxi travels. This comes in several lines, each describing one street in the form of <i>street-name</i> <i>length</i> <i>min</i>. <i>street-name</i> is a unique string of at most 20 letters and digits with no blank in it, and <i>length</i> and <i>min</i> are two positive integer numbers which are <i>L<sub>i</sub></i>; (measured in kilometers, at most 200) and <i>M<sub>i</sub></i> (measured in minutes) respectively. Each street is visited once by the taxi. The first part of the test case is terminated by a line containing a single $ character. The second part of the test case contains a single line of the form <i>source-street</i> <i>dest-street</i> <i>time</i>. The first two items are the names of the source and the destination streets respectively. The third item is the time the passenger gets in which is in standard 24-hours format (HH:MM). There is a line containing a single # character at the end of each test case. You may assume that the source and the destination streets belong to the input sequence of streets and the destination street does not come before the source street. The last line of the input contains two dash characters as shown in the sample input.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output a line containing the fare of the passenger's trip.</p></div><p class="pst">Sample Input</p><pre class="sio">Khayyam 10 35
+15thKhordad 50 15 
+Pamenar 15 40
+$
+Khayyam Pamenar 07:15
+#
+Jenah 10 40
+Nouri 50 70
+Hemmat 30 25
+Chamran 80 80
+ValieAsr 30 20
+$
+Nouri ValieAsr 23:30
+#
+--
+</pre><p class="pst">Sample Output</p><pre class="sio">21758
+36432
+</pre><p class="pst">

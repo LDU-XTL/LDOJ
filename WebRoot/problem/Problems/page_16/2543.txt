@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">You are to write a program emulating a very simple spreadsheet application. It works with a table with 9 rows, from "1" to "9", and 26 columns, from "A" to "Z". Table cells are referenced by names composed of column and row codes, ex. "B1", "S8".
+<br>
+<br>Each cell contains an expression up to 255 characters long. Expressions use integer constants, cell references, parenthesis, operators "+", "-", "*", and "/" (whole division). For example: 567, E8/2, (3+B3)*(C4-1) are all valid expressions. All operators are whole, all arguments and results are guaranteed to be less than 1000000. Division by zero yields zero.
+<br>
+<br>If the value of the cell referenced by some expression is not defined, it is presumed to be 0 (zero). The situation when two or more cells are mutually dependent on each other is considered a special case of "circular reference". </div><p class="pst">Input</p><div class="ptx" lang="en-US">First input line contains number of expressions N. Following N lines are in format < Cell reference>=< expression>. All expressions are correct, and each cell is defined by at most one expression.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output file must contain single line with either the value of the cell "A1" or number 1000000 (one million) if the value of A1 cannot be computed due to a circular reference.</div><p class="pst">Sample Input</p><pre class="sio">4
+A1=B1+C5
+B1=20
+C5 =B1 /D7-E1*E1
+E1=(3+1)*2</pre><p class="pst">Sample Output</p><pre class="sio">-44
+</pre><p class="pst">

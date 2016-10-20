@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">Consider the AC circuit below. We will assume that the circuit is in steady-state. Thus, the voltage at nodes 1 and 2 are given by v<sub>1</sub> = V<sub>S</sub> cos<span style="mso-char-type: symbol; mso-symbol-font-family: Symbol; font-family: Symbol; mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman" lang="EN-US">w</span>t and v<sub>2</sub> = V<sub>R</sub>cos (<span style="mso-char-type: symbol; mso-symbol-font-family: Symbol; font-family: Symbol; mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman" lang="EN-US">w</span>t + <span style="mso-char-type: symbol; mso-symbol-font-family: Symbol; font-family: Symbol; mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman" lang="EN-US">q</span> ) where V<sub>S</sub> is the voltage of the source, <span style="mso-char-type: symbol; mso-symbol-font-family: Symbol; font-family: Symbol; mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman" lang="EN-US">w</span> is the frequency (in radians per second), and t is time. V<sub>R</sub> is the magnitude of the voltage drop across the resistor, and <span style="mso-char-type: symbol; mso-symbol-font-family: Symbol; font-family: Symbol; mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman" lang="EN-US">q</span> is its phase.
+<br><center><img src="images/1045/bode.jpg"></center>
+<br>You are to write a program to determine V<sub>R</sub> for different values of <span style="mso-char-type: symbol; mso-symbol-font-family: Symbol; font-family: Symbol; mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman" lang="EN-US">w</span>. You will need two laws of electricity to solve this problem. The first is Ohm's Law, which states v<sub>2</sub> = iR where i is the current in the circuit, oriented clockwise. The second is i = C d/dt (v<sub>1</sub>-v<sub>2</sub>) which relates the current to the voltage on either side of the capacitor. "d/dt"indicates the derivative with respect to t.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will consist of one or more lines. The first line contains three real numbers and a non-negative integer. The real numbers are V<sub>S</sub>, R, and C, in that order. The integer, n, is the number of test cases. The following n lines of the input will have one real number per line. Each of these numbers is the angular frequency, <span style="mso-char-type: symbol; mso-symbol-font-family: Symbol; font-family: Symbol; mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman" lang="EN-US">w</span>.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each angular frequency in the input you are to output its corresponding V<sub>R</sub> on a single line. Each V<sub>R</sub> value output should be rounded to three digits after the decimal point.</div><p class="pst">Sample Input</p><pre class="sio">1.0 1.0 1.0 9
+0.01
+0.031623
+0.1
+0.31623
+1.0
+3.1623
+10.0
+31.623
+100.0</pre><p class="pst">Sample Output</p><pre class="sio">0.010
+0.032
+0.100
+0.302
+0.707
+0.953
+0.995
+1.000
+1.000</pre><p class="pst">

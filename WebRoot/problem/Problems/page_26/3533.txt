@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US"><p>The Light Switching Game is played on a 1000 &times; 1000 &times; 1000 cube of cells with a light in each cell, as Figure.1 shows. Initially, most of the lights are off while exactly <i>N</i> lights are on. Two players take moves alternately. A move consists of switching the lights at the corners of a cuboid, i.e. (<i>x</i><sub>1</sub>,<i>y</i><sub>1</sub>,<i>z</i><sub>1</sub>), (<i>x</i><sub>1</sub>,<i>y</i><sub>1</sub>,<i>z</i><sub>2</sub>), (<i>x</i><sub>1</sub>,<i>y</i><sub>2</sub>,<i>z</i><sub>1</sub>), (<i>x</i><sub>1</sub>,<i>y</i><sub>2</sub>,<i>z</i><sub>2</sub>), (<i>x</i><sub>2</sub>,<i>y</i><sub>1</sub>,<i>z</i><sub>1</sub>), (<i>x</i><sub>2</sub>,<i>y</i><sub>1</sub>,<i>z</i><sub>2</sub>), (<i>x</i><sub>2</sub>,<i>y</i><sub>2</sub>,<i>z</i><sub>1</sub>), (<i>x</i><sub>2</sub>,<i>y</i><sub>2</sub>,<i>z</i><sub>2</sub>) where 1 &le; <i>x</i><sub>1 </sub>&le;<i> x</i><sub>2</sub> &le; 1000, 1 &le;<i>y</i><sub>1 </sub>&le;<i> y</i><sub>2</sub> &le; 1000, 1 &le;<i>z</i><sub>1 </sub>&le;<i> z</i><sub>2</sub> &le; 1000 and the light at the corner (<i>x</i><sub>2</sub>,<i>y</i><sub>2</sub>,<i>z</i><sub>2</sub>) must be on (and turned off after the move). Notice the cuboid is possibly degenerated to a rectangle, a line or even a single cell so that the player may also switching four, two or one besides eight lights in a move. The player loses the game when he can not take a move.</p><p><center><img src="images/3533_1.GIF"><br>Figure.1</img></center></p><p>You will find out whether the second player can win if both players play optimally.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US">There are multiple test cases.
+<br>Every test case starts with one line containing a single number <i>N</i> indicating the number of lights which is initially on. (<i>N</i> &le; 100)
+<br>Each of the next <i>N</i> lines contains the coordinates (<i>x</i>, <i>y</i>, <i>z</i>) (1 &le; <i>x</i>, <i>y</i>, <i>z</i> &le; 1000) showing that the light at this position is on initially.</div><p class="pst">Output</p><div class="ptx" lang="en-US">One line for each test case which contains "Yes" or "No" indicating whether the second player can win the game.</div><p class="pst">Sample Input</p><pre class="sio">4
+5 11 30
+5 19 19
+23 15 6
+2 26 16
+3
+9 20 9
+8 1 28
+30 22 26
+</pre><p class="pst">Sample Output</p><pre class="sio">Yes
+No
+</pre><p class="pst">

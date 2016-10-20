@@ -1,0 +1,103 @@
+</p><div class="ptx" lang="en-US">Given several points on a plane, let’s try to solve a puzzle connecting them with a zigzag line. The puzzle is to find the zigzag line that passes through all the given points with the minimum number of turns. Moreover, when there are several zigzag lines with the minimum number of turns, the shortest one among them should be found.
+<br>For example, consider nine points given in Figure 10.
+<br>
+<br><center><img src="images/3949_1.png"></center>
+<br>
+<br>A zigzag line is composed of several straight line segments. Here, the rule requests that each line segment should pass through two or more given points.
+<br>A zigzag line may turn at some of the given points or anywhere else. There may be some given points passed more than once.
+<br>
+<br><center><img src="images/3949_2.png"></center>
+<br>
+<br>Two zigzag lines with three turning points are depicted in Figure 11 (a) and (b) for the same set of given points shown in Figure 10. The length of the zigzag line in Figure 11 (a) is shorter than that in Figure 11 (b). In fact, the length of the zigzag line in Figure 11 (a) is the shortest so that it is the solution for the nine points given in Figure 10.
+<br>Another zigzag line with four turning points is depicted in Figure 12. Its length is shorter than those in Figure 11, however, the number of turning points is greater than those in Figure 11, and thus, it is not the solution.
+<br>
+<br><center><img src="images/3949_3.png"></center>
+<br>
+<br>There are two zigzag lines that passes another set of given points depicted in Figure 13 (a) and (b).
+<br>Both have the same number of turning points, and the line in (a) is longer than that in (b). However, the solution is (a), because one of the segments of the zigzag line in (b) passes only one given point, violating the rule.
+<br>
+<br><center><img src="images/3949_4.png"></center>
+<br>
+<br>Your job is to write a program that solves this puzzle.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of multiple datasets, followed by a line containing one zero. Each dataset has the following format.
+<br><p style="padding-left: 30px">
+<br>n
+<br>x1 y1
+<br>.
+<br>.
+<br>.
+<br>xn yn
+<br></p>
+<br>Every input item in a dataset is a non-negative integer. Items in a line are separated by a single space.
+<br>n is the number of the given points. xk and yk (k = 1, ..., n) indicate the position of the k-th point. The order of the points is meaningless. You can assume that 2 ≤ n ≤ 10, 0 ≤ xk ≤ 10, and 0 ≤ yk ≤ 10.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each dataset, the minimum number of turning points and the length of the shortest zigzag line with that number of turning points should be printed, separated by a space in a line. The length should be in a decimal fraction with an error less than 0.0001 (= 1.0 × 10<sup>-4</sup>).
+<br>You may assume that the minimum number of turning points is at most four, that is, the number of line segments is at most five.
+<br>The example solutions for the first four datasets in the sample input are depicted in Figure 14 and 15.</div><p class="pst">Sample Input</p><pre class="sio">2
+0 0
+10 9
+4
+0 0
+3 1
+0 3
+3 3
+10
+2 2
+4 2
+6 2
+2 4
+4 4
+6 4
+2 6
+4 6
+6 6
+3 3
+10
+0 0
+2 0
+4 0
+0 2
+2 2
+4 2
+0 4
+2 4
+4 4
+6 8
+9
+0 0
+1 0
+3 0
+0 1
+1 1
+3 1
+0 2
+1 2
+2 2
+10
+0 0
+1 0
+0 1
+1 1
+9 9
+9 10
+10 9
+10 10
+0 2
+10 8
+10
+0 0
+0 10
+2 0
+2 1
+2 7
+2 10
+5 1
+6 7
+9 2
+10 9
+0</pre><p class="pst">Sample Output</p><pre class="sio">0 13.45362405
+1 18.48683298
+3 24.14213562
+4 24.94813673
+3 12.24264069
+3 60.78289622
+3 502.7804353</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><center><img src="images/3949_5.png"></center>
+<br>
+<br><center><img src="images/3949_6.png"></center></div><p class="pst">

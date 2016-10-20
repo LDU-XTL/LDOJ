@@ -1,0 +1,65 @@
+</p><div class="ptx" lang="en-US"><TABLE cellSpacing=0 cellPadding=0 border=5><TBODY><TR><TD align=middle width=60><H1>1</H1></TD><TD align=middle width=60><H1>2</H1></TD><TD align=middle width=60><H1>3</H1></TD></TR><TR><TD align=middle width=60><H1>4</H1></TD><TD align=middle width=60><H1>5</H1></TD><TD align=middle width=60><H1>6</H1></TD></TR><TR><TD align=middle width=60><H1>7</H1></TD><TD align=middle width=60><H1>8</H1></TD><TD align=middle width=60 bgColor=darkgray><H1>&nbsp;</H1></TD></TR></TBODY></TABLE>
+<br>Remember those wacky number puzzles you used to win at birthday parties as a kid? Well, they're back, but this time with a digital twist. As with everything else, kids today are spoiled, having access to technology to make things easier for them. And why should games be any different? 
+<br>
+<br>With this in mind Wiltin' Badley has decided to release a 21st Century version of this old puzzle favorite and call it Missing Piece 2001. Since this is a modern version of the game, it will be accompanied with a software supplement to give the player an idea of the skill level necessary to solve the puzzle. The software supplement will allow the player to enter in the initial board configuration along with the expected final board configuration, and the software will tell the player whether it is solvable within a certain number of moves. If the puzzle is solvable within the selected number of moves, the software will then give the optimal number of moves necessary to solve the puzzle. You have been hired by Wiltin' Badley as a Software Engineer to write this very software. 
+<br>
+<br>As with any good software, the ability of your software to be flexible is a must. Therefore, you are to design this software to allow the user to enter the dimensions of the game board, the desired number of moves in which the puzzle is to be solved, the initial board configuration, and the final board configuration. This user input will take into account different game board sizes (different-sized game boards sold separately, for a nominal fee of course), different number of moves necessary to solve the puzzle (so the player can tell if the puzzle is solvable given his/her skill level), as well as any solution set the player may want to try. 
+<br><b><u>Game Piece Movement </u></b>
+<br>A valid move consists of moving a game piece (number) which is adjacent to the missing piece ('X') in the direction of the missing piece. Note that only game pieces that are adjacent to the missing piece may be moved, and the only valid directions of movement are UP, DOWN, LEFT, or RIGHT (depending on the placement of the game piece in relation to the missing piece). </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input to this problem will consist of a (non-empty) series of up to 10 data sets. Each data set will be formatted according to the following description, and there will be no blank lines separating data sets. 
+<br>
+<br>Each data set consists of 4 components: 
+<br><ol><li>Start Line - A single line, "START D N", where 3 <= D <= 10 and 0 <= N <= 15 
+<br><li>Initial Board Layout - Consists of a D x D matrix of integers ranging from 1 to (D<sup>2</sup> - 1) inclusive (where D is the Board Dimension), and an 'X' to denote the missing piece. This matrix represents the layout of the game board prior to the solution attempt. 
+<br><li>Solved Board Layout - Consists of a D x D matrix of integers ranging from 1 to (D<sup>2</sup> - 1) inclusive (where D is the Board Dimension), and an 'X' to denote the missing piece. This matrix represents the final layout of the game board necessary to successfully solve the puzzle. 
+<br><li>End Line - A single line, "END" </ol>
+<br><b><u>Notes: </u></b>
+<br><ul><li>On the "Start" line of the data set, D represents the dimensions of the puzzle board. 
+<br><li>On the "Start" line of the data set, N represents the number of moves the player wants to be able to solve the puzzle within. 
+<br><li>Both game board layout matrices will contain ALL numbers within the range mentioned above (inclusive), with no missing or repeated numbers, and one 'X' (missing piece). </ul>
+<br>
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, there will be exactly one output set, and there will be a single blank line separating output sets. 
+<br>
+<br>An output set consists of a string telling the player whether the puzzle is solvable within the number of moves specified in the input, along with the optimal number of moves necessary to obtain the Solution Board Layout if the puzzle is solvable within the number of specified moves. If the puzzle is not solvable within the specified number of moves, the number of specified moves is echoed back to the output. The output for each data set will consist of a single line, specified by the following format: 
+<br>
+<br>[Answer String] "WITHIN" [Number Moves] "MOVES" 
+<br>
+<br><b><u>Notes: </u></b>
+<br>
+<br>IF the puzzle is able to be solved within the specified number of moves: 
+<br><ul>Answer String = "SOLVABLE"
+<br>Number Moves = [An integer representing the optimal number of moves] </ul>
+<br>ELSE 
+<br><ul>Answer String = "NOT SOLVABLE"
+<br>Number Moves = [An integer representing the number of moves specified as input] </ul>
+<br></div><p class="pst">Sample Input</p><pre class="sio">START 3 4
+1 5 2
+4 X 3
+7 8 6
+1 2 3
+4 5 6
+7 8 X
+END
+START 3 3
+1 2 3 
+7 X 8
+6 5 4
+1 2 3 
+8 X 4
+7 6 5
+END
+START 4 10
+1 X 2 4
+5 6 3 7
+9 10 11 8
+12 13 14 15
+1 2 3 4
+5 6 7 8
+9 10 X 11
+12 13 14 15
+END
+</pre><p class="pst">Sample Output</p><pre class="sio">SOLVABLE WITHIN 4 MOVES
+
+NOT SOLVABLE WITHIN 3 MOVES
+
+SOLVABLE WITHIN 5 MOVES
+</pre><p class="pst">

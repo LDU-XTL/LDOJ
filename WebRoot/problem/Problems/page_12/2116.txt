@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">The group of Absurd Calculation Maniacs has discovered a great new way how to count. Instead of using the ordinary decadic numbers, they use Fibonacci base numbers. Numbers in this base are expressed as sequences of zeros and ones similarly to the binary numbers, but the weights of bits (fits?) in the representation are not powers of two, but the elements of the Fibonacci progression (1, 2, 3, 5, 8,... - the progression is defined by F0 = 1, F1 = 2 and the recursive relation F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub> for n >= 2). 
+<br>
+<br>For example 1101001<sub>Fib</sub> = F0 + F3 + F5 + F6 = 1 + 5 + 13 + 21 = 40. 
+<br>
+<br>You may observe that every integer can be expressed in this base, but not necessarily in a unique way - for example 40 can be also expressed as 10001001<sub>Fib</sub>. However, for any integer there is a unique representation that does not contain two adjacent digits 1 - we call this representation canonical. For example 10001001<sub>Fib</sub> is a canonical Fibonacci representation of 40. 
+<br>
+<br>To prove that this representation of numbers is superior to the others, ACM have decided to create a computer that will compute in Fibonacci base. Your task is to create a program that takes two numbers in Fibonacci base (not necessarily in the canonical representation) and adds them together.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several instances, each of them consisting of a single line. Each line of the input contains two numbers X and Y in Fibonacci base separated by a single space. Each of the numbers has at most 40 digits. The end of input is not marked in any special way.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output for each instance should be formated as follows: 
+<br>
+<br>The first line contains the number X in the canonical representation, possibly padded from left by spaces. The second line starts with a plus sign followed by the number Y in the canonical representation, possibly padded from left by spaces. The third line starts by two spaces followed by a string of minus signs of the same length as the result of the addition. The fourth line starts by two spaces immediately followed by the canonical representation of X + Y. Both X and Y are padded from left by spaces so that the least significant digits of X, Y and X + Y are in the same column of the output. The output for each instance is followed by an empty line.
+<br></div><p class="pst">Sample Input</p><pre class="sio">11101 1101
+1 1
+</pre><p class="pst">Sample Output</p><pre class="sio">   100101
++   10001
+  -------
+  1001000
+
+   1
++  1
+  --
+  10
+</pre><p class="pst">

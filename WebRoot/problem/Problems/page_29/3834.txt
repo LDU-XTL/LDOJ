@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US">Consider the following game on an undirected graph G. There are two players, a red color player R and a blue color player B. Initially all edges of G are uncolored. The two players alternately color an uncolored edge of G with their color until all edges are colored. The goal of B is that in the end, the blue-colored edges form a connected spanning subgraph of G. A connected spanning subgraph of G is a connected subgraph that contains all the vertexes of graph G. The goal of R is to prevent B from achieving his goal.
+<br>
+<br>Assume that R starts the game. Suppose that both players play in the smartest way. Your task is to find out whether B will win the game.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several test cases, ended by a line of `-1 -1'.
+<br>
+<br>Each test case begins with a line of two integers n (1 &lt;= n &lt;= 10) and m (0 &lt;= m &lt;= 30), indicating the number of vertexes and edges in the graph. All vertexes are numbered from 0 to n - 1.
+<br>
+<br>Then m lines follow. Each line contains two integers p and q (0 &lt;= p, q &lt; n), indicating there is an edge between vertex p and vertex q.
+<br>
+<br>It is possible that the graph contains more than one edge between two vertexes and self-loops.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case print a line which is either 'YES' or 'NO' indicating B will win the game or not.</div><p class="pst">Sample Input</p><pre class="sio">3 4
+0 1
+1 2
+2 0
+0 2
+4 6
+1 0
+1 2
+2 0
+0 2
+3 0
+1 0
+-1 -1</pre><p class="pst">Sample Output</p><pre class="sio">YES
+NO</pre><p class="pst">

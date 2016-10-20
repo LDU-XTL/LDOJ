@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">In the game of Royal Gems, you are given an n × m board and arbitrarily large number of ruby, emerald, sapphire, and diamond gemstones. You must put one gemstone in each cell of the board according to the following rules:
+<br>
+<br>1) Every ruby has an emerald, a sapphire and a diamond in his neighbors.
+<br>2) Every emerald has a sapphire and a diamond in her neighbors.
+<br>3) Every sapphire has a diamond in his neighbors.
+<br>
+<br>A neighbor of a cell is one of the four cells that are directly above, below, left, or right of the cells. Write aprogram that finds the maximum number of ruby gemstones that could be put on the board satisfying the above rules.</div><p class="pst">Input</p><div class="ptx" lang="en-US">There are multiple test cases in the input. Each test case consists of n (1 < n < 8) and m (1 < m < 8). The input terminates with a line containing 0 0.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, write a single line containing the maximum number of ruby gemstones on the board.</div><p class="pst">Sample Input</p><pre class="sio">2 2
+2 3
+3 3
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">0
+1
+2</pre><p class="pst">

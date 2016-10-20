@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>We believe that every inhabitant of this universe eventually will find a way to live together in harmony and peace; that trust, patience, kindness and loyalty will exist between every living being of this earth; people will find a way to appreciate and cooperate with each other instead of continuous bickering, arguing and fighting. Harmony &mdash; the stage of society so many people dream of and yet it seems so far away from now&hellip;</p><p>Fortunately, the method of unlocking the key to true Harmony is just discovered by a group of philosophers. It is recorded on a strange meteorite which has just hit the earth. You need to decipher the true meaning behind those seemingly random symbols&hellip; More precisely, you are to write a program which will support the following two kinds of operation on an initially empty set <i>S</i>:</p><ol><li><i>B X</i>: Add number <i>X</i> to set <i>S</i>. The <i>K</i><sup>th</sup> command in the form of <i>B X</i> always happens at time <i>K</i>, and number <i>X</i> does not belong to set <i>S</i> before this operation.</li><li><i>A Y</i> : Of all the numbers in set <i>S</i> currently, find the one which has the minimum remainder when divided by <i>Y</i>. In case a tie occurs, you should choose the one which appeared latest in the input. Report the time when this element is inserted.</li></ol><p>It is said that if the answer can be given in the minimum possible time, true Harmony can be achieved by human races. You task is to write a program to help us.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>There are multiple test cases in the input file. Each test case starts with one integer <i>T</i> where 1 &le; <i>T</i> &le; 40000. The following <i>T</i> lines each describe an operation, either in the form of &ldquo;<i>B X</i>&rdquo; or &ldquo;<i>A Y</i> &rdquo; where 1 &le; <i>X</i> &le; 500 000, 1 &le; <i>Y</i> &le; 1 000 000.</p><p><i>T</i> = 0 indicates the end of input file and should not be processed by your program.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Print the result of each test case in the format as indicated in the sample output. For every line in the form of &ldquo;<i>A Y</i>&rdquo;, you should output one number, the requested number, on a new line; output <code>-1</code> if no such number can be found. Separate the results of two successive inputs with one single blank line.</p></span></div><p class="pst">Sample Input</p><pre class="sio">5
+B 1
+A 5
+B 10
+A 5
+A 40
+2
+B 1
+A 2
+0</pre><p class="pst">Sample Output</p><pre class="sio">Case 1:
+1
+2
+1
+
+Case 2:
+1</pre><p class="pst">

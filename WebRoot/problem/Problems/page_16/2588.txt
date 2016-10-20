@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US">Buffalo Bill wishes to cross a 1000x1000 square field. A number of snakes are on the field at various positions, and each snake can strike a particular distance in any direction. Can Bill make the trip without being bitten? </div><p class="pst">Input</p><div class="ptx" lang="en-US">Assume that the southwest corner of the field is at (0,0) and the northwest corner at (0,1000). The input consists of a line containing n <= 1000, the number of snakes. A line follows for each snake, containing three real numbers: the (x,y) location of the snake and its strike distance. The snake will bite anything that passes closer than this distance from its location. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Bill must enter the field somewhere between the southwest and northwest corner and must leave somewhere between the southeast and northeast corners. 
+<br>
+<br>If Bill can complete the trip, give coordinates at which he may enter and leave the field. If Bill may enter and leave at several places, give the most northerly. If there is no such pair of positions, print "Bill will be bitten." 
+<br></div><p class="pst">Sample Input</p><pre class="sio">3
+500 500 499
+0 0 999
+1000 1000 200
+</pre><p class="pst">Sample Output</p><pre class="sio">Bill enters at (0.00, 1000.00) and leaves at (1000.00, 800.00).
+</pre><p class="pst">

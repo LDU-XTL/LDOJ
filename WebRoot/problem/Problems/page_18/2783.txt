@@ -1,0 +1,62 @@
+</p><div class="ptx" lang="en-US">In the laundry next to my flat, clothes are stored on coat hangers that are put on hooks fixed on a circular rail moved electrically by a computer. Hooks are numbered so that finding a cloth is easy. The rail moves in front of a mark. 
+<br><b>Details </b>
+<br>We model the rail as an array of dimension N , referenced in a circular way, that is indices are to be considered modulo N . When a batch of n clothes must be stored, the launderer types the number n on a keyboard. The computer then looks for the first location of n + 2 free hooks, from the current position of the rail to the right, yielding zone k..k + n + 1 (all indices considered modulo N ). Once this is done, the rail moves so that hook numbered k + n + 1 arrives on the mark, and the launderer puts the n clothes on the hooks k + 1..k + n . Hooks k and k + n + 1 are not used to store clothes, but are used as ``separators" between batches of clothes. The launderer then gives the ticket number k to the customer. Hooks used to hang the clothes of some customer are assigned to the customer, even during the actual cleaning of the batch of clothes. 
+<br>
+<br>When the customer comes back with the ticket number k , the launderer types k on the keyboard and the computer makes the rail moves so that the separating hook k of the corresponding batch is in front of the mark. The launderer takes the batch back (during this operation, the rail does not move) and gives it back to the customer. When a cloth is handed back to a customer, the corresponding hook is then free. Note that, when both its left and right neighbors are empty, a separating hook can be used for any purpose (either to hang a cloth or to become a separating hook again). 
+<br>
+<br>The aim of the program is to model deposits and withdrawals of batches of clothes. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input has the following format. The first line contains the number N of hooks, ( 1<=N<=300 ). We then have the number l of lines in the file after the current one. Follow l lines with two different possible formats. The first one is: 
+<br>
+<br>D n 
+<br>
+<br>to deposit n clothes. The second one is: 
+<br>
+<br>W k 
+<br>
+<br>to indicate that clothes corresponding to ticket k must be withdrawn ( 0<=k < N ). </div><p class="pst">Output</p><div class="ptx" lang="en-US">When the customer makes a deposit of clothes, the program looks for an empty place for the whole batch. If this cannot be found, the program's output is 
+<br>
+<br>No space left, please come back later. 
+<br>
+<br>If ticket k can be issued, the program's output is 
+<br>
+<br>The launderer gives ticket k . 
+<br>
+<br>When ticket k is given back, the program's output is 
+<br>
+<br>The launderer gives back batch k . 
+<br>
+<br>and all hooks used to hang the clothes of the corresponding customer are made free. Moreover, a separating hook of a batch that has been removed is also made free if both its right and left neighbors are free. 
+<br>
+<br>Whenever hooks h,..., h + q become free, the program should output 
+<br>
+<br>i is freed. 
+<br>
+<br>for all i between h and h + q . 
+<br>
+<br>We assume that at the beginning of the reading, the rail is empty and that hook 0 is in front of the mark. Only clothes that have been deposited can be withdrawn. </div><p class="pst">Sample Input</p><pre class="sio">22
+5
+D 1
+D 3
+W 0
+D 3
+D 11
+</pre><p class="pst">Sample Output</p><pre class="sio">The launderer gives ticket 0.
+The launderer gives ticket 2.
+The launderer gives back batch 0.
+0 is freed.
+1 is freed.
+The launderer gives ticket 6.
+The launderer gives ticket 10.
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Sample explanation: In that case, N = 22 . The starting position looks like 
+<br><img src=images/2783_1.jpg>
+<br>We first read ``D 1" and the program looks for a zone with three hooks free in a row. Since the rail is empty, we select hooks 0, 1, 2 and we store the cloth on hook 1 (hooks 0 and 2 are separators and remain empty). The rail moves and stops when 2 is in front of the mark. So the position is exactly 
+<br><img src=images/2783_2.jpg>
+<br>A ticket is given and we write ``The launderer gives ticket 0." in the output file. Next we read ``D 3" and we look for an empty zone with 5 hooks, this corresponds to a zone starting at hook 2 (used as a separator), which enables us to store the three clothes on hooks 3, 4, 5; which brings hook 6 in front of the mark: 
+<br><img src=images/2783_3.jpg>
+<br>We write ``The launderer gives ticket 2." in the output file. When the customer asks for ``W 0" the rail comes back to hook 0 
+<br><img src=images/2783_4.jpg>
+<br>and we write ``0 is freed." and ``1 is freed." in the output file. When we get ``D 3" clothes are stored on hooks 7, 8, 9 (6 and 10 are separators) 
+<br><img src=images/2783_5.jpg>
+<br>and we write ``The launderer gives ticket 6." in the output file. The last deposit is ``D 11" which yields to 
+<br><img src=images/2783_6.jpg>
+<br>and we write ``The launderer gives ticket 10." in the output file. 
+<br></div><p class="pst">

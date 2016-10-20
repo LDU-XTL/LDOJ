@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">John and Brus believe that number N is a very bad number. Thus they try to avoid it every time and everywhere. 
+<br>Now the guys would like to represent number M as a sum of positive numbers, each of which not exceeding K. But don’t forget about the bad number N! Each summand must not be divisible by N, moreover the number of summands also must not be divisible by N. 
+<br>Your task is to find the minimal possible number of summands in such representation of M. 
+<br>For example, if N=3, M=11, K=6 then we can represent M as 5+6, but as far as 6 is divisible by 3 we must have at least 3 summands. But as far as N=3 we can’t have 3 summands and thus the answer is 4. One of the possible ways to represent M is 11=4+4+2+1.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains single integer T – the number of test cases. Each test case consists of a single line containing three integers N, M and K separated by single spaces.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case print a single line containing the minimal possible number of summands according to the requirements described above. If it is impossible to do this output “-1” (quotes for clarity) instead.</div><p class="pst">Sample Input</p><pre class="sio">2 
+3 11 6 
+2 12 47
+</pre><p class="pst">Sample Output</p><pre class="sio">4 
+-1</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><b>Constraints:</b> 
+<br>1 ≤ T ≤ 74, 
+<br>1 ≤ N, M, K ≤ 1000000000 (10<sup>9</sup>).</div><p class="pst">

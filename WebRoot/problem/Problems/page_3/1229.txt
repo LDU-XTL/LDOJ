@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">Consider a search engine that knows a number of sites. A site is described by a well-formed domain name which consists of two or more domain parts separated by dots such as www.sharif.edu. A domain part is a string of upper-case and lower-case alphabetic characters. For the rest of this description, we use the term domain name for well-formed domain name.
+<br>
+<br>To restrict a search to some specific sites, a user is allowed to use domain patterns in a search query. A domain pattern is similar to a domain name, except that it may contain arbitrary number of the following wildcards:
+<br><ul>
+<br><li>	Asterisk character (*) that matches a sequence of one or more domain parts separated by dots,
+<br><li>	Question mark character (?) that matches at least one and at most three domain parts separated by dots,
+<br><li>	Exclamation mark character (!) that matches at least three domain parts separated by dots.
+<br></ul>
+<br>Note that if a wildcard character appears in a domain pattern, it should be separated from its surrounding domain parts (if any) by dots. For example www.?.edu, or *.edu are both valid domain patterns matching domain name www.sharif.edu. 
+<br>
+<br>Two domain patterns match if at least one domain name can be constructed matching both domain patterns. For example, the domain patterns www.?.edu and *.edu match, since both match the domain name www.xyz.edu.  Note that the constructed domain name may be an arbitrary (yet not necessarily an existing) site. You are to write a program that given two domain patterns, determines whether the patterns match.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains a single integer t (1 <= t <= 10), the number of test cases, followed by the input data for each test case. Each test case consists of two lines, each containing a domain pattern. Each domain pattern is at most 255 characters long, and does not include any leading or trailing blank characters. </div><p class="pst">Output</p><div class="ptx" lang="en-US">There should be one line per test case in the output file containing a single word YES or NO, depending on whether the two domain patterns in the test case match or not.</div><p class="pst">Sample Input</p><pre class="sio">2
+www.?.edu
+?.edu
+*.edu
+yahoo.com</pre><p class="pst">Sample Output</p><pre class="sio">YES
+NO</pre><p class="pst">

@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US">Consider the following scheme:  for permuting a string of letters: first we create all different rotations of the string, then we sort them in lexicographical order, and finally we take the last letter of each rotation and concatenate them to form a new string.
+<br>
+<br>For the string "LEIDEN.", for example, the seven rotation in lexicographical order are(where the period '.' comes before any letter):<pre>.LEIDEN
+<br>DEN.LEI
+<br>EIDEN.L
+<br>EN.LEID
+<br>IDEN.LE
+<br>LEIDEN.
+<br>N.LEIDE</pre> so this results in the string "NILDE.E"
+<br>
+<br>At first glance this permutation doesn't seem useful at all but it has an interesting property. If there are a lot of equal substrings in the original string (which might happen in case of a real language), the a lot of equal consecutive letters occur after the permutaion. Therefor the resulting string is very suitable for block compression. where blocks of equals letters are replaced by that letter followd by a number which specifies how often that letter occurs. If the letter only occurs once, no number is added. For example the string "AAABCC" would be replaced by "A3BC2".
+<br>
+<br>Your task is now to decompress this final string to the original string. Note however, that permuting the string it not entirely reversible: you can only obtain the original string up to a rotaion (i.e.: each rotation would lead to same permuted string). To overcome this, the original string will consist of uppercase letters followed by a single period('.'), this will define the initial rotation.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains a single number: the number of test cases to follow. Each test  case has the following format:
+<br>One line with the compressed string.This string will consist of uppercase letters, numbers and a single period, and will be a valid block compressed string. The length of the original string that resulted in the compressed one will be no more then 1000000 characters.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For every test case in the input, the output should contain a single line with the decompressed string.
+<br></div><p class="pst">Sample Input</p><pre class="sio">3
+NILDE.E
+N13.E13
+LRSGORTNOMOMAIOSROC2.GAPTE2NS</pre><p class="pst">Sample Output</p><pre class="sio">LEIDEN.
+ENENENENENENENENENENENENEN.
+PROGRAMMINGCONTESTSARESOCOOL.</pre><p class="pst">

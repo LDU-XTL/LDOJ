@@ -1,0 +1,93 @@
+</p><div class="ptx" lang="en-US"><center>00000000000000000011 
+<br>11111111000000000000 
+<br>00000000000000001111 
+<br>00000000000011000000 
+<br>00000000000000111100 
+<br>00000000000001110000 
+<br>00111000000000000000 
+<br>00000000000111000000 
+<br>00000000111100000000 
+<br>00000000000000000001 
+<br>11000000000000000000 
+<br>00001111111000000000 
+<br>00000111111111111111 
+<br>00000000011111100000 
+<br>00000000001111111110 
+<br>00000000000000011110 
+<br>00000001111100000000 
+<br>00000011111111110000 
+<br>00011110000000000000 
+<br>01111111111100000000 
+<br>00000000000000000111 </center>
+<br>A time schedule is represented by a 0-1 matrix with n lines and m columns. Each line represents a person and each column an event. All the persons participating to an event have a one in the corresponding entry of their line. Persons not attending the event have a zero entry in that column. Events occur consecutively. 
+<br><b>Problem </b>
+<br>Problem Write a program that finds a smart permutation of the events where each person attends all its events in a row. In other words, permute the columns of the matrix so that all ones are consecutive in each line. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input consists in the number n<=400 of lines. The second line contains m<=400 , the number of columns. Then comes the n lines of the matrix. Each line consists in m characters `0' or `1'. 
+<br>
+<br>The input matrix is chosen so that there exists only one smart permutation which preserves column 0 in position 0. To make things easier, any two columns share few common one entries. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output consists of m numbers indicating the smart permutation of the columns. The first number must be 0 as column 0 does not move. The second number indicate the index (in the input matrix) of the second column, and so on. </div><p class="pst">Sample Input</p><pre class="sio">3
+4
+0110
+0001
+1101</pre><p class="pst">Sample Output</p><pre class="sio">0
+3
+1
+2</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Sample input2
+<br>6
+<br>5
+<br>01010
+<br>01000
+<br>10101
+<br>10100
+<br>00011
+<br>00101
+<br>Sample output2
+<br>0
+<br>2
+<br>4
+<br>3
+<br>1
+<br>Sample input3
+<br>21
+<br>20
+<br>00101000000000000000
+<br>10010010010110010100
+<br>00101101000000000000
+<br>01000000000000001000
+<br>00000101100000100000
+<br>01000000100000100000
+<br>00000010000110000000
+<br>01000000000001001000
+<br>00000000001001000011
+<br>00001000000000000000
+<br>10000000000000000100
+<br>00010010011000010011
+<br>01111101111001111011
+<br>01000000000001101011
+<br>01100101100001101001
+<br>00100101100000000000
+<br>00010000001001000011
+<br>01010000101001111011
+<br>00000010010010010000
+<br>00010010011111010111
+<br>00101001000000000000
+<br>Sample output3
+<br>0
+<br>17
+<br>11
+<br>12
+<br>6
+<br>9
+<br>15
+<br>3
+<br>10
+<br>18
+<br>19
+<br>13
+<br>16
+<br>1
+<br>14
+<br>8
+<br>5
+<br>7
+<br>2
+<br>4</div><p class="pst">

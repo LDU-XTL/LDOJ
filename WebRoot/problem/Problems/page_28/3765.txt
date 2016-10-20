@@ -1,0 +1,41 @@
+</p><div class="ptx" lang="en-US"><div><p>Xiang Hex is Chinese Chess played upon an elongated hexagonal field, consisting of nine files with the outer ones being seven cells and the center being eleven. The "palace" consists of seven cells, the first three cells of the center file and the first two cells which flank. The "river" is denoted by fourth cell of the first and ninth file, the fifth cell of the third and seventh file and the sixth cell of the center file. The player's side of the field consists of the cells before the "river".</p><p>If you know how to play Chess, the rules of Xiang Hex will be familiar. The general idea is the same. Each player controls an army (red or black) of pieces, moves one piece at a time, and tries to get the opponent's royal piece.</p><p>You can see the "palace" and the "river" below: ("r" is the "river", "P" is the "palace" of red army, and "p" is the "palace" of black army) </p>
+<br><img src="images/3765_1.png" />
+<br><p>Each file was marked from the left to the right with an uppercase character A, B ... I, and the location of a hexagonal can be expressed by the character of the file and the number of hexagonal under it in the same file (No space between the character and the number).</p><p>There are seven kinds of pieces in Xiang Hex:</p><ol><li>SOLDIER(S) step one forward orthogonal before entering the "river". Upon and after entering the "river" step one forward, right forward or left forward orthogonal, or right or left diagonal.</li><li>HORSE(H) step one vacant orthogonal then one diagonal in the same direction.</li><li>CHARIOT(C) slide orthogonal.</li><li>CANNON(A) slide orthogonal through vacant cells, may leap any one piece to capture an enemy.</li><li>ELEPHANT(E) step two diagonal and never cross the "river".</li><li>MANDARIN(M) step diagonal and never leave the "palace"</li><li>GENERAL(G) step orthogonal and never leave the "palace". Not permitted be on an empty file with the opposing GENERAL.</li></ol><p>And this is the setup of Xiang Hex: (Lowercase pieces belong to black army and uppercase pieces belong to red army)</p>
+<br><img src="images/3765_2.png" /><p>The game is won by checkmating the opposing GENERAL. A player loses if stalemate or repetition of position. If both players have no pieces which can cross the "river", the game is drawn.</p><p>Recently, the Association of Chess Men (ACM) wants to hold a competition of Xiang Hex. However, they don't know how to display the current board in real-time during the games. Now they ask you for help.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>There are several test cases in the input. The first line of each case contains an integer <i>n</i>, the number of pieces on the board. The following <i>n</i> lines, each line contains the location of the pieces and a character indicates the type of the pieces. The input is ended by <i>n</i> = 0.</p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div><p>Just display the board as the sample. Extra space at the end of line is not allowed. </p></div></div><p class="pst">Sample Input</p><pre class="sio">11
+E10 g
+C8 e
+E9 m
+B6 C
+I5 s
+H5 a
+D5 h
+C4 S
+A1 S
+E1 G
+H1 A
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">         _
+       _/g\_
+     _/ \_/ \_
+   _/e\_/m\_/ \_
+ _/ \_/ \_/ \_/ \_
+/ \_/ \_/ \_/ \_/ \
+\_/C\_/ \_/ \_/ \_/
+/ \_/ \_/ \_/ \_/s\
+\_/ \_/ \_/ \_/a\_/
+/ \_/ \_/ \_/ \_/ \
+\_/ \_/h\_/ \_/ \_/
+/ \_/S\_/ \_/ \_/ \
+\_/ \_/ \_/ \_/ \_/
+/ \_/ \_/ \_/ \_/ \
+\_/ \_/ \_/ \_/ \_/
+/S\_/ \_/ \_/ \_/ \
+\_/ \_/ \_/ \_/A\_/
+/ \_/ \_/ \_/ \_/ \
+\_/ \_/ \_/ \_/ \_/
+  \_/ \_/G\_/ \_/
+    \_/ \_/ \_/
+      \_/ \_/
+        \_/
+ 
+</pre><p class="pst">

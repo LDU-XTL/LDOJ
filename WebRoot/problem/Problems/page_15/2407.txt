@@ -1,0 +1,6 @@
+</p><div class="ptx" lang="en-US">Given n, a positive integer, how many positive integers less than n are relatively prime to n? Two integers a and b are relatively prime if there are no integers x > 1, y > 0, z > 0 such that a = xy and b = xz. </div><p class="pst">Input</p><div class="ptx" lang="en-US">There are several test cases. For each test case, standard input contains a line with n <= 1,000,000,000. A line containing 0 follows the last case. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case there should be single line of output answering the question posed above.</div><p class="pst">Sample Input</p><pre class="sio">7
+12
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">6
+4
+</pre><p class="pst">

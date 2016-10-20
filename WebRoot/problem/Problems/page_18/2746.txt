@@ -1,0 +1,41 @@
+</p><div class="ptx" lang="en-US">A Bingo game is played by one gamemaster and several players. At the beginning of a game, each player is given a card with M *M numbers in a matrix (See Figure 10).
+<br><img src=images/2746_1.jpg>
+<br>As the game proceeds, the gamemaster announces a series of numbers one by one. Each player punches a hole in his card on the announced number, if any.
+<br>When at least one 'Bingo' is made on the card, the player wins and leaves the game. The 'Bingo' means that all the M numbers in a line are punched vertically, horizontally or diagonally (See Figure 11).
+<br><img src=images/2746_2.jpg>
+<br>The gamemaster continues announcing numbers until all the players make a Bingo.
+<br>In the ordinary Bingo games, the gamemaster chooses numbers by a random process and has no control on them. But in this problem the gamemaster knows all the cards at the beginning of the game and controls the game by choosing the number sequence to be announced at his will.
+<br>Specifically, he controls the game to satisfy the following condition.
+<br><ul>Cardi makes a Bingo no later than Cardj, for i < j. (*)</ul>
+<br>Figure 12 shows an example of how a game proceeds. The gamemaster cannot announce '5' before '16', because Card4 makes a Bingo before Card2 and Card3, violating the condition (*).
+<br>Your job is to write a program which finds the minimum length of such sequence of numbers for the given cards.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of multiple datasets. The format of each dataset is as follows.
+<br><img src=images/2746_3.jpg>
+<br>All data items are integers. P is the number of the cards, namely the number of the players. M is the number of rows and the number of columns of the matrix on each card. N<sup>k</sup><sub>ij</sub> means the number written at the position (i, j) on the k-th card. If (i, j) != (p, q), then N<sup>k</sup><sub>ij</sub> != N<sup>k</sup><sub>pq</sub>. The parameters P, M, and N satisfy the conditions 2 <= P <= 4, 3 <= M <= 4, and 0 <= N<sup>k</sup><sub>ij</sub> <= 99.
+<br>The end of the input is indicated by a line containing two zeros separated by a space. It is not a dataset.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each dataset, output the minimum length of the sequence of numbers which satisfy the condition (*). Output a zero if there are no such sequences. Output for each dataset must be printed on a separate line.</div><p class="pst">Sample Input</p><pre class="sio">4 3
+10 25 11 20 6 2 1 15 23
+5 21 3 12 23 17 7 26 2
+8 18 4 22 13 27 16 5 11
+19 9 24 2 11 5 14 28 16
+4 3
+12 13 20 24 28 32 15 16 17
+12 13 21 25 29 33 16 17 18
+12 13 22 26 30 34 17 18 15
+12 13 23 27 31 35 18 15 16
+4 3
+11 12 13 14 15 16 17 18 19
+21 22 23 24 25 26 27 28 29
+31 32 33 34 35 36 37 38 39
+41 42 43 44 45 46 47 48 49
+4 4
+2 6 9 21 15 23 17 31 33 12 25 4 8 24 13 36
+22 18 27 26 35 28 3 7 11 20 38 16 5 32 14 29
+26 7 16 29 27 3 38 14 18 28 20 32 22 35 11 5
+36 13 24 8 4 25 12 33 31 17 23 15 21 9 6 2
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">5
+4
+12
+0</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">For your convenience, sequences satisfying the condition (*) for the first three datasets are shown below. There may be other sequences of the same length satisfying the condition, but no shorter.
+<br>11, 2, 23, 16, 5
+<br>15, 16, 17, 18
+<br>11, 12, 13, 21, 22, 23, 31, 32, 33, 41, 42, 43</div><p class="pst">

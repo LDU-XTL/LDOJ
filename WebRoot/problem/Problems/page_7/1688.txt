@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">In a newly constructed dolphin pool in the Kish island in Persian Gulf, one of the fun games is as follows: the game director throws several plastic rings in the pool such that center of no ring lies inside any other ring, and no two rings are tangent. The dolphins are trained to jump out on the director's whistle through the closed areas that are completely outside the rings, one dolphin from one such area. The dolphins jump out if and only if the number of closed areas exactly equals to the number of dolphins. 
+<br>
+<br>You are to write a program to given the following input/output description, finds the number of closed areas between rings to help the dolphins decide to jump out or not.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line includes the number of test cases (at most 20). Each test case data has an integer N (1 <= N <= 20), the number of plastic rings, in its first line. Following the first line there are N lines, each containing three integers, the first and second being the x and y coordinates of the circle of the ring, and the third is its radius. Coordinates are positive integers less than 1000 and the radius is in the range 1...100.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, there must be one line in the output including the number of closed areas in that test case.</div><p class="pst">Sample Input</p><pre class="sio">2
+4
+100 100 20
+100 135 20
+135 100 20
+135 135 20
+1
+10 10 40
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+0
+</pre><p class="pst">

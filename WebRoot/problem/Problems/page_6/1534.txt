@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">The USA Computer Security Office claims that the terrorist attack on 11th of September could not be scheduled without the help of scheduler programs that minimize the period of hijacking 4 plan es and tower crashing. To check this claim, Information Ministry decided to write such a program and check if the result of the program is the same as the hijacking plan on September 11th. Terrorist's plan is to hijack some planes, immediately after take o ff and redirect them in order to hit the target towers.  Each hijacked plane can be used for hitting at most one tower.  The program input is the scheduling of the flights, and the position of main US towers. It's supposed that terrorists want to damage at  least  d towers and they want to minimize the period between the first and the last tower crash. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several test cases.  In the first line of each test case there are 4 numbers n, k, p, d which are the number of airports, towers, planes and minimum expected number of towers to be damaged, respectively.  In the I'th line of the next  n lines there are two integers x and  y indicating the position of the I'th airport. Then, in the I'th line of the next k lines the re are two integers  x and y indicating the position of the I'th tower and finally in the I'th line of the next p lines there are 5 integers h, m, f, t, s  indicating that the I'th plane leaves the airport f to airport t at time h:m(hour and minute of the flight) with speed  s kilometers per second. The test case with n=k=p=d=0 represent the end of input file. All coordinates are in kilometer.  (n<=50, k<=50, p<=90) </div><p class="pst">Output</p><div class="ptx" lang="en-US">In the output, for each test case except the one with  n=k=p=d=0 in a separate line write the minimum time (in the format of h:m) which is the period  between the first and the last crash when at least d towers are damaged. If the period has seconds, round it to the nearest minute. If there is no such interval write "Impossible!" in the output file. </div><p class="pst">Sample Input</p><pre class="sio">2 2 2 2
+17 97
+25 47
+72 7
+43 78
+18 41 1 2 4
+7 17 1 2 8
+2 1 1 1
+89 85
+57 45
+2 25
+14 5 2 1 7
+0 0 0 0</pre><p class="pst">Sample Output</p><pre class="sio">11:24
+0:0</pre><p class="pst">

@@ -1,0 +1,40 @@
+</p><div class="ptx" lang="en-US">Recognizing strings based on a set of restrictions is a common computational problem. 
+<br>A Slurpy is a string of characters that has certain properties. Your program will read in strings of characters and output whether or not they are Slurpys. 
+<br>
+<br>A Slump is a character string that has the following properties: 
+<br>
+<br>1. Its first character is either a 'D' or an 'E'.
+<br>
+<br>2. The first character is followed by a string of one or more 'F's.
+<br>
+<br>3. The string of one or more 'F's is followed by either a Slump or a 'G'. The Slump or 'G' that follows the F's ends the Slump. For example DFFEFFFG is a Slump since it has a 'D' for its first character, followed by a string of two F's, and ended by the Slump 'EFFFG'.
+<br>
+<br>4. Nothing else is a Slump. 
+<br>
+<br>A Slimp is a character string that has the following properties: 
+<br>
+<br>1. Its first character is an 'A'.
+<br>
+<br>2. If it is a two character Slimp then its second and last character is an 'H'.
+<br>
+<br>3. If it is not a two character Slimp then it is in one of these two forms: 
+<br>a) 'A' followed by 'B' followed by a Slimp followed by a 'C'. 
+<br>b) 'A' followed by a Slump (see above) followed by a 'C'. 
+<br>
+<br>4. Nothing else is a Slimp. 
+<br>
+<br>A Slurpy is a character string that consists of a Slimp followed by a Slump. 
+<br>
+<br>Examples
+<br><pre>
+<br>Slumps:        DFG, EFG, DFFFFFG, DFDFDFDFG, DFEFFFFFG
+<br>Not Slumps:    DFEFF, EFAHG, DEFG, DG, EFFFFDG
+<br>Slimps:        AH, ABAHC, ABABAHCC, ADFGC, ADFFFFGC, ABAEFGCC, ADFDFGC
+<br>Not Slimps:    ABC, ABAH, DFGC, ABABAHC, SLIMP, ADGC
+<br>Slurpys:       AHDFG, ADFGCDFFFFFG, ABAEFGCCDFEFFFFFG
+<br>Not Slurpys:   AHDFGA, DFGAH, ABABCC</pre></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains an integer N between 1 and 10 describing how many strings of characters are represented. The next N lines each contain a string of 1 to 60 alpha characters. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The first line of output should read SLURPYS OUTPUT. Each of the next N lines of output should consist of either YES or NO depending on whether or not the corresponding input line is a Slurpy. The last line of output should read END OF OUTPUT. </div><p class="pst">Sample Input</p><pre class="sio">2
+AHDFG
+DFGAH</pre><p class="pst">Sample Output</p><pre class="sio">SLURPYS OUTPUT
+YES
+NO
+END OF OUTPUT</pre><p class="pst">

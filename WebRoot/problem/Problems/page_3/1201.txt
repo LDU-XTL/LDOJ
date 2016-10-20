@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US">You are given n closed, integer intervals [ai, bi] and n integers c1, ..., cn. 
+<br>Write a program that: 
+<br>reads the number of intervals, their end points and integers c1, ..., cn from the standard input, 
+<br>computes the minimal size of a set Z of integers which has at least ci common elements with interval [ai, bi], for each i=1,2,...,n, 
+<br>writes the answer to the standard output. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains an integer n (1 <= n <= 50000) -- the number of intervals. The following n lines describe the intervals. The (i+1)-th line of the input contains three integers ai, bi and ci separated by single spaces and such that 0 <= ai <= bi <= 50000 and 1 <= ci <= bi - ai+1. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The output contains exactly one integer equal to the minimal size of set Z sharing at least ci elements with interval [ai, bi], for each i=1,2,...,n. </div><p class="pst">Sample Input</p><pre class="sio">5
+3 7 3
+8 10 3
+6 8 1
+1 3 1
+10 11 1</pre><p class="pst">Sample Output</p><pre class="sio">6</pre><p class="pst">

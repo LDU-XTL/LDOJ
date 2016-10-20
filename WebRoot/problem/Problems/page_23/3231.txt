@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US"><p>You are downloading some things using a software (Flashget, maybe), but suddenly you have to go away for something. So, you need a program to calculate when the tasks will complete.</p><p>Now you know every download's speed, size and max speed. When a task is over, the bandwidth used is distributed by other tasks. The speed of one task can never go beyond the max speed of this task, and all tasks' speed can never be larger than the total bandwidth.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>There are multiple cases in the input.</p><p>The first line of each case contains two integers, n and t (n&lt;=100). n is the number of tasks, and t is the total bandwidth. There follows n lines, one line has three integers, means the size of the download file, the initial speed and the max speed. The input promises the sum of tasks' speed equals to the total bandwidth, the speed is not higher than the max speed.</p><p>The input is terminated by a zero.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case first print &quot;Case %:&quot; in one line, % is the number of cases.<br>Then print n lines for n tasks, like this:<br>NO*:#s<br>* means the number of task, for the sequence of input; # means the finish time of the task.</div><p class="pst">Sample Input</p><pre class="sio">3 65
+100 20 30
+200 30 30
+300 15 30
+
+0</pre><p class="pst">Sample Output</p><pre class="sio">Case 1:
+NO1:5.000s
+NO2:6.667s
+NO3:12.500s</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><p>The bandwidth will never change if no task is finished.</p><p>When a task finished, the bandwidth is distributed by this rule:<br>Every unfinished task which does not reach the max speed gets the same bandwidth; the total bandwidth can not be overflowed; every task's speed can not overflow its max speed; if there is bandwidth can be used, distribute it.</p></div><p class="pst">

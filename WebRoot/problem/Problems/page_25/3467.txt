@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US"><p>Given a <i>N</i> &times; <i>M</i> grid with different colors on each cell, your task is to calculate the total amount of crosses of a specific color. We say there exists a cross of size <i>k</i> centered at the cell (<i>x</i>,<i>y</i>) <b><i>iff</i></b> all cells lying in the <i>x</i>-th row or the <i>y</i>-th column and within a distance of <i>k</i> from (<i>x</i>,<i>y</i>) share the same color. Note that if two crosses have the same center but different sizes we consider they are distinct. Unfortunately, the color of each cell may varies by time and you have to respond to all the queries.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>There are four integers, <i>N</i>, <i>M</i>, <i>C</i>, <i>Q</i>, in the first line. (1 &le; <i>N</i>,<i> M</i>,<i> C</i> &le; 100, 1 &le; <i>Q</i> &le; 10000)<br>The next <i>N</i> lines each contains <i>M</i> integers between 1 and <i>C</i> which describe the color of cells.<br>The following <i>Q</i> lines each has either the form "C <i>i</i> <i>j</i> <i>k</i>" indicating to change the color of cell (<i>i</i>, <i>j</i>) into <i>k</i>, or the form "Q <i>c</i>" indicating to query the total amount of crosses of color <i>c</i>. (1 &le; <i>i</i> &le; <i>N</i>, 1 &le; <i>j</i> &le; <i>M</i>, 1 &le; <i>k</i>, <i>c</i> &le; <i>C</i>)</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output the answer to each query.</p></div><p class="pst">Sample Input</p><pre class="sio">5 5 3 6
+1 3 2 3 1
+3 3 2 3 3
+2 2 2 2 2
+3 3 2 3 3
+1 3 2 3 1
+Q 1
+Q 2
+Q 3
+C 2 3 3
+C 3 2 3
+Q 3
+</pre><p class="pst">Sample Output</p><pre class="sio">0
+2
+0
+1
+</pre><p class="pst">

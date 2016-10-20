@@ -1,0 +1,41 @@
+</p><div class="ptx" lang="en-US"><div><p>Wintokk has collected a huge amount of coins at THU. One day he had all his coins fallen on to the ground. Unfortunately, WangDong came by and decided to rob Wintokk of the coins.</p><p>They agreed to distribute the coins according to the following rules:</p><p>Consider the ground as a plane. Wintokk draws a horizontal line on the plane and then WangDong draws a vertical one so that the plane is divided into 4 parts, as shown below. </p><center><img src="images/3416_1.PNG" /></center><p>Wintokk will save the coins in I and III while those fit in II and IV will be taken away by the robber WangDong.</p><p>For fixed locations of the coins owned by Wintokk, they drew several pairs of lines. For each pair, Wintokk wants to know the difference between the number of the saved coins and that of the lost coins.</p><p>It's guaranteed that all the coins will lie on neither of the lines drew by that two guys.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>The first line contains an integer <i>T</i>, indicating the number of test cases. Then <i>T</i> blocks of test cases follow. For each case, the first line contains two integers <i>N</i> and <i>M</i>, where <i>N</i> is the number of coins on the ground and <i>M</i> indicates how many times they are going to draw the lines. The 2nd to (<i>N</i>+1)-th lines contain the co-ordinates of the coins and the last <i>M</i> lines consist of the <i>M</i> pairs integers (<i>x</i>, <i>y</i>) which means that the two splitting lines intersect at point (<i>x</i>, <i>y</i>).</p><p>(<i>N</i>,<i>M </i>&le; 50000, 0 &le;<i>x</i>,<i>y </i>&le; 500000)</p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each query, output a non-negative integer, the difference described above. Output a blank line between cases.</p></div><p class="pst">Sample Input</p><pre class="sio">2
+10 3
+29 22
+17 14
+18 23
+3 15
+6 28
+30 27
+4 1
+26 7
+8 0
+11 21
+2 25
+5 10
+19 24
+10 5
+28 18
+2 29
+6 5
+13 12
+20 27
+15 26
+11 9
+23 25
+10 0
+22 24
+16 30
+14 3
+17 21
+8 1
+7 4
+</pre><p class="pst">Sample Output</p><pre class="sio">6
+4
+4
+
+2
+2
+4
+4
+4
+</pre><p class="pst">

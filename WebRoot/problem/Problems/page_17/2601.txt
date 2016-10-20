@@ -1,0 +1,6 @@
+</p><div class="ptx" lang="en-US">There is a sequence of n+2 elements a<SUB>0</SUB>, a<SUB>1</SUB>, ..., a<SUB>n+1</SUB> (n&nbsp;&lt;=&nbsp;3000, -1000&nbsp;&lt;=&nbsp;a<SUB>i</SUB>&nbsp;&lt;=1000). It is known that <B>a<SUB>i</SUB> = (a<SUB>i-1</SUB>&nbsp;+&nbsp;a<SUB>i+1</SUB>)/2&nbsp;-&nbsp;c<SUB>i</SUB> </B>for each i=1, 2, ..., n.
+<br>You are given a<SUB>0</SUB>, a<SUB>n+1</SUB>, c<SUB>1</SUB>, ... , c<SUB>n</SUB>. Write a program which calculates a<SUB>1</SUB>.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of an input contains an integer n. The next two lines consist of numbers a<SUB>0</SUB> and a<SUB>n+1</SUB> each having two digits after decimal point, and the next n lines contain numbers c<SUB>i</SUB> (also with two digits after decimal point), one number per line.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output file should contain a<SUB>1</SUB> in the same format as a<SUB>0</SUB> and a<SUB>n+1</SUB>.</div><p class="pst">Sample Input</p><pre class="sio">1
+50.50
+25.50
+10.15
+</pre><p class="pst">Sample Output</p><pre class="sio">27.85</pre><p class="pst">

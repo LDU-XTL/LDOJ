@@ -1,0 +1,42 @@
+</p><div class="ptx" lang="en-US">Instruens Fabulam means drawing a chart (or table) in Latin. That's what you will do for this problem.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of one or more table descriptions, followed by a line whose first character is '*', which signals the end of the file. Each description begins with a header line containing one or more characters that define the number and alignment of columns in the table. Each character in the header line is either '<', '=', or '>', and indicates a left-justified, centered, or right-justified column. Following the header are at least two and at most 21 data lines that contain the entries for each row. Each data line consists of one or more nonempty entries separated by an ampersand ('&'), where the number of entries is equal to the number of columns defined in the header line. The first data line contains entries for the column titles, and the remaining data lines contain entries for the body of the table. Spaces may appear within an entry, but never at the beginning or end of an entry. The characters '<', '=', '>', '&', and '*' will not appear in the input except where indicated above.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each table description, output the table using the exact format shown in the examples. Note that
+<br><ul><li> The total width of the table will never exceed 79 characters (not counting end-of-line).
+<br><li> Dashes ('-') are used to draw horizontal lines, not underscores ('_'). 'At' signs ('@') appear at each of the four outer corners. Plus signs ('+') appear at intersections within the line separating the title from the body.
+<br><li> The largest entry in a column is always separated from the enclosing bars ('|') by exactly one space.
+<br><li> If a centered entry cannot be exactly centered within a column, the extra space goes on the right of the entry.
+<br></ul>
+<br>Input and correct output files satisfy all the requirements listed in Notes to Teams, except that the output may contain two or more consecutive spaces. There are no spaces at the beginning or end of lines, and only spaces are used (never tabs). 
+<br></div><p class="pst">Sample Input</p><pre class="sio"><>=>
+TITLE&VERSION&OPERATING SYSTEM&PRICE
+Slug Farm&2.0&FreeBSD&49.99
+Figs of Doom&1.7&Linux&9.98
+Smiley Goes to Happy Town&11.0&Windows&129.25
+Wheelbarrow Motocross&1.0&BeOS&34.97
+>
+What is the answer?
+42
+<>
+Tweedledum&Tweedledee
+"Knock, knock."&"Who's there?"
+"Boo."&"Boo who?"
+"Don't cry, it's only me."&(groan)
+*</pre><p class="pst">Sample Output</p><pre class="sio">@-----------------------------------------------------------------@
+| TITLE                     | VERSION | OPERATING SYSTEM |  PRICE |
+|---------------------------+---------+------------------+--------|
+| Slug Farm                 |     2.0 |     FreeBSD      |  49.99 |
+| Figs of Doom              |     1.7 |      Linux       |   9.98 |
+| Smiley Goes to Happy Town |    11.0 |     Windows      | 129.25 |
+| Wheelbarrow Motocross     |     1.0 |       BeOS       |  34.97 |
+@-----------------------------------------------------------------@
+@---------------------@
+| What is the answer? |
+|---------------------|
+|                  42 |
+@---------------------@
+@---------------------------------------------@
+| Tweedledum                 |     Tweedledee |
+|----------------------------+----------------|
+| "Knock, knock."            | "Who's there?" |
+| "Boo."                     |     "Boo who?" |
+| "Don't cry, it's only me." |        (groan) |
+@---------------------------------------------@
+</pre><p class="pst">

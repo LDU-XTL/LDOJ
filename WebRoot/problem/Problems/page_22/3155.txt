@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>John is a Chief Executive Officer at a privately owned medium size company. The owner of the company has decided to make his son Scott a manager in the company. John fears that the owner will ultimately give CEO position to Scott if he does well on his new manager position, so he decided to make Scott&rsquo;s life as hard as possible by carefully selecting the team he is going to manage in the company.</p><p>John knows which pairs of his people work poorly in the same team. John introduced a <i>hardness factor</i> of a team &mdash; it is a number of pairs of people from this team who work poorly in the same team divided by the total number of people in the team. The larger is the hardness factor, the harder is this team to manage. John wants to find a group of people in the company that are hardest to manage and make it Scott&rsquo;s team. Please, help him.</p><div align="center"><img src=images/3155_1.png></div><p>In the example on the picture the hardest team consists of people 1, 2, 4, and 5. Among 4 of them 5 pairs work poorly in the same team, thus hardness factor is equal to <sup>5</sup>&frasl;<sub>4</sub>. If we add person number 3 to the team then hardness factor decreases to <sup>6</sup>&frasl;<sub>5</sub>.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The first line of the input file contains two integer numbers <i>n</i> and <i>m</i> (1 &le; <i>n</i> &le; 100, 0 &le; <i>m</i> &le; 1000). Here <i>n</i> is a total number of people in the company (people are numbered from 1 to <i>n</i>), and m is the number of pairs of people who work poorly in the same team. Next <i>m</i> lines describe those pairs with two integer numbers <i>a<sub>i</sub></i> and <i>b<sub>i</sub></i> (1 &le; <i>a<sub>i</sub></i>, <i>b<sub>i</sub></i> &le; <i>n</i>, <i>a<sub>i</sub></i> &ne; <i>b<sub>i</sub></i>) on a line. The order of people in a pair is arbitrary and no pair is listed twice.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Write to the output file an integer number <i>k</i> (1 &le; <i>k</i> &le; <i>n</i>) &mdash; the number of people in the hardest team, followed by <i>k</i> lines listing people from this team in ascending order. If there are multiple teams with the same hardness factor then write any one.</p></span></div><p class="pst">Sample Input</p><pre class="sio"><b>sample input #1</b>
+5 6
+1 5
+5 4
+4 2
+2 5
+1 2
+3 1
+
+<b>sample input #2</b>
+4 0</pre><p class="pst">Sample Output</p><pre class="sio"><b>sample output #1</b>
+4
+1
+2
+4
+5
+
+<b>sample output #2</b>
+1
+1</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><p>Note, that in the last example any team has hardness factor of zero, and any non-empty list of people is a valid answer.</p></div><p class="pst">

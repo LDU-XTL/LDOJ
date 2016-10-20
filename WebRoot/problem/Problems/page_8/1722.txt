@@ -1,0 +1,26 @@
+</p><div class="ptx" lang="en-US">We are given a sequence of N positive integers a = [a1, a2, ..., aN] on which we can perform contraction operations. 
+<br>One contraction operation consists of replacing adjacent elements ai and ai+1 by their difference ai-a<sub>i+1</sub>. For a sequence of N integers, we can perform exactly N-1 different contraction operations, each of which results in a new (N-1) element sequence. 
+<br>
+<br>Precisely, let con(a,i) denote the (N-1) element sequence obtained from [a1, a2, ..., aN] by replacing the elements ai and a<sub>i+1</sub> by a single integer ai-a<sub>i+1</sub> : 
+<br>
+<br><b>con(a,i) = [a1, ..., ai-1, ai-a<sub>i+1</sub>, a<sub>i+2</sub>, ..., aN]</b>
+<br>Applying N-1 contractions to any given sequence of N integers obviously yields a single integer. 
+<br>For example, applying contractions 2, 3, 2 and 1 in that order to the sequence [12,10,4,3,5] yields 4, since : 
+<br><pre>con([12,10,4,3,5],2) = [12,6,3,5]
+<br>con([12,6,3,5]   ,3) = [12,6,-2]
+<br>con([12,6,-2]    ,2) = [12,8]
+<br>con([12,8]       ,1) = [4]</pre>
+<br>Given a sequence a1, a2, ..., aN and a target number T, the problem is to find a sequence of N-1 contractions that applied to the original sequence yields T. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains two integers separated by blank character : the integer N, 1 <= N <= 100, the number of integers in the original sequence, and the target integer T, -10000 <= T <= 10000. 
+<br>The following N lines contain the starting sequence : for each i, 1 <= i <= N, the (i+1)<sup>st</sup> line of the input file contains integer ai, 1 <= ai <= 100. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Output should contain N-1 lines, describing a sequence of contractions that transforms the original sequence into a single element sequence containing only number T. The ith line of the output file should contain a single integer denoting the i<sup>th</sup> contraction to be applied. 
+<br>You can assume that at least one such sequence of contractions will exist for a given input. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">5 4
+12
+10
+4
+3
+5
+</pre><p class="pst">Sample Output</p><pre class="sio">2
+3
+2
+1</pre><p class="pst">

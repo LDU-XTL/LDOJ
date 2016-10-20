@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">To improve the organization of his farm, Farmer John labels each of his N (1 <= N <= 5,000) cows with a distinct serial number in the range 1..20,000.  Unfortunately, he is unaware that the cows interpret some serial numbers as better than others.  In particular, a cow whose serial number has the highest prime factor enjoys the highest social standing among all the other cows.
+<br>
+<br>(Recall that a prime number is just a number that has no divisors except for 1 and itself.  The number 7 is prime while the number 6, being divisible by 2 and 3, is not).
+<br>
+<br>Given a set of N (1 <= N <= 5,000) serial numbers in the range 1..20,000, determine the one that has the largest prime factor.</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: A single integer, N
+<br>
+<br>* Lines 2..N+1: The serial numbers to be tested, one per line</div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: The integer with the largest prime factor.  If there are more than one, output the one that appears earliest in the input file.</div><p class="pst">Sample Input</p><pre class="sio">4
+36
+38
+40
+42</pre><p class="pst">Sample Output</p><pre class="sio">38</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">OUTPUT DETAILS:
+<br>19 is a prime factor of 38.  No other input number has a larger prime factor.</div><p class="pst">

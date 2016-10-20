@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">The soccer league ends today and you as director of a sports program at a well known sports channel are working on the season’s highlights.
+<br>
+<br>Your team did a great job interviewing each of the N players who participated in the league matches, additionally you have M game-plays (corner kicks, goals ... etc).
+<br>
+<br>You've a limited quota of time allocated to show your highlights tape on the sports news program and you want to make the best use of this time, Your media quality advisor told you that the most efficient way to cover the season’s activities is to compile a highlights tape such that no player’s interview is included in the highlights if he participated in a game-play that is also included in the highlights.
+<br>
+<br>To realize the advisor recommendations you've decided to use your old computer science skills and write down a program that calculates H the maximum number of highlights than can be put on a tape together while following the advisor's recommendation above.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains T &lt;= 50 the number of test cases, T test cases follow. Each test case starts with a line containing N (1 &lt;= N &lt;= 100) and M (0 &lt;= M &lt;= 100) the total number of players and the number of available game–plays respectively. M lines follow, each line describes a single game play and starts with an integer P (1 &lt;= P &lt;= N) the number of participating players followed by P space separated integers representing the players numbers. Players are number from 1 to N.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case print "Case t: " where t is the test case number starting from 1, followed by H described above.
+<br></div><p class="pst">Sample Input</p><pre class="sio">2
+2 2
+1 1
+2 1 2
+3 1
+3 1 2 3</pre><p class="pst">Sample Output</p><pre class="sio">Case 1: 2
+Case 2: 3</pre><p class="pst">

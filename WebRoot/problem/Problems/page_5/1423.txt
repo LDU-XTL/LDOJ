@@ -1,0 +1,4 @@
+</p><div class="ptx" lang="en-US">In many applications very large integers numbers are required. Some of these applications are using keys for secure transmission of data, encryption, etc. In this problem you are given a number, you have to determine the number of digits in the factorial of the number.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of several lines of integer numbers. The first line contains an integer n, which is the number of cases to be tested, followed by n lines, one integer 1 <= m <= 10^7 on each line.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output contains the number of digits in the factorial of the integers appearing in the input.</div><p class="pst">Sample Input</p><pre class="sio">2
+10
+20</pre><p class="pst">Sample Output</p><pre class="sio">7
+19</pre><p class="pst">

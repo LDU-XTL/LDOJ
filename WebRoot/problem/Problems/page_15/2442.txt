@@ -1,0 +1,5 @@
+</p><div class="ptx" lang="en-US">Given m sequences, each contains n non-negative integer. Now we may select one number from each sequence to form a sequence with m integers. It's clear that we may get n ^ m this kind of sequences. Then we can calculate the sum of numbers in each sequence, and get n ^ m values. What we need is the smallest n sums. Could you help us?</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line is an integer T, which shows the number of test cases, and then T test cases follow. The first line of each case contains two integers m, n (0 < m <= 100, 0 < n <= 2000). The following m lines indicate the m sequence respectively. No integer in the sequence is greater than 10000.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print a line with the smallest n sums in increasing order, which is separated by a space.</div><p class="pst">Sample Input</p><pre class="sio">1
+2 3
+1 2 3
+2 2 3
+</pre><p class="pst">Sample Output</p><pre class="sio">3 3 4</pre><p class="pst">

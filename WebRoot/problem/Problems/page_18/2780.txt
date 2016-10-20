@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Alice often examines star maps where stars are represented by points in a plane and there is a Cartesian coordinate for each star. Let the Linearity of a star map be the maximum number of stars in a straight line.
+<br><center><img src=images/2780_1.jpg></center>
+<br>For example, look at the star map shown on the figure above, the Linearity of this map is 3, because the star 1, star 2, and star 5 are within the same straight line, and there is no straight line that passes 4 stars.
+<br>
+<br>You are to write a program to find the Linearity of a star map.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input will contain multiple test cases. Each describes a star map.
+<br>
+<br>For each test case, the first line of the input contains the number of stars N (2 <= N <= 1000). The following N lines describe coordinates of stars (two integers X and Y per line separated by a space, 0 <= X, Y <= 1000). There can be only one star at one point of the plane.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Output the Linearity of the map in a single line.</div><p class="pst">Sample Input</p><pre class="sio">5
+0 0
+2 0
+0 2
+1 1
+2 2
+</pre><p class="pst">Sample Output</p><pre class="sio">3</pre><p class="pst">

@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">MegaFirm Inc. has created a set of patterns to aid its telephone help-desk operators in responding to customers. A pattern is a phrase consisting of words and placeholders. A word is simply a string of letters. A placeholder is a word enclosed in angle brackets (that is &lt; ... >). A phrase matches a pattern if each placeholder in the pattern can be systematically replaced by a word so as to make the pattern and phrase equal. By "systematically replaced" we mean that all placeholders enclosing the same word are replaced by the same word. 
+<br>For example, the phrase 
+<br>
+<br>   to be or not to be
+<br>
+<br>matches the pattern 
+<br>   &lt;foo> be &lt;bar> not &lt;foo> &lt;baf>
+<br>
+<br>because we can replace &lt;foo> by to, &lt;bar> by or, and &lt;baf> by be. 
+<br>Given two patterns, you are to find a phrase that matches both. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains n, the number of test cases. Each test case consists of two lines of input; each a pattern. Patterns consist of lowercase words, and placeholders containing lowercase words. No pattern exceeds 100 characters. Words contain at most 16 characters. A single space separates adjacent words and placeholders. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output a phrase that matches both patterns. If several phrases match, any will do. If no phrase matches, output a line containing "-" (a single minus sign).</div><p class="pst">Sample Input</p><pre class="sio">3
+how now brown &lt;animal>
+&lt;foo> now &lt;color> cow
+who are you
+&lt;a> &lt;b> &lt;a>
+&lt;a> b
+c &lt;a>
+</pre><p class="pst">Sample Output</p><pre class="sio">how now brown cow
+-
+c b
+</pre><p class="pst">

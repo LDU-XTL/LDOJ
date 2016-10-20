@@ -1,0 +1,42 @@
+</p><div class="ptx" lang="en-US">Having run into trouble with current online auctions and buyers that win auctions and then back out, you decide to open a new enterprise that has the bidders deposit funds before they may bid onany item. If they win an auction, the amount they bid is immediately (that second!) deducted from their account. (The problem of sellers that don't deliver the items will be left for another day.)
+<br>You must write a program to implement the rules of this auction. You will be auctioning off a number of items, each of which will have a reserve price that must be met. Each of your bidders will deposit funds with you, and you must match these funds with items they successfully bid for.You will write a program that tracks the auctions during a single day and outputs the results ofeach auction.
+<br><b>Auction Rules</b>
+<br>You are guaranteed:
+<br><ul><li>No two items will have the same end time.
+<br><li>No two bids will have the same bid time.
+<br><li>No price, bid, or account balance will be negative.</ul>
+<br>Bidder numbers and item numbers are unique within each category, but a bidder may have the same number as an item. Bidder and item numbers are not necessarily assigned sequentially.
+<br>An auction is won by the highest bid that:
+<br><ul><li>arrives no later than the second the auction ends.
+<br><li>is greater than or equal to the minimum price for the item
+<br><li>has at least the bid amount remaining in the bidder's account at the instant the auction ends.</ul>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">There are 3 sections in the data file, describing the items available for bid, the registered bidders,
+<br>and the bids made during the auction.
+<br><b>Items</b>
+<br><ul><li>A single line containing the number of items, i
+<br><li>i lines, one for each item of the form:
+<br>< item number > < minimum price > < auction end time >
+<br>Item number is a non-negative integer, minimum price is specified to the penny (0.01), and auction end time is in 24 hour format of the form XX:YY:ZZ where XX is in hours from 00 to 23, YY is in minutes from 00 to 59, and ZZ is in seconds from 00 to 59.</ul>
+<br><b>Bidders</b>
+<br><ul><li>A single line with the number of bidders registered, j
+<br><li>j lines of bidder data of the form:
+<br>< bidder number > < account balance >
+<br>Where bidder number is a non-negative integer and account balance is specified to the penny (0.01).</ul>
+<br><b>Bids</b>
+<br><ul><li>A single line with the number of bids received, k
+<br><li>k lines of bid data of the form:
+<br>< item # being bid on > < bidder number > < bid amount > < bid time >
+<br>where all fields are formatted as described above.</ul></div><p class="pst">Output</p><div class="ptx" lang="en-US">Output one line for each item being auctioned, in order of their auction finish time, listing
+<br>Item < item number > Bidder < bidder number > Price < winning bid >
+<br>If there is not a winning bid for an item, for that item output
+<br>Item < item number > Reserve not met.</div><p class="pst">Sample Input</p><pre class="sio">2
+1 5.00 05:06:27
+2 25.00 15:30:11
+2
+11 37.37
+22 55.55
+3
+1 11 60.00 04:03:01
+2 11 26.00 00:18:03
+2 22 27.00 09:03:05</pre><p class="pst">Sample Output</p><pre class="sio">Item 1 Reserve not met.
+Item 2 Bidder 22 Price 27.00</pre><p class="pst">

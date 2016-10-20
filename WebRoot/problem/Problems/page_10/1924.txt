@@ -1,0 +1,45 @@
+</p><div class="ptx" lang="en-US">We have arrived at the age of the Internet. Many software applications have transformed from stand-alone to online applications. Computer games are following this trend as well. Online games are becoming more and more popular, not only because they are more intelligent, but also because they can bring great profits. "The computer game industry is developing rapidly in China. Online game revenues amounted to 1.3 billion Yuan last year and are expected to reach 6.7 billion Yuan by 2007." reported by China Daily in 2004.
+<br>However, good games originate from good programmers. We take for example that there is a RPG (Role Playing Game) and your boss asks you to implement some tasks. For simplicity’s sake, we assume there are two kinds of roles in this game: one is player and the other is monster. You should help the player to achieve the goal: reach the place where treasure is positioned as early as possible and get the treasure. 
+<br>The map of the game is a matrix of N * M identical cells. Some cells are passable blocks, and others are non-passable rocks. At any time, there is at most one role occupying a block.
+<br>At the beginning, the time is set to 0, and the player is at a certain block. He then moves towards the treasure. At each turn, we have some rules:
+<br><ul><li>The player can stay in the same block during the next one-second time duration, or he can walk or run towards the east, south, west, north, northeast, northwest, southeast, and southwest.
+<br><li>With walking, the player can arrive at the corresponding passable blocks around him (See Fig.1).  Each move takes 1 second. 
+<br><li>With running, the player can arrive at the corresponding passable blocks 2 cells away from him (See Fig.2). Each run takes 1 second. As demonstrated in Fig.3, if a neighbor cell is not passable, the player cannot run in that direction. For example, if cell 2 is a rock, running from 1 to 3 is impossible. 
+<br><img src=images/1924_1.jpg>
+<br><li>The monsters are classified into aggressive and non-aggressive. If a monster occupies a cell, the player cannot move into that cell or run through that cell. In addition, the player cannot move into the cells surrounding an aggressive monster, because it will attack the player near it. For example, in Fig.4, if there is an aggressive monster in 5, then the cell 1, 2, 3, 4, 6, 7, 8 and 9 are in its attacking region, so the player cannot stay in or pass through these cells.
+<br><li>Monsters change their positions each turn. Each monster appears by its position sequence iteratively. That's to say, given the position sequence of monster i: (x1, y1), (x2, y2), ..., (xs, ys), its initial position is (x1, y1) at time 0, then it appears in (x2, y2) at time 1, and so on. When monster i arrives at (xs, ys) at time s-1, it will arrive in (x1, y1) at time s, and start to repeat.
+<br><li>At the start of each turn, all the monsters change their positions first (the way of changing is given above). If a monster appears in the player's cell, or if an aggressive monster appears near the player to put him in its attacking region, the player will die, and the goal cannot be achieved. After all the monsters change their positions, the player makes a move or stays in the same cell. In his move, the moving path should not be occupied by any rocks or monsters or in the attacking region of any aggressive monsters. When counting the total time, we can neglect the time between monsters' position change and the player's move.</ul>
+<br>Given the map of the game, the player's starting position, the treasure position and all the monsters' positions in every second, your task is to write a program to find the minimum time that the player gets the treasure.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several test cases. The first line of each case contains two integers N and M (1 <= N, M <= 100), where N is the height of the map and M is the width of the map. This is followed by N lines each containing M characters representing the map. A '#' represents a rock, a '.' is a free block,  'p' is the starting position of the player,  't' is the position of the treasure, 'n' is the initial position of a non-aggressive monster, and an 'a' stands for the initial position of an aggressive monster.
+<br>The cell (i, j) is the j-th cell on the i-th row counting from left to right. The rows are counted from 1 to N starting from the first line of the matrix. We can number all the monsters as 1, 2, 3… according to their initial position, sorting first by row, then by column.
+<br>The  (n+2)-th line contains an integer p (0 <= p <= 100), which is the total number of monsters (i.e. the total number of 'n's and 'a's in the matrix). It is followed by p lines each specifying a monster's position sequence in the following format: the i-th (1 <= i <= p) line corresponds to monster i, which begins with an integer s (1 <= s <= 100), meaning the length of position sequence. Then s pairs of integers x1, y1, x2, y2, …, xs, ys are followed, separated by blanks. Each pair is a free block in the map, (i.e. a monster never goes to a rock cell). 
+<br>It is assured that none of the aggressive monsters' initial position is around the player. Two consecutive cases are separated by a blank line. The input is terminated by a line containing a pair of zeros.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output the minimum total time required for the player to get the treasure, in seconds. If it's not possible to get the treasure, or the minimum required time is greater than 100 seconds, please print a line just containing the string "impossible". Two consecutive cases should be separated by a blank line.</div><p class="pst">Sample Input</p><pre class="sio">7 8
+#.#####.
+#.t#..p.
+#..#....
+..#a.#.#
+#...##.n
+.#......
+........
+2
+2 4 4 5 4
+3 5 8 6 8 5 7
+
+3 3
+p#.
+##.
+t..
+0
+
+2 2
+#t
+p#
+0
+
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">8
+
+impossible
+
+1
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">In the first sample case, the player can follow (2,7), (4,7), stay in (4,7), (6,7), (7,6), (7,4), (5,2), (3,2) and (2,3) to get the treasure with the minimum time (8 seconds). </div><p class="pst">

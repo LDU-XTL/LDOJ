@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">RSA is the best-known public key encryption algorithm. In this algorithm each participant has a private key that is shared with no one else and a public key which is published so everyone knows it. To send a secure message to this participant, you encrypt the message using the widely known public key; the participant then decrypts the messages using his or her private key. Here is the procedure of RSA:
+<br>
+<br>First, choose two different large prime numbers P and Q, and multiply them to get N (= P * Q). 
+<br>Second, select a positive integer E (0 < E < N) as the encryption key such that E and T= (P - 1) * (Q - 1) are relatively prime.
+<br>Third, compute the decryption key D such that 0 <= D < T and (E * D) mod T = 1. Here D is a multiplicative inverse of E, modulo T.
+<br>
+<br>Now the public key is constructed by the pair {E, N}, and the private key is {D, N}. P and Q can be discarded.
+<br>
+<br>Encryption is defined by C = (M ^ E) mod N, and decryption is defined by M = (C ^ D) mod N, here M, which is a non-negative integer and smaller than N, is the plaintext message and C is the resulting ciphertext.
+<br>
+<br>To illustrate this idea, let’s see the following example:
+<br>We choose P = 37, Q = 23, So N = P * Q = 851, and T = 792. If we choose E = 5, D will be 317 ((5 * 317) mod 792 = 1). So the public key is {5, 851}, and the private key is {317, 851}. For a given plaintext M = 7, we can get the ciphertext C = (7 ^ 5) mod 851 = 638.
+<br>
+<br>As we have known,for properly choosen very large P and Q, it will take thousands of years to break a key, but for small ones, it is another matter.
+<br>
+<br>Now you are given the ciphertext C and public key {E, N}, can you find the plaintext M?</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will contain several test cases. Each test case contains three positive integers C, E, N (0 < C < N, 0 < E < N, 0 < N < 2 ^ 62).</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output the plaintext M in a single line.</div><p class="pst">Sample Input</p><pre class="sio">638 5 851</pre><p class="pst">Sample Output</p><pre class="sio">7</pre><p class="pst">

@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">You have just completed Java Certification exam that contained n questions. You have a score card that explains your performance. The example of the scorecard is given below.
+<br><center>
+<br>You have correctly answered 78 questions out of 87.
+<br><table border="1"><tr><td>Basic Concepts</td><td>100%</td></tr><tr><td>Declarations</td><td>100%</td></tr><tr><td>Expressions</td><td>83%</td></tr><tr><td>Classes and Interfaces</td><td>92%</td></tr><tr><td>Multithreading</td><td>75%</td></tr><tr><td>Collections</td><td>93%</td></tr></table>
+<br></center>
+<br>From this scorecard you can infer that the questions are broken down into m categories (in the above example m = 6). Each category contains ni questions (1 &lt;= ni &lt;= n), so that <img src="formula?tex=%5Csum%5Climits_%7Bi+%3D+1%7D%5Em+%7Bn_i%7D" alt="\sum\limits_{i = 1}^m {n_i}" align="absmiddle">=n. You know that you have correctly answered k questions out of n (in the above example k = 78 and n = 87), so you can easily find the number of incorrect answers w = n - k (in the above example w = 9).
+<br>You do remember several questions that you were unsure about and you can guess what category they belong to. To figure out if your answers on those questions were right or wrong, you really want to know how many incorrect answers you have given in each category.
+<br>Let wi (0 &lt;= wi &lt;= ni) be the number of incorrect answers in i-th category, <img src="formula?tex=%5Csum%5Climits_%7Bi+%3D+1%7D%5Em+%7Bw_i%7D" alt="\sum\limits_{i = 1}^m {w_i}" align="absmiddle">=w. From the scorecard you know the percentage of correct answers in each category. That is, for each i from 1 to m you know the value of 100(ni - wi)/ni rounded to the nearest integer. The value with a fractional part of 0.5 is rounded to the nearest even integer.
+<br>It may not be possible to uniquely find the valid values for wi. However, you guess that the questions are broken down into categories in a mostly uniform manner. You have to find the valid values of wi and ni, so that to minimize the difference between the maximum value of ni and the minimum value of ni. If there are still multiple possible values for wi and ni, then find any of them.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains three integer numbers - k, n, and m, where k (0 &lt;= k &lt;= n) is the number of correctly answered questions, n (1 &lt;= n &lt;= 100) is the total number of questions, m (1 &lt;= m &lt;= 10) is the number of question categories. The following m lines of the input file contain one integer number from 0 to 100 (inclusive) on a line - percentages of the number of the correct answers in each category. The input file always corresponds to some valid set of wi and ni.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Write to the output file m lines with two integer numbers wi and ni on a line, separated by a space - the number of incorrect answers and the total number of questions in each category, satisfying constraints as given in the problem statement.</div><p class="pst">Sample Input</p><pre class="sio">78 87 6
+100
+100
+83
+92
+75
+93</pre><p class="pst">Sample Output</p><pre class="sio">0 13
+0 13
+3 18
+1 13
+4 16
+1 14</pre><p class="pst">

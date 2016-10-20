@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US">Airplanes fly close to the Great Circle Route between two cities. The Great Circle Route is the shortest arc concentric with the earth that joins the two cities; that is, the shortest distance between the two cities following the surface of the earth. 
+<br>Given the latitude and longitude of two cities, find the most northerly latitude reached on the Great Circle Route between the cities. Print "undefined" if there is no unique answer. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains N, the number of test cases. N lines follow, one for each case, containing the latitude and longitude of the two cities, in degrees, minutes, and direction. [A minute is 1/60 degree; Points on the equator have latitude denoted 0,0N (not 0,0S); points on the poles have longitude denoted 0,0W; points with 180 degrees longitude are denoted 180,0W (not 180,0E).] </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case your program should produce one line of output giving the most northerly latitude reached, in the given format. Round your answer to the nearest minute. </div><p class="pst">Sample Input</p><pre class="sio">3
+50,13N 45,10W 75,0N 44,50E
+50,13N 90,10W 75,0N 89,50E
+10,0N 129,30E 10,0S 50,30W
+</pre><p class="pst">Sample Output</p><pre class="sio">75,41N
+90,0N
+undefined
+</pre><p class="pst">

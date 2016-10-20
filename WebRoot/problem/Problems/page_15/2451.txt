@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">Prince Remmarguts solved the CHESS puzzle successfully. As an award, Uyuw planned to hold a concert in a huge piazza named after its great designer Ihsnayish.
+<br>
+<br>The piazza in UDF - United Delta of Freedom’s downtown was a square of [0, 10000] * [0, 10000]. Some basket chairs had been standing there for years, but in a terrible mess. Look at the following graph.
+<br><center><img src=images/2451_1.jpg></center>
+<br>In this case we have three chairs, and the audiences face the direction as what arrows have pointed out. The chairs were old-aged and too heavy to be moved. Princess Remmarguts told the piazza's current owner Mr. UW, to build a large stage inside it. The stage must be as large as possible, but he should also make sure the audience in every position of every chair would be able to see the stage without turning aside (that means the stage is in the forward direction of their own).
+<br>
+<br>To make it simple, the stage could be set highly enough to make sure even thousands of chairs were in front of you, as long as you were facing the stage, you would be able to see the singer / pianist – Uyuw.
+<br>
+<br>Being a mad idolater, can you tell them the maximal size of the stage?</div><p class="pst">Input</p><div class="ptx" lang="en-US">In the first line, there's a single non-negative integer N (N <= 20000), denoting the number of basket chairs. Each of the following lines contains four floating numbers x1, y1, x2, y2, which means there’s a basket chair on the line segment of (x1, y1) – (x2, y2), and facing to its LEFT (That a point (x, y) is at the LEFT side of this segment means that (x – x1) * (y – y2) – (x – x2) * (y – y1) >= 0).</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output a single floating number, rounded to 1 digit after the decimal point. This is the maximal area of the stage.</div><p class="pst">Sample Input</p><pre class="sio">3
+10000 10000 0 5000
+10000 5000 5000 10000
+0 5000 5000 0
+</pre><p class="pst">Sample Output</p><pre class="sio">54166666.7</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Sample input is the same as the graph above, while the correct solution for it is as below:
+<br><center><img src=images/2451_2.jpg></center>
+<br>I suggest that you use Extended in pascal and long double in C / C++ to avoid precision error. But the standard program only uses double.
+<br></div><p class="pst">

@@ -1,0 +1,42 @@
+</p><div class="ptx" lang="en-US">You are given a 7-by-7 board of holes. Some holes are filled with pegs, and some are not. You may jump a peg over an adjacent peg, as long as the hole the jumping peg lands in is unoccupied. The jumped peg is removed. Your goal is to leave the board with only one peg in it, and the peg must end up in the specified location.
+<br>The board is specified as a 7-by-7 array of characters, with the following meanings:
+<br>x : this hole may never be occupied by a peg
+<br>e : this hole is initially empty
+<br>o : this hole is initially occupied by a peg
+<br>E : this hole is initially empty, and the last peg should end here
+<br>O : this hole is initially occupied, and the last peg should end here
+<br>For example, consider the following board:
+<br>x x e e e x x
+<br>x x o e e x x
+<br>e e o e e e e
+<br>e e o O e e e
+<br>e e e e e e e
+<br>x x e e e x x
+<br>x x e e e x x
+<br>You can see that there are initially 4 pegs in the board, and the last peg should end up in the middle of the board.
+<br>The winning sequence of moves is:
+<br>1. (4, 4) to (2, 4)
+<br>2. (3, 2) to (3, 4)
+<br>3. (2, 4) to (4, 4)
+<br>Where coordinates are given as (x, y).</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input is the number of datasets to follow. Each dataset should be processed the same.
+<br>The input for each dataset consists of 7 lines; each line consists of 7 characters from the set {x, e, o, E, O} with blanks between them. You are guaranteed that exactly one 'E' or 'O' will appear, and that two or more 'o' or 'O' will appear.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each dataset, output a line containing the data set number. If a sequence of valid moves exists that leaves only one peg on the board, and leaves that peg in the desired location, print out the sequence of moves, as shown in the above example. If no sequence exists, print 揘o solution". Leave a blank line between datasets.</div><p class="pst">Sample Input</p><pre class="sio">2
+x x e e e x x
+x x o e e x x
+e e o e e e e
+e e o O e e e
+e e e e e e e
+x x e e e x x
+x x e e e x x
+x x e E e e e
+x e e e e e e
+e e e o o e e
+e e e x e e e
+e e e e e e e
+e e e e e e e
+e e e e e e e</pre><p class="pst">Sample Output</p><pre class="sio">Dataset 1:
+1. (4, 4) to (2, 4)
+2. (3, 2) to (3, 4)
+3. (2, 4) to (4, 4)
+
+Dataset 2:
+No solution.</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Search order:up,left,down,right</div><p class="pst">

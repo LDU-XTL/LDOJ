@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">Consider a pool table with a cue ball and a target ball. The cue ball must bounce off of a certain number of cushions (i.e. edges of the table), and then hit the target ball. What is the minimum distance that the cue ball has to travel?
+<br>
+<br><center><img src=images/3816_1.png></center>
+<br>
+<br>Assume ideal cushions (i.e., laws of reflection apply), and a negligible ball diameter. The coordinate system uses a corner of the table as the origin, and the edges of the table are aligned with the coordinate axes. If the cue ball hits in a corner, it is considered to be hitting two cushions. The cue ball must hit exactly the correct number of cushions first, before hitting the target the ball.</div><p class="pst">Input</p><div class="ptx" lang="en-US">There will be multiple test cases. Each case is on a single line containing seven integers:
+<br><p style="padding-left: 30px">
+<br>L W CX CY TX TY N
+<br></p>
+<br>The first two integers, L and W (2 ≤ L,W ≤ 100), are the dimensions of the table. The next two pairs of integers are the coordinates (X, Y) of the cue and target balls, such that 0 < CX,TX < L, and 0 < CY,TY < W, and (CX,CY) is not the same as (TX,TY). The last integer N, (0 ≤ N ≤ 100), is the number of cushions that must be hit. The test cases will be followed by a line with seven 0's.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print a single decimal number, rounded (NOT truncated) to 3 decimal places, representing the shortest distance the cue ball must travel. Print each answer on its own line, with no blank lines between answers.</div><p class="pst">Sample Input</p><pre class="sio">20 15 10 1 12 1 1
+10 20 1 2 7 16 2
+0 0 0 0 0 0 0</pre><p class="pst">Sample Output</p><pre class="sio">2.828
+19.698</pre><p class="pst">

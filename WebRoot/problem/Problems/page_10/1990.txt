@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">Every year, Farmer John's N (1 <= N <= 20,000) cows attend "MooFest",a social gathering of cows from around the world.  MooFest involves a variety of events including haybale stacking, fence jumping, pin the tail on the farmer, and of course, mooing.  When the cows all stand in line for a particular event, they moo so loudly that the roar is practically deafening.  After participating in this event year after year, some of the cows have in fact lost a bit of their hearing.
+<br>
+<br>Each cow i has an associated "hearing" threshold v(i) (in the range 1..20,000).  If a cow moos to cow i, she must use a volume of at least v(i) times the distance between the two cows in order to be heard by cow i.  If two cows i and j wish to converse, they must speak at a volume level equal to the distance between them times max(v(i),v(j)).
+<br>
+<br>Suppose each of the N cows is standing in a straight line (each cow at some unique x coordinate in the range 1..20,000), and every pair of cows is carrying on a conversation using the smallest possible volume.
+<br>
+<br>Compute the sum of all the volumes produced by all N(N-1)/2 pairs of mooing cows.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: A single integer, N
+<br>
+<br>* Lines 2..N+1: Two integers: the volume threshold and x coordinate for a cow.  Line 2 represents the first cow; line 3 represents the second cow; and so on.  No two cows will stand at the same location.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: A single line with a single integer that is the sum of all the volumes of  the conversing cows.
+<br></div><p class="pst">Sample Input</p><pre class="sio">4
+3 1
+2 5
+2 6
+4 3
+</pre><p class="pst">Sample Output</p><pre class="sio">57
+</pre><p class="pst">

@@ -1,0 +1,7 @@
+</p><div class="ptx" lang="en-US">Give you N integers a1, a2 ... aN (|ai| <=1000, 1 <= i <= N). 
+<br><center><img src=images/2593_1.jpg></center>
+<br>You should output S.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will consist of several test cases. For each test case, one integer N (2 <= N <= 100000) is given in the first line. Second line contains N integers. The input is terminated by a single line with N = 0.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test of the input, print a line containing S.</div><p class="pst">Sample Input</p><pre class="sio">5
+-5 9 -5 11 20
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">40</pre><p class="pst">

@@ -1,0 +1,42 @@
+</p><div class="ptx" lang="en-US">Technology hasn't come quickly to Joe's Bowl-a-rama.  Minimum wage teens, and not those fancy machines, still reset the pins, and the grizzled veteran bowlers still mark up their own score sheets. Unfortunately for Joe Junior, who now runs the Bowl-a-rama, people  his age are a little shaky on the scoring, especially after the second beer, and are staying away in droves, bowling instead at the new CyberBowl 2000 down the street, which scores automatically.  Joe Junior figures that if he puts a cheap PC next to every lane, he can get a cheap, semi-automatic scoring system going.  His plan is for the PC's to run software that only requires a bowler to enter the  number of pins that remain standing after every throw -- and the software will keep score and tell the bowler when his game is over.  Joe  Junior would like to hire you to write the software. 
+<br>Of course, since you may not know how to score a game of bowling either, Joe Junior has provided a description of the rules.  The basic game consists of ten frames.  In a frame, you get two chances to throw a ball down the alley and knock over as many pins as you can.   There are ten pins standing at the beginning of a frame, and none are replaced after getting knocked over on the first ball, so the most pins you can knock over in a frame is ten.  You get one point for each pin knocked over.  In addition, there are two bonuses you can  earn. If you knock over all ten pins on your first ball of the frame, you have scored a ``strike''; besides the ten points for the pins, your score in this frame is increased by the total number of pins knocked down with your next two balls.  Those next two balls are usually part of another frame (or two) and score points in that frame (or those frames) as well.  If you knock over all ten pins in a frame, but it takes you two balls to do it, you have scored a ``spare''; in addition to your ten points for pins knocked down, your score for the frame is increased by the number of pins you knock down on your next ball.  Of course, those pins also count as part of the next frame.  If you  score a spare (or strike) in the final (tenth) frame, you are entitled to one (or two) extra balls to determine your tenth frame bonus.  A perfect game scores 300 points, because each frame scores 30, 10 for knocking down 10 pins, and 20 for knocking down 20 pins with the next two balls combined. 
+<br>
+<br>Now, are you ready to sign on to write the software? 
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contains several complete or partial games.  A game is described by a single line with a single name, not to exceed 12 characters, and sequence of numbers, one for each ball thrown indicating the number of pins still standing after that throw,ended with -1. According  to the rules, there are from 11 to 21 throws in a game; no input line will show throws beyond the last throw of the game.  The number of games described in a file is not predetermined, so you'll have to detect the end of the input file. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The standard output will contain, on successful completion of the program, two output lines for each input line.  The first output line contains the name of the bowler and a record of the throws in each frame.  This record shows, for each frame, the number of pins knocked down for each throw as a digit, with some exceptions.  For a throw that knocks down no pins, a dash (\verb$-$) is used instead of a `0'. An 'X' indicates a throw that knocks down all 10 pins on the first try.  A slash ('/') indicates a throw that finishes knocking down all the pins, after the previous throw left some standing.  Otherwise, a throw is shown as a digit (`1' to `9').  The number of throws in a frame may be one (a strike in frames 1 to 9), or three (a strike or spare in frame 10, followed by bonus balls), but is usually two.  Here are examples of throw markings for a variety of situations: 
+<br><table BORDER WIDTH="100%" NOSAVE><tr NOSAVE><td NOSAVE>Marking</td><td>Comment</td></tr><tr><td>81</td>
+<br><td>Knocked down 8 balls on the first throw, one on the next</td></tr><tr><td>7/</td><td>Knocked down 7 balls on the first throw, then the rest</td></tr><tr><td>X</td><td>Knocked down all balls on the first throw</td></tr><tr><td>9-</td><td>Knocked  down 9 balls on the first throw, none on the next</td></tr><tr><td>8/X</td><td>Knocked down 8 balls on the first throw of  frame 10, then the rest,then all the pins on the bonus throw</td></tr><tr><td>X-/</td><td>Knocked down ten balls on the first  throw of frame 10, then missed&nbsp;all the pins on the first bonus throw and knocked them all down on thesecond bonus throw</td></tr></table>
+<br>The second output line shows cumulative scores.  The cumulative score for the first frame is just the score for pins knocked down in frame, plus bonus points if they apply.  The cumulative score for any other frame is the cumulative score for the previous frame plus the score for pins knocked down in that frame, plus the bonus pins that may have been earned for a strike or spare in this frame.  It is possible to have markings on line one for a frame, but no score on line two, in the event that the frame is a strike or spare but the bonus points for the frame aren't yet known. 
+<br>
+<br>The format for this output requires that the bowler's name be left-justified.  The fields for each frame are three characters wide, with a space separating each field.  The fields begin in columns 14, 18, 22, and so on.  The record of the throws in the first line is left justified in its field.  The cumulative score is right justified in its field.  There is a blank line that separates the scores of one bowler from the scores of another. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">Chuck 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 -1
+Solly 0 0 0 0 0 0 0 0 0 0 0 8 -1
+Lothar 10 0 10 0 10 0 -1
+Brutus 5 1 2 0 6 0 9 -1
+McGillicuddy 0 0 1 0 -1
+Homer 0 10 0 0 0 0 -1
+Barney 0 0 0 0 0 0 0 0 0 0 1 0 -1</pre><p class="pst">Sample Output</p><pre class="sio">The line of digits is intended to guide you in proper output alignment, and is not part of the output that your solution should produce. 
+  
+1234567890123456789012345678901234567890123456789012 
+Chuck        9/  9/  9/  9/  9/  9/  9/  9/  9/  9/9 
+              19  38  57  76  95 114 133 152 171 190 
+
+Solly        X   X   X   X   X   X   X   X   X   XX2 
+              30  60  90 120 150 180 210 240 270 292 
+
+Lothar       -/  -/  -/ 
+              10  20 
+
+Brutus       54  8/  4/  1 
+               9  23  34 
+
+McGillicuddy X   X   9/ 
+              29  49 
+
+Homer        X   -/  X   X   X 
+              20  40  70 
+
+Barney       X   X   X   X   X   X   X   X   X   X9/ 
+              30  60  90 120 150 180 210 240 269 289 
+</pre><p class="pst">

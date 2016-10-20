@@ -1,0 +1,27 @@
+</p><div class="ptx" lang="en-US"><p>A zoology research lab has a terrarium with rare species of snakes. Terrarium is a flat box filled with soil, and has a glass top allowing to watch the snakes. There are trenches in the soil, and snakes constantly move along the trenches. All snakes have diameter of 1 cm and integer length of no less than 2 cm.</p><p>While watching the snakes, the zoologists discovered a pattern in their movement: each snake moves at a speed of 1 cm per second forward, until it encounters either a wall or another snake. Faced an obstacle, snake first tries to turn right, if there is also obstacle on the right, then it tries to turn left. If there is obstacle on the left also, the snake waits for a second before trying to move again.</p><p>In order to validate the discovery, it was decided to write a program that simulates snakes' behaviour. This task was assigned to you.</p><p>The terrarium is represented by an array of <i>N</i> × <i>N</i> characters. Each character is one of:</p><p><ul><li>'.' (ASCII 46) — trench<li>'#' (ASCII 35) — wall</li><li>'A' to 'Z' — snake's head</li><li>'a' to 'z' — snake's body or tip of the tail</li></ul></p><p>Snakes are represented by Latin letters, so there are no more than 26 snakes in terrarium. Snakes try to move in alphabetical order every second.</p><p>Your program must output the state of the terrarium after <i>T</i> seconds.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>First line of input file contains integers <i>N</i> <i>T</i>. Following <i>N</i> lines contain <i>N</i> characters each — the initial state of the terrarium. The input file guarantees unambiguous recognition of snakes — all snakes are continuous, every character of snake's body has exactly two neighbour characters belonging to the same snake, while head and tip of the tail have exactly one.</p><p><b>Constraints</b></p><p>2 ≤ <i>N</i> ≤ 1000, 1 ≤ <i>T</i> ≤ 10<sup>6</sup>.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output file must contain <i>N</i> lines of <i>N</i> characters — the state of the terrarium after <i>T</i> seconds.<br>　</p></div><p class="pst">Sample Input</p><pre class="sio"><b>Sample input 1</b>
+4 8
+.bB.
+....
+a.#.
+aaA.
+<b>Sample input 2</b>
+7 100000
+aA.....
+a#####D
+aa....d
+......d
+......d
+......d
+.......</pre><p class="pst">Sample Output</p><pre class="sio"><b>Sample output 1</b>
+.baa
+.BAa
+..#.
+....
+<b>Sample output 2</b>
+aaaaADd
+.#####d
+......d
+......d
+.......
+.......
+.......</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Bold texts appearing in the sample sections are informative and do not form part of the actual data.</div><p class="pst">

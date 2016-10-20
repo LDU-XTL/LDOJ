@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US"><p>Linear cellular automaton is an infinite sequence of cells, each holding either 0 or 1. Cells are indexed with integers, extending from some chosen &quot;zero&quot; cell in both positive and negative directions.</p><p>In the initial (first) state all except the finite number of cells contain 0. Next state is computed from previous one by a simple rule: new cell value is 1 if the cell had exactly one neighbour with value 1, otherwise 0.</p><p>Although computing states is easy and fast, researchers are often interested in states after very many steps. Because these states may occupy large amount of memory, only parts of them are usually printed.</p><p>Your program must, given the initial state, quickly find values for S-th state for cells with indexes <i>F</i>, <i>F</i> + 1, …, <i>F</i> + <i>L</i> &#8722; 1.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input file contains number of non-zero cells in the initial state <i>N</i>, followed by their indexes <i>i</i><sub>1</sub> <i>i</i><sub>2 </sub>...<i> i<sub>N</sub></i>, and then integers <i>S</i> <i>F</i> <i>L</i>. All indexes are different.</p><h4>Constraints</h4><p>1 ≤ <i>S</i> ≤ 10<sup>9</sup>, &#8722;10<sup>9</sup> ≤ <i>F</i> ≤ 10<sup>9</sup>, 1 ≤ <i>L</i>, <i>N</i> ≤ 2000, &#8722;1000 ≤ <i>i<sub>k</sub></i> ≤ 1000 </p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output file must contain <i>L</i> values, each of them either 0 or 1.</p></div><p class="pst">Sample Input</p><pre class="sio"><b>Sample Input 1</b>
+2
+1 2
+7 -5 5
+<b>Sample Input 2</b>
+1
+0
+1 -4 8</pre><p class="pst">Sample Output</p><pre class="sio"><b>Sample Output 1</b>
+1 1 0 0 1
+<b>Sample Output 2</b>
+0 0 0 0 1 0 0 0</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Bold texts appearing in the sample sections are informative and do not form part of the actual data.</div><p class="pst">

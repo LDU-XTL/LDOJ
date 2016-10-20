@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">Linda is a teacher in ACM kindergarten. She is in charge of n kids. Because the dinning hall is a little bit far away from the classroom, those n kids have to walk in line to the dinning hall every day. When they are walking in line, if and only if two kids can see each other, they will talk to each other. Two kids can see each other if and only if all kids between them are shorter then both of them, or there are no kids between them. Kids do not only look forward, they may look back and talk to kids behind them. Linda don’t want them to talk too much (for it’s not safe), but she also don’t want them to be too quiet(for it’s boring), so Linda decides that she must form a line in which there are exactly m pairs of kids who can see each other. Linda wants to know, in how many different ways can she form such a line. Can you help her?
+<br>
+<br>Note: All kids are different in height.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of multiple test cases. Each test case is one line containing two integers. The first integer is n, and the second one is m. (0 &lt; n &lt;= 80, 0 &lt;= m &lt;= 10000).
+<br>Input ends by a line containing two zeros.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output one line containing the reminder of the number of ways divided by 9937.
+<br></div><p class="pst">Sample Input</p><pre class="sio">1 0
+2 0
+3 2
+0 0</pre><p class="pst">Sample Output</p><pre class="sio">1
+0
+4</pre><p class="pst">

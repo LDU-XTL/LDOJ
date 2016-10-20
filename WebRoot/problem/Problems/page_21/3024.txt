@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">A common amusement in almost any society, though certainly not the most glamorous one, is for its inhabitants to spread rumours about each other. In the town of Knoxville, this is definitely known to be the case. In order to establish some sort of order without completely ruin the pleasure of gossiping,  they have agreed on a system for everyday life activities, in which rumours spread in a controlled fashion. The inhabitants meet in certain groups in their work, as well as in their spare time, on a daily basis. The following three criteria are met for their system:<ul><li>Each group must have the same non-zero number of members m. <li>Each person must belong to the same number of groups r, as any other person. <li>Each pair of different groups has exactly one member in common. </ul>We say that a (n,g,m,r)-gossiping system is such a system consisting of n persons divided into g groups, with m and r as above. The beauty of these systems lies in their uniformity. The construction seems fair to everyone, and still all meetings are held in small groups. Since any two groups have a member in common, information about the activities and people in one group is swiftly transferred to all the other groups. Furthermore, it is easy for a messenger to lie if he or she would like to, since the truth is hard to validate due to the fact that no two persons share more than one group. Unfortunately, there are several combinations of n, g, and m for which these systems do not exist!
+<br>
+<br>As a mathematician living in Knoxville, you are interested in studying the existence conditions for these systems for large values of n. However, you soon realise the complexity of these combinatorial objects, and choose to study only their simplest non-trivial class, the (n,g,m,2)-gossiping systems.</div><p class="pst">Input</p><div class="ptx" lang="en-US">On the first line of input, is a single positive integer t. Thereafter t test cases follow. Each test case consists of one positive number n, 1 <= n <= 10<sup>50</sup>,  given in the standard base 10 representation, where n specifies the number of persons.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case in the input, output the text 'Yes.' on a line of its own, if there exists a (n,g,m,2)-gossiping system for any positive integers g>1 and m>0  for the value of n in the test case, otherwise output the text 'No.'</div><p class="pst">Sample Input</p><pre class="sio">5
+3
+4
+5
+6
+678678658335615
+</pre><p class="pst">Sample Output</p><pre class="sio">Yes.
+No.
+No.
+Yes.
+Yes.</pre><p class="pst">

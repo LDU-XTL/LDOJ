@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US"><p>The new founded Balkan Investment Group Bank (BIG-Bank) opened a new office in Bucharest, equipped with a modern computing environment provided by IBM Romania, and using modern information technologies. As usual, each client of the bank is identified by a positive integer <i>K</i> and, upon arriving to the bank for some services, he or she receives a positive integer priority <i>P</i>. One of the inventions of the young managers of the bank shocked the software engineer of the serving system. They proposed to break the tradition by sometimes calling the serving desk with the <b>lowest</b> priority instead of that with the highest priority. Thus, the system will receive the following types of request:</p><table style="border-collapse: collapse;" border="1" bordercolor="#000000"><tr><td>0</td><td>The system needs to stop serving</td></tr><tr><td>1 <i>K</i> <i>P</i></td><td>Add client <i>K</i> to the waiting list with priority <i>P</i></td></tr><tr><td>2</td><td>Serve the client with the highest priority and drop him or her from the waiting list</td></tr><tr><td>3</td><td>Serve the client with the lowest priority and drop him or her from the waiting list</td></tr></table><p>Your task is to help the software engineer of the bank by writing a program to implement the requested serving policy.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Each line of the input contains one of the possible requests; only the last line contains the stop-request (code 0). You may assume that when there is a request to include a new client in the list (code 1), there is no other request in the list of the same client or with the same priority. An identifier <i>K</i> is always less than 10<sup>6</sup>, and a priority <i>P</i> is less than 10<sup>7</sup>. The client may arrive for being served multiple times, and each time may obtain a different priority.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each request with code 2 or 3, the program has to print, in a separate line of the standard output, the identifier of the served client. If the request arrives when the waiting list is empty, then the program prints zero (0) to the output.</p></div><p class="pst">Sample Input</p><pre class="sio">2
+1 20 14
+1 30 3
+2
+1 10 99
+3
+2
+2
+0</pre><p class="pst">Sample Output</p><pre class="sio">0
+20
+30
+10
+0</pre><p class="pst">

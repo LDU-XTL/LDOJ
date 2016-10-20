@@ -1,0 +1,5 @@
+</p><div class="ptx" lang="en-US"><p>There are <i>M</i> circles (0 &le; <i>M</i> &le; 100) on a plane. Some circles can have zero radius. The task is to calculate the area of minimum convex domain containing all the circles.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input contains the description of one test including:<br><ul><li>a line with value <i>M</i>;</li><li><i>M</i> lines; every line contains coordinates of the center and the radius for one circle. These are real numbers separated by spaces.</li></ul></p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>The output contains a single line with the result given with accuracy 10<sup>-4</sup>.</p></div><p class="pst">Sample Input</p><pre class="sio">4
+0 0 1
+0 4 1
+4 4 1
+4 0 1</pre><p class="pst">Sample Output</p><pre class="sio">35.1416</pre><p class="pst">

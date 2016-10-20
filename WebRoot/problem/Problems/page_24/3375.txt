@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US"><p>There are <i>M</i> network interfaces in the wall of aisle of library. And <i>N</i> computers next to the wall need to be connected to the network. A network interface can only connect with one computer at most. To connect an interface with coordinate <i>x</i> with a computer with coordinate <i>y</i> needs |<i>x </i>-<i> y</i>| unit of length of network cable. Your task is to minimize the total length of network cables to be used.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line contains two integers <i>M </i>(1 &le; <i>M</i> &le; 100000), <i>N</i> (1 &le; <i>N</i> &le; 2000, <i>N</i> &le; <i>M</i>). The following <i>M </i>+<i> N</i> lines each contains a integer coordinate. The first <i>M</i> coordinates are corresponding to the network interfaces, and the next <i>N</i> ones corresponding to the computers. All coordinates are arranged in [0, 1000000]. Distinct interfaces may have the same coordinate, so do the computers.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Print an integer, representing minimum length of network cables to be used.</p></div><p class="pst">Sample Input</p><pre class="sio">4 2
+1
+10
+12
+20
+11
+15
+</pre><p class="pst">Sample Output</p><pre class="sio">4</pre><p class="pst">

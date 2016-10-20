@@ -1,0 +1,6 @@
+</p><div class="ptx" lang="en-US">n participants of << crazy tea party >> sit around the table. Each minute one pair of neighbors can change their places. Find the minimum time (in minutes) required for all participants to sit in reverse order (so that left neighbors would become right, and right - left).</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line is the amount of tests. Each next line contains one integer n (1 <= n <= 32767) - the amount of crazy tea participants.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each number n of participants to crazy tea party print on the standard output, on a separate line, the minimum time required for all participants to sit in reverse order.</div><p class="pst">Sample Input</p><pre class="sio">3
+4
+5
+6</pre><p class="pst">Sample Output</p><pre class="sio">2
+4
+6</pre><p class="pst">

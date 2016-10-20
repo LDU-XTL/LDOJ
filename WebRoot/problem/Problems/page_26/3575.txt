@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US"><p>The Kingdom of Qari was conquered, and now <i>n</i> other Kingdoms are dividing its territory among themselves. However, each Kingdom has its own opinion on which parts of Qari’s land are better. For example, Napaj might want a large open space for settlement while Acirema is only interested in rich oilfields.</p><p>To formalize their claims each Kingdom has indicated an area that it considers worthy. An area indicated by each Kingdom is a union of non-overlapping circles. A Kingdom is content with Qari’s partitioning if it receives at least 1⁄<i>n</i> of the area it has indicated as worthy.</p><p>Your task is to propose a partitioning that satisfies all <i>n</i> Kingdoms. In your partitioning an area given to each Kingdom must be a convex polygon with at most 1000 vertices. In this problem it is always possible to find such partitioning.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of the input file contains an integer number <i>n</i> (1 ≤ <i>n</i> ≤ 30) — the number of Kingdoms that are dividing Qari. Then follow n sections describing the areas that were indicated by each Kingdom as worthy.</p><p>The first line of each section contains an integer number <i>m<sub>i</sub></i> (1 ≤ <i>m<sub>i</sub></i> ≤ 30) — the number of circles indicated by <i>i</i>-th Kingdom. It is followed by <i>m<sub>i</sub></i> lines describing circles, one circle per line. A circle is described by three integer numbers <i>x</i>, <i>y</i>, and <i>r</i> (−1000 ≤ <i>x</i>, <i>y</i> ≤ 1000; 1 ≤ <i>r</i> ≤ 1000) — the coordinates of its center and its radius correspondingly. Circles in one section do not intersect, but may touch each other.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Write to the output file descriptions of <i>n</i> non-intersecting convex polygons — one for each Kingdom in the same order as in the input file. Polygons may touch each other (see sample output).</p><p>Each description shall start with a line that contains a single integer number <i>k<sub>i</sub></i> (3 ≤ <i>k<sub>i</sub></i> ≤ 1000) — the number of vertices in the polygon, followed by <i>k<sub>i</sub></i> lines with <i>x</i> and <i>y</i> coordinates of the vertices (−3000 ≤ <i>x</i>, <i>y</i> ≤ 3000). Coordinates must be precise up to 7 digits after decimal point. The vertices must be listed in either clockwise or counterclockwise direction. No three consecutive vertices are allowed to lie on the same straight line.</p></div><p class="pst">Sample Input</p><pre class="sio">3
+2
+0 0 2
+7 0 2
+1
+4 0 2
+1
+4 0 2</pre><p class="pst">Sample Output</p><pre class="sio">4
+2.0 2.0
+-2.0 2.0
+-2.0 -2.0
+2.0 -2.0
+4
+2.0 0.0
+6.0 0.0
+6.0 2.0
+2.0 2.0
+4
+2.0 0.0
+6.0 0.0
+6.0 -2.0
+2.0 -2.0</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><div align="center"><img src="images/3575_1.png"></div><p>On the example picture above, the first Kingdom has indicated as worthy a union of circles 1′ and 1″. The second and the third Kingdoms have both indicated the circle marked with 2 and 3 as worthy. One of the possible partitionings is pictured with dashed lines — the first Kingdom will receive a square area around circle 1′ while the second and the third Kingdoms will receive rectangles 2 and 3, thus getting an equal share of their indicated area. With this partitioning each Kingdom gets half of the area it has indicated as worthy, which is more than one third required by the problem statement.</p></div><p class="pst">

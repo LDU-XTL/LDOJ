@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">In the Franconian Switzerland, there is a narrow mountain road. With only a single lane, this is a bottleneck for two-way traffic. Your job is to schedule incoming cars at both ends so that the last car leaves the road as early as possible.
+<br>Each car is specified by three values: the direction in which it is going, the arrival time at the corresponding beginning of the road, and the driving time this car needs to get through, provided it is not slowed down by other cars in front. Cars cannot overtake each other on the mountain road, and reordering cars in the queues at the ends of the road is not allowed.
+<br>For safety reasons, two successive cars going in the same direction may not pass any point of the road within less than 10 seconds. This ensures that the second car will not crash into the first car if the latter brakes hard. However, if another car passes in the other direction in between, it will be clear that the road is empty, so in this case, this rule does not apply.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input consists of a single integer c (1 <= c <= 200), the number of test cases.
+<br>Then follow the test cases, each beginning with a single line consisting of an integer n (1 <= n <= 200), the number of cars you are to consider in this test case. The remainder of each test case consists of n lines, one line per car, starting with a single upper case letter ("A" or "B"), giving the direction in which the car is going. Then follow, on the same line, two integers t (0 <= t <= 100 000) and d (1 <= d <= 100 000), giving the arrival time at the beginning of the road and the minimum travel time, respectively, both in seconds.
+<br>Within a test case, the cars are given in order of increasing arrival time, and no two cars will arrive at the same time.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print a single line consisting of the point in time (in seconds) the last car leaves the road when the cars are scheduled optimally.</div><p class="pst">Sample Input</p><pre class="sio">2
+4
+A 0 60
+B 19 10
+B 80 20
+A 85 100
+4
+A 0 100
+B 50 100
+A 100 1
+A 170 100</pre><p class="pst">Sample Output</p><pre class="sio">200
+270</pre><p class="pst">

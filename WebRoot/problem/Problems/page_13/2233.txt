@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US">Alice and Bob often play games together, and they always like to play new games. Now they have thought out a new game named "ESCAPE". What is the game like? This new game is played on an undirected graph, which they draw before the game, and they play game in turn. Each turn a player can choose a vertex, which is adjacent to the last vertex chosen by his opponent (in the first turn, the player can choose any vertex) and not be chosen before. The player who does not have vertex to choose loses. Suppose that Alice always plays first and they both do their best in the game. Now given the graph, can you predict who will win the game?</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains a single integer T, which is the number of test cases. Then T cases follow. Each test case contains multiple lines. The first line consists of two integers N (1 <= N <= 50) and M, which indicate the number of vertices and the number of edges. In the following M line, each contains a pair of integers a and b (1 <= a, b <= N), which means that there is an edge between a and b.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, in a single line, output "alice", if Alice will win the game, "bob", if Bob will win, otherwise output "I don't know".</div><p class="pst">Sample Input</p><pre class="sio">2
+2 1
+1 2
+3 2
+1 2
+2 3
+</pre><p class="pst">Sample Output</p><pre class="sio">bob
+alice
+</pre><p class="pst">

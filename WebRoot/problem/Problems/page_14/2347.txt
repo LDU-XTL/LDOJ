@@ -1,0 +1,44 @@
+</p><div class="ptx" lang="en-US">Given 2 equations on the variables x and y, solve for x and y. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains N, the number of test cases. Each test case consists of two equations, each on a separate line. An empty line separates cases. An equation consists of two or more terms separated by addition, subtraction, or equality operators. A term is an integer, or a variable name (x or y) optionally preceded by a minus sign or an integer coefficient. There is exactly one equality operator. All operators are surrounded by spaces, and there are no spaces within terms.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case, print two lines, giving the values of x and y as rationals in simplest terms. If x or y has no unique rational value such that both equations hold, print "don't know" for its value. Print an empty line between cases. </div><p class="pst">Sample Input</p><pre class="sio">7
+2x + 3y = x
+5 = x + y + 3
+
+2x + 3y = 0
+10x = -15y
+
+2x + 3y = 0
+10x = -15y + 1
+
+x = 1
+3x = 6y
+
+2x = 3x + -x + y
+x + y = x + y
+
+2x = -3
+-2y = 3
+
+1 = 2
+x = 3
+
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+-1
+
+don't know
+don't know
+
+don't know
+don't know
+
+1
+1/2
+
+don't know
+0
+
+-3/2
+-3/2
+
+don't know
+don't know
+
+</pre><p class="pst">

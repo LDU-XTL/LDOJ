@@ -1,0 +1,29 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>A card game, often called &ldquo;Fool&rsquo;s Game&rdquo;, is quite popular in Russia. We will describe a game for two players. A standard deck of 36 cards is used. One suit is declared to be a <i>trump</i>.</p><p>A game consists of rounds. Before the round each player has several cards, one of the players is <i>starting</i>, the other one is <i>covering</i>. The starting player starts by laying one or several cards of the same rank down on the table. The number of cards must not exceed the number of cards the covering player has. The covering player must in turn <i>cover</i> all the cards with some of her cards, laying them on the table above the uncovered cards. A card can cover another if one of the following is true:</p><ul><li>it has the same suit and higher rank (ranks are ordered as usually: 6, 7, 8, 9, 10, J, Q, K, A);</li><li>it is a trump and the card to cover is not a trump (a trump can only be covered by a higher trump).</li></ul><p>After the cards on the table are all covered, the starting player can toss some more cards to be covered. The rank of each card tossed must be among the ranks of the cards already on the table at the moment. Now the newly added cards must be covered by the covering player, after that the starting player can toss more cards, and so on. The starting player cannot toss more cards than the covering player has at the moment. The round ends when either the covering player cannot or does not want to cover all uncovered cards on the table, or when the starting player cannot or does not want to toss more cards. In the first case, when the covering player declares that she does not want to cover all uncovered cards on the table, the starting player is given a chance to toss in more cards. The ranks of the cards tossed must be among the ranks of the cards already on the table. The number of uncovered cards on the table cannot exceed the number of cards that the covering player has at the moment. After that, the covering player loses the round and takes all the cards from the table, adding them to her cards. Starting player keeps her starting role and moves again in the next round.</p><p>In the second case, when all cards on the table are covered and the starting player cannot or does not want to toss more cards, the covering player wins the round and the cards on the table are removed from the game. The players&rsquo; roles for the next round are swapped: the covering player becomes the starting one and vice versa.</p><p>If, after the end of the round, one of the players has no cards, and the other one has one or more cards, then the player with no cards wins the game. If both players have no cards, then the player who was starting in the last round wins the game.</p><p>Given the trump suit and the cards the players initially have, find out who wins the game if both play optimally. Both players have full information about cards in the game.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The first line of the input file contains <i>n</i><sub>1</sub> and <i>n</i><sub>2</sub> &mdash; the number of cards that each of the players has in the beginning of the round (1 &le; <i>n</i><sub>1</sub>, <i>n</i><sub>2</sub> &le; 6), and the trump suit (suit is specified using one letter: &lsquo;<code>S</code>&rsquo; for spades, &lsquo;<code>C</code>&rsquo; for clubs, &lsquo;<code>D</code>&rsquo; for diamonds, &lsquo;<code>H</code>&rsquo; for hearts).</p><p>The second line contains <i>n</i><code>1</code> card descriptions &mdash; the cards of the first player. Each card is specified by its rank (&lsquo;<code>6</code>&rsquo;&hellip;&lsquo;<code>9</code>&rsquo;, &lsquo;<code>T</code>&rsquo; for 10, &lsquo;<code>J</code>&rsquo; for Jack, &lsquo;<code>Q</code>&rsquo; for Queen, &lsquo;<code>K</code>&rsquo; for King, &lsquo;<code>A</code>&rsquo; for Ace) followed by its suit. The third line contains <i>n</i><sub>2</sub> card descriptions &mdash; the cards of the covering player. The first player is the starting player in the first round.</p><p>All cards in players&rsquo; hands are different.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>Output &ldquo;<code>FIRST</code>&rdquo; if the first player wins the game, or &ldquo;<code>SECOND</code>&rdquo; if the second player does.</p></span></div><p class="pst">Sample Input</p><pre class="sio"><b>sample input #1</b>
+2 2 S
+KC AD
+6S 7S
+
+<b>sample input #2</b>
+2 2 D
+KC AD
+6S 7S
+
+<b>sample input #3</b>
+4 5 C
+AS 6S 7S 8S
+9S TS JS QS KS
+
+<b>sample input #4</b>
+3 2 C
+6H JS JD
+AD 6C</pre><p class="pst">Sample Output</p><pre class="sio"><b>sample output #1</b>
+SECOND
+
+<b>sample output #2</b>
+FIRST
+
+<b>sample output #3</b>
+SECOND
+
+<b>sample output #4</b>
+FIRST</pre><p class="pst">

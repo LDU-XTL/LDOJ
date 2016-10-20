@@ -1,0 +1,19 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>At the Institution for Bits and Bytes at University of Ramville, Prof. Jeremy Longword and his eight graduate students are investigating a brand new way of storing and manipulating data on magnetic disks for use in hard drives. The method is based on letting quasimagnetic quantum operations operate on the sectors on the disk, and is, of course, safer andmore reliable than any earlier invented storage method. The use of each quantum operation costs a certain amount of energy, and the more energy the storage unit consumes, the warmer it will get. Therefore, you and your research team, are assigned the task of writing a program that, given sets of possible quantum operations and their costs, can calculate the lowest possible total cost for transforming a set of data to the wanted result.</p><p>On the disk, binary words of length 1 &le; <i>L</i> &le; 20 are treated. The quantum operations are defined by strings of the same length as the binary words, and are built from the four letters <tt>N</tt> (does nothing), <tt>F</tt> (inverts one bit), <tt>S</tt> (sets a bit to 1), and <tt>C</tt> (resets a bit to 0). Each letter in the string corresponds to an operation on the bit in the binary word at the same position. The binary words are transformed one by one and the total energy cost for the transformation is calculated as the sum of the costs for the performed quantum operations.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input starts with a single positive integer <i>N</i> &le; 20 on a row, deciding the number of test cases that will follow. Then, for each of the test cases:</p><ul><li>One line containing three integers: <i>L</i>, <i>n<sub>op</sub></i> and <i>n<sub>w</sub></i> separated by one space.</li><li><i>L</i> indicates the length of the binary words and the quantum operations.</li><li><i>n<sub>op</sub></i> (&le; 32) is the number of quantum operations that are available for use when transforming the binary words.</li><li><i>n<sub>w</sub></i> (&le; 20) is the number of binary words that are to be transformed in the current test case. </li></ul><p>After this, <i>n<sub>op</sub></i> rows follows, each of them containing the definition of a quantum operation followed by the energy cost 0 &le; <i>c<sub>i</sub></i> 1000 of carrying out the quantum operation. The definition and the cost are separated by a single space.</p><p>Finally, there are nw rows, each containing two binary words separated by a single space. The first of these words should, when possible, be transformed to the second using the quantum operations. The binary words are expressed as sequences of 1&rsquo; s and 0&rsquo;s. After these rows, the next test case follows, if there is any.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Each test case should produce a row containing a list of the energy costs of transforming each of the binary words. The costs should be separated by a single space and presented in the same order as the corresponding input. When there is no successful way of transforming a binary word, &ldquo;NP&rdquo;, meaning <i>not possible</i> should be printed instead.</p></div><p class="pst">Sample Input</p><pre class="sio">2
+4 3 3
+NFFN 1
+NFNF 2
+NNFN 4
+0010 0100
+0001 0010
+0100 1000
+4 4 5
+CFSF 4
+NNSS 3
+FFFF 5
+FNFN 6
+1111 0000
+1001 0110
+0101 1000
+1000 0011
+0000 1001</pre><p class="pst">Sample Output</p><pre class="sio">1 3 NP
+5 4 8 9 9</pre><p class="pst">

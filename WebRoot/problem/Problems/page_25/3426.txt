@@ -1,0 +1,22 @@
+</p><div class="ptx" lang="en-US"><p>When wondering through the labyrinth, the goal is usually to find some kind of door. Well, not this time.</p><p>A labyrinth consists of <i>N</i> × <i>N</i> cells, each 1 × 1 meter in size. Cells are separated by doors. Each door opens in a specific direction (as shown on the picture):</p><p>1. left outwards;<br>2. left inwards;<br>3. right outwards;<br>4. right inwards. </p><p>So a cell can be represented by two numbers describing doors on its eastern and southern sides according to the list above. The doors are just slightly less then 1 meter in width. The traveler in the labyrinth is also slightly less then 1 meter in diameter, so he has following limitations:</p><p>* He can not pull doors, only push them.<br>* After opening the door and entering the cell it leads to, he can not take a turn in the direction where the door opened, because the passage is blocked by the door. Doors have springs and close automatically when traveler leaves the cell. </p><p>Your program must find the shortest path for the traveler from north-western cell (1, 1) to south-eastern cell (<i>N</i>, <i>N</i>).</p><img src="images/3426_1.gif"></img> </div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input file contains labyrinth size <i>N</i> followed by 2 × <i>N</i><sup>2</sup> numbers describing doors for each cell row by row. As there are no doors leading outside of labyrinth, values for eastern doors in the last column and southern doors in the last row are zero.</p><h4>Constraints</h4><p>1 ≤ <i>N</i> ≤ 1000</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output file must contain the shortest path as a list of cell coordinates (column number, then row number), including both (1, 1) and (<i>N</i>, <i>N</i>) cells. If there are several solutions with the same length, output any one of them. If it is impossible to get to a destination cell, output a singe zero.</p></div><p class="pst">Sample Input</p><pre class="sio"><b>Sample Input 1</b>
+2
+2 3 0 4
+1 0 0 0
+<b>Sample Input 2</b>
+3
+4 3  1 4  0 1
+3 3  2 3  0 4
+2 0  1 0  0 0</pre><p class="pst">Sample Output</p><pre class="sio"><b>Sample Output 1</b>
+1 1
+1 2
+2 2
+<b>Sample Output 2</b>
+1 1
+1 2
+2 2
+2 1
+3 1
+3 2
+2 2
+2 3
+3 3</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Bold texts appearing in the sample sections are informative and do not form part of the actual data.</div><p class="pst">

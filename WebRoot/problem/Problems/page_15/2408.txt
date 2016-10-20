@@ -1,0 +1,24 @@
+</p><div class="ptx" lang="en-US">World-renowned Prof. A. N. Agram's current research deals with large anagram groups. He has just found a new application for his theory on the distribution of characters in English language texts. Given such a text, you are to find the largest anagram groups. 
+<br>
+<br>A text is a sequence of words. A word w is an anagram of a word v if and only if there is some permutation p of character positions that takes w to v. Then, w and v are in the same anagram group. The size of an anagram group is the number of words in that group. Find the 5 largest anagram groups. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains words composed of lowercase alphabetic characters, separated by whitespace(or new line). It is terminated by EOF. You can assume there will be no more than 30000 words.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output the 5 largest anagram groups. If there are less than 5 groups, output them all. Sort the groups by decreasing size. Break ties lexicographically by the lexicographical smallest element. For each group output, print its size and its member words. Sort the member words lexicographically and print equal words only once. </div><p class="pst">Sample Input</p><pre class="sio">undisplayed
+trace
+tea
+singleton
+eta
+eat
+displayed
+crate
+cater
+carte
+caret
+beta
+beat
+bate
+ate
+abet
+</pre><p class="pst">Sample Output</p><pre class="sio">Group of size 5: caret carte cater crate trace .
+Group of size 4: abet bate beat beta .
+Group of size 4: ate eat eta tea .
+Group of size 1: displayed .
+Group of size 1: singleton .
+</pre><p class="pst">

@@ -1,0 +1,16 @@
+</p><div class="ptx" lang="en-US">Daxinganling produces a lot of timber. Before loading onto trains, the timberjacks will place the logs to some place in the open air first. Looking from the sideway, the figure of a logs stack is as follows:
+<br>
+<br><img src=images/2748_1.jpg>
+<br> 
+<br>We have known that the number of logs in each layer is fewer than the lower layer for at least one log, and that in each layer the logs are connected in a line. In the figure above, there are 12 logs in the bottom layer of the stack. Now, given the number of logs in the bottom layer, the timberjacks want to know how many possible figures there may be.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains the number of test cases T (1 <= T <= 1000000). Then T lines follow. Every line only contains a number n (1 <= n <= 2000000000) representing the number of logs in the bottom layer.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case in the input, you should output the corresponding number of possible figures. Because the number may be very large, just output the number mod 10^5.</div><p class="pst">Sample Input</p><pre class="sio">4
+1
+2
+3
+5
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+2
+5
+34
+
+</pre><p class="pst">

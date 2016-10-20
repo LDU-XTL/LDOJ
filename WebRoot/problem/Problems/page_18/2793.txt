@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">Cactus is a connected undirected graph in which every edge lies on at most one simple cycle. Intuitively cactus is a generalization of a tree where some cycles are allowed. Your task first is to verify if the given graph is a cactus or not. Important difference between a cactus and a tree is that a cactus can have a number of spanning subgraphs that are also cactuses. The number of such subgraphs (including the graph itself) determines cactusness of a graph (this number is one for a cactus that is just a tree). The cactusness of a graph that is not a cactus is considered to be zero. 
+<br><img src=images/2793_1.jpg>
+<br>The first graph on the picture is a cactus with cactusness 35. The second graph is not a cactus because edge (2, 3) lies on two cycles. The third graph is not a cactus because it is not connected. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains two integer numbers n and m (1 <= n <= 20000, 0 <= m <= 1000). 
+<br>
+<br>Here n is the number of vertices in the graph. Vertices are numbered from 1 to n. Edges of the graphare represented by a set of edge-distinct paths, where m is the number of such paths. 
+<br>
+<br>Each of the following m lines contains a path in the graph. A path starts with an integer number ki(2 <= ki <= 1000) followed by ki integers from 1 to n. These ki integers represent vertices of a path. Path can go to the same vertex multiple times, but every edge is traversed exactly once in the whole input file. 
+<br>
+<br>There are no multiedges in the graph (there is at most one edge between any two vertices). </div><p class="pst">Output</p><div class="ptx" lang="en-US">Write to the output a single integer number - the cactusness of the given graph. Note that cactusness can be quite a large number. </div><p class="pst">Sample Input</p><pre class="sio">14 3
+9 1 2 3 4 5 6 7 8 3
+7 2 9 10 11 12 13 10
+2 2 14</pre><p class="pst">Sample Output</p><pre class="sio">35</pre><p class="pst">

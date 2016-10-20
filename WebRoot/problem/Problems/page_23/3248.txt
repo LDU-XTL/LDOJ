@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US"><p>There are <i>k</i> soldiers placed on an <i>n</i>-row and <i>m</i>-column chessboard. It is allowed that more than one soldier are placed on the same grid.</p><p>If the Manhattan distance between a grid(in <i>a</i>th row and <i>b</i>th column) and a soldier(in <i>x</i>th row and <i>y</i>th column), |<i>x</i>-<i>a</i>|+|<i>y</i>-<i>b</i>|, is not larger than the control range of that soldier, then the grid will be controlled.</p><p>Could you tell the total number of all the controlled grids?</p></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains only one case.
+<br>The input begins with three positive integers, <i>n</i>, <i>m</i> and <i>k</i>, indicating the length of row and column, and the number of soldiers.
+<br>In the next <i>k</i> lines each line contains three non-negative integers, <i>x</i>, <i>y</i>, <i>r</i>, indicating a soldier is placed on the <i>x</i>th row and <i>y</i>th column, and the control range of that soldier is <i>r</i>.
+<br>It is guaranteed that 1 ≤ <i>n</i>, <i>m</i> ≤ 100000000，1 ≤ <i>k</i> ≤ 100000
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">Print the total number of all the controlled grids.</div><p class="pst">Sample Input</p><pre class="sio">4 4 3
+1 1 1
+3 1 1
+3 3 1
+</pre><p class="pst">Sample Output</p><pre class="sio">10</pre><p class="pst">

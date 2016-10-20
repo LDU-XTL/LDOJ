@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">The twenty-first century is a biology-technology developing century. One of the most attractive and challenging tasks is on the gene project, especially on gene sorting program. Recently we know that a gene is made of DNA. The nucleotide bases from which DNA is built are A(adenine), C(cytosine), G(guanine), and T(thymine). Given several segments of a gene, you are asked to make a shortest sequence from them. The sequence should use all the segments, and you cannot flip any of the segments.
+<br>
+<br>For example, given 'TCGG', 'GCAG', 'CCGC', 'GATC' and 'ATCG', you can slide the segments in the following way and get a sequence of length 11. It is the shortest sequence (but may be not the only one).
+<br><center><img src=images/1699_1.jpg></center>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line is an integer T (1 <= T <= 20), which shows the number of the cases. Then T test cases follow. The first line of every test case contains an integer N (1 <= N <= 10), which represents the number of segments. The following N lines express N segments, respectively. Assuming that the length of any segment is between 1 and 20.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print a line containing the length of the shortest sequence that can be made from these segments.</div><p class="pst">Sample Input</p><pre class="sio">1
+5
+TCGG
+GCAG
+CCGC
+GATC
+ATCG
+</pre><p class="pst">Sample Output</p><pre class="sio">11</pre><p class="pst">

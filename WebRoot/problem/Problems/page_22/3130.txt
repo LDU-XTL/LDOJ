@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>After counting so many stars in the sky in his childhood, Isaac, now an astronomer and a mathematician uses a big astronomical telescope and lets his image processing program count stars. The hardest part of the program is to judge if shining object in the sky is really a star. As a mathematician, the only way he knows is to apply a mathematical definition of <i>stars</i>.</p><p>The mathematical definition of a star shape is as follows: A planar shape <i>F</i> is <i>star-shaped</i> if and only if there is a point C &isin; <i>F</i> such that, for any point P &isin; <i>F</i>, the line segment CP is contained in <i>F</i>. Such a point C is called a <i>center</i> of <i>F</i>. To get accustomed to the definition let&rsquo;s see some examples below.</p><div align="center"><img src=images/3130_1.gif></div><p>The first two are what you would normally call stars. According to the above definition, however, all shapes in the first row are star-shaped. The two in the second row are not. For each star shape, a center is indicated with a dot. Note that a star shape in general has infinitely many centers. Fore Example, for the third quadrangular shape, all points in it are centers.</p><p>Your job is to write a program that tells whether a given polygonal shape is star-shaped or not.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input is a sequence of datasets followed by a line containing a single zero. Each dataset specifies a polygon, and is formatted as follows.</p><blockquote><table border="0" width="60"><tr><td width="50%"><i>n</i></td><td width="50%"></td></tr><tr><td width="50%"><i>x</i><sub>1</sub></td><td width="50%"><i>y</i><sub>1</sub></td></tr><tr><td width="50%"><i>x</i><sub>2</sub></td><td width="50%"><i>y</i><sub>2</sub></td></tr><tr><td width="100%" colspan="2"><p align="center">&hellip;</td></tr><tr><td width="50%"><i>x<sub>n</sub></i></td><td width="50%"><i>y<sub>n</sub></i></td></tr></table></blockquote><p>The first line is the number of vertices, <i>n</i>, which satisfies 4 &le; <i>n</i> &le; 50. Subsequent <i>n</i> lines are the <i>x</i>- and <i>y</i>-coordinates of the <i>n</i> vertices. They are integers and satisfy 0 &le; <i>x<sub>i</sub></i> &le; 10000 and 0 &le; <i>y<sub>i</sub></i> &le; 10000 (<i>i</i> = 1, &hellip;, <i>n</i>). Line segments (<i>x<sub>i</sub></i>, <i>y<sub>i</sub></i>)&ndash;(<i>x<sub>i</sub></i><sub> + 1</sub>, <i>y<sub>i</sub></i><sub> + 1</sub>) (<i>i</i> = 1, &hellip;, <i>n</i> &minus; 1) and the line segment (<i>x<sub>n</sub></i>, <i>y<sub>n</sub></i>)&ndash;(<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>) form the border of the polygon in the counterclockwise order. That is, these line segments see the inside of the polygon in the left of their directions.</p><p>You may assume that the polygon is <i>simple</i>, that is, its border never crosses or touches itself. You may assume assume that no three edges of the polygon meet at a single point even when they are infinitely extended.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>For each dataset, output &ldquo;<code>1</code>&rdquo; if the polygon is star-shaped and &ldquo;<code>0</code>&rdquo; otherwise. Each number must be in a separate line and the line should not contain any other characters.</p></span></div><p class="pst">Sample Input</p><pre class="sio">6 
+66 13 
+96 61 
+76 98 
+13 94 
+4 0 
+45 68 
+8 
+27 21 
+55 14 
+93 12 
+56 95 
+15 48 
+38 46 
+51 65 
+64 31 
+0</pre><p class="pst">Sample Output</p><pre class="sio">1
+0</pre><p class="pst">

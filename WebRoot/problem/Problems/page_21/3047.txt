@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">Bessie asked her friend what day of the week she was born on. She knew that she was born on 2003 May 25, but didn't know what day it was. Write a program to help. Note that no cow was born earlier than the year 1800.
+<br>
+<br>Facts to know:
+<br>
+<br>* January 1, 1900 was on a Monday.
+<br>
+<br>* Lengths of months:
+<br><pre>    Jan 31          May 31      Sep 30<br>    Feb 28 or 29    Jun 30      Oct 31<br>    Mar 31          Jul 31      Nov 30<br>    Apr 30          Aug 31      Dec 31</pre>
+<br>* Every year evenly divisible by 4 is a leap year (1992 = 4*498 so 1992 will be a leap year, but the year 1990 is not  a leap year).
+<br>
+<br>* The rule above does not hold for century years. Century years divisible by 400 are leap years, all other are not. Thus, the century years 1700, 1800, 1900 and 2100  are not leap years, but 2000 is a leap year.</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: Three space-separated integers that represent respectively the year, month (range 1..12), and day of a date.</div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: A single word that is the day of the week of the specified date (from the lower-case list: monday, tuesday, wednesday, thursday, friday, saturday, sunday).</div><p class="pst">Sample Input</p><pre class="sio">2003 5 25</pre><p class="pst">Sample Output</p><pre class="sio">sunday</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">INPUT DETAILS:
+<br>May 25, 2003
+<br>
+<br>OUTPUT DETAILS:
+<br><pre>      May 2003<br>Su Mo Tu We Th Fr Sa<br>             1  2  3<br> 4  5  6  7  8  9 10<br>11 12 13 14 15 16 17<br>18 19 20 21 22 23 24<br>25 26 27 28 29 30 31</pre></div><p class="pst">

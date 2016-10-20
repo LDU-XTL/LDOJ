@@ -1,0 +1,30 @@
+</p><div class="ptx" lang="en-US">Holding a collegiate programming contest is a very exhausting work. There is a well-known proverb that one fool can ask so many questions that a hundred clever men will not answer. And during a collegiate programming contest questions are asked by one hundred clever people.
+<br>
+<br>The jury of the Third Urals Collegiate Programming Contest being clever enough has found a simple way to make its work easier. We have invented a simple algorithm that will help us answer ALL your numerous questions! Moreover, this algorithm guarantees that the same questions will have the same answers (this would be hardly possible, if we would undertook such a task ourselves). According to this algorithm a member of the jury starts to delete characters of the question in the following order:
+<br><ol><li>Starting from the first character he or she counts out N-1 characters (spaces, punctuation marks etc. are considered to be characters too) and deletes the Nth character.
+<br><li>If a string ends the count continues from the beginning of the string.
+<br><li>After deleting a character the count restarts from the character that would be the (N+1)-st in the previous count.
+<br><li>If the last remaining character is a question-mark ("?") then the answer to the question is "Yes". If it is a space then the answer is "No". Any other character will lead to "No comments" answer.</ol>
+<br>You should help the jury and write a program that will do a hard work of answering your questions tomorrow. The number N is secret and will not be announced even after the end of the contest. Your program should use N=1999.
+<br>
+<br>For example, taking a string "Is it a good question?" (its length is 22) the characters will be counted in the following way: "Is it a good question?Is it ... quest" and "i" will be deleted. Then the count restarts from "on?Is it..." etc., until "s" will be left (thus the answer is "No comments", as usual).</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input is a question, that is any text file containing at least one character (end of line is not a character). Each character of the input (excepting the ends of lines) is a part of the question. 
+<br>The size of the input file is not more than 30000.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The answer.</div><p class="pst">Sample Input</p><pre class="sio">Sample input #1
+Does the jury of this programming contest use the
+algorithm described in this problem to answer my questions?
+
+Sample input #2
+At least, will anybody READ my question?
+
+Sample input #3
+This is
+UNFAIR!
+</pre><p class="pst">Sample Output</p><pre class="sio">Sample output #1
+Yes
+
+Sample output #2
+No
+
+Sample output #3
+No comments
+
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">there are no spaces in the sample inputs except for those between words in one line. Thus the first question contain 108 characters, the second — 40 and the third — 14.</div><p class="pst">

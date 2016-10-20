@@ -1,0 +1,68 @@
+</p><div class="ptx" lang="en-US">The Cash Cow Consulting Company is challenging the Vice Presidents to increase the profitability of their departments. In an effort to provide proper incentive, the Vice President whose department has the highest Profitability Index (PI) will win a brand new Porsche. The contest rules are as follows: 
+<br><ul>
+<br><li>The winning department will have the maximum Profitability Index (sales / development cost) 
+<br>
+<br><li>Each department must stay within the minimum and maximum cost range. 
+<br>
+<br><li>In the case of equal profitability indexes, the higher profit margin will win (sales ?development cost). 
+<br>
+<br><li>If two departments are still tied, the winning department will develop the smaller number of features. 
+<br>
+<br><li>If two departments are still tied, the winning department will satisfy the most customers. 
+<br></ul>
+<br>
+<br>Mike Miser is still driving his high school moped and has determined this is his chance to upgrade. He has instructed the engineering department to determine what it will cost for each feature to be developed. He then instructed the sales force to determine what features each customer requires, and what sales that will generate. (To make a sale to a customer all features required must be provided). 
+<br>
+<br>Mike will then determine which feature combination his division should complete to maximize his chances of winning the contest. 
+<br>
+<br>Notes: 
+<br>
+<br>1. Because of the type of product the Cash Cow Consulting Company creates, the production costs are negligible, and do not need to be considered. Only the development costs should be considered. 
+<br>2. The tie breakers listed will result in the selection of exactly one feature set. 
+<br>3. At least one feature set will satisfy the requirements. 
+<br>4. The Profitability Index should be rounded to three decimal places. The values 3.4566 and 3.4574 will be considered equal.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">All input will be positive integers. 
+<br>
+<br>The first line of input will indicate the number of data sets. 
+<br>
+<br>The first line of each data set will contain 4 integers separated by white-space. In order they are the minimum cost, maximum cost, number of potential features (N) and number of potential customers (M). N and M will be no larger than 20. 
+<br>
+<br>The next N lines (one for each feature) indicate the cost of each feature. 
+<br>
+<br>The next M lines will contain the following (one line for each customer): 
+<br>Number of required features Feature number (for each required feature) Total Sales for that customer. 
+<br>For instance, if a given customer wanted 3 features, number 1,2 and 5 and would provide sales of 50, the line would read: "3 1 2 5 50"
+<br>
+<br>The next data set, if more remain, will begin on the next line. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The first line of output for each data set should indicate which Feature Set is being considered. These should print "Feature Set N" where N is the feature set number, counting from 1. 
+<br>
+<br>The next line of output for each data set should indicate the profitability index to 3 decimal places. 
+<br>
+<br>The next line of output for each data set should indicate the sales dollars 
+<br>
+<br>The next line of output for each data set should indicate the cost 
+<br>
+<br>The next line of output for each data set should indicate which features are implemented. 
+<br>The first feature is feature number 1. They must be listed in order, white-space separated. 
+<br>
+<br>The final line of output for each data set should indicate the customers who were satisfied. The first customer is customer #1. They must be listed in order, white-space separated. 
+<br>
+<br>No extra output should appear. </div><p class="pst">Sample Input</p><pre class="sio">1 
+100 2000 7 6 
+250 
+350 
+400 
+250 
+250 
+250 
+500 
+4 1 4 5 6 4000 
+4 1 4 5 6 500 
+4 1 4 5 6 60 
+3 1 4 5 7 
+4 1 2 3 5 5 
+4 1 2 3 7 6 </pre><p class="pst">Sample Output</p><pre class="sio">Feature Set 1 
+4.567 
+4567 
+1000 
+1 4 5 6 
+1 2 3 4</pre><p class="pst">

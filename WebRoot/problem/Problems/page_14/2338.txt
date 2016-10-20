@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">The programming language Ada has integer constants that look like this: 123, 8#123#, 16#abc#. These constants represent the integers 123, 83 (123 base 8) and 2739 (abc base 16). More precisely, an integer may be a decimal integer given as a sequence of one or more digits less than 10, or it may be an integer to some specific base, given as the base followed by a sequence of one or more digits less than the base enclosed by # symbols. Lower case letters from a through f are used as the digits representing 10 through 15. In Ada, the base, if specified, must be a sequence of decimal digits. For this problem, however, the base may be of any form described above so long as it represents an integer between 2 and 16 inclusive. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains a positive integer n. n lines follow.Input lines contain no spaces and are between 1 and 80 characters in length. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each line of input, output a line "yes" if it is a valid integer constant according to the above rules; otherwise output a line containing "no".</div><p class="pst">Sample Input</p><pre class="sio">5
+2#101#
+2#101##123#
+17#abc#
+16#123456789abcdef#
+16#123456789abcdef#123456789abcdef#
+</pre><p class="pst">Sample Output</p><pre class="sio">yes
+yes
+no
+yes
+no
+</pre><p class="pst">

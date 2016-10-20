@@ -1,0 +1,31 @@
+</p><div class="ptx" lang="en-US">Fires can be disastrous, especially when a fire breaks out in a room that is completely filled with people. Rooms usually have a couple of exits and emergency exits, but with everyone rushing out at the same time, it may take a while for everyone to escape.
+<br>
+<br>You are given the floorplan of a room and must find out how much time it will take for everyone to get out. Rooms consist of obstacles and walls, which are represented on the map by an 'X', empty squares, represented by a '.' and exit doors, which are represented by a 'D'. The boundary of the room consists only of doors and walls, and there are no doors inside the room. The interior of the room contains at least one empty square.
+<br>
+<br>Initially, there is one person on every empty square in the room and these persons should move to a door to exit. They can move one square per second to the North, South, East or West. While evacuating, multiple persons can be on a single square. The doors are narrow, however, and only one person can leave through a door per second.
+<br>
+<br>What is the minimal time necessary to evacuate everybody? A person is evacuated at the moment he or she enters a door square.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains a single number: the number of test cases to follow. Each test case has the following format:
+<br>One line with two integers Y and X, separated by a single space, satisfying 3 <= Y, X <= 12: the size of the room
+<br>Y lines with X characters, each character being either 'X', '.', or 'D': a valid description of a room</div><p class="pst">Output</p><div class="ptx" lang="en-US">For every test case in the input, the output should contain a single line with the minimal evacuation time in seconds, if evacuation is possible, or "impossible", if it is not.
+<br></div><p class="pst">Sample Input</p><pre class="sio">3
+5 5
+XXDXX
+X...X
+D...X
+X...D
+XXXXX
+5 12
+XXXXXXXXXXXX
+X..........D
+X.XXXXXXXXXX
+X..........X
+XXXXXXXXXXXX
+5 5
+XDXXX
+X.X.D
+XX.XX
+D.X.X
+XXXDX
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+21
+impossible</pre><p class="pst">

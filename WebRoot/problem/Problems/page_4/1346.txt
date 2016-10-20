@@ -1,0 +1,38 @@
+</p><div class="ptx" lang="en-US">Meetings of board of directors of a company are held in a specially designed room. The room contains a central table in the form of a ring around which revolving chairs are placed. There is an entry to approach the center of the ring where there is a single revolving chair. An outline of the arrangement inside the room is shown in the figure below. 
+<br>
+<br>
+<br><center><img src=images/1346_1.jpg></center>
+<br>The following protocol is maintained during the meeting: 
+<br>
+<br>1. The total number of members present in any meeting is an even number, say, 2N, where 5<2N<25. The members are identified by integers 1,2,...,2N. 
+<br>
+<br>2. Around the table N blue and N red chairs are placed alternately for the members to sit. Arrangements of blue and red chairs are considered circular. Thus the entry path does not affect the proximity of chairs on two sides of the path. At the start of the meeting 2N members sit on 2N chairs around the table. 
+<br>
+<br>3. In addition to the N blue and N red chairs one white chair is placed at the center of the table. When the white chair is vacant a member occupying a red chair only, may vacate the red chair and sit on the white chair to address the meeting. 
+<br>
+<br>4. During an address one blue / red chair always remains vacant. A member seated on either side of the vacant chair may vacate her / his chair and occupy the vacant chair. This type of change of chairs may be made by members any number of times during an address. 
+<br>
+<br>5. After completion of an address a member vacates the white chair and occupies the blue / red chair vacant at that time. 
+<br>
+<br>Reporters are briefed at the beginning and at the end of the meeting. However they are not supplied with all the details they wish to know. A reporter is curious to know the total number of addresses delivered in the meeting. He notes down the relative positions of members in anticlockwise order with respect to the member identified by the integer 1, at the beginning as well as at the end of the meeting. 
+<br>
+<br>You are required to write a computer program to find the minimum number of addresses delivered during the meeting. 
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input may contain multiple test cases. 
+<br>
+<br>For each test case there are three input lines. The first line contains two integers, the case number c and the total number of member 2N. 
+<br>
+<br>The next two lines consist of two strings giving the relative position of members at the beginning and at the end of the meeting, in anticlockwise order with respect to the member 1. 
+<br>
+<br>Each input string starts with a letter-integer combination (without any blank between the letter and the integer) either B1 (if member 1 is on a blue chair) or R1 (if member 1 is on a red chair) and is followed by a permutation of integers 2, 3, � 2N. A blank character precedes each integer appearing in the string, with the exception of 1. The input is illustrated in sample input. 
+<br>
+<br>The input terminates with an input 0 for c. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case in the input print in one line two integers c and m separated by a blank character. The integer c is the test case number and m is the minimum number of addresses delivered in the meeting. </div><p class="pst">Sample Input</p><pre class="sio">1 6 
+B1 3 6 5 4 2 
+R1 3 6 5 4 2 
+2 6 
+B1 3 6 5 4 2 
+R1 3 4 6 5 2 
+0 </pre><p class="pst">Sample Output</p><pre class="sio">1 1 
+2 2 
+</pre><p class="pst">

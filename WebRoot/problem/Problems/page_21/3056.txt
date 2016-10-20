@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">The professors of the Bayerische Mathematiker Verein have their annual party in the local Biergarten. They are sitting at a round table each with his own pint of beer. As a ceremony each professor raises his pint and toasts one of the other guests in such a way that no arms  cross.
+<br><img src=images/3056_1.jpg>
+<br>Figure 2: Toasting across a table with eight persons:no arms crossing(left), arms crossing(right)
+<br>
+<br>We know that the professors like to toast with someone that is drinking the same brand of beer, and we like to maximize the number of pairs of professors toasting with the same brand , again without crossing arms. Write an algorithm to do this, keeping in mind that every professor should take part in the toasting.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The frist line of the input contains a single number: the number of test cases to follow. Each test case has the following format:
+<br>One line with an even number p, satisfying 2 <= p <= 1000: the number of participants
+<br>One line with p integers (separated by single spaces) indicating the beer brands fro the consecutive professors( in clockwise order, starting at an arbitrary position). Each value is between 1 and 100 (boudaries included).</div><p class="pst">Output</p><div class="ptx" lang="en-US">For every test case in the input, the output should contain a single number on a single line: the maximum number of non-intersecting toasts of the same beer brand for this test case.</div><p class="pst">Sample Input</p><pre class="sio">2
+6
+1 2 2 1 3 3
+22
+1 7 1 2 4 2 4 9 1 1 9 4 5 9 4 5 6 9 2 1 2 9</pre><p class="pst">Sample Output</p><pre class="sio">3
+6</pre><p class="pst">

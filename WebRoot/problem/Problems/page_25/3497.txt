@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US"><p>Recently your team noticed that the computer you use to practice for programming contests is not good enough anymore. Therefore, you decide to buy a new computer.</p><p>To make the ideal computer for your needs, you decide to buy separate components and assemble the computer yourself. You need to buy exactly one of each type of component.</p><p>The problem is which components to buy. As you all know, the quality of a computer is equal to the quality of its weakest component. Therefore, you want to maximize the quality of the component with the lowest quality, while not exceeding your budget.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>On the first line one positive number: the number of testcases, at most 100. After that per testcase:</p><ul><li><p>One line with two integers: 1 &le; <i>n</i> &le; <nobr>1 000</nobr>, the number of available components and 1 &le; <i>b</i> &le; <nobr>1 000 000 000</nobr>, your budget.</p></li><li><p><i>n</i> lines in the following format: &ldquo;<tt>type name price quality</tt>&rdquo;, where <tt>type</tt> is a string with the type of the component, <tt>name</tt> is a string with the unique name of the component, <tt>price</tt> is an integer (0 &le; <tt>price</tt> &le; <nobr>1 000 000</nobr>) which represents the price of the component and <tt>quality</tt> is an integer (0 &le; <tt>quality</tt> &le; <nobr>1 000 000 000</nobr>) which represents the quality of the component (higher is better). The strings contain only letters, digits and underscores and have a maximal length of 20 characters.</p></li></ul></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Per testcase:</p><ul><li>One line with one integer: the maximal possible quality.</li></ul></div><p class="pst">Sample Input</p><pre class="sio">1
+18 800
+processor 3500_MHz 66 5
+processor 4200_MHz 103 7
+processor 5000_MHz 156 9
+processor 6000_MHz 219 12
+memory 1_GB 35 3
+memory 2_GB 88 6
+memory 4_GB 170 12
+mainbord all_onboard 52 10
+harddisk 250_GB 54 10
+harddisk 500_FB 99 12
+casing midi 36 10
+monitor 17_inch 157 5
+monitor 19_inch 175 7
+monitor 20_inch 210 9
+monitor 22_inch 293 12
+mouse cordless_optical 18 12
+mouse microsoft 30 9
+keyboard office 4 10</pre><p class="pst">Sample Output</p><pre class="sio">9</pre><p class="pst">

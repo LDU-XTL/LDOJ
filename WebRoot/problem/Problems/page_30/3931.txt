@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">Mike graduated from high school several years ago. One day a question suddenly comes to his mind: how many classmates did he have in his high school? He doesn’t remember, and it's obviously too hard for him to recall everyone. But he does remember something - a game played on a New Year's Day. Because all his classmates had joined that game, Mike thinks he can figure out the number of his classmates by some clues.
+<br>
+<br>The game went like this: At first, all classmates stood one by one in a circle, labeled clockwisely from No.1 to No. n. Of course n is the total number of all classmates. Then, starting from the No. 2 guy, they kicked out every 2nd guy. After each guy was kicked out, counting and kicking continued around the circle that remained, until there was only one guy left. That luck guy would get a gift. As shown in the picture below, if there were 6 classmates in the game, the people been kicked out would be in the order of No.2, No.4, No.6, No.3 and No.1, and in the end the No. 5 guy would win the gift. 
+<br>
+<br><center><img src="images/3931_1.png"></center>
+<br>
+<br>Mike can only remember what number he was labeled, and how many classmates still remained in the circle when he was going to be kicked out. You should help him calculate the minimum possible total number of his classmates.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of several cases. Every case is one line with two positive integer m and k(1&lt;=m&lt;=100,000,000, 1&lt;=k&lt;=100,000,000). m is Mike's number in the game, and k is the total number of people remained in the circle when Mike was going to be kicked out. (Mike was among those k people)
+<br>
+<br>The input ends with a line containing two zero.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, you should print the minimum possible total number of Mike’s classmates. If it’s impossible to find that number according to the input, please print "Impossible".
+<br>You may assume that the answer fits in a signed 64-bit integer.</div><p class="pst">Sample Input</p><pre class="sio">1 1
+3 3
+53 9
+100 2
+999999999 999999999
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+6
+60
+Impossible
+2499999996</pre><p class="pst">

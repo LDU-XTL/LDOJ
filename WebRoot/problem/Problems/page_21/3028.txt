@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US"><img src=images/3028_1.gif align=right hspace=10><span lang="en-us"><p>This is back in the Wild West where everybody is fighting everybody. In particular, there are <i>n</i> cowboys, each with a revolver. These are rather civilized cowboys, so they have decided to take turns firing their guns until only one is left standing. Each of them has a given probability of hitting his target, and they all know each other&rsquo;s probability. Furthermore, they are geniuses and always know which person to aim at in order to maximize their winning chance, so they are indeed peculiar cowboys. If there are several equally good targets, one of those will be chosen at random. Note that a cowboy&rsquo;s code of ethics forces him to do his best at killing one of his opponents, even if intentionally missing would have increased his odds (yes, this can happen!)</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>On the first line of the input is a single positive integer t, telling the number of test cases to follow. Each case consists of one line with an integer 2 &le; <i>n</i> &le; 13 giving the number of cowboys, followed by n positive integers giving hit percentages for the cowboys in the order of their turns.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output one line with the percent probabilities for each of them surviving, in the same order as the input. The numbers should be separated by a space and be correctly rounded to two decimal places.</p></div><p class="pst">Sample Input</p><pre class="sio">5
+2 1 100
+3 100 99 98
+3 50 99 100
+3 50 99 99
+3 50 99 98</pre><p class="pst">Sample Output</p><pre class="sio">1.00 99.00
+2.00 0.00 98.00
+25.38 74.37 0.25
+25.38 49.50 25.12
+25.63 24.63 49.74</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><p><b>Q</b>: Does the cowboy know the other cowboys strategy of shooting?<br><b>A</b>: Yes.</p></div><p class="pst">

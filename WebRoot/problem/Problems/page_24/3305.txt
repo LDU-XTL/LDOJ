@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US"><p>See.Eye.A, the world's biggest independent intelligence agency, is located in a very large underground building. Recently, due to the large amount of secret documents kept in different departments and due to some recent strange activities in the building, the managers of See.Eye.A have decided to install an advanced surveillance system to monitor all the activities within the building. But lack of budgets has forced them to accomplish this task with the minimum expenses possible.</p><p>To be more specific, the building is consisted of a set of long passages containing doors at their two ends. If two passages <i>i</i> and <i>j</i> share the same door, then one can enter passage <i>i</i> from <i>j</i> or exit from passage <i>i</i> to <i>j</i> through that door. It should be noted that there is exactly one simple path through passages and other doors between each pair of doors (i.e. the structure of the passages and the doors is like a tree). Also note that the doors are made circular and as a result, more than 2 passages can share the same door. In addition, to extend the building in future, a door may be a dead-end i.e. a door that does not connect its passage to another one.</p>The surveillance system consists of a set of cameras which should be installed in different parts of the building so that all parts of the building, including the doors and passages, can be monitored. After a thorough analysis, the engineers of See.Eye.A decided that a camera should only be installed on either above one of the doors or in the middle of a passage. Note that if a camera is installed above a door, then all the passages sharing that door, the doors in the other ends of these passages, and the door itself can be monitored. On the other hand, if a camera is installed in the middle of a passage, then passage itself, doors at its both ends and all the adjacent passages sharing doors with it can be monitored.</p><p>Now, they want to know the minimum number of cameras that can be installed to monitor all the doors and passages of the building, and they hired you to write a program to accomplish this task for them.</p?</div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of input contains a single integer <i>T</i>, which is the number of test cases. Each test case starts with a line containing one integer 1 &le; <i>P</i> &le; 100 which is the number of passages in the building, followed by <i>P</i> lines each containing a pair of integers 0 &le; <i>A</i>, <i>B</i> &le; 1,000,000,000 which are the unique IDs of the two doors at either side of each passage.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test-case, your program should output the minimum number of needed cameras to monitor all the building, in a single line.</p></div><p class="pst">Sample Input</p><pre class="sio">2
+7
+10 20
+20 30
+30 4
+4 55
+55 60
+60 1
+1 1024
+9
+10 30
+20 30
+30 40
+40 50
+50 60
+50 70
+40 80
+80 90
+80 100</pre><p class="pst">Sample Output</p><pre class="sio">3
+3</pre><p class="pst">

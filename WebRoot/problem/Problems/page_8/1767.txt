@@ -1,0 +1,26 @@
+</p><div class="ptx" lang="en-US">Every computer science student knows binary trees. Here is one of many possible definitions of binary trees. Binary trees are defined inductively. A binary tree t is either an external node (leaf) ○ or an ordered pair t = (t1, t2) representing an internal node ● with two subtrees attached, left subtree t1 and right subtree t2. Under this definition the number of nodes in any binary tree is odd. Given an odd integer n let B(n) denote the set of all binary trees with n nodes, both internal and external. For instance B(1) consists of only one tree ○, B(3) = {(○,○ )} and B(5) = {(○, (○,○ )), ((○,○ ),○ )}. The trees of B(5) are depicted in the figure below. 
+<br><center><img src=images/1767_1.jpg></center>
+<br>Denote by |t| the number of nodes in a tree t. Given a tree t we define its unique integer identifier N (t) as follows: 
+<br>
+<br>N (○) = 0 
+<br>N (t1, t2) = 2<sup>|t1|+|t2|</sup> + 2<sup>|t2|</sup> * N(t1) +N (t2) 
+<br>For instance, N (○,○) = 2<sup>2</sup> + 2<sup>1</sup> * 0 + 0 = 4, N (○, (○,○ )) = 2<sup>4</sup> + 2<sup>3</sup> * 0 + 4 = 20,
+<br>N ((○,○ ),○ ) = 2<sup>4</sup> + 2<sup>1</sup> * 4 + 0 = 24. 
+<br>
+<br>Consider the following linear order on all binary trees: 
+<br>
+<br>1) ○ < = t
+<br>2) (t1, t2) < = (u1, u2) when t1 < u1, or t1 = u1 and t2 < = u2 
+<br>
+<br>In this order a single leaf  is the smallest tree and given two nonleaf trees, the smaller one is that with the smaller left tree, if the left subtrees are different, and that with the smaller right subtree, otherwise. Hence for instance (○, (○,○ )) < ((○,○ ),○ ), since we have ○ < (○,○ ). Assume now that the trees in B(n) were sorted using the relation < =. Then, for each tree t in B(n) we define the successor of t as the tree that immediately follows t in B(n). If t is the largest one in B(n) then the successor of t is the smallest tree in set B(n). For instance, the successor of (○,○ ) in B(3) is the same tree (○, ○) and the successor of (○, (○,○ )) in B(5) is ((○,○ ),○ ). Given the integer identifier of some tree t can you give the identifier of the successor of t in B(|t|)? 
+<br>
+<br>Task
+<br>Write a program that:
+<br>
+<br>reads the identifier of some binary tree t, 
+<br>computes the identifier of the successor of t in B(|t|), 
+<br>writes the result. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first and only line of the input contains one integer n (0 <= n < = 2<sup>30</sup>) - the identifier of some binary tree </div><p class="pst">Output</p><div class="ptx" lang="en-US">The first and only line of the output should contain one integer s - the identifier of the successor of t in B(|t|). 
+<br></div><p class="pst">Sample Input</p><pre class="sio">20
+</pre><p class="pst">Sample Output</p><pre class="sio">24
+</pre><p class="pst">

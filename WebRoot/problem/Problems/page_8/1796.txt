@@ -1,0 +1,25 @@
+</p><div class="ptx" lang="en-US">Background
+<br>On the planet Divido teachers have a serious problem. Due to the spread of calculators the students cannot do long division with pencil and paper any longer. But now the planetarian government has announced a test for all students in basic schools to test their math skills. Because it has to be a multiple choice test the students only have to calculate the length of the period when dividing two numbers. Your task is to write a program which calculates the right solutions in advance to ease the correction of the test. An additional problem occurs because not all intelligent species on Divido have the same number of fingers and thus their systems of numbers have different bases.
+<br>
+<br>Problem
+<br>You are given a base b, a numerator x, and a denominator y, the latter of which are integers to the base b.Then calculate the length of the period in the base b expansion of the fraction q = x/y. Remember that the digits of the base b expansion of the the rational number q are the coefficients of the powers of the base:
+<br><font size=5>q = q<sub>n</sub>q<sub>n-1</sub>...q<sub>0</sub>.q<sub>-1</sub>q<sub>-2</sub>...=Σ<sub>-∞<=i<=n</sub>q<sub>i</sub>b<sup>i</sup></font>
+<br>Here are some examples:
+<br><font size=5>1<sub>10</sub>/2<sub>10</sub>=0.5<sub>10</sub>,1<sub>3</sub>/10<sub>3</sub>=0.1<sub>3</sub>,2<sub>10</sub>/11<sub>10</sub>=0.181818...<sub>10</sub>= 0.(18)<sub>10</sub></font>
+<br>In the first two examples, there is a finite base b expansion of the fraction, meaning that all digits that follow are zero. In that case, we say that the length of the period is zero. Note that one could as well express the first example as 0.4(9)<sub>10</sub> with a period length of one, but that is not what we want.
+<br>In the third example, however, the period length is unambiguously two.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains the number of fractions. For each fraction you are first given the base b as a decimal number with 2 <= b <= 36, and then the numerator x and the denominator y of the fraction to that base separated by single blanks. It is guaranteed that the denominator satisfies 0 < y <= 100 000<sub>10</sub>. Digits not in the range of 0 . . . 9 are represented by letters starting from "a" or "A" in the usual way, where case does not matter.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output for every scenario begins with a line containing "Scenario #i:", where i is the number of the scenario starting at 1. Then print a single line containing the length of the period in the base b expansion of x/y , but make sure to print the length as a decimal number. Terminate the output for the scenario with a blank line.</div><p class="pst">Sample Input</p><pre class="sio">4
+10 1 2
+3 1 10
+10 2 11
+36 HI ho</pre><p class="pst">Sample Output</p><pre class="sio">Scenario #1:
+0
+
+Scenario #2:
+0
+
+Scenario #3:
+2
+
+Scenario #4:
+13
+</pre><p class="pst">

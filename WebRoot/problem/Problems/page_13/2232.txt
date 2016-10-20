@@ -1,0 +1,19 @@
+</p><div class="ptx" lang="en-US">Acm is a clever boy, and he developed a new game form the old Stone-Forfex-Cloth game.
+<br>
+<br>In this game, a number of children sit in a circle, each one shows a gesture (one of the Stone, the Forfex and the Cloth), which can't be changed in the whole game. Then a randomly chosen child (we call him player A) compares his gesture with the one on his anticlockwise (we call him play B) direction. And the loser should jump out of the circle. This operation continues until there is only one child left, which is the winner. Of course the winner is decided by both the gestures the children show and the order to compare. Your task is to tell the total number of possible winners.
+<br>
+<br>The game obeys the following rulers:
+<br>1.	Forfex beat Cloth.
+<br>2.	Cloth beat Stone.
+<br>3.	Stone beat Forfex.
+<br>4.	If it is a draw, play A wins.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains several test cases. In each case, the first line contains an integer N (the number of children, 1 <= N <= 1000), and the second line contains N capitals including 'S', 'F' and 'C, which are separated by a single space and represent the gestures of N children in clockwise order. Here 'S' expresses the Stone, 'F' expresses the Forfex, and 'C' expresses the Cloth.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each case, output the total number of possible winners in a single line.</div><p class="pst">Sample Input</p><pre class="sio">3
+C S F
+2
+S C
+4
+S S S S
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+1
+4
+</pre><p class="pst">

@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">In how many ways can you tile a 2xn rectangle by 2x1 or 2x2 tiles? 
+<br>Here is a sample tiling of a 2x17 rectangle. 
+<br><center><img src=images/2506_1.jpg></center>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input is a sequence of lines, each line containing an integer number 0 <= n <= 250.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each line of input, output one integer number in a separate line giving the number of possible tilings of a 2xn rectangle. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">2
+8
+12
+100
+200</pre><p class="pst">Sample Output</p><pre class="sio">3
+171
+2731
+845100400152152934331135470251
+1071292029505993517027974728227441735014801995855195223534251
+</pre><p class="pst">

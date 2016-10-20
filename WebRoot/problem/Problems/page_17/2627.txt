@@ -1,0 +1,17 @@
+</p><div class="ptx" lang="en-US">A gopher sits in a hole located at (xs, ys) and wants to get to a hole located at (xt, yt). The gopher can run at a constant speed of v m/sec. However, if the gopher is outside of a hole for more than a m minutes he will become a supper to hawks flying over the holes. Can the gopher make it? </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of input contains two positive integer numbers: v -- gopher's speed in meters per second and m -- the time after which the gopher becomes prey to hawks if he stays outside a hole. The second line of input contains two floating point numbers: the (xs,ys) coordinates of the gopher starting hole. The third line contains the (xt, yt) coordinates of the target hole. Each Subsequent line of input contains two floating point numbers: the (x,y) coordinates of a gopher hole. All distances are in metres, to the nearest mm. </div><p class="pst">Output</p><div class="ptx" lang="en-US">If the gopher can make it to the target hole, the output line should read "Yes, visiting n other holes.", where n is the minimal number of intermediate holes the gopher has to visit. If the gopher cannot make it the output line should read "No." There are not more than 1000 gopher holes and all coordinates are between -10000 and +10000. </div><p class="pst">Sample Input</p><pre class="sio">3 1
+0.000 0.000
+500.000 0.000
+179.000 0.000
+358.000 0.000
+</pre><p class="pst">Sample Output</p><pre class="sio">Yes, visiting 2 other holes.
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Sample input 2
+<br>5 1
+<br>0.000 0.000
+<br>0.000 550.000
+<br>179.000 0.000
+<br>0.000 301.000 
+<br>
+<br>Output for sample input 2
+<br>No.
+<br>
+<br></div><p class="pst">

@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US"><p>The cows are having a picnic! Each of Farmer John's <i>K</i> (1 ≤ <i>K</i> &le; 100) cows is grazing in one of <i>N</i> (1 &le; <i>N</i> &le; 1,000) pastures, conveniently numbered 1...<i>N</i>. The pastures are connected by <i>M</i> (1 &le; <i>M</i> &le; 10,000) one-way paths (no path connects a pasture to itself).</p><p>The cows want to gather in the same pasture for their picnic, but (because of the one-way paths) some cows may only be able to get to some pastures. Help the cows out by figuring out how many pastures are reachable by all cows, and hence are possible picnic locations.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US">Line 1: Three space-separated integers, respectively: <i>K</i>, <i>N</i>, and <i>M</i>
+<br>Lines 2..<i>K</i>+1: Line <i>i</i>+1 contains a single integer (1..<i>N</i>) which is the number of the pasture in which cow <i>i</i> is grazing.
+<br>Lines <i>K</i>+2..<i>M</i>+<i>K</i>+1: Each line contains two space-separated integers, respectively <i>A</i> and <i>B</i> (both 1..<i>N</i> and <i>A</i> != <i>B</i>), representing a one-way path from pasture <i>A</i> to pasture <i>B</i>.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Line 1: The single integer that is the number of pastures that are reachable by all cows via the one-way paths.</div><p class="pst">Sample Input</p><pre class="sio">2 4 4
+2
+3
+1 2
+1 4
+2 3
+3 4</pre><p class="pst">Sample Output</p><pre class="sio">2</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">The cows can meet in pastures 3 or 4.</div><p class="pst">

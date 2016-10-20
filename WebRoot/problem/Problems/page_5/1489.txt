@@ -1,0 +1,66 @@
+</p><div class="ptx" lang="en-US">In 1858, A. Henry Rhind, a Scottish antiquary, came into possession of a document which is now called the Rhind Papyrus. Titled "Directions for Attaining Knowledge into All Obscure Secrets", the document provides important clues as to how the ancient Egyptians performed arithmetic. 
+<br>
+<br>There is no zero in the number system. There are separate characters denoting ones, tens, hundreds, thousands, ten-thousands, hundred-thousands, millions and ten-millions. For the purposes of this problem, we use near ASCII equivalents for the symbols: 
+<br><ul>
+<br><li>| for one (careful, it's a vertical line, not 1) 
+<br><li>n for ten 
+<br><li>9 for hundred 
+<br><li>8 for thousand 
+<br><li>r for ten-thousand 
+<br></ul>
+<br>(The actual Egyptian hieroglyphs were more picturesque but followed the general shape of these modern symbols. For the purpose of this problem, we will not consider numbers greater than 99,999.) 
+<br>
+<br>Numbers were written as a group of ones preceded in turn by groups of tens, hundreds, thousands and ten-thousands. Thus our number 4,023 would be rendered: ||| nn 8888. Notice that a zero digit is indicated by a group consisting of none of the corresponding symbol. The number 40,230 would thus be rendered: nnn 99 rrrr. (In the Rhind Papyrus, the groups are drawn more picturesquely, often spread across more than one horizontal line; but for the purposes of this problem, you should write numbers all on a single line.) 
+<br>
+<br>To multiply two numbers a and b, the Egyptians would work with two columns of numbers. They would begin by writing the number | in the left column beside the number a in the right column. They would proceed to form new rows by doubling the numbers in both columns. Notice that doubling can be effected by copying symbols and normalizing by a carrying process if any group of symbols is larger than 9 in size. Doubling would continue as long as the number in the left column does not exceed the other multiplicand b. The numbers in the first column that summed to the multiplicand b were marked with an asterisk. The numbers in the right column alongside the asterisks were then added to produce the result. Below, we show the steps corresponding to the multiplication of 483 by 27: 
+<br><pre>| *                             ||| nnnnnnnn 9999
+<br>|| *                            |||||| nnnnnn 999999999
+<br>||||                            || nnn 999999999 8
+<br>|||||||| *                      |||| nnnnnn 99999999 888
+<br>|||||| n *                      |||||||| nn 9999999 8888888
+<br>The solution is: | nnnn 888 r
+<br>(The solution came from adding together: 
+<br>||| nnnnnnnn 9999
+<br>|||||| nnnnnn 999999999
+<br>|||| nnnnnn 99999999 888
+<br>|||||||| nn 9999999 8888888.)</pre>
+<br>You are to write a program to perform this Egyptian multiplication. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input will consist of several pairs of nonzero numbers written in the Egyptian system described above. There will be one number per line; each number will consist of groups of symbols, and each group is terminated by a single space (including the last group). Input will be terminated by a blank line. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each pair of numbers, your program should print the steps described above used in Egyptian multiplication. Numbers in the left column should be ush with the left margin. Each number in the left and right column will be represented by groups of symbols, and each group is terminated by a single space (including the last group). If there is an asterisk in the left column, it should be separated from the end of the left number by a single space. Up to the 34th character position should then be filled with spaces. Numbers in the right column should begin at the 35th character position on the line and end with a newline character. Test data will be chosen to ensure that no overlap can occur. After showing each of the doubling steps, your program should print the string: "The solution is: " followed by the product of the two numbers in Egyptian notation. </div><p class="pst">Sample Input</p><pre class="sio">||
+||
+||| 
+|||| 
+nnnnnn 9 
+||| n 
+n 
+9 
+||| 
+8</pre><p class="pst">Sample Output</p><pre class="sio">|                                 || 
+|| *                              |||| 
+The solution is: ||||
+|                                 ||| 
+||                                |||||| 
+|||| *                            || n 
+The solution is: || n 
+| *                               nnnnnn 9 
+||                                nn 999 
+|||| *                            nnnn 999999 
+|||||||| *                        nnnnnnnn 99 8 
+The solution is: nnnnnnnn 88 
+|                                 n 
+||                                nn 
+|||| *                            nnnn 
+||||||||                          nnnnnnnn 
+|||||| n                          nnnnnn 9 
+|| nnn *                          nn 999 
+|||| nnnnnn *                     nnnn 999999 
+The solution is: 8 
+|                                 ||| 
+||                                |||||| 
+||||                              || n 
+|||||||| *                        |||| nn 
+|||||| n                          |||||||| nnnn 
+|| nnn *                          |||||| nnnnnnnnn 
+|||| nnnnnn *                     || nnnnnnnnn 9 
+|||||||| nn 9 *                   |||| nnnnnnnn 999 
+|||||| nnnnn 99 *                 |||||||| nnnnnn 9999999 
+|| n 99999 *                      |||||| nnn 99999 8 
+The solution is: 888</pre><p class="pst">

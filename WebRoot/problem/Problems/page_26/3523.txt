@@ -1,0 +1,31 @@
+</p><div class="ptx" lang="en-US"><p>You are working for an amusement park as an operator of an <i>obakeyashiki</i>, or a haunted house, in which guests walk through narrow and dark corridors. The house is proud of their lively ghosts, which are actually robots remotely controlled by the operator, hiding here and there in the corridors. One morning, you found that the ghosts are not in the positions where they are supposed to be. Ah, yesterday was Halloween. Believe or not, paranormal spirits have moved them around the corridors in the night. You have to move them into their right positions before guests come. Your manager is eager to know how long it takes to restore the ghosts.</p><p>In this problem, you are asked to write a program that, given a floor map of a house, finds the smallest number of steps to move all ghosts to the positions where they are supposed to be.</p><p>A floor consists of a matrix of square cells. A cell is either a wall cell where ghosts cannot move into or a corridor cell where they can.</p><p>At each step, you can move any number of ghosts simultaneously. Every ghost can either stay in the current cell, or move to one of the corridor cells in its 4-neighborhood (i.e. immediately left, right, up or down), if the ghosts satisfy the following conditions:</p><ol><li><p>No more than one ghost occupies one position at the end of the step.</p></li><li><p>No pair of ghosts exchange their positions one another in the step.</p></li></ol><p>For example, suppose ghosts are located as shown in the following (partial) map, where a sharp sign (‘<tt>#</tt>’) represents a wall cell and ‘<tt>a</tt>’, ‘<tt>b</tt>’, and ‘<tt>c</tt>’ ghosts.</p><div align="center"><pre>####<br> ab#<br>#c##<br>####</pre></div><p>The following four maps show the only possible positions of the ghosts after one step.</p><table align="center" border="0"><tr><td width="16%"><pre>####<br> ab#<br>#c##<br>####</pre></td><td width="12%"></td><td width="16%"><pre>####<br>a b#<br>#c##<br>####</pre></td><td width="12%"></td><td width="16%"><pre>####<br>acb#<br># ##<br>####</pre></td><td width="12%"></td><td width="16%"><pre>####<br>ab #<br>#c##<br>####</pre></td></tr></table></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input consists of at most 10 datasets, each of which represents a floor map of a house. The format of a dataset is as follows.</p><div style="padding-left: 2em;"><table border="0"><tr><td><i>w</i></td><td><i>h</i></td><td><i>n</i></td><td></td></tr><tr><td><i>c</i><sub>11</sub></td><td><i>c</i><sub>12</sub></td><td>⋯</td><td><i>c</i><sub>1<i>w</i></sub></td></tr><tr><td><i>c</i><sub>21</sub></td><td><i>c</i><sub>22</sub></td><td>⋯</td><td><i>c</i><sub>2<i>w</i></sub></td></tr><tr><td align="center">⋮</td><td align="center">⋮</td><td>⋱</td><td align="center">⋮</td></tr><tr><td><i>c</i><sub><i>h</i>1</sub></td><td><i>c</i><sub><i>h</i>2</sub></td><td>⋯</td><td><i>c<sub>hw</sub></i></td></tr></table></div><p><i>w</i>, <i>h</i> and <i>n</i> in the first line are integers, separated by a space. <i>w</i> and <i>h</i> are the floor width and height of the house, respectively. <i>n</i> is the number of ghosts. They satisfy the following constraints.</p><p align="center">4 ≤ <i>w</i> ≤ 16, 4 ≤ <i>h</i> ≤ 16, 1 ≤ <i>n</i> ≤ 3</p><p>Subsequent <i>h</i> lines of <i>w</i> characters are the floor map. Each of <i>c<sub>ij</sub></i> is either:</p><ul><li><p>a ‘<tt>#</tt>’ representing a wall cell,</p></li><li><p>a lowercase letter representing a corridor cell which is the initial position of a ghost,</p></li><li><p>an uppercase letter representing a corridor cell which is the position where the ghost corresponding to its lowercase letter is supposed to be, or</p></li><li><p>a space representing a corridor cell that is none of the above.</p></li></ul><p>In each map, each of the first <i>n</i> letters from <tt>a</tt> and the first <i>n</i> letters from <tt>A</tt> appears once and only once. Outermost cells of a map are walls; i.e. all characters of the first and last lines are sharps; and the first and last characters on each line are also sharps. All corridor cells in a map are connected; i.e. given a corridor cell, you can reach any other corridor cell by following corridor cells in the 4-neighborhoods. Similarly, all wall cells are connected. Any 2 × 2 area on any map has at least one sharp. You can assume that every map has a sequence of moves of ghosts that restores all ghosts to the positions where they are supposed to be.</p><p>The last dataset is followed by a line containing three zeros separated by a space.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each dataset in the input, one line containing the smallest number of steps to restore ghosts into the positions where they are supposed to be should be output. An output line should not contain extra characters such as spaces.</p></div><p class="pst">Sample Input</p><pre class="sio">5 5 2
+#####
+#A#B#
+#   #
+#b#a#
+#####
+16 4 3
+################
+## ########## ##
+#    ABCcba    #
+################
+16 16 3
+################
+### ##    #   ##
+##  #  ##   # c#
+#  ## ########b#
+# ##  # #   #  #
+#  # ##   # # ##
+##  a#  # # #  #
+### ## #### ## #
+##   #   #  #  #
+#  ##### # ## ##
+####   #B# #   #
+##  C#   #   ###
+#  # # ####### #
+# ######  A##  #
+#        #    ##
+################
+0 0 0</pre><p class="pst">Sample Output</p><pre class="sio">7
+36
+77</pre><p class="pst">

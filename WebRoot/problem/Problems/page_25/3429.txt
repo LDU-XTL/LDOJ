@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US"><p>Classic geometric construction is based on two instruments: ruler and compass. However, some constructions are possible using only the ruler. Specifically, let us define that if we have a set of <i>N</i> points, we can select two pairs of them, draw a line through each pair, and construct a new point as an intersection of these two lines. New point can then be added to the set as (<i>N</i> + 1)-th point, and the process repeated.</p><p>Such geometric constructions are abstract notions, and attempt to verify them with physical pencil and ruler can lead to errors caused by imprecision of these instruments. So you are tasked to write a program that does exact verification.</p><p>Your program must read a set of points and a sequence of constructing operations and find out whether the point with coordinates (0, 0) is one of the constructed points. Note that, similar to physical instruments, floating point calculations performed by computers are also imprecise. This should not, of course, alter verification results.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Input file contains number of points <i>N</i> followed by their integer coordinates <i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <i>x</i><sub>2</sub> <i>y</i><sub>2 ... </sub><i>x<sub>N</sub></i> <i>y<sub>N</sub></i>. Next comes number of construction operations <i>M</i> followed by<i> M</i> quads of integers <i>a<sub>i</sub></i> <i>b<sub>i</sub></i> <i>c<sub>i</sub></i> <i>d<sub>i</sub></i>, where <i>k</i>-th quad means that a new point is constructed as an intersection of lines containing pairs of points <i>a<sub>i</sub></i>, <i>b<sub>i</sub></i> and <i>c<sub>i</sub></i>, <i>d<sub>i</sub></i>. Such a point is guaranteed to exist. Constructed point is assigned a number<i> N</i> + <i>k</i> and can be used in following operations.</p><h4>Constraints</h4><p>4 ≤ <i>N</i> ≤ 100, 1 ≤ <i>M</i> ≤ 10, &#8722;10<sup>6</sup> ≤ <i>x<sub>i</sub></i>, <i>y<sub>i</sub></i> ≤ 10<sup>6</sup> </p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output file must contain a single integer — number of the first operation which constructs a point (0, 0), or 0 (zero), if there is no such operation.</p></div><p class="pst">Sample Input</p><pre class="sio"><b>Sample Input 1</b>
+4
+-1 -1  -2 2   2 2  1 -1
+1
+1 3 2 4
+<b>Sample Input 2</b>
+4
+-1000 -1000  -2000 2000  2001 2000  1000 -1000
+1
+1 3 2 4</pre><p class="pst">Sample Output</p><pre class="sio"><b>Sample Output 1</b>
+1
+<b>Sample Output 2</b>
+0</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><p>Bold texts appearing in the sample sections are informative and do not form part of the actual data.</p></div><p class="pst">

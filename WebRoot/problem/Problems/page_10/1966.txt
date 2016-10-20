@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">The interconnection of the relays in a cable TV network is bi-directional. The network is connected if there is at least one interconnection path between each pair of relays present in the network. Otherwise the network is disconnected. An empty network or a network with a single relay is considered connected. The safety factor f of a network with n relays is:
+<br>1. n, if the net remains connected regardless the number of relays removed from the net.
+<br>2. The minimal number of relays that disconnect the network when removed.
+<br><center><img src=images/1966_1.jpg></center>
+<br>For example, consider the nets from figure 1, where the circles mark the relays and the solid lines correspond to interconnection cables. The network (a) is connected regardless the number of relays that are removed and, according to rule (1), f=n=3. The network (b) is disconnected when 0 relays are removed, hence f=0 by rule (2). The network (c) is disconnected when the relays 1 and 2 or 1 and 3 are removed. The safety factor is 2.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Write a program that reads several data sets from the standard input and computes the safety factor for the cable networks encoded by the data sets. Each data set starts with two integers: 0<=n<=50,the number of relays in the net, and m, the number of cables in the net. Follow m data pairs (u,v), u < v, where u and v are relay identifiers (integers in the range 0..n-1). The pair (u,v) designates the cable that interconnects the relays u and v. The pairs may occur in any order.Except the (u,v) pairs, which do not contain white spaces, white spaces can occur freely in input. Input data terminate with an end of file and are correct.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, the program prints on the standard output, from the beginning of a line, the safety factor of the encoded net.</div><p class="pst">Sample Input</p><pre class="sio">0 0
+1 0
+3 3 (0,1) (0,2) (1,2)
+2 0
+5 7 (0,1) (0,2) (1,3) (1,2) (1,4) (2,3) (3,4)</pre><p class="pst">Sample Output</p><pre class="sio">0
+1
+3
+0
+2</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">The first data set encodes an empty network, the second data set corresponds to a network with a single relay, and the following three data sets encode the nets shown in figure 1.</div><p class="pst">

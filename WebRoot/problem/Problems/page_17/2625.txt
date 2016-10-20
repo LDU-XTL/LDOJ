@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">Coupons in cereal boxes are numbered 1 to n, and a set of one of each is required for a prize (a cereal box, of course). With one coupon per box, how many boxes on average are required to make a complete set of n coupons? </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of a sequence of lines each containing a single positive integer n, 1<=n<=22, giving the size of the set of coupons.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each input line, output the average number of boxes required to collect the complete set of n coupons. If the answer is an integer number, output the number. If the answer is not integer, then output the integer part of the answer followed by a space and then by the proper fraction in the format shown below. The fractional part should be irreducible. There should be no trailing spaces in any line of ouput. </div><p class="pst">Sample Input</p><pre class="sio">2
+5
+17
+</pre><p class="pst">Sample Output</p><pre class="sio">3 
+   5
+11 --
+   12
+   340463
+58 ------
+   720720
+
+</pre><p class="pst">

@@ -1,0 +1,8 @@
+</p><div class="ptx" lang="en-US">Longge is good at mathematics and he likes to think about hard mathematical problems which will be solved by some graceful algorithms. Now a problem comes: Given an integer N(1 < N < 2^31),you are to calculate   &sum;gcd(i, N) 1<=i <=N. 
+<br>
+<br>"Oh, I know, I know!" Longge shouts! But do you know? Please solve it.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input contain several test case.
+<br>A number N per line.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each N, output ,&sum;gcd(i, N) 1<=i <=N, a line </div><p class="pst">Sample Input</p><pre class="sio">2
+6</pre><p class="pst">Sample Output</p><pre class="sio">3
+15</pre><p class="pst">

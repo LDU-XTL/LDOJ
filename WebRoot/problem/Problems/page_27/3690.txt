@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US"><div><p>The starry sky in the summer night is one of the most beautiful things on this planet. People imagine that some groups of stars in the sky form so-called constellations. Formally a constellation is a group of stars that are connected together to form a figure or picture. Some well-known constellations contain striking and familiar patterns of bright stars. Examples are Orion (containing a figure of a hunter), Leo (containing bright stars outlining the form of a lion), Scorpius (a scorpion), and Crux (a cross).</p><p>In this problem, you are to find occurrences of given constellations in a starry sky. For the sake of simplicity, the starry sky is given as a <i>N</i> &times; <i>M</i> matrix, each cell of which is a '*' or '0' indicating a star in the corresponding position or no star, respectively. Several constellations are given as a group of <i>T</i> <i>P</i> &times; <i>Q</i> matrices. You are to report how many constellations appear in the starry sky.</p><p>Note that a constellation appears in the sky if and only the corresponding <i>P</i> &times; <i>Q</i> matrix exactly matches some <i>P</i> &times; <i>Q</i> sub-matrix in the <i>N</i> &times; <i>M</i> matrix.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><div><p>The input consists of multiple test cases. Each test case starts with a line containing five integers <i>N</i>,<i> M</i>,<i> T</i>,<i> P</i> and<i> Q</i>(1 &le; <i>N</i>,<i> M</i> &le; 1000, 1 &le; <i>T</i> &le; 100, 1 &le; <i>P</i>,<i> Q</i> &le; 50). <br>The following <i>N</i> lines describe the <i>N</i> &times; <i>M</i> matrix, each of which contains <i>M</i> characters '*' or '0'.<br>The last part of the test case describe <i>T</i> constellations, each of which takes <i>P</i> lines in the same format as the matrix describing the sky. There is a blank line preceding each constellation.<br>The last test case is followed by a line containing five zeros.</p></div></div><p class="pst">Output</p><div class="ptx" lang="en-US"><div><p>For each test case, print a line containing the test case number( beginning with 1) followed by the number of constellations appearing in the sky.</p></div></div><p class="pst">Sample Input</p><pre class="sio">3 3 2 2 2
+*00
+0**
+*00
+
+**
+00
+
+*0
+**
+3 3 2 2 2
+*00
+0**
+*00
+
+**
+00
+
+*0
+0*
+0 0 0 0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">Case 1: 1
+Case 2: 2</pre><p class="pst">

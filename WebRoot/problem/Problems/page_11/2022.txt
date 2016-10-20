@@ -1,0 +1,21 @@
+</p><div class="ptx" lang="en-US">You are writing your first website and seem to be making your fair share of simple HTML syntax errors. You have decided to write an HTML parser to help you determine if your HTML code is syntactically correct based on the following condensed HTML definition:
+<br><TABLE border=1><TBODY><TR><TD><B>HTML CODE</B></TD><TD>&lt;HTML&gt;<I><B>BODY</B></I>&lt;/HTML&gt;</TD></TR><TR><TD><B>BODY</B></TD><TD>&lt;BODY&gt;<I><B>TEXT</B></I>&lt;/BODY&gt;</TD></TR><TR><TD><B>TEXT</B></TD><TD><I><B>STRING</B></I> |<I><B>STRING TEXT</B></I> |<I><B>TAG</B></I> |<I><B>TAG TEXT</B></I></TD></TR><TR><TD><B>STRING</B></TD><TD>possibly empty string of printable characters other than '&lt;' and '&gt;')</TD></TR><TR><TD><B>TAG</B></TD><TD><I><B>BOLD</B></I> |<I><B>ITALICS</B></I> |<I><B>LINK</B></I></TD></TR><TR><TD><B>BOLD</B></TD><TD>&lt;B&gt;<I><B>TEXT</B></I>&lt;/B&gt;</TD></TR><TR><TD><B>ITALICS</B></TD><TD>&lt;I&gt;<I><B>TEXT</B></I>&lt;/I&gt;</TD></TR><TR><TD><B>LINK</B></TD><TD>&lt;A HREF=<I><B>URL</B></I>&gt;<I><B>TEXT</B></I>&lt;/A&gt;</TD></TR><TR><TD><B>URL</B></TD><TD>http://<I><B>STRING</B></I>.com</TD></TR></TBODY></TABLE></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains a single integer n indicating the number of data sets. 
+<br>
+<br>The following n lines each represent a data set and consists of up to 1000 characters. Spaces can be contained anywhere within the data set. 
+<br>
+<br>Note that all tags are case sensitive. 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">If the code is syntactically correct, the following string will be printed: 
+<br>
+<br>"Syntax Included" 
+<br>
+<br>Otherwise the following string will be printed: 
+<br>
+<br>"No Syntax Included" 
+<br></div><p class="pst">Sample Input</p><pre class="sio">3
+&lt;HTML>&lt;BODY>&lt;B>Hello world!&lt;/B>&lt;/BODY>&lt;/HTML>
+&lt;HTML>&lt;BODY>&lt;B>Is this correct?&lt;/B>&lt;/HTML>
+&lt;HTML>&lt;BODY>&lt;A HREF=http://www.go.com>link&lt;/A>&lt;/BODY>&lt;/HTML>
+</pre><p class="pst">Sample Output</p><pre class="sio">Syntax Included
+No Syntax Included
+Syntax Included
+</pre><p class="pst">

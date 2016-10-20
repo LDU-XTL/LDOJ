@@ -1,0 +1,28 @@
+</p><div class="ptx" lang="en-US">Big Johnsson Trucks Inc. is a company specialized in manufacturing big trucks. Their latest model, the Godzilla V12, is so big that the amount of cargo you can transport with it is never limited by the truck itself. It is only limited by the weight restrictions that apply for the roads along the path you want to drive. 
+<br>
+<br>Given start and destination city, your job is to determine the maximum load of the Godzilla V12 so that there still exists a path between the two specified cities. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will contain one or more test cases. The first line of each test case will contain two integers: the number of cities n (2<=n<=200) and the number of road segments r (1<=r<=19900) making up the street network. 
+<br>Then r lines will follow, each one describing one road segment by naming the two cities connected by the segment and giving the weight limit for trucks that use this segment. Names are not longer than 30 characters and do not contain white-space characters. Weight limits are integers in the range 0 - 10000. Roads can always be travelled in both directions. 
+<br>The last line of the test case contains two city names: start and destination. 
+<br>Input will be terminated by two values of 0 for n and r. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print three lines: 
+<br><ul><li>a line saying "Scenario #x" where x is the number of the test case 
+<br><li>a line saying "y tons" where y is the maximum possible load 
+<br><li>a blank line </ul></div><p class="pst">Sample Input</p><pre class="sio">4 3
+Karlsruhe Stuttgart 100
+Stuttgart Ulm 80
+Ulm Muenchen 120
+Karlsruhe Muenchen
+5 5
+Karlsruhe Stuttgart 100
+Stuttgart Ulm 80
+Ulm Muenchen 120
+Karlsruhe Hamburg 220
+Hamburg Muenchen 170
+Muenchen Karlsruhe
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">Scenario #1
+80 tons
+ 
+Scenario #2
+170 tons
+</pre><p class="pst">

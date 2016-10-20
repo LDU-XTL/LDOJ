@@ -1,0 +1,27 @@
+</p><div class="ptx" lang="en-US">Alice and Bob have a set of N cards labelled with numbers 1 ... N (so that no two cards have the same label) and a shuffle machine. We assume that N is an odd integer. 
+<br>The shuffle machine accepts the set of cards arranged in an arbitrary order and performs the following operation of double shuffle : for all positions i, 1 <= i <= N, if the card at the position i is j and the card at the position j is k, then after the completion of the operation of double shuffle, position i will hold the card k. 
+<br>
+<br>Alice and Bob play a game. Alice first writes down all the numbers from 1 to N in some random order: a1, a2, ..., aN. Then she arranges the cards so that the position ai holds the card numbered a<sub>i+1</sub>, for every 1 <= i <= N-1, while the position aN holds the card numbered a1. 
+<br>
+<br>This way, cards are put in some order x1, x2, ..., xN, where xi is the card at the i<sup>th</sup> position. 
+<br>
+<br>Now she sequentially performs S double shuffles using the shuffle machine described above. After that, the cards are arranged in some final order p1, p2, ..., pN which Alice reveals to Bob, together with the number S. Bob's task is to guess the order x1, x2, ..., xN in which Alice originally put the cards just before giving them to the shuffle machine. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input contains two integers separated by a single blank character : the odd integer N, 1 <= N <= 1000, the number of cards, and the integer S, 1 <= S <= 1000, the number of double shuffle operations. 
+<br>The following N lines describe the final order of cards after all the double shuffles have been performed such that for each i, 1 <= i <= N, the (i+1)<sup>st</sup> line of the input file contains pi (the card at the position i after all double shuffles). 
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">The output should contain N lines which describe the order of cards just before they were given to the shuffle machine. 
+<br>For each i, 1 <= i <= N, the ith line of the output file should contain xi (the card at the position i before the double shuffles). 
+<br></div><p class="pst">Sample Input</p><pre class="sio">7 4
+6
+3
+1
+2
+4
+7
+5
+</pre><p class="pst">Sample Output</p><pre class="sio">4
+7
+5
+6
+1
+2
+3</pre><p class="pst">

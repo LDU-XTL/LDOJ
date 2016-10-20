@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">Panagola, The Lord of city F likes to parade very much. He always inspects his city in his car and enjoys the welcome of his citizens. City F has a regular road system. It looks like a matrix with n+1 west-east roads and m+1 north-south roads. Of course, there are (n+1)*(m+1) road crosses in that system. The parade can start at any cross in the southernmost road and end at any cross in the northernmost road. Panagola will never travel from north to south or pass a cross more than once. Citizens will see Panagola along the sides of every west-east road. People who love Panagola will give him a warm welcome and those who hate him will throw eggs and tomatoes instead. We call a road segment connecting two adjacent crosses in a west-east road a “love-hate zone”. Obviously there are m love-hate zones in every west-east road. When passing a love-hate zone, Panagola may get happier or less happy, depending on how many people love him or hate him in that zone. So we can give every love-hate zone a “welcome value” which may be negative, zero or positive. As his secretary, you must make Panagola as happy as possible. So you have to find out the best route - of which the sum of the welcome values is maximal. You decide where to start the parade and where to end it. 
+<br> 
+<br>When seeing his Citizens, Panagola always waves his hands. He may get tired and need a break. So please never make Panagola travel in a same west-east road for more than k minutes. If it takes p minutes to pass a love-hate zone, we say the length of that love-hate zone is p. Of course you know every love-hate zone's length. 
+<br> 
+<br>The figure below illustrates the case in sample input. In this figure, a best route is marked by thicker lines.
+<br>
+<br><center><img src="images/3926_1.png"></center></div><p class="pst">Input</p><div class="ptx" lang="en-US">There are multiple test cases. Input ends with a line containing three zeros. 
+<br>Each test case consists of 2 * n + 3 lines. 
+<br>The first line contains three integers: n, m and k.(0&lt;n&lt;=100,0&lt;m&lt;=10000, 0&lt;=k&lt;=3000000) 
+<br>The next n+1 lines stands for n + 1 west-east roads in north to south order. Each line contains m integers showing the welcome values of the road's m love-hate zones, in west to east order. 
+<br>The last n+1 lines also stands for n + 1 west-east roads in north to south order. Each line contains m integers showing the lengths (in minutes) of the road's m love-hate zones, in west to east order.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output the sum of welcome values of the best route. The answer can be fit in a 32 bits integer.</div><p class="pst">Sample Input</p><pre class="sio">2 3 2 
+7 8 1 
+4 5 6 
+1 2 3 
+1 1 1 
+1 1 1 
+1 1 1 
+0 0 0</pre><p class="pst">Sample Output</p><pre class="sio">27</pre><p class="pst">

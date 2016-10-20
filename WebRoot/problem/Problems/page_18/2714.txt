@@ -1,0 +1,25 @@
+</p><div class="ptx" lang="en-US">Random walks are used to model a wide range of phenomena, from Brownian motion to gambling. For example, a gambler who bets on heads or tails on a coin toss wins or loses his bet each turn. The amount of money the gambler has throughout the game is a random walk. Although the bets in each turn may be different, it is easy to see that the gambler wins the maximum amount of money if he wins every turn. Similarly, he loses the maximum amount if he loses every turn. 
+<br>
+<br>We consider the following two-dimensional variation of the random walk. We are given n two-dimensional nonzero vectors vi = (xi, yi), no two of which are parallel. In step i, a coin is flipped. If it is heads, we move xi meters in the x direction and yi meters in the y direction. If it is tails, we move -xi and -yi meters in the x and y directions. 
+<br>
+<br>We are interested in computing the maximum distance we can be away from our starting point. This is easy in one-dimension, but it is not so easy in the two-dimensional version. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of a number of test cases. Each test case starts with a line containing the integer n, which is at most 100. Each of the next n lines gives a pair of integers xi and yi specifying vi. The coordinates are less than 1000 in magnitude. The end of input is specified by n = 0. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, print on a line the maximum distance we can be away from the starting point, in the format shown below. Output the answer to 3 decimal places. </div><p class="pst">Sample Input</p><pre class="sio">3
+1 1
+0 1
+-1 1
+2
+4 0
+1 1
+7
+1 3
+-2 -7
+7 8
+-2 9
+-7 -3
+4 -3
+-2 -2
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">Maximum distance = 3.000 meters.
+Maximum distance = 5.099 meters.
+Maximum distance = 37.336 meters.
+</pre><p class="pst">

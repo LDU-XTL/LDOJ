@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US"><p><img src="images/3512_1.png" align="right">Unlike a straight line, a <i>straight segment</i> between two points <i>P</i><sub>1</sub>, <i>P</i><sub>2</sub> (normally written as <span style="border-top: 1pt solid;"><i>P</i><sub>1</sub><i>P</i><sub>2</sub></span>) is a line that links the two points <i>but doesn’t extend beyond them</i>. A third point <i>P</i><sub>3</sub> is said to be <i>incident</i> to <span style="border-top: 1pt solid;"><i>P</i><sub>1</sub><i>P</i><sub>2</sub></span> iff <i>P</i><sub>3</sub> lies on the straight line and between the points <i>P</i><sub>1</sub> and <i>P</i><sub>2</sub>. <span style="border-top: 1pt solid;"><i>P</i><sub>1</sub><i>P</i><sub>2</sub></span> is said to <i>include</i> <i>P</i><sub>3</sub>. By definition, <i>P</i><sub>1</sub> and <i>P</i><sub>2</sub> are included in <span style="border-top: 1pt solid;"><i>P</i><sub>1</sub><i>P</i><sub>2</sub></span>. Write a program to find the segment that includes the most number of given points.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>Your program will be tested on one or more test cases. Each test case includes a set of two or more unique points, where the Cartesian coordinates of each point is specified on a separate line using two integers <i>X</i> and <i>Y</i> where 0 &le; |<i>X</i>|, |<i>Y</i>| &lt; 1,000,000. No test case has more than 1000 points. An input line made of two or more <tt>'-'</tt> (minus signs) signals the end of a test case. An extra input line of two or more <tt>'-'</tt> (minus signs) follow the last test case.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output the result on a single line using the following format:</p><p><tt>k. n</tt></p><p>Where <tt>k</tt> is the test case number (starting at 1), and <tt>n</tt> is the number of points on the segment.</p></div><p class="pst">Sample Input</p><pre class="sio">1 1
+1 5
+5 9
+9 5
+5 5
+3 2
+5 3
+----
+1 5
+5 1
+1 1
+5 5
+--
+--------</pre><p class="pst">Sample Output</p><pre class="sio">1. 4
+2. 2</pre><p class="pst">

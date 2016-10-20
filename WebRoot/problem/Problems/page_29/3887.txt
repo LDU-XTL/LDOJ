@@ -1,0 +1,41 @@
+</p><div class="ptx" lang="en-US">Most of the contestants managed to arrive at the Benelux Algorithm Programming Contest on time. All except those unfortunate souls who chose to use a cheap car navigation system. A couple of wrong turns led them completely off course, and now they have ended up all over the world.
+<br>Consider the case of contestant J.-P. B. (who has asked to remain anonymous). After driving for countless hours he found himself beneath three miles of water in the middle of the Atlantic Ocean. He was so focused on his navigation system that he failed to look outside until he noticed that the air was getting very moist. Fortunately for this contestant there was a spare submarine under his seat, which allowed him to escape this perilous situation.
+<br>Tragic as this story seems, it is not even the worst. Another contestant, whom we will simply call S, wisely decided to travel by train. Sadly, she still listened to the advice of her evil car navigation system, and this morning she took a southbound train instead of heading north. After some more bad directions she found herself locked inside a labyrinth, in the pyramid of the Egyptian pharaoh Sok-O-Ban. As any experienced adventurer knows, these ancient tombs
+<br>are often riddled with traps and other mechanisms. Sok-O-Ban's final resting place was no exception.
+<br>During his lifetime this pharaoh was known for his sadistic behavior, and he liked to give impossible challenges to random strangers. It is therefore no coincidence that the cavern where contestant S ended up was completely closed off, surrounded by solid rock on every side.
+<br>After looking around, our protagonist S managed to draw a map of the tomb. Fortunately she found no skeletons, mummies or spiked death traps. She did discover some buttons embedded in the floor tiles. If she could press them all at the same time, then the hidden exit would open. But as soon as she would release one of the buttons, the door would close again.
+<br>Besides the buttons, the walls and a few dusty floor tiles, there were also two sarcophagi filled with rocks. To accommodate the small stature of the ancient Egyptians, the sarcophagi were cubes with sides measuring 1 meter, the same size as the floor tiles. It seemed that these sarcophagi were the key to escaping: by pushing them onto the buttons the exit could be kept open. Only one small problem remained: the sarcophagi were far too heavy to move by hand and too large to climb over.
+<br>Fortunately for S, the pharaoh did not anticipate the portable sarcophagus transporter she had conveniently stashed in her backpack. Attaching this reusable system to her arms allowed her to effortlessly push a sarcophagus exactly one meter straight ahead. This corresponds nicely to the 1 meter steps S used when marking out the grid in her map.</div><p class="pst">Input</p><div class="ptx" lang="en-US">On the first line of the input is a positive integer, the number of test cases. Then for each test case:
+<br>A line containing two positive integers h,w &lt;= 50, the height and width of the maze.
+<br>h lines of w characters each, the map of the cavern our protagonist made, in which:
+<br>- '#' is a wall or otherwise impassible space.
+<br>- '.' is an empty space, of which there are at most 100.
+<br>- 'S' is our protagonist.
+<br>- 'X' is one of the heavy sarcophagi. There are at most two of these.
+<br>- 'B' is a button.
+<br>- 'E' is the exit. There is exactly one exit, on the edge of the map.
+<br>The edge of the map contains only walls and the exit.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case:
+<br>One line containing the minimum number of steps (S always takes one meter steps along the grid lines, possibly pushing a sarcophagus.) it will take S to escape the tomb, or the text "impossible" if she cannot escape.</div><p class="pst">Sample Input</p><pre class="sio">3
+7 8
+########
+#..S...#
+#.####.#
+#.#.XB.#
+#.####.#
+#......E
+########
+7 8
+########
+#..S...#
+#.####.#
+#.#.BX.#
+#.####.#
+#......E
+########
+4 8
+##E#####
+#...####
+#SX.XBB#
+########</pre><p class="pst">Sample Output</p><pre class="sio">impossible
+10
+19</pre><p class="pst">

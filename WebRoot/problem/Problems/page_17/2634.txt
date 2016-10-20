@@ -1,0 +1,88 @@
+</p><div class="ptx" lang="en-US">Brian Huck has invented a new powersaving computer. With the current CMOSbased processors, a certain amount of power
+<br>is lost each time a bit is changed from 0 to 1 or back. To avoid this problem, Brian's new Nullary Core stores only zeros. All numbers are stored in nullary form, as shown on the right.
+<br><table border=1><tr><td>Decimal</td><td>Nullary</td></tr><tr><td>0
+<br>1
+<br>2
+<br>3
+<br>4
+<br>5
+<br>...</td><td>
+<br>0
+<br>00
+<br>000
+<br>0000
+<br>00000
+<br>...</td></tr></table>
+<br>His initial 64-nit model has 26 registers, each of which may store up to 64 nits, and any attempt to store more than 64 nits will result in a run time error. There is also a flag register, which contains either a zero, or nothing. The instruction set is as follows:
+<br><center>Table 1: NC Instruction Set
+<br><table border=1 width=70%><tr><td>Instruction</td><td>Explanation and how to simulate in C</td></tr><tr><td>A</td><td>Add a zero to the value in register A (similarly for all uppercase letters).
+<br>a++;</td></tr><tr><td>a</td><td>First, empty the flag register. Then, if possible, remove a zero from register A, and place it in the flag register (similarly for all lowercase letters)
+<br>flag = 0; if(a>0) { flag=1; a--; }</td></tr><tr><td>(</td><td>If the flag register is empty, jump past the matching ). Otherwise, empty the flag register.
+<br>while(flag) { flag=0; ....</td></tr><tr><td>)</td><td>Jump to the matching (.
+<br>... }</td></tr></table></center>
+<br>Apart from instructions, no other characters than whitespace are allowed in a nullary program.
+<br><b>Sample programs</b>
+<br>Brian has provided some programs to illustrate the elegance and simplicity of his computer.
+<br>Your task will be to write a sorting program for Brian's Nullary Corebased Prototype Computer. The NCPC has limited memory, so your program must be no longer than 5432 instructions. Also, the running time of your program must be no more than 5 * 10<sup>6</sup> steps for any possible input, where a step is considered to be the execution of one instruction. 
+<br><center>Table 2: Sample NC programs
+<br><table border=1 width=70%><tr><td>b(b)a(Ba)</td><td>Move register A to register B (by first emptying register B, then repeatedly pulling a single zero from register A and placing it into B).</td></tr><tr><td>XXXa(GIa)i(g(FYg)y(Gy)f(Zb(z)z
+<br>(i(YBi)y(Iy))f)Zb(zb)z(xz)i)x</td><td>Set the flag register if the number of zeros in register A is prime.</td></tr></table></center>
+<br><b>Important note:</b> You must submit some Java, C or C++ source code that generate the nullary source code of this program.
+<br><b>Input to your nullary program</b>
+<br>The numbers to be sorted will be given in the first 24 registers A-X; the remaining two registers (Y and Z) will be empty.
+<br><b>Output to your nullary program</b>
+<br>The sorted numbers should be in registers A through X, in increasing order. Register Y and Z should be empty.
+<br><b>Sample Input to your nullary program</b>
+<br>A 0
+<br>B 000000000
+<br>C 000000
+<br>D 0000
+<br>E 00000000
+<br>F 0000000
+<br>G 0000
+<br>H 000000
+<br>I 000000000
+<br>J 000
+<br>K
+<br>L
+<br>M
+<br>N
+<br>O
+<br>P
+<br>Q
+<br>R
+<br>S
+<br>T
+<br>U
+<br>V
+<br>W
+<br>X 0
+<br>Y
+<br>Z
+<br><b>Sample Output to your nullary program</b>
+<br>A
+<br>B
+<br>C
+<br>D
+<br>E
+<br>F
+<br>G
+<br>H
+<br>I
+<br>J
+<br>K
+<br>L
+<br>M
+<br>N 0
+<br>O 0
+<br>P 000 
+<br>Q 0000
+<br>R 0000
+<br>S 000000
+<br>T 000000
+<br>U 0000000
+<br>V 00000000
+<br>W 000000000
+<br>X 000000000
+<br>Y
+<br>Z</div><p class="pst">Input</p><div class="ptx" lang="en-US">No input</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output some Java, C, C++ or Pascal source code that generate the nullary source code of this program.</div><p class="pst">Sample Input</p><pre class="sio">No input</pre><p class="pst">Sample Output</p><pre class="sio">Refer to Output.</pre><p class="pst">

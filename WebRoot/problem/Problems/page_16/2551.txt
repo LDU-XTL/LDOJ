@@ -1,0 +1,7 @@
+</p><div class="ptx" lang="en-US">Given any integer 0 <= n <= 10000 not divisible by 2 or 5, some multiple of n is a number which in decimal notation is a sequence of 1's. How many digits are in the smallest such a multiple of n? </div><p class="pst">Input</p><div class="ptx" lang="en-US">Each line contains a number n.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output the number of digits.</div><p class="pst">Sample Input</p><pre class="sio">3 
+7 
+9901
+</pre><p class="pst">Sample Output</p><pre class="sio">3
+6
+12
+</pre><p class="pst">

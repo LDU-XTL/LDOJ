@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US"><p>During the War of Resistance Against Japan, tunnel warfare was carried out extensively in the vast areas of north China Plain. Generally speaking, villages connected by tunnels lay in a line. Except the two at the ends, every village was directly connected with two neighboring ones.</p><p>Frequently the invaders launched attack on some of the villages and destroyed the parts of tunnels in them. The Eighth Route Army commanders requested the latest connection state of the tunnels and villages. If some villages are severely isolated, restoration of connection must be done immediately!</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of the input contains two positive integers <i>n</i> and <i>m</i> (<i>n</i>, <i>m</i> <span lang="en-us">&le;</span> 50,000) indicating the number of villages and events. Each of the next <i>m</i> lines describes an event.</p><p>There are three different events described in different format shown below:</p><ol><li><tt>D x</tt>: The <i>x</i>-th village was destroyed.</li><li><tt>Q x</tt>: The Army commands requested the number of villages that <i>x</i>-th village was directly or indirectly connected with including itself.</li><li><tt>R</tt>: The village destroyed last was rebuilt.</ol></p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>Output the answer to each of the Army commanders<span lang="en-us">&rsquo;</span> request in order on a separate line.</p></div><p class="pst">Sample Input</p><pre class="sio">7 9
+D 3
+D 6
+D 5
+Q 4
+Q 5
+R
+Q 4
+R
+Q 4</pre><p class="pst">Sample Output</p><pre class="sio">1
+0
+2
+4</pre><p class="pst">Hint</p><div class="ptx" lang="en-US"><p>An illustration of the sample input:</p><pre>      OOOOOOO
+<br>D 3   OOXOOOO
+<br>D 6   OOXOOXO
+<br>D 5   OOXOXXO
+<br>R     OOXOOXO
+<br>R     OOXOOOO</pre></div><p class="pst">

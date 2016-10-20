@@ -1,0 +1,20 @@
+</p><div class="ptx" lang="en-US">A few kids are standing around an old tree playing a game. The tree is so huge that each kid can only see the kids close to him/her.
+<br>
+<br>The game consists many 'turns'. At the beginning of each turn of the game, a piece of paper is given to a randomly chosen kid. This kid writes the letter "B" if he is a boy or the letter "G" if a girl. Then he chooses a direction to pass the paper (clockwise or counter-clockwise), and gives the paper to his neighbor in that direction. The kid getting the paper writes down his sex too, and gives the paper to his neighbor in the same direction. In this way, the paper goes through the kids one by one, until one kid stops passing the paper and announces the end of this turn.
+<br>
+<br>For example, there are five kids around the tree, and their genders are shown in Figure-1. The paper first goes to Kid1, after writing a "B" he passes it to Kid2, and Kid2 to Kid3. After Kid3 writes down a "G", she ends up this turn, and we get the paper with a string "BBG".
+<br><center><img src=images/2052_1.jpg></center>
+<br>After N turns, we get N pieces of paper with strings of "B"s and/or "G"s. One of the kids will get all these papers, and has to figure out at least how many kids are around the tree playing the game. It's known that there are at least two kids. Please write a program to help him.</div><p class="pst">Input</p><div class="ptx" lang="en-US">There are several test cases. Each case starts with a line containing an integer N, the number of papers (2 <= N <= 16). Each of the following N lines contains a string on a paper, which is a nonempty string of letter "B"s and/or "G"s. Each string has no more than 100 letters.
+<br>
+<br>A test case of N = 0 indicates the end of input, and should not be processed.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output the least possible number of kids in a line. </div><p class="pst">Sample Input</p><pre class="sio">3
+BGGB
+BGBGG
+GGGBGB
+2
+BGGGBBBGG
+GBBBG
+0
+</pre><p class="pst">Sample Output</p><pre class="sio">9
+6
+</pre><p class="pst">

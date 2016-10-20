@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US">The cows are going to space!  They plan to achieve orbit by building a sort of space elevator: a giant tower of blocks.  They have K (1 <= K <= 400) different types of blocks with which to build the tower.  Each block of type i has height h_i (1 <= h_i <= 100) and is available in quantity c_i (1 <= c_i <= 10).  Due to possible damage caused by cosmic rays, no part of a block of type i can exceed a maximum altitude a_i (1 <= a_i <= 40000).
+<br>
+<br>Help the cows build the tallest space elevator possible by stacking blocks on top of each other according to the rules.</div><p class="pst">Input</p><div class="ptx" lang="en-US">* Line 1: A single integer, K
+<br>
+<br>* Lines 2..K+1: Each line contains three space-separated integers: h_i, a_i, and c_i. Line i+1 describes block type i.</div><p class="pst">Output</p><div class="ptx" lang="en-US">* Line 1: A single integer H, the maximum height of a tower that can be built</div><p class="pst">Sample Input</p><pre class="sio">3
+7 40 3
+5 23 8
+2 52 6</pre><p class="pst">Sample Output</p><pre class="sio">48</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">OUTPUT DETAILS:
+<br>
+<br>From the bottom: 3 blocks of type 2, below 3 of type 1, below 6 of type 3.  Stacking 4 blocks of type 2 and 3 of type 1 is not legal, since the top of the last type 1 block would exceed height 40.</div><p class="pst">

@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US"><p>The <dfn>D-pairs</dfn> of a string of letters are the ordered pairs of letters that are distance D from each other. A string is <dfn>D-unique</dfn> if all of its D-pairs are different. A string is <dfn>surprising</dfn> if it is D-unique for every possible distance D.</p><p>Consider the string ZGBG. Its 0-pairs are ZG, GB, and BG. Since these three pairs are all different, ZGBG is 0-unique. Similarly, the 1-pairs of ZGBG are ZB and GG, and since these two pairs are different, ZGBG is 1-unique. Finally, the only 2-pair of ZGBG is ZG, so ZGBG is 2-unique. Thus ZGBG is surprising. (Note that the fact that ZG is both a 0-pair and a 2-pair of ZGBG is irrelevant, because 0 and 2 are different distances.)</p><p><b>Acknowledgement:</b> This problem is inspired by the &quot;Puzzling Adventures&quot; column in the December 2003 issue of <i>Scientific American</i>.</p></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The input consists of one or more nonempty strings of at most 79 uppercase letters, each string on a line by itself, followed by a line containing only an asterisk that signals the end of the input.</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each string of letters, output whether or not it is surprising using the exact output format shown below.</p></div><p class="pst">Sample Input</p><pre class="sio">ZGBG
+X
+EE
+AAB
+AABA
+AABB
+BCBABCC
+*</pre><p class="pst">Sample Output</p><pre class="sio">ZGBG is surprising.
+X is surprising.
+EE is surprising.
+AAB is surprising.
+AABA is surprising.
+AABB is NOT surprising.
+BCBABCC is NOT surprising.</pre><p class="pst">

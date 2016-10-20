@@ -1,0 +1,32 @@
+</p><div class="ptx" lang="en-US"><div><p>A download software can execute multiple tasks simultaneously. For each task, there might be four states: downloading, waiting, paused, or finished. And there can be at most <i>n</i> tasks with state downloading at the same time. At the very beginning, the software has no tasks. Then it will receive <i>m</i> pieces of instructions. The forms of instructions are as listed below:</p><ul><li><b>Sort asc</b>: Set the priority in ascending order. The smallest name (in alphabet order) has the highest priority. This is the initial order.</li><li><b>Sort desc</b>: Set the priority in descending order. The biggest name (in alphabet order) has the highest priority.</li><li><b>New A</b>: Create a new task A. If the tasks with downloading state are less than n, set A's state with downloading, otherwise waiting.</li><li><b>Pause A</b>: Set the task A with state paused. And change the task of waiting state (if there is one) with the highest priority into a downloading state.</li><li><b>Continue A</b>: If the tasks with downloading state are less than n, set A with downloading, otherwise waiting.</li><li><b>Finish A</b>: Set the task A with state finished. And change the task of waiting state (if there is one) with the highest priority into a downloading state.</li></ul><p>Now you need to program to simulate the download software, output the state of all the tasks according to the final priority after it has executed all the m pieces of instructions.</p><p>Assumption: Any two different tasks have different names. The task described in the New instruction has never existed before. The task described in the Pause instruction is either waiting or downloading. The task described in the Continue instruction is paused. The task described in the Finish instruction is downloading.</p></div></div><p class="pst">Input</p><div class="ptx" lang="en-US"><p>The first line of the input is an integer <i>T</i> which indicates the number of test cases. For each test case, the first line are two integers <i>n</i> (1 &le; <i>n</i> &le; 10000) and <i>m</i> (1 &le; <i>m</i> &le; 100000), then <i>m</i> lines of instructions in the forms as described above. In the instructions, names are strings contain either letters or figures with length no greater than 10.<br><i>n</i> <i>m</i><br>instruction[1]<br>instruction[2]<br>...<br>instruction[<i>m</i>]</p></div><p class="pst">Output</p><div class="ptx" lang="en-US"><p>For each test case, output all the tasks' states according to the final priority, each task a line. Print a blank line after each test case.<br><br>　</p></div><p class="pst">Sample Input</p><pre class="sio">3
+10 1
+New name
+1 5
+New a
+New b
+New B
+Pause a
+Finish B
+2 10
+New aa
+New bb
+New cc
+Pause aa
+New dd
+Continue aa
+New ee
+Finish cc
+Sort desc
+Pause bb
+</pre><p class="pst">Sample Output</p><pre class="sio">name downloading
+
+B finished
+a paused
+b downloading
+
+ee downloading
+dd waiting
+cc finished
+bb paused
+aa downloading
+</pre><p class="pst">

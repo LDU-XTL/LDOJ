@@ -1,0 +1,31 @@
+</p><div class="ptx" lang="en-US">A Hadamard matrix of order n is an n x n matrix containing only 1s and -1s, called H<sub>n</sub>, such that H<sub>n</sub>H<sub>n</sub><sup>T</sup> = nI<sub>n</sub> where I<sub>n</sub> is the n x n identity matrix. An interesting property of Hadamard matrices is that they have the maximum possible determinant of any n x n matrix with elements in the range [-1, 1]. Hadamard matrices have applications in errorcorrecting codes and weighing design problems.
+<br>
+<br>The Sylvester construction is a way to create a Hadamard matrix of size 2n given H<sub>n</sub>. H<sub>2n</sub> can be constructed as:
+<br><img src=images/2961_1.jpg>
+<br>for example:
+<br><img src=images/2961_2.jpg>
+<br>and so on.
+<br>
+<br>In this problem you are required to print a part of a Hadamard matrix constructed in the way described above.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first number in the input is the number of test cases to follow. For each test case there are five integers: n, x, y, w and h. n will be between 1 and 2<sup>62</sup> (inclusive) and will be a power of 2. x and y specify the upper left corner of the sub matrix to be printed, w and h specify the width and height respectively. Coordinates are zero based, so 0 &le; x,y < n. You can assume that the sub matrix will fit entirely inside the whole matrix and that 0 < w,h &le; 20. There will be no more than 1000 test cases.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case print the sub matrix followed by an empty line.</div><p class="pst">Sample Input</p><pre class="sio">3
+2 0 0 2 2
+4 1 1 3 3
+268435456 12345 67890 11 12</pre><p class="pst">Sample Output</p><pre class="sio">1 1
+1 -1
+
+-1 1 -1
+1 -1 -1
+-1 -1 1
+
+1 -1 -1 1 1 -1 -1 1 1 -1 -1
+-1 -1 1 1 -1 -1 1 1 -1 -1 1
+1 1 1 -1 -1 -1 -1 1 1 1 1
+-1 1 -1 -1 1 -1 1 1 -1 1 -1
+1 -1 -1 -1 -1 1 1 1 1 -1 -1
+-1 -1 1 -1 1 1 -1 1 -1 -1 1
+-1 -1 -1 -1 -1 -1 -1 1 1 1 1
+1 -1 1 -1 1 -1 1 1 -1 1 -1
+-1 1 1 -1 -1 1 1 1 1 -1 -1
+1 1 -1 -1 1 1 -1 1 -1 -1 1
+-1 -1 -1 1 1 1 1 1 1 1 1
+1 -1 1 1 -1 1 -1 1 -1 1 -1
+</pre><p class="pst">

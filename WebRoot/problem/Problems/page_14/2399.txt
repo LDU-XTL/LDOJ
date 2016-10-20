@@ -1,0 +1,28 @@
+</p><div class="ptx" lang="en-US">Your company has recently been awarded the contract to keep the town streets painted. A proper job will take you two months to finish, but elections are coming soon and the Mayor wants it done sooner. The Mayor called your company's director; the company's director called your boss; and your boss called you. Due to a lack of underlings to delegate to, this is now your problem.
+<br>
+<br>You have quickly acquired some knowledge of the Mayor's daily activities by buying a supermarket tabloid. The newspaper tells you that the Mayor is an efficiency freak that refuses to travel any route between his starting point and his destination that is not of minimum length (note that there can be more than one path of minimum length,) and it provides a list of every place in town he visits. However, it fails to inform you of the order in which he visits these places.
+<br>
+<br>You quickly decide that the best solution is to paint every bit of road the Mayor can see, in the hopes that he will think you are done early. This subterfuge will buy you extra time to finish the job in the rest of the town.
+<br>
+<br>Given a map of the city grid and a list of the places the Mayor visits; return the number of city blocks you need to paint (A "street block" is a subpart of a street, delimited between two grid points). Assume that the Mayor can only see blocks he travels on. For the sake of simplicity, the Mayor will only travel between street corners. All city blocks are of the same length.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input begins with the number of test cases it contains. After that, the test cases appear one after the other, each preceded by a line of white space. The input file will always end with an end-of-line (EOL).
+<br>
+<br>Each test case contains the city grid, followed by an integer specifying the number of locations the Mayor can visit, followed by the locations in row-column order (zero based, the origin being the northwest corner of town). The city grid is described by two lines of text, each at least 2 and at most 10 characters long. The first line contains the directions of the East-West streets (E, W, or T for two-way). The second line contains the directions of the North-South streets (N, S, or T). Every location specified will be valid for the provided street grid.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output begins with a case number (starting at one) followed by a line stating how many blocks are required to be painted. Print a blank line after every output case (this means the output will have two newlines at the end before the end-of-file). </div><p class="pst">Sample Input</p><pre class="sio">2
+
+EE
+SS
+2
+0 0
+1 1
+
+EW
+TT
+2
+0 0
+1 1
+</pre><p class="pst">Sample Output</p><pre class="sio">Case #1:
+4 street blocks need to be painted.
+
+Case #2:
+4 street blocks need to be painted.
+
+</pre><p class="pst">

@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">At the University of Kentucky, they build a lot of high-performance computer hardware and software, often using one supercomputer to design the next. One of the most fundamental computer design problems is logic optimization: making sure that the optimized logic still computes the same function as the original design.
+<br>For this problem, your program will be given two logic expressions to compare for logical equivalence.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input consists of a positive integer n, which is the number of datasets (lines) that follow. Each dataset consists of a single line containing the two input expressions to be tested. The input expressions consist of any of 26 variables named a-z, the binary operators |, &, ^, (OR, AND and XOR respectively), the unary ~ (NOT),and parenthesis. The expressions should be evaluated ignoring all other characters and with operator precedence as in the C language (parenthesis, ~, &, ^, |). The two expressions will be input in sequence and it is up to your program to determine where one expression ends and the next begins.
+<br>Most logic manipulation programs would convert each expression into a normal form and check if the two normalized expressions are identical. Fortunately for you, each expression will consist of no more than 100 operations using no more than 10 different variables. For that many cases, you can test for equivalence by simply evaluating the two input expressions for all possible inputs and comparing the results.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, print:
+<br>Data set N: Equivalent
+<br>if the expressions produce the same result, or:
+<br>Data set N: Different
+<br>if they produce different results. Of course N should be replaced by the data set number.</div><p class="pst">Sample Input</p><pre class="sio">3
+a ^b&(b|a)~b^ a
+a^b&(b|a)(a^(b&(b|a)))
+~~~~z~~z</pre><p class="pst">Sample Output</p><pre class="sio">Data set 1: Different
+Data set 2: Equivalent
+Data set 3: Equivalent</pre><p class="pst">

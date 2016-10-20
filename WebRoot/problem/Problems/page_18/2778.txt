@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">It's well known that DNA Sequence is a sequence only contains A, C, T and G, and it's very useful to analyze a segment of DNA Sequence，For example, if a animal's DNA sequence contains segment ATC then it may mean that the animal may have a genetic disease. Until now scientists have found several those segments, the problem is how many kinds of DNA sequences of a species don't contain those segments.
+<br>
+<br>Suppose that DNA sequences of a species is a sequence that consist of A, C, T and G，and the length of sequences is a given integer n.
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">First line contains two integer m (0 <= m <= 10), n (1 <= n <=2000000000). Here, m is the number of genetic disease segment, and n is the length of sequences.
+<br>
+<br>Next m lines each line contain a DNA genetic disease segment, and length of these segments is not larger than 10.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">An integer, the number of DNA sequences, mod 100000.</div><p class="pst">Sample Input</p><pre class="sio">4 3
+AT
+AC
+AG
+AA
+</pre><p class="pst">Sample Output</p><pre class="sio">36</pre><p class="pst">

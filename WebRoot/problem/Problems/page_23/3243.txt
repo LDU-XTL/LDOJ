@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US"><p><span lang="EN-US">Little Y finds there is a very interesting formula in mathematics:</span></p><p align="center" style="text-align:center"><span lang="EN-US"><i>X<sup>Y</sup> mod Z = K</i></span></p><p><span lang="EN-US">Given <i>X</i>, <i>Y</i>, <i>Z</i>, we all know how to figure out <i>K</i> fast. However, given <i>X</i>, <i>Z</i>, <i>K</i>, could you figure out <i>Y</i> fast?</span></p>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">Input data consists of no more than 20 test cases. For each test case, there would be only one line containing 3 integers <i>X</i>, <i>Z</i>, <i>K</i> (0 ≤ <i>X</i>, <i>Z</i>, <i>K</i> ≤ 10<sup>9</sup>).
+<br>Input file ends with 3 zeros separated by spaces.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case output one line. Write "No Solution" (without quotes) if you cannot find a feasible <i>Y</i> (0 ≤ <i>Y</i> &lt; <i>Z</i>). Otherwise output the minimum <i>Y</i> you find.</div><p class="pst">Sample Input</p><pre class="sio">5 58 33
+2 4 3
+0 0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">9
+No Solution
+</pre><p class="pst">

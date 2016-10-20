@@ -1,0 +1,11 @@
+</p><div class="ptx" lang="en-US">Xuanxuan has n sticks of different length. One day, she puts all her sticks in a line, represented by S1, S2, S3, ...Sn. After measuring the length of each stick Sk (1 <= k <= n), she finds that for some sticks Si and Sj (1<= i < j <= n), each stick placed between Si and Sj is longer than Si but shorter than Sj.
+<br>
+<br>Now given the length of S1, S2, S3, …Sn, you are required to find the maximum value j - i.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains multiple test cases. Each case contains two lines.
+<br>Line 1: a single integer n (n <= 50000), indicating the number of sticks.
+<br>Line 2: n different positive integers (not larger than 100000), indicating the length of each stick in order. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Output the maximum value j - i in a single line. If there is no such i and j, just output -1.</div><p class="pst">Sample Input</p><pre class="sio">4
+5 4 3 6
+4
+6 5 4 3
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+-1
+</pre><p class="pst">

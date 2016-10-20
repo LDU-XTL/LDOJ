@@ -1,0 +1,18 @@
+</p><div class="ptx" lang="en-US">In this problem, you are given a list of words (sequence of lower case letters). From this list, find the longest chain of words w1, ..., wn such that wi is a mixed extension of w<sub>i-1</sub>. A word A is a mixed extension of another word B if A can be formed by adding one letter to B and permuting the result. For example, "ab", "bar", "crab", "cobra", and "carbon" form a chain of length 5. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input contains at least two, but no more than 10000 lines. Each line contains a word. The length of each word is at least 1 and no more than 20. All words in the input are distinct. </div><p class="pst">Output</p><div class="ptx" lang="en-US">Write the longest chain that can be constructed from the given words. Output each word in the chain on a separate line, starting from the first one. If there are multiple longest chains, any longest chain is acceptable. </div><p class="pst">Sample Input</p><pre class="sio">ab
+arc
+arco
+bar
+bran
+carbon
+carbons
+cobra
+crab
+crayon
+narc
+</pre><p class="pst">Sample Output</p><pre class="sio">ab
+bar
+crab
+cobra
+carbon
+carbons
+</pre><p class="pst">

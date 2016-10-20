@@ -1,0 +1,106 @@
+</p><div class="ptx" lang="en-US">Mr. Denjiro is a science teacher. Today he has just received a specially ordered water tank that will certainly be useful for his innovative experiments on water flow. 
+<br><center><img src=images/1982_1.jpg>
+<br>Figure 1: The water tank</center>
+<br>The size of the tank is 100cm (Width) * 50cm (Height) * 30cm (Depth) (see Figure 1). For the experiments, he fits several partition boards inside of the tank parallel to the sideboards. The width of each board is equal to the depth of the tank, i.e. 30cm. The height of each board is less than that of the tank, i.e. 50 cm, and differs one another. The boards are so thin that he can neglect the thickness in the experiments. 
+<br><center><img src=images/1982_2.jpg>
+<br>Figure 2: The front view of the tank</center>
+<br>The front view of the tank is shown in Figure 2. 
+<br>
+<br>There are several faucets above the tank and he turns them on at the beginning of his experiment. The tank is initially empty. Your mission is to write a computer program to simulate water flow in the tank. </div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of multiple data sets. D is the number of the data sets. 
+<br>
+<br>D
+<br>DataSet1
+<br>DataSet2
+<br>...
+<br>DataSetD
+<br>
+<br>The format of each data set (DataSetd , 1 <= d <= D) is as follows. 
+<br>
+<br>N
+<br>B1 H1
+<br>B2 H2
+<br>...
+<br>BN HN
+<br>M
+<br>F1 A1
+<br>F2 A2
+<br>...
+<br>FM AM
+<br>L
+<br>P1 T1
+<br>P2 T2
+<br>...
+<br>PL TL
+<br>
+<br>Each line in the data set contains one or two integers. 
+<br>
+<br>N is the number of the boards he sets in the tank . Bi and Hi are the x-position (cm) and the height (cm) of the i-th board, where 1 <= i <= N . 
+<br>
+<br>Hi s differ from one another. You may assume the following. 
+<br>
+<br>0 < N < 10 , 
+<br>0 < B1 < B2 < ... < BN < 100 , 
+<br>0 < H1 < 50 , 0 < H2 < 50 , ..., 0 < HN < 50. 
+<br>M is the number of the faucets above the tank . Fj and Aj are the x-position (cm) and the amount of water flow (cm3/second) of the j-th faucet , where 1 <= j <= M . 
+<br>
+<br>There is no faucet just above any boards . Namely, none of Fj is equal to Bi . 
+<br>
+<br>You may assume the following . 
+<br>
+<br>
+<br>0 < M <10 , 
+<br>0 < F1 < F2 < ... < FM < 100 ,
+<br>0 < A1 < 100, 0 < A2 < 100, ... 0 < AM < 100. 
+<br>L is the number of observation time and location. Pk is the x-position (cm) of the k-th observation point. Tk is the k-th observation time in seconds from the beginning. 
+<br>
+<br>None of Pk is equal to Bi . 
+<br>
+<br>You may assume the following . 
+<br>
+<br>0 < L < 10 , 
+<br>0 < P1 < 100, 0 < P2 < 100, ..., 0 < PL < 100 , 
+<br>0 < T1 < 1000000, 0 < T2 < 1000000, ... , 0 < TL < 1000000. </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each data set, your program should output L lines each containing one real number which represents the height (cm) of the water level specified by the x-position Pk at the time Tk. 
+<br>
+<br>Round the answer to 3 digits after the decimal point.
+<br>
+<br>After the water tank is filled to the brim, the water level at any Pk is equal to the height of the tank, that is, 50 cm. 
+<br></div><p class="pst">Sample Input</p><pre class="sio">2
+5
+15 40
+35 20
+50 45
+70 30
+80 10
+3
+20 3
+60 2
+65 2
+6
+40 4100
+25 7500
+10 18000
+90 7000
+25 15000
+25 22000
+5
+15 40
+35 20
+50 45
+70 30
+80 10
+2
+60 4
+75 1
+3
+60 6000
+75 6000
+85 6000</pre><p class="pst">Sample Output</p><pre class="sio">0.667
+21.429
+36.667
+11.111
+40.000
+50.000
+30.000
+13.333
+13.333
+</pre><p class="pst">

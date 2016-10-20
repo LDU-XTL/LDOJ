@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US">Regional government wishes to build a new highway across the region, and it seems that the best route for the highway goes across the Kvadratnaya village. The village consists of the N x N square estates. All estates have a size of 100 by 100 meters. Therefore, in the coordinate system tied to the village, the southwestern corner of the village has coordinates (0, 0), and northeastern corner - coordinates (N*100, N*100). The highway will cross the village form the west to the east side, cutting through several estates. The government decided to compensate owners of those estates, and to estimate the necessary expenses one should calculate the number of estates crossed by the highway.
+<br>
+<br>Given the village size N and the coordinates of the points where the highway crosses eastern and western borders of the village, you must find the number of estates. You can assume, for the purpose of increasing the financial appeal of the highway project, that the highway is a straight line (i.e. has zero width). If the highway just touches the edge of an estate, it is still considered a crossing.
+<br>
+<br>The highway is a line between points (0, W) and (100*N, E).
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">In the input, there are three integers, N (1 <= N <= 100), W and E, (0 <= W, E <= 100*N) separated by spaces.
+<br>
+<br>Process to the end of file.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output must contain a single integer - the number of estates crossed by the highway.</div><p class="pst">Sample Input</p><pre class="sio">3 150 50</pre><p class="pst">Sample Output</p><pre class="sio">4</pre><p class="pst">

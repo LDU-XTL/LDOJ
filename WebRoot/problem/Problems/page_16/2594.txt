@@ -1,0 +1,13 @@
+</p><div class="ptx" lang="en-US">Have you ever read any book about treasure exploration? Have you ever see any film about treasure exploration? Have you ever explored treasure? If you never have such experiences, you would never know what fun treasure exploring brings to you.
+<br>Recently, a company named EUC (Exploring the Unknown Company) plan to explore an unknown place on Mars, which is considered full of treasure. For fast development of technology and bad environment for human beings, EUC sends some robots to explore the treasure.
+<br>To make it easy, we use a graph, which is formed by N points (these N points are numbered from 1 to N), to represent the places to be explored. And some points are connected by one-way road, which means that, through the road, a robot can only move from one end to the other end, but cannot move back. For some unknown reasons, there is no circle in this graph. The robots can be sent to any point from Earth by rockets. After landing, the robot can visit some points through the roads, and it can choose some points, which are on its roads, to explore. You should notice that the roads of two different robots may contain some same point. 
+<br>For financial reason, EUC wants to use minimal number of robots to explore all the points on Mars.
+<br>As an ICPCer, who has excellent programming skill, can your help EUC?</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input will consist of several test cases. For each test case, two integers N (1 <= N <= 500) and M (0 <= M <= 5000) are given in the first line, indicating the number of points and the number of one-way roads in the graph respectively. Each of the following M lines contains two different integers A and B, indicating there is a one-way from A to B (0 < A, B <= N). The input is terminated by a single line with two zeros.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test of the input, print a line containing the least robots needed.</div><p class="pst">Sample Input</p><pre class="sio">1 0
+2 1
+1 2
+2 0
+0 0
+</pre><p class="pst">Sample Output</p><pre class="sio">1
+1
+2
+</pre><p class="pst">

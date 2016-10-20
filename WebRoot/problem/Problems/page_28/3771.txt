@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">Dubai is a haven for the rich. The government of Dubai finds a good way to make money. They built a lot of artificial islands on the sea and sell them. These islands are shaped into the continents of the world, so they are called “world islands”. All islands are booked out now. The billionaires who buy these islands wants to make friends with each other, so they want these islands all be connected by bridges. Bill Gates also has booked an island, but he is the only one who doesn’t want his island to be connected with other islands, because he prefer to travel on the sea on his old landing craft which is used in the Invasion of Normandy in World War II. Fortunately, Bill doesn’t care about which island is saved for him, so Dubai government can still find the best way to build the bridges. The best way means that the total length of the bridges is minimum. In a word, if there are n islands, what they should do is to build n–2 bridges connecting n-1 islands, and give the rest island to Bill Gates. They can give any island to Bill Gates. Now they pay you good money to help them to find out the best way to build the bridges.
+<br>
+<br>Please note:
+<br><ol>
+<br><li>An island can be considered as a point.</li>
+<br><li>A bridge can be considered as a line segment connecting two islands.</li>
+<br><li>A bridge connects with other bridges only at the islands.</li>
+<br></ol>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line is an integer indicating the number of test cases.
+<br>For each test case, the first line is an integer n representing the number of islands.(0 &lt; n &lt; 50)
+<br>Then n lines follow. Each line contains two integers x and y( -20 &lt;= x, y &lt;= 20 ) , indicating the coordinate of an island.</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output the minimum total length of the bridges in a line. The results should be rounded to 2 digits after decimal point, and you must keep 2 digits after the decimal point.
+<br></div><p class="pst">Sample Input</p><pre class="sio">2
+5
+0 0
+1 0
+18 0
+0 1
+1 1
+3
+0 0
+1 0
+0 1</pre><p class="pst">Sample Output</p><pre class="sio">3.00
+1.00</pre><p class="pst">

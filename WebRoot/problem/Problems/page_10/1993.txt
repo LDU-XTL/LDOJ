@@ -1,0 +1,27 @@
+</p><div class="ptx" lang="en-US">We suppose even the very little children will play with KOKODáKH. So beside all the games and riddles, we need to have at least one toy in it. It is very favourite one and no special knowledge or ability is required to play with it. Yes, it is the Caleidoscope. I guess all of you know the magic thing. You can watch into it for long hours and still find new and new images that never repeat. But there is a problem with the little children. They break everything they have, all the things are falling from their hands down to the ground. The mechanics of caleidoscope is very fine and so it is very sensitive to proper handling. So our variant of this toy is not mechanical but fully electronic one. The main advantage is that it is water-resistant, fire-resistant, cold-resistant, it cannot break and does not catch fire. Besides, it contains a special teeth detector that prevents the children to bite it. Every tooth contact is detected and reacts with the electric shock (@@@) immediately. 
+<br>
+<br>The main problem with our electric caleidoscope is the picture generating. To reach the quality of the mechanical caleidoscope, the picture must consist of many similar pieces that are resized, mirrored and rotated. As many of you probably know, we use matrices in computer graphics to manipulate pictures. The so called transformation matrix specifies the action that should be done with the picture. The picture manipulation is then done by matrix multiplication. We can also preform many transformations sequentially, by multiplying with more matrices. The picture manipulation is very difficult in the caleidoscope, so the matrices can be very large. Your task is to write a computer program that would be able to multiple the given matrix with the sequence of other matrices. 
+<br>
+<br>When we multiple the matrix A (dimensions m * p) with the matrix B (dimensions p * n) we get the matrix C with the dimensions m * n. Every item with the indices i and j in the resulting matrix is the scalar product of the i-th row of maxtrix A and j-th column of matrix B: 
+<br><center><font size=5>c<sub>ij</sub>=Σ<sub>1<=k<=p</sub>a<sub>ik</sub>.b<sub>kj</sub></font></center></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of Z assignments. The number of them is given by the single positive integer Z appearing on the first line of input. Each assignment begins with the line containing the single number X (1 <= X <= 10000) stating for the number of matrices. Then there are exactly X matrix descriptions. Each description begins with the line containing two integers M and N (1 <= M,N <= 100). M is the number of rows, N the number of columns. After these numbers there are exactly M lines each of them containing N integers seperated by space. These numbers are the matrix items. You can assume that the matrices really can be multipled. That means M of every matrix (except the first one) is the same as N of the previous one. The numbers are only as high that the items of resulting matrix should fit into integer. Also the items of every "partial result matrix" should fit there, when you will multiple them sequentially. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The program should print out the resulting matrix for each assignment, with the dimensions m * n. The output should consist of m lines, each containing n numbers separated by exactly one space. Print one empty line after each assignment including the last one. Empty line contains one the special character newline. </div><p class="pst">Sample Input</p><pre class="sio">2
+2
+3 1
+1
+2
+3
+1 3
+3 2 1
+2
+2 2
+-1 1
+-1 1
+2 2
+1 2
+3 4
+</pre><p class="pst">Sample Output</p><pre class="sio">3 2 1
+6 4 2
+9 6 3
+
+2 2
+2 2
+</pre><p class="pst">

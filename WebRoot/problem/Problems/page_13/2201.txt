@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">Let us consider a special type of a binary search tree, called a cartesian tree. Recall that a binary search tree is a rooted ordered binary tree, such that for its every node x the following condition is satisfied: each node in its left subtree has the key less then the key of x, and each node in its right subtree has the key greater then the key of x.
+<br>That is, if we denote left subtree of the node x by L(x), its right subtree by R(x) and its key by kx then for each node x we have
+<br><ul><li>if y &isin; L(x) then ky < kx
+<br><li>if z &isin; R(x) then kz > kx</ul>
+<br>The binary search tree is called cartesian if its every node x in addition to the main key kx also has an auxiliary key that we will denote by ax, and for these keys the heap condition is satisfied, that is
+<br><ul><li>if y is the parent of x then ay < ax</ul>
+<br>Thus a cartesian tree is a binary rooted ordered tree, such that each of its nodes has a pair of two keys (k, a) and three conditions described are satisfied.
+<br>Given a set of pairs, construct a cartesian tree out of them, or detect that it is not possible.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains an integer number N -- the number of pairs you should build cartesian tree out of (1 <= N <= 50 000). The following N lines contain two numbers each -- given pairs (ki, ai). For each pair |ki|, |ai| <= 30 000. All main keys and all auxiliary keys are different, i.e. ki != kj and ai != aj for each i != j.</div><p class="pst">Output</p><div class="ptx" lang="en-US">On the first line of the output file print YES if it is possible to build a cartesian tree out of given pairs or NO if it is not. If the answer is positive, on the following N lines output the tree. Let nodes be numbered from 1 to N corresponding to pairs they contain as they are given in the input file. For each node output three numbers -- its parent, its left child and its right child. If the node has no parent or no corresponding child, output 0 instead.
+<br>The input ensure these is only one possible tree.</div><p class="pst">Sample Input</p><pre class="sio">7
+5 4
+2 2
+3 9
+0 5
+1 3
+6 6
+4 11</pre><p class="pst">Sample Output</p><pre class="sio">YES
+2 3 6
+0 5 1
+1 0 7
+5 0 0
+2 4 0
+1 0 0
+3 0 0</pre><p class="pst">

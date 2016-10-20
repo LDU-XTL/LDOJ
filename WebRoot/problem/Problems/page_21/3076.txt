@@ -1,0 +1,33 @@
+</p><div class="ptx" lang="en-US">A Sudoku grid is a 16x16 grid of cells grouped in sixteen 4x4 squares, where some cells are filled with letters from A to P (the first 16 capital letters of the English alphabet), as shown in figure 1a. The game is to fill all the empty grid cells with letters from A to P such that each letter from the grid occurs once only in the line, the column, and the 4x4 square it occupies. The initial content of the grid satisfies the constraints mentioned above and guarantees a unique solution.
+<br><img src=images\3076_1.jpg>
+<br>Write a Sudoku playing program that reads data sets from a text file.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Each data set encodes a grid and contains 16 strings on 16 consecutive lines as shown in figure 2. The i-th string stands for the i-th line of the grid, is 16 characters long, and starts from the first position of the line. String characters are from the set {A,B,…,P,-}, where – (minus) designates empty grid cells. The data sets are separated by single empty lines and terminate with an end of file.</div><p class="pst">Output</p><div class="ptx" lang="en-US">The program prints the solution of the input encoded grids in the same format and order as used for input.</div><p class="pst">Sample Input</p><pre class="sio">--A----C-----O-I
+-J--A-B-P-CGF-H-
+--D--F-I-E----P-
+-G-EL-H----M-J--
+----E----C--G---
+-I--K-GA-B---E-J
+D-GP--J-F----A--
+-E---C-B--DP--O-
+E--F-M--D--L-K-A
+-C--------O-I-L-
+H-P-C--F-A--B---
+---G-OD---J----H
+K---J----H-A-P-L
+--B--P--E--K--A-
+-H--B--K--FI-C--
+--F---C--D--H-N-</pre><p class="pst">Sample Output</p><pre class="sio">FPAHMJECNLBDKOGI
+OJMIANBDPKCGFLHE
+LNDKGFOIJEAHMBPC
+BGCELKHPOFIMAJDN
+MFHBELPOACKJGNID
+CILNKDGAHBMOPEFJ
+DOGPIHJMFNLECAKB
+JEKAFCNBGIDPLHOM
+EBOFPMIJDGHLNKCA
+NCJDHBAEKMOFIGLP
+HMPLCGKFIAENBDJO
+AKIGNODLBPJCEFMH
+KDEMJIFNCHGAOPBL
+GLBCDPMHEONKJIAF
+PHNOBALKMJFIDCEG
+IAFJOECGLDPBHMNK</pre><p class="pst">

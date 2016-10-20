@@ -1,0 +1,23 @@
+</p><div class="ptx" lang="en-US">This program will not be part of the KOKODáKH collection, but it may be more important than the games themselves. It will serve to the marketing staff to find suitable procedures for promoting and selling the collection. So try to do your best. 
+<br>
+<br>Extensive marketing case study tried to prove that the total income from selling a product is polynomial function of number of satisfied customers. Experiments showed that the real results are not exactly the same which you can obtain using the function. However, this method is widely used. The reason is probably nonexistence of better solution. Let's denote the number of satisfied customers y, than we can express profits (denoted x) as 
+<br><P ALIGN="CENTER"><VAR>x = P(y) =a<SUB>0</SUB> +a<SUB>1</SUB>.y +a<SUB>2</SUB>.y<SUP>2</SUP> + ... +a<SUB>m</SUB>.y<SUP>m</SUP></VAR>
+<br>The number of satisfied customers depends on the price of a product. Again, there is hypothese that this dependence is polynomial. If we denote the price z, we can write 
+<br><P ALIGN="CENTER"><VAR>y = Q(x) =b<SUB>0</SUB> +b<SUB>1</SUB>.z +b<SUB>2</SUB>.z<SUP>2</SUP> + ... +b<SUB>n</SUB>.z<SUP>n</SUP></VAR>
+<br>Coeficients ai and bi strongly depend on the season of the year, the moon phase, the purchasing power of customers, inflation rate and hunderds of other parameters. Besides on the kind of product and its quality, of course. In the past there was lot of effort put into the reserarch of these parameters. For various combinations of input parameters, the coeficients are stated in Pyshwejc's marketing tables. It is not thus difficult to find out their values. But the degree of polynoms is usualy very high. It is very difficult to substitute one polynom into the other and to compute the dependency of the profit on the price. This dependency is usually crucial for us to set the right price. 
+<br>
+<br>Your goal is to write the program which can substitute the polynom Q into the polynom P and determine the restulting polynom R indicating dependency of the profit on the price: 
+<br><P ALIGN="CENTER"><VAR>x = R(z) =c<SUB>0</SUB> +c<SUB>1</SUB>.z +c<SUB>2</SUB>.z<SUP>2</SUP> + ... +c<SUB>p</SUB>.z<SUP>p</SUP></VAR></div><p class="pst">Input</p><div class="ptx" lang="en-US">The input consists of Z assignments. The number of them is given by the single positive integer Z appearing on the first line of input. Each assingement constist of three lines. On the first line there are two integers m and n (0 <= n,m <= 100) separated by space. These numbers give the degree of polynoms Q and P. On the second line there are m+1 integers a0 ... am. These numbers are coeficients of polynom P. On the third line there are n+1 integers b0 ... bn. Always am <> 0 and bn <> 0. Coeficients ai and bi are separated by space and they are chosen in order to each resulting coeficient could fit into the standard type integer. </div><p class="pst">Output</p><div class="ptx" lang="en-US">The program prints exactly one line for each assignement. On this line, there will be p+1 numbers. These numbers are coeficients c0 ... cp of resulting polynom. The coeficients are separated by space and the line does not consist any redundant spaces. The coeficient in the highest degree should not be zero. </div><p class="pst">Sample Input</p><pre class="sio">3
+0 0
+7
+-2
+1 1
+6 6
+9 -6
+3 3
+-3 6 -5 1
+0 3 -3 1
+</pre><p class="pst">Sample Output</p><pre class="sio">7
+60 -36
+-3 18 -63 123 -156 138 -86 36 -9 1
+</pre><p class="pst">

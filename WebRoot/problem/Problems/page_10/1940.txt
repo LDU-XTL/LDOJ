@@ -1,0 +1,7 @@
+</p><div class="ptx" lang="en-US">Read the statement of Problem 1939! Given a list of meeting locations as specified in the description of Problem 1939, you have to calculate the locations of the Foreign Offices. </div><p class="pst">Input</p><div class="ptx" lang="en-US">See the input specification of Problem 1939 for the format, and the output specification of Problem 1939 for the meaning of the input. </div><p class="pst">Output</p><div class="ptx" lang="en-US">See the output specification of Problem 1939 for the format, and the input specification of Problem 1939 for the meaning of the output. </div><p class="pst">Sample Input</p><pre class="sio">5 14 2 20 4 18 12 12 18 10 10
+3 -3 5 -2 5 -3 6
+3 -2 10 5 10 -1 12
+</pre><p class="pst">Sample Output</p><pre class="sio">5 10.000000 2.000000 18.000000 2.000000 22.000000 6.000000 14.000000 18.000000 10.000000 18.000000
+3 -4.000000 6.000000 -2.000000 4.000000 -2.000000 6.000000
+3 -8.000000 12.000000 4.000000 8.000000 6.000000 12.000000</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">The relationship between the sample input and output polygons is illustrated in the figure below. Solid lines indicate the polygon joining the Foreign Offices, whereas dashed lines indicate the polygon joining the meeting locations. To generate further sample input you may use your solution to Problem 1939. 
+<br><img src=images/1940_1.jpg></div><p class="pst">

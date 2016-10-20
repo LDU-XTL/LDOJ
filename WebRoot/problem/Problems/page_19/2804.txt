@@ -1,0 +1,46 @@
+</p><div class="ptx" lang="en-US">You are a beta tester for a new online game, Jetpack Sniper 3000 Fragfest Extreme. In this game, players with jetpacks fly around major metropolitan areas and attempt to shoot each other with laser guns. The only obstacles behind which players can hide are the ever-present glass towers of cubicle farms, skyscrapers. 
+<br>
+<br>To assist you in playing the game, you've written a program that will tell you which players could currently shoot (or be shot) by you. These are the players who have an unobstructed view of your position. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input to this problem will begin with a line containing a single integer n indicating the number of cities in the input. Each city is made of 100 city blocks (10x10), each of which contains a skyscraper of an integer height from 0 to 9. A city is represented in the input as 10 lines of 10 integers, where the integers are the height values of the corresponding skyscrapers. This is followed by one line with four sets of coordinates. The first denotes your position; the other three denote the positions of players A, B, and C, respectively. Positions are given in the format (x, y, height), where x is measured from left to right on the input city grid, y is measured from top to bottom, height is measured from the ground up, and (0,0,0) is at the top left of the input city grid at ground level. 
+<br>
+<br>Note: 
+<br><ul><li>The coordinates of player positions may contain floating point numbers. 
+<br><li>Neither you nor any of the other players will ever be inside a building or on one of its edges or sides. Your line of sight to another player will never be tangent to the side, edge, or corner of a building in such a way that it changes the outcome of the program. </ul></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each city in the input, output the header "Fragfest City #X" where X is 1 for the first city, 2 for the second, etc. Follow this line with one line for each of players A, B, and C and print either "Player Y is in sight" or "Player Y is hiding" depending on whether or not a building obstructs your view of that player. 
+<br>
+<br>Please make these two simplifying assumptions: 
+<br>
+<br><ol><li>A skyscraper is a rectangular solid with dimensions 1x1xheight; 
+<br><li>a player is the size and shape of a point; 
+<br><li>and a player does not block the view of another player. </ol></div><p class="pst">Sample Input</p><pre class="sio">2
+0000005000
+0000005000
+0000005000
+0000005000
+9999999999
+0000000000
+0000000000
+0000000000
+0000000000
+0000000000
+(0,0,0) (10, 10, 10) (5.5, 5.5, 5.5) (9, 1.0, 9)
+0123456789
+1000000000
+2064646400
+3045555600
+4065005400
+5045005600
+6065555400
+7046464600
+8000000000
+9123456789
+(4.5, 4.5, 5.5) (7.5, 4.5, 5.5) (1.5, 4.5, 5.1) (7.5, 4.5, 6.5)
+
+</pre><p class="pst">Sample Output</p><pre class="sio">Fragfest City #1
+Player A is hiding
+Player B is hiding
+Player C is in sight
+Fragfest City #2
+Player A is in sight
+Player B is hiding
+Player C is in sight
+
+</pre><p class="pst">

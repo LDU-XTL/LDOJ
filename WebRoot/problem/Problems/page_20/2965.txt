@@ -1,0 +1,10 @@
+</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The game &ldquo;The Pilots Brothers: following the stripy elephant&rdquo; has a quest where a player needs to open a refrigerator.</p><p>There are 16 handles on the refrigerator door. Every handle can be in one of two states: open or closed. The refrigerator is open only when all handles are open. The handles are represented as a matrix 4х4. You can change the state of a handle in any location <b>[i, j]</b> (1 &le; i, j &le; 4). However, this also changes states of all handles in row <b>i</b> and all handles in column <b>j</b>.</p><p>The task is to determine the minimum number of handle switching necessary to open the refrigerator.</p></span></div><p class="pst">Input</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The input contains four lines. Each of the four lines contains four characters describing the initial state of appropriate handles. A symbol &ldquo;+&rdquo; means that the handle is in closed state, whereas the symbol &ldquo;&minus;&rdquo; means &ldquo;open&rdquo;. At least one of the handles is initially closed.</p></span></div><p class="pst">Output</p><div class="ptx" lang="en-US"><span lang="en-us"><p>The first line of the input contains N &ndash; the minimum number of switching. The rest N lines describe switching sequence. Each of the lines contains a row number and a column number of the matrix separated by one or more spaces. If there are several solutions, you may give any one of them.</p></span></div><p class="pst">Sample Input</p><pre class="sio">-+--
+----
+----
+-+--</pre><p class="pst">Sample Output</p><pre class="sio">6
+1 1
+1 3
+1 4
+4 1
+4 3
+4 4</pre><p class="pst">

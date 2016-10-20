@@ -1,0 +1,40 @@
+</p><div class="ptx" lang="en-US">The Hines Sign company has been contracted to supply roadside signs for the state highway system. The head of the company has put his son Myles Hines in charge of one particular class of signs, those which indicate the number of miles to carious towns. Myles is given a layout of the highway system and a set of locations where the signs should go: he is in charge of determining the mileage to nearby cities. To select which cities should be listed on any sign, he uses the following strategy: City X is put on the sign if the sign is on a road such that the shortest path from the intersection immediately preceding the sign to X uses the road. You may assume that there is only one shortest path between each pair of intersections. </div><p class="pst">Input</p><div class="ptx" lang="en-US">Input consists of a single problem instance consisting of a description of the highway system, followed by a set of sign locations. The highway system is defined as a set of intersections (some of which are also city locations) and a set of roads connecting the intersections. The first line of a problem instance contains three positive integers n m k: n specifies the number of intersections (numbered 0, 1, 2, ..., n-1), m indicates the number of roads between connections, and k indicated the number of intersections which are also cities. Following this are m lines of the form i1 i2 d, which specifies a two-way road between intersections i1 and i2 of distance d. The next k lines are of the form i name, which specifies that intersection i is a city called name. After this is a line with a single positive integer s indicating the number of signs to place on the highway. The remaining s lines are of the form i1 i2 d indicating that a sign is to be placed on the road going from i1 to i2 a distance d from i1 (d will always be non-zero and less than the distance from i1 to i2). For all problem instances, the length of name will be <= 18 characters, and 5 <= n <= 30. All distances will be non-zero and to the nearest hundredth mile.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Each sign should be output as follows:
+<br>
+<br>name1 d1
+<br>name2 d2
+<br>...
+<br>
+<br>where each namei should be left justified in a field of width 20, and each distance di is rounded to the nearest mile. (Round .50 up. For example, 7.50 should be rounded to 8.) Each name-distance pair should be sorted by the rounded distance; pairs with the same rounded distance should be printed in alphabetical order. Signs should be output in the order in which they were listed in the input, and you should separate each sign output with a blank line. You may assume that every sign will have at least one city listed on it.
+<br></div><p class="pst">Sample Input</p><pre class="sio">8 17 4
+0 1 7.12
+0 2 8.34
+0 3 5.33
+0 4 5.36
+1 2 4.21
+1 6 6.99
+1 7 10.26
+2 3 2.74
+2 6 5.04
+3 4 4.12
+3 5 7.72
+3 6 5.71
+4 5 8.94
+4 6 10.29
+5 6 5.47
+5 7 8.55
+6 7 6.01
+0 Allentown
+1 Bobtown
+6 Charlestown
+7 Downville
+3
+0 3 2.17
+3 2 0.45
+4 3 3.14</pre><p class="pst">Sample Output</p><pre class="sio">Charlestown         9
+Downville           15
+
+Bobtown             7
+
+Charlestown         7
+Bobtown             8
+Downville           13</pre><p class="pst">

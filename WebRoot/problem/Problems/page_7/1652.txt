@@ -1,0 +1,14 @@
+</p><div class="ptx" lang="en-US">Several pieces of cloth are laid out on the table without overlapping each other. These pieces contain many holes, some so big that entire other piece of cloth may fit into them. Digital black-and-white image of the tabletop was taken, on which areas covered by cloth are represented with '*'s and not covered areas with '.'s. A single piece of cloth is thus represented with 4-connected area of '*'s - i.e., a group of '.'s located next to each other horizontally or vertically, but not diagonally.
+<br><table border=1><tr><td><pre>.***..***
+<br>.*.*.**.*
+<br>.***.*.**
+<br>*...**.*.</pre></td><td>For example, on the image on the left there are three pieces - one without holes, and two with one hole each - first has area of 8, and the second - area of 12.</td></tr></table>
+<br>Your goal is to find the piece with the most holes in it. The hole is a 4-connected area of '.'s completely surrounded with '*'s. If several pieces have the same number of holes, you must select the one with the smallest area.
+<br>
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">In the first line of input there are two numbers W and H (1 <= W <= 100, 1 <= H <= 100), separated by spaces. Next H lines contain W characters each. Characters in these lines are either '*' (ASCII 42) or '.' (ASCII 46).</div><p class="pst">Output</p><div class="ptx" lang="en-US">The output must contain a single integer - the area of the smallest of most holey pieces. If there are no pieces with the holes, the output file must contain zero.</div><p class="pst">Sample Input</p><pre class="sio">9 5
+.********
+.*......*
+.*..**..*
+.*......*
+.********
+</pre><p class="pst">Sample Output</p><pre class="sio">22</pre><p class="pst">

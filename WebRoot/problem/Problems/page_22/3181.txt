@@ -1,0 +1,7 @@
+</p><div class="ptx" lang="en-US">Farmer John goes to Dollar Days at The Cow Store and discovers an unlimited number of tools on sale. During his first visit, the tools are selling variously for $1, $2, and $3. Farmer John has exactly $5 to spend. He can buy 5 tools at $1 each or 1 tool at $3 and an additional 1 tool at $2. Of course, there are other combinations for a total of 5 different ways FJ can spend all his money on tools. Here they are:
+<br>
+<br><pre>        1 @ US$3 + 1 @ US$2
+<br>        1 @ US$3 + 2 @ US$1
+<br>        1 @ US$2 + 3 @ US$1
+<br>        2 @ US$2 + 1 @ US$1
+<br>        5 @ US$1</pre>Write a program than will compute the number of ways FJ can spend N dollars (1 <= N <= 1000) at The Cow Store for tools on sale with a cost of $1..$K (1 <= K <= 100).</div><p class="pst">Input</p><div class="ptx" lang="en-US">A single line with two space-separated integers: N and K.</div><p class="pst">Output</p><div class="ptx" lang="en-US">A single line with a single integer that is the number of unique ways FJ can spend his money.</div><p class="pst">Sample Input</p><pre class="sio">5 3</pre><p class="pst">Sample Output</p><pre class="sio">5</pre><p class="pst">

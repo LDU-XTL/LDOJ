@@ -1,0 +1,15 @@
+</p><div class="ptx" lang="en-US">After he has learned how to play Nim game, Mike begins to try another stone game which seems much easier. 
+<br> 
+<br>The game goes like this: Two players start the game with a pile of n stones. They take stones from the pile in turn and every time they take at least one stone. The one who goes first can take at most n-1 stones for his first move. From then on a player can take at most k times as many stones as his opponent has taken last time. For example, if one player take m stones in his turn, then the other player can take at most k * m stones next time. The player who takes the last stone wins the game. Suppose that those two players always take the best moves and never make mistakes, your job is to find out who will definitely win the game.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line contains a integer t, indicating that there are t test cases following.(t&lt;=20). 
+<br>Each test case is a line consisting of two integer n and k.(2&lt;=n&lt;=10<sup>8</sup>,1&lt;=k&lt;=10<sup>5</sup>).</div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case, output one line starting with “Case N: ”, N is the case number. And then, if the first player can ensure a winning, print the minimum number of stones he should take in his first turn. Otherwise, print "lose". Please note that there is a blank following the colon.</div><p class="pst">Sample Input</p><pre class="sio">5 
+16 1 
+11 1 
+32 2 
+34 2 
+19 3</pre><p class="pst">Sample Output</p><pre class="sio">Case 1: lose
+Case 2: 1
+Case 3: 3
+Case 4: lose
+Case 5: 4</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">When k = 1, the first player will definitely lose if the initial amount of stones is in the set {2, 4, 8, 16, 32, ...}. Let's call this kind of set “first-player-lose set”.
+<br>
+<br>When k = 2, the first-player-lose set is {2, 3, 5, 8, 13, 21, 34, 57 ...} , which happens to be the Fibonacci sequence starting from 2.</div><p class="pst">

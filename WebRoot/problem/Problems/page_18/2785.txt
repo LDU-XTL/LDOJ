@@ -1,0 +1,9 @@
+</p><div class="ptx" lang="en-US">The SUM problem can be formulated as follows: given four lists A, B, C, D of integer values, compute how many quadruplet (a, b, c, d ) &isin; A x B x C x D are such that a + b + c + d = 0 . In the following, we assume that all lists have the same size n . </div><p class="pst">Input</p><div class="ptx" lang="en-US">The first line of the input file contains the size of the lists n (this value can be as large as 4000). We then have n lines containing four integer values (with absolute value as large as 2<sup>28</sup> ) that belong respectively to A, B, C and D . </div><p class="pst">Output</p><div class="ptx" lang="en-US">For each input file, your program has to write the number quadruplets whose sum is zero. </div><p class="pst">Sample Input</p><pre class="sio">6
+-45 22 42 -16
+-41 -27 56 30
+-36 53 -37 77
+-36 30 -75 -46
+26 -38 -10 62
+-32 -54 -6 45
+</pre><p class="pst">Sample Output</p><pre class="sio">5
+</pre><p class="pst">Hint</p><div class="ptx" lang="en-US">Sample Explanation: Indeed, the sum of the five following quadruplets is zero: (-45, -27, 42, 30), (26, 30, -10, -46), (-32, 22, 56, -46),(-32, 30, -75, 77), (-32, -54, 56, 30). </div><p class="pst">

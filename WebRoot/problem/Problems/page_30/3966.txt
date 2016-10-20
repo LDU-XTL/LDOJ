@@ -1,0 +1,32 @@
+</p><div class="ptx" lang="en-US">The standard 52-card deck consists of 52 cards divided into 4 suits: clubs, diamonds, hearts and spades. For each suit there are 13 ranks: 2, 3, 4, 5, 6, 7, 8, 9, 10, jack, queen, king and ace, listed from the lowest to the highest.
+<br>A card is denoted by its rank (‘2’. . . ‘9’ for 2. . . 9, ‘T’ for 10, ‘J’ for jack, ‘Q’ for queen, ‘K’ for king, and ‘A’ for ace) followed by its suit (‘C’ for clubs, ‘D’ for diamonds, ‘H’ for hearts, and ‘S’ for spades). Cards are partially ordered by their ranks. The suit does not play a role in the cards ordering.
+<br>A Poker <i>hand</i> is a set of five distinct cards. Each hand is said to have a certain <i>ranking</i>. A hand with a higher ranking <i>beats</i> a hand with a lower one. Two hands of the same ranking are compared using a tie-breaking rule specific for their ranking — either one of them beats the other or they are tied.
+<br>The list of poker rankings is given below, from the worst ranking to the best ranking. If a hand satisfies
+<br>several rankings, only the best one is considered.
+<br><ul>
+<br><li>High Card — Does not fit into any ranking below. When comparing with another High Card hand, the ranks of the highest cards in the two hands are first compared. If there is a tie, the second highest cards in each hand are compared, and so on. (<i>Example</i>: QS, JH, 9C, 7H, 3D)</li>
+<br><li>One Pair — Two cards of the same rank. Pair with higher rank beats the lower pair. In case of a tie, the remaining three cards are used as tie-breakers, compared in the descending order of their ranks (as in High Card). (<i>Example</i>: 6D, 6H, QD, 9H, 4S)</li>
+<br><li>Two Pairs — Two pairs of cards of the same rank. When comparing with another Two Pairs hand, the higher pair is first compared, then the lower pair, and finally the rank of the fifth remaining card. (<i>Example</i>: JH, JS, TS, TD, 8S)</li>
+<br><li>Three of a Kind — Three cards of the same rank. Three-of-a-kind with the higher rank beats the lower one. In case of a tie, the remaining two cards are used as tie-breakers, compared in the descending order. (<i>Example</i>: 5S, 5H, 5D, JH, 6D)</li>
+<br><li>Straight — Five cards in consecutive rank. An ace can either be accounted above a king or below a two, but not both, so wrapping is not allowed. Two straights are compared using the rank of the highest card (in the case of A, 2, 3, 4, 5, the highest card is considered to be 5). (<i>Example</i>: QH, JC, TH, 9D, 8D)</li>
+<br><li>Flush — Five cards of the same suit. When comparing two Flushes, the rank of the highest card is first considered, then the second highest and so on (as in High Card). (<i>Example</i>: AS, JS, 8S, 6S, 5S)</li>
+<br><li>Full House — Three cards of the same rank, and two cards of same rank. When comparing with another Full House, the rank of the three cards is first compared, then the rank of the two cards. (<i>Example</i>: 7S, 7H, 7C, JC, JH)</li>
+<br><li>Four of a Kind — Four cards of the same rank. Two four-of-a-kinds are first compared by the ranks of the four cards. In case of a tie, the rank of the fifth card is used as a tie-breaker. (<i>Example</i>: 4C, 4D, 4H, 4S, TD)</li>
+<br><li>Straight Flush — A hand that is both a Straight and a Flush. Same tie-breaker as for a Straight. (<i>Example</i>: TH, 9H, 8H, 7H, 6H)</li>
+<br></ul>
+<br>Consider the set <img src="formula?tex=%5Cmathcal%7BH%7D" alt="\mathcal{H}" align="absmiddle"> of all Poker hands. Let us introduce an evaluation function <i>v</i> : <img src="formula?tex=%5Cmathcal%7BH%7D" alt="\mathcal{H}" align="absmiddle"> <img src="formula?tex=%5Cto" alt="\to" align="absmiddle"> {1, . . . , 7462}, such that for any two Poker hands <i>a</i> and <i>b</i>, <i>a</i> beats <i>b</i> if and only if <i>v(a)</i> > <i>v(b)</i>. There exists exactly one such evaluation function <i>v</i>.
+<br>Given a Poker hand <i>a</i>, find the value of <i>v(a)</i>.</div><p class="pst">Input</p><div class="ptx" lang="en-US">The input file contains space-separated list of five distinct card descriptions. Each card is described with two characters denoting its rank and suit, respectively. The ranks are denoted by ‘2’. . . ‘9’, ‘T’, ‘J’, ‘Q’, ‘K’, and ‘A’ (listed here in the ascending order). The suits are denoted by ‘C’, ‘D’, ‘H’, and ‘S’.</div><p class="pst">Output</p><div class="ptx" lang="en-US">Output the value of the evaluation function <i>v(a)</i> for the given hand <i>a</i>.</div><p class="pst">Sample Input</p><pre class="sio"><table border="1" style="border-collapse: collapse" bordercolor="#000000" id="table1"><tr>
+<td><b>#1</b></td><td>
+3S 7S 2C 4S 5H</td>
+</tr>
+<tr>
+<td><b>#2</b></td><td>
+JH AH TH KH QH</td></tr>
+</table></pre><p class="pst">Sample Output</p><pre class="sio"><table border="1" style="border-collapse: collapse" bordercolor="#000000" id="table1"><tr>
+<td><b>#1</b></td><td>
+1</td>
+</tr>
+<tr>
+<td><b>#2</b></td><td>
+7462</td></tr>
+</table></pre><p class="pst">

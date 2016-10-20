@@ -1,0 +1,70 @@
+</p><div class="ptx" lang="en-US">In order to improve teaching quality, one school decides to select ten optimal teaching fiends from n (n<=50) teachers by means of secret ballot among the students. 
+<br>According to the order of 1,2,3?the teachers are numbered continuously. Each No. has two characters, for example, 01,02,03,?
+<br>Every vote consists of the No. of the ten selected teachers. The position of the No represents place in the selection. The corresponding place in the selection can be vacant, but it must be expressed as 00. The vote in which the No. is outside the range stipulated, or appears repeatedly will be deserted. Score the teachers listed according to the order of teaching Fiends in the votes according to the following standards.
+<br><pre>
+<br>Order First Second Third Forth Fifth Sixth Seventh Eighth Ninth Tenth
+<br>Score    15     12     9     7     6     5       4      3     2     1</pre>
+<br>Sort the teachers from high to low according of the score each teacher gains. If the score is the same, the one who gains more votes is ahead; if the score and the number of votes are the same, the one who's No. is smaller is ahead. 
+<br></div><p class="pst">Input</p><div class="ptx" lang="en-US">The information of the teachers and votes is stored in the file fiend.in according to the following format:
+<br>1) The first line of the file consists of the number of teachers (n) and the number of students (m), separated by a blank; 
+<br>2) The lines from the second to n+1 contain the information of n teachers; each line contains the information of a teacher. The information of teachers makes up No., name, department, which are separated by a blank;
+<br>3) The lines from the n+2 to n+m+1 contain the information of votes; each line contains a string representing a vote;
+<br>4) The end of the file is -1.
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">List the table of the first ten optimal teaching Fiends as shown in sample output.</div><p class="pst">Sample Input</p><pre class="sio">15 30
+08 Christopher Power&EnergyEngineering
+02 Amanda MaterialsScience&Engineering
+13 Matthew Chemistry&ChemicalTechnology
+15 Sarah LifeScience&Biotechnology
+05 Joshua Power&EnergyEngineering
+06 Brittany ElectricPowerEngineering
+07 Andrew HumanitiesandSocialScience
+01 Megan MaterialsScience&Engineering
+09 Daniel Management
+04 Jennifer CivilEngineering&Mechanics
+03 Justin Electronics&InformationTechnology
+12 Nicole Chemistry&ChemicalTechnology
+10 David Power&EnergyEngineering
+14 Stephanie Chemistry&ChemicalTechnology
+11 Ryan LifeScience&Biotechnology
+01060503130412020009
+07020905071308081015
+01000000000000000000
+00000200000112000006
+12031301110402071306
+15021413091211100603
+15110314030406011412
+03011110030312120114
+08010409140206120513
+08121206020601141214
+11131506040914021402
+05040711140506041413
+09020204011009120214
+07050613151209040414
+10010410030309040514
+11090113111114090110
+06100307030808131510
+09131505030801150611
+15060509120610100111
+11030613130909050701
+12130409091402121402
+03111411041508110909
+01130112061109090408
+12140507060809151314
+12150811060915040702
+11130607071007111408
+12050714010205071214
+09030603090108101313
+15040615061107020608
+02050202111309080506
+-1
+</pre><p class="pst">Sample Output</p><pre class="sio">1   01  Megan          MaterialsScience&Engineering             47     4     2     1     0     0     0     1     0     0     0     0
+2   02  Amanda         MaterialsScience&Engineering             29     4     0     1     1     0     0     1     0     1     0     0
+3   06  Brittany       ElectricPowerEngineering                 19     4     0     1     0     0     0     0     1     0     1     1
+4   12  Nicole         Chemistry&ChemicalTechnology             16     4     0     0     0     0     0     1     2     1     0     0
+5   14  Stephanie      Chemistry&ChemicalTechnology             15     2     0     0     1     0     1     0     0     0     0     0
+6   08  Christopher    Power&EnergyEngineering                  15     1     1     0     0     0     0     0     0     0     0     0
+7   15  Sarah          LifeScience&Biotechnology                15     1     1     0     0     0     0     0     0     0     0     0
+8   09  Daniel         Management                               14     3     0     0     0     1     1     0     0     0     0     1
+9   13  Matthew        Chemistry&ChemicalTechnology             14     3     0     0     0     1     1     0     0     0     0     1
+10  04  Jennifer       CivilEngineering&Mechanics               14     2     0     0     1     0     0     1     0     0     0     0
+</pre><p class="pst">

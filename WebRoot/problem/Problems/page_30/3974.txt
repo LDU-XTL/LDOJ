@@ -1,0 +1,12 @@
+</p><div class="ptx" lang="en-US">Andy the smart computer science student was attending an algorithms class when the professor asked the students a simple question, "Can you propose an efficient algorithm to find the length of the largest palindrome in a string?"
+<br>
+<br>A string is said to be a palindrome if it reads the same both forwards and backwards, for example "madam" is a palindrome while "acm" is not.
+<br>
+<br>The students recognized that this is a classical problem but couldn't come up with a solution better than iterating over all substrings and checking whether they are palindrome or not, obviously this algorithm is not efficient at all, after a while Andy raised his hand and said "Okay, I've a better algorithm" and before he starts to explain his idea he stopped for a moment and then said "Well, I've an even better algorithm!".
+<br>
+<br>If you think you know Andy's final solution then prove it! Given a string of at most 1000000 characters find and print the length of the largest palindrome inside this string.</div><p class="pst">Input</p><div class="ptx" lang="en-US">Your program will be tested on at most 30 test cases, each test case is given as a string of at most 1000000 lowercase characters on a line by itself. The input is terminated by a line that starts with the string "END" (quotes for clarity).
+<br></div><p class="pst">Output</p><div class="ptx" lang="en-US">For each test case in the input print the test case number and the length of the largest palindrome.
+<br></div><p class="pst">Sample Input</p><pre class="sio">abcbabcbabcba
+abacacbaaaab
+END</pre><p class="pst">Sample Output</p><pre class="sio">Case 1: 13
+Case 2: 6</pre><p class="pst">
