@@ -6,6 +6,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import server.problemStatus_sql;
+/**
+*提交处理
+*对返回信息进行处理
+*/
 
 public class ProblemStatus {
 	public String problemStatus(String Str,int Run_id) {
