@@ -353,7 +353,7 @@ div{
 	height: 35px;
 	border: solid 1px #ccc;
 	border-radius:7px;
-	margin:5% 0px 2% 10%;
+	margin:8px 0px 0px 10%;
 	width: 280px;
 	outline:none;
 }
@@ -364,4 +364,9 @@ div{
 	border-radius: 2px;
 	border: 0px;
 	font-size: 40px;
+}
+.clue_user,.clue_nick_name,.clue_nick_name,.clue_password,.clue_rptpassword,.clue_school,.clue_email{
+	font-size: 14px;
+	margin:0px 0px 2% 10%;
+	display: none;
 }
