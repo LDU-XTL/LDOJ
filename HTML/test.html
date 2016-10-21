@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link href="css/test.css" type="text/css" rel="stylesheet"/>
+		<script src="js/jquery-3.1.1.min.js"></script>			
+		<script src="js/弹出jquery.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<nav class="main_nav"> 
+		    <ul> 
+		        <li><a class="cd-signin" href="#0">登录</a></li> 
+		        <li><a class="cd-signup" href="#0">注册</a></li> 
+		    </ul>
+		</nav>  
+		<div class="cd-user-modal">  
+		    <div class="cd-user-modal-container"> 
+		    	<form method=POST action=register>
+				<TABLE align=center cellSpacing=3 cellPadding=3 width=600 border=0 background=images/table_back.jpg>
+					<tr><td colspan=2 width=600 height=40>
+					<p align=center>Register Information</td></tr>
+					<tr><td width=25%>User ID:</td>
+					<td width=75%><input type=text name=user_id size=20></td></tr>
+					<tr><td>Nick Name:</td>
+					<td><input type=text name=nick size=50></td></tr>
+					<tr><td>Password:</td>
+					<td><input type=password name=password size=20></td>
+					</tr><tr>
+					<td>Repeat Password:</td>
+					<td>
+					<input type=password name=rptPassword size=20></td></tr>
+					<tr><td>School:</td>
+					<td><input type=text name=school size=30></td></tr>
+					<tr><td>Email:</td>
+					<td><input type=text name=email size=30></td>
+					</tr><tr><td>&nbsp;</td><td align=left>
+					<input type=submit value=Submit name=submit>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type=reset value=Reset name=reset >
+					</td></tr></table></form>  
+		    </div> 
+		</div>
+	</body>
+</html>
