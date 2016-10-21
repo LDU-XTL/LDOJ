@@ -24,7 +24,7 @@ function checkUsername()
     }
     else
     {
-    	obj.style.color="#000000";	
+    	obj.style.color="#008400";	
     	obj.style.display="none";
     	return true;
     }
@@ -46,7 +46,7 @@ function checkNickname(){
 	}
 	else
 	{
-		obj.style.color="black";
+		obj.style.color="#008400";
 		obj.style.display="none";
 		return true;
 	}
@@ -55,7 +55,7 @@ function checkPassword()
 {
 	var passwd = document.getElementById("password").value;
 	var obj = document.getElementById("clue_password");
-	var patrn = /^[a-zA-z_][a-zA-Z0-9_]{5,20}$/;
+	var patrn = /^[a-zA-Z0-9_]{6,20}$/;
 	if(passwd.length==0)
 	{
 		obj.style.display="none";
@@ -68,7 +68,7 @@ function checkPassword()
 	}
 	else
 	{
-		obj.style.color="black";
+		obj.style.color="#008400";
 		obj.style.display="none";
 		return true;
 	}
@@ -89,7 +89,7 @@ function checkPassword2()
      else
      {
      	obj.innerHTML="6 - 16 letters and digits allowed";
-     	obj.style.color="black";
+     	obj.style.color="#008400";
      	obj.style.display="none";
      	return true;
      }
@@ -123,7 +123,7 @@ function checkEmail()
 	}
 	else
 	{
-		obj.style.color="black";
+		obj.style.color="#008400";
 		obj.style.display="none";
 		return true;
 	}
